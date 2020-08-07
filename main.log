@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  7 AUG 2020 11:27
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  7 AUG 2020 16:19
 entering extended mode
 **./main.tex
 (main.tex
@@ -413,65 +413,34 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
-Package: babel 2020/07/13 3.47 The Babel package
-
-(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
-File: babel.def 2020/07/13 3.47 Babel common definitions
-\babel@savecnt=\count269
-\U@D=\dimen188
-\l@babelnohyphens=\language79
-
-(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
-\bbl@readstream=\read3
-)
-\bbl@dirlevel=\count270
-
-*************************************
-* Local config file bblopts.cfg used
-*
-(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
-File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
- babel
-)
-(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/babel-english\english
-.ldf
-Language: english 2017/06/06 v3.3r English support from the babel system
-Package babel Info: \l@canadian = using hyphenrules for english
-(babel)             (\language0) on input line 102.
-Package babel Info: \l@australian = using hyphenrules for ukenglish
-(babel)             (\language73) on input line 105.
-Package babel Info: \l@newzealand = using hyphenrules for ukenglish
-(babel)             (\language73) on input line 108.
-))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip49
-\enit@outerparindent=\dimen189
+\enit@outerparindent=\dimen188
 \enit@toks=\toks28
 \enit@inbox=\box57
-\enit@count@id=\count271
-\enitdp@description=\count272
+\enit@count@id=\count269
+\enitdp@description=\count270
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen190
-\lightrulewidth=\dimen191
-\cmidrulewidth=\dimen192
-\belowrulesep=\dimen193
-\belowbottomsep=\dimen194
-\aboverulesep=\dimen195
-\abovetopsep=\dimen196
-\cmidrulesep=\dimen197
-\cmidrulekern=\dimen198
-\defaultaddspace=\dimen199
-\@cmidla=\count273
-\@cmidlb=\count274
-\@aboverulesep=\dimen256
-\@belowrulesep=\dimen257
-\@thisruleclass=\count275
-\@lastruleclass=\count276
-\@thisrulewidth=\dimen258
+\heavyrulewidth=\dimen189
+\lightrulewidth=\dimen190
+\cmidrulewidth=\dimen191
+\belowrulesep=\dimen192
+\belowbottomsep=\dimen193
+\aboverulesep=\dimen194
+\abovetopsep=\dimen195
+\cmidrulesep=\dimen196
+\cmidrulekern=\dimen197
+\defaultaddspace=\dimen198
+\@cmidla=\count271
+\@cmidlb=\count272
+\@aboverulesep=\dimen199
+\@belowrulesep=\dimen256
+\@thisruleclass=\count273
+\@lastruleclass=\count274
+\@thisrulewidth=\dimen257
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -481,17 +450,17 @@ Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/iftex\iftex.sty
 Package: iftex 2020/03/06 v1.0d TeX engine tests
 ))
-\Gm@cnth=\count277
-\Gm@cntv=\count278
-\c@Gm@tempcnt=\count279
-\Gm@bindingoffset=\dimen259
-\Gm@wd@mp=\dimen260
-\Gm@odd@mp=\dimen261
-\Gm@even@mp=\dimen262
-\Gm@layoutwidth=\dimen263
-\Gm@layoutheight=\dimen264
-\Gm@layouthoffset=\dimen265
-\Gm@layoutvoffset=\dimen266
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen258
+\Gm@wd@mp=\dimen259
+\Gm@odd@mp=\dimen260
+\Gm@even@mp=\dimen261
+\Gm@layoutwidth=\dimen262
+\Gm@layoutheight=\dimen263
+\Gm@layouthoffset=\dimen264
+\Gm@layoutvoffset=\dimen265
 \Gm@dimlist=\toks29
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
@@ -538,11 +507,11 @@ LaTeX Info: Redefining \hbar on input line 50.
 ty
 Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
 \MT@toks=\toks30
-\MT@count=\count280
+\MT@count=\count278
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen267
+\MT@outer@kern=\dimen266
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
-\MT@listname@count=\count281
+\MT@listname@count=\count279
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\microtype-p
 dftex.def
@@ -592,7 +561,7 @@ Package pdftexcmds Info: \pdfdraftmode found.
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/etoolbox\etoolbox.sty
 Package: etoolbox 2020/07/15 v2.5i e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count282
+\etb@tempcnta=\count280
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/kvoptions\kvoptions.s
 ty
@@ -604,7 +573,7 @@ Package: kvsetkeys 2019/12/15 v1.18 Key value parser (HO)
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.sty
 Package: logreq 2010/08/04 v1.0 xml request logger
-\lrq@indent=\count283
+\lrq@indent=\count281
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/logreq\logreq.def
 File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
@@ -616,47 +585,47 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-\c@tabx@nest=\count284
-\c@listtotal=\count285
-\c@listcount=\count286
-\c@liststart=\count287
-\c@liststop=\count288
-\c@citecount=\count289
-\c@citetotal=\count290
-\c@multicitecount=\count291
-\c@multicitetotal=\count292
-\c@instcount=\count293
-\c@maxnames=\count294
-\c@minnames=\count295
-\c@maxitems=\count296
-\c@minitems=\count297
-\c@citecounter=\count298
-\c@maxcitecounter=\count299
-\c@savedcitecounter=\count300
-\c@uniquelist=\count301
-\c@uniquename=\count302
-\c@refsection=\count303
-\c@refsegment=\count304
-\c@maxextratitle=\count305
-\c@maxextratitleyear=\count306
-\c@maxextraname=\count307
-\c@maxextradate=\count308
-\c@maxextraalpha=\count309
-\c@abbrvpenalty=\count310
-\c@highnamepenalty=\count311
-\c@lownamepenalty=\count312
-\c@maxparens=\count313
-\c@parenlevel=\count314
-\blx@tempcnta=\count315
-\blx@tempcntb=\count316
-\blx@tempcntc=\count317
-\blx@maxsection=\count318
-\blx@maxsegment@0=\count319
-\blx@notetype=\count320
-\blx@parenlevel@text=\count321
-\blx@parenlevel@foot=\count322
-\blx@sectionciteorder@0=\count323
-\blx@entrysetcounter=\count324
+\c@tabx@nest=\count282
+\c@listtotal=\count283
+\c@listcount=\count284
+\c@liststart=\count285
+\c@liststop=\count286
+\c@citecount=\count287
+\c@citetotal=\count288
+\c@multicitecount=\count289
+\c@multicitetotal=\count290
+\c@instcount=\count291
+\c@maxnames=\count292
+\c@minnames=\count293
+\c@maxitems=\count294
+\c@minitems=\count295
+\c@citecounter=\count296
+\c@maxcitecounter=\count297
+\c@savedcitecounter=\count298
+\c@uniquelist=\count299
+\c@uniquename=\count300
+\c@refsection=\count301
+\c@refsegment=\count302
+\c@maxextratitle=\count303
+\c@maxextratitleyear=\count304
+\c@maxextraname=\count305
+\c@maxextradate=\count306
+\c@maxextraalpha=\count307
+\c@abbrvpenalty=\count308
+\c@highnamepenalty=\count309
+\c@lownamepenalty=\count310
+\c@maxparens=\count311
+\c@parenlevel=\count312
+\blx@tempcnta=\count313
+\blx@tempcntb=\count314
+\blx@tempcntc=\count315
+\blx@maxsection=\count316
+\blx@maxsegment@0=\count317
+\blx@notetype=\count318
+\blx@parenlevel@text=\count319
+\blx@parenlevel@foot=\count320
+\blx@sectionciteorder@0=\count321
+\blx@entrysetcounter=\count322
 \labelnumberwidth=\skip51
 \labelalphawidth=\skip52
 \biblabelsep=\skip53
@@ -665,12 +634,12 @@ Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 \bibinitsep=\skip56
 \bibparsep=\skip57
 \bibhang=\skip58
-\blx@bcfin=\read4
+\blx@bcfin=\read3
 \blx@bcfout=\write4
-\blx@langwohyphens=\language80
-\c@mincomprange=\count325
-\c@maxcomprange=\count326
-\c@mincompwidth=\count327
+\blx@langwohyphens=\language79
+\c@mincomprange=\count323
+\c@maxcomprange=\count324
+\c@mincompwidth=\count325
 Package biblatex Info: Trying to load biblatex default data model...
 Package biblatex Info: ... file 'blx-dm.def' found.
 
@@ -681,74 +650,74 @@ Package biblatex Info: Trying to load biblatex style data model...
 Package biblatex Info: ... file 'numeric.dbx' not found.
 Package biblatex Info: Trying to load biblatex custom data model...
 Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
-\c@afterword=\count328
-\c@savedafterword=\count329
-\c@annotator=\count330
-\c@savedannotator=\count331
-\c@author=\count332
-\c@savedauthor=\count333
-\c@bookauthor=\count334
-\c@savedbookauthor=\count335
-\c@commentator=\count336
-\c@savedcommentator=\count337
-\c@editor=\count338
-\c@savededitor=\count339
-\c@editora=\count340
-\c@savededitora=\count341
-\c@editorb=\count342
-\c@savededitorb=\count343
-\c@editorc=\count344
-\c@savededitorc=\count345
-\c@foreword=\count346
-\c@savedforeword=\count347
-\c@holder=\count348
-\c@savedholder=\count349
-\c@introduction=\count350
-\c@savedintroduction=\count351
-\c@namea=\count352
-\c@savednamea=\count353
-\c@nameb=\count354
-\c@savednameb=\count355
-\c@namec=\count356
-\c@savednamec=\count357
-\c@translator=\count358
-\c@savedtranslator=\count359
-\c@shortauthor=\count360
-\c@savedshortauthor=\count361
-\c@shorteditor=\count362
-\c@savedshorteditor=\count363
-\c@labelname=\count364
-\c@savedlabelname=\count365
-\c@institution=\count366
-\c@savedinstitution=\count367
-\c@lista=\count368
-\c@savedlista=\count369
-\c@listb=\count370
-\c@savedlistb=\count371
-\c@listc=\count372
-\c@savedlistc=\count373
-\c@listd=\count374
-\c@savedlistd=\count375
-\c@liste=\count376
-\c@savedliste=\count377
-\c@listf=\count378
-\c@savedlistf=\count379
-\c@location=\count380
-\c@savedlocation=\count381
-\c@organization=\count382
-\c@savedorganization=\count383
-\c@origlocation=\count384
-\c@savedoriglocation=\count385
-\c@origpublisher=\count386
-\c@savedorigpublisher=\count387
-\c@publisher=\count388
-\c@savedpublisher=\count389
-\c@language=\count390
-\c@savedlanguage=\count391
-\c@origlanguage=\count392
-\c@savedoriglanguage=\count393
-\c@pageref=\count394
-\c@savedpageref=\count395
+\c@afterword=\count326
+\c@savedafterword=\count327
+\c@annotator=\count328
+\c@savedannotator=\count329
+\c@author=\count330
+\c@savedauthor=\count331
+\c@bookauthor=\count332
+\c@savedbookauthor=\count333
+\c@commentator=\count334
+\c@savedcommentator=\count335
+\c@editor=\count336
+\c@savededitor=\count337
+\c@editora=\count338
+\c@savededitora=\count339
+\c@editorb=\count340
+\c@savededitorb=\count341
+\c@editorc=\count342
+\c@savededitorc=\count343
+\c@foreword=\count344
+\c@savedforeword=\count345
+\c@holder=\count346
+\c@savedholder=\count347
+\c@introduction=\count348
+\c@savedintroduction=\count349
+\c@namea=\count350
+\c@savednamea=\count351
+\c@nameb=\count352
+\c@savednameb=\count353
+\c@namec=\count354
+\c@savednamec=\count355
+\c@translator=\count356
+\c@savedtranslator=\count357
+\c@shortauthor=\count358
+\c@savedshortauthor=\count359
+\c@shorteditor=\count360
+\c@savedshorteditor=\count361
+\c@labelname=\count362
+\c@savedlabelname=\count363
+\c@institution=\count364
+\c@savedinstitution=\count365
+\c@lista=\count366
+\c@savedlista=\count367
+\c@listb=\count368
+\c@savedlistb=\count369
+\c@listc=\count370
+\c@savedlistc=\count371
+\c@listd=\count372
+\c@savedlistd=\count373
+\c@liste=\count374
+\c@savedliste=\count375
+\c@listf=\count376
+\c@savedlistf=\count377
+\c@location=\count378
+\c@savedlocation=\count379
+\c@organization=\count380
+\c@savedorganization=\count381
+\c@origlocation=\count382
+\c@savedoriglocation=\count383
+\c@origpublisher=\count384
+\c@savedorigpublisher=\count385
+\c@publisher=\count386
+\c@savedpublisher=\count387
+\c@language=\count388
+\c@savedlanguage=\count389
+\c@origlanguage=\count390
+\c@savedoriglanguage=\count391
+\c@pageref=\count392
+\c@savedpageref=\count393
 \shorthandwidth=\skip59
 \shortjournalwidth=\skip60
 \shortserieswidth=\skip61
@@ -775,19 +744,19 @@ Package biblatex Info: ... file 'biblatex.def' found.
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/biblatex\biblatex.def
 File: biblatex.def 2019/12/01 v3.14 biblatex compatibility (PK/MW)
-\c@textcitecount=\count396
-\c@textcitetotal=\count397
-\c@textcitemaxnames=\count398
-\c@biburlbigbreakpenalty=\count399
-\c@biburlbreakpenalty=\count400
-\c@biburlnumpenalty=\count401
-\c@biburlucpenalty=\count402
-\c@biburllcpenalty=\count403
+\c@textcitecount=\count394
+\c@textcitetotal=\count395
+\c@textcitemaxnames=\count396
+\c@biburlbigbreakpenalty=\count397
+\c@biburlbreakpenalty=\count398
+\c@biburlnumpenalty=\count399
+\c@biburlucpenalty=\count400
+\c@biburllcpenalty=\count401
 \biburlbigskip=\muskip17
 \biburlnumskip=\muskip18
 \biburlucskip=\muskip19
 \biburllcskip=\muskip20
-\c@smartand=\count404
+\c@smartand=\count402
 )
 Package biblatex Info: Trying to load bibliography style 'numeric'...
 Package biblatex Info: ... file 'numeric.bbx' found.
@@ -801,8 +770,8 @@ Package biblatex Info: ... file 'standard.bbx' found.
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/bbx\standard
 .bbx
 File: standard.bbx 2019/12/01 v3.14 biblatex bibliography style (PK/MW)
-\c@bbx:relatedcount=\count405
-\c@bbx:relatedtotal=\count406
+\c@bbx:relatedcount=\count403
+\c@bbx:relatedtotal=\count404
 ))
 Package biblatex Info: Trying to load citation style 'numeric'...
 Package biblatex Info: ... file 'numeric.cbx' found.
@@ -834,15 +803,15 @@ Package biblatex Warning: 'babel' option is deprecated.
 
 ) (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/tools\calc.sty
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
-\calc@Acount=\count407
-\calc@Bcount=\count408
-\calc@Adimen=\dimen268
-\calc@Bdimen=\dimen269
+\calc@Acount=\count405
+\calc@Bcount=\count406
+\calc@Adimen=\dimen267
+\calc@Bdimen=\dimen268
 \calc@Askip=\skip73
 \calc@Bskip=\skip74
 LaTeX Info: Redefining \setlength on input line 80.
 LaTeX Info: Redefining \addtolength on input line 81.
-\calc@Ccount=\count409
+\calc@Ccount=\count407
 \calc@Cskip=\skip75
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/base\makeidx.sty
@@ -856,7 +825,7 @@ Writing index file main.idx
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2019/10/16 v2.13 TOC entries
-\ttl@leftsep=\dimen270
+\ttl@leftsep=\dimen269
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
@@ -880,46 +849,46 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks33
-\ex@=\dimen271
+\ex@=\dimen270
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen272
+\pmbraise@=\dimen271
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count410
+\inf@bad=\count408
 LaTeX Info: Redefining \frac on input line 227.
-\uproot@=\count411
-\leftroot@=\count412
+\uproot@=\count409
+\leftroot@=\count410
 LaTeX Info: Redefining \overline on input line 389.
-\classnum@=\count413
-\DOTSCASE@=\count414
+\classnum@=\count411
+\DOTSCASE@=\count412
 LaTeX Info: Redefining \ldots on input line 486.
 LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
 \Mathstrutbox@=\box58
 \strutbox@=\box59
-\big@size=\dimen273
+\big@size=\dimen272
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
-\macc@depth=\count415
-\c@MaxMatrixCols=\count416
+\macc@depth=\count413
+\c@MaxMatrixCols=\count414
 \dotsspace@=\muskip21
-\c@parentequation=\count417
-\dspbrk@lvl=\count418
+\c@parentequation=\count415
+\dspbrk@lvl=\count416
 \tag@help=\toks34
-\row@=\count419
-\column@=\count420
-\maxfields@=\count421
+\row@=\count417
+\column@=\count418
+\maxfields@=\count419
 \andhelp@=\toks35
-\eqnshift@=\dimen274
-\alignsep@=\dimen275
-\tagshift@=\dimen276
-\tagwidth@=\dimen277
-\totwidth@=\dimen278
-\lineht@=\dimen279
+\eqnshift@=\dimen273
+\alignsep@=\dimen274
+\tagshift@=\dimen275
+\tagwidth@=\dimen276
+\totwidth@=\dimen277
+\lineht@=\dimen278
 \@envbody=\toks36
 \multlinegap=\skip86
 \multlinetaggap=\skip87
@@ -948,13 +917,13 @@ Package: amsthm 2020/05/29 v2.20.6
 \thm@headsep=\skip90
 \dth@everypar=\toks43
 )
-\c@notation=\count422
-\c@dummy=\count423
-\c@problem=\count424
-\c@exerciseT=\count425
-\c@exampleT=\count426
-\c@vocabulary=\count427
-\c@definitionT=\count428
+\c@notation=\count420
+\c@dummy=\count421
+\c@problem=\count422
+\c@exerciseT=\count423
+\c@exampleT=\count424
+\c@vocabulary=\count425
+\c@definitionT=\count426
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/mdframed\mdframed.sty
 Package: mdframed 2013/07/01 1.9b: mdframed
@@ -983,7 +952,7 @@ Package zref Info: New property: page on input line 765.
 ty
 Package: atbegshi 2019/12/05 v1.19 At begin shipout hook (HO)
 )
-\c@abspage=\count429
+\c@abspage=\count427
 Package zref Info: New property: abspage on input line 66.
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/needspace\needspace.s
@@ -991,7 +960,7 @@ ty
 Package: needspace 2010/09/12 v1.3d reserve vertical space
 )
 \mdf@templength=\skip91
-\c@mdf@globalstyle@cnt=\count430
+\c@mdf@globalstyle@cnt=\count428
 \mdf@skipabove@length=\skip92
 \mdf@skipbelow@length=\skip93
 \mdf@leftmargin@length=\skip94
@@ -1068,16 +1037,16 @@ File: md-frame-0.mdf 2013/07/01\ 1.9b: md-frame-0
 \mdf@horizontalspaceofbox=\skip155
 \mdfsubtitleheight=\skip156
 \mdfsubsubtitleheight=\skip157
-\c@mdfcountframes=\count431
+\c@mdfcountframes=\count429
 
 ****** mdframed patching \endmdf@trivlist
 
 ****** -- success******
 
-\mdf@envdepth=\count432
-\c@mdf@env@i=\count433
-\c@mdf@env@ii=\count434
-\c@mdf@zref@counter=\count435
+\mdf@envdepth=\count430
+\c@mdf@env@i=\count431
+\c@mdf@env@ii=\count432
+\c@mdf@zref@counter=\count433
 Package zref Info: New property: mdf@pagevalue on input line 895.
 )
 \esp=\skip158
@@ -1097,9 +1066,9 @@ Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-\@linkdim=\dimen280
-\Hy@linkcounter=\count436
-\Hy@pagecounter=\count437
+\@linkdim=\dimen279
+\Hy@linkcounter=\count434
+\Hy@pagecounter=\count435
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\pd1enc.def
 File: pd1enc.def 2020-05-15 v7.00e Hyperref: PDFDocEncoding definition (HO)
@@ -1109,7 +1078,7 @@ Now handling font encoding PD1 ...
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/intcalc\intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
-\Hy@SavedSpaceFactor=\count438
+\Hy@SavedSpaceFactor=\count436
 Package hyperref Info: Hyper figures OFF on input line 4464.
 Package hyperref Info: Link nesting OFF on input line 4469.
 Package hyperref Info: Hyper index ON on input line 4472.
@@ -1117,9 +1086,9 @@ Package hyperref Info: Plain pages OFF on input line 4479.
 Package hyperref Info: Backreferencing OFF on input line 4484.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
-\c@Hy@tempcnt=\count439
+\c@Hy@tempcnt=\count437
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen281
+\XeTeXLinkMargin=\dimen280
  (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -1128,9 +1097,9 @@ lc.sty
 Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
-\Fld@menulength=\count440
-\Field@Width=\dimen282
-\Fld@charsize=\dimen283
+\Fld@menulength=\count438
+\Field@Width=\dimen281
+\Fld@charsize=\dimen282
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -1140,9 +1109,9 @@ Package hyperref Info: Link coloring with OCG OFF on input line 6372.
 Package hyperref Info: PDF/A mode OFF on input line 6377.
 LaTeX Info: Redefining \ref on input line 6417.
 LaTeX Info: Redefining \pageref on input line 6421.
-\Hy@abspage=\count441
-\c@Item=\count442
-\c@Hfootnote=\count443
+\Hy@abspage=\count439
+\c@Item=\count440
+\c@Hfootnote=\count441
 )
 Package hyperref Info: Driver (autodetected): hpdftex.
 
@@ -1153,9 +1122,9 @@ File: hpdftex.def 2020-05-15 v7.00e Hyperref driver for pdfTeX
 ty
 Package: atveryend 2019-12-11 v1.11 Hooks at the very end of document (HO)
 )
-\HyAnn@Count=\count444
-\Fld@listcount=\count445
-\c@bookmark@seq@number=\count446
+\HyAnn@Count=\count442
+\Fld@listcount=\count443
+\c@bookmark@seq@number=\count444
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/rerunfilecheck\rerunf
 ilecheck.sty
@@ -1196,8 +1165,8 @@ Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bkm-pdftex.d
 ef
 File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
-\BKM@id=\count447
-)))
+\BKM@id=\count445
+))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.s
 ty
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
@@ -1213,7 +1182,7 @@ x
 \XKV@toks=\toks44
 \XKV@tempa@toks=\toks45
 )
-\XKV@depth=\count448
+\XKV@depth=\count446
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
@@ -1232,14 +1201,71 @@ File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 braryfadings.code.tex
 File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-\c@@todonotes@numberoftodonotes=\count449
+\c@@todonotes@numberoftodonotes=\count447
 )
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
+Package: babel 2020/07/13 3.47 The Babel package
+
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
+File: babel.def 2020/07/13 3.47 Babel common definitions
+\babel@savecnt=\count448
+\U@D=\dimen283
+\l@babelnohyphens=\language80
+
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
+\bbl@readstream=\read4
+)
+\bbl@dirlevel=\count449
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/arabi\bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/babel-icelandic\icela
+ndic.ldf
+Language: icelandic 2019/07/04 v1.3 Icelandic support from the babel system
+Package babel Info: Making " an active character on input line 127.
+\pl@left=\dimen284
+\pl@down=\dimen285
+\pl@right=\dimen286
+\pl@temp=\dimen287
+))
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
+\lst@mode=\count450
+\lst@gtempboxa=\box65
+\lst@token=\toks46
+\lst@length=\count451
+\lst@currlwidth=\dimen288
+\lst@column=\count452
+\lst@pos=\count453
+\lst@lostspace=\dimen289
+\lst@width=\dimen290
+\lst@newlines=\count454
+\lst@lineno=\count455
+\lst@maxwidth=\dimen291
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
+File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
+\c@lstnumber=\count456
+\lst@skipnumbers=\count457
+\lst@framebox=\box66
+)
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
+File: listings.cfg 2020/03/24 1.8d listings configuration
+))
+Package: listings 2020/03/24 1.8d (Carsten Heinz)
+
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+))
 
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count450
-\@quotereset=\count451
+\@quotelevel=\count458
+\@quotereset=\count459
 (main.aux)
 \openout1 = `main.aux'.
 
@@ -1263,17 +1289,17 @@ LaTeX Font Info:    ... okay on input line 53.
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count452
-\scratchdimen=\dimen284
-\scratchbox=\box65
-\nofMPsegments=\count453
-\nofMParguments=\count454
-\everyMPshowfont=\toks46
-\MPscratchCnt=\count455
-\MPscratchDim=\dimen285
-\MPnumerator=\count456
-\makeMPintoPDFobject=\count457
-\everyMPtoPDFconversion=\toks47
+\scratchcounter=\count460
+\scratchdimen=\dimen292
+\scratchbox=\box67
+\nofMPsegments=\count461
+\nofMParguments=\count462
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count463
+\MPscratchDim=\dimen293
+\MPnumerator=\count464
+\makeMPintoPDFobject=\count465
+\everyMPtoPDFconversion=\toks48
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -1329,12 +1355,12 @@ Package microtype Info: No adjustment of character kerning.
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/microtype\mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
-Package biblatex Info: Trying to load language 'english'...
-Package biblatex Info: ... file 'english.lbx' found.
+Package biblatex Info: Trying to load language 'icelandic'...
+Package biblatex Info: ... file 'icelandic.lbx' found.
 
-(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\english.
-lbx
-File: english.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/biblatex/lbx\icelandi
+c.lbx
+File: icelandic.lbx 2019/12/01 v3.14 biblatex localization (PK/MW)
 )
 Package biblatex Info: Input encoding 'utf8' detected.
 Package biblatex Info: Automatic encoding selection.
@@ -1351,7 +1377,7 @@ Package biblatex Info: ... file 'main.bbl' found.
 (main.bbl)
 Package biblatex Info: Reference section=0 on input line 53.
 Package biblatex Info: Reference segment=0 on input line 53.
-\AtBeginShipoutBox=\box66
+\AtBeginShipoutBox=\box68
 Package hyperref Info: Link coloring OFF on input line 53.
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
@@ -1364,11 +1390,12 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count458
+\c@section@level=\count466
 )
 LaTeX Info: Redefining \ref on input line 53.
 LaTeX Info: Redefining \pageref on input line 53.
 LaTeX Info: Redefining \nameref on input line 53.
+\c@lstlisting=\count467
 <Pictures/background.pdf, id=30, 584.1825pt x 835.12pt>
 File: Pictures/background.pdf Graphic file (type pdf)
 <use Pictures/background.pdf>
@@ -1488,7 +1515,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
 \openout6 = `main.toc'.
 
  [4]
-\c@ttl@toc@default=\count459
+\c@ttl@toc@default=\count468
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 108.
  (main.ptc)
@@ -1498,81 +1525,97 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
 
 
 ] [6]
-Chapter 1.
+Kafli 1.
 <Pictures/chapter_head_2.pdf, id=204, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 117.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
+Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
+ine 123.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 147.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 147.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 147.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 127.
 [7
 
- <./Pictures/chapter_head_2.pdf>] [8]
-Chapter 2.
+ <./Pictures/chapter_head_2.pdf>]
+
+LaTeX Warning: Marginpar on page 8 moved.
+
+[8]
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
+File: lstlang1.sty 2020/03/24 1.8d listings language file
+)
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
+File: lstlang2.sty 2020/03/24 1.8d listings language file
+)
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 198.
+ [9] [10]
+Kafli 2.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 177.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 238.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-Package mdframed Info: mdframed works in twoside mode on input line 186.
+Package mdframed Info: mdframed works in twoside mode on input line 247.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 186.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 186.
-Package mdframed Info: mdframed works in twoside mode on input line 197.
+(mdframed)              on input line 247.
+Package mdframed Info: mdframed works in twoside mode on input line 258.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 197.
-Package mdframed Info: mdframed works in twoside mode on input line 207.
+(mdframed)              on input line 258.
+Package mdframed Info: mdframed works in twoside mode on input line 268.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 207.
-[9
+(mdframed)              on input line 268.
+[11
 
 ]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 297.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 236.
-Package mdframed Info: mdframed works in twoside mode on input line 245.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 297.
+Package mdframed Info: mdframed works in twoside mode on input line 306.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 245.
+(mdframed)              on input line 306.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 280.
- [10]
-Package mdframed Info: mdframed works in twoside mode on input line 300.
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 341.
+ [12]
+Package mdframed Info: mdframed works in twoside mode on input line 361.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 300.
- [11] [12
+(mdframed)              on input line 361.
+ [13] [14
 
-] (main.ptc) [13] [14]
-Chapter 3.
+] (main.ptc) [15] [16]
+Kafli 3.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 334.
+Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 395.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=303, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=347, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
-Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 361.
+Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 422.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[15
+[17
 
- <./Pictures/placeholder.jpg>] [16
+ <./Pictures/placeholder.jpg>] [18
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 373.
+Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 434.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [17] [18
+ [19] [20
 
 ] (main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
@@ -1629,50 +1672,51 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[19
+[21
 
 ])
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 400.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 400.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 461.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 461.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 400.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 400.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 461.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 461.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 30205 strings out of 481225
- 574361 string characters out of 2905237
- 1353509 words of memory out of 3000000
- 44961 multiletter control sequences out of 15000+200000
- 660860 words of font info for 264 fonts, out of 3000000 for 9000
+ 32636 strings out of 481225
+ 605697 string characters out of 2905237
+ 1375100 words of memory out of 3000000
+ 47300 multiletter control sequences out of 15000+200000
+ 662568 words of font info for 285 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,83p,973b,2754s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,15n,85p,973b,2225s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} 
 <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1
-095.pk><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfo
-nts/cm/cmex10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/p
-ublic/amsfonts/cm/cmmi10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
-nts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/valborg/AppData/Local/Programs
-/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/valborg/AppData/Loc
-al/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/Users/val
-borg/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.p
-fb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/public/rsfs/rsfs
-10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/urw/avantgar
-/uagd8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/urw/ava
-ntgar/uagk8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/ur
-w/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/u
-rw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/
-urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type
-1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/ty
-pe1/urw/times/utmri8a.pfb>
-Output written on main.pdf (19 pages, 439629 bytes).
+000.pk> <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+00\ectt1095.pk><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/publ
+ic/amsfonts/cm/cmex10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/valborg/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/valborg/AppData/Local/
+Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/valborg/App
+Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/U
+sers/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
+msbm10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/public/r
+sfs/rsfs10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
+avantgar/uagd8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1
+/urw/avantgar/uagk8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/
+type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
+/type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/font
+s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
+nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
+fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (21 pages, 472052 bytes).
 PDF statistics:
- 521 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 500000)
- 67401 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 629 PDF objects out of 1000 (max. 8388607)
+ 127 named destinations out of 1000 (max. 500000)
+ 67913 words of extra memory for PDF output out of 74296 (max. 10000000)
 

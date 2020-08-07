@@ -120,47 +120,108 @@
 
 Þessi bók fjallar um þau undirstöðu atriði sem þarf að kynna til að ná tökum á forritun í Python. Höfundi finnst mikilvægt að kenna námsefnið með íslenskum hugtökum þar sem ætlunin er að nota hana í kennslu í íslenskum framhaldsskólum. Ef nemendur ætla að leggja fyrir sig tölvunarfræði í framhaldssnámi er nauðsynlegt að búa yfir ríkulegu íðorðasafni, þess þá heldur ef nemandi hyggst framfleyta fræðunum. Hugtök verða þó líka sett fram á ensku því lesandi gæti óskað að fletta upp íterefni sem meira er til af á netinu á ensku en íslensku.
 
-Ekki er búist við neinni fyrri kunnáttu við lestur þessarar bókar, hún á að geta staðið fyrir sínu án þess að lesandinn búi yfir nokkurri þekkingu á sviði tölvunarfræða eða forritunar. Ef slík þekking er fyrir hendi gæti lesandanum þótt ágætt að fara hratt í gegnum fyrri hluta bókarinnar, sem snýst um að kynna til sögunnar grunn virkni, lykilhugtök og málskipan, og einbeita sér að seinni hlutanum sem fjallar um hvernig megi beita Python í hlutbundinni forritun.
+Uppbyggining er þannig að fyrri hlutinn snýr að því að kynna lesandann fyrir grunn virkni Python, málskipan, lykilhugtök og lykilorð, gagnatýpur, lykkjur og föll. Seinni hlutinn snýr svo að því að beita þekkingu úr fyrri hlutanum í hlutbundinni forritun. Þar eru kynnt til sögunnar klasar og aðferðir sem lesandinn útfærir upp á eigin spýtur. Ekki er búist við neinni fyrri kunnáttu við lestur þessarar bókar, hún á að geta staðið fyrir sínu án þess að lesandinn búi yfir nokkurri þekkingu á sviði tölvunarfræða eða forritunar. Ef slík þekking er fyrir hendi gæti lesandanum þótt ágætt að fara hratt í gegnum fyrri hluta bókarinnar og einbeita sér að verkefnum úr seinni hlutanum. Í gegnum bókin fylgjum við svo þremur verkefnum sem verða þyngri og flóknari eftir því sem fleiri hugtök eru kynnt til sögunnar. \todo{þremur??}
 
 \section{Hvers vegna Python?}\index{Hvers vegna Python?}
 
-Ástæður þess að Python er gott mál til þess að byrja á að skoða eru eftirfarandi
+Ástæður þess að Python er gott mál til þess að byrja á að skoða eru eftirfarandi: \footnote{Strax í þessum texta koma fyrir hugtök sem verða skýrð betur seinna, ekki missa kjarkinn.}.
 
 \begin{enumerate}
+	\item \textit{Málskipanin} er mjög svipuð mannlegu máli svo það er auðvelt að læra hvernig eigi að ,,tala'' við tölvuna.
 	\item  Python er \textit{kvikt tagað} forritunarmál, það þýðir að notandinn þarf ekki að gefa upp hvers konar \textit{gagnatýpur} er unnið með. Þetta gerir það að verkum að notandinn þarf ekki að læra urmull af lykilorðum áður en byrjað er að forrita.
+	\item  Python er ekki alveg \textit{hlutbundið} forritunarmál, sem gerir það að verkum að notandinn þarf ekki að læra hvernig á að beita hlutbundinni forritun fyrr en góð undirstaða er þegar komin.
 	\item Python er frítt og aðgengilegt öllum helstu stýrikerfum og einnig er hægt að forrita yfir netið í vafra og því óþarfi fyrir notandann að setja nokkuð upp sé þess óskað.
-	\item  Python er ekki alveg hlutbundið forritunarmál, sem gerir það að verkum að notandinn þarf ekki að læra hvernig á að beita hlutbundinni forritun fyrr en góð undirstaða er þegar komin.
 	\item Python er mikið notað, algengt mál svo það er praktískt að hafa undirstöðu skilning á því.
+	\item Nefnt í höfuð á Monty Pyhton grínhópsins.
 \end{enumerate}
 
 
 %------------------------------------------------
 
-\section{Citation}\index{Citation}
+\section{Að keyra kóða}\index{Að keyra kóða}
 
-This statement requires citation \cite{article_key}; this one is more specific \cite[162]{book_key}.
+Það fyrsta sem nemendur vilja yfirleitt gera er að byrja að skrifa sinn eigin kóða. Áður en við komumst svo langt þarf að útskýra hvernig það er gert. Þessi kennslubók byggir á notkun Jupyter Notebooks með hjálp Anaconda hugbúnaðarins, sem er öflugt pakkakerfi og tólakista sem hefur upp á mikið meira en bara Jupyter að bjóða. Hægt er að nálgast Anaconda á \href{www.anaconda.com}{www.anaconda.com}. Einnig er hægt að keyra kóða á netinu í gegnum síður eins og \href{www.repl.it}{www.repl.it}, nota ritla (eins og notepad eða sublime) til að keyra .py skrár í skipanalínu, eða nota þyngri umhverfi eins og pycharm sem eru sérhönnuð fyrir hugbúnaðarþróun. Hér er gert ráð fyrir Juptyter umhverfinu og verður bókin öll miðuð að því.
+
+Þessari bók fylgja einnig nokkrar vinnubækur úr Jupyter sem lesandinn getur nýtt sér. Hér á mynd \todo{mynd af tómri bók} sést hvernig tóm Jupyter vinnubók lítur út. \todo{útskýra hvernig hún virkar?} Virkninni er skipt upp í sellur og keyrsluröð sellanna skiptir máli, við sjáum seinna mikilvægi þess að geta skipt upp kóða svona og hvers vegna þetta umhverfi er þægilegt til að byrja í. En hver sella hefur aðgang að svokölluðu skilgreiningarsvæði vinnubókarinnar en er þó sín eigin eining, því má keyra eina sellu í einu án þess að keyra allan kóðann í vinnubókinni.
+
+Hér væri réttast að skoða Vinnubók 1 sem fylgdi þessari bók. \todo{hér væri gott að taka fyrir dæmi úr vinnubók sem á að fylgja}
+
+
 
 %------------------------------------------------
 
-\section{Lists}\index{Lists}
+\section{Málskipan}\index{Málskipan}
 
-Lists are useful to present information in a concise and/or ordered way\footnote{Footnote example...}.
+Málskipan (e. syntax) er hugtak sem þýðir hvernig á að skrifa kóða svo að hann þýðist í vélamál sem tölvan skilur. Málskipan eru þær reglur sem við þurfum að fara eftir þegar við forritum, þær reglur sem forritunarmálið býst við að við förum eftir. Ef við brjótum þessar reglur fáum við villu, og einhver algengasta villa sem hægt er að fá er málskipunarvilla (e. syntax error). Python er frábrugðið öðrum forritunarmálum á þann hátt að málskipanin krefst þess að kóðinn sé settur upp á ákveðinn hátt. Líkja því má við að þurfa ekki að hafa greinamerki í huga þegar við ljúkum setningum heldur setjum við setningarnar okkar á réttan stað í samræðunum.
 
-\subsection{Numbered List}\index{Lists!Numbered List}
+\subsection{Uppsetning á kóða}\index{Uppsetning á kóða}
+Þessi kóðabútur er þannig uppsettur að allar línur byrja jafnlangt til vinstri, eins og hver setning í töluðu máli stendur hver lína fyrir sínu ein og sér.
+\begin{lstlisting}
+# Réttur Python kóði sem keyrist
+4 + 8
+5 + 6
+breyta = 9 * 2
+\end{lstlisting}
 
-\begin{enumerate}
-\item The first item
-\item The second item
-\item The third item
-\end{enumerate}
+Þessi næsti kóðabútur hinsvegar er ekki nógu vel uppsettur, þar eru ,,setningar'' sem virðast hanga undir öðrum og vera þeim háðar. 
 
-\subsection{Bullet Points}\index{Lists!Bullet Points}
+\begin{lstlisting}
+# Illa skrifaður Python kóði sem keyrist ekki
+4 + 8
+	5 + 6
+breyta = 9 * 2
+\end{lstlisting}
+
+Svona inndrætti er einungis beitt ef lína á beinlínis að hanga undir línunni að ofan og tilheyrir henni. Þess vegna þarf að huga að því hvernig kóði er uppsettur. Í öðrum málum eru notuð greinamerki til að segja tölvunni að lína sé búin og að aðrar línur eigi að heyra undir eitthvað ákveðið samhengi en ekki í Python, þar er treyst á að forritarinn setji kóðann upp á máta sem hægt er að sjá að sé réttur. Dæmi um hvernig línur geta verið aðgreindar í öðrum málum:
+
+\begin{lstlisting}[language=Java]
+// Java
+int i = 7;
+i + 5;
+\end{lstlisting}
+
+\begin{lstlisting}[language=Lisp]
+; Lisp
+(setq x 10)
+(setq y 34.567)
+
+(print x)
+(print y)
+\end{lstlisting}
+
+Í þessum tveimur frábrugnu málum sem voru tekin sem dæmi var óþarfi að setja kóðann í mismunandi línur, því greinamerkin væru nóg til að aðgreina hverja línu fyrir sig. Hins vegar er það góð venja að skrifa kóða sem er læsilegur öðru fólki. Í Java eru greinamerkin semikommur (;) en í Lisp eru línur og samhengi afmörkuð með svigum. Python byggist hinsvegar á því að forritarinn stilli öllu upp rétt með réttum inndrætti. 
+
+\subsection{Gagnatýpur og lykilorð}\index{Gagnatýpur og lykilorð}
+
+Í Python eru nokkrar grunn gagnatýpur sem við munum kynnast í þessari bók. Ástæðan fyrir því að þær eru kallað grunntýpur er sú að þær fylgja með Python uppsetningunni og notandinn getur beitt þeim í samræmi við það sem þær eru færar um, sem má skoða í skjölun Python \href{https://www.python.org/doc/}{https://www.python.org/doc/}. Týpa eða tag er hugtak sem þýðir að hlutur sé af einhverri ákveðinni tegund sem má framkvæma ákveðnar aðgerðir á. Lesandi þekkir muninn á orðum og tölum og veit að hægt er að framkvæma mismunandi aðgerðir á þessum mismunandi týpum, eins og hægt er að skipta út hástöfum fyrir lágstafi í orðum en ekki tölum og hægt er að hefja tölur í veldi en ekki orð. Að sama skapi eru til aðgreinanlegar týpur sem tölvan kann skil á og leyfir ákveðnar aðgerðir á.
+
+\subsubsection{Tölur - talnatýpur}\index{Tölur - talnatýpur}
+Í Pyhton eru í grunninn tvær týpur af tölum (en til eru tvær týpur af hvorri fyrir sig, sem snýr meira að minnisnotkun og er út fyrir svið þessarar bókar). Þær eru:
 
 \begin{itemize}
-\item The first item
-\item The second item
-\item The third item
+\item \textbf{Heiltölur} - tölur sem eru ekki með neinum aukastaf
+\item \textbf{Fleytitölur} - tölur sem eru með aukastaf, sem er fyrir aftan punkt (ekki kommu, fleytitölur eru oft kallaðar kommutölur á íslensku)
 \end{itemize}
+
+\begin{lstlisting}
+# Heiltölur, enginn aukastafur
+4
+1
+100000
+-139
+
+# Fleytitölur, aukastafur/ir fyrir aftan punkt
+4.0
+3.1415926
+-100.98
+\end{lstlisting}
+
+
+% ---------------------------------------------- 
+
+% SNIÐMÁT
+
+% ----------------------------------------------
 
 \subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
 

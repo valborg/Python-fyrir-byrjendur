@@ -1,5 +1,5 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
-\babel@toc {english}{}
+\babel@toc {icelandic}{}
 \defcounter {refsection}{0}\relax 
 \contentsline {part}{\@mypartnumtocformat {I}{Fyrsti hluti}}{5}{part.1}%
 \defcounter {refsection}{0}\relax 
@@ -9,63 +9,65 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Hvers vegna Python?}{7}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Citation}{7}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Að keyra kóða}{8}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Lists}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Málskipan}{8}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.1}Numbered List}{8}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.1}Uppsetning á kóða}{8}{subsection.1.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.2}Bullet Points}{8}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.2}Gagnatýpur og lykilorð}{9}{subsection.1.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.4.3}Descriptions and Definitions}{8}{subsection.1.4.3}%
+\contentsline {subsubsection}{Tölur - talnatýpur}{9}{section*.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}In-text Elements}{9}{chapter.2}%
+\contentsline {subsection}{\numberline {1.4.3}Descriptions and Definitions}{10}{subsection.1.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Theorems}{9}{section.2.1}%
+\contentsline {chapter}{\numberline {2}In-text Elements}{11}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.1}Several equations}{9}{subsection.2.1.1}%
+\contentsline {section}{\numberline {2.1}Theorems}{11}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.2}Single Line}{9}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.1}Several equations}{11}{subsection.2.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Definitions}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.1.2}Single Line}{11}{subsection.2.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Notations}{10}{section.2.3}%
+\contentsline {section}{\numberline {2.2}Definitions}{11}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.4}Remarks}{10}{section.2.4}%
+\contentsline {section}{\numberline {2.3}Notations}{12}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.5}Corollaries}{10}{section.2.5}%
+\contentsline {section}{\numberline {2.4}Remarks}{12}{section.2.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.6}Propositions}{10}{section.2.6}%
+\contentsline {section}{\numberline {2.5}Corollaries}{12}{section.2.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.1}Several equations}{10}{subsection.2.6.1}%
+\contentsline {section}{\numberline {2.6}Propositions}{12}{section.2.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.6.2}Single Line}{10}{subsection.2.6.2}%
+\contentsline {subsection}{\numberline {2.6.1}Several equations}{12}{subsection.2.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.7}Examples}{10}{section.2.7}%
+\contentsline {subsection}{\numberline {2.6.2}Single Line}{12}{subsection.2.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.1}Equation and Text}{10}{subsection.2.7.1}%
+\contentsline {section}{\numberline {2.7}Examples}{12}{section.2.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.7.2}Paragraph of Text}{11}{subsection.2.7.2}%
+\contentsline {subsection}{\numberline {2.7.1}Equation and Text}{12}{subsection.2.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.8}Exercises}{11}{section.2.8}%
+\contentsline {subsection}{\numberline {2.7.2}Paragraph of Text}{13}{subsection.2.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.9}Problems}{11}{section.2.9}%
+\contentsline {section}{\numberline {2.8}Exercises}{13}{section.2.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.10}Vocabulary}{11}{section.2.10}%
+\contentsline {section}{\numberline {2.9}Problems}{13}{section.2.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{13}{part.2}%
+\contentsline {section}{\numberline {2.10}Vocabulary}{13}{section.2.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Presenting Information}{15}{chapter.3}%
+\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{15}{part.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Table}{15}{section.3.1}%
+\contentsline {chapter}{\numberline {3}Presenting Information}{17}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Figure}{15}{section.3.2}%
+\contentsline {section}{\numberline {3.1}Table}{17}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{17}{chapter*.2}%
+\contentsline {section}{\numberline {3.2}Figure}{17}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{17}{section*.3}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{19}{chapter*.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{17}{section*.4}%
+\contentsline {section}{Articles}{19}{section*.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{19}{section*.5}%
+\contentsline {section}{Books}{19}{section*.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{21}{section*.10}%
 \contentsfinish 
