@@ -144,8 +144,11 @@ Ef slík þekking er fyrir hendi gæti lesandanum þótt ágætt að fara hratt 
 	\item Nefnt í höfuð á Monty Pyhton grínhópsins.
 \end{enumerate}
 
+\section{Uppsetning}\index{Uppsetning}
+\todo{lýsa hvernig bókin er byggð upp}.
 
-%------------------------------------------------
+Víðsvegar um bókina, aðallega í upphafi, má finna númeraða kóðabúta sem eru ekki teknir úr vinnubók og eru því ekki eins litakóðaðir og þeir sem eru teknir úr vinnubókum.
+Ástæðan fyrir því er að þessum kóðabútum er auðveldara að viðhalda heldur en skjáskotum úr vinnubókum og því er heldur vísað í bækur sem eru aðgengilegar lesendum og frumstæðari framsetning ræður heldur ríkjum hér.
 
 \section{Að keyra kóða}\index{Að keyra kóða}
 
@@ -241,7 +244,7 @@ Við könnumst við reiknivélar og hvernig þær afgreiða röð aðgerða.
 Nú viljum við sannreyna að þær reikniaðgerðir sem við þekkjum séu til í Python og að þegar við keyrum kóðann okkar þá verði útkoman sú sama og við áttum von á. 
 Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þess þurfum við breytur (e. variables).
 
-\subsubsection{Tölur - talnatýpur}\index{Tölur - talnatýpur}
+\section{Tölur - talnatýpur}\index{Tölur - talnatýpur}
 Í Pyhton eru í grunninn tvær týpur af tölum (en til eru tvær týpur af hvorri fyrir sig, sem snýr meira að minnisnotkun og er út fyrir svið þessarar bókar). 
 Þær eru:
 
@@ -264,7 +267,7 @@ Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þes
 -100.98
 \end{lstlisting}
 
-\subsubsection{Reikniaðgerðir og tákn}\index{Reikniaðgerðir og tákn}
+\section{Reikniaðgerðir og tákn}\index{Reikniaðgerðir og tákn}
 Grunn reikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en aðrar eru framandi og við skulum skoða aðeins betur.
 
 Í eftirfarandi dæmum er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
@@ -351,7 +354,7 @@ Og þá komum við niður á stórt vandamál, að tölvur eru mjög bókstafleg
 Nákvæmlega eins og þú baðst um það.
 
 Þannig að ef ég ætlaði að segja tölvu að smyrja handa mér hnetusmjörs og sultu samloku þá þyrfti ég að segja vélinni að gera eftirfarandi í nákvæmlega þessari röð:
-
+\vspace{0.4cm}
 \begin{enumerate}
 	\item taka fram hníf
 	\item taka fram tvær brauðsneiðar
@@ -367,19 +370,64 @@ Nákvæmlega eins og þú baðst um það.
 	\item nota skeiðina til að smyrja sultunni yfir þá hlið brauðsneiðarinnar sem sultan er á og enga aðra hlið
 	\item  setja brauðsneiðarnar saman þannig að hnetusmjörið og sultan snertist og hornin mætast öll. 
 \end{enumerate} 
-
+\vspace{0.4cm}
 Takið eftir að hér er gert ráð fyrir þó nokkur og ef véliin kann ekki nú þegar skil á: 
-
+\vspace{0.2cm}
 \begin{enumerate}
 	\item taka fram
+	\item hnífur
 	\item opna
 	\item mæla 50 gr
 	\item smyrja
 	\item hlið á brauðsneið
 	\item miðja á brauðsneið
+	\item skeið
+	\item kúfað
 \end{enumerate} 
-
+\vspace{0.2cm}
 Svo þó svo að þér hafi þótt þessi útskýring á samlokugerð alveg ofboðslega óþarflega nákvæm þá er ekki víst að úr þessu verði nokkur samloka.
+Þetta könnumst við öll við, að tölvur gera það sem þeim er sagt ekki það sem við viljum.
+Að því sögðu þá þurfum við að skoða breytur nokkuð betur áður en við förum að beita þeim á skilvirkan hátt.
+
+Breytur eru skilgreindar vinstra megin við jafnaðarmerki í Python.
+Eins og það væri lesið, val fær gildið 5.
+Það væri lítið vit í því að hafa það öfugt, 5 er núna jafngilt val.
+Það sem við værum þá að segja tölvunni að í hver sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu val.
+Það er alls ekki það sem við viljum.
+
+\begin{lstlisting}[caption=Dæmi um gildisvetingar\, réttar og rangar]
+# Hér er ég að fara að búa til breytu sem heitir val
+val = 5
+
+# Hér er ég ekki að búa til breytu sem heitir val heldur er ég að segja að talan fimm er ekki lengur til sem ehiltala heldur gæti hún vísað í hvað sem er sem er geymt í minnisvæði merktu val
+5 = val
+
+# Hér bý ég til breytu sem heitir heiltala sem fær gildið 0
+heiltala = 0
+
+# Hér yfirskrifa ég lykilorðið fyrir týpuna heiltala og læt það innihalda 0
+int = 0
+# þetta er harðbannað og ef þetta gerist er ekki nóg að þurrka þetta út og keyra aftur, nú þarf að endurræsa kjarna vinnubókarinnar.
+\end{lstlisting}
+
+Nú þegar við höfum séð hvernig má skilgreina breytu viljum við vita hvernig á að nota þessa breytu.
+Ef við snúum okkur aftur að reiknivélasamlíkingunni um ANS takkann þá ætti eftirfarandi kóðabútur að geta sýnt með eðlislægum hætti hvernig breytur nýtast.
+
+\begin{lstlisting}[caption=Að nota breytu]
+# Hér framkvæmi ég útreikning sem ég geymi í breytunni ANS
+ANS = 5**2 + (4+8.9)**2
+
+# Segjum að þetta hafi verið endapunkturinn í löngu algebrudæmi og nú veit ég hvað y er, og get þá nýtt það til að finna x eins og verða vill svo oft í stærðfræði að x sé týnt. Gefum okkur að x = 3 * y og því fæst
+x = 3 * ANS
+
+# Nú ef við viljum reikna eitthvað út með x eigum við það til í minnissvæði merktu x með réttu gildi.
+
+# Nú langar okkur til að vera viss um að við séum við vitrænt svar svo við biðjum tölvuna um að segja okkur hvað er geymt í breytunni x.
+print(x)
+
+
+\end{lstlisting}
+
 
 %% ---- FÆRA ÞETTA  ------ %% 
 
