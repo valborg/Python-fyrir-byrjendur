@@ -13,11 +13,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.4}Að keyra kóða}{8}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Málskipan}{8}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Málskipan}{9}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Uppsetning á kóða}{8}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.1}Uppsetning á kóða}{9}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}Gagnatýpur og lykilorð}{9}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}Gagnatýpur og lykilorð}{10}{subsection.1.5.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Tölur og breytur}{11}{chapter.2}%
 \defcounter {refsection}{0}\relax 
@@ -25,59 +25,59 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Reikniaðgerðir og tákn}{12}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.1}Breytur}{13}{subsection.2.2.1}%
+\contentsline {section}{\numberline {2.3}Breytur}{13}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{Strengir}{15}{section*.9}%
+\contentsline {subsubsection}{Strengir}{14}{section*.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.2}Descriptions and Definitions}{15}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.3.1}Descriptions and Definitions}{14}{subsection.2.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}In-text Elements}{17}{chapter.3}%
+\contentsline {chapter}{\numberline {3}In-text Elements}{15}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Theorems}{17}{section.3.1}%
+\contentsline {section}{\numberline {3.1}Theorems}{15}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.1}Several equations}{17}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.1}Several equations}{15}{subsection.3.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.1.2}Single Line}{17}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.2}Single Line}{15}{subsection.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Definitions}{17}{section.3.2}%
+\contentsline {section}{\numberline {3.2}Definitions}{15}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Notations}{18}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Notations}{16}{section.3.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Remarks}{18}{section.3.4}%
+\contentsline {section}{\numberline {3.4}Remarks}{16}{section.3.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Corollaries}{18}{section.3.5}%
+\contentsline {section}{\numberline {3.5}Corollaries}{16}{section.3.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.6}Propositions}{18}{section.3.6}%
+\contentsline {section}{\numberline {3.6}Propositions}{16}{section.3.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.1}Several equations}{18}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.1}Several equations}{16}{subsection.3.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.6.2}Single Line}{18}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.2}Single Line}{16}{subsection.3.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.7}Examples}{18}{section.3.7}%
+\contentsline {section}{\numberline {3.7}Examples}{16}{section.3.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.1}Equation and Text}{18}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.1}Equation and Text}{16}{subsection.3.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.7.2}Paragraph of Text}{19}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.2}Paragraph of Text}{17}{subsection.3.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.8}Exercises}{19}{section.3.8}%
+\contentsline {section}{\numberline {3.8}Exercises}{17}{section.3.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.9}Problems}{19}{section.3.9}%
+\contentsline {section}{\numberline {3.9}Problems}{17}{section.3.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.10}Vocabulary}{19}{section.3.10}%
+\contentsline {section}{\numberline {3.10}Vocabulary}{17}{section.3.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{21}{part.2}%
+\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{19}{part.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Presenting Information}{23}{chapter.4}%
+\contentsline {chapter}{\numberline {4}Presenting Information}{21}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Table}{23}{section.4.1}%
+\contentsline {section}{\numberline {4.1}Table}{21}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Figure}{23}{section.4.2}%
+\contentsline {section}{\numberline {4.2}Figure}{21}{section.4.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{25}{chapter*.10}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{23}{chapter*.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{25}{section*.11}%
+\contentsline {section}{Articles}{23}{section*.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{25}{section*.12}%
+\contentsline {section}{Books}{23}{section*.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{27}{section*.13}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{25}{section*.13}%
 \contentsfinish 
