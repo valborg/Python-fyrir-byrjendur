@@ -530,23 +530,33 @@ addtohook={%
 \definecolor{dkgreen}{RGB}{0,0.6,0}
 \definecolor{gray}{RGB}{0.5,0.5,0.5}
 \definecolor{mauve}{RGB}{0.58,0,0.82}
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
-\lstset{frame=tb,
+\lstset{
 	language=Python,
 	aboveskip=3mm,
 	belowskip=3mm,
 	showstringspaces=false,
 	columns=flexible,
 	basicstyle={\small\ttfamily},
-	numbers=none,
+	numbers=left,
 	numberstyle=\tiny\color{gray},
 	keywordstyle=\color{blue},
+	backgroundcolor=\color{backcolour},   
+	commentstyle=\color{red},
+	keywordstyle=\color{codegreen},
+	stringstyle=\color{codepurple},
+	basicstyle=\fontfamily{cmtt}\footnotesize,
 	keepspaces=true,
 	commentstyle=\color{dkgreen},
 	stringstyle=\color{mauve},
 	breaklines=true,
 	breakatwhitespace=true,
 	tabsize=3,
+	frame=tb,
 	literate=%
 	{Á}{{\'A}}1
 	{á}{{\'a}}1
@@ -554,7 +564,7 @@ addtohook={%
 	{ð}{{\dh}}1
 	{É}{{\'E}}1
 	{é}{{\'e}}1
-	{í}{{\'i{}}}1
+	{í}{{\'i}}1
 	{Í}{{\'I}}1
 	{Ó}{{\'O}}1
 	{ó}{{\'o}}1
@@ -570,3 +580,6 @@ addtohook={%
 	{ö}{{\"o}}1}
 
 \renewcommand{\lstlistingname}{Kóðabútur}
+
+
+

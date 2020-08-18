@@ -34,10 +34,16 @@ Grunn reikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en a�
 \todo{tala um reikniaðgerðirnar hérna}
 
 Í eftirfarandi dæmum er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
-Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur. 
-Einnig eru þarna bil á milli talna og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni enn sem komið er.
+Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
+Eins og sést í kóðabút \ref{lst:reiknadg} í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur en hún er í keyrslu tölvunnar álitin ein heild.
+Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er partur af annarri línu.
+Einnig eru þarna bil á milli talna fremst í línu og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni enn sem komið er.
+Athugasemdir í kóða eru mjög mikilvægur hluti af skjölun kóða og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
+Í fyrstu erum við ekki að skrifa flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni ekki augljós er gott að skrifa athugasemdir.
+Flest allir kóðabútar eru skjalaðir með athugasemdum til að gera þá læsilegri því allur kóði í bókinni er skrifaður fyrir fólk til að skilja.
+Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur sjálfum skiljanlegur þegar þið komið að honum seinna.
 
-\begin{lstlisting}[caption=Reikniaðgerðir]
+\begin{lstlisting}[caption=Reikniaðgerðir, label=lst:reiknadg]
 # Samlagning framkvæmd með + 
 # Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10
 6 + 4 
@@ -79,7 +85,7 @@ Einnig eru þarna bil á milli talna og tákna, það er líka til að gera kó�
 Hvað gerist ef þessir sömu útreikningar eru gerðir með fleytitölum? 
 Ef við myndum skipta út hverri tölu fyrir sig og setja í staðinn sömu tölu með .0 fyrir aftan þá yrðu útkomurnar þær sömu nema fleytitölur. 
 En hvað gerist ef við breytum aðeins fyrri tölunni en ekki seinni tölunni?
-Þá ertu að nota ólíkar týpur og slíkt er vandmeðfarið, en í þessu tilviki er það í lagi þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna með fleytitölum og framkvæmir reikninginn eins og þú hafir verið að beita fleytitölum og niðurstaðan verður þá að sjálfsögðu fleytitala.
+Þá ertu að nota ólíkar týpur og slíkt er vandmeðfarið, en í þessu tilviki er það í lagi þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og þú hafir verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
 
 \section{Breytur}\index{Breytur}
 Nú höfum við séð hvernig má keyra kóða einfaldlega eins og í reiknivél.
@@ -118,11 +124,34 @@ Eins og það væri lesið, val fær gildið 5.
 Það sem við værum þá að segja tölvunni að í hver sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu val.
 Það er alls ekki það sem við viljum.
 
+Nokkrar reglur í nafnavali á breytum, þetta vill vefjast fyrir sumum en lærist fljótlega:
+\vspace{0.5cm}
+\begin{enumerate}
+	\item Kóðalitunin á breytuheitinu má ekki vera annað en venjulegi liturinn fyrir kóða, þannig að ef nafnið fær áherslumerkingu (annan lit) er það ekki löglegt breytuheiti. 
+	Áherslulitunin í númeruðu kóðabútunum í þessari bók er marklaus því hún er mjög frumstæð.
+	Dæmi um það sem fær áherslulitun eru frátekin lykilorð og tölustafir.
+	\item Breytuheitið ætti ekki að innihalda séríslenskan staf (það er löglegt í jupyter vinnubókum en er hrikalega slæmur ávani því það er ekki löglegt allsstaðar).
+	\item Breytuheitið má ekki innihalda bil.
+\end{enumerate}
+\vspace{0.5cm}
+Nokkur tilmæli um breytunöfn með tilliti til nafnavenja í Python:
+\vspace{0.5cm}
+\begin{enumerate}
+	\item Breytuheiti byrja á litlum staf.
+	\item Ef það þarf að gera löng breytuheiti er venjan að nota snákaframsetningu (e. snake casing) sem felur í sér að gera niðurstrik á milli orða, dæmi \texttt{thetta\_er\_langt\_nafn\_a\_breytu}.
+	Annars er til kamelframsetning (e. camel casing) sem felur í sér að annað hvert orð er með stórum staf, dæmi \texttt{thettaErLikaLangtBreytuheiti}.
+	Hvort sem þið endið á að nota meira, haldið ykkur bara við annað þeirra.
+	\item Breytuheiti eiga að vera lýsandi.
+	Ef ég væri að reikna hliðar í þríhyrningi væri gott að eiga breyturnar \texttt{a}, \texttt{b} og \texttt{c}.
+	En ef ég væri að búa til reiknirit sem býr til tölvuleikjapersónu af handahófi með því að velja tilviljanakennt nafn, aldur og starf þá væru breytuheitin \texttt{a}, \texttt{b} og \texttt{c} alveg glötuð því þegar ég kæmi aftur að kóðanum mínum myndi ég ekki hafa hugmynd um hvað a, b og c væru. 
+	Betra væri að breyturnar hétu \texttt{nafn}, \texttt{aldur} og \texttt{starf}.
+\end{enumerate}
+
 \begin{lstlisting}[caption=Dæmi um gildisvetingar\, réttar og rangar]
 # Hér er ég að fara að búa til breytu sem heitir val
 val = 5
 
-# Hér er ég ekki að búa til breytu sem heitir val heldur er ég að segja að talan fimm er ekki lengur til sem ehiltala heldur gæti hún vísað í hvað sem er sem er geymt í minnisvæði merktu val
+# Hér er ég ekki að búa til breytu sem heitir val heldur er ég að segja að talan fimm er ekki lengur til sem heiltala heldur gæti hún vísað í hvað sem er sem er geymt í minnisvæði merktu val, ólöglegt.
 5 = val
 
 # Hér bý ég til breytu sem heitir heiltala sem fær gildið 0
@@ -131,32 +160,55 @@ heiltala = 0
 # Hér yfirskrifa ég lykilorðið fyrir týpuna heiltala og læt það innihalda 0
 int = 0
 # þetta er harðbannað og ef þetta gerist er ekki nóg að þurrka þetta út og keyra aftur, nú þarf að endurræsa kjarna vinnubókarinnar.
+
+Gott nafn = 1.0
+# Þetta er ekki bara bannað vegna bilsins á milli orðanna ,,Gott'' og ,,nafn'' heldur er það líka ljótt því að það byrjar á stórum staf
+
+3_litlar_mys = 3
+# má ekki byrja á tölustaf eða tákni
+
+utreiknud_laun_eftir_skatt = 0.65 * laun
+# frábært, lýsandi og gott breytuheiti (hér er þó gert ráð fyrir að vélin þekki breytuna laun)
 \end{lstlisting}
 
 Nú þegar við höfum séð hvernig má skilgreina breytu viljum við vita hvernig á að nota þessa breytu.
-Ef við snúum okkur aftur að reiknivélasamlíkingunni um ANS takkann þá ætti eftirfarandi kóðabútur að geta sýnt með eðlislægum hætti hvernig breytur nýtast.
+Ef við snúum okkur aftur að reiknivélasamlíkingunni um ANS takkann þá ætti kóðabútur \ref{lst:notabreytu} að geta sýnt með eðlislægum hætti hvernig breytur nýtast.
+Fyrst segi ég vélinni hvað það er sem ANS vísar á, svo segi ég vélinni að mig langar til þess að búa til nýja breytu sem á að byggja á því sem ANS inniheldur.
+Í þessum kóðabút er svo haldið áfram með þessa afleiddu breytu og önnur afleidd breyta búin til útfrá henni.
+Það sem gerist svo í endann er sambærilegt við það að ýta á ,,='' takkann á reiknivélinni.
+Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur print með svigum fyrir aftan og inni í svigunum er breytan okkar.
+Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak} 
+\footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. Kannski verður úttaki varpað beint inn í heilann á forriturum einhvern tíma?} 
+það gildi sem breytan \textbf{x} inniheldur.
+Ef þar hefði staðið \texttt{print(halft\_x)} hefðum við fengið svarið sem er geymt í breytunni \texttt{print(halft\_x)}.
 
-\begin{lstlisting}[caption=Að nota breytu]
-# Hér framkvæmi ég útreikning sem ég geymi í breytunni ANS
+\begin{lstlisting}[caption=Að nota breytu, label=lst:notabreytu]
+# Hér framkvæmi ég einhvern útreikning sem ég geymi í breytunni ANS
 ANS = 5**2 + (4+8.9)**2
 
 # Segjum að þetta hafi verið endapunkturinn í löngu algebrudæmi og nú veit ég hvað y er, og get þá nýtt það til að finna x eins og verða vill svo oft í stærðfræði að x sé týnt. Gefum okkur að x = 3 * y og því fæst
 x = 3 * ANS
 
-# Nú ef við viljum reikna eitthvað út með x eigum við það til í minnissvæði merktu x með réttu gildi.
-Til dæmis með því að búa til breytu fyrir hálft x.
+# Nú ef við viljum reikna eitthvað út með x eigum við það til í minnissvæði merktu x með réttu gildi. Til dæmis með því að búa til breytu fyrir hálft x.
 halft_x = x/2
 
 
 # Nú langar okkur til að vera viss um að við séum við vitrænt svar svo við biðjum tölvuna um að segja okkur hvað er geymt í breytunni x.
 print(x)
+a = "texti í streng"
+'strengur'
+"annar strengur"
 
 
 \end{lstlisting}
 
+Við megum beita print skipuninni óspart og hvetur höfundur til þess að lesandi venji sig á að skoða úttakið sitt í hverju þrepi áður en leitað er hjálpar til annarra.
+Print er \textit{fall}, við skoðum föll svo nánar í kafla \todo{ref kafla um föll} en þangað til munum við kynnast nokkrum innbyggðum föllum.
+
+Núna höfum við séð tvær týpur, heiltölur og fleytitölur.
+Breyta getur innihaldið hvernig týpu sem er.
+Þá þurfum við að athuga að hvað má gera við breyturnar okkar.
+Hingað til höfum við eingöngu skoðað reikniaðgerðir sem eru framkvæmdar með kunnuglegum táknum, við höfum ekki verið að beita neinum innbyggðum aðferðum á tölurnar okkar. En við sjáum það gert í kafla \ref{k:strengir} þegar við skoðum hvernig megi vinna með texta.
+
 % Að því sögðu þá þurfum við að skoða breytur nokkuð betur áður en við förum að beita þeim á skilvirkan hátt.
 
-Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur print með svigum fyrir aftan og inni í svigunum er breytan okkar.
-Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak} 
-\footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. Kannski verður úttaki varpað beint inn í heilann á forriturum einhvern tíma?} 
-það gildi sem breytan \textbf{x} inniheldur.
