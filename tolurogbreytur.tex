@@ -30,18 +30,26 @@ Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þes
 \end{lstlisting}
 
 \section{Reikniaðgerðir og tákn}\index{Reikniaðgerðir og tákn}
-Grunn reikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en aðrar eru framandi og við skulum skoða aðeins betur.
-\todo{tala um reikniaðgerðirnar hérna}
+Grunnreikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en aðrar eru framandi og við skulum skoða aðeins betur.
 
-Í eftirfarandi dæmum er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
+Táknin eru flest eins og á reiknivélum +, -, *, / en þar að auki er annars konar deiling sem er táknuð með tveimur deilimerkjum //, veldishafning er táknuð með tveimur margföldunarmerkjum **, og svo er leifareikningur táknaður með \%.
+Heiltöludeiling og leifarreikningur eru líklega ný á nálinni fyrir flestum lesendum og því allt í lagi að útskýra þær aðgerðir aðeins nánar.
+Þessar aðgerðir eru einmitt mjög skyldar í raun.
+Deilingin segir okkur hversu oft ein tala gengur upp í aðra þar sem útkoman er heil tala (eða fleytitala með 0 sem eina aukastafinn), okkur er sama um afganginn sem verður eftir.
+Í þessari deilingu er svarið 2 við bæði 5//2 og 4//2.
+En í leifareikningnum viljum við eingöngu vita hver er afgangurinn þegar heiltöludeilingu er beitt svo 5\%2 væri 1, því það er einn í afgang þegar fimm er deilt með tveimur.
+Og það er 0 í afgang þegar fjórum er deilt með tveimur svo 4\%2 er 0.
+
+Í eftirfarandi dæmum í kóðabút \ref{lst:reiknadg} er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
 Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
-Eins og sést í kóðabút \ref{lst:reiknadg} í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur en hún er í keyrslu tölvunnar álitin ein heild.
-Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er partur af annarri línu.
+Eins og sést í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur en hún er í keyrslu tölvunnar álitin ein heild línu 20.
+Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er ein heild.
 Einnig eru þarna bil á milli talna fremst í línu og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni enn sem komið er.
 Athugasemdir í kóða eru mjög mikilvægur hluti af skjölun kóða og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
 Í fyrstu erum við ekki að skrifa flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni ekki augljós er gott að skrifa athugasemdir.
 Flest allir kóðabútar eru skjalaðir með athugasemdum til að gera þá læsilegri því allur kóði í bókinni er skrifaður fyrir fólk til að skilja.
 Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur sjálfum skiljanlegur þegar þið komið að honum seinna.
+Því er gott að venja sig strax á að skrifa lýsandi athugasemdir. 
 
 \begin{lstlisting}[caption=Reikniaðgerðir, label=lst:reiknadg]
 # Samlagning framkvæmd með + 

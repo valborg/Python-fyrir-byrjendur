@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  13 AUG 2020 15:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  20 AUG 2020 10:02
 entering extended mode
 **./main.tex
 (main.tex
@@ -1525,25 +1525,24 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <30> not available
 
 
 ] [6]
+(inngangur.tex
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=229, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=234, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 117.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
-ine 131.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 135.
+ine 33.
 [7
 
  <./Pictures/chapter_head_2.pdf>]
-
-LaTeX Warning: Marginpar on page 8 moved.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <5> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 37.
 
 
 LaTeX Warning: Marginpar on page 8 moved.
@@ -1552,9 +1551,16 @@ LaTeX Warning: Marginpar on page 8 moved.
 LaTeX Warning: Marginpar on page 8 moved.
 
 [8]
-Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 231.
+
+LaTeX Warning: Marginpar on page 9 moved.
+
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
  [9]
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 134.
+
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang1.sty
 File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
@@ -1563,76 +1569,87 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstlang2.sty
 File: lstlang2.sty 2020/03/24 1.8d listings language file
-) [10]
+) [10]) (tolurogbreytur.tex [11] [12
+
+]
 Kafli 2.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 286.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 2.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[11
 
-] [12] [13]
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 451.
- [14]
+Underfull \vbox (badness 2285) has occurred while \output is active []
+
+ [13]
+[14] [15] [16]) (strengir.tex [17] [18
+
+]
 Kafli 3.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 474.
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 1.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-Package mdframed Info: mdframed works in twoside mode on input line 483.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 483.
-Package mdframed Info: mdframed works in twoside mode on input line 494.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 494.
-Package mdframed Info: mdframed works in twoside mode on input line 504.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 504.
-[15
+) [19] [20
 
 ]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 533.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 533.
-Package mdframed Info: mdframed works in twoside mode on input line 542.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 542.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 577.
- [16]
-Package mdframed Info: mdframed works in twoside mode on input line 597.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 597.
- [17] [18
-
-] (main.ptc) [19] [20]
 Kafli 4.
+File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
+<use Pictures/chapter_head_2.pdf>
+Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 136.
+(pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
+Package mdframed Info: mdframed works in twoside mode on input line 145.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 145.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 145.
+Package mdframed Info: mdframed works in twoside mode on input line 156.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 156.
+Package mdframed Info: mdframed works in twoside mode on input line 166.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 166.
+[21]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 195.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 195.
+Package mdframed Info: mdframed works in twoside mode on input line 204.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 204.
+LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 239.
+ [22]
+Package mdframed Info: mdframed works in twoside mode on input line 259.
+Package mdframed Info: mdframed detected package amsthm 
+ changed the theorem header of amsthm
+(mdframed)              on input line 259.
+ [23] [24
+
+] (main.ptc) [25] [26]
+Kafli 5.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 631.
+Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 293.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=491, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=543, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
-Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 658.
+Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 320.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[21
+[27
 
- <./Pictures/placeholder.jpg>] [22
+ <./Pictures/placeholder.jpg>] [28
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 670.
+Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 332.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [23] [24
+ [29] [30
 
 ] (main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
@@ -1689,32 +1706,32 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[25
+[31
 
 ])
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 697.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 697.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 359.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 359.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 697.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 697.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 359.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 359.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 32856 strings out of 481225
- 608701 string characters out of 2905237
- 1434900 words of memory out of 3000000
- 47366 multiletter control sequences out of 15000+200000
- 664708 words of font info for 315 fonts, out of 3000000 for 9000
+ 32910 strings out of 481225
+ 609668 string characters out of 2905237
+ 1422318 words of memory out of 3000000
+ 47374 multiletter control sequences out of 15000+200000
+ 666387 words of font info for 323 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,85p,973b,2937s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,15n,85p,973b,2949s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} 
-<C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt1
-000.pk> <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
+<C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0
+900.pk> <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 00\ectt1095.pk><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/publ
 ic/amsfonts/cm/cmex10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 /type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/valborg/AppData/Local/Programs/M
@@ -1731,9 +1748,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (25 pages, 513452 bytes).
+Output written on main.pdf (31 pages, 535220 bytes).
 PDF statistics:
- 830 PDF objects out of 1000 (max. 8388607)
- 236 named destinations out of 1000 (max. 500000)
- 67953 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 903 PDF objects out of 1000 (max. 8388607)
+ 262 named destinations out of 1000 (max. 500000)
+ 67961 words of extra memory for PDF output out of 74296 (max. 10000000)
 
