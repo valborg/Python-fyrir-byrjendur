@@ -211,12 +211,64 @@ a = "texti í streng"
 \end{lstlisting}
 
 Við megum beita print skipuninni óspart og hvetur höfundur til þess að lesandi venji sig á að skoða úttakið sitt í hverju þrepi áður en leitað er hjálpar til annarra.
-Print er \textit{fall}, við skoðum föll svo nánar í kafla \todo{ref kafla um föll} en þangað til munum við kynnast nokkrum innbyggðum föllum.
+Print er \textit{fall}, við skoðum föll nánar í kafla \ref{k:föll} en þangað til munum við kynnast nokkrum innbyggðum föllum eins og print().
 
 Núna höfum við séð tvær týpur, heiltölur og fleytitölur.
 Breyta getur innihaldið hvernig týpu sem er.
-Þá þurfum við að athuga að hvað má gera við breyturnar okkar.
-Hingað til höfum við eingöngu skoðað reikniaðgerðir sem eru framkvæmdar með kunnuglegum táknum, við höfum ekki verið að beita neinum innbyggðum aðferðum á tölurnar okkar. En við sjáum það gert í kafla \ref{k:strengir} þegar við skoðum hvernig megi vinna með texta.
+Þá þurfum við að athuga hvað má gera við breyturnar okkar.
+Hingað til höfum við eingöngu skoðað reikniaðgerðir sem eru framkvæmdar með kunnuglegum táknum, við höfum ekki verið að beita neinum innbyggðum \textit{aðferðum} á tölurnar okkar.
+Við sjáum það gert í kafla \ref{k:strengir} þegar við skoðum hvernig megi vinna með texta.
 
-% Að því sögðu þá þurfum við að skoða breytur nokkuð betur áður en við förum að beita þeim á skilvirkan hátt.
+Að því sögðu þá þurfum við að skoða breytur nokkuð betur áður en við förum að beita þeim á skilvirkan hátt.
+Við erum búin að skoða reiknivirkja og gildisveitingu, og nú ætlum við að skoða \textit{reiknivirkjagildisveitingu} þar sem við uppfærum gildi í breytu með því að nota reiknivirkja eins og + eða - með gildisveitingu =.
+Þetta sést betur í kóðabút
+
+\begin{lstlisting}[caption="Reiknivirkjagildisveiting"]
+# ég ætla að telja nemendur inn í stofuna
+# ég byrja með 0 nemendur
+nem = 0
+
+# svo sé ég fyrsta nemandann minn
+nem = nem + 1
+
+# þá uppfæri ég gildið sem nem breytan inniheldur og er hún núna það sem hún var (0) + 1, ef ég keyrði þessa línu aftur væri það orðið að (1) + 1 og svo koll af kolli eftir því sem ég keyri þessa línu oftar
+
+# önnur leið til að skrifa þetta er með reiknivirkjagildisveitingu
+nem += 1
+
+# þá uppfæri ég gildið nem um það sem hún var + 1
+
+#segjum að nemendur koma inn í stofuna í pörum þá væri formúlan svona:
+nem += 2
+
+# þá uppfærist gildið í nem um +2 í hvert sinn sem þessi kóðalína er keyrð
+
+# Ef ég væri að reikna stofnstærð á bakteríum sem tvöfaldast á hverjum klukkutíma gæti ég gert það svona:
+stofn_staerd = 30
+stofn_staerd *= 2 # og keyrt svo þessa línu fyrir hvern klukkutíma
+
+# Tökum annað dæmi, byrjum á að skoða hvernig megi geyma útreikninga í mismunandi breytum
+thusund = 1000
+fimm_hundrud = thusund/2
+tvo_hundrud_og_fimmtiu = fimm_hundrud/2
+
+# ef ef mér er sama um breytuna thusund og vil þess í stað bara halda utan um alla upphæðina mína í einni breytu og helminga hana tvisvar þá get ég gert þetta
+allt = 1000
+allt /= 2
+allt /= 2
+
+#nú er allt orðið að 250
+
+# ég má líka nota aðrar breytur í uppfærslunni minni
+# hér ætla ég að reikna út hver hækkun launa yrði milli ára ef ég fengi alltaf 2% launahækkun
+
+laun = 100
+verdbolga = 0.02
+laun *= 1 + verdbolga # þetta má svo keyra endurtekið til að skoða fram í tímann
+
+\end{lstlisting}
+
+Hér sést að það er gagnlegt og fljótlesið þegar það á að uppfæra gildi á breytu að gera það með því að nota reiknivirkjann með gildisveitingunni.
+Í kóðabútnum að ofan sést að athugasemdir eru skrifaðar inni í línum líka, það er stundum gagnlegt að skrifa stuttar athugasemdir inni í kóða með þessum hætti en betra er þó að skjala hann skilmerkilega efst við viðeigandi kóðabút.
+Allar athugasemdir eru hunsaðar af vélinni og því hefur allt sem er fyrir aftan \# merkið, hver sem það er, engin áhrif á útkomuna.
 

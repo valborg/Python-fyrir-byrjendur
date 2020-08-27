@@ -1,4 +1,90 @@
 \chapter{Strengir}\index{Strengir}\label{k:strengir}
 Til þess að geta sýnt og notað texta þarf gagnatýpu til að halda utan um hann. Í flestum forritunarmálum, og Python er ekki undantekning, eru gögn af þeirri týpu kölluð \textbf{strengir}.
+Lykilorð fyrir þessa týpu er \textbf{str}.
+
+\section{Strengir skilgreindir}\index{Strengir skilgreindir}
+Til þess að afmarka texta og segja vélinni að fara með hann sem af týpunni strengur þarf að nota tákn.
+Við þurftum ekki að gera það þegar við skrifuðum tölurnar en nú, og seinna, munum við þurfa sér tákn til þess að segja vélinni gögn af hvaða týpu hún er að vinna með.
+
+Táknin sem skilgreina strengi eru gæsalappir.
+Einfaldar eða tvöfaldar.
+
+\begin{lstlisting}[caption="Strengir skilgreindir]
+# Fyrsti strengurinn okkar
+"halló"
+
+#strengur geymdur í breytu
+textinn_minn = "halló ég má skrifa mörg orð inn í þessar gæsalappir"
+
+einfaldar_gaesalappir = 'ég má líka skrifa innan einfaldra gæsalappa'
+
+thetta_virkar_ekki = 'gæsalappirnar þurfa að passa saman" 
+
+# og ef ég vil skrifa mjög langan texta nota ég þrjár gæsalappir
+langi_textinn_minn = ''' ég má skrifa eins langa setningu hér og ég vil því að þetta verður alltaf álitið sem ein lína, hins vegar ef ég nota öðruvísi gæsalappir og langar að gera kóðan læsilegan er hægt að brjóta hann upp án þess að nota þessar þreföldugæsalappir, við sjáum það eftir smá'''
+\end{lstlisting}
+
+Í sumum forritunarmálum er munur á því að nota einfaldar og gæsalappir, þar sem einfaldar eru notaðar fyrir staka stafi (sér gagnatýpa) og tvöfaldar fyrir strengi.
+En það er enginn raun munur á því hvernig Python meðhöndlar þær.
+
+\section{Strengir og reikniaðgerðir}\index{Strengir og reikniaðgerðir}
+Við erum búin að sjá að það megi leggja tölur saman og margfalda þær.
+Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma með strengi og hvaða áhrif það hefur.
+
+\todo{vísa í vinnubók inni í þessum kóðabút}
+
+\begin{lstlisting}[caption="Strengir og reikniaðgerðir"]
+
+# Reikniaðgerðirnar sem við þekkjum eru +, -, *, /, //, **, og %
+# Lesandinn er hvattur til þess að gera prófanir á þessu í vinnubók upp á eigin spýtur
+# Með því að skilgreina streng og reyna að nota reikniaðgerð á hann með tölum eða öðrum strengjum
 
 
+# Gerum ráð fyrir að þessar prófanir hafi átt sér stað og niðurstaðan sé sú að þær aðgerðir sem hægt er að framkvæma eru + og *
+# En hvað gerist þegar við notum þær?
+
+\end{lstlisting}
+
+
+Þegar við notum + til að setja saman strengi þá erum við að beita \textit{samskeytingu} (e. concatenation).
+Samskeyting þýðir að einum streng er bætt við fyrir aftan annan streng.
+Það skiptir máli hvor er fyrir framan: "halló" + "bless" verður að "hallóbless" en "bless" + "halló" verður að "blesshalló".
+
+\begin{lstlisting}[caption="Samskeyting strengja"]
+
+strengur_a = "þetta er a strengurinn minn"
+strengur_b = " og þetta er b strengurinn minn"
+
+# Nú get ég sameinað þessa strengi með því að setja annan þeirra fyrir aftan hinn
+sameinadir_a_og_b = a + b
+
+# ef við prentum út strenginn fáum við 
+"þetta er a strengurinn minn og þetta er b strengurinn minn"
+#takið eftir að það er bil á milli strengjanna, það er eingungis vegna þess að b strengurinn er skilgreindur þannig að fyrst kemur bil fremst í strengnum
+
+# röðin skiptir máli þegar strengir eru sameinaðir svona
+sameinadir_b_og_a = b + a
+
+# þetta útprentað skilar okkur:
+" og þetta er b strengurinn minnþetta er a strengurinn minn"
+
+# Takið eftir að þarna er ekkert bil á milli strengjanna.
+
+# Á þessu er hægt að svindla:
+fyrsta_nafn = "Valborg"
+seinna_nafn = "Sturludóttir"
+fullt_nafn = fyrsta_nafn + " " + seinna_nafn
+
+# Þarna sameinaði ég þrjá strengi þar sem ég vissi að hvorugur strengjanna minna innihéldi bil ákvað ég að setja það á milli með auka samskeytingu.
+\end{lstlisting}
+
+Þegar við notum * til þess að margfalda streng erum við að \textit{lengja} (e. multiply) hann.
+Strengjalenging virkar þannig að þú tilgreinir hversu oft, í heilum tölum, þú vilt að strengurinn sé endurtekinn.
+
+\begin{lstlisting}[caption="Strengjalenging"]
+eitt_ord = "kex"
+eitt_ord*3
+
+#skilar okkur
+"kexkexkex"
+\end{lstlisting}
