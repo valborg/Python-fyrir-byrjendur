@@ -88,3 +88,118 @@ eitt_ord*3
 #skilar okkur
 "kexkexkex"
 \end{lstlisting}
+
+\section{Vísar í streng}\index{Vísar í streng}
+Strengir eru af einhverri lengd, við getum séð hversu mörg stafabil eru í streng með því að telja þau sjálf eða láta tölvuna segja okkur það með innbyggða fallinu len() (fyrir length).
+
+\begin{lstlisting}[caption="Stafabilafjöldi", label=lst:stafabil]
+strengur1 = "kex"
+# þessi strengur er augljóslega þrjú stafabil
+len(strengur1) 
+# skilar okkur 3
+
+strengur2 = "kex með smjöri, osti og sultu"
+len(strengur2)
+# skilar okkur 29, takið eftir að tóm bil og greinamerki teljast með
+\end{lstlisting}
+
+Nú þegar við vitum hversu mörg stafabil eru í strengnum getum við notað þau.
+Við getum sagt við vélina mig langar til að fá vísi (e. index) (einnig kallað sætisnúmer, sæti og stæði) númer 1 og séð hvaða tákn er í þeim vísi.
+Til að ná í eitthvað upp úr streng þurfum við að nota hornklofa (e. square brackets), tákn sem eru eins og kassalaga svigar [ og ].
+Við notum þessi tákn í Python til að ná í gögn upp úr einhverri gagnagrind, sjáum nánari útskýringu á því fyrirbæri í kaflanum \ref{k:listar}.
+Nú lítum við svo á að strengir séu til þess að geyma fyrir okkur tákn í ákveðinni röð og við getum nálgast þessi tákn með því að nota hornklofa.
+Inn í hornklofann ætlum við að láta þann vísi (eða það sætisnúmer) sem við viljum vinna með.
+
+\begin{lstlisting}[caption="Vísir 1", label=lst:stafbil2]
+strengur = "kex"
+# þessi strengur er augljóslega þrjú stafabil
+
+print(strengur[1])
+
+# þetta skilar okkur stafnum 'e'
+\end{lstlisting}
+
+Eins og sést í kóðabút \ref{lst:stafabil2} þá vísar vísir númer 1 ekki á fremsta stafinn sem er í þessu tilfelli k heldur vísar hann á stafinn e.
+Það er vegna þess að í Python og flestum öðrum forritunarmálum (ekki öllum) er byrjað að telja í núll.
+Þannig að fremsti vísirinn í streng (og öðrum gagnagrindum) er núllti vísirinn.
+Hver er þá síðasti vísirinn?
+Nú höfum við komist að þeirri niðurstöðu (í kóðabút \ref{lst:stafabil}) að strengurinn "kex" hefur þrjú stafabil, að það séu þrír sætisvísar í strengnum, að k sé í vísi 0, e sé í vísi 1 og þá hlýtur x að vera í vísi 2.
+Síðasti vísirinn í streng er því einum lægri heldur en lengdin á strengnum.
+Þannig að strengur af lengdinni fimm, eins og strengurinn "texti", hefur fimm stafabil sem eru í vísum númer 0,1,2,3 og 4.
+
+\subsection{Neikvæðir vísar}
+Það má einnig telja frá hægri til vinstri.
+Ef okkur langar að vinna með öftustu stökin í streng þurfum við ekki að vita hvað strengurinn er langur, við getum talið frá hægri endanum og unnið með neikvæða vísa.
+Í því tilfelli byrjum við ekki að telja í 0, því að þá myndi verða til tvíræðni (e. ambiguity).
+Tölvan myndi ekki vita hvorn 0 vísinn við værum að biðja um þegar við segðum strengur[0], hvort við værum að tala um núll frá vinstri eða hægri.
+Þess vegna byrjum við að telja frá hægri í -1, og höldum þannig áfram þar til við erum komin niður í -n þar sem n er lengdin á strengnum.
+Svo strengurinn "kex" er með vísana 0,1 og 2 en einnig vísana -3, -2 og -1 bæði í þessari röð, svo vísir -1 er alltaf síðasta táknið í streng.
+
+\subsection{Hlutstrengir}
+Nú vitum við hvernig á að sækja eitt stakt tákn upp úr streng.
+En hvernig náum við í einhvern hluta úr honum?
+Það er einnig gert með hornklofunum og við notum þá með ákveðnum hætti, við fáum að setja inn fleiri upplýsingar heldur en bara hvaða staka vísi við viljum.
+Við notum vísana svona: [vísir sem á að byrja fyrir framan : vísir sem á að hætta fyrir framan: stærð á skrefi sem á að taka við lesturinn].
+Þarna eru semsagt tveir tvípunktar sem er verið að nota og tölurnar sem koma á milli þeirra er afmörkunin á því hvað við viljum lesa upp úr tilteknum streng.
+Nú er vert að nefna að þegar við notum þessa málskipan eru ákveðin gildi sjálfgefin, það er við þurfum ekki að taka þau fram.
+
+Sjálfgefin gildi við að ná í hlutstreng:
+\begin{enumerate}
+	\item vísirinn sem við byrjum fyrir framan er fremsti stafurinn, eða vísir 0
+	\item vísirinn sem við hættum fyrir framan er fyrir aftan aftasta stafinn, ekki vísi -1 heldur fyrir aftan hann, enginn vísir
+	\item skrefastærðin er sjálfgefin 1, það er að við skoðum hvert einasta tákn og hoppum ekki yfir neitt
+\end{enumerate}
+
+\begin{lstlisting}[caption="Hlutstrengir", label=lst:hlutstrengir]
+strengur = "kex með smjöri, osti og sultu"
+
+# mig langar að sækja allan strenginn
+sami_strengur = strengur[::] # hér nota ég þann kost í Python að setja inn fyrir mig sjálfgefin gildi
+
+#mig langar að sækja það sem kemur fyrir aftan táknið x í kex
+aftan_x = strengur[3::]
+
+#mig langar ekki í síðasta stafinn
+nema_sidasti = strengur[:-1:]
+
+#mig langar í allan strenginn nema annan hvern staf
+annar_hver = strengur[::2]
+
+# mig langar að sækja orðið kex og mig langar einnig að sækja orðið sultu
+kex = strengur[0:3]
+sultu = strengur[-5:]
+
+#einnig er hægt að lesa afturábak með því að taka neikvæða skrefastærð
+ofugur = strengur[::-1]
+\end{lstlisting}
+
+
+\section{Aðferðir á strengi}\index{Aðferðir á strengi}
+Áður en aðferðir á strengi eru kynntar þarf að útskýra stuttlega hvað aðferðir eru.
+Við höfum séð print() fallið notað t.d. í kóðabút \ref{lst:notabreytu} og í kóðabút \ref{lst:stafabil}, það er innbyggt fall í Python sem prentar það sem beðið er um á staðalúttak. \todo{er ég búin að útskýra staðalúttak?}
+Það fall virkar eitt og sér og þarf bara að skrifa nafnið á því, gera sviga og setja inn í svigana það sem við viljum láta fallið fá \todo{vísa í falla kaflann}.
+Aðferðir eru sérhæfð föll sem virka á ákveðnar gagnatýpur.
+Þannig að allar aðferðir eru föll, ekki öll föll eru aðferðir.
+Á ensku eru aðferðir kallaðar \textit{methods} og föll \textit{functions}.
+Aðferðir eru í raun ,,hengdar aftan á" þá týpu sem þær eiga að verka á, það er gert með því að skrifa nafnið á breytunni sem inniheldur gögnin sem við viljum framkvæma aðferðina á, gera svo punkt, skrifa nafnið á aðferðinni og setja sviga, inn í svigana fara öll þau viðföng sem aðferðin tekur við.
+\todo{vísa í eitthvað sem útskýrir viðföng}
+
+\begin{lstlisting}[caption="Aðferðir kynntar", label=lst:adferdir]
+strengur = "kex með smjöri, osti og sultu"
+\end{lstlisting}
+
+Annað sem þarf að hafa í huga áður en við vinnum með aðferðir á strengi er að strengir eru óbreytanlegir (e. immutable) sem þýðir að aðferðir sem eru notaðar á þá skila öðrum strengjum í stað þess að breyta strengnum sem við keyrðum aðferðina á.
+Með það í huga skulum við skoða eftirfarandi lista af aðferðum sem áhugavert er að taka fyrir.
+
+Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær séu að verka á breytuna strengur sem inniheldur táknin "valborg Sturludóttir".
+
+\begin{enumerate}
+	\item strengur.capitalize() skilar strengnum "Valborg sturludóttir" þar sem fremsti táknið er nú hástafur.
+	\item strengur.upper() skilar strengnum "VALBORG STURLUDÓTTIR" þar sem allir stafir eru nú háfstafir.
+	\item strengur.lower() skilar strengnum "valborg sturludóttir" þar sem allir stafir eru nú lágstafir.
+	\item strengur.switchcase() skilar strengnum "VALBORG sTURLUDÓTTIR" þar sem búið er að skipta út lágstöfum fyrir hástafi og öfugt.
+	\item strengur.index('v') skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
+	\item strengur.index('x') skilar villu þar sem táknið 'x' hefur engann vísi í strengnum
+	\item strengur.find('v') skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
+	\item strengur.find('x') skilar tölvunni -1 þar sem 'x' finnst ekki í stregnum. 
+\end{enumerate}
