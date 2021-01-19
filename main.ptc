@@ -1,86 +1,118 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \babel@toc {icelandic}{}
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {I}{Fyrsti hluti}}{5}{part.1}%
+\contentsline {part}{\@mypartnumtocformat {I}{Fyrsti hluti}}{7}{part.1}%
 \ttl@starttoc {default@1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {1}Inngangur}{7}{chapter.1}%
+\contentsline {chapter}{\numberline {1}Inngangur}{9}{chapter.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.1}Tilgangur bókarinnar}{7}{section.1.1}%
+\contentsline {section}{\numberline {1.1}Tilgangur bókarinnar}{9}{section.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.2}Hvers vegna Python?}{8}{section.1.2}%
+\contentsline {section}{\numberline {1.2}Hvers vegna Python?}{10}{section.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Uppsetning}{8}{section.1.3}%
+\contentsline {section}{\numberline {1.3}Uppsetning}{10}{section.1.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Að keyra kóða}{8}{section.1.4}%
+\contentsline {section}{\numberline {1.4}Að keyra kóða}{10}{section.1.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Málskipan}{10}{section.1.5}%
+\contentsline {section}{\numberline {1.5}Málskipan}{12}{section.1.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.1}Uppsetning á kóða}{10}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.1}Uppsetning á kóða}{12}{subsection.1.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.5.2}Gagnatýpur og lykilorð}{11}{subsection.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.2}Gagnatýpur og lykilorð}{13}{subsection.1.5.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {2}Tölur og breytur}{13}{chapter.2}%
+\contentsline {chapter}{\numberline {2}Tölur og breytur}{15}{chapter.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Tölur - talnatýpur}{13}{section.2.1}%
+\contentsline {section}{\numberline {2.1}Tölur - talnatýpur}{15}{section.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Reikniaðgerðir og tákn}{14}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Reikniaðgerðir og tákn}{16}{section.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Breytur}{15}{section.2.3}%
+\contentsline {section}{\numberline {2.3}Breytur}{17}{section.2.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Strengir}{19}{chapter.3}%
+\contentsline {chapter}{\numberline {3}Strengir}{21}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {3.0.1}Descriptions and Definitions}{19}{subsection.3.0.1}%
+\contentsline {section}{\numberline {3.1}Strengir skilgreindir}{21}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}In-text Elements}{21}{chapter.4}%
+\contentsline {section}{\numberline {3.2}Strengir og reikniaðgerðir}{22}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Theorems}{21}{section.4.1}%
+\contentsline {chapter}{\numberline {4}Listar}{25}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.1}Several equations}{21}{subsection.4.1.1}%
+\contentsline {section}{\numberline {4.1}Gagnagrindur}{25}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.1.2}Single Line}{21}{subsection.4.1.2}%
+\contentsline {chapter}{\numberline {5}Segðir og skilyrðissetningar}{27}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Definitions}{21}{section.4.2}%
+\contentsline {section}{\numberline {5.1}Segðir}{27}{section.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Notations}{22}{section.4.3}%
+\contentsline {chapter}{\numberline {6}Lykkjur}{29}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Remarks}{22}{section.4.4}%
+\contentsline {section}{\numberline {6.1}while - á meðan eitthvað er satt}{29}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Corollaries}{22}{section.4.5}%
+\contentsline {chapter}{\numberline {7}Orðabækur}{31}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.6}Propositions}{22}{section.4.6}%
+\contentsline {section}{\numberline {7.1}Lyklar og gildi}{31}{section.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.1}Several equations}{22}{subsection.4.6.1}%
+\contentsline {chapter}{\numberline {8}Föll}{33}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.6.2}Single Line}{22}{subsection.4.6.2}%
+\contentsline {section}{\numberline {8.1}Tilgangur falla}{33}{section.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.7}Examples}{22}{section.4.7}%
+\contentsline {section}{\numberline {8.2}Að skrifa föll}{33}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.7.1}Equation and Text}{22}{subsection.4.7.1}%
+\contentsline {section}{\numberline {8.3}Viðföng}{33}{section.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.7.2}Paragraph of Text}{23}{subsection.4.7.2}%
+\contentsline {section}{\numberline {8.4}Skilagildi}{33}{section.8.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.8}Exercises}{23}{section.4.8}%
+\contentsline {section}{\numberline {8.5}Lokun}{33}{section.8.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.9}Problems}{23}{section.4.9}%
+\contentsline {subsection}{\numberline {8.5.1}Descriptions and Definitions}{33}{subsection.8.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.10}Vocabulary}{23}{section.4.10}%
+\contentsline {chapter}{\numberline {9}In-text Elements}{35}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{25}{part.2}%
+\contentsline {section}{\numberline {9.1}Theorems}{35}{section.9.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.1}Several equations}{35}{subsection.9.1.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.1.2}Single Line}{35}{subsection.9.1.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.2}Definitions}{35}{section.9.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.3}Notations}{36}{section.9.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.4}Remarks}{36}{section.9.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.5}Corollaries}{36}{section.9.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.6}Propositions}{36}{section.9.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.6.1}Several equations}{36}{subsection.9.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.6.2}Single Line}{36}{subsection.9.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.7}Examples}{36}{section.9.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.7.1}Equation and Text}{36}{subsection.9.7.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {9.7.2}Paragraph of Text}{37}{subsection.9.7.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.8}Exercises}{37}{section.9.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.9}Problems}{37}{section.9.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {9.10}Vocabulary}{37}{section.9.10}%
+\defcounter {refsection}{0}\relax 
+\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{39}{part.2}%
 \ttl@stoptoc {default@1}
 \ttl@starttoc {default@2}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Presenting Information}{27}{chapter.5}%
+\contentsline {chapter}{\numberline {10}Presenting Information}{41}{chapter.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Table}{27}{section.5.1}%
+\contentsline {section}{\numberline {10.1}Table}{41}{section.10.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Figure}{27}{section.5.2}%
+\contentsline {section}{\numberline {10.2}Figure}{41}{section.10.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{29}{chapter*.11}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{43}{chapter*.11}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{29}{section*.12}%
+\contentsline {section}{Articles}{43}{section*.12}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{29}{section*.13}%
+\contentsline {section}{Books}{43}{section*.13}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{31}{section*.14}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{45}{section*.14}%
 \contentsfinish 
