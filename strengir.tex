@@ -127,6 +127,16 @@ Nú höfum við komist að þeirri niðurstöðu (í kóðabút \ref{lst:stafabi
 Síðasti vísirinn í streng er því einum lægri heldur en lengdin á strengnum.
 Þannig að strengur af lengdinni fimm, eins og strengurinn "texti", hefur fimm stafabil sem eru í vísum númer 0,1,2,3 og 4.
 
+\subsection{Óbreytanleiki}
+Nú höfum við séð að það er hægt að sækja stafabil í streng, eins og tildæmi núllt táknið í strengnum.
+Þá er mikilvægt að hafa í huga að í Python er ekki leyfilegt að endurskilgreina hluta úr streng.
+Byrjum á því að skoða hvað endurskilgreining þýðir.
+Ef við búum til breytu eins og í kóðabút \ref{lst:reiknivirkjagildisveiting} og notum nafnið á henni aftur til að segja vélinni að endurnýta minnissvæði með ákveðnu nafni.
+Þá erum við búin að endurskilgreina breytuna okkar, hún var eitthvað áður en nú er hún eitthvað annað.
+
+Þar sem strengir eru með ákveðin númeraða vísa sem benda á ákveðin tákn gætum við þá ekki bara sagt við vélina ,,mig langar að breyta bara tákni númer 0''?
+Það er ekki í boði því að í Python eru strengir óbreytanlegir (e. immutable) og því er bara hægt að vinna með því eins og þeir eru eða endurskilgreina þá alveg.
+
 \subsection{Neikvæðir vísar}
 Það má einnig telja frá hægri til vinstri.
 Ef okkur langar að vinna með öftustu stökin í streng þurfum við ekki að vita hvað strengurinn er langur, við getum talið frá hægri endanum og unnið með neikvæða vísa.
@@ -190,9 +200,10 @@ strengur = "kex með smjöri, osti og sultu"
 
 Annað sem þarf að hafa í huga áður en við vinnum með aðferðir á strengi er að strengir eru óbreytanlegir (e. immutable) sem þýðir að aðferðir sem eru notaðar á þá skila öðrum strengjum í stað þess að breyta strengnum sem við keyrðum aðferðina á.
 Með það í huga skulum við skoða eftirfarandi lista af aðferðum sem áhugavert er að taka fyrir.
+\vspace{10px}
 
 Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær séu að verka á breytuna strengur sem inniheldur táknin "valborg Sturludóttir".
-
+\vspace{5px}
 \begin{enumerate}
 	\item strengur.capitalize() skilar strengnum "Valborg sturludóttir" þar sem fremsti táknið er nú hástafur.
 	\item strengur.upper() skilar strengnum "VALBORG STURLUDÓTTIR" þar sem allir stafir eru nú háfstafir.
@@ -203,3 +214,9 @@ Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær séu að verka �
 	\item strengur.find('v') skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
 	\item strengur.find('x') skilar tölvunni -1 þar sem 'x' finnst ekki í stregnum. 
 \end{enumerate}
+\vspace{10px}
+
+Takið eftir því að þarna er orðið lykilorðið ,,skilar" það er að við fáum í hendurnar eitthvað til að vinna með sem við getum t.d. vistað í breytu, við skoðum þetta nánar þegar við gerum okkar eigin föll í kafla \ref{k:föll}.
+Það er þörf á því að vinna með aðferðir á strengi með þessum hætti því að við munum að strengir eru óbreytanlegir.
+Þannig að ef við viljum vinna með einhverja útkomu byggða á streng þá þurfum við að fá útkomuna í hendurnar, því strengurinn sem aðferðinni var beitt á breytist ekki neitt við að kalla í aðferðina.
+Í upptalningunni hér að ofan getum við keyrt allar þessar línur í röð eins og kóða og búist við að fá þessi svör því að breytan strengur verður aldrei fyrir neinum breytingum.
