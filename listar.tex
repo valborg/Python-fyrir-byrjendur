@@ -4,7 +4,7 @@
 Listar eru gagnagrindur, sem þýðir að þeir geta geymt fyrir okkur hin ýmsu gögn og gert okkur þau aðgengileg á ákveðinn máta.
 Listar eru skilgreindir með hornklofum [ ] og er lykilorðið þeirra \textbf{list}.
 
-\chapter{Listar skilgreindir}\index{Listar skilgreindir}\label{uk:listar-skilgreindir}
+\section{Listar skilgreindir}\index{Listar skilgreindir}\label{uk:listar-skilgreindir}
 Listar geyma, í ákveðinni röð, þau gögn sem við viljum geyma sem mega vera af hvaða týpu sem er.
 Gögnin sem eru sett inn í listann eru kölluð stök og röðin sem þau eru í eru aðgengileg eftir vísum eða sætisnúmerum alveg eins og strengir.
 Stökin eru aðgreind með kommum.
@@ -44,8 +44,65 @@ starfsfolk = [["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"]
 
 Við tökum eftir því að listinn starfsfolk í kóðabút \ref{lst:listar-arkir} í línu 9 inniheldur þrjá aðra lista, og þeir eru aðgreindir með kommum alveg eins og stökin inni í hverjum innri lista fyrir sig eru einnig aðgreind með kommum.
 Einnig tökum við eftir því að hér sjáum við í fyrsta sinn inndrátt, það er í raun bara aukalegt bil sem vélin hunsar við að skilgreina breytuna starfsfolk og er því fyrir okkur til að geta lesið kóðann auðveldlegar.
-Þetta er ekki eins og inndrátturinn sem við munum sjá og beita í næsta kafla (\nameref{k:segðir}
+Þetta er ekki eins og inndrátturinn sem við munum sjá og beita í næsta kafla, \nameref{k:segðir}.
  
 \section{Að vinna með gögn}\index{Að vinna með gögn}\label{uk:gagnavinnsla-listar}
+Þegar við geymum gögn viljum við að þau séu aðgengileg og að við getum skoðað þau, breytt þeim og unnið með á máta sem hentar okkur.
+Listar gera okkur kleyft að nálgast gögn eftir sætisvísum.
+Við náum í gögn upp úr lista eftir sætisvísi alveg eins og við sóttum tiltekið tákn úr streng, með því að nota hornklofa og það sætisnúmer sem við vildum.
+Hér þurfum við að athuga að við viljum ekki ruglast á því að skilgreina lista með hornklofum og að sækja gögn úr lista eða streng með hornklofum.
+Í fyrra tilfellinu standa hornklofarnir einir og sér, þar sem við erum að skilgreina nýjan lista.
+Í seinna tilfellinu standa hornklofarnir fyrir aftan þá breytu sem á að sækja gögn upp úr með ákveðnum sætisvísum.
+Sjáum dæmi.
+
+\begin{lstlisting}[caption=Listar af listum, label=lst:listar-gogn-sott]
+# listi skilgreindur
+[1,2,3]
+
+# listi skilgreindur og geymdur í breytu
+listinn = [1,2,3, "langur strengur sem hefur einnig sætisnúmer"]
+
+# gögn sótt upp úr listanum
+listinn[1] # skilar okkur tölunni 2
+
+# Við getum líka sótt gögn upp úr þeim gögnum sem leyfa það
+listinn[3][0] # skilar okkur stafnum l
+\end{lstlisting}
+
+Við sjáum í kóðabút \ref{lst:listar-gogn-sott} í línu 11 að þar erum við að keðja (e. to chain) hornklofana okkar.
+Þetta megum við því að listinn[3] skilar okkur til baka strengnum "langur strengur sem hefur einnig sætisnúmer" og við megum sækja úr honum stak númer 0 sem er aðgengilegt með því að gera [0] fyrir aftan listinn[3].
+Þetta gagnast okkur sérstaklega þegar við lítum aftur á starfsmanahaldið okkar hér á undan og viljum geta sótt gögn upp úr innri listum.
+Sjáum hvernig við getum fengið upplýsingar sem eru skráðar um tiltekið starfsman úr listanum sem við geymdum í kóðabút \ref{lst:listar-arkir}.
+
+\begin{lstlisting}[caption=Unnið með gögn úr lista, label=lst:listar-gagnanotkun]
+print(starfsfolk[0])
+
+# þetta skilar okkur 
+["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"]
+
+print(starfsfolk[0][0])
+# þetta skilar
+"Jóna Jónsdóttir"
+# þar sem nafnið hennar er 0 stakið í innri listanum
+\end{lstlisting}
+
+\subsection{Listar eru breytanlegir}
+Nú allt í einu munum við að Jóna er ekki Jónsdóttir heldur Alfreðsdóttir og við þurfum að laga það, við þurfum ekki að skilgreina listann allann upp á nýtt (sem við hefðum þurft að gera ef við værum með streng) heldur þurfum við bara að setja nýtt gildi inn fyrir það sem heldur utan um nafnið hennar Jónu.
+
+\begin{lstlisting}[caption=Unnið með gögn úr lista, label=lst:listar-gagnabreyting]
+print(starfsfolk[0][0])
+
+# við munum að þetta skilar 
+"Jóna Jónsdóttir"
+# en við munum að nafnið var óvart vitlaust skráð svo við breytum því
+
+starfsfolk[0][0] = "Jóna Alfreðsdóttir"
+# þetta skilar okkur engu því að við vorum hér að skilgreina eitthvað, segja tölvunni að geyma eitthvað
+# en við erum búin að endurskilgreina starfsfolk listann og ef við köllum í hann núna sjáum við að hann er breyttur
+
+print(starfsfolk) 
+# þetta skilar 
+[["Jóna Alfreðsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"], ["Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"], ["Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"]]
+\end{lstlisting}
 
 \section{Gagnlegar aðferðir á lista}\index{Aðferðir á lista}\label{uk:aðferðir-listar}
