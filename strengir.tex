@@ -9,7 +9,7 @@ Við þurftum ekki að gera það þegar við skrifuðum tölurnar en nú, og se
 Táknin sem skilgreina strengi eru gæsalappir.
 Einfaldar eða tvöfaldar.
 
-\begin{lstlisting}[caption="Strengir skilgreindir]
+\begin{lstlisting}[caption=Strengir skilgreindir]
 # Fyrsti strengurinn okkar
 "halló"
 
@@ -33,7 +33,7 @@ Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma með 
 
 \todo{vísa í vinnubók inni í þessum kóðabút}
 
-\begin{lstlisting}[caption="Strengir og reikniaðgerðir"]
+\begin{lstlisting}[caption=Strengir og reikniaðgerðir]
 
 # Reikniaðgerðirnar sem við þekkjum eru +, -, *, /, //, **, og %
 # Lesandinn er hvattur til þess að gera prófanir á þessu í vinnubók upp á eigin spýtur
@@ -50,7 +50,7 @@ Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma með 
 Samskeyting þýðir að einum streng er bætt við fyrir aftan annan streng.
 Það skiptir máli hvor er fyrir framan: "halló" + "bless" verður að "hallóbless" en "bless" + "halló" verður að "blesshalló".
 
-\begin{lstlisting}[caption="Samskeyting strengja"]
+\begin{lstlisting}[caption=Samskeyting strengja]
 
 strengur_a = "þetta er a strengurinn minn"
 strengur_b = " og þetta er b strengurinn minn"
@@ -81,7 +81,7 @@ fullt_nafn = fyrsta_nafn + " " + seinna_nafn
 Þegar við notum * til þess að margfalda streng erum við að \textit{lengja} (e. multiply) hann.
 Strengjalenging virkar þannig að þú tilgreinir hversu oft, í heilum tölum, þú vilt að strengurinn sé endurtekinn.
 
-\begin{lstlisting}[caption="Strengjalenging"]
+\begin{lstlisting}[caption=Strengjalenging]
 eitt_ord = "kex"
 eitt_ord*3
 
@@ -92,7 +92,7 @@ eitt_ord*3
 \section{Vísar í streng}\index{Vísar í streng}
 Strengir eru af einhverri lengd, við getum séð hversu mörg stafabil eru í streng með því að telja þau sjálf eða láta tölvuna segja okkur það með innbyggða fallinu len() (fyrir length).
 
-\begin{lstlisting}[caption="Stafabilafjöldi", label=lst:stafabil]
+\begin{lstlisting}[caption=Stafabilafjöldi, label=lst:stafabil]
 strengur1 = "kex"
 # þessi strengur er augljóslega þrjú stafabil
 len(strengur1) 
@@ -110,7 +110,7 @@ Við notum þessi tákn í Python til að ná í gögn upp úr einhverri gagnagr
 Nú lítum við svo á að strengir séu til þess að geyma fyrir okkur tákn í ákveðinni röð og við getum nálgast þessi tákn með því að nota hornklofa.
 Inn í hornklofann ætlum við að láta þann vísi (eða það sætisnúmer) sem við viljum vinna með.
 
-\begin{lstlisting}[caption="Vísir 1", label=lst:stafbil2]
+\begin{lstlisting}[caption=Vísir 1, label=lst:stafbil2]
 strengur = "kex"
 # þessi strengur er augljóslega þrjú stafabil
 
@@ -160,7 +160,7 @@ Sjálfgefin gildi við að ná í hlutstreng:
 	\item skrefastærðin er sjálfgefin 1, það er að við skoðum hvert einasta tákn og hoppum ekki yfir neitt
 \end{enumerate}
 
-\begin{lstlisting}[caption="Hlutstrengir", label=lst:hlutstrengir]
+\begin{lstlisting}[caption=Hlutstrengir, label=lst:hlutstrengir]
 strengur = "kex með smjöri, osti og sultu"
 
 # mig langar að sækja allan strenginn
@@ -194,7 +194,7 @@ Aðferðir eru sérhæfð föll sem virka á ákveðnar gagnatýpur.
 Aðferðir eru í raun ,,hengdar aftan á" þá týpu sem þær eiga að verka á, það er gert með því að skrifa nafnið á breytunni sem inniheldur gögnin sem við viljum framkvæma aðferðina á, gera svo punkt, skrifa nafnið á aðferðinni og setja sviga, inn í svigana fara öll þau viðföng sem aðferðin tekur við.
 \todo{vísa í eitthvað sem útskýrir viðföng}
 
-\begin{lstlisting}[caption="Aðferðir kynntar", label=lst:adferdir]
+\begin{lstlisting}[caption=Aðferðir kynntar, label=lst:adferdir]
 strengur = "kex með smjöri, osti og sultu"
 \end{lstlisting}
 
@@ -219,4 +219,8 @@ Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær séu að verka �
 Takið eftir því að þarna er orðið lykilorðið ,,skilar" það er að við fáum í hendurnar eitthvað til að vinna með sem við getum t.d. vistað í breytu, við skoðum þetta nánar þegar við gerum okkar eigin föll í kafla \ref{k:föll}.
 Það er þörf á því að vinna með aðferðir á strengi með þessum hætti því að við munum að strengir eru óbreytanlegir.
 Þannig að ef við viljum vinna með einhverja útkomu byggða á streng þá þurfum við að fá útkomuna í hendurnar, því strengurinn sem aðferðinni var beitt á breytist ekki neitt við að kalla í aðferðina.
-Í upptalningunni hér að ofan getum við keyrt allar þessar línur í röð eins og kóða og búist við að fá þessi svör því að breytan strengur verður aldrei fyrir neinum breytingum.
+Í upptalningunni hér að ofan getum við keyrt allar þessar línur í röð eins og kóða og búist við að fá þessi svör því að breytan strengur verður aldrei fyrir neinum breytingum, hún helst sem "valborg Sturludóttir" þrátt fyrir að við köllum í alla þessa fylkingu af aðferðum.
+
+Í þessari bók verða ekki gerð skil á öllum þeim aðferðum sem eru í boði fyrir þær týpur sem við skoðum.
+Þær eru mýmargar og til ýmiss gagnlegar en það er út fyrir svið þessarar bókar að taka hverja fyrir sig fyrir og því munum við bara nefna þær gagnast okkur að skoða.
+Höfundur hvetur þó til að lesandi geri ítarlegar tilraunir og prófanir.
