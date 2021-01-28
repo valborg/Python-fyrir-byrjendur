@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  27 JAN 2021 15:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  28 JAN 2021 16:07
 entering extended mode
 **./main.tex
 (main.tex
@@ -1608,15 +1608,29 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[29] [30]) (expression.tex [31] [32
+[29] [30]
 
-]
+LaTeX Warning: Reference `lst:listar-pop' on page 31 undefined on input line 12
+1.
+
+[31]
+
+LaTeX Warning: Reference `lst:listar-append' on page 32 undefined on input line
+ 129.
+
+
+LaTeX Warning: Reference `lst:listar-sort' on page 32 undefined on input line 1
+37.
+
+) (expression.tex [32]
 Kafli 5.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (lykkjur.tex [33] [34
+) (lykkjur.tex [33
+
+] [34
 
 ]
 Kafli 6.
@@ -1686,7 +1700,7 @@ File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=963, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=964, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
@@ -1777,10 +1791,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33393 strings out of 481225
- 616841 string characters out of 2905237
+ 33396 strings out of 481225
+ 616893 string characters out of 2905237
  1453284 words of memory out of 3000000
- 47582 multiletter control sequences out of 15000+200000
+ 47585 multiletter control sequences out of 15000+200000
  667287 words of font info for 331 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2953s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1803,9 +1817,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (51 pages, 630500 bytes).
+Output written on main.pdf (51 pages, 633095 bytes).
 PDF statistics:
- 1448 PDF objects out of 1728 (max. 8388607)
+ 1449 PDF objects out of 1728 (max. 8388607)
  510 named destinations out of 1000 (max. 500000)
  68137 words of extra memory for PDF output out of 74296 (max. 10000000)
 
