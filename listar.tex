@@ -138,3 +138,98 @@ Gefum okkur að við eigum listann [0,2,1,3] sem er geymdur í breytunni listinn
 	\end{itemize}
 	
 \end{itemize}
+
+\begin{lstlisting}[caption=.pop() aðferðin, label=lst:listar-pop]
+test = [1,2,3]
+
+x = test.pop()
+# x inniheldur núna töluna 3 og test inniheldur listann [1,2]
+
+y = test.pop(0)
+# y inniheldur núna töluna 1 og test inniheldur listann [2]
+# ekki er hægt að setja inn vísi sem er ekki til staðar í listanum
+
+z = test.pop(1) # þetta veldur villu því að listinn inniheldur einungis stakið 2 sem er í sæti 0
+\end{lstlisting}
+\begin{lstlisting}[caption=.append() aðferðin, label=lst:listar-append]
+test = []
+
+# test er breyta sem inniheldur tóman lista, sem okkur langar að bæta í eftir að hafa búið hann til
+
+test.append(1)
+# nú inniheldur test stakið 1 í vísi 0, [1]
+
+test.append("nú bætum við streng aftast í listann")
+# nú inniheldur test listann [1, "nú bætum við streng aftast í listann"]
+
+test.append(["hér er heill listi", "með nokkrum stökum", "en hann er samt einn stakur listi", "og telst því sem að bæta við einu staki"])
+# athugum hér að hornklofar skilgreina lista og innan í svigum aðferðarinnar er bara eitt hornklofapar svo við erum bara að bæta við einum lista aftast í test listann okkar
+print(test) s
+# skilar okkur þessu:
+# [1, "nú bætum við streng aftast í listann", ["hér er heill listi", "með nokkrum stökum", "en hann er samt einn stakur listi", "og telst því sem að bæta við einu staki"]]
+
+# bætum nú aftast í innri listann með .append() aðferðinni
+test[2].append("hér var bætt aftast í innri listann, ekki er komið nýtt stak í test")
+
+print(test)
+# skilar okkur þessu:
+# [1, "nú bætum við streng aftast í listann", ["hér er heill listi", "með nokkrum stökum", "en hann er samt einn stakur listi", "og telst því sem að bæta við einu staki", "hér var bætt aftast í innri listann, ekki er komið nýtt stak í test"]]
+# lengdin á listanum er enn bara 3 og vísarnir eru 0,1 og 2.
+
+\end{lstlisting}
+Athugum hér að í kóðabút \ref{lst:listar-append} í línu ?? þá er stak í vísi 0 1, stak í vísi 1 er "nú bætum við streng aftast í listann" og í vísi 2 er stakið ["hér er heill listi", "með nokkrum stökum", "en hann er samt einn stakur listi", "og telst því sem að bæta við einu staki"].
+Þar sem stakið í vísi 2 er einnig listi þá má nota aðferðina .append() á hann og það sem gerist í línu ?? er að gögn eru sótt upp úr listanum með hornklofanotkun, eins og í kóðabút \ref{lst:listar-gagnanotkun}.
+Þannig keðjum við og getum bætt aftast í þennan innri lista með .append().
+
+\begin{lstlisting}[caption=.sort() aðferðin, label=lst:listar-sort]
+# test = [1,6,3,1]
+
+test.sort()
+# nú er listinn breyttur
+
+print(test)
+# skilar : [1,1,3,6]
+
+test = ["b", "a", "m", "z"]
+test.sort()
+print(test)
+# skilar : ["a", "b", "m", "z"]
+
+test = [1, "6"]
+test.sort()
+# hér verður villa því að tölur og strengir eru ekki samanburðarhæfir
+
+starfsfolk = [["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"],
+			  ["Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"],
+			  ["Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"]]
+starfsfolk.sort()
+print(starfsfolk)
+# skilar 
+# [["Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"],
+  ["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"],
+  ["Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"],]
+  
+# Bætum við auðkennisnúmeri fremst í listann
+starfsfolk = [[1927, "Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"],
+ [782, "Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"],
+ [981,"Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"]]
+		     
+starfsfolk.sort()
+print(starfsfolk)
+# skilar
+#  [[782, "Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"],
+	[981,"Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"],
+	[1927, "Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"]]
+	
+# En ef það gleymist að setja inn auðkennisnúmer þegar nýjum starfskrafti er bætt við í listann:
+starfsfolk.append(["Þórður Hjaltalín", "thordur@fyrirtaeki.is", "Markaðs", "4445571"]
+print(starfsfolk)
+# skilar
+#  [[782, "Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"],
+	[981,"Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"],
+	[1927, "Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"],
+	["Þórður Hjaltalín", "thordur@fyrirtaeki.is", "Markaðs", "4445571"]]
+
+starfsfolk.sort() 
+# þetta veldur núna villu þar sem raðað er eftir fremsta staki hvers lista og fremstu stökin eru ekki af týpum sem hægt er að bera saman
+\end{lstlisting}

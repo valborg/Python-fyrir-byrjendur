@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  28 JAN 2021 16:07
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  29 JAN 2021 06:30
 entering extended mode
 **./main.tex
 (main.tex
@@ -1608,29 +1608,15 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[29] [30]
-
-LaTeX Warning: Reference `lst:listar-pop' on page 31 undefined on input line 12
-1.
-
-[31]
-
-LaTeX Warning: Reference `lst:listar-append' on page 32 undefined on input line
- 129.
-
-
-LaTeX Warning: Reference `lst:listar-sort' on page 32 undefined on input line 1
-37.
-
-) (expression.tex [32]
+[29] [30] [31] [32] [33]) (expression.tex [34]
 Kafli 5.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (lykkjur.tex [33
+) (lykkjur.tex [35
 
-] [34
+] [36
 
 ]
 Kafli 6.
@@ -1638,7 +1624,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (dict.tex [35] [36
+) (dict.tex [37] [38
 
 ]
 Kafli 7.
@@ -1646,7 +1632,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [37] [38
+) (func.tex [39] [40
 
 ]
 Kafli 8.
@@ -1654,7 +1640,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) [39] [40
+) [41] [42
 
 ]
 Kafli 9.
@@ -1676,7 +1662,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 176.
-[41]
+[43]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1687,34 +1673,34 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 214.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 249.
- [42]
+ [44]
 Package mdframed Info: mdframed works in twoside mode on input line 269.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 269.
- [43] [44
+ [45] [46
 
-] (main.ptc) [45] [46]
+] (main.ptc) [47] [48]
 Kafli 10.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=964, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1063, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[47
+[49
 
- <./Pictures/placeholder.jpg>] [48
+ <./Pictures/placeholder.jpg>] [50
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 342.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [49] [50
+ [51] [52
 
 ] (main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
@@ -1771,7 +1757,7 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[51
+[53
 
 ])
 \tf@ptc=\write7
@@ -1791,13 +1777,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33396 strings out of 481225
- 616893 string characters out of 2905237
- 1453284 words of memory out of 3000000
- 47585 multiletter control sequences out of 15000+200000
+ 33494 strings out of 481225
+ 618356 string characters out of 2905237
+ 1453431 words of memory out of 3000000
+ 47595 multiletter control sequences out of 15000+200000
  667287 words of font info for 331 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,85p,973b,2953s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} 
 <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0
 900.pk> <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
@@ -1817,9 +1803,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (51 pages, 633095 bytes).
+Output written on main.pdf (53 pages, 653303 bytes).
 PDF statistics:
- 1449 PDF objects out of 1728 (max. 8388607)
- 510 named destinations out of 1000 (max. 500000)
+ 1567 PDF objects out of 1728 (max. 8388607)
+ 598 named destinations out of 1000 (max. 500000)
  68137 words of extra memory for PDF output out of 74296 (max. 10000000)
 
