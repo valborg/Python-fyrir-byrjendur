@@ -12,11 +12,99 @@ Til þess að gera það þurfum við að læra á nýja týpu sem heitir Boolea
 Hún er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt og eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka og því hvetur höfundur til að lesandi fletti allavega upp wikipedia greininni.} (e. Boolean algebra). 
 Nú er það flestum kunnug staðreynd að tölvur vinna með 0 1 í grunninn, en hvernig það er notað í æðri forritunarmálum (e. high level programming languages) er ekki eins augljóst.
 
-Í þessum kafla verður farið yfir búlísk gildi, samanburð (e. comparison) og samanburðarvirkja (e. comparison operands), rökvirkja (e. logical operands) og svo skilyrðissetningar (e. conditional statements).
+Í þessum kafla verður farið yfir búlísk gildi, samanburð (e. comparison) og samanburðarvirkja (e. comparison operators), rökvirkja (e. logical operators) og svo skilyrðissetningar (e. conditional statements).
 
 \section{Boolean gildi}\index{Boolean gildi}
+
+Eins og kom fram í inngangi kaflans eru búlsk gildi einungis tvö, True og False.
+Hægt er að geyma þau í breytum eins og gögn af öðrum týpum sem við höfum séð.
+Boolean gildi eru einnig metin sem 1 eða 0, fyrir True annars vegar og False hinsevegar.
+
+Vitandi að gildin geta verið 0 eða 1 (aldrei bæði í einu) þá er þess virði að nefna hérna sanntöflur.
+Látum p vera yrðinguna ,,það er rigning'' og látum q vera yrðinguna ,,mér er kalt''.
+Þá gætum við, með því að skoða mismunandi aðstæður, fengið rökrétt svar við t.d. spurningunni ,,er rigning og er mér kalt?'' sem við getum skrifað sem s1 og svo annarri spurningu sem er ,,er rigning eða er mér kalt?'' sem við getum kallað s2.
+
+\begin{center}
+\centering
+\begin{table}%[caption=Sanntafla, label=tbl:Sanntafla]
+	\centering
+\caption{Sanntafla}
+\vspace{3pt}
+\label{tbl:sanntafla}
+\begin{tabular}{|c c|c|c|}
+	% |c c|c| means that there are three columns in the table and% a vertical bar ’|’ will be printed on the left and right borders,
+	% and between the second and the third columns.% The letter ’c’ means the value will be centered within the column,
+	% letter ’l’, left-aligned, and ’r’, right-aligned.
+	p & q & s1 & s2\\ 
+	% Use & to separate the columns
+	\hline  
+	% Put a horizontal line between the table header and the rest.
+	0 & 0 & 0 & 0\\
+	0 & 1 & 0 & 1\\
+	1 & 0 & 0 & 1\\
+	1 & 1 & 1 & 1\\
+	\end{tabular}
+
+\end{table}
+\end{center}
+\todo{laga þetta ótrúlega mikla pláss sem er á milli textans og töflunnar}
+Ef við horfum á töflu \ref{tbl:sanntafla} þá sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand.
+Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á hvað, og í fjórðu línu eru þær báðar sannar.
+Þá eru dálkarnir fyrir s1 og s2 svörin við spurningunum hér að ofan miðað við sanngildi yrðinganna í þeim tilteknu aðstæðum.
+Í þeim aðstæðum þar sem er hvorki rigning né mér er kalt þá er svarið við báðum spurningum einnig neitandi (0).
+Í þeim aðstæðum þar sem er bæði rigning og mér er kalt þá er svarið við báðum spurningum játandi (1).
+Þannig að til þess að svarið við spurningu 1 sé játandi þá þarf mér bæði að vera kalt og það þarf að vera rigning, svo þegar yrðingarnar eru ekki sannar á sama tíma þá skiptir ekki máli hvor sé sönn því að önnur er ósönn og því er svarið neitandi.
+En spurning 2 er þannig orðuð að það sé nóg að annað hvort sé mér kalt eða það sé rigning úti til þess að svarið sé játandi, svo þegar yrðingarnar eru sannar á víxl þá er svarið alltaf játandi.
+\begin{lstlisting}[caption=Boolean gildi, label=lst:bool-breytur]
+test = True
+# þetta geymir gögn af týpunni Bool
+
+test = true
+# þetta veldur villu þar sem nú er verið að biðja um að test innihaldi það sama og breytan true vísar á
+# munurinn er í stóru og litlu t.
+
+test = "True"
+# þetta er ekki af týpunni Bool heldur er þetta strengur
+
+test = False
+# þetta geymir gögn af týpunni Bool
+\end{lstlisting}
+
+Akkúrat núna þurfum við bara að vita að týpan Boolean sé til og hvernig eigi að nota hana, með hástaf fremst.
+Sjáum svo í seinni köflum hvernig hún gagnast okkur.
+
+
 \section{Segðir}\index{Segðir}
+
+Eins og kom fram í inngangi kaflans má líta svo á að segðir séu sá hluti af kóðans sem er metinn sem eitthvað gildi, eins og 4 + 5 er segð en x = 5 er yrðing.
+Nú ætlum við þó að einblína á búlskar segðir, það er horfa á spurningar sem hafa svar sem er annað hvort satt eða ósatt.
+Er rigning?
+Þá horfum við út og sjáum að miðað við aðstæður þá er svarið annað hvort satt eða ósatt og það breytist eftir því hvenær við horfum.
+
 \subsection{Samanburður}\index{Samanurður}
+Hvað er samanburður?
+Það er þegar eitthvað er metið miðað við eitthvað annað, eins og er þetta stærra en hitt?
+Er þetta þyngra?
+Er þetta jafngilt?
+
+Nú þurfum við nýtt hugtak, við erum búin að kynnast reiknivirkjum (e. arthimic operators) eins og + og - í kafla \ref{k:tolur}.
+Nýja hugtakið okkar eru \textbf{samanburðarvirkjar}.
+Samanburðarvirkjar eru notaðir til að spyrja hvort að ákveðin tengsl gilda á milli einhverja tveggja hluta.
+Eins og í daglegu tali þegar við segjum ,,er þetta epli stærra en þessi appelsína'' og erum þannig að bera saman epli og appelsínur, samanburðarvirkjar eru til þess að gera slíka setningu formlega svo að tölva geti svarað spurningunni.
+
+Samanburðarvirkjar eru nokkir í Python:
+\begin{itemize}
+	\item == þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu jafngildir
+	\item != þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu ólíkir
+	\item < þá er spurt hvort að það sem er vinstra megin sé strangt minna en það sem hægra megin (3 er ekki minna en 3 t.d.)
+	\item > þá er spurt hvort að það sem er vinstra megin sé strangt stærra en það sem er hægra megin
+	\item <= þá er spurt hvort að það sem er vinstra megin sé minna eða jafnt því sem er hægra megin
+	\item >= þá er spurt hvort að það sem er vinstra megin sé stærra eða jafnt því sem er hægra megin
+\end{itemize}
+
+Skoðum kóðabút þar sem þessir samanburðarvirkjar eru nýttir til þess annars vegar að fá niðurstöður með tölur og hinsvegar strengi.
+
+
 \subsection{Rökvirkjar}\index{Rökvirkjar}
 \section{Skilyrðissetningar}\index{Skilyrðissetningar}
 \subsection{if}\index{if}
