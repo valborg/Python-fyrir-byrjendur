@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  29 JAN 2021 09:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  2 FEB 2021 23:29
 entering extended mode
 **./main.tex
 (main.tex
@@ -1533,7 +1533,7 @@ ine 109.
 
 ]
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=399, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=404, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
@@ -1596,7 +1596,10 @@ Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 1.
 LaTeX Warning: Reference `lst:stafabil2' on page 25 undefined on input line 122
 .
 
-[25] [26]
+[25]
+Underfull \vbox (badness 1406) has occurred while \output is active []
+
+ [26]
 
 LaTeX Warning: Marginpar on page 27 moved.
 
@@ -1616,15 +1619,15 @@ Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 [35
 
-] [36]) (lykkjur.tex [37] [38
-
-]
+] [36] [37]) (lykkjur.tex [38]
 Kafli 6.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (dict.tex [39] [40
+) (dict.tex [39
+
+] [40
 
 ]
 Kafli 7.
@@ -1686,7 +1689,7 @@ File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1117, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1162, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
@@ -1777,10 +1780,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33538 strings out of 481225
- 619001 string characters out of 2905237
- 1453708 words of memory out of 3000000
- 47610 multiletter control sequences out of 15000+200000
+ 33585 strings out of 481225
+ 619714 string characters out of 2905237
+ 1453752 words of memory out of 3000000
+ 47616 multiletter control sequences out of 15000+200000
  667483 words of font info for 334 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1803,9 +1806,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (55 pages, 669671 bytes).
+Output written on main.pdf (55 pages, 680625 bytes).
 PDF statistics:
- 1632 PDF objects out of 1728 (max. 8388607)
- 623 named destinations out of 1000 (max. 500000)
- 68153 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1693 PDF objects out of 1728 (max. 8388607)
+ 664 named destinations out of 1000 (max. 500000)
+ 68161 words of extra memory for PDF output out of 74296 (max. 10000000)
 

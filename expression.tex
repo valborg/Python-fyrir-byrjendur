@@ -103,10 +103,61 @@ Samanburðarvirkjar eru nokkir í Python:
 \end{itemize}
 
 Skoðum kóðabút þar sem þessir samanburðarvirkjar eru nýttir til þess annars vegar að fá niðurstöður með tölur og hinsvegar strengi.
+\begin{lstlisting}[caption=Boolean gildi, label=lst:bool-samanburður]
+# nú viljum bera saman einhver gögn, búum okkur til breytur til að bera saman
+strengur1 = "abc"
+strengur2 = "bcd"
+strengur3 = "3"
+tala1 = 3
+tala2 = 3.0
+tala3 = 4
 
+# nú erum við komin með nokkrar breytur til að gera prófanir á:
+
+# byrjum á að skoða hvort að 3 sé jafngilt 4 eða tveir jafnlangir strengir séu jafngildir
+tala1 == tala3 
+# þetta skilar False
+
+strengur1 == strengur2
+# þetta skilar False
+
+# en hvað með þetta?
+tala1 == tala2
+# þetta skilar True þar sem til að geta borið talnatýpur saman er þeim kastað í sambærileg gögn (skoðum kast í seinna í kaflanum)
+
+strengur3 == tala1 
+# þetta skilar False þar sem ekki er verið að vinna með eingöngu gögn af talnatýpum
+
+# Allt það sem skilar okkur True með == skilar okkur False með != 
+# og öfugt, það sem skilar False með == skilar okkur True með !=
+
+# skoðum þá minna en og stærra en
+
+strengur1 < strengur2
+# þetta skilar okkur True þar sem strengur1 er framar í stafrófinu, ekki er verið að bera saman lengdina á strengjunum
+
+tala1 < tala2
+# þetta skilar okkur False þar sem tölurnar eru jafngildar, sáum það að hér að ofan, og önnur getur ekki verið bæði minni og jöfn á sama tíma
+
+tala1 <= tala2
+# þetta skilar okkur True þar sem spurt er hvort að tala1 sé annað hvort minni en eða jöfn hinni breytunni
+
+# Það skiptir máli hvernig goggarnir snúa, a > b hér er spurt hvort a sé stærra en b, b < a, hér er spurt hvort b sé minna en a (sem er sama spurningin).
+\end{lstlisting}
 
 \subsection{Rökvirkjar}\index{Rökvirkjar}
+Rökvirkjar (e. logical operators) í Python eru þrír, þeir eru \textbf{and}, \textbf{or} og \textbf{not}.
+Nöfnin þeirra eru lykilorð í Python eins og nöfnin á týpunum sem við höfum séð (\textbf{str}, \textbf{int}, \textbf{float}, \textbf{list}) en rökvirkjar eru ekki gögn af einhverri týpu heldur eru meira eins og reiknivirkjarnir (+, -, *, **, //, \%).
+Það sem þessir virkjar gera fyrir okkur er að taka tvær búlskar segðir og segja okkur um ástandið á þeim einhvern veginn saman.
+
+Tökum dæmi; ,,Kaffið er heitt og það eru til sítrónur.'' 
+Hægt er að meta hvort að kaffið sé heitt eða ekki, og fá þannig út sanngildi fyrir þá segð, það er hægt að gera það sama fyrir segðina um sítrónurnar. En tökum eftir að á milli þessara tveggja segða er rökvirkinn og, sem segir okkur að til þess að meta gildi allrar setningarinnar þurfa báðar segðirnar sitthvoru megin við rökvirkjann að vera sannar til þess að setningin í heild sinni skili sönnu annars er hún ósönn.
+
+
+
+
 \section{Skilyrðissetningar}\index{Skilyrðissetningar}
 \subsection{if}\index{if}
 \subsection{else}\index{else}
 \subsection{elif}\index{elif}
+\section{Inntak}\index{Inntak}
