@@ -103,7 +103,7 @@ Samanburðarvirkjar eru nokkir í Python:
 \end{itemize}
 
 Skoðum kóðabút þar sem þessir samanburðarvirkjar eru nýttir til þess annars vegar að fá niðurstöður með tölur og hinsvegar strengi.
-\begin{lstlisting}[caption=Boolean gildi, label=lst:bool-samanburður]
+\begin{lstlisting}[caption=Samanburðarvirkjar, label=lst:bool-samanburður]
 # nú viljum bera saman einhver gögn, búum okkur til breytur til að bera saman
 strengur1 = "abc"
 strengur2 = "bcd"
@@ -187,7 +187,6 @@ Hér gerum við ráð fyrir að hver hluti af þessu reikningsdæmi sé yrðing 
 \section{Skilyrðissetningar}\index{Skilyrðissetningar}
 Nú viljum við vita til hvers í ósköpunum við vorum eiginlega að leggja það á okkur að skilja hvenær eitthvað er satt eða ósatt.
 Það er einmitt heilmikið tölvunarfræðilegt gagn í því að geta spurt svona já eða nei spurninga sem tölvan getur svarað.
-
 Til dæmis viljum við geta framkvæmt einhverja aðgerð í forritinu okkar \textbf{ef} einhver skilyrði eru fyrir hendi.
 Segjum að við séum með vekjaraklukku sem við forritum til að hringja þegar klukkan er orðin 8.
 Þá viljum við geta spurt tölvuna hvort að það sé satt eða ósatt að klukkan sé orðin 8.
@@ -198,35 +197,43 @@ Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef 
 
 Einnig gætum við viljað gera eitthvað tiltekið þá og því aðeins að eitthvað annað var ósatt.
 Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarandi setningu: Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.
+Hér er aðaláherslan lögð á mjólkurstöðuna okkar, ef við eigum ekki mjólk viljum við laga það, en ef við eigum mjólk þá getum við gert eitthvað annað.
 
 Þarna eru komnar aðstæður þar sem við athugum mólkurstöðuna og fyllum á ef þarf, en ef við eigum nóg af mjólk þá viljum við samt athuga hvort að við eigum nóg af safa því að við gætum þurft að fylla á þar.
 Hér er kannski ekki augljóst en ef það vantar mjólk þá skiptir ekki máli hvort það vanti kex eða ekki, við förum í búðina og kaupum mjólk, við kaupum ekki kex.
 Þetta skilst kannski frekar á flæðiriti sem sést á mynd \ref{fig:flæðirit}.
-
+Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það sem er inni í gænum þríhyrningum eru spurningar sem þarf að svara, bláu ferhyrningarnir eru svo niðurstöður sem fást í málið.
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=3cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-\vspace{15pt}
-\begin{figure}[!ht]\label{fig:flæðirit}
+\vspace{5pt}
+\begin{figure}[H]
+	\centering
 \begin{tikzpicture}[node distance=2cm]
-\node (mjolk) [process] {Engin mjólk};
-\node (kex) [process, right of=mjolk, xshift=2cm] {Ekkert kex};
-\node (bud1) [io, below of=mjolk, yshift=-0.5cm] {Kaupa mjólk};
-\node (bud2) [io, below of=kex, yshift=-0.5cm] {Kaupa kex};
-\node (bud3) [io, right of=bud2, xshift=2cm] {Vera heima};
-\draw [arrow] (mjolk) -- node[anchor=south] {ósatt} (kex);
-\draw [arrow] (mjolk) -- node[anchor=west] {satt} (bud1);
-\draw [arrow] (kex) -- node[anchor=west] {satt} (bud2);
-\draw [arrow] (kex) -| node[anchor=south] {ósatt} (bud3);
+\node (mjolk) [decision] {Engin mjólk};
+\node (kex) [decision, below of=mjolk, yshift=-1.5cm] {Ekkert kex};
+\node (bud1) [process, right of=mjolk, xshift=3cm] {Kaupa mjólk};
+\node (bud2) [process, right of=kex, xshift=3cm] {Kaupa kex};
+\node (bud3) [process, below of=kex, yshift=-0.5cm] {Vera heima};
+\draw [arrow] (mjolk) -- node[anchor=west] {ósatt} (kex);
+\draw [arrow] (mjolk) -- node[anchor=south] {satt} (bud1);
+\draw [arrow] (kex) -- node[anchor=south] {satt} (bud2);
+\draw [arrow] (kex) -- node[anchor=west] {ósatt} (bud3);
 \end{tikzpicture}
 \caption{Hér sést hvernig setningin: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.'' má setja fram sem fæðirit. Ef það er engin mjólk þá förum við og kaupum mjólk, en ef það er til mjólk þá athugum við hvort að það sé til kex og kaupum það ef það vantar, hins vegar ef við eigum bæði kex og mjólk er engin ástæða til að fara í búðina.}
+\label{fig:flæðirit}
 \end{figure}
 
-\vspace{10pt}
+\vspace{5pt}
+
+Vegna þess að áherslan er lögð á ,,við eigum ekki mjólk'' þá er vitlegast að setja inn segð sem er með neitun.
+Ef yrðingin m stendur fyrir setninguna ,, við eigum mjólk'' þá er yrðingin ekki m (not m) ,,við eigum ekki mjólk''.
+Við viljum að aðalatriðið komi fram í inngangspunktinum í skilyrðissetningunni okkar til að hún sé skýrt upp sett og skiljanleg, til þess gætum við þurft að nota neitun.
+Við sjáum betur í næstu þremur undirköflum hvað ætti að fara á hvaða stað, en eins og með góðar nafnavenjur þegar við nefnum breyturnar okkar skulum við venja okkur á strax í upphafi að skilyrðissetningarnar okkar eru skýrar.
 
 Nú höfum við séð í inngangi þessa undirkafla orðunum ef og annars slengt fram.
 Við þekkjum þessi orð og skiljum hvernig á að nota þau í setningu til að kalla fram útkomu.
@@ -244,23 +251,62 @@ Og nú þurfum við að huga að því hvernig kóðinn okkar er uppsettur.
 Eina sem ræður því hvað fer mikið af kóða undir hverja yrðingu er hóf og skynsemi.
 
 Góð venja er að búa til skilyrðissetningar þar sem aðalvirknin á sér stað inni í if yrðingunni, þannig að segðin sem fer þar inn passi við hvað eigi að framkvæma.
-Ef við tökum aftur dæmið um mjólkina og búðarferðina og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin: %Ef það er til mjólk -- þá að athuga hvort að það sé til kex  og þá að fara út í búð annars að vera heima -- annars að fara út í búð og kaupa mjólk.
+Ef við tökum aftur dæmið um mjólkina og búðarferðina í mynd \ref{fig:flæðirit} og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin.
+Það er að við skoðum hvernig uppsetningin á flæðiritinu verður bjöguð ef við orðum spurninguna með játun en ekki neitun: Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.
+Þetta er kannski ekki nógu flókin setning til þess að valda þeim hugrhrifum sem ætlast er til, en við sjáum að til þess að komast að þeim endapunkti sem aðaláherslan er á ,,vera heima'' þar sem hún er fyrsti endapunkturinn okkar þá þurfum við að fara í gegnum tvær spurningar.
+Svo með því að orða spurninguna öðruvísi erum við búin að setja upp skilyrðissetninguna upp þannig að mólkurstaðan er núna ekki lengur í forgrunni, við virðumst frekar vera að reyna að halda okkur heima.
 
-\begin{figure}[!ht]\label{fig:flæðirit-neitun}
+\begin{figure}[!h]
 	\begin{tikzpicture}[node distance=2cm]
-	\node (mjolk) [process] {Mjólk er til};
-	\node (kex) [process, below of=mjolk, yshift=-0.5cm] {Kex er til};
-	\node (bud1) [io, right of=mjolk, xshift=4cm] {Kaupa mjólk};
-	\node (bud2) [io, right of=kex, xshift=4cm] {Kaupa kex};
-	\node (bud3) [io, below of=kex,  yshift=-0.5cm] {Vera heima};
-	\draw [arrow] (mjolk) -- node[anchor=south] {ósatt} (kex);
-	\draw [arrow] (mjolk) -- node[anchor=west] {satt} (bud1);
-	\draw [arrow] (kex) -- node[anchor=west] {satt} (bud2);
-	\draw [arrow] (kex) -| node[anchor=south] {ósatt} (bud3);
+	\node (mjolk) [decision] {Mjólk er til};
+	\node (kex) [decision, right of=mjolk, xshift=2cm] {Kex er til};
+	\node (bud1) [process, below of=mjolk, yshift=-4cm] {Kaupa mjólk};
+	\node (bud2) [process, below of=kex, yshift=-2cm] {Kaupa kex};
+	\node (bud3) [process, right of=kex, xshift=2cm] {Vera heima};
+	\draw [arrow] (mjolk) -- node[anchor=south] {satt} (kex);
+	\draw [arrow] (mjolk) -- node[anchor=west] {ósatt} (bud1);
+	\draw [arrow] (kex) -- node[anchor=west] {ósatt} (bud2);
+	\draw [arrow] (kex) -- node[anchor=south] {satt} (bud3);
 	\end{tikzpicture}
-	\caption{Hér sést hvernig setningin: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.'' má setja fram sem fæðirit. Ef það er engin mjólk þá förum við og kaupum mjólk, en ef það er til mjólk þá athugum við hvort að það sé til kex og kaupum það ef það vantar, hins vegar ef við eigum bæði kex og mjólk er engin ástæða til að fara í búðina.}
+	\caption{Hér sést hvernig setningin: ,,Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.'' má setja fram sem fæðirit.
+	Þetta veldur því að aðaláherslan virðist nú vera að komast að því hvort eigi að kaupa kex eða ekki og mjólkurstaðan er athuguð fyrst af einhverri ástæðu}
+	\label{fig:flæðirit-neitun}
 \end{figure}
 
+Skoðum nú kóðabút \ref{lst:if} og hvað er átt við með réttum inndrætti, hér er einungis sýnt if setning ein og stök.
+Við sjáum í næsta undirkafla hvað við getum gert ef við förum framhjá if setningunni okkar og viljum gera eitthvað í því tilfelli.
+
+\begin{lstlisting}[caption=if notað, label=lst:if]
+m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
+
+if(not m):
+	# fara í búð
+	print('við fórum í búðina og keyptum mjólk')
+	
+# Við áttum mjólk svo þetta prentast ekki, við förum framhjá aðgerðunum sem eru undir þessari if skipun
+\end{lstlisting}
+
 \subsection{else}\index{else}
+Lykilorðið \textbf{else} má fylgja \textbf{if}, en það er ekki nauðsynlegt.
+Hinsvegar verður að vera eitthvað ef til þess að það geti verið eitthvað annars.
+Setningin ,,annars kaupi ég mjólk'' er ekki sérlega vitræn því að okkur vantar alveg fyrri hlutann.
+Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars kaupi ég kex annars kaupi ég te annars...''.
+Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}
+
+\begin{lstlisting}[caption=else notað, label=lst:else]
+m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
+
+if(not m):
+	# fara í búð
+	print('við fórum í búðina og keyptum mjólk')
+else:
+	# takið eftir að hér var ekkert skilyrði athugað
+	# við förum hingað inn ef skilyrðið fyrir ofan var ekki keyrt
+	print('vera heima')
+
+# Við áttum mjólk svo við fáum út 'vera heima'
+\end{lstlisting}
+
 \subsection{elif}\index{elif}
+\subsection{Hreiðrun}\index{Hreiðrun}
 \section{Inntak}\index{Inntak}

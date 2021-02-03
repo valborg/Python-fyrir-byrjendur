@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  3 FEB 2021 02:17
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  3 FEB 2021 12:54
 entering extended mode
 **./main.tex
 (main.tex
@@ -1183,7 +1183,14 @@ Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
 ef
 File: bkm-pdftex.def 2019/12/03 v1.28 bookmark driver for pdfTeX (HO)
 \BKM@id=\count445
-))
+)) (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/float\float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count446
+\float@exts=\toks44
+\float@box=\box65
+\@float@everytoks=\toks45
+\@floatcapt=\box66
+)
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/todonotes\todonotes.s
 ty
 Package: todonotes 2019/01/24 v1.1.2 Todonotes source and documentation.
@@ -1196,10 +1203,10 @@ Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/xkeyval\xkvutils.te
 x
-\XKV@toks=\toks44
-\XKV@tempa@toks=\toks45
+\XKV@toks=\toks46
+\XKV@tempa@toks=\toks47
 )
-\XKV@depth=\count446
+\XKV@depth=\count447
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
@@ -1218,21 +1225,21 @@ File: tikzlibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 braryfadings.code.tex
 File: pgflibraryfadings.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
-\c@@todonotes@numberoftodonotes=\count447
+\c@@todonotes@numberoftodonotes=\count448
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.sty
 Package: babel 2020/07/13 3.47 The Babel package
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2020/07/13 3.47 Babel common definitions
-\babel@savecnt=\count448
+\babel@savecnt=\count449
 \U@D=\dimen284
 \l@babelnohyphens=\language80
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
 \bbl@readstream=\read4
 )
-\bbl@dirlevel=\count449
+\bbl@dirlevel=\count450
 
 *************************************
 * Local config file bblopts.cfg used
@@ -1251,23 +1258,23 @@ Package babel Info: Making " an active character on input line 127.
 \pl@temp=\dimen288
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
-\lst@mode=\count450
-\lst@gtempboxa=\box65
-\lst@token=\toks46
-\lst@length=\count451
+\lst@mode=\count451
+\lst@gtempboxa=\box67
+\lst@token=\toks48
+\lst@length=\count452
 \lst@currlwidth=\dimen289
-\lst@column=\count452
-\lst@pos=\count453
+\lst@column=\count453
+\lst@pos=\count454
 \lst@lostspace=\dimen290
 \lst@width=\dimen291
-\lst@newlines=\count454
-\lst@lineno=\count455
+\lst@newlines=\count455
+\lst@lineno=\count456
 \lst@maxwidth=\dimen292
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
-\c@lstnumber=\count456
-\lst@skipnumbers=\count457
-\lst@framebox=\box66
+\c@lstnumber=\count457
+\lst@skipnumbers=\count458
+\lst@framebox=\box68
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.cfg
 File: listings.cfg 2020/03/24 1.8d listings configuration
@@ -1281,8 +1288,8 @@ File: lstlang1.sty 2020/03/24 1.8d listings language file
 Package biblatex Warning: 'babel/polyglossia' detected but 'csquotes' missing.
 (biblatex)                Loading 'csquotes' recommended.
 
-\@quotelevel=\count458
-\@quotereset=\count459
+\@quotelevel=\count459
+\@quotereset=\count460
 (main.aux)
 \openout1 = `main.aux'.
 
@@ -1306,17 +1313,17 @@ LaTeX Font Info:    ... okay on input line 53.
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/context/base/mkii\supp-pdf.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count460
+\scratchcounter=\count461
 \scratchdimen=\dimen293
-\scratchbox=\box67
-\nofMPsegments=\count461
-\nofMParguments=\count462
-\everyMPshowfont=\toks47
-\MPscratchCnt=\count463
+\scratchbox=\box69
+\nofMPsegments=\count462
+\nofMParguments=\count463
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count464
 \MPscratchDim=\dimen294
-\MPnumerator=\count464
-\makeMPintoPDFobject=\count465
-\everyMPtoPDFconversion=\toks48
+\MPnumerator=\count465
+\makeMPintoPDFobject=\count466
+\everyMPtoPDFconversion=\toks50
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/epstopdf-pkg\epstopdf
 -base.sty
@@ -1394,7 +1401,7 @@ Package biblatex Info: ... file 'main.bbl' found.
 (main.bbl)
 Package biblatex Info: Reference section=0 on input line 53.
 Package biblatex Info: Reference segment=0 on input line 53.
-\AtBeginShipoutBox=\box68
+\AtBeginShipoutBox=\box70
 Package hyperref Info: Link coloring OFF on input line 53.
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/hyperref\nameref.sty
@@ -1407,12 +1414,12 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 itlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count466
+\c@section@level=\count467
 )
 LaTeX Info: Redefining \ref on input line 53.
 LaTeX Info: Redefining \pageref on input line 53.
 LaTeX Info: Redefining \nameref on input line 53.
-\c@lstlisting=\count467
+\c@lstlisting=\count468
 <Pictures/background.pdf, id=30, 584.1825pt x 835.12pt>
 File: Pictures/background.pdf Graphic file (type pdf)
 <use Pictures/background.pdf>
@@ -1534,7 +1541,7 @@ LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10.95> not available
  [5] [6
 
 ]
-\c@ttl@toc@default=\count468
+\c@ttl@toc@default=\count469
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <220> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 108.
  (main.ptc)
@@ -1550,7 +1557,7 @@ ine 109.
 
 ]
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=404, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=407, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
@@ -1636,19 +1643,43 @@ Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 [35
 
-] [36] [37]
+] [36pdfTeX warning (ext4): destination with the same identifier (name{table.5.
+1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.94 
+     ] [37]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
-[39]) (lykkjur.tex [40]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [39]
+[40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.259 
+      ]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
+2}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.296 
+      ]) (lykkjur.tex [42]
 Kafli 6.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (dict.tex [41
+) (dict.tex [43
 
-] [42
+] [44
 
 ]
 Kafli 7.
@@ -1656,7 +1687,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [43] [44
+) (func.tex [45] [46
 
 ]
 Kafli 8.
@@ -1664,7 +1695,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) [45] [46
+) [47] [48
 
 ]
 Kafli 9.
@@ -1686,7 +1717,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 176.
-[47]
+[49]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1697,36 +1728,49 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 214.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 249.
- [48]
+ [50]
 Package mdframed Info: mdframed works in twoside mode on input line 269.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 269.
- [49] [50
+ [51] [52
 
-] (main.ptc) [51] [52]
+] (main.ptc) [53] [54]
 Kafli 10.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1176, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1210, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[53
+[55
 
- <./Pictures/placeholder.jpg>] [54
+pdfTeX warning (ext4): destination with the same identifier (name{table.10.1}) 
+has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.342 \chapter
+              *{Bibliography}pdfTeX warning (ext4): destination with the same i
+dentifier (name{figure.10.1}) has been already used, duplicate ignored
+
+\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
+                                                  
+l.342 \chapter
+              *{Bibliography} <./Pictures/placeholder.jpg>] [56
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 342.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [55] [56
+ [57] [58
 
-] (main.ind
+]
+(main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 1.
@@ -1781,7 +1825,7 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[57
+[59
 
 ])
 \tf@ptc=\write7
@@ -1801,10 +1845,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34727 strings out of 481225
- 649059 string characters out of 2905237
- 1482945 words of memory out of 3000000
- 48739 multiletter control sequences out of 15000+200000
+ 34782 strings out of 481225
+ 649597 string characters out of 2905237
+ 1485371 words of memory out of 3000000
+ 48767 multiletter control sequences out of 15000+200000
  667483 words of font info for 334 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1827,9 +1871,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (57 pages, 690974 bytes).
+Output written on main.pdf (59 pages, 700202 bytes).
 PDF statistics:
- 1708 PDF objects out of 1728 (max. 8388607)
- 670 named destinations out of 1000 (max. 500000)
+ 1747 PDF objects out of 2073 (max. 8388607)
+ 693 named destinations out of 1000 (max. 500000)
  68161 words of extra memory for PDF output out of 74296 (max. 10000000)
 
