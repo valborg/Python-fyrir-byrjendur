@@ -191,10 +191,8 @@ Til dæmis viljum við geta framkvæmt einhverja aðgerð í forritinu okkar \te
 Segjum að við séum með vekjaraklukku sem við forritum til að hringja þegar klukkan er orðin 8.
 Þá viljum við geta spurt tölvuna hvort að það sé satt eða ósatt að klukkan sé orðin 8.
 Ef klukkan er ekki orðin 8 viljum við ekki gera neitt, en ef hún er orðin átta þá viljum við að hún spili einhvern hljóm eða titri.
-
 Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef spilarinn er ekki búinn að giska á alla stafina í orðinu okkar viljum við geta beðið viðkomandi að spyrja aftur.
 \textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð \footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}
-
 Einnig gætum við viljað gera eitthvað tiltekið þá og því aðeins að eitthvað annað var ósatt.
 Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarandi setningu: Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.
 Hér er aðaláherslan lögð á mjólkurstöðuna okkar, ef við eigum ekki mjólk viljum við laga það, en ef við eigum mjólk þá getum við gert eitthvað annað.
@@ -247,8 +245,9 @@ Skoðum því nú hvað það þýðir að nota skilyrðissetningar (e. conditio
 \subsection{if}\index{if}
 Fyrsta lykilorðið sem við tökum fyrir er \textbf{if}, þar sem ekki er hægt að búa til skilyrðissetningu án þess.
 Og nú þurfum við að huga að því hvernig kóðinn okkar er uppsettur.
-Það sem á að framkvæma undir if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann \todo{íslenskt orð}.
+Það sem á að framkvæma undir ef setningunni/if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann \todo{íslenskt orð}.
 Eina sem ræður því hvað fer mikið af kóða undir hverja yrðingu er hóf og skynsemi.
+Við sjáum svo í kafla \ref{uk:hreiðrun} um hreiðrun hvers vegna það er mikilvægt að skilyrðissetningar séu skýrar.
 
 Góð venja er að búa til skilyrðissetningar þar sem aðalvirknin á sér stað inni í if yrðingunni, þannig að segðin sem fer þar inn passi við hvað eigi að framkvæma.
 Ef við tökum aftur dæmið um mjólkina og búðarferðina í mynd \ref{fig:flæðirit} og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin.
@@ -256,7 +255,8 @@ Ef við tökum aftur dæmið um mjólkina og búðarferðina í mynd \ref{fig:fl
 Þetta er kannski ekki nógu flókin setning til þess að valda þeim hugrhrifum sem ætlast er til, en við sjáum að til þess að komast að þeim endapunkti sem aðaláherslan er á ,,vera heima'' þar sem hún er fyrsti endapunkturinn okkar þá þurfum við að fara í gegnum tvær spurningar.
 Svo með því að orða spurninguna öðruvísi erum við búin að setja upp skilyrðissetninguna upp þannig að mólkurstaðan er núna ekki lengur í forgrunni, við virðumst frekar vera að reyna að halda okkur heima.
 
-\begin{figure}[!h]
+\begin{figure}[H]
+	\centering
 	\begin{tikzpicture}[node distance=2cm]
 	\node (mjolk) [decision] {Mjólk er til};
 	\node (kex) [decision, right of=mjolk, xshift=2cm] {Kex er til};
@@ -269,7 +269,8 @@ Svo með því að orða spurninguna öðruvísi erum við búin að setja upp s
 	\draw [arrow] (kex) -- node[anchor=south] {satt} (bud3);
 	\end{tikzpicture}
 	\caption{Hér sést hvernig setningin: ,,Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.'' má setja fram sem fæðirit.
-	Þetta veldur því að aðaláherslan virðist nú vera að komast að því hvort eigi að kaupa kex eða ekki og mjólkurstaðan er athuguð fyrst af einhverri ástæðu}
+	Þetta veldur því að aðaláherslan virðist nú vera að komast að því hvort eigi að kaupa kex eða vera heima og mjólkurstaðan er athuguð fyrst af einhverri ástæðu.
+	Setningin í heild er frekar ruglingsleg og hún kom mun betur út í flæðiritinu á mynd \ref{fig:flæðirit}}
 	\label{fig:flæðirit-neitun}
 \end{figure}
 
@@ -291,7 +292,9 @@ Lykilorðið \textbf{else} má fylgja \textbf{if}, en það er ekki nauðsynlegt
 Hinsvegar verður að vera eitthvað ef til þess að það geti verið eitthvað annars.
 Setningin ,,annars kaupi ég mjólk'' er ekki sérlega vitræn því að okkur vantar alveg fyrri hlutann.
 Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars kaupi ég kex annars kaupi ég te annars...''.
-Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}
+Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}.
+Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, og það eru einu skilyrðin.
+Það þarf ekki að spyrja neinnar spurningar sem er metið sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni var ósönn.
 
 \begin{lstlisting}[caption=else notað, label=lst:else]
 m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
@@ -305,8 +308,103 @@ else:
 	print('vera heima')
 
 # Við áttum mjólk svo við fáum út 'vera heima'
+
+if(3 < 4):
+	print("þrír er minna en fjórir")
+else:
+	print('ég fer ekki hingað inn, því 3 er vissulega minna en fjórir, en það er gott að vera við öllu búin')
 \end{lstlisting}
 
+Að geta sett svona annars-klausu er mikilvægt því að við viljum geta brugðist við ef upphaflega skilyrðið okkar er ósatt.
+Við viljum geta tekið á öðrum tilfellum heldur en bara upphafsskilyrðinu okkar.
+
 \subsection{elif}\index{elif}
-\subsection{Hreiðrun}\index{Hreiðrun}
+En hvað ef við viljum geta tekið á einhverju sérstöku tilfelli, sem kemur einungis upp í ákveðnum aðstæðum?
+Við viljum ekki bara grípa það að inngangspunkturinn okkar var ósannur heldur viljum við einnig skoða eitthvað fleira?
+Þarna kemur setningin um mjólkina, kexið og búðarferðirnar aftur inn.
+Þá getum við sagt ,,ef það er ekki til mjólk, fer ég í búð, \textbf{annars ef} það er ekki til kex fer ég í búð og kaupi kex, nú annars er engin ástæða til að fara í búðina og ég verð bara heima''.
+Sjáum þetta forritað í kóðabút \ref{lst:elif}.
+
+Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \textbf{if} svo mega koma núll eða fleiri \textbf{elif} og að lokum má setja 0 eða 1 \textbf{else}.
+Þetta er eins og málfræðilegur skilningur okkar er á tungumálinu, við megum hengja endalaust af annars ef klausum inn í setningarnar okkar, þær verða þá bara erfiðari að skilja.
+
+\begin{lstlisting}[caption=elif notað, label=lst:elif]
+m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
+k = False # k er yrðingin hvort að til sé kex eða ekki, við gefum okkar að í upphafi sé ekki til neitt kex og k er því False
+
+
+if(not m):
+	# fara í búð
+	print('við fórum í búðina og keyptum mjólk')
+elif(not k):
+	# keyrist ef not m var metið sem False OG not k metið sem True
+	print('við fórum í búðina og keyptum kex')
+else:
+	# takið eftir að hér var ekkert skilyrði athugað
+	# við förum hingað inn ef skilyrðið fyrir ofan var ekki keyrt
+	# tökum eftir að það skilyrði er nú elif setningin okkar
+	print('vera heima')
+
+# Við áttum mjólk en við áttum ekki kex, svo not k var metið sem True og við fáum svo við fáum 'við fórum í búðina og keyptum kex'
+
+# Við förum ekki niður í else nema að allt fyrir ofan sé ósatt.
+
+if(5 < 4):
+	print("fimm er minna en fjórir")
+elif(4 < 4):
+	print("fjórir er minna en fjórir!")
+elif(3<4):
+	print("þrír er minna en fjórir")
+elif(2<4):
+	print("þetta prentast ekki því að ég get bara farið inn í eina klausu í hverri skilyrðissetningu")
+	print("og það gerðist hérna fyrir ofan, svo þetta skilyrði verður ekki keyrt")
+else:
+	print('ég fer ekki hingað inn, því 3 er vissulega minna en fjórir, en það er gott að vera við öllu búin')
+\end{lstlisting}
+
+\subsection{Hreiðrun}\index{Hreiðrun}\label{uk:hreiðrun}
+Hreiðrun (e. nesting) þýðir að setja endurtekið undir eitthvað annað, eins og babúska dúkkur eða að pakka gjöf inn í mörg lög af gjafapappír.
+Í forritun þýðir hreiðrun að yrðing af einhverri tegund tilheyri og sé keyrð innan í yrðingu af sömu tegund.
+Við getum hugsað þetta í samhengi við skilyrðissetningar að við séum með innri skilyrðissetningar sem þarf einnig að meta til þess að komast að niðurstöðu.
+Skoðum þetta aftur í samhengi við mjólkurkaupin nema nú bætum við því við að við eigum bara ákveðið mikinn pening sjá kóðabút \ref{lst:nesting}.
+
+\begin{lstlisting}[caption=Hreiðrun, label=lst:nesting]
+m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
+k = False # k er yrðingin hvort að til sé kex eða ekki, við gefum okkar að í upphafi sé ekki til neitt kex og k er því False
+p = 100 # p eru hversu mikinn pening við erum við á okkur.
+
+if(not m):
+	# fara í búð, ef við komumst hingað inn þá var m False og not m var þá True
+	# nú sjáum við hvað þarf að gerast til þess að við getum keypt mjólkina ef við komumst hingað inn
+	if(p > 200):
+		print('við fórum í búðina og keyptum mjólk því við vorum með nógu mikinn pening')
+	else:
+		print('okkur vantaði mjólk en við vorum ekki með nógu mikinn pening')
+elif(not k):
+	# keyrist ef not m var metið sem False OG not k metið sem True
+	if(p > 99):
+		print('við fórum í búðina og keyptum kex því við vorum með nægan pening')
+	else:
+		print('okkur vantaði kex en við vorum ekki með nægan pening')
+else:
+	# takið eftir að hér var ekkert skilyrði athugað
+	# við förum hingað inn ef skilyrðið fyrir ofan var ekki keyrt
+	# tökum eftir að það skilyrði er nú elif setningin okkar
+	print('vera heima og geyma allan peninginn')
+
+# Við áttum mjólk sem var heppilegt, því að við hefðum ekki getað keypt hana
+# Við áttum ekki kex, og svo heppilega vildi til að við vorum með nóg fyrir kexpakka og því fáum við niðurstöðuna:
+# 'við fórum í búðina og keyptum kex því við vorum með nægan pening'
+\end{lstlisting}
+
+Hreiðrun er gagnleg því að við viljum skoða eitthvað innra skilyrði aðeins ef ytra skilyrðinu er mætt.
+
 \section{Inntak}\index{Inntak}
+Nú höfum við verið að skoða spurningar og svör við þeim sem við skráðum sjálf.
+Það sem við viljum geta gert er að spyrja notandann að einhverju og geta gert eitthvað byggt á því svari.
+Við viljum fá inntak (e. input) frá notandanum.
+
+Þá lærum við um nýtt innbyggt fall í Python sem heitir input().
+Það sem input() gerir er að það tekur við streng sem það birtir á úttaki (e. output) þar sem notandinn sér það og getur sett eitthvað inn.
+Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.
+Skoðum kóðadæmi í kóðabút \ref{lst:input}

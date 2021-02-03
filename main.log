@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  3 FEB 2021 12:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  3 FEB 2021 13:39
 entering extended mode
 **./main.tex
 (main.tex
@@ -1653,33 +1653,36 @@ l.94
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [38]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [39]
-[40pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
+[39pdfTeX warning (ext4): destination with the same identifier (name{figure.5.1
 }) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.259 
+l.235 
       ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.
-2}) has been already used, duplicate ignored
+ [40]
+[41pdfTeX warning (ext4): destination with the same identifier (name{figure.5.2
+}) has been already used, duplicate ignored
 
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
-l.296 
-      ]) (lykkjur.tex [42]
+l.300 m 
+        = True # m er yrðingin hvort að til sé mjólk eða ekki, við gef...
+] [42] [43]
+
+LaTeX Warning: Reference `lst:input' on page 44 undefined on input line 410.
+
+) (lykkjur.tex [44]
 Kafli 6.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (dict.tex [43
+) (dict.tex [45
 
-] [44
+] [46
 
 ]
 Kafli 7.
@@ -1687,7 +1690,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [45] [46
+) (func.tex [47] [48
 
 ]
 Kafli 8.
@@ -1695,7 +1698,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) [47] [48
+) [49] [50
 
 ]
 Kafli 9.
@@ -1717,7 +1720,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 176.
-[49]
+[51]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1728,25 +1731,25 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 214.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 249.
- [50]
+ [52]
 Package mdframed Info: mdframed works in twoside mode on input line 269.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 269.
- [51] [52
+ [53] [54
 
-] (main.ptc) [53] [54]
+] (main.ptc) [55] [56]
 Kafli 10.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1210, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1288, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[55
+[57
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.10.1}) 
 has been already used, duplicate ignored
@@ -1760,14 +1763,14 @@ dentifier (name{figure.10.1}) has been already used, duplicate ignored
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.342 \chapter
-              *{Bibliography} <./Pictures/placeholder.jpg>] [56
+              *{Bibliography} <./Pictures/placeholder.jpg>] [58
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 342.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [57] [58
+ [59] [60
 
 ]
 (main.ind
@@ -1825,7 +1828,7 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[59
+[61
 
 ])
 \tf@ptc=\write7
@@ -1845,10 +1848,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34782 strings out of 481225
- 649597 string characters out of 2905237
- 1485371 words of memory out of 3000000
- 48767 multiletter control sequences out of 15000+200000
+ 34853 strings out of 481225
+ 650667 string characters out of 2905237
+ 1521620 words of memory out of 3000000
+ 48772 multiletter control sequences out of 15000+200000
  667483 words of font info for 334 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1871,9 +1874,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (59 pages, 700202 bytes).
+Output written on main.pdf (61 pages, 718376 bytes).
 PDF statistics:
- 1747 PDF objects out of 2073 (max. 8388607)
- 693 named destinations out of 1000 (max. 500000)
+ 1839 PDF objects out of 2073 (max. 8388607)
+ 759 named destinations out of 1000 (max. 500000)
  68161 words of extra memory for PDF output out of 74296 (max. 10000000)
 
