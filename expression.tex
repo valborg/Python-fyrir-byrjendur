@@ -152,11 +152,79 @@ Nöfnin þeirra eru lykilorð í Python eins og nöfnin á týpunum sem við hö
 
 Tökum dæmi; ,,Kaffið er heitt og það eru til sítrónur.'' 
 Hægt er að meta hvort að kaffið sé heitt eða ekki, og fá þannig út sanngildi fyrir þá segð, það er hægt að gera það sama fyrir segðina um sítrónurnar. En tökum eftir að á milli þessara tveggja segða er rökvirkinn og, sem segir okkur að til þess að meta gildi allrar setningarinnar þurfa báðar segðirnar sitthvoru megin við rökvirkjann að vera sannar til þess að setningin í heild sinni skili sönnu annars er hún ósönn.
+\vspace{10pt}
+\begin{itemize}
+	\item \textbf{and} til þess að segð með þessum rökvirkja sé sönn þurfa báðar hliðar að vera sannar, annars er hún ósönn
+	\begin{itemize}
+		\item Það má líta á \textunderscore{og} rökvirkjann eins og margföldun, hann hefur forgang umfram \textunderscore{eða}.
+		\item Þar sem satt er 1 og ósatt 0 þá ef við margöldum með 0 fáum við alltaf 0 út.
+		\item ,,það er heitt úti'' og ,,það er kalt úti'' myndi skila okkur ósönnu því ekki getur bæði verið satt.
+		\item ,,það er heitt úti'' og ,,klukkan er fimm'' myndi skila okkur sönnu eftir aðstæðum.
+	\end{itemize}
+	\item \textbf{or} til þess að segð með þessum rökvirkja sé sönn þarf önnur hvor hliðin að vera sönn, annar er hún ósönn.
+	\begin{itemize}
+		\item Það má líta á \textunderscore{eða} rökvirkjan eins og samlagningu.
+		\item Þar sem satt er 1 og ósatt 0, þá þurfum við bara að sjá 1 einu sinni til þess að útkoman í heild sinni verði sönn.
+		\item ,,það er heitt úti'' eða ,,það er kalt úti'' myndi skila okkur sönnu ef þetta væru þau einu tvö hitastig sem væru í boði.
+		\item ,,það er heitt úti'' eða ,,klukkan er fimm'' myndi skila sönnu eftir aðstæðum.
+	\end{itemize}
+	\item \textbf{not} snýr við sanngildi segðar, not er ekki sett á milli segða heldur fyrir framan eins segð.
+	\begin{itemize}
+		\item Það má líta á rökvirkjan \textunderscore{ekki} eins og mínus, hann snýr við sanngildi eins og formerki
+		\item Ekki satt yrði ósatt, ekki ósatt yrði satt.
+		\item \textbf{ekki} ,,það er heitt úti'' yrði að yrðingunni ,,það er ekki heitt úti''.
+	\end{itemize}
+\end{itemize}
 
-
-
+\vspace{5pt}
+Til að halda áfram með þessa samlíkingu með margföldun, samlagningu og mínus skulum við skoða eftirfarandi reikningsdæmi:
+1*1*1*0 + 1*0 + (-1).
+Hér gerum við ráð fyrir að hver hluti af þessu reikningsdæmi sé yrðing sem búið er að meta sem sanna eða ósanna eftir þeim aðstæðum sem við erum í (kaffið er heitt, það er kalt úti og þess háttar).
+Þegar við reiknum þetta dæmi sjáum við að margfaldað er með 0 í báðum þáttunum þar sem margföldun kemur fyrir svo útkoman í hvorum fyrir sig ætti að vera núll.
+Þessi síðasti liður er okkur ekki eins eðlislægur en við munum að það eru bara til 0 eða 1 og mínus skiptir gildinu okkar svo við hljótum að enda með 0.
+Þannig að við endum í 0 + 0 + 0 sem gefur okkur 0 og því er öll segðin metin sem ósönn.
 
 \section{Skilyrðissetningar}\index{Skilyrðissetningar}
+Nú viljum við vita til hvers í ósköpunum við vorum eiginlega að leggja það á okkur að skilja hvenær eitthvað er satt eða ósatt.
+Það er einmitt heilmikið tölvunarfræðilegt gagn í því að geta spurt svona já eða nei spurninga sem tölvan getur svarað.
+
+Til dæmis viljum við geta framkvæmt einhverja aðgerð í forritinu okkar \textbf{ef} einhver skilyrði eru fyrir hendi.
+Segjum að við séum með vekjaraklukku sem við forritum til að hringja þegar klukkan er orðin 8.
+Þá viljum við geta spurt tölvuna hvort að það sé satt eða ósatt að klukkan sé orðin 8.
+Ef klukkan er ekki orðin 8 viljum við ekki gera neitt, en ef hún er orðin átta þá viljum við að hún spili einhvern hljóm eða titri.
+
+Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef spilarinn er ekki búinn að giska á alla stafina í orðinu okkar viljum við geta beðið viðkomandi að spyrja aftur.
+\textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð \footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}
+
+Einnig gætum við viljað gera eitthvað tiltekið þá og því aðeins að eitthvað annað var ósatt.
+Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarandi setningu: Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.
+
+Þarna eru komnar aðstæður þar sem við athugum mólkurstöðuna og fyllum á ef þarf, en ef við eigum nóg af mjólk þá viljum við samt athuga hvort að við eigum nóg af safa því að við gætum þurft að fylla á þar.
+Hér er kannski ekki augljóst en ef það vantar mjólk þá skiptir ekki máli hvort það vanti kex eða ekki, við förum í búðina og kaupum mjólk, við kaupum ekki kex.
+Þetta skilst kannski frekar á flæðiriti.
+
+
+\tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+\tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=orange!30]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
+\tikzstyle{arrow} = [thick,->,>=stealth]
+
+\vspace{10pt}
+\begin{tikzpicture}[node distance=2cm]
+\node (mjolk) [process] {Engin mjólk};
+\node (kex) [process, right of=mjolk, xshift=2cm] {Ekkert kex};
+%\node (both) [process, right of=kex, xshift=2cm] {Bæði til};
+\node (bud1) [io, below of=mjolk, yshift=-0.5cm] {Kaupa mjólk};
+\node (bud2) [io, below of=kex, yshift=-0.5cm] {Kaupa kex};
+\node (bud3) [io, right of=bud2, xshift=2cm] {Vera heima};
+\draw [arrow] (mjolk) -- node[anchor=south] {ósatt} (kex);
+\draw [arrow] (mjolk) -- node[anchor=west] {satt} (bud1);
+\draw [arrow] (kex) -- node[anchor=west] {satt} (bud2);
+%\draw [arrow] (kex) -- node[anchor=north] {ósatt} (both);
+\draw [arrow] (kex) -| node[anchor=south] {ósatt} (bud3);
+\end{tikzpicture}
+\vspace{10pt}
 \subsection{if}\index{if}
 \subsection{else}\index{else}
 \subsection{elif}\index{elif}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  2 FEB 2021 23:29
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  3 FEB 2021 01:37
 entering extended mode
 **./main.tex
 (main.tex
@@ -413,10 +413,27 @@ File: pgfmodulematrix.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 ikz/libraries\tikzlibrarytopaths.code.tex
 File: tikzlibrarytopaths.code.tex 2020/01/08 v3.1.5b (3.1.5b)
 )))
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryshapes.geometric.code.tex
+File: tikzlibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries/shape
+s\pgflibraryshapes.geometric.code.tex
+File: pgflibraryshapes.geometric.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+))
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/frontendlayer/t
+ikz/libraries\tikzlibraryarrows.code.tex
+File: tikzlibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+
+(C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/pgf/libraries\pgfli
+braryarrows.code.tex
+File: pgflibraryarrows.code.tex 2020/01/08 v3.1.5b (3.1.5b)
+\arrowsize=\dimen188
+))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/enumitem\enumitem.sty
 Package: enumitem 2019/06/20 v3.9 Customized lists
 \labelindent=\skip49
-\enit@outerparindent=\dimen188
+\enit@outerparindent=\dimen189
 \enit@toks=\toks28
 \enit@inbox=\box57
 \enit@count@id=\count269
@@ -424,23 +441,23 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/booktabs\booktabs.sty
 Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
-\heavyrulewidth=\dimen189
-\lightrulewidth=\dimen190
-\cmidrulewidth=\dimen191
-\belowrulesep=\dimen192
-\belowbottomsep=\dimen193
-\aboverulesep=\dimen194
-\abovetopsep=\dimen195
-\cmidrulesep=\dimen196
-\cmidrulekern=\dimen197
-\defaultaddspace=\dimen198
+\heavyrulewidth=\dimen190
+\lightrulewidth=\dimen191
+\cmidrulewidth=\dimen192
+\belowrulesep=\dimen193
+\belowbottomsep=\dimen194
+\aboverulesep=\dimen195
+\abovetopsep=\dimen196
+\cmidrulesep=\dimen197
+\cmidrulekern=\dimen198
+\defaultaddspace=\dimen199
 \@cmidla=\count271
 \@cmidlb=\count272
-\@aboverulesep=\dimen199
-\@belowrulesep=\dimen256
+\@aboverulesep=\dimen256
+\@belowrulesep=\dimen257
 \@thisruleclass=\count273
 \@lastruleclass=\count274
-\@thisrulewidth=\dimen257
+\@thisrulewidth=\dimen258
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.sty
 Package: geometry 2020/01/02 v5.9 Page Geometry
@@ -453,14 +470,14 @@ Package: iftex 2020/03/06 v1.0d TeX engine tests
 \Gm@cnth=\count275
 \Gm@cntv=\count276
 \c@Gm@tempcnt=\count277
-\Gm@bindingoffset=\dimen258
-\Gm@wd@mp=\dimen259
-\Gm@odd@mp=\dimen260
-\Gm@even@mp=\dimen261
-\Gm@layoutwidth=\dimen262
-\Gm@layoutheight=\dimen263
-\Gm@layouthoffset=\dimen264
-\Gm@layoutvoffset=\dimen265
+\Gm@bindingoffset=\dimen259
+\Gm@wd@mp=\dimen260
+\Gm@odd@mp=\dimen261
+\Gm@even@mp=\dimen262
+\Gm@layoutwidth=\dimen263
+\Gm@layoutheight=\dimen264
+\Gm@layouthoffset=\dimen265
+\Gm@layoutvoffset=\dimen266
 \Gm@dimlist=\toks29
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/geometry\geometry.cfg
@@ -509,7 +526,7 @@ Package: microtype 2019/11/18 v2.7d Micro-typographical refinements (RS)
 \MT@toks=\toks30
 \MT@count=\count278
 LaTeX Info: Redefining \textls on input line 790.
-\MT@outer@kern=\dimen266
+\MT@outer@kern=\dimen267
 LaTeX Info: Redefining \textmicrotypecontext on input line 1354.
 \MT@listname@count=\count279
 
@@ -805,8 +822,8 @@ Package biblatex Warning: 'babel' option is deprecated.
 Package: calc 2017/05/25 v4.3 Infix arithmetic (KKT,FJ)
 \calc@Acount=\count405
 \calc@Bcount=\count406
-\calc@Adimen=\dimen267
-\calc@Bdimen=\dimen268
+\calc@Adimen=\dimen268
+\calc@Bdimen=\dimen269
 \calc@Askip=\skip73
 \calc@Bskip=\skip74
 LaTeX Info: Redefining \setlength on input line 80.
@@ -825,7 +842,7 @@ Writing index file main.idx
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/titlesec\titletoc.sty
 Package: titletoc 2019/10/16 v2.13 TOC entries
-\ttl@leftsep=\dimen269
+\ttl@leftsep=\dimen270
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/fancyhdr\fancyhdr.sty
 Package: fancyhdr 2019/01/31 v3.10 Extensive control of page headers and footer
@@ -849,11 +866,11 @@ Package: amstext 2000/06/29 v2.01 AMS text
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks33
-\ex@=\dimen270
+\ex@=\dimen271
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen271
+\pmbraise@=\dimen272
 )
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/amsmath\amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
@@ -870,7 +887,7 @@ LaTeX Info: Redefining \dots on input line 489.
 LaTeX Info: Redefining \cdots on input line 610.
 \Mathstrutbox@=\box58
 \strutbox@=\box59
-\big@size=\dimen272
+\big@size=\dimen273
 LaTeX Font Info:    Redeclaring font encoding OML on input line 733.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \macc@depth=\count413
@@ -883,12 +900,12 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 734.
 \column@=\count418
 \maxfields@=\count419
 \andhelp@=\toks35
-\eqnshift@=\dimen273
-\alignsep@=\dimen274
-\tagshift@=\dimen275
-\tagwidth@=\dimen276
-\totwidth@=\dimen277
-\lineht@=\dimen278
+\eqnshift@=\dimen274
+\alignsep@=\dimen275
+\tagshift@=\dimen276
+\tagwidth@=\dimen277
+\totwidth@=\dimen278
+\lineht@=\dimen279
 \@envbody=\toks36
 \multlinegap=\skip86
 \multlinetaggap=\skip87
@@ -1066,7 +1083,7 @@ Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
 ro.sty
 Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 )
-\@linkdim=\dimen279
+\@linkdim=\dimen280
 \Hy@linkcounter=\count434
 \Hy@pagecounter=\count435
 
@@ -1088,7 +1105,7 @@ Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4717.
 \c@Hy@tempcnt=\count437
 LaTeX Info: Redefining \url on input line 5076.
-\XeTeXLinkMargin=\dimen280
+\XeTeXLinkMargin=\dimen281
  (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/bitset\bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 
@@ -1098,8 +1115,8 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 \Fld@menulength=\count438
-\Field@Width=\dimen281
-\Fld@charsize=\dimen282
+\Field@Width=\dimen282
+\Fld@charsize=\dimen283
 Package hyperref Info: Hyper figures OFF on input line 6347.
 Package hyperref Info: Link nesting OFF on input line 6352.
 Package hyperref Info: Hyper index ON on input line 6355.
@@ -1141,23 +1158,23 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 
 Package hyperref Warning: Option `backref' has already been used,
-(hyperref)                setting the option has no effect on input line 504.
+(hyperref)                setting the option has no effect on input line 505.
 
 
 Package hyperref Warning: Option `pagebackref' has already been used,
-(hyperref)                setting the option has no effect on input line 504.
+(hyperref)                setting the option has no effect on input line 505.
 
 
 Package hyperref Warning: Option `hyperindex' has already been used,
-(hyperref)                setting the option has no effect on input line 504.
+(hyperref)                setting the option has no effect on input line 505.
 
-Package hyperref Info: Option `colorlinks' set `false' on input line 504.
-Package hyperref Info: Option `breaklinks' set `true' on input line 504.
+Package hyperref Info: Option `colorlinks' set `false' on input line 505.
+Package hyperref Info: Option `breaklinks' set `true' on input line 505.
 
 Package hyperref Warning: Option `bookmarks' has already been used,
-(hyperref)                setting the option has no effect on input line 504.
+(hyperref)                setting the option has no effect on input line 505.
 
-Package hyperref Info: Option `bookmarksopen' set `false' on input line 504.
+Package hyperref Info: Option `bookmarksopen' set `false' on input line 505.
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/bookmark\bookmark.sty
 Package: bookmark 2019/12/03 v1.28 PDF bookmarks (HO)
@@ -1209,7 +1226,7 @@ Package: babel 2020/07/13 3.47 The Babel package
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\babel.def
 File: babel.def 2020/07/13 3.47 Babel common definitions
 \babel@savecnt=\count448
-\U@D=\dimen283
+\U@D=\dimen284
 \l@babelnohyphens=\language80
 
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/generic/babel\txtbabel.def)
@@ -1228,24 +1245,24 @@ File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
 ndic.ldf
 Language: icelandic 2019/07/04 v1.3 Icelandic support from the babel system
 Package babel Info: Making " an active character on input line 127.
-\pl@left=\dimen284
-\pl@down=\dimen285
-\pl@right=\dimen286
-\pl@temp=\dimen287
+\pl@left=\dimen285
+\pl@down=\dimen286
+\pl@right=\dimen287
+\pl@temp=\dimen288
 ))
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\listings.sty
 \lst@mode=\count450
 \lst@gtempboxa=\box65
 \lst@token=\toks46
 \lst@length=\count451
-\lst@currlwidth=\dimen288
+\lst@currlwidth=\dimen289
 \lst@column=\count452
 \lst@pos=\count453
-\lst@lostspace=\dimen289
-\lst@width=\dimen290
+\lst@lostspace=\dimen290
+\lst@width=\dimen291
 \lst@newlines=\count454
 \lst@lineno=\count455
-\lst@maxwidth=\dimen291
+\lst@maxwidth=\dimen292
 (C:\Users\valborg\AppData\Local\Programs\MiKTeX\tex/latex/listings\lstmisc.sty
 File: lstmisc.sty 2020/03/24 1.8d (Carsten Heinz)
 \c@lstnumber=\count456
@@ -1290,13 +1307,13 @@ LaTeX Font Info:    ... okay on input line 53.
 mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count460
-\scratchdimen=\dimen292
+\scratchdimen=\dimen293
 \scratchbox=\box67
 \nofMPsegments=\count461
 \nofMParguments=\count462
 \everyMPshowfont=\toks47
 \MPscratchCnt=\count463
-\MPscratchDim=\dimen293
+\MPscratchDim=\dimen294
 \MPnumerator=\count464
 \makeMPintoPDFobject=\count465
 \everyMPtoPDFconversion=\toks48
@@ -1619,15 +1636,19 @@ Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 [35
 
-] [36] [37]) (lykkjur.tex [38]
+] [36] [37]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [38])
+(lykkjur.tex [39] [40
+
+]
 Kafli 6.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (dict.tex [39
-
-] [40
+) (dict.tex [41] [42
 
 ]
 Kafli 7.
@@ -1635,7 +1656,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [41] [42
+) (func.tex [43] [44
 
 ]
 Kafli 8.
@@ -1643,7 +1664,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) [43] [44
+) [45] [46
 
 ]
 Kafli 9.
@@ -1665,7 +1686,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 176.
-[45]
+[47]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1676,34 +1697,34 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 214.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 249.
- [46]
+ [48]
 Package mdframed Info: mdframed works in twoside mode on input line 269.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 269.
- [47] [48
+ [49] [50
 
-] (main.ptc) [49] [50]
+] (main.ptc) [51] [52]
 Kafli 10.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1162, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1172, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[51
+[53
 
- <./Pictures/placeholder.jpg>] [52
+ <./Pictures/placeholder.jpg>] [54
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 342.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [53] [54
+ [55] [56
 
 ] (main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
@@ -1760,7 +1781,7 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[55
+[57
 
 ])
 \tf@ptc=\write7
@@ -1780,10 +1801,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 33585 strings out of 481225
- 619714 string characters out of 2905237
- 1453752 words of memory out of 3000000
- 47616 multiletter control sequences out of 15000+200000
+ 34714 strings out of 481225
+ 648792 string characters out of 2905237
+ 1482723 words of memory out of 3000000
+ 48729 multiletter control sequences out of 15000+200000
  667483 words of font info for 334 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1806,9 +1827,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (55 pages, 680625 bytes).
+Output written on main.pdf (57 pages, 686704 bytes).
 PDF statistics:
- 1693 PDF objects out of 1728 (max. 8388607)
- 664 named destinations out of 1000 (max. 500000)
+ 1704 PDF objects out of 1728 (max. 8388607)
+ 667 named destinations out of 1000 (max. 500000)
  68161 words of extra memory for PDF output out of 74296 (max. 10000000)
 
