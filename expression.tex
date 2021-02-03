@@ -201,7 +201,7 @@ Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarand
 
 Þarna eru komnar aðstæður þar sem við athugum mólkurstöðuna og fyllum á ef þarf, en ef við eigum nóg af mjólk þá viljum við samt athuga hvort að við eigum nóg af safa því að við gætum þurft að fylla á þar.
 Hér er kannski ekki augljóst en ef það vantar mjólk þá skiptir ekki máli hvort það vanti kex eða ekki, við förum í búðina og kaupum mjólk, við kaupum ekki kex.
-Þetta skilst kannski frekar á flæðiriti.
+Þetta skilst kannski frekar á flæðiriti sem sést á mynd \ref{fig:flæðirit}.
 
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
@@ -210,22 +210,57 @@ Hér er kannski ekki augljóst en ef það vantar mjólk þá skiptir ekki máli
 \tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=green!30]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
-\vspace{10pt}
+\vspace{15pt}
+\begin{figure}[!ht]\label{fig:flæðirit}
 \begin{tikzpicture}[node distance=2cm]
 \node (mjolk) [process] {Engin mjólk};
 \node (kex) [process, right of=mjolk, xshift=2cm] {Ekkert kex};
-%\node (both) [process, right of=kex, xshift=2cm] {Bæði til};
 \node (bud1) [io, below of=mjolk, yshift=-0.5cm] {Kaupa mjólk};
 \node (bud2) [io, below of=kex, yshift=-0.5cm] {Kaupa kex};
 \node (bud3) [io, right of=bud2, xshift=2cm] {Vera heima};
 \draw [arrow] (mjolk) -- node[anchor=south] {ósatt} (kex);
 \draw [arrow] (mjolk) -- node[anchor=west] {satt} (bud1);
 \draw [arrow] (kex) -- node[anchor=west] {satt} (bud2);
-%\draw [arrow] (kex) -- node[anchor=north] {ósatt} (both);
 \draw [arrow] (kex) -| node[anchor=south] {ósatt} (bud3);
 \end{tikzpicture}
+\caption{Hér sést hvernig setningin: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.'' má setja fram sem fæðirit. Ef það er engin mjólk þá förum við og kaupum mjólk, en ef það er til mjólk þá athugum við hvort að það sé til kex og kaupum það ef það vantar, hins vegar ef við eigum bæði kex og mjólk er engin ástæða til að fara í búðina.}
+\end{figure}
+
 \vspace{10pt}
+
+Nú höfum við séð í inngangi þessa undirkafla orðunum ef og annars slengt fram.
+Við þekkjum þessi orð og skiljum hvernig á að nota þau í setningu til að kalla fram útkomu.
+En það sem við þurfum að gera núna er að átta okkur á því að þessi orð eru mun formlegri í forritun heldur en í daglegu tali.
+Eins og til dæmis: ,,Ertu ekki að hugsa um Jamie Lee Curtis?''
+Í íslensku er hægt að svara þessari spurningu með ,,já ég er ekki að hugsa um hana'' eða ,,nei ég er ekki að hugsa um hana'' og bæði skilst, einnig er hægt að segja ,,jú ég er að hugsa um hana''.
+Forritunarmál eru ekki tungumál, þau eru formleg og því er engin tvíræðni í boði.
+
+Skoðum því nú hvað það þýðir að nota skilyrðissetningar (e. conditional statements) í Python með lykilorðunum \textbf{if - elif - else}, sem verða þó kynnt annarri röð.
+
 \subsection{if}\index{if}
+Fyrsta lykilorðið sem við tökum fyrir er \textbf{if}, þar sem ekki er hægt að búa til skilyrðissetningu án þess.
+Og nú þurfum við að huga að því hvernig kóðinn okkar er uppsettur.
+Það sem á að framkvæma undir if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann \todo{íslenskt orð}.
+Eina sem ræður því hvað fer mikið af kóða undir hverja yrðingu er hóf og skynsemi.
+
+Góð venja er að búa til skilyrðissetningar þar sem aðalvirknin á sér stað inni í if yrðingunni, þannig að segðin sem fer þar inn passi við hvað eigi að framkvæma.
+Ef við tökum aftur dæmið um mjólkina og búðarferðina og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin: %Ef það er til mjólk -- þá að athuga hvort að það sé til kex  og þá að fara út í búð annars að vera heima -- annars að fara út í búð og kaupa mjólk.
+
+\begin{figure}[!ht]\label{fig:flæðirit-neitun}
+	\begin{tikzpicture}[node distance=2cm]
+	\node (mjolk) [process] {Mjólk er til};
+	\node (kex) [process, below of=mjolk, yshift=-0.5cm] {Kex er til};
+	\node (bud1) [io, right of=mjolk, xshift=4cm] {Kaupa mjólk};
+	\node (bud2) [io, right of=kex, xshift=4cm] {Kaupa kex};
+	\node (bud3) [io, below of=kex,  yshift=-0.5cm] {Vera heima};
+	\draw [arrow] (mjolk) -- node[anchor=south] {ósatt} (kex);
+	\draw [arrow] (mjolk) -- node[anchor=west] {satt} (bud1);
+	\draw [arrow] (kex) -- node[anchor=west] {satt} (bud2);
+	\draw [arrow] (kex) -| node[anchor=south] {ósatt} (bud3);
+	\end{tikzpicture}
+	\caption{Hér sést hvernig setningin: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.'' má setja fram sem fæðirit. Ef það er engin mjólk þá förum við og kaupum mjólk, en ef það er til mjólk þá athugum við hvort að það sé til kex og kaupum það ef það vantar, hins vegar ef við eigum bæði kex og mjólk er engin ástæða til að fara í búðina.}
+\end{figure}
+
 \subsection{else}\index{else}
 \subsection{elif}\index{elif}
 \section{Inntak}\index{Inntak}
