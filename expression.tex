@@ -407,4 +407,44 @@ Við viljum fá inntak (e. input) frá notandanum.
 Þá lærum við um nýtt innbyggt fall í Python sem heitir input().
 Það sem input() gerir er að það tekur við streng sem það birtir á úttaki (e. output) þar sem notandinn sér það og getur sett eitthvað inn.
 Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.
-Skoðum kóðadæmi í kóðabút \ref{lst:input}
+Skoðum kóðadæmi í kóðabút \ref{lst:input}, þar sem við geymum svarið frá notanda í breytu og viðfangið sem við setjum inn í fallið er strengur sem inniheldur spurninguna sem notandinn sér.
+Vert er að athuga að allt sem er sett inn sem svar í þennan glugga er kastað í streng, það er breytan sem við notum til að taka á móti því sem input() fallið skilar er af týpunni strengur.
+Ef við viljum geta spurt notandann um tölustafi þurfum við að kunna að kasta á milli gagnataga sjálf og við sjáum hvernig það er gert í kóðabút \ref{lst:kast}
+
+
+\begin{lstlisting}[caption=input() fallið notað, label=lst:input]
+svar = input('skrifaðu nafnið þitt')
+
+# hér birtist gluggi fyrir okkur til að skrifa eitthvað inn í sem er merktur sem 'skrifaðu nafnið þitt'
+# ég skrifa nafnið mitt og ýti á vendibil (e. enter) takkann og þá er svarið mitt komið í breytuna svar
+
+print('halló', svar, 'mikið heitir þú fallegu nafni')
+
+# Fyrir inntakið Valborg myndi nú prentast:
+# 'halló Valborg mikið heitir þú fallegu nafni'
+\end{lstlisting}
+
+Þetta er mikilvægt fall fyrir okkur að skilja og nota á þessu stigi málsins, því að við verðum að átta okkur á því að þegar við forritum þá erum við miklu meira að vinna með breytunöfn heldur en gögn sem við getum horft á.
+Í kóðabút \ref{lst:input} þá kemur hvergi fram í kóðanum að nafnið sé Valborg, og það getur verið hvað sem er, við prentum bara út það sem notandinn gaf okkur án þess að vera eitthvað að skoða hvað það er.
+Oft vilja byrjendur horfa á gögnin sín og setja inn niðurstöður fyrir tölvuna, til dæmis verkefnið ,,búðu til breytu sem inniheldur nafn og prentaðu út breytuna ásamt strengnum "halló:"'' endar í kóða eins og sést í kóðabút \ref{lst:byrjendur}
+
+\begin{lstlisting}[caption=Oft forðast byrjendur að nota breytur og treysta meira á að sjá hvað ætti að koma út, label=lst:byrjendur]
+# Búðu til breytu sem inniheldur nafnið þitt:
+nafn = 'Valborg'
+# prentaðu hana út ásamt "halló:"
+print('Halló: Valborg') # hér er ekkert verið að nota breytuna
+
+# Annað dæmi væri að finna tákn sem er í miðjum streng
+strengur = "þessi strengur hefur 29 tákn!"
+# miðjan í þeim streng er því í tákni 14 sem tölvan getur náð í með len(strengur)//2
+# og getur því fundið miðjutáknið með 
+strengur[len(strengur)//2] # skilar okkur tákninu í vísi 14
+
+# en hér er einnig hægt að taka nokkur skref sem er algengt að byrjendur geri
+print(len(strengur)) # þetta skilar okkur 29
+print(29/2) # þetta skilar okkur 14.5 eða print(29//2) sem skilar 14
+print(strengur[14]) # þetta skilar okkur tákninu í miðjunni
+
+\end{lstlisting}
+Eins og sést í kóðabút \ref{lst:byrjendur} að til að komast að því að setja vísi 14 inn og fá táknið þarf að keyra fyrst línuna len(strengur) til þess að sjá þá tölu og svo þarf að deila þeirra tölu með tveimur til að finna miðjuna og svo þarf handvirkt að setja þá tölu inn eftir að hafa breytt henni í næstu heilu tölu.
+Það sem er að gerast er ekkert rangt, það er hinsvegar mikil vannýting á því sem tölvan getur gert fyrir okkur og eykur vinnuna fyrir okkur sjálf umtalsvert því að það þarf að keyra hvert skref í kóðabútnum fyrir sig til að komast að því hvað eigi að gera í næsta skrefi, í stað þess að gera það í einni línu eins og í línu 10.
