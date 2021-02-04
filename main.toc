@@ -75,6 +75,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Inntak}{44}{section.5.4}%
 \defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {5.4.1}Kastað á milli gagnataga}{45}{subsection.5.4.1}%
+\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {6}Lykkjur}{47}{chapter.6}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Lykkju lykilorð}{47}{section.6.1}%

@@ -432,7 +432,7 @@ Oft vilja byrjendur horfa á gögnin sín og setja inn niðurstöður fyrir töl
 # Búðu til breytu sem inniheldur nafnið þitt:
 nafn = 'Valborg'
 # prentaðu hana út ásamt "halló:"
-print('Halló: Valborg') # hér er ekkert verið að nota breytuna
+print('Halló: Valborg') # hér er ekkert verið að nota breytuna nafn heldur horfir forritarinn á kóðann og sér að tölvan eigi að prenta út 'Valborg' og setur það inn handvirkt.
 
 # Annað dæmi væri að finna tákn sem er í miðjum streng
 strengur = "þessi strengur hefur 29 tákn!"
@@ -446,5 +446,56 @@ print(29/2) # þetta skilar okkur 14.5 eða print(29//2) sem skilar 14
 print(strengur[14]) # þetta skilar okkur tákninu í miðjunni
 
 \end{lstlisting}
+
 Eins og sést í kóðabút \ref{lst:byrjendur} að til að komast að því að setja vísi 14 inn og fá táknið þarf að keyra fyrst línuna len(strengur) til þess að sjá þá tölu og svo þarf að deila þeirra tölu með tveimur til að finna miðjuna og svo þarf handvirkt að setja þá tölu inn eftir að hafa breytt henni í næstu heilu tölu.
 Það sem er að gerast er ekkert rangt, það er hinsvegar mikil vannýting á því sem tölvan getur gert fyrir okkur og eykur vinnuna fyrir okkur sjálf umtalsvert því að það þarf að keyra hvert skref í kóðabútnum fyrir sig til að komast að því hvað eigi að gera í næsta skrefi, í stað þess að gera það í einni línu eins og í línu 10.
+
+\subsection{Kastað á milli gagnataga}
+Til þess að geta unnið með gögn eins og þá týpu sem við viljum þurfum við að læra að kasta á milli taga/týpna (e. typecasting).
+Þetta þýðir að við látum vélina umrita gögnin okkar yfir í annað gagnatag, sem er einungis hægt ef að gögnin eru sambærileg týpunni sem á að kasta í.
+
+Þá koma lykilorðin sem við höfum lært fyrir týpurnar okkar að gagni.
+Við þekkjum núna strengi með lykilorðið \textbf{str}, heiltölur með lykilorðið \textbf{int}, fleytitölur með lykilorðið \textbf{float} og lista með lykilorðið \textbf{list}.
+Þá notum við lykilorðið eins og fall og setjum inn í fallið sem viðfang það sem á að verða að því gagnatagi sem lykilorðið segir til um.
+Sjáum í kóðabút \ref{lst:kast} hvernig á að fara að þessu.
+
+Nú höfum við séð að input() fallið skilar alltaf til okkur gögnum af taginu/týpunni strengur.
+En við viljum geta kannski unnið með inntakið frá notandanum sem tölu.
+Ef að strengurinn inniheldur einungis tölur á bilinu 0-9 er hægt að geyma hann sem heiltölu eða fleytitölu, ef hann inniheldur einungis tölur á bilinu 0-9 og nákvæmlega einn punkt er hægt að geyma hann sem fleytitölu.
+
+
+\begin{lstlisting}[caption=Hvernig á að kasta á milli gagnataga, label=lst:kast]
+# Þessi strengur inniheldur bara tölur
+talnastrengur = "123"
+
+# og því má kasta honum í heiltölu eða fleytitölu
+int(talnastrengur)
+# þetta skilar okkur tölunni 123
+
+float(talnastrengur)
+# þetta skilar okkur tölunni 123.0
+
+fleytitolustrengur = "123.0"
+
+float(fleytitolustrengur) 
+# þetta skilar okkur tölunni 123.0
+
+int(fleytitolustrengur)
+# þetta skilar okkur villu því að heiltölur eru ekki með punkti þó að þetta sé í grunninn sama tala og 123
+
+# Nánast öllu má svo kasta í streng, þá er hverju tákni úthlutað sætisvísi og geymt eins og það er skrifað.
+str(123)
+# þetta skilar okkur "123"
+
+str([1,2,3])
+# þetta skilar okkur "[1,2,3]"
+
+# Það sem gerist þegar við köstum í lista er að hverju ítranlegum hluta af gögnum er varpað í stak í listanum
+# Skoðum betur í kafla um lykkjur hvað ítranlegt þýðir.
+
+list("123.0")
+# þetta skilar okkur ["1", "2", "3", ".", "0"]
+
+list(123.0)
+# Þetta skilar okkur villu því að tölur eru ekki ítranlegar, þær hafa ekki sætisnúmer (ekki eins og tölvan skilgreinir þau). 
+\end{lstlisting}
