@@ -39,8 +39,7 @@ En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við 
 
 Án þess að fara meira út í hvernig kóðinn fyrir þessi lykilorð virka þá er þess virði að nefna að þau eru ekki nauðsynleg í hverri lykkju sem við forritum hér eftir, þau eru gagnleg þegar þau eiga við og við þurfum að átta okkur á hvernær svo er.
 
-\section{For}\index{For lykkjur}
-For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu textbf{in}.
+\section{Lykkjur}\index{Lykkjur}
 Byrjum á að skoða lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
 
 \subsection{Lykilorðið in}\index{Lykilorðið in}
@@ -61,6 +60,20 @@ Byrjum á að skoða lykilorðið in áður en lengra er haldið til þess að �
 Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
 Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
 
-\todo{aftur í section??}
+\subsection{For}\index{For lykkjur}
+For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu textbf{in}, við höfum séð hvernig á að nota lykilorðið in, og fengið samlíkingu úr daglegu lífi til að átta okkur á því hvað for lykkjan gerir.
+Nú skulum við líta á kóðabút \ref{lst:lykkjur-for} til að átta okkur á því hvernig lykkjan er notuð, hvernig við beitum inndrætti til að skilgreina stef lykkjunnar (það sem tilheyrir henni) og hvernig skilyrðissetningar bætast við þetta.
 
-\section{While}\index{While lykkjur}
+\begin{lstlisting}[caption=For lykkjur, label=lst:lykkjur-for]
+# við byrjum á að skilgreina streng
+strengur = "Valborg"
+
+# athugum hvernig á að setja upp okkar fyrstu lykku
+for stafur in strengur:
+	print(stafur)
+
+# 
+\end{lstlisting}
+
+
+\subsection{While}\index{While lykkjur}

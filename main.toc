@@ -81,9 +81,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.1}Lykkju lykilorð}{47}{section.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}While}{47}{section.6.2}%
+\contentsline {section}{\numberline {6.2}For}{48}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}For}{47}{section.6.3}%
+\contentsline {subsection}{\numberline {6.2.1}Lykilorðið in}{48}{subsection.6.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.3}While}{48}{section.6.3}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Orðabækur}{49}{chapter.7}%
 \defcounter {refsection}{0}\relax 
@@ -145,11 +147,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.2}Figure}{59}{section.10.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{61}{chapter*.19}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{61}{chapter*.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{61}{section*.20}%
+\contentsline {section}{Articles}{61}{section*.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{61}{section*.21}%
+\contentsline {section}{Books}{61}{section*.22}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{63}{section*.22}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{63}{section*.23}%
 \contentsfinish 
