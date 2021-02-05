@@ -20,7 +20,7 @@ Svo á meðan viðkomandi er ekki enn kominn þá höldum við áfram að bíða
 En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við myndum gefast upp.
 Þetta á ágætlega við um virkni while lykkja.
 
-\section{Lykkju lykilorð}\index{lykilord}
+\section{Lykkju lykilorð}\index{lykilord}\label{uk:lykkjulykilorð}
 Áður en lengra er haldið í hvernig á að beita lykkjum er ágætt að nefna nokkur grunn lykilorð sem hjálpa okkur gríðarlega.
 Þau eru \textbf{pass}, \textbf{continue} og \textbf{break}.
 
@@ -72,8 +72,143 @@ strengur = "Valborg"
 for stafur in strengur:
 	print(stafur)
 
-# 
+# Hérna búum við til breytuna stafur sem fær gildi hvers staks fyrir sig uppúr breytunni strengur
+# úttakið verður
+# V
+# a
+# l
+# b
+# o
+# r
+# g
+
+# sjáum hvernig við getum sett skilyrði inn í lykkjuna
+
+for stafur in strengur:
+	if(stafur == 'a'):
+		print(stafur)
+		
+# úttakið okkar verður
+# a
+
+# Skoðum nú hvernig við ítrum í gegnum lista:
+listinn_minn = [0, "0", [0]]
+
+for x in listinn_minn:
+	# nú hleypur x í gegnum stökin í breytunni listinn_minn
+	print(x)
+	
+# þetta skilar okkur úttakinu
+# 0
+# 0
+# [0]
 \end{lstlisting}
 
+Tökum eftir í kóðabút \ref{lst:lykkjur-for} að breytan sem notuð er til að ítra í gegn er ekki skilgreind áður en við komum að lykkjunni, við þurfum ekki að gera x =  eða strengur = áður en við komum að lykkjunni.
+Það er vegna þess að breytan er skilgreind inni í lykkjunni fyrir okkur, hún er áfram aðgengileg en er ósköp gagnslaus eftir keyrsluna svo okkur er alveg sama um hana, hún er svokölluð tímabundin (e. temporary) breyta sem hættir að skipta máli eftir notkun innan lykkjunnar.
+
+Við sjáum einnig að þegar við settum inn skilyrðissetningu þá bættist við annar inndráttur, það er vegna þess að inndráttarnotkunin breytist ekki sama hvar við erum að nota kóða sem krefst inndráttar heldur dregst kóðinn bara lengst til hægri eftir því sem við förum innar. 
+Því getur verið ágætt að takmarka hreiðrun til þess að kóðinn sé sem læsilegastur.
+
+For lykkjur eru því helst gagnlegar þegar við vitum hversu oft við viljum að lykkjan keyri, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{range()} sem gefur okkur hlut af tölum á ákveðnu bili.
+Fallið range() tekur við sömu viðföngum eins og hornklofarnir þegar við sóttum nokkur tákn upp úr streng eða lista, nema þau eru viðföng í fall svo þau eru aðgreind með kommum en ekki tvípunktum.
+Viðföngin eru heilartölur og þeim er raðað svona:
+
+\begin{enumerate}
+	\item talan sem á að byrja að nota (hér má sleppa því að setja þetta inn því að sjálfgefið gildi er 0)
+	\item talan sem á að hætta fyrir framan (þetta verður að setja inn, því að þetta er aðalatriðið)
+	\item tala sem segir til um skrefastærðina (sjálfgefið gildi er 1 og þessu má sleppa)
+\end{enumerate}
+
+\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range]
+# við viljum prenta út sléttar tölur á bilinu 0 og upp í 10 þar sem 10 er með
+for tala in range(11):
+	# við tókum fram að við hættum fyrir framan 11 og næsta heila tala þar fyrir neðan er 10 svo hún er með
+	if(tala%2 == 0):
+		# ef afgangurinn úr deilingu með tveimur er jafngildur 0, þá hlýtur tala að vera deilanleg með tveimur og er því slétt
+		print(tala)
+		
+# þetta skilar okkur úttakinu:
+# 0
+# 2
+# 4
+# 6
+# 8 
+# 10
+
+# við viljum núna skoða hvaða tölur eru deilanlegar með 3 á bilinu 10 upp í 20, við viljum ekki telja 20 með.
+for tala in range(10, 20):
+	if(tala%3 == 0):
+		print(tala)
+
+# þetta skilar okkur úttakinu
+# 12
+# 15
+# 18
+
+# við viljum núna prenta aðrahvora tölu á bilinu 100 til 106, báðar meðtaldar
+for tala in range(100, 107, 2):
+	print(tala)
+	
+# þetta skilar okkur úttakinu:
+# 100
+# 102
+# 104
+# 106
+
+# við viljum að lykkjan okkar prenti út einhver skilaboð ákveðið oft, segjum 3 sinnum.
+for x in range(3):
+	# fyrst er x 0, svo 1, svo 2, sem þýðir að lykkjan keyrir þrisvar sinnum
+	print('bílalúgudýraspítali')
+	
+# þetta skilar okkur úttakinu 
+# bílalúgudýraspítali
+# bílalúgudýraspítali
+# bílalúgudýraspítali
+\end{lstlisting}
+
+Nú vitum við að ef okkur vantar eitthvað ákveðið oft, eða við vitum nákvæmlega hversu oft við viljum að lykkjan keyri þá getum við beitt range() fallinu.
+Nú skulum við skoða hvernig lykkju lykilorðin sem við skoðuðum í undirkaflanum \nameref{uk:lykkjulykilorð} (\ref{uk:lykkjulykilorð}) nýtast með for lykkjum í kóðabút \ref{lst:lykkjur-for-lykilorð}.
+
+\begin{lstlisting}[caption=Lykilorðin pass\, continue og break notuð með for lykkju, label=lst:lykkjur-for-lykilorð]
+# við viljum búa til lykkju sem á að rúlla í gegnum 1000 tölur en við erum ekki viss hvað á að gera innan í lykkjunni
+for x in range(1000):
+	pass
+# hér fáum við ekkert úttak en jafnframt enga villu.
+
+# við viljum búa til streng úr stórum tölum í einhverjum lista, tölum sem eru hærri en 50
+storar_tolur = ""
+for x in [1, 2, 52, 9, 53, 2]:
+	if (x < 50):
+		continue
+		print(x)
+	storar_tolur += str(x)
+
+print(storar_tolur)
+# þetta skilar okkur úttakinu
+# 5253
+
+# við viljum búa til lykkju sem ítrar í gegnum lista af tölum en ef hún sér töluna 13 þá hættir hún keyrslu
+listi_af_tolum = [1,5,7,9,13,15,17,18]
+for tala in listi_af_tolum:
+	if(tala == 13):
+		break
+		print(tala)
+	else:
+		print(tala)
+
+# þetta skilar okkur úttakinu
+# 1
+# 5 
+# 7
+# 9
+\end{lstlisting}
+
+Tökum eftir að í kóðabút \ref{lst:lykkjur-for-lykilorð} þá er tilfellið sem notað er til að sýna continue kannski ekki mjög nytsamlegt þar sem auðvelt væri að gera bara if (x > 50) : storar\_tolur += str(x) en þar sem við erum að reyna að kynnast notkun lykilorðsins þá er þetta ágætis dæmi.
+Það sem gerist er að ef x < 50 er satt þá förum við inn í skilyrðissetninguna og þar sem við förum inn í hana þá rekumst við á orðið continue og um leið og það er lesið þá förum við efst í lykkjuna og úthlutum x nýju staki, print(x) gerist ekki og því er eina úttakið okkar það sem við prentum eftir að keyrslu lykkjunnar lýkur.
+Við sjáum að lykkjunni er lokið því að print(storar\_tolur) kemur fram í sama inndrætti og for lykilorðið, sem þýðir að kallið print(storar\_tolur) tilheyrir ekki lykkjunni, er ekki undir henni.
+
+Þegar við notum break gerist það sama, um leið og break er notað þá hættir keyrsla lykkjunnar, breytan tala fær ekki nýtt gildi og hún endar með sem talan 13.
+Að sama skapi þá prentum við ekki út 13 því að break gerist fyrir ofan print() kallið.
 
 \subsection{While}\index{While lykkjur}

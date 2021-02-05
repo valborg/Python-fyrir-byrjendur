@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  5 FEB 2021 00:48
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  5 FEB 2021 11:28
 entering extended mode
 **./main.tex
 (main.tex
@@ -1557,7 +1557,7 @@ ine 109.
 
 ]
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=413, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=414, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
@@ -1677,24 +1677,24 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
 
-LaTeX Warning: Reference `lst:lykkjur-for' on page 47 undefined on input line 2
-7.
-
-
 LaTeX Warning: Reference `lst:lykkjur-while' on page 47 undefined on input line
  27.
 
 [47
 
-]) (dict.tex [48]
+] [48] [49]
+Underfull \vbox (badness 1194) has occurred while \output is active []
+
+ [50])
+(dict.tex [51] [52
+
+]
 Kafli 7.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [49
-
-] [50
+) (func.tex [53] [54
 
 ]
 Kafli 8.
@@ -1702,7 +1702,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) [51] [52
+) [55] [56
 
 ]
 Kafli 9.
@@ -1724,7 +1724,7 @@ Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 176.
-[53]
+[57]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1735,25 +1735,25 @@ Package mdframed Info: mdframed detected package amsthm
 (mdframed)              on input line 214.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 249.
- [54]
+ [58]
 Package mdframed Info: mdframed works in twoside mode on input line 269.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 269.
- [55] [56
+ [59] [60
 
-] (main.ptc) [57] [58]
+] (main.ptc) [61] [62]
 Kafli 10.
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1377, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1519, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
 (pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[59
+[63
 
 pdfTeX warning (ext4): destination with the same identifier (name{table.10.1}) 
 has been already used, duplicate ignored
@@ -1767,14 +1767,14 @@ dentifier (name{figure.10.1}) has been already used, duplicate ignored
 \@EveryShipout@Output ...@Org@Shipout \box \@cclv 
                                                   
 l.342 \chapter
-              *{Bibliography} <./Pictures/placeholder.jpg>] [60
+              *{Bibliography} <./Pictures/placeholder.jpg>] [64
 
 ]
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 342.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [61] [62
+ [65] [66
 
 ]
 (main.ind
@@ -1832,7 +1832,7 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[63
+[67
 
 ])
 \tf@ptc=\write7
@@ -1852,10 +1852,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 34950 strings out of 481225
- 652279 string characters out of 2905237
- 1522203 words of memory out of 3000000
- 48796 multiletter control sequences out of 15000+200000
+ 35070 strings out of 481225
+ 654068 string characters out of 2905237
+ 1522285 words of memory out of 3000000
+ 48794 multiletter control sequences out of 15000+200000
  667483 words of font info for 334 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1878,9 +1878,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (63 pages, 744960 bytes).
+Output written on main.pdf (67 pages, 772601 bytes).
 PDF statistics:
- 1942 PDF objects out of 2073 (max. 8388607)
- 832 named destinations out of 1000 (max. 500000)
- 68161 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2105 PDF objects out of 2487 (max. 8388607)
+ 954 named destinations out of 1000 (max. 500000)
+ 68153 words of extra memory for PDF output out of 74296 (max. 10000000)
 
