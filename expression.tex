@@ -1,6 +1,6 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
-\chapter{Segðir, skilyrðissetningar og Boolean gildi}\label{k:segðir}
+\chapter{Segðir, skilyrðissetningar og sanngildi}\label{k:segðir}
 
 Kóða má skipta í segðir (e. expressions) og yrðingar (e. statements).
 Segðir eru línur þar sem eitthvað er metið sem gildi, ef við líkjum því við tungumál væru það setningar þar sem einhver niðurstaða fæst eins og ,,er rigning''? 
@@ -8,17 +8,17 @@ Yrðingar eru línur þar sem eitthvað er sett fram sem þarf ekki að meta, í
 
 Þessi skipting er ekkert sérlega merkileg að svö stöddu en í þessum kafla ætlum við að einbeita okkur að því að meta útkomu og fá í hendurnar svör sem við getum svo gert eitthvað við.
 
-Til þess að gera það þurfum við að læra á nýja týpu sem heitir Boolean og hefur lykilorðið \textbf{bool}.
-Hún er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt og eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka og því hvetur höfundur til að lesandi fletti allavega upp wikipedia greininni.} (e. Boolean algebra). 
+Til þess að gera það þurfum við að læra á nýja týpu sem heitir Boolean og hefur lykilorðið \textbf{bool}, boolean gildi eru kölluð búlsk gildi eða sanngildi.
+Boolean týpan er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt og eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka og því hvetur höfundur til að lesandi fletti allavega upp wikipedia greininni.} (e. Boolean algebra). 
 Nú er það flestum kunnug staðreynd að tölvur vinna með 0 1 í grunninn, en hvernig það er notað í æðri forritunarmálum (e. high level programming languages) er ekki eins augljóst.
 
 Í þessum kafla verður farið yfir búlísk gildi, samanburð (e. comparison) og samanburðarvirkja (e. comparison operators), rökvirkja (e. logical operators) og svo skilyrðissetningar (e. conditional statements).
 
-\section{Boolean gildi}\index{Boolean gildi}
+\section{Sanngildi}\index{Sanngildi}
 
 Eins og kom fram í inngangi kaflans eru búlsk gildi einungis tvö, True og False.
 Hægt er að geyma þau í breytum eins og gögn af öðrum týpum sem við höfum séð.
-Boolean gildi eru einnig metin sem 1 eða 0, fyrir True annars vegar og False hinsevegar.
+Sanngildi eru einnig metin sem 1 eða 0, fyrir True annars vegar og False hinsevegar.
 
 Vitandi að gildin geta verið 0 eða 1 (aldrei bæði í einu) þá er þess virði að nefna hérna sanntöflur.
 Látum p vera yrðinguna ,,það er rigning'' og látum q vera yrðinguna ,,mér er kalt''.
@@ -55,7 +55,7 @@ Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á 
 Í þeim aðstæðum þar sem er bæði rigning og mér er kalt þá er svarið við báðum spurningum játandi (1).
 Þannig að til þess að svarið við spurningu 1 sé játandi þá þarf mér bæði að vera kalt og það þarf að vera rigning, svo þegar yrðingarnar eru ekki sannar á sama tíma þá skiptir ekki máli hvor sé sönn því að önnur er ósönn og því er svarið neitandi.
 En spurning 2 er þannig orðuð að það sé nóg að annað hvort sé mér kalt eða það sé rigning úti til þess að svarið sé játandi, svo þegar yrðingarnar eru sannar á víxl þá er svarið alltaf játandi.
-\begin{lstlisting}[caption=Boolean gildi, label=lst:bool-breytur]
+\begin{lstlisting}[caption=Sanngildi geymd sem breytur, label=lst:bool-breytur]
 test = True
 # þetta geymir gögn af týpunni Bool
 
@@ -499,3 +499,8 @@ list("123.0")
 list(123.0)
 # Þetta skilar okkur villu því að tölur eru ekki ítranlegar, þær hafa ekki sætisnúmer (ekki eins og tölvan skilgreinir þau). 
 \end{lstlisting}
+
+Nú þar sem við vitum að við getum fengið streng í hendurnar frá notanda, vitandi það að við báðum um tölu, getum við leyft okkur að kasta strengnum í það talnatag sem okkur hentar.
+Við sjáum svo í seinni hluta bókarinnar hvernig á að taka á mismunandi tilfellum og reyna á eitthvað sem gæti valdið villu án þess að það skemmi fyrir okkur, en núna ætlum við að láta sem að við getum treyst notendum til að gefa okkur inntak sem samræmist því sem við báðum um. \todo{vísa í kafla um try except}
+
+Ástæðan fyrir því að vilja kasta á milli taga er til að geta beitt þeim aðgerðum og aðferðum sem eru í boði fyrir það gagnatag sem við sækjumst eftir að nota, til dæmis er ekki hægt að sækja þriðja tölustafinn í heiltölu en ef við köstum henni í streng getum við sótt táknið í sætisnúmeri 2 og fengið þannig þriðja tölustafinn.

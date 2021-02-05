@@ -2,8 +2,65 @@
 
 \chapter{Lykkjur}\index{Lykkjur}\label{k:lykkjur}
 
-\section{Lykkju lykilorð}\index{lykilord}
+Í Python eru til tvær tegundir af lykkjum, þær heita \textbf{for} og \textbf{while}.
+Við ætlum að kynnast því til hvers þær eru ætlaðar og hvers þær eru megnugar, í hvaða tilfellum á að nota hvora fyrir sig og lykilorð sem gera notkun þeirra öflugri.
+Byrjum á því að skoða til hvers ,,að lykkja'' og hvað það eiginlega þýðir.
+Það að nota lykkju þýðir að skrifa forritsbút sem keyrir endurtekið.
 
-\section{While}\index{While lykkjur}
+Nöfnin á lykkjunum verða ekki þýdd sérstaklega í þessari bók, öðruvísi en að nota hugmyndina á bakvið nöfnin til að segja að við gerum eitthvað á meðan eða fyrir hvert stak þó lykkjurnar séu enn kallaðar for og while lykkjur.
+
+Tökum dæmi úr daglegu lífi; ef við viljum framkvæma einhverja aðgerð eins og að vaska upp búum við til reglu eins og að setja fyrst upp uppþvottahanska, láta vatnið renna og stafla öllu sem er óhreint við hliðina á vaskinum. 
+Svo viljum við endurtaka aðgerðina að þrífa hvern hlut sem er öðru megin við vaskinn, þar til þeir eru allir komnir hreinir hinu megin.
+Endurtekningin þarna er að taka upp hvern óhreinan hlut og þrífa hann.
+Þá gætum við sagt að fyrir hvern hlut sem er hægra megin, viljum við þrífa hann og setja svo vinstra megin (fer eftir því hvernig vaskurinn snýr) og hætta þegar hlutirnir hægra megin eru búnir.
+Þetta á ágætlega við um virkni for lykkja.
+
+Tökum annað dæmi úr daglegu lífi; ef við ætlum að bíða eftir einhverjum og framkvæma svo einhverja aðgerð þegar viðkomandi kemur þá myndum við væntanlega bíða þangað til að viðkomandi kemur.
+Svo á meðan viðkomandi er ekki enn kominn þá höldum við áfram að bíða.
+En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við myndum gefast upp.
+Þetta á ágætlega við um virkni while lykkja.
+
+\section{Lykkju lykilorð}\index{lykilord}
+Áður en lengra er haldið í hvernig á að beita lykkjum er ágætt að nefna nokkur grunn lykilorð sem hjálpa okkur gríðarlega.
+Þau eru \textbf{pass}, \textbf{continue} og \textbf{break}.
+
+Það sem þessi lykilorð gera er, sjá einnig kóðabúta \ref{lst:lykkjur-for} og \ref{lst:lykkjur-while}:
+\begin{itemize}
+	\item pass er lykilorð sem gerir ekkert, tölvan heldur áfram keyrslu sinni eins og ekkert hafi verið gert, nema að þarna er kóði sem er rétt inndreginn og gerir það að verkum að tölvan kvartar ekki yfir því að hafa búist við einhverju inndregnu en fengið ekkert.
+	Þetta notum við þegar við erum ekki viss hvað á að vera í lykkjunni og við setjum þetta orð inn svo að við getum haldið áfram með annað sem átti að forrita.
+	pass er gagnlegt sem staðhaldari (e. placeholder) þegar við erum ekki viss hvernig á að halda áfram en verðum að setja eitthvað því að annars fengjum við málskipunar villu (e. syntax error).
+	Þetta lykilorð má nota annarsstaðar en í lykkjum og er einnig gagnlegt sem staðhaldari í föllum.
+	\item continue er lykilorð sem lætur vélina stoppa þar sem hún er í lykkjunni, hunsa allt sem kemur á eftir því og fara efst í lykkjuna.
+	Continue er gagnlegt þegar kemur að því að það er bara ákveðin virkni sem á að framkvæma undir vissum aðstæðum og við viljum ekki að vélin geri allar aðgerðir sem koma fram í lykkjunni okkar.
+	Þetta lykilorð má einungis nota inni í lykkjum.
+	\item break hættir keyrslu lykkjunnar, ólíkt continue þá förum við alfarið út úr lykkjunni þegar kallað er í þetta lykilorð og keyrir vélin næst kóða sem er ekki inndreginn undir lykkjunni.
+	Þetta lykilorð má einungis nota inni í lykkjum.
+\end{itemize}
+
+Án þess að fara meira út í hvernig kóðinn fyrir þessi lykilorð virka þá er þess virði að nefna að þau eru ekki nauðsynleg í hverri lykkju sem við forritum hér eftir, þau eru gagnleg þegar þau eiga við og við þurfum að átta okkur á hvernær svo er.
 
 \section{For}\index{For lykkjur}
+For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu textbf{in}.
+Byrjum á að skoða lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
+
+\subsection{Lykilorðið in}\index{Lykilorðið in}
+Það sem þetta orð gerir er að spyrja hvort að eitthvað sé ,,í'' einhverju öðru eða taka fyrir stak í hlut sem hefur vísa eða stök.
+Þannig að þetta býr til segð sem skilar sanngildi eða einu tilteknu tákni eða staki úr hlut.
+
+\begin{lstlisting}[caption=Lykilorðið in, label=lst:lykkjur-in]
+# við viljum vita hvort að eitthvað tiltekið tákn sé í einhverjum ákveðnum streng:
+"a" in "Valborg"
+# þetta skilar okkur True þar sem táknið a er til staðar í strengnum Valborg
+
+"x" in "Valborg"
+# þetta skilar okkur False þar sem táknið x er ekki til staðar í strengum Valborg
+\end{lstlisting}
+
+Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
+Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
+Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
+Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
+
+\todo{aftur í section??}
+
+\section{While}\index{While lykkjur}
