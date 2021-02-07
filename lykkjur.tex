@@ -20,11 +20,11 @@ Svo á meðan viðkomandi er ekki enn kominn þá höldum við áfram að bíða
 En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við myndum gefast upp.
 Þetta á ágætlega við um virkni while lykkja.
 
-\section{Lykkju lykilorð}\index{lykilord}\label{uk:lykkjulykilorð}
+\section{Gagnleg lykilorð}\index{lykilord}\label{uk:lykkjulykilorð}
 Áður en lengra er haldið í hvernig á að beita lykkjum er ágætt að nefna nokkur grunn lykilorð sem hjálpa okkur gríðarlega.
-Þau eru \textbf{pass}, \textbf{continue} og \textbf{break}.
+Þau eru \textbf{pass}, \textbf{continue}, \textbf{break} og \textbf{in}.
 
-Það sem þessi lykilorð gera er, sjá einnig kóðabúta \ref{lst:lykkjur-for} og \ref{lst:lykkjur-while}:
+Það sem þessi lykilorð gera er má sjá í kóðabút \ref{lst:lykkjur-for-lykilorð}, sjá einnig kóðabúta \ref{lst:lykkjur-for} og \ref{lst:lykkjur-while}:
 \begin{itemize}
 	\item pass er lykilorð sem gerir ekkert, tölvan heldur áfram keyrslu sinni eins og ekkert hafi verið gert, nema að þarna er kóði sem er rétt inndreginn og gerir það að verkum að tölvan kvartar ekki yfir því að hafa búist við einhverju inndregnu en fengið ekkert.
 	Þetta notum við þegar við erum ekki viss hvað á að vera í lykkjunni og við setjum þetta orð inn svo að við getum haldið áfram með annað sem átti að forrita.
@@ -39,16 +39,15 @@ En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við 
 
 Án þess að fara meira út í hvernig kóðinn fyrir þessi lykilorð virka þá er þess virði að nefna að þau eru ekki nauðsynleg í hverri lykkju sem við forritum hér eftir, þau eru gagnleg þegar þau eiga við og við þurfum að átta okkur á hvernær svo er.
 
-\section{Lykkjur}\index{Lykkjur}
-Byrjum á að skoða lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
+Skoðum nú lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
 
-\subsection{Lykilorðið in}\index{Lykilorðið in}
 Það sem þetta orð gerir er að spyrja hvort að eitthvað sé ,,í'' einhverju öðru eða taka fyrir stak í hlut sem hefur vísa eða stök.
 Þannig að þetta býr til segð sem skilar sanngildi eða einu tilteknu tákni eða staki úr hlut.
 
 \begin{lstlisting}[caption=Lykilorðið in, label=lst:lykkjur-in]
 # við viljum vita hvort að eitthvað tiltekið tákn sé í einhverjum ákveðnum streng:
 "a" in "Valborg"
+# þetta er eins og að spyrja með samanburðarvirkja hvort eitthvað sé satt eða ekki
 # þetta skilar okkur True þar sem táknið a er til staðar í strengnum Valborg
 
 "x" in "Valborg"
@@ -59,6 +58,14 @@ Byrjum á að skoða lykilorðið in áður en lengra er haldið til þess að �
 Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
 Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
 Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
+Heiltölur, fleytitölur og sanngildi eru ekki ítranleg og því ekki hægt að rúlla í gegnum þau með for lykkju.
+Hægt er að komast framhjá því með því að kasta þeim í strengi.
+
+\section{Lykkjur}\index{Lykkjur}
+Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
+Lykkjur eru kóðabútur sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
+For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
+While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
 
 \subsection{For}\index{For lykkjur}
 For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu textbf{in}, við höfum séð hvernig á að nota lykilorðið in, og fengið samlíkingu úr daglegu lífi til að átta okkur á því hvað for lykkjan gerir.
@@ -210,5 +217,95 @@ Við sjáum að lykkjunni er lokið því að print(storar\_tolur) kemur fram í
 
 Þegar við notum break gerist það sama, um leið og break er notað þá hættir keyrsla lykkjunnar, breytan tala fær ekki nýtt gildi og hún endar með sem talan 13.
 Að sama skapi þá prentum við ekki út 13 því að break gerist fyrir ofan print() kallið.
+Þetta lykilorð getur reynst ómetanlegt þegar við skoðum while lykkjur.
 
 \subsection{While}\index{While lykkjur}
+While lykkjur nota lykilorðið \textbf{while} og keyra ,,á meðan'' eitthvað skilyrði er enn satt.
+Þær eru helst ganglegar þegar við vitum ekki hvað við viljum að lykkjan keyri lengi eða þegar við viljum að hún keyri endalaust nema annað sé tekið fram (t.d. með break).
+
+Skilyrðið fyrir keyrslunnar er metið sem sanngildi, annað hvort með sanngildinu sjálfu eða segð sem skilar sanngildi.
+Þá gefst okkur tækifæri á að forrita lausn á vanda eins og ,,ef það er enginn eftir í stofunni á að slökkva ljósið'' og forritið keyrir á meðan ,,einhver er eftir í stofunni''.
+Þarna þurfum við ekki að gera annað en að fylgjast með aðstæðum.
+While lykkjur eru vandmeðfarnar og harla líklegt að lenda í því að skrifa lykkju sem keyrir endalaust við fyrstu notkun.
+Þær eru jafnframt öflugar til að leysa ýmsan vanda sem krefst þess að aðstæður hverju sinni séu skoðaðar.
+
+Skoðum kóðabút \ref{lst:lykkjur-while} til þess að sjá hvernig má auðveldlega lenda í vandræðum við gerð slíkra lykkja og hvernig uppsetning þeirra lítur út.
+
+
+\begin{lstlisting}[caption=while lykkjur, label=lst:lykkjur-while]
+# Grunnuppbyggingin kynnt:
+while(True):
+	# inndreginn kóði sem tilheyrir lykkjunni - stef lykkjunnar
+	pass
+	
+# þessi lykkja keyrir að eilífu vegna þess að skilyrðið fyrir henni er True og ekkert breytir því í stefi hennar
+
+while(True):
+	# nú ætlum við að reyna að komast út
+	break
+	
+# við komumst út úr lykkjunni, hún keyrði einu sinni og hætti strax keyrslu, ekki mjög gagnleg lykkja en hún keyrði allavega ekki að eilífu
+
+while(False):
+	print('þetta mun aldrei prentast því að stef lykkjunnar mun aldrei keyrast')
+
+# prófum núna að gera segð sem skilyrði
+
+x = 5
+while(x > 1):
+	# Við munum keyra stef lykkjunnar að minnsta kosti einu sinni þar sem segðin er sönn í fyrstu keyrslu, 5 er vissulega stærri en 1
+	# en nú verðum við að gera eitthvað sem hefur áhrif á x þannig að lykkjan okkar eigi möguleika á að hætta, það er við verðum að gera það að verkum að x > 1 verði einhvern tímann ósatt.
+	if(x > 1):
+		print("talan er", x, "og hún er enn stærri en 1")
+		x -= 1
+		
+# úttakið verður:
+# talan er 5 og hún er enn stærri en 1
+# talan er 4 og hún er enn stærri en 1
+# talan er 3 og hún er enn stærri en 1
+# talan er 2 og hún er enn stærri en 1
+
+# Tökum aðeins sértækara dæmi, sem byggir á sauðakóða en ekki Python kóða sem hægt er að keyra. 
+# Til þess að sjá fyrir okkur betur hvað er að gerast.
+
+fjoldi_i_stofu = 5
+while(True):
+	if(fjoldi_i_stofu == 0):
+		slökkva ljós
+		break
+		
+	# við komumst bara hingað ef það er einhver í stofunni svo við ætlum að telja fjölda í stofu aftur
+	fjoldi_i_stofu = talning
+	
+# Stef þessarar lykkju byggir á því að tölvan viti hvað slökkva ljós og talning þýðir, en þar sem ætlunin var ekki að gera kóða sem virkar heldur sýna lesanda virknina fær lykkjan að vera í friði svona.
+
+
+\end{lstlisting}
+
+Annað sem má gera við while lykkjur er að koma fram við þær sem skilyrðissetningu sem má fá else klausu aftan við sig sem keyrist þegar skilyrði lykkjunnar verður ósatt.
+
+\begin{lstlisting}[caption=Ap nota else með while, label=lst:lykkjur-while-else]
+# Við viljum áfram skoða það hvenær á að slökkva ljósin og við getum gert það svona:
+while(fjoldi_i_stofu > 0):
+	fjoldi_i_stofu = talning
+else:
+	slökkva ljósin
+	
+# nú slökkvast ljósin þegar fjoldi_i_stofu er orðinn 0.
+
+# skoðum dæmi sem hægt er að keyra
+
+x = 5
+while(x > 1):
+	print("talan er", x, "sem er stærra en 1")
+	x -= 1 
+else:
+	print("nú er talan orðin 1 því 1 er ekki stærri en 1 -->", x)
+	
+# þetta skilar okkur úttakinu
+# talan er 5 sem er stærra en 1
+# talan er 4 sem er stærra en 1
+# talan er 3 sem er stærra en 1
+# talan er 2 sem er stærra en 1
+# nú er talan orðin 1 því 1 er ekki stærri en 1 --> 1
+\end{lstlisting}
