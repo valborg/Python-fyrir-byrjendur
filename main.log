@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  7 FEB 2021 05:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  7 FEB 2021 05:45
 entering extended mode
 **./main.tex
 (main.tex
@@ -1557,7 +1557,7 @@ ine 109.
 
 ]
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=411, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=420, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
@@ -1702,9 +1702,7 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[57] [58]) [59] [60
-
-]
+[57] [58] [59]) [60]
 Kafli 9.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
@@ -1724,7 +1722,9 @@ Package mdframed Info: mdframed works in twoside mode on input line 176.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 176.
-[61]
+[61
+
+]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 205.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
@@ -1748,7 +1748,7 @@ File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
 Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 303.
 (pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1623, 351.3125pt x 193.72375pt>
+<Pictures/placeholder.jpg, id=1648, 351.3125pt x 193.72375pt>
 File: Pictures/placeholder.jpg Graphic file (type jpg)
 <use Pictures/placeholder.jpg>
 Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 330.
@@ -1852,10 +1852,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35180 strings out of 481225
- 655803 string characters out of 2905237
- 1522621 words of memory out of 3000000
- 48815 multiletter control sequences out of 15000+200000
+ 35204 strings out of 481225
+ 656185 string characters out of 2905237
+ 1522779 words of memory out of 3000000
+ 48824 multiletter control sequences out of 15000+200000
  667483 words of font info for 334 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1878,9 +1878,9 @@ type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
 s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
 nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
 fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (71 pages, 802063 bytes).
+Output written on main.pdf (71 pages, 808928 bytes).
 PDF statistics:
- 2227 PDF objects out of 2487 (max. 8388607)
- 1043 named destinations out of 1200 (max. 500000)
+ 2256 PDF objects out of 2487 (max. 8388607)
+ 1058 named destinations out of 1200 (max. 500000)
  68153 words of extra memory for PDF output out of 74296 (max. 10000000)
 

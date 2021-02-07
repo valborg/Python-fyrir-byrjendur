@@ -105,9 +105,54 @@ Vilja meina að viðföng séu skilreindar breytur sem hægt sé að láta falli
 Þetta skýrist þegar við skoðum stöðubundin viðföng.
 
 \subsection{Stöðubundin viðföng}
+Stöðubundin viðföng (e. postitional arguements) fá nafn og röðun þegar þau eru sett í skilgreiningu á falli.
+Nöfnin á þeim lúta sömu lögmálum og nafnavenjur sem við höfum séð á breytum og er best að hafa nöfnin lýsandi fyrir virkni þeirra.
+
+\begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-stodubundin-kynning]
+def fall(a,b,c):
+	a**b/c
+	
+# Þarna eru viðföngin a b og c sett inn í fallið, sem þýðir að þegar fallið er notað þarf að setja gögn, sem á að gefa fallinu, í þessari röð, því það skiptir máli hvernig á að vinna með viðföngin inni í fallinu.
+# a þarf að koma fyrst því að það er það sem er hafið í veldið af b sem er svo deilt með c
+# þar sem við þekkjum röð aðgerða og þessa tilteknu reiknivirka vitum við að a = 2, b = 3 og c = 5 gefur okkur ekki sömu niðurstöðu og a = 5, b = 2 og c = 3
+\end{lstlisting}
+
+Athugum að í kóðabút \ref{lst:foll-stodubundin-kynning} þá er hvorki nafnið á fallinu né viðfanga þess sérlega lýsandi.
+Nafnið á fallinu gefur ekki til kynna hvað það gerir og nöfnin á viðföngunum segja ekkert til um hvernig þau verða notuð eða af hvaða týpu þau eiga að vera.
+Þetta fall væri mögulega nothæft fyrir okkur sjálf, en um leið og annað fólk á að fara að nota kóðann okkar þá er eins gott að venja sig af því að nota svona ógegnsæjar nafnavenjur.
+Betra væri, fyrir þessa tilteknu formúlu að finna eitthvað nafn á hana eða nefna fallið eftir nákvæmri virkni formúlunnar og nefna svo viðföngin eftir því hvar þau eru sett inn í formúluna.
+
+Annað sem vert er að athuga er að þó að við hefðum kallað í fallið þá hefði ekkert skéð, þar sem fallið gerir ekkert við útreikninginn.
+Við sjáum í kafla \ref{uk:skilagildi} hvað hægt er að gera annað en að prenta bara út.
+En þetta fall hvorki prentar út né skilar og það er eingöngu hugsað til útskýringar á fyrirbærinu stöðubundin viðföng.
+
+Lítum á kóðabút \ref{lst:foll-stodubundin-betra} til að sjá hvernig betur mætti fara með skilgreininguna úr kóðabút \ref{lst:foll-stodubundin-kynning}.
+
+\begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-stodubundin-betra]
+def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling):	
+	grunntala**veldisvisir/deiling
+
+# Þarna er öllum sem hafa aðgang að þessum kóða gerð skýr skil á því hvað þetta fall gerir og greinilegt sé að inntakið eigi að vera tölur
+# Fallið gerir þó enn ekkert annað en að vera uppfræðandi því að ekkert kemur út þegar við notum fallið
+\end{lstlisting}
+
+Ef við rifjum upp hugtakið gildissvið úr fyrri undirkafla og skoðum hvernig það á við um kóðabút \ref{lst:foll-stodubundin-betra} þá sjáum við að fallið heitir hefja\_i\_veldi\_og\_deila og það tekur við þremur viðföngum sem verða að vera sett inn í þeirri röð sem fallið kallar eftir þeim, fyrst grunntöluna svo töluna sem á að nota sem veldisvísi og svo loks töluna sem á að deila með.
+
+Nú er við hæfi að taka fram hvers konar byrjenda mistök eru algeng hérna og ef meiri skilningur værir fyrir hendi á hvernig gildissvið virka myndu þessi mistök eiga sér sjaldnar stað.
+Það er að breyturnar grunntala, veldisvisir og deiling eru hluti af staðværu gildissviði þessa falls, neðri hluta brunnsins sem efri hlutinn getur ekki sótt vatn úr.
+Þess vegna getum við ekki kallað í fallið svona: hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
+
+Ef við horfum aftur til skilgreiningar hrings og myndum búa til fall sem lýsir því hvernig eigi að teikna hring með ákveðna miðju og tiltekin radíus.
+Fallið gætið litið svona út: \newline def hringur(radius, midja): \newline #það sem fallið gerir. \newline
+Nú ef mig langar til að fá einhvern hring í hendurnar get ég ekki sagt við vélina láttu með hafa hring með radíus radius.
+Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!''
+Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
+
+Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki þegar við setjum inntakið okkar í augljóslega ranga röð.
+Hún annað hvort vinnur með vitlausa inntakið okkar og við fáum í hausinn eitthvað úttak sem við skiljum ekki eða við fáum villu.
 
 \subsection{Sjálfgefin viðfögn}
 
-\section{Skilagildi}
+\section{Skilagildi}\label{uk:skilagildi}
 
 \section{Lokun}
