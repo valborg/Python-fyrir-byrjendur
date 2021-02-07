@@ -1,12 +1,112 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Föll}\index{Föll}\label{k:föll}
+Föll (e. functions), eins og lykkjur, eru kóðabútur sem má keyra oft.
+Þau líkjast hins vegar frekar skilgreiningum eða uppskriftum frekar en lykkjum þar sem það þarf að nota þau til þess að þau geri eitthvað ekki bara skrifa þau.
+
+Ágætar samlíkingar fyrir föll eru til dæmis stærðfræðilegar skilreiningar, uppskriftir eða réttir á matseðli.
+
+\begin{itemize}
+	\item Stærðfræðilega skilgreining á hring er eftirfarandi ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju'' sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
+	Skilgreining þessi réttir okkur ekki hring með miðju í punkti (0,0) og radíus 3 þegar við setjum hana fram.
+	En vegna þess að við eigum hana getum við notað hana til þess að búa til alla þá hringi sem okkur henta.
+	\item Uppskrift í bók er ákveðin runa af aðgerðum sem þarf að framkvæma, eins og kom fram í kafla \ref{uk:keyra-koda} um hnetusmjörssamlokuna, það að skrifa niður röð aðgerðanna og það sem þarf til er ekki jafngilt því að framkvæma aðgerðirnar og enda með matinn í höndunum
+	\item Réttur á matseðli er skilreindur á ákveðinn hátt, með ákveðnu meðlæti og þess háttar.
+	Við gætum þó viljað gera breytingu á þessari skilgreiningu til þess að fá mat sem er okkur meira að skapi en það sem kokknum datt í hug.
+	Það gerum við með því að biðja um skilgreininguna á réttinum nema með breytingum.
+\end{itemize}
+
+Höfum þessar samlíkingar í huga þegar kemur að því að skrifa og beita föllum, því það hjálpar að átta sig á því strax að þegar við skilgreinum föll þá búum við til uppskrift sem hægt er að fylgja án þess þó að biðja vélina um að fylgja þeim.
+
+Við höfum séð föll áður, eins og: \todo{kynna min og max einhvern tímann áður}
+
+\begin{itemize}
+	\item print("fyrsta viðfangið", "næsta viðfang sem fallið tekur", "print er sér á báti, því það tekur við svo mörgum viðföngum")
+	\item len("breyta sem ég vil vita lengdina á")
+	\item min("breyta sem ég vil fá minnsta gildið úr")
+	\item min(nokkrar, tölur, og, ég, vil, vita, hver, er minnst)
+	\item range(0,50)
+	\item type("breyta sem viðfang sem ég vil vita týpuna á")
+\end{itemize}
+
+Þetta eru innbyggð föll, við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut en fall keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
+Allar aðferðir eru föll, ekki öll föll eru aðferðir.
+
+Til dæmis sáum við aðferðirnar .capitalize() á strengi og .sort() á lista.
+
+Föll (e.function) og aðferðir (e. methods) eru aðgreinanlegar að þessu leiti, annað er skilgreint og virkar eins og það á að gera fyrir þau gögn sem þau eiga að virka á en aðferðir er eitthvað sem er fast við hlut og eiga að verka á þann hlut.
+
+Við sjáum svo í öðrum hluta bókarinnar hvernig við skilgreinum aðferðir.
 
 \section{Tilgangur falla}\index{Tilgangur falla}
+Eins og með allt annað sem við lærum er gott að vita hvers vegna við erum á annað borð að læra það.
+Ástæðan fyrir því að við viljum læra um föll er að þau eru eitthvað það öflugasta sem við beitum í forritun, skoðum eftirfarandi lista til að skilja hvers megnug þau eru:
 
-\section{Að skrifa föll}
+\begin{itemize}
+	\item Við getum endurnýtt föll í stað þess að skrifa upp sama kóðann á bakvið þau á mörgum stöðum
+	\item Við getum gert föll aðgengileg út fyrir skjalið sem við skilgreindum þau í
+	\item Við getum unnið með inntak frá notanda á skilvirkan máta
+	\item Föll halda utan um einhverja tiltekna virkni sem við viljum hafa aðgang að og eru skilvirk leið til að afmarka virkni
+\end{itemize}
 
+Við höfum hingað til ekki fengist við meira en að átta okkur á grunnvirkni í forritun með hjálp Pyhton en nú erum við komin á þann stað að við getum farið að leysa flókin vandamál.
+
+
+\section{Að skilgreina föll}
+Til þess að skrifa föll þurfum við að læra nýtt lykilorð, \textbf{def}.
+Það stendur fyrir define eða að skilgreina, þar sem við erum með því að búa til ákveðna skilgreiningu sem vélin getur svo notað til þess að framkvæma aðgerðir.
+
+Það næsta sem þarf er að búa til nafn á fallið, nafnið er það sem vð notum til þess að beita fallinu okkar eftir að hafa skilgreint það.
+Alveg eins og með aðrar breytur þá megum við ekki nota föll fyrr en búið er að skilgreina þau.
+
+Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er einum inndrætti innar en def lykilorðið tilheyrir fallinu okkar.
+
+
+\begin{lstlisting}[caption=Föll skilgreind, label=lst:foll-skilgreining]
+# Búum til okkar fyrsta fall, það sem það á að gera er að prenta "Halló Heimur!" því að það er tölvunarfræðileg klisja sem má ekki sleppa.
+def prentunarfall():
+	# fallið heitir prentunarfall og það er notað með því að kalla í prentunarfall()
+	print("Halló Heimur!")
+	
+# athugið að hér notuðum við lykilorðið def og svo skrifuðum við nafnið á fallinu, það sem fallið gerir er að keyra eina print skipun.
+# en hér er ekkert úttak, þar sem við kölluðum ekki í fallið heldur skilgreindum það eingöngu
+
+# til að kalla í fallið og nota það þarf að keyra eftirfarandi línu, að sjálfsögðu eftir að hafa keyrt skilgreininguna að ofan
+prentunarfall()
+# úttakið verður
+# Halló Heimur!
+\end{lstlisting}
 \section{Viðföng}
+Nú höfum við séð að hægt er að búa til skilgreiningar á föllum, en tökum eftir að í kóðabút \ref{lst:foll-skilgreining} þá eru tómir svigar fyrir aftan nafnið á fallinu.
+Þessir svigar eru ekki þarna að ástæðulausu og þeir eru ekki tómir í þessum kóðabút að ástæðulausu heldur.
+
+Það sem fer inn í svigana eru svo kölluð viðföng (e. arguments), viðföngin skiptast í tvær tegundir \textbf{stöðubundin} (e. postitional) og \textbf{sjálfgefin} (e. named).
+Hægt er að nota bæði í bland og eina viðmiðið er að gefa kost á þeim viðföngum sem notandinn ætti að fá eitthvað um að segja.
+
+Til dæmis ef við værum að raða í íslenska stafrófsröð væri lítið vit í því að bjóða notandanum að setja inn sem viðfang eitthvert annað stafróf.
+Eða ef við værum að lóðsa bílstjóra með GPS myndum við ekki vilja leyfa bílstjóranum að setja inn nýjar götur.
+
+Annað sem mikilvægt er að átta sig á er að viðföng fá breytuheiti sem eru aðeins aðgengileg innan fallsins en ekki utan þess. Því ætlum við að skoða nýtt hugtak áður en við skoðum stöðubundin og sjálfgefin viðföng.
+
+\subsection{Gildissvið}
+Gildissvið (e. scope) skiptis í staðvært (e. local) og víðvært (e. global). 
+Það sem gildissvið þýðir er hvar eitthvað sé aðgengilegt.
+Ef við búum til Jupyter vinnubók eða .py skjal þar sem við skilgreinum breytuna x er sú breyta ekki aðgengileg í öðru skjali.
+Hins vegar ef við búum til breytu í vinnubók í einhverri sellu, með engum inndrætti, er sú breyta hluti af viðværu gildissviði og aðgengileg öllum sellum og allri virkni sem við viljum beita þessari breytu í.
+Hins vegar þegar við skilgreinum föll þá förum við inn á staðvært gildissvið sem þýðir að þegar kallað er í breytu byrjar vélin á að skoða hvort að breytan sé skilgreind innan þess sviðs, ef ekki þá notar hún víðværa gildissviðið.
+En ef okkur langar að nota breytu sem var skilgreind innan einhvers falls (einhvers staðværs gildissviðs) þá höfum við ekki aðgang að henni í hinu víðværa gildisssviði.
+
+Það má líta á þetta eins og að horfa á gosbrunn, þar sem víðværa gildissviðið er þar sem vatnið kemur upp efst í brunninum og svo fellur það niður í staðværa gildissviðið sem er neðri hluti brunnsins.
+Allt sem er til í efri hlutanum getur neðri hlutinn fengið en það sem er í neðri hlutanum fer ekki upp (í þessari samlíkingu ætlum við að horfa framhjá innri virkni gosbrunnsins og sjá bara fyrir okkur hvernig er að horfa á fallegan gosbrunn sem er á tveimur eða fleiri hæðum).
+
+Ástæða þess að það er mikilvægt að nefna gilssvið að svo stöddu er vegna þess að byrjendur vilja oft ruglast á breytunotkun með þessum hætti.
+Vilja meina að viðföng séu skilreindar breytur sem hægt sé að láta fallið hafa aftur, þegar það er líkara hugmyndinni um breytuna en ekki breytan sjálf.
+
+Þetta skýrist þegar við skoðum stöðubundin viðföng.
+
+\subsection{Stöðubundin viðföng}
+
+\subsection{Sjálfgefin viðfögn}
 
 \section{Skilagildi}
 

@@ -93,65 +93,67 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Föll}{57}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.1}Tilgangur falla}{57}{section.8.1}%
+\contentsline {section}{\numberline {8.1}Tilgangur falla}{58}{section.8.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.2}Að skrifa föll}{57}{section.8.2}%
+\contentsline {section}{\numberline {8.2}Að skilgreina föll}{58}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.3}Viðföng}{57}{section.8.3}%
+\contentsline {section}{\numberline {8.3}Viðföng}{59}{section.8.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.4}Skilagildi}{57}{section.8.4}%
+\contentsline {subsection}{\numberline {8.3.1}Gildissvið}{59}{subsection.8.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {8.5}Lokun}{57}{section.8.5}%
+\contentsline {section}{\numberline {8.4}Skilagildi}{59}{section.8.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {8.5.1}Descriptions and Definitions}{57}{subsection.8.5.1}%
+\contentsline {section}{\numberline {8.5}Lokun}{59}{section.8.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}In-text Elements}{59}{chapter.9}%
+\contentsline {subsection}{\numberline {8.5.1}Descriptions and Definitions}{59}{subsection.8.5.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.1}Theorems}{59}{section.9.1}%
+\contentsline {chapter}{\numberline {9}In-text Elements}{61}{chapter.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.1}Several equations}{59}{subsection.9.1.1}%
+\contentsline {section}{\numberline {9.1}Theorems}{61}{section.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.1.2}Single Line}{59}{subsection.9.1.2}%
+\contentsline {subsection}{\numberline {9.1.1}Several equations}{61}{subsection.9.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Definitions}{59}{section.9.2}%
+\contentsline {subsection}{\numberline {9.1.2}Single Line}{61}{subsection.9.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.3}Notations}{60}{section.9.3}%
+\contentsline {section}{\numberline {9.2}Definitions}{61}{section.9.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.4}Remarks}{60}{section.9.4}%
+\contentsline {section}{\numberline {9.3}Notations}{62}{section.9.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.5}Corollaries}{60}{section.9.5}%
+\contentsline {section}{\numberline {9.4}Remarks}{62}{section.9.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.6}Propositions}{60}{section.9.6}%
+\contentsline {section}{\numberline {9.5}Corollaries}{62}{section.9.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6.1}Several equations}{60}{subsection.9.6.1}%
+\contentsline {section}{\numberline {9.6}Propositions}{62}{section.9.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.6.2}Single Line}{60}{subsection.9.6.2}%
+\contentsline {subsection}{\numberline {9.6.1}Several equations}{62}{subsection.9.6.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.7}Examples}{60}{section.9.7}%
+\contentsline {subsection}{\numberline {9.6.2}Single Line}{62}{subsection.9.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.7.1}Equation and Text}{60}{subsection.9.7.1}%
+\contentsline {section}{\numberline {9.7}Examples}{62}{section.9.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {9.7.2}Paragraph of Text}{61}{subsection.9.7.2}%
+\contentsline {subsection}{\numberline {9.7.1}Equation and Text}{62}{subsection.9.7.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.8}Exercises}{61}{section.9.8}%
+\contentsline {subsection}{\numberline {9.7.2}Paragraph of Text}{63}{subsection.9.7.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.9}Problems}{61}{section.9.9}%
+\contentsline {section}{\numberline {9.8}Exercises}{63}{section.9.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.10}Vocabulary}{61}{section.9.10}%
+\contentsline {section}{\numberline {9.9}Problems}{63}{section.9.9}%
 \defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{63}{part.2}%
+\contentsline {section}{\numberline {9.10}Vocabulary}{63}{section.9.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {10}Presenting Information}{65}{chapter.10}%
+\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{65}{part.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.1}Table}{65}{section.10.1}%
+\contentsline {chapter}{\numberline {10}Presenting Information}{67}{chapter.10}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {10.2}Figure}{65}{section.10.2}%
+\contentsline {section}{\numberline {10.1}Table}{67}{section.10.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{67}{chapter*.19}%
+\contentsline {section}{\numberline {10.2}Figure}{67}{section.10.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{67}{section*.20}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{69}{chapter*.20}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{67}{section*.21}%
+\contentsline {section}{Articles}{69}{section*.21}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{69}{section*.22}%
+\contentsline {section}{Books}{69}{section*.22}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{71}{section*.23}%
 \contentsfinish 
