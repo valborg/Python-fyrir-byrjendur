@@ -107,6 +107,9 @@ Vilja meina að viðföng séu skilreindar breytur sem hægt sé að láta falli
 \subsection{Stöðubundin viðföng}
 Stöðubundin viðföng (e. postitional arguements) fá nafn og röðun þegar þau eru sett í skilgreiningu á falli.
 Nöfnin á þeim lúta sömu lögmálum og nafnavenjur sem við höfum séð á breytum og er best að hafa nöfnin lýsandi fyrir virkni þeirra.
+Dæmi væri: def prentunarfall(strengur): print(stremgur).
+Þegar við köllum í fallið með prentunarfall() þá fáum við villu því að það vantar að setja inn hvað strengur á að vera, strengur er nafnið á viðfanginu en það skiptir ekki öllu máli á þessu stigi málsins, öðru en að villumeldingin sem við fáum upp segir vantar eitt stöðubundið viðfang sem er strengur.
+Við þurfum þá að kalla í fallið og setja eitthvað inn í svigann þegar við köllum í það, eins og prentunarfall('Halló Heimur!') sem myndi þá prenta út "Halló Heimur!".
 
 \begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-stodubundin-kynning]
 def fall(a,b,c):
@@ -148,11 +151,44 @@ Nú ef mig langar til að fá einhvern hring í hendurnar get ég ekki sagt við
 Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!''
 Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
 
-Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki þegar við setjum inntakið okkar í augljóslega ranga röð.
+Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki inntakið þegar við setjum það í augljóslega ranga röð.
 Hún annað hvort vinnur með vitlausa inntakið okkar og við fáum í hausinn eitthvað úttak sem við skiljum ekki eða við fáum villu.
+\todo{er búið að tala um try except sem mun koma}
 
 \subsection{Sjálfgefin viðfögn}
+Ef við viljum vera viss um að við getum unnið með eitthvað viðfang án þess að neyða notandann til þess að gefa okkur það getum við notað sjálfgefin viðföng (e. named arguments, default arguments), einnig kölluð nefnd viðföng.
+Þá skilgreinum við fall og búum til skilgreiningu á viðföngunum þar sem við tökum þau fram.
+Dæmi væri def prentunarfall(strengur = "Halló Heimur!"): print strengur.
+Ef við köllum í fallið með prentunarfall() og gefum því ekkert viðfang þá notar tölvan skilgreininguna sem er innan svigans þar sem viðföngin eru tekin fram.
+Sjáum þetta í kóðabút \ref{lst:foll-sjalfgefin}, hvernig megi nota bæði stöðubundin og sjálfgefin saman og hvernig megi kalla í föll sem eru með 
+
+\begin{lstlisting}[caption=Sjálfgefin viðföng kynnt, label=lst:foll-sjalfgefin]
+def hefja_i_veldi_og_deila(grunntala = 1,veldisvisir = 1,deiling = 1):	
+	print(grunntala**veldisvisir/deiling)
+	
+hefja_i_veldi_og_deila() 
+# hér köllum við í fallið en gefum því ekkert, við fáum þó enga villu, því sjálfgefnu skilgreiningarnar eru notaðar
+# úttakið er
+# 1
+
+hefja_i_veldi_og_deila(2, 2, 2)
+# hér gefum við fallinu í té tölur í röð eins og þetta séu stöðubundin viðföng
+# ef við gefum upp fleiri viðföng fáum við villu, ef við gefum upp færri þá parast þau í þeirri röð sem þau berast
+# úttakið verður 
+# 2 
+
+hefja_i_veldi_og_deila(deiling = 2)
+# hér notum við sjálfgefin gildi fyrir allt nema deiling, við tökum sérstaklega fram hvað það á að vera
+# úttakið verður
+# 0.5
+
+hefja_i_veldi_og_deila(deiling = 2, veldisvisir = 1, grunntala = 4)
+# hér notum við sjálfgefin gildi, í annarri röð en þau voru skilgreind, það veldur ekki villu því að tölvan parar viðföngin eftir nafni
+# úttakið verður
+# 2
+\end{lstlisting}
 
 \section{Skilagildi}\label{uk:skilagildi}
+Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með sjálfgefið inntak og 
 
 \section{Lokun}
