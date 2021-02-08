@@ -107,7 +107,10 @@ Vilja meina að viðföng séu skilreindar breytur sem hægt sé að láta falli
 \subsection{Stöðubundin viðföng}
 Stöðubundin viðföng (e. postitional arguements) fá nafn og röðun þegar þau eru sett í skilgreiningu á falli.
 Nöfnin á þeim lúta sömu lögmálum og nafnavenjur sem við höfum séð á breytum og er best að hafa nöfnin lýsandi fyrir virkni þeirra.
-Dæmi væri: def prentunarfall(strengur): print(stremgur).
+Dæmi væri:
+\newline def prentunarfall(strengur): 
+\newline \phantom{----}print(strengur)
+\newline
 Þegar við köllum í fallið með prentunarfall() þá fáum við villu því að það vantar að setja inn hvað strengur á að vera, strengur er nafnið á viðfanginu en það skiptir ekki öllu máli á þessu stigi málsins, öðru en að villumeldingin sem við fáum upp segir vantar eitt stöðubundið viðfang sem er strengur.
 Við þurfum þá að kalla í fallið og setja eitthvað inn í svigann þegar við köllum í það, eins og prentunarfall('Halló Heimur!') sem myndi þá prenta út "Halló Heimur!".
 
@@ -146,7 +149,7 @@ Nú er við hæfi að taka fram hvers konar byrjenda mistök eru algeng hérna o
 Þess vegna getum við ekki kallað í fallið svona: hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
 
 Ef við horfum aftur til skilgreiningar hrings og myndum búa til fall sem lýsir því hvernig eigi að teikna hring með ákveðna miðju og tiltekin radíus.
-Fallið gætið litið svona út: \newline def hringur(radius, midja): \newline #það sem fallið gerir. \newline
+Fallið gætið litið svona út: \newline def hringur(radius, midja): \newline \phantom{----}\# það sem fallið gerir. \newline
 Nú ef mig langar til að fá einhvern hring í hendurnar get ég ekki sagt við vélina láttu með hafa hring með radíus radius.
 Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!''
 Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
@@ -158,9 +161,15 @@ Hún annað hvort vinnur með vitlausa inntakið okkar og við fáum í hausinn 
 \subsection{Sjálfgefin viðfögn}
 Ef við viljum vera viss um að við getum unnið með eitthvað viðfang án þess að neyða notandann til þess að gefa okkur það getum við notað sjálfgefin viðföng (e. named arguments, default arguments), einnig kölluð nefnd viðföng.
 Þá skilgreinum við fall og búum til skilgreiningu á viðföngunum þar sem við tökum þau fram.
-Dæmi væri def prentunarfall(strengur = "Halló Heimur!"): print strengur.
+Dæmi væri:
+\newline def prentunarfall(strengur = "Halló Heimur!"): 
+\newline \phantom{----}print(strengur)
+\newline
 Ef við köllum í fallið með prentunarfall() og gefum því ekkert viðfang þá notar tölvan skilgreininguna sem er innan svigans þar sem viðföngin eru tekin fram.
-Sjáum þetta í kóðabút \ref{lst:foll-sjalfgefin}, hvernig megi nota bæði stöðubundin og sjálfgefin saman og hvernig megi kalla í föll sem eru með 
+Sjáum þetta í kóðabút \ref{lst:foll-sjalfgefin}, hvernig megi nota bæði stöðubundin og sjálfgefin saman og hvernig megi kalla í föll sem eru með bæði.
+Þegar bæði er notað saman í bland þá þarf að setja stöðubundnu viðfögnin fremst og svo á eftir þeim koma sjálfgefnu viðföngin.
+
+Athugum að bæði er í lagi að nota sjálfgefin viðföng sem stöðubundin, en þá verðum við líka að setja þau inn í réttri röð, og hins vegar að skrifa inn nafnið á viðfanginu og skilgreina það sem eitthvað (hvort sem það séu einhver gögn sem við setjum beint inn eða notum breytu), einnig er í lagi að sleppa því að taka þau fram.
 
 \begin{lstlisting}[caption=Sjálfgefin viðföng kynnt, label=lst:foll-sjalfgefin]
 def hefja_i_veldi_og_deila(grunntala = 1,veldisvisir = 1,deiling = 1):	
@@ -186,9 +195,62 @@ hefja_i_veldi_og_deila(deiling = 2, veldisvisir = 1, grunntala = 4)
 # hér notum við sjálfgefin gildi, í annarri röð en þau voru skilgreind, það veldur ekki villu því að tölvan parar viðföngin eftir nafni
 # úttakið verður
 # 2
+
+# skoðum núna blöndu, endurskilgreinum sama fallið með nýjum viðföngum:
+
+def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = 1):	
+	print(grunntala**veldisvisir/deiling)
+
+# Athugum hér að stöðubundnu viðföngin verða að koma á undan.
+# köllum nú í fallið með mismunandi aðferðum:
+
+hefja_i_veldi_og_deila() # hér fáum við villu því búist er við að notandi gefi grunntala og veldisvisir í té.
+
+hefja_i_veldi_og_deila(1,2) # hér fáum við á úttakið 2 
+
+hefja_i_veldi_og_deila(1, 2, 2) # hér fáum á úttakið 0.5
+
+hefja_i_veldi_og_deila(1, 2, deiling = 4) # hér fáum við á úttakið 0.25
+
+# notum breytur til að setja inn í fallið:
+tala = 2
+veldi = 2
+deila = 2
+hefja_i_veldi_og_deila(tala, veldi, deiling = deila) # hér fáum við á úttakið 2
+
 \end{lstlisting}
 
 \section{Skilagildi}\label{uk:skilagildi}
-Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með sjálfgefið inntak og 
+Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með sjálfgefið inntak og það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila gildum þannig að hægt sé að fá útkomu úr þeim sem megi nota áfram.
+Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum streng sem byggir á strengnum sem við notuðum aðferðina á (sjá kóðabút \ref{lst:adferdir}), til þess að geta notað úttkomuna þá getum við búið til breytu sem grípur það sem aðferðin \textit{skilar}.
+Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið hefja\_i\_veldi skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum, það sem er gert er annað hvort ekkert eða úttkoman er prentuð.
+Það dugar okkur ekki ef við þurfum að nota útreikninginn að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
+Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt.''
+Því að við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
+
+Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð (eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar).
+Það sem lykilorðið gerir er svipað break lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
+Sjáum í kóðabút \ref{lst:foll-skilagildi}
+
+\begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-skilagildi]
+def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = deiling):	
+	return grunntala**veldisvisir/deiling
+	
+# nú höfum við séð mýgrút leiða til að kalla í fallið svo við ætlum að einbeita okkur að því hvernig megi nota það sem fallið skilar í stað þess hvernig eigi að kalla í það með mismunandi viðföngum.
+# Athugum að  hefja_i_veldi_og_deila(2, 2, 2) skilar okkur 2
+
+tala = fall(2,2,2)
+print(tala)
+# hér verður úttakið 2
+
+utreikningur = fall(2,2,2) * 4
+print(utreikning)
+# hér verður úttakið 8
+
+breyta = utreikningur * tala
+print(breyta)
+# hér verður úttakið 16
+\end{lstlisting}
+ 
 
 \section{Lokun}
