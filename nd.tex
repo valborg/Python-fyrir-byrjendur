@@ -1,7 +1,88 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{N-dir}\index{Orðabækur}\label{k:ndir}
+Nú ætlum við að kynnast nýrri týpu, hún heitir \textbf{n-d} (lesist ennd) (e. tuple).
+Lykilorð þessarar týpu er \textbf{tuple}.
+Nafnið er komið frá hugmyndinni um tvenndir og þrenndir nema við vitum ekki hversu mörg stök er verið að hópa saman, þau gætu verið af n fjölda svo við köllum týpuna n-d eða nd.
+Líklega eina orðið í íslensku sem inniheldur ekki sérhljóða.
+ 
+Hún líkist listum að því leitinu til að margar af sömu aðgerðum sem má gera á lista má gera á n-dir.
+Hún líkist strengjum því að hún er óbreytanleg.
+
+Ástæðan til að nota ndir í stað lista er sú að það getur verið hagkvæmara, ndir nota ekki eins mikið minni, og við sjáum í kafla \ref{k:föll} um hvernig megi fá eina nd í stað margra skilagilda. 
 
 \section{Skilgreining}\index{Skilgreining n-da}
+Við skilgreinum nd með svigum.
+Athugið að hingað til höfum við notað sviga til að aðgreina segðir og það er vandmeðfarið að átta sig á því hvenær er sviginn stærðfræðilegur (þ.e. einungis fyrir forritarann til að aðgreina samhengi) og hins vegar skilgreining á gögnum af týpunni nd.
+Aðgreiningin er augljós þegar við áttum okkur á því að til þess að skilgreina nd þá þurfum við, líkt og með lista, að aðgreina stökin innan ndinnar með kommum.
+Sjáum í kóðabút \ref{lst:ndir-kynntar} hvernig má skilgreina ndir og hvernig svigar gera það ekki nema við notum kommur.
+\todo{vísa í kóðabút úr segðum eða tölum þar sem segðir eru aðgreindar með svigum til útskýringar, mögulega er todo að búa það til}
+Þar sjáum við einnig að það eru einungis tvær aðferðir til fyrir týpuna, .count() og .index().
+Hvernig má það vera að týpan líkist listum þegar það eru bara til tvær aðferðir?
+Var ekki verið að taka fram að það mætti gera margt það sama?
+Jú, aðgerðir og aðferðir er ekki það sama.
+Við getum ítrað í gegnum nd, við getum skeytt einni nd aftan við aðra (fáum þá nýja nd), við getum náð í hluta úr ndinni (með hornklofum eins og hlutstrengi eða hluta úr lista)
 
-\section{Notkun}\index{Notkun n-da}
+\begin{lstlisting}[caption=Ndir skilgreindar, label=lst:ndir-kynntar]
+# byrjum á því að sýna hvernig svigar skilgreina ekki endilega nd
+a = (3+4)*2
+# hér fær breytan a gildið 14 því að sviginn er notaður fyrir röð aðgerða.
+
+b = (1)
+# hér gerir sviginn ekkert og b inniheldur töluna 1, það er sviginn heldur utan um röð aðgerða en þær eru engar
+
+# Nú skilgreinum við ndir
+a = () # þetta verður tóm nd
+b = (1,) # þetta verður nd sem inniheldur eitt stak, athugið kommunotkunina
+c = (1, 1, 2, 2, 5) # þetta verður nd sem inniheldur 5 stök
+
+# Nú skulum við skoða hvaða aðferðir eru til á þessa nýju týpu og notum til þess breyturnar b og c
+b.index(1) # skilar okkur úttakinu 0 þar sem talan 1 er í 0ta vísi í ndinni b.
+c.count(1) # skilar okkur úttakinu 2 þar sem talan 1 kemur tvisvar sinnum fyrir í ndinni c
+c + b # skilar okkur nýrri nd sem inniheldur (1, 1, 2, 2, 5, 1) þar sem b hefur verið skeytt aftan við 1
+
+for tala in c:
+	print(tala)
+	
+#skilar okkur úttakinu
+# 1
+# 1
+# 2
+# 2
+# 5
+
+# Athugum að við megum ekki breyta nd, svo eftirfarandi kóði veldur villu
+c[4] = 3
+
+c[1:3] # skilar okkur úttakinu (1, 2)
+\end{lstlisting}
+
+\section{Notkun}\index{Notkun nda}
+Þar sem ndir eru óbreytanlegar er gagnlegt að nota þær til að halda utan um ástand sem við viljum ekki að sé hróflað við.
+Segjum að það séu ákveðin tengsl á milli tveggja gilda og við viljum halda heilindum þeirra þá væri gott að nota nd.
+Við getum líka notaðað þær til að spara minni þegar við þurfum litla lista sem þarf bara að nota tímabundið.
+Einnig geta þær nýst til að halda utan um breytur sem á svo að nota hverja í sínu lagi seinna.
+Við sjáum þetta í kóðabút \ref{lst:nd-notkun} og tökum eftir að vissulega megi útfæra fyrri þrjú atriðin með listum þá er það ekki endilega það besta í stöðunni, ef við ætlum að hugsa um gagnaheilindi og minnisnotkun.
+
+\begin{lstlisting}[caption=Ndir notaðar, label=lst:nd-notkun]
+# byrjum á því að skilgreina eina nd til að nota
+notanda_upplysingar = ("valborg", "rosalega gott lykilorð", "netfang@internet.is")
+
+# við fengjum villu við að gera notanda_upplysingar.sort(), notanda_upplysingar.append(x) eða notanda_upplysingar.remove(x) því að þessar aðferðir eru ekki til á hlut af taginu nd
+# þær eru til þess fallnar að breyta listum og við megum ekki breyta ndum
+
+# en það sem við getum gert er að sækja þessi gögn og vista í breytum
+# vissulega er hægt að gera þetta:
+notandanafn = notanda_upplysingar[0]
+lykilord = notenda_upplysingar[1]
+netfang = notenda_upplysingar[2]
+
+# en það sem er öflugra og snjallara að gera er að láta Python "aftroða" (e. unpack) á eftirfarandi máta:
+notandanafn, lykilord, netfang = notenda_upplysingar
+
+# nú parast hvert stak í ndinni á þessar breytur í þeirri röð sem þær eru skilgreindar.
+# núllti vísir á fremstu breytuna og svo koll af kolli
+
+# Hér er mikilvægt að til þess að aftroða ndinni með þessum hætti þurfa að vera jafnmargar breytur vinstra megin við jafnaðarmerkið eins og eru stök í ndinni, annars fáum við villu. 
+
+\end{lstlisting}
