@@ -88,7 +88,7 @@ Eða ef við værum að lóðsa bílstjóra með GPS myndum við ekki vilja leyf
 
 Annað sem mikilvægt er að átta sig á er að viðföng fá breytuheiti sem eru aðeins aðgengileg innan fallsins en ekki utan þess. Því ætlum við að skoða nýtt hugtak áður en við skoðum stöðubundin og sjálfgefin viðföng.
 
-\subsection{Gildissvið}
+\subsection{Gildissvið}\label{uk:gildissvið}
 Gildissvið (e. scope) skiptis í staðvært (e. local) og víðvært (e. global). 
 Það sem gildissvið þýðir er hvar eitthvað sé aðgengilegt.
 Ef við búum til Jupyter vinnubók eða .py skjal þar sem við skilgreinum breytuna x er sú breyta ekki aðgengileg í öðru skjali.
@@ -284,6 +284,95 @@ skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
 talning_strengs, staerri_tolur, listinn = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
 
 # Nú fáum við ekkert úttak en breyturnar innihalda 1, 2 og ["halló", "bless", 11, 6] í þessari röð
+
+# Við getum ekki notað fleiri en eina breytu nema að fjöldi þeirra passi við fjölda skilagilda:
+a, b = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+
+# þetta veldur villu því annað hvort er í boði að hafa eina breytu sem inniheldur n-d eða þrjár breytur sem taka hver við sínu skilagildi.
 \end{lstlisting}
 
 \section{Lokun}
+
+Föll mega innihalda önnur föll, athugum það sem við fórum yfir í kafla \ref{uk:gildissvið}, þessi föll geta verið gagnleg til að útfæra útreikning sem er svo notaður oft innan fallsins.
+Sjáum dæmi í kóðabút \ref{lst:foll-innri-foll}, athugið sérstaklega gildissviðið því að í innra fallinu er vísað í viðfang sem heitir strengur og það er líka vísað í viðfang í ytra fallinu sem heitir strengur, en vegna þess að gildissviðið krefst þess að fyrst er athugað staðvært hvernig breytan er skilgreind þá skiptir ekki máli að breyturnar heita það sama.
+
+\begin{lstlisting}[caption=Innri föll kynnt, label=lst:foll-innri-foll]
+def breyta_strengjum(strengur):
+	# þetta fall tekur við streng og skilar honum eftir að hafa breytt honum einhvern veginn
+	
+	def fremsti_stafur_er_nuna_aftastur(strengur):
+		# þetta fall tekur við streng og lætur fremsta stafinn í honum aftast og aftasta stafinn fremst og skilar breytingunni 
+		# ef strengurinn er eitt eða færra stafabil gerir fallið ekkert við strenginn og skilar honum óbreyttum
+		if(len(strengur > 2)):
+			fremst = strengur[0]
+			aftast = strengur[-1]
+			strengur = aftast + strengur[1:-1] + fremst
+			return strengur
+		else:
+			return strengur
+			
+	# nú er skilgreiningin á innra fallinu búin og við erum stödd í ytra fallinu
+	# nú getum við kallað í innra fallið
+	
+	skilastrengur = fremsti_stafur_er_nuna_aftastur(strengur)
+	return skilastrengur
+	
+# Nú getum við kallað í ytra fallið
+strengur = breyta_strengjum("halló")
+# strengur inniheldur núna
+# "óllah"
+
+# En ytra fallið gerði samt eiginlega ekki neitt, hvers vegna erum við að nota það en ekki innra fallið?
+strengur =  fremsti_stafur_er_nuna_aftastur("halló")
+
+# hér fáum við villu því að það er ekkert fall til, í því gildissviði sem við erum stödd, sem heitir þessu nafni sem við höfum aðgang að, þess vegna verðum við að nota ytra fallið.
+		
+\end{lstlisting}
+
+Nú höfum við séð hvernig megi skilgreina innri föll og það sem við ætlum að skoða næst er að það má skila föllum.
+Skipunin return er þá notuð alveg eins og ef við værum að skila einu gildi, eða fleirum.
+Sjáum í kóðabút \ref{lst:foll-lokun} hvernig við skilum falli og hvernig á að nota skilagildið sem inniheldur fallið.
+Við sjáum í seinni hluta þessarar bókar, í umfjöllun um klasa, hvernig megi framkvæma sömu virkni en með því að sleppa klösum þá er vinnslutíminn umtalsvert minni.
+Svo ef það skiptir máli að gera eitthvað hratt sem má leysa með lokun þá ætti frekar að beita henni heldur en klösum.
+
+\begin{lstlisting}[caption=Lokun kynnt, label=lst:foll-lokun]
+def prentunarfall(strengur):
+	# prentunarfall tekur við einu viðfangi
+	# prentunarfall skilar falli sem prentar þann streng ásamt viðbót
+	def prentum():
+		# prentum tekur ekki við neinu en notar viðfangið úr ytra fallinu
+		# prentum skilar strengnum úr viðfanginu ásamt viðskeytingunni 'hér er viðbót af akademískri ástæðu'
+		return str(strengur) + " hér er viðbót af akademískri ástæðu"
+	return prentum
+
+a = prentunarfall('halló heimur')
+print(a) # skilar okkur að a sé fall sem sé geymt í einhverju minnishólfi
+print(a()) # nú köllum við í fallið a sem skilar okkur úttakinu 'halló heimur hér er viðbót af akademískri ástæðu'
+
+# Við megum svo nota prentunarfallið okkar aftur með einhverju öðru viðfangi
+b = prentunarfall('nýr strengur')
+print(b()) # skilar okkur úttakinu 'nýr strengur hér er viðbót af akademískri ástæðu'
+
+# Sjáum ögn haldbærari notkun
+
+def niðurtalning(n):
+	# niðurtalning tekur við tölu
+	# niðurtalning skilar falli sem telur niður úr þeirri tölu
+	
+	def teljari():
+		while(n>-1):
+			print(n)
+			n -= 1
+	
+	return teljari
+	
+# nú getum við skilgreint fall sem telur niður frá 10 og notað það þegar okkur hentar
+teljum_fra_tiu = niðurtalning(10)
+
+# nú hentar okkur að nota það:
+teljum_fra_tiu()
+# Skilar okkur
+\end{lstlisting}
+
+Tökum eftir að í skilgreiningum á a og b í kóðabút \ref{lst:foll-lokun} þá erum við að nota ákveðinn streng sem þau eiga að prenta út.
+Þetta er á þessu stigi málsins eilítið óhlutstætt og ekki augljóst hvernig það nýtist okkur því dæmið í kóðabútnum er ekki sérlega nothæft fall.
