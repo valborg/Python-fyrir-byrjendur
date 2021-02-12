@@ -259,17 +259,31 @@ Sjáum í kóðabút \ref{lst:foll-ndir-skilagildi} hvernig hægt er að skila m
 
 \begin{lstlisting}[caption=Hvernig á að skila mörgum gildum, label=lst:foll-ndir-skilagildi]
 def skilum_morgum_gildum(strengur, tala, listi):
-	# inni í fallinu gerum við einhverja töfra, eins og að telja hversu oft strengurinn kemur fyrir í listanum
-	# og hversu margar tölur eru stærri en talan.
+	# Þetta fall tekur við streng, tölu og lista
+	# Fallið skilar tveimur tölum og listanum aftur óbreyttum
+	# Fyrri talan er hversu oft strengurinn í viðfanginu kom fyrir í listanum
+	# Seinni talan er hversu margar tölur í listanum eru stærri en talan í viðfanginu
+	
 	skilatala = 0
 	strengja_talning = 0
 	for x in listi:
+		# x stendur það stak sem verið er skoða úr listanum listi
 		if x == strengur:
 			strengja_talning +=1
 		if(type(x) == int or type(x) == float ):
-			if (tala > x):
+			if (tala < x):
 				skilatala += 1
-	return skilatala, strengja_talning, listi
+	return strengja_talning, skilatala,  listi
+	
+# hér gerist ekkert nema að við köllum í fallið
+skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+# Þetta skilar okkur úttakinu
+(1, 2, ["halló", "bless", 11, 6])
+
+# En ef okkur langar ekki að fá út n-d þá getum við gert dálitla töfra 
+talning_strengs, staerri_tolur, listinn = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+
+# Nú fáum við ekkert úttak en breyturnar innihalda 1, 2 og ["halló", "bless", 11, 6] í þessari röð
 \end{lstlisting}
 
 \section{Lokun}
