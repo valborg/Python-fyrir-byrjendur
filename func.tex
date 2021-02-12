@@ -360,6 +360,9 @@ def niðurtalning(n):
 	# niðurtalning skilar falli sem telur niður úr þeirri tölu
 	
 	def teljari():
+		# nú lendum við í vandræðum með n, þar sem við höfum ekki aðgang að því hérna 
+		# og við lögum það með því að nota lykilorðið nonlocal (eða óstaðvært) til að segja vélinni að leita annarsstaðar að gildi fyrir n
+		nonlocal n
 		while(n>-1):
 			print(n)
 			n -= 1
@@ -367,12 +370,22 @@ def niðurtalning(n):
 	return teljari
 	
 # nú getum við skilgreint fall sem telur niður frá 10 og notað það þegar okkur hentar
-teljum_fra_tiu = niðurtalning(10)
+teljum_fra_tiu = niðurtalning(5)
 
 # nú hentar okkur að nota það:
-teljum_fra_tiu()
-# Skilar okkur
+teljum_fra_fimm()
+# það skilar okkur úttakinu
+# 5
+# 4
+# 3
+# 2
+# 1
+# 0
 \end{lstlisting}
 
 Tökum eftir að í skilgreiningum á a og b í kóðabút \ref{lst:foll-lokun} þá erum við að nota ákveðinn streng sem þau eiga að prenta út.
 Þetta er á þessu stigi málsins eilítið óhlutstætt og ekki augljóst hvernig það nýtist okkur því dæmið í kóðabútnum er ekki sérlega nothæft fall.
+Niðurtalningarfallið hinsvegar er að framkvæma einhverja virkni sem við viljum hafa aðgang að þegar okkur hentar.
+Við notuðum breytuna teljum\_fra\_fimm til þess að geyma fyrir okkur að kalla í fallið niðurtalning() með viðfanginu 5, svo þegar okkur hentar þá getum við beitt fallinu sem telur niður fyrir okkur.
+Athugum þó sérstaklega að gildissviðið sem innrafallið teljari() tilheyrir það hefur ekki aðgang að neinu staðværu n-i svo það skilar villu nema að við segjum því falli sérstaklega að nota ekki staðvært n heldur leita út fyrir gildissviðið með lykilorðinu \textbf{nonlocal}.
+Við munum ekki nota það orð af neinu viti í seinni hluta bókarinnar en það er þess virði að taka það fram að svo stöddu að þetta orð sé til og hvað það gerir.

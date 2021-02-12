@@ -134,19 +134,21 @@
 % SNIÐMÁT
 
 % ----------------------------------------------
+%
+%\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
 
-\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
-
-\begin{description}
-\item[Name] Description
-\item[Word] Definition
-\item[Comment] Elaboration
-\end{description}
+%\begin{description}
+%\item[Name] Description
+%\item[Word] Definition
+%\item[Comment] Elaboration
+%\end{description}
 
 %----------------------------------------------------------------------------------------
 %	CHAPTER 2
 %----------------------------------------------------------------------------------------
 
+% Búið að gera athugasemd utan um þetta allt
+\comment{
 \chapter{In-text Elements}
 
 \section{Theorems}\index{Theorems}
@@ -241,30 +243,34 @@ It has the properties:
 Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
 \end{proposition}
 
-%------------------------------------------------
-
-\section{Examples}\index{Examples}
-
-This is an example of examples.
-
-\subsection{Equation and Text}\index{Examples!Equation and Text}
-
-\begin{example}
-Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-\begin{equation}
-f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-\end{equation}
-The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all $\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
-\end{example}
-
-\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
-
-\begin{example}[Example name]
-\lipsum[2]
-\end{example}
+}
 
 %------------------------------------------------
+
+%\section{Examples}\index{Examples}
+
+%This is an example of examples.
+
+%\subsection{Equation and Text}\index{Examples!Equation and Text}
+
+%\begin{example}
+%Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
+%\begin{equation}
+%f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
+%& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
+%\end{equation}
+%The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all %$\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
+%\end{example}
+
+%\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
+
+%\begin{example}[Example name]
+%\lipsum[2]
+%\end{example}
+
+%------------------------------------------------
+
+% Á eftir að gera athugasemd utan um þetta
 
 \section{Exercises}\index{Exercises}
 
@@ -284,13 +290,13 @@ What is the average airspeed velocity of an unladen swallow?
 
 %------------------------------------------------
 
-\section{Vocabulary}\index{Vocabulary}
+%\section{Vocabulary}\index{Vocabulary}
 
-Define a word to improve a students' vocabulary.
+%Define a word to improve a students' vocabulary.
 
-\begin{vocabulary}[Word]
-Definition of word.
-\end{vocabulary}
+%\begin{vocabulary}[Word]
+%Definition of word.
+%\end{vocabulary}
 
 %----------------------------------------------------------------------------------------
 %	PART
@@ -303,6 +309,8 @@ Definition of word.
 %----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
+
+\comment{
 
 \chapter{Presenting Information}
 
@@ -339,9 +347,13 @@ Referencing Table \ref{tab:example} in-text automatically.
 
 Referencing Figure \ref{fig:placeholder} in-text automatically.
 
+}
+
 %----------------------------------------------------------------------------------------
 %	BIBLIOGRAPHY
 %----------------------------------------------------------------------------------------
+\comment{
+
 
 \chapter*{Bibliography}
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
@@ -358,6 +370,7 @@ Referencing Figure \ref{fig:placeholder} in-text automatically.
 \addcontentsline{toc}{section}{Books}
 \printbibliography[heading=bibempty,type=book]
 
+}
 %----------------------------------------------------------------------------------------
 %	INDEX
 %----------------------------------------------------------------------------------------

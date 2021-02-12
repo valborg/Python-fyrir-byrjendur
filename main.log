@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  12 FEB 2021 08:54
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  12 FEB 2021 14:11
 entering extended mode
 **./main.tex
 (main.tex
@@ -1557,7 +1557,7 @@ ine 109.
 
 ]
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=450, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=366, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
@@ -1718,81 +1718,16 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[61] [62] [63] [64] [65] [66]) [67] [68
-
-]
-Kafli 11.
-File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
-<use Pictures/chapter_head_2.pdf>
-Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 150.
-(pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-Package mdframed Info: mdframed works in twoside mode on input line 159.
+[61] [62] [63] [64] [65] [66] [67] [68])
+Package mdframed Info: mdframed works in twoside mode on input line 279.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
-(mdframed)              on input line 159.
+(mdframed)              on input line 279.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 159.
-Package mdframed Info: mdframed works in twoside mode on input line 170.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 170.
-Package mdframed Info: mdframed works in twoside mode on input line 180.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 180.
-[69]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 209.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 209.
-Package mdframed Info: mdframed works in twoside mode on input line 218.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 218.
-LaTeX Font Info:    Font shape `T1/pag/b/n' in size <6> not available
-(Font)              Font shape `T1/pag/db/n' tried instead on input line 253.
- [70]
-Package mdframed Info: mdframed works in twoside mode on input line 273.
-Package mdframed Info: mdframed detected package amsthm 
- changed the theorem header of amsthm
-(mdframed)              on input line 273.
- [71] [72
+(Font)              Font shape `T1/pag/db/n' tried instead on input line 280.
+ [69] [70
 
-] (main.ptc) [73] [74]
-Kafli 12.
-File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
-<use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 307.
-(pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
-<Pictures/placeholder.jpg, id=1798, 351.3125pt x 193.72375pt>
-File: Pictures/placeholder.jpg Graphic file (type jpg)
-<use Pictures/placeholder.jpg>
-Package pdftex.def Info: Pictures/placeholder.jpg  used on input line 334.
-(pdftex.def)             Requested size: 175.6558pt x 96.86163pt.
-[75
-
-pdfTeX warning (ext4): destination with the same identifier (name{table.12.1}) 
-has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.346 \chapter
-              *{Bibliography}pdfTeX warning (ext4): destination with the same i
-dentifier (name{figure.12.1}) has been already used, duplicate ignored
-
-\@EveryShipout@Output ...@Org@Shipout \box \@cclv 
-                                                  
-l.346 \chapter
-              *{Bibliography} <./Pictures/placeholder.jpg>] [76
-
-]
-File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
-<use Pictures/chapter_head_1.pdf>
-Package pdftex.def Info: Pictures/chapter_head_1.pdf  used on input line 346.
-(pdftex.def)             Requested size: 597.50787pt x 298.77907pt.
- [77] [78
-
-]
+] (main.ptc) [71] [72]
 (main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
@@ -1848,17 +1783,18 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[79
+[73
+
 
 ])
 \tf@ptc=\write7
 \openout7 = `main.ptc'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 373.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 373.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 386.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 386.
  (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 373.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 373.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 386.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 386.
 
 
 LaTeX Warning: There were undefined references.
@@ -1868,35 +1804,26 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35347 strings out of 481225
- 658694 string characters out of 2905237
- 1524529 words of memory out of 3000000
- 48870 multiletter control sequences out of 15000+200000
- 667483 words of font info for 334 fonts, out of 3000000 for 9000
+ 35105 strings out of 481225
+ 654482 string characters out of 2905237
+ 1524190 words of memory out of 3000000
+ 48615 multiletter control sequences out of 15000+200000
+ 652387 words of font info for 293 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,15n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,12n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} 
 <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0
 900.pk> <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
 00\ectt1095.pk><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/publ
-ic/amsfonts/cm/cmex10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/valborg/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/valborg/AppData/Local/
-Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/valborg/App
-Data/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msam10.pfb><C:/U
-sers/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/public/r
-sfs/rsfs10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1/urw/
-avantgar/uagd8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/type1
-/urw/avantgar/uagk8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/
-type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts
-/type1/urw/symbol/usyr.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/font
-s/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/fo
-nts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
-fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (79 pages, 841934 bytes).
+ic/amsfonts/symbols/msam10.pfb><C:/Users/valborg/AppData/Local/Programs/MiKTeX/
+fonts/type1/urw/avantgar/uagd8a.pfb><C:/Users/valborg/AppData/Local/Programs/Mi
+KTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/valborg/AppData/Local/Progra
+ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Prog
+rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
+Output written on main.pdf (73 pages, 761704 bytes).
 PDF statistics:
- 2443 PDF objects out of 2487 (max. 8388607)
- 1151 named destinations out of 1200 (max. 500000)
- 68201 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 2328 PDF objects out of 2487 (max. 8388607)
+ 1195 named destinations out of 1200 (max. 500000)
+ 60908 words of extra memory for PDF output out of 61914 (max. 10000000)
 

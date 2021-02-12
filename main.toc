@@ -121,55 +121,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {10.5}Lokun}{67}{section.10.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {10.5.1}Descriptions and Definitions}{67}{subsection.10.5.1}%
+\contentsline {section}{\numberline {10.6}Exercises}{69}{section.10.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {11}In-text Elements}{69}{chapter.11}%
+\contentsline {section}{\numberline {10.7}Problems}{69}{section.10.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.1}Theorems}{69}{section.11.1}%
+\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{71}{part.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.1}Several equations}{69}{subsection.11.1.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.1.2}Single Line}{69}{subsection.11.1.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.2}Definitions}{69}{section.11.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.3}Notations}{70}{section.11.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.4}Remarks}{70}{section.11.4}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.5}Corollaries}{70}{section.11.5}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.6}Propositions}{70}{section.11.6}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6.1}Several equations}{70}{subsection.11.6.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.6.2}Single Line}{70}{subsection.11.6.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.7}Examples}{70}{section.11.7}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.7.1}Equation and Text}{70}{subsection.11.7.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {11.7.2}Paragraph of Text}{71}{subsection.11.7.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.8}Exercises}{71}{section.11.8}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.9}Problems}{71}{section.11.9}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {11.10}Vocabulary}{71}{section.11.10}%
-\defcounter {refsection}{0}\relax 
-\contentsline {part}{\@mypartnumtocformat {II}{Part Two}}{73}{part.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {12}Presenting Information}{75}{chapter.12}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.1}Table}{75}{section.12.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {12.2}Figure}{75}{section.12.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Bibliography}}{77}{chapter*.22}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Articles}{77}{section*.23}%
-\defcounter {refsection}{0}\relax 
-\contentsline {section}{Books}{77}{section*.24}%
-\defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{79}{section*.25}%
+\contentsline {chapter}{\leavevmode {\color {ocre}Index}}{73}{section*.22}%
 \contentsfinish 
