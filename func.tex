@@ -232,7 +232,7 @@ Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð se
 Það sem lykilorðið gerir er svipað break lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
 Sjáum í kóðabút \ref{lst:foll-skilagildi}
 
-\begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-skilagildi]
+\begin{lstlisting}[caption=Hvernig á að láta fall skila gildi með return skipuninni, label=lst:foll-skilagildi]
 def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = deiling):	
 	return grunntala**veldisvisir/deiling
 	
@@ -252,5 +252,24 @@ print(breyta)
 # hér verður úttakið 16
 \end{lstlisting}
  
+Nú höfum við skilað einu gildi sem er heiltala eða fleytitala og unnið með hana með þeim aðgerðum og reiknivirkjum sem okkur langaði til að prófa.
+Hægt er að skila gögnum af hvaða týpu sem er, og jafnvel fleiru en einu gildi í einu, og það af mismunandi týpum.
+
+Sjáum í kóðabút \ref{lst:foll-ndir-skilagildi} hvernig hægt er að skila mörgum gildum og setja þau í breytu eða breytur.
+
+\begin{lstlisting}[caption=Hvernig á að skila mörgum gildum, label=lst:foll-ndir-skilagildi]
+def skilum_morgum_gildum(strengur, tala, listi):
+	# inni í fallinu gerum við einhverja töfra, eins og að telja hversu oft strengurinn kemur fyrir í listanum
+	# og hversu margar tölur eru stærri en talan.
+	skilatala = 0
+	strengja_talning = 0
+	for x in listi:
+		if x == strengur:
+			strengja_talning +=1
+		if(type(x) == int or type(x) == float ):
+			if (tala > x):
+				skilatala += 1
+	return skilatala, strengja_talning, listi
+\end{lstlisting}
 
 \section{Lokun}
