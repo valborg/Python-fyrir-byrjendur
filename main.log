@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  15 FEB 2021 10:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  15 FEB 2021 12:50
 entering extended mode
 **./main.tex
 (main.tex
@@ -1557,7 +1557,7 @@ ine 109.
 
 ]
 Kafli 1.
-<Pictures/chapter_head_2.pdf, id=366, 3581.38pt x 1790.69pt>
+<Pictures/chapter_head_2.pdf, id=371, 3581.38pt x 1790.69pt>
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
@@ -1702,15 +1702,15 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (set.tex [59] [60
-
-]
+[59]) (set.tex [60]
 Kafli 9.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [61] [62
+) (func.tex [61
+
+] [62
 
 ]
 Kafli 10.
@@ -1804,10 +1804,10 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35177 strings out of 481225
- 655652 string characters out of 2905237
- 1524429 words of memory out of 3000000
- 48632 multiletter control sequences out of 15000+200000
+ 35213 strings out of 481225
+ 656121 string characters out of 2905237
+ 1524532 words of memory out of 3000000
+ 48647 multiletter control sequences out of 15000+200000
  652387 words of font info for 293 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1821,9 +1821,9 @@ KTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/valborg/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (75 pages, 777242 bytes).
+Output written on main.pdf (75 pages, 789713 bytes).
 PDF statistics:
- 2402 PDF objects out of 2487 (max. 8388607)
- 1250 named destinations out of 1440 (max. 500000)
- 60908 words of extra memory for PDF output out of 61914 (max. 10000000)
+ 2442 PDF objects out of 2487 (max. 8388607)
+ 1271 named destinations out of 1440 (max. 500000)
+ 60916 words of extra memory for PDF output out of 61914 (max. 10000000)
 

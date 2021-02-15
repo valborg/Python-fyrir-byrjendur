@@ -1,5 +1,76 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Orðabækur}\index{Orðabækur}\label{k:orðabækur}
+Ný týpa sem vil ætlum að nú að fást við heitir \textbf{orðabækur} (e. dictionaries)  og lykilorðið þeirra er \textbf{dict}.
+Orðabækur er orð sem hentar fyrir þýðingu á týpunni í Python en hún er einnig þekkt sem hakkatafla (e. hash table / hash map) í öðrum forritunarmálum.
+Til þess að búa til orðabók eru notaðir slaufusvigar \{\}].
+Orðabækur eru gagnagrindur eins og listar, það er þær geyma fyrir okkur gögn af öðrum týpum.
+Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa.
+Við getum því ekki sótt gögn í orðabækur með því að vita \textit{hvar} þau eru við þurfum að vita \textit{hver} þau eru.
+Orðabækur eru mjög öflugt fyrirbæri, og því þess virði að kynna sér vel hvernig þessi týpa virkar.
+
+Þetta er vegna þess að orðabækur eru skipulagðar sem lykla og gildis pör, við finnum þau gildi sem við viljum með því að vita hvaða lykill gengur að þeim.
+Þetta er ekki ósvipað því að horfa á lyklakippurnar okkar, ef við grípum einhvers staðar í lyklakippuhringinn og horfum á þann lykil sem er hægra megin við fingurgóma okkar sem fremsta lykilinn og númerum lyklana eftir því þá er ekki víst að næst þegar við tökum kippuhringinn upp að við grípum á sama stað niður og að sami lykill verði fremstur.
+En við getum alltaf reitt okkur á það að sama hvar einhver ákveðinn lykill er þá gengur hann alltaf að sama lásnum, svo ef við þekkjum lyklana okkar getum við auðveldlega náð í þann sem við viljum til þess að opna þann lás sem við viljum hverju sinni.
+
+Lyklarnir verða því að vera ólíkir hverjum öðrum, annars gætum við ekki þekkt þá í sundur og tveir eins lyklar gætu ekki gengið að tveimur mismunandi lásum.
+Svo lyklar verða að vera aðgreinanlegir.
+Við skoðum betur hvernig við getum gengið úr skugga um aðgreinanleika og hvað það þýðir.
+
+Einnig skoðum við í þessum kafla hvernig má ítra í gegnum orðabækur og hvers vegna það var ágætt að vera búin að skoða ndir áður en við komum að þessari mikilvægu týpu.
 
 \section{Lyklar og gildi}\index{Lyklar og gildi}
+Eins og kom fram í inngangi er gögnum í orðabókum skipt niður á lyklana sem ganga að þeim.
+Lyklarnir þurfa að vera aðgreinanlegir, hvað þýðir það?
+Skoðum innbyggða fallið hash() til þess að átta okkur á því hvað má nota sem lykil, sjá kóðabút \ref{lst:dict-hash}.
+Það sem hash() fallið gerir er að skila okkur einu tilteknu heiltölu gildi, tveir hlutir sem eru álitnir jafngildir fá sömu heiltöluna úr hash() fallinu.
+Ekki er hægt að kalla í hash() af öllum týpum, því sumar týpur eru óhakkanlegar.
+
+Í kóðabút \ref{lst:dict-kynntar} sjáum við hvernig á að skilgreina orðabók, lykla og gildispör og hvernig á að aðgreina stök.
+Stak í orðabók er eitt lykla og gildispar.
+Lyklar þurfa að vera hakkanlegir og því geta listar og orðabækur ekki verið lyklar en hvað sem er má vera gildi, eins og sést í kóðabút \ref{lst:dict-hash}.
+Lyklar og gildi geta verið breytur, en þá eins og alltaf þegar við notum breytur þurfum við að vera búin að skilgreina breytuna áður en við notum hana.
+
+\begin{lstlisting}[caption=Skoðum id() og hash(), label=lst:dict-hash]
+a = [1,2,3] # a er listi
+hash(a) # skilar villu 
+
+b = 12 
+hash(b) # skilar 12
+
+c = 12.2
+hash(c) # skilar stórri heilli tölu.
+
+d = 12.0
+hash(d) # skilar 12 
+
+# svo hash skilar okkur tölu eftir því hvernig má túlka gögn sem eina heila tölu ef það er mögulegt, svo b og d eru óaðgreinanleg og því má ekki nota bæði sem lykla í sömu orðabók.
+\end{lstlisting}
+
+Ástæðan fyrir því að við þurfum að skilja þetta er vegna þess að við þurfum að átta okkur á því hvað má setja sem lykil og hvers vegna við getum kannski ekki notað einhvern tiltekinn lykil.
+
+\begin{lstlisting}[caption=Orðabækur kynntar, label=lst:dict-kynntar]
+# Skilgreinum orðabækur:
+ordabok1 = {} # inniheldur ekkert
+ordabok2 = {'lykill': 'gildi'} # inniheldur strenginn lykill sem lykil og svo er tvípunktur sem aðgreinir lykilinn frá gildinu sem er strengurinn 'gildi'
+
+ordabok3 = {1: 'gildi á lykli 1 sem er heiltala, 2: 'gildi sem er á lykli 2', 3: 'takið eftir að pörin eru aðgreind með kommu'}
+\end{lstlisting}
+
+\section{Ítrað í gegnum orðabækur}\index{Ítrað í gegnum orðabækur}
+
+Nú höfum við séð for lykkjur í kafla \ref{k:lykkjur} og hvernig mátti lykkja í gegnum lista í kóðabút \ref{lst:lykkjur-for}.
+Nú hins vegar þurfum við að fara yfir hvernig í ósköpunum á eiginlega að skoða stak í orðabók á kerfisbundinn máta þegar eitt stak er bæði lykill og gildi.
+
+Þetta er útfærsluatrðið sem ákveðið var að yrði gert þannig að þegar óskað er eftir að ítra í gegnum orðabók eru lyklarnir hennar eingöngu teknir fyrir.
+Hins vegar er hægt að gera bæði lykla og gildi eða einungis gildin aðgengileg með því að kalla í aðferðirnar .items() og .values(), að rúlla í gegnum orðabók án þess að taka fram einhverja aðferð er eins og að hafa kallað í aðferðina .keys().
+Nú eru nöfnin á þessum aðferðum ágætlega lýsandi:
+
+\begin{itemize}
+	\item ordabok.keys() við fáum í hendurnar ítranlegan hlut sem inniheldur alla lykla í lista úr breytunni ordabok (e. view)
+	\item ordabok.values() við fáum í hendurnar ítranlegan hlut sem inniheldur öll gildi í lista úr breytunni ordabok (e. view)
+	\item ordabok.items() við fáum í hendurnar ítranlegan hlut sem inniheldur lista af tvenndum (nd með tveimur stökum) úr breytunni ordabok (e. view).
+\end{itemize}
+
+Þannig að til þess að sækja það sem við viljum skoða þurfum við að nota þá aðferð á orðabókina okkar sem okkur hentar hverju sinni.
+Ef við vildum til dæmis halda utan um bókasafnið okkar með orðabók og vinna með þær upplýsingar úr bókasafninu sem henta hverju sinni gætum við gert það eins og kemur fram í kóðabút \ref{lst:dict-bokasafn}.
