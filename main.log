@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  15 FEB 2021 12:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 20.7) (preloaded format=pdflatex 2020.8.6)  15 FEB 2021 14:42
 entering extended mode
 **./main.tex
 (main.tex
@@ -1702,15 +1702,22 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[59]) (set.tex [60]
+[59] [60]
+
+Package Fancyhdr Warning: \headheight is too small (14.0pt): 
+Make it at least 14.57007pt.
+We now make it that large for the rest of the document.
+This may cause the page layout to be inconsistent, however.
+
+[61]) (set.tex [62]
 Kafli 9.
 File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-) (func.tex [61
+) (func.tex [63
 
-] [62
+] [64
 
 ]
 Kafli 10.
@@ -1718,16 +1725,16 @@ File: Pictures/chapter_head_2.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_2.pdf>
 Package pdftex.def Info: Pictures/chapter_head_2.pdf  used on input line 3.
 (pdftex.def)             Requested size: 597.50787pt x 298.75726pt.
-[63] [64] [65] [66] [67] [68] [69] [70])
+[65] [66] [67] [68] [69] [70] [71] [72])
 Package mdframed Info: mdframed works in twoside mode on input line 279.
 Package mdframed Info: mdframed detected package amsthm 
  changed the theorem header of amsthm
 (mdframed)              on input line 279.
 LaTeX Font Info:    Font shape `T1/pag/b/n' in size <10> not available
 (Font)              Font shape `T1/pag/db/n' tried instead on input line 280.
- [71] [72
+ [73] [74
 
-] (main.ptc) [73] [74]
+] (main.ptc) [75] [76]
 (main.ind
 File: Pictures/chapter_head_1.pdf Graphic file (type pdf)
 <use Pictures/chapter_head_1.pdf>
@@ -1783,7 +1790,7 @@ Overfull \hbox (1.20001pt too wide) in paragraph at lines 71--72
 [][] 
  []
 
-[75
+[77
 
 
 ])
@@ -1804,13 +1811,13 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 35213 strings out of 481225
- 656121 string characters out of 2905237
- 1524532 words of memory out of 3000000
- 48647 multiletter control sequences out of 15000+200000
+ 35324 strings out of 481225
+ 657619 string characters out of 2905237
+ 1524648 words of memory out of 3000000
+ 48690 multiletter control sequences out of 15000+200000
  652387 words of font info for 293 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,85p,973b,2957s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,12n,85p,973b,2986s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Users/valborg/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/base/8r.enc} 
 <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\ectt0
 900.pk> <C:\Users\valborg\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi6
@@ -1821,9 +1828,9 @@ KTeX/fonts/type1/urw/avantgar/uagk8a.pfb><C:/Users/valborg/AppData/Local/Progra
 ms/MiKTeX/fonts/type1/urw/times/utmb8a.pfb><C:/Users/valborg/AppData/Local/Prog
 rams/MiKTeX/fonts/type1/urw/times/utmr8a.pfb><C:/Users/valborg/AppData/Local/Pr
 ograms/MiKTeX/fonts/type1/urw/times/utmri8a.pfb>
-Output written on main.pdf (75 pages, 789713 bytes).
+Output written on main.pdf (77 pages, 805894 bytes).
 PDF statistics:
- 2442 PDF objects out of 2487 (max. 8388607)
- 1271 named destinations out of 1440 (max. 500000)
+ 2535 PDF objects out of 2984 (max. 8388607)
+ 1339 named destinations out of 1440 (max. 500000)
  60916 words of extra memory for PDF output out of 61914 (max. 10000000)
 

@@ -31,7 +31,7 @@ Stak í orðabók er eitt lykla og gildispar.
 Lyklar þurfa að vera hakkanlegir og því geta listar og orðabækur ekki verið lyklar en hvað sem er má vera gildi, eins og sést í kóðabút \ref{lst:dict-hash}.
 Lyklar og gildi geta verið breytur, en þá eins og alltaf þegar við notum breytur þurfum við að vera búin að skilgreina breytuna áður en við notum hana.
 
-\begin{lstlisting}[caption=Skoðum id() og hash(), label=lst:dict-hash]
+\begin{lstlisting}[caption=Skoðum hash() fallið til að skilja aðgreinanleika gagna, label=lst:dict-hash]
 a = [1,2,3] # a er listi
 hash(a) # skilar villu 
 
@@ -55,6 +55,14 @@ ordabok1 = {} # inniheldur ekkert
 ordabok2 = {'lykill': 'gildi'} # inniheldur strenginn lykill sem lykil og svo er tvípunktur sem aðgreinir lykilinn frá gildinu sem er strengurinn 'gildi'
 
 ordabok3 = {1: 'gildi á lykli 1 sem er heiltala, 2: 'gildi sem er á lykli 2', 3: 'takið eftir að pörin eru aðgreind með kommu'}
+
+# Hvernig á að sækja gögn ef þau eru ekki með sætisnúmeri:
+ordabok2['lykill'] # þetta skilar okkar 'gildi' 
+ordabok3[3] # þetta skilar okkur 'takið eftir að pörin eru aðgreind með kommu'
+
+# Hvernig á að setja inn gögn eða endurskilgreina lykil
+ordabok2['lykill'] = 'nýtt gildi' # nú er búið að endurskilgreina gildið á þessum lykli
+ordabok2['nýr lykill'] = 'nýtt gildi' # nú er búið að búa til nýjan lykil sem fékk eitthvað gildi
 \end{lstlisting}
 
 \section{Ítrað í gegnum orðabækur}\index{Ítrað í gegnum orðabækur}
@@ -74,3 +82,65 @@ Nú eru nöfnin á þessum aðferðum ágætlega lýsandi:
 
 Þannig að til þess að sækja það sem við viljum skoða þurfum við að nota þá aðferð á orðabókina okkar sem okkur hentar hverju sinni.
 Ef við vildum til dæmis halda utan um bókasafnið okkar með orðabók og vinna með þær upplýsingar úr bókasafninu sem henta hverju sinni gætum við gert það eins og kemur fram í kóðabút \ref{lst:dict-bokasafn}.
+
+\begin{lstlisting}[caption=Skoðum hvernig megi ítra í gegnum orðabækur, label=lst:dict-bokasafn]
+# Skilgreinum orðabók sem heldur utan um bókasafnið okkar, þar sem lykill er höfundur og gildi er listi af bókum sem við eigum eftir þann höfund:
+bokasafn = {'Beazley': ['Python Essential Reference'],'Halldór Laxness': ['Íslandsklulkka', 'Salka Valka], 'Auður Haralds': ['Hlustið þér á Mozart', 'Læknamafían', 'Hvunndagshetjan'] }
+
+# til þess að vinna með alla þá höfunda sem við eigum til getum við gert eftirfarandi:
+
+for hofundur in bokasafn:
+	
+	# við vitum að bokasafn[hofundur] gefur okkur gildi þess höfundar, sem er í okkar tilfelli alltaf listi
+	
+	# athugum nú hvað við eigum margar bækur eftir höfundana með því að skoða lengd listans
+	if len(bokasafn[hofundur]) > 5:
+		print('Á bókasafninu eru til fleiri en fimm bækur eftir höfundinn', hofundur)
+	elif(len(bokasafn[hofundur]) > 2):
+		print('Á bókasafninu eru til fleiri en tvær bækur en þó innan við sex, eftir höfundinn', hofundur)
+	elif(len(bokasafn[hofundur]) > 1):
+		print('Á bókasafninu eru til tvær bækur eftir höfundinn', hofundur)
+	elif(len(bokasafn[hofundur]) > 0):
+		print('Á bókasafninu er til ein bók eftir höfundinn', hofundur)
+	else:
+		print('Á bókasafninu er ekki til nein bók eftir höfundinn', hofundur)
+		
+		
+# við getum einnig gert þetta:
+
+for hofundur in bokasafn.keys():
+	# nú er hofundur breytan sem hleypur í gegnum ítranlega hlutinn sem .keys() skilar alveg jafngild breytunni hofundur í lykkjunni fyrir ofan
+	# svo vid getum enn gert bokasafn[hofundur]
+	
+	if hofundur < "Miðgildi":
+		print('höfundurinn", hofundur, "er framarlega í stafrófinu")
+	else:
+		print("höfundurinn", hofundur, "er aftarlega í stafrófinu")
+		
+# en ef við viljum einungis skoða gildin, það er listana sem innihalda bækurnar sjálfar og okkur er sama um höfundana
+
+for bokalisti in bokasafn.values():
+	# bokalisti er breyta sem inniheldur lista
+	# svo við getum ítrað í gegnum hann
+	for bok in bokalisti:
+		# ef hún er með langan titil viljum við prenta hana út:
+		if(len(bok) > 20):
+			print(bok)
+			
+# Og ef við viljum skoða bæði í einu án þess að þurfa að sækja gildið á lykilin sjálf með orðabók[lykill]:
+
+for hofundur, bokalisti in bokasafn.items():
+	# ef bókalistinn er ákveðið langur þá langar okkur að prenta út nafnið á höfundinum
+	if(len(bokalisti) > 5):
+		print(hofundur, "er mjög vinsæll höfundur")
+	elif(len(bokalisti) > 2):
+		print(hofundur, "er frekar vinsæll höfundur")
+	elif(len(bokalisti) > 1):
+		print(hofundur, "gæti verið vinsælli")
+	elif(len(bokalisti) == 1):
+		print(hofundur, "er vissulega til staðar")
+	else:
+		print(hofundur, "á ekki tiltall til einnar bókar í þessu bókasafni")
+\end{lstlisting}
+
+Nú gera lykkjurnar á bakvið .items og þessi án aðferðar nokkurn veginn það sama en við tökum eftir að sú seinni er aðeins læsilegri því að breytan bokalisti er nokkuð lýsandi fyrir það hvað hún inniheldur á meðan bokasafn[hofundur] gæti verið strengur eða nd eða eitthvað allt annað (eins og enn önnur orðabók).
