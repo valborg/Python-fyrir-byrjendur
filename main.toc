@@ -99,11 +99,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {8.2}Ítrað í gegnum orðabækur}{60}{section.8.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {9}Sett}{63}{chapter.9}%
+\contentsline {chapter}{\numberline {9}Mengi}{63}{chapter.9}%
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {9.1}Tvítekning}{63}{section.9.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {9.2}Aðgerðir}{63}{section.9.2}%
+\contentsline {section}{\numberline {9.2}Aðgerðir}{64}{section.9.2}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {10}Föll}{65}{chapter.10}%
 \defcounter {refsection}{0}\relax 
