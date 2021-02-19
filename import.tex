@@ -1,12 +1,51 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Kóðasöfn}\index{Kóðasöfn}\label{k:import}
-Lorem ipsum
+Kóðasafn (e. library) er endurnýtanlegur kóði, sem sem útfærir ákveðna virkni og hefur ákveðið samhengi.
+Tilgangur þeirra er að spara forriturum vinnu við að útfæra ýmsa algenga virkni og reiða sig í staðinn á kóða sem er nú þegar til.
+Hjálpar okkur við að vera ekki að finna upp hjólið í sífellu.
+Ómögulegt er að ætla að forrita að einhverju viti án þess að nota kóðasöfn.
 
-\section{Tilgangur kóðasafna}\index{Tilgangur kóðasafna}\label{uk:kóðasöfn-kynnt}
-Lorem ipsum
-\begin{lstlisting}[caption=??, label=lst:kóðasöfn-kynnt]
-# lorem
+Við notum kóðasöfn með \textbf{import} skipuninni. 
+Þegar import hefur verið sett inn einhvers staðar í skjal þá er óþarfi að setja það inn aftur, venjan er að öll import eru gerð efst í skjali burt séð frá því hvar í skjalinu þau eru notuð.
+Það gerir kóðann læsilegri og undirbýr okkur við lestur á kóða hvað er að fara að gerast.
+Sem dæmi ef efst í skjali stendur að kóðasöfnin math og random séu notuð þá vitum við strax að í þessum kóða sé verið að vinna með einhverja handahófskennd á stærðfræðilegan máta, en ef efst stæði að kóðasöfnin datetime og time væru notuð þá erum við líklega að skoða kóða sem er að vinna með tíma og dagsetningar, það ætti þá ekki að koma okkur á óvart að sjá dagsetningarvinnslu.
+
+\section{Notkun kóðasafna}\index{Tilgangur kóðasafna}\label{uk:kóðasöfn-kynnt}
+Eins og kom fram í kynningu þá viljum við geta einbeitt okkur að því að leysa okkar vandamál í stað þess að finna upp hjólið og því viljum við kynna okkur þau kóðasöfn sem eru í boði sem útfæra virkni sem við viljum beita.
+
+Tilgangur þeirra er að létta okkur lífið og gera virkni aðgengilega.
+Í næsta undirkafla verða tekin fyrir nokkur gagnleg kóðasöfn en við getum varla talað um tilgang og gagnsemi kóðasafna án þess að taka eitthvert þeirra fyrir.
+Í inngangi voru kóðasöfnin time og random nefnd.
+Skoðum þau aðeins núna, sjá kóðabút \ref{lst:kóðasöfn-kynnt} þar sem kóðasöfnin time og random eru tekin fyrir.
+Þau bjóða bæði upp á aragrúa aðferða og eiginda sem er út fyrir efni þessarar bókar að ræða í þaula en þó þess virði að taka fyrir ákveðna virkni sem búist er við að nota í æfingum í lok kaflans.
+\paragraph
+Um kóðasafnið time:
+
+\begin{itemize}
+	\item time.time() skilar okkur hversu margar sekúndur eru síðan tímatal í tölvum hófst 1.jan 1970
+	\item time.sleep() tekur við tölu og lætur vélina bíða það lengi áður en hún framkvæmdir aðgerðina í næstu línu fyrir neðan
+	\item time.localtime() skilar okkur nd sem inniheldur í minnkandi röð hver tíminn er, frá ári niður í sekúndur, ásamt deginum í vikunni og árinu og síðasta er gildi sem tekur mið af \textbf{is}\textbf{d}aylight\textbf{s}avings\textbf{t}ime
+\end{itemize}
+
+\paragraph
+Um kóðasafnið random:Þetta kóðasafn gerir forriturum auðveldara fyrir með því að gera handahófskennd (e. randomness) aðgengilega, það að geta gert hluti af handahófi er mjög mikilvægt í tölvunarfræði og forritun.
+
+\begin{itemize}
+	\item random.randint()
+	\item random.random()
+	\item random.choice()
+	\item random.choices()
+	\item random.randrange()
+	\item random.shuffle()
+\end{itemize}
+
+\begin{lstlisting}[caption=Notkun Kóðasafna, label=lst:kóðasöfn-kynnt]
+# til þess að nota kóðasafn þarf að beita import skipununni
+
+import time
+
+# nú er kóðasafnið time aðgengilegt með breytuheitinu time
 \end{lstlisting}
 
 \section{Nokkur gagnleg kóðasöfn}\index{Nokkur gagnleg kóðasöfn}\label{uk:kóðasöfn-gagnleg}
