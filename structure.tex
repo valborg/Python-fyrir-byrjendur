@@ -71,9 +71,9 @@
 %	BIBLIOGRAPHY AND INDEX
 %----------------------------------------------------------------------------------------
 
-\usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
-\addbibresource{bibliography.bib} % BibTeX bibliography file
-\defbibheading{bibempty}{}
+%\usepackage[style=numeric,citestyle=numeric,sorting=nyt,sortcites=true,autopunct=true,babel=hyphen,hyperref=true,abbreviate=false,backref=true,backend=biber]{biblatex}
+%\addbibresource{bibliography.bib} % BibTeX bibliography file
+%\defbibheading{bibempty}{}
 
 \usepackage{calc} % For simpler calculation - used for spacing the index letter headings correctly
 \usepackage{makeidx} % Required to make an index
@@ -500,7 +500,7 @@ innerbottommargin=5pt]{cBox}
 %----------------------------------------------------------------------------------------
 %	LINKS
 %----------------------------------------------------------------------------------------
-
+\usepackage{float}
 \usepackage{hyperref}
 \hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,urlcolor=ocre,bookmarks=true,bookmarksopen=false}
 
@@ -521,11 +521,11 @@ addtohook={%
 %--------------------
 % Viðbætur frá mér
 %--------------------
-\usepackage{float}
+
 
 \usepackage{todonotes}
 
-\usepackage[icelandic]{babel}
+%\usepackage[icelandic]{babel}
 
 \usepackage{listings}
 
