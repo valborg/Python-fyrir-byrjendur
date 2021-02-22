@@ -268,3 +268,49 @@ Hér sést að það er gagnlegt og fljótlesið þegar það á að uppfæra gi
 Í kóðabútnum að ofan sést að athugasemdir eru skrifaðar inni í línum líka, það er stundum gagnlegt að skrifa stuttar athugasemdir inni í kóða með þessum hætti en betra er þó að skjala hann skilmerkilega efst við viðeigandi kóðabút.
 Allar athugasemdir eru hunsaðar af vélinni og því hefur allt sem er fyrir aftan \# merkið, hver sem það er, engin áhrif á útkomuna.
 
+\section{Villur}\index{Villur}\label{uk:villur}
+Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
+Þegar við forritum í Python fáum við yfirleitt í hendurnar mjög lýsandi villur sem segja okkur hvað við gerðum vitlaust og hvar.
+Áður en lengra er haldið er vitlegt að kynnast þeim algengu villum sem koma upp, hvað þær þýða og hvernig á að taka á þeim.
+
+\begin{itemize}
+	\item Nafna villa (e. NameError), þar sem við reyndum að nota breytu sem við höfum enn ekki skilgreint.
+	Þessi villa kemur upp þegar við skrifum nafnið á breytunni okkar vitlaust þegar við ætlum að beita henni eða við gleymdum að skilgreina hana áður en við beittum henni.
+	Til dæmis myndum við fá nafnavillu við að skilgreina breytuna Valborg en nota svo breytuna valborg, þar sem hástafir og lágstafir skipta máli í Python og eru þessar tvær breytur algerlega óskyldar í minninu.
+	Einnig getur þessi villa komið upp þegar við ætlum að nota strengi en gleymum að skilgreina þá sem strengi með gæsalöppum og látum vélina halda að við séum að vinna með breytur.
+	Sjáum í kafla \ref{k:strengir} hvernig á að skilgreina strengi.
+	
+	Þetta lögum við með því að sjá hvaða nafn við ætluðum að nota og pössum okkur að það nafn hefur fengið einhverja skilgreiningu áður en að við reynum að nota það (það er ofar í kóðanum).
+	
+	\item Týpu villa (e. TypeError), þar sem eitthvað var gert við gögn sem týpan af gögnunum leyfir ekki.
+	Til dæmis að beita reiknivirkja á breytu sem styður ekki notkun hans.
+	\item Málskipunar villar (e. SyntaxError), þar sem eitthvað var vitlaust skrifað, vitlaust tákn á vitlausum stað.
+	Til dæmis var komma notuð í stað punkts eða breytuheiti byrjaði á tákni eða tölu.
+	
+	Það sem við gerum í því að fá þessa villu er að lesa okkur til um hvað það er sem má gera við týpuna okkar og athuga hvernig við fáum fram þá virkni sem við vildum með því að leysa vandann á annan máta.
+	Hér erum við í rauninni að misskilja hvað má og hvað má ekki og við þurfum að átta okkur betur á því hvað er í boði.
+	
+	\item Inndráttar villa (e. IndendationError), þar sem kóðinn er ekki rétt inndreginn.
+	Eins og kom fram í inngangi þá þarf Python kóði að vera vel uppsettur til þess að hann keyri.
+	Við sjáum fyrst í kafla \ref{k:segðir} hvernig við beitum inndrætti svo núna ef við fáum þessa villu þá er það vegna þess að við erum með óþarfa bil fyrir framan kóðann okkar. 
+	
+	Það sem við gerum er að skilja hvað á að vera í hvaða inndrætti og laga kóðann þannig að hann sé vel uppsettur.
+	
+	\item Vísis villa (e. IndexError), þar sem við reyndum að ná í sætisvísi sem er ekki til í gögnunum okkar.
+	Í kafla \ref{k:strengir} sjáum við týpu sem hefur sætisvísa.
+	
+	Það sem við gerum í þessari villu er að átta okkur á því hversu margir sætisvísar eru til staðar og hvaða vísa við vildum fá, laga svo kóðann í samræmi við það sem við ætluðum að sækja.
+	
+	\item Gildis villa (e. ValueError), þar sem við reyndum að ná í eða nota gildi úr gögnum sem er ekki til.
+	Gögnin eru til en gildið er ekki til staðar í þeim.
+	
+	Athugum hér að við reyndum að sækja eitthvað, næstum því eins og upp úr poka, og í stað þess að segja áttu þetta til? Þá sögðum við við vélina ,,þú átt þetta til, láttu mig hafa það!''. Svo það sem við getum gert til að laga það er að segja ,,áttu þetta til?'' eða ,,reyndu að láta mig hafa það ef þú átt það''. 
+	Þessi lausn er ansi óljós að svo stödu þar sem við höfum ekki farið yfir hvernig á að ná í gildi upp úr gögnunum okkar en vonandi verður þetta ljósara þegar þar að kemur.
+	
+	\item Eiginda villa (e. AttributeError), þar sem við reynum að ná í eða beita eigindum sem gögnin okkar búa ekki yfir.
+	Við getum séð hvaða eigindum gögnin okkar búa yfir með því að lesa skjölun um þau eða kíkja snöggt undir húddið með því að gera punkt fyrir aftan gögnin og ýta á tab takkann \todo{vísa hérna aftur í tab takkann} og þá sjáum við þau eigindi sem týpan býr yfir.
+	Ef við skoðum þau eigindi sem eru til fyrir heiltölur og fleytitölur sjáum við að þau eru ekki alveg eins og ef við reynum að nota þau sem eru til fyrir annað en ekki hitt á víxl þá fáum við eigindavillu.
+	
+	Það sem við gerum í þessu er svipað týpu villunni, það er að lesa okkur til um hvaða eigindi gögnin okkar búa yfir og hvað við getum náð í og notað.
+	Eigindi eru mismunandi eftir týpum og er mikilvægt að átta sig á því hvaða eigindi eru í boði hverju sinni svo að við veljum rétta týpu fyrir gögnin okkar.
+\end{itemize}
