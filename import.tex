@@ -32,12 +32,10 @@ Um kóðasafnið time:
 Um kóðasafnið random:Þetta kóðasafn gerir forriturum auðveldara fyrir með því að gera handahófskennd (e. randomness) aðgengilega, það að geta gert hluti af handahófi er mjög mikilvægt í tölvunarfræði og forritun.
 
 \begin{itemize}
-	\item random.randint()
-	\item random.random()
-	\item random.choice()
-	\item random.choices()
-	\item random.randrange()
-	\item random.shuffle()
+	\item random.randint() nær í heiltölu á lokuðu bili, þar sem báðir endapunktar eru teknir með.
+	\item random.random() nær í fleytitölu á bilinu 0 - 1
+	\item random.choice() nær í stak af handahófi upp úr ítranlegum hlut
+	\item random.shuffle() stokkar upp í raðanlegum hlut.
 \end{itemize}
 
 \begin{lstlisting}[caption=Notkun Kóðasafna, label=lst:kóðasöfn-kynnt]
@@ -46,7 +44,70 @@ Um kóðasafnið random:Þetta kóðasafn gerir forriturum auðveldara fyrir me�
 import time
 
 # nú er kóðasafnið time aðgengilegt með breytuheitinu time
+
+sekundur_adan = time.time()
+time.sleep(3)
+sekundur_3_sek_eftir_adan = time.time()
+
+thrir = sekundur_3_sek_eftir_adan - sekundur_adan
+# thrir inniheldur núna fleytitölu sem er mjög nálægt því að vera 3
+
+import random
+
+listi = [1,2,3,4,5,6,7,8,9]
+einhver_tala = random.choice(listi)
+# einhver_tala inniheldur núna eina af tölunum úr listanum án þess að listanum hafi verið breytt á nokkurn hátt.
+
+# ef við viljum alltaf fjarlægja stak inni í lykkju en við viljum ekki bara fá listann í öfugri röð:
+random.shuffle(listi)
+for i in range(len(listi)):
+	print(listi.pop())
+	
+# úttakið verður tölurnar úr listanum eins og shuffle stokkaði honum, hliðarverkun er að listinn er núna tómur
+
+# góð leið til að fá eitthvað handahófskennt hlutfall til að vinna með:
+fjoldi_folks = 100
+fjoldi_folks_med_raudan_trefil = 100*random.random()
+
+
+\end{lstlisting}
+
+Eins og sést í kóðabút \ref{lst:kóðasöfn-kynnt} þarf að nota nafnið á kóðasafninu til að ná í aðferðir og virkni.
+Sum kóðasöfn heita löngum nöfnum eða að fólk er vill endilega stytta nöfnin á þeim þá má nota lykilorðið \textbf{as} til þess að varpa nafninu á kóðasafninu í annað breytuheiti, sjá notkun í kóðabút \ref{lst:kóðasöfn-as}.
+Mikilvægt er þá að hafa í huga að nefna kóðasöfnin eittvað sem verður ekki óvart yfirskrifað í kóðanum, og gæti valdið ruglingin.
+Eins og að skipta út import random fyrir import random as listinn\_minn.
+Það væri hrikalegt, illlæsilegt og myndi fyrirsjánlega valda vandamálumm.
+En nú vitum við hvernig á að nota kóðasöfn.
+
+\begin{lstlisting}[caption=Lykilorði as, label=lst:kóðasöfn-as]
+import random as rnd
+import time as t
+
+# nú eru rnd og t hluti af víðværu gildissvæði og vísa þær í kóðasöfnin random og time.
+t.time() # skilar sekúndum síðan 1.jan 1970
+rnd.random() # skilar fleytitölu á bilinu 0-1
+	
 \end{lstlisting}
 
 \section{Nokkur gagnleg kóðasöfn}\index{Nokkur gagnleg kóðasöfn}\label{uk:kóðasöfn-gagnleg}
-lorem ipsum
+Tilgangur þessarar bókar er ekki að tiltaka hvert einasta kóðasafn sem er til, heldur að kynna til sögunnar hvernig notkun þeirra virkar og einhver þau algengustu eða skemmtilegustu kóðasöfn sem eru notuð í dag.
+Þetta er gert til þess að halda bókinni frá því að verða eins og símaskrá (ef einhver lesandi man eftir að hafa haldið á símaskrá) og passa að hún haldi í við þróun í fræðigreininni.
+
+Að því sögðu er hér stutt kynning á nokkrum vinsælum kóðasöfnum.
+
+\begin{itemize}
+	\item math, þetta kóðasafn gerir aðgengilegar allskonar stærðfræðilegar aðgerðir.
+	Eins og hornaföll, logra, veldisföll og tölulega vinnslu.
+	Ásamt því að gefa okkur aðgengi að mikilli nákvæmni á hinum ýmsu rauntölustærðum eins og pí.
+	\item numpy, er kóðasafn sem gerir stærðfræðilega vinnslu aðgengilega, t.d. á fylkjum.
+	Numpy er sérhæft fyrir flóknari vinnslu en math.
+	\item scipy, er það sem hægt er að nota til þess að vinna með vélanám (e. machine learning).
+	Scipy hefur oft verið kallað óþarflega flókið í notkun, en hugmyndirnar sem þar er verið að vinna með eru í grunninn mun flóknari en í numpy og math pökkunum svo það ætti ekki að koma á óvart.
+	\item pygame, er kóðasafn sem vinnur með grafískt viðmót og inntak frá notanda oft með mjög skapandi útkomu.
+	Margir litlir leikir hafa orðið til með þessu kóðasafni og er til mýgrútur af dæmum og leikjum á netinu til að vinna út frá.
+	\item datetime, sem vinnur með dagsetingar því ef við ætlum einhvern tímann að skrifa hugbúnað sem vinnur með dagsetningar þá viljum við alls ekki finna upp hjólið.
+	Þar er tekið á daylightsavings, hlaupárum og öðru slíku sem við viljum ekki þurfa að hafa áhyggjur af
+	\item matplotlib, er safn sem var búið til í kringum tvívíða sýn á gögn.
+	Til að sýna gröf og á fjölbreytilegan máta gera gögn sýnileg.
+	Þetta er annað safn sem hefur slæmt orð á sér fyrir að vera óþarflega óaðgengilegt.
+\end{itemize}
