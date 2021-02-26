@@ -1,12 +1,85 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Skjalavinnsla}\index{Skjalavinnsla}\label{k:skjalavinnsla}
-Lorem ipsum
+Að vinna með skjöl án þess að hafa þau opin í ritli, eins og Word, Write, Notepad eða álíka, er mjög ákjósanlegt ef t.d. þarf að gera litla breytingu í stóru skjali eða einhverja breytingu í mjög mörgum skjölum (skilgreiningin á mjög mörgum er sveiginaleg, sumum finnst það vera að gera eitthvað oftar en þrisvar).
 
-\section{Unnið með skjöl}\index{Unnið með skjöl}\label{uk:skjalavinnsla-kynnt}
-lorem ipsum
+Í JupyterNotebooks er hægt að búa til skjal með töfratáknum (innbyggt þar en er ekki sérstakt Python fyrirbæri) sem eru tvö prósentu merki, \%\%, sjá kóðabút \ref{lst:skjol-kynning} um hvernig skjöl eru búin til í hefðbundnum Python ritli og hvernig er hægt að gera þau í JupyterNotebooks.
 
-\begin{lstlisting}[caption=??, label=lst:skjalavinnsla-kynnt]
-# lorem
+Hægt er að búa til skjöl, opna þau, lesa þau, skrifa inn í þau, yfirskrifa þau, loka þeim og henda þeim.
+Þetta er mikilvægt vegna þess að við viljum geta sagt tölvunni að nálgast skjöl og gera eitthvað við þau, við viljum ekki þurfa að handstýra tölvunni að óþörfu.
+Til þess er hún.
+
+\begin{lstlisting}[caption=Hér sjáum við hvernig má búa til skjöl, label=lst:skjalavinnsla-kynning]
+	
+skjal1 = open('skjal1.txt', mode = 'w+') # mode stendur fyrir hvernig á að opna skjalið í boði eru:
+
+#'r' read only - aðeins hægt að lesa
+
+#'w' write only - aðeins hægt að skrifa
+
+#'a' append only - aðeins hægt að bæta við aftast
+
+#'r+' read and write - les og skrifar
+
+#'w+' read and write and owerwrite or create new files - les of yfirskrifar eða býr til nýtt skjal
+
+skjal1.write('hér kemur eitthvað sem við viljum setja inn í skjalið okkar')
+
+# í JupyterNotebooks er hægt að gera þetta:
+%%writefile skjal2
+hér kemur allur textinn sem á að fara inn í þetta skjal
 \end{lstlisting}
 
+\section{Unnið með skjöl}\index{Unnið með skjöl}\label{uk:skjalavinnsla-kynnt}
+Til þess að geta unnið með skjöl þurfum við að geta vísað í þau, til þess notum við breytur.
+Breytan okkar stendur þá ekki fyrir einhverja grunntýpu í Python heldur er það heilt skjal á skráarsafninu okkar.
+
+Í kóðabút \ref{lst:skjalavinnsla-open} koma fram nokkrar aðferðir sem Python býður upp á fyrir skjöl sem búið er að opna.
+Við tökum eftir því að þar er eitthvað til sem heitir \textit{seek}, ástæðan fyrir því að við þurfum það er að tölvan les frá vinstri til hægri eins og henni er sagt en ef hún á að lesa eitthvað aftur frá byrjun eða öðrum stað þá þarf að segja henni að færa leshausinn sinn þangað.
+Nú er hætta á því að enginn lesandi hafi nokkurn tímann séð segulband en hugmyndin þar er sú sama, tölvan sem les segulbandið getur bara lesið bandið sem er undir leshausnum og sér ekkert annað.
+Ef tölvan á að lesa einhvern annan hluta af segulbandinu þarf að spóla fram eða til baka.
+Sama er upp á teningnum hérna, við þurfum að stilla leshausinn fyrir framan það gildi sem við viljum lesa hverju sinni.
+Ef vélin er búin að lesa skjalið er leshausinn kominn út í enda og við getum ekki lesið meira nema færa hann.
+
+\begin{lstlisting}[caption=Hér sjáum við hvernig má opna skjal sem við eigum til á sama stað og þessi kóði er geymdur, label=lst:skjalavinnsla-open]
+	
+breytuheiti = open('skjal1.txt', encoding = 'utf-8', mode = 'r')	
+	
+breytuheiti.read() # les allann textann sem streng
+
+breytuheiti.readlines() # les hverja línu og setur hana sem stak í lista
+
+breytuheiti.readline() # les eina línu, þar sem við erum stödd hverju sinni
+
+breytuheiti.seek(0) # setur leshausinn aftur á upphaf skjalsins
+
+breytuheiti.close() # Nú er skjalið lokað og það má henda því eða opna það annarsstaðar.
+\end{lstlisting}
+
+Í kóðabút \ref{lst:skjalavinnsla-open} eru teknar fyrir þær helstu aðferðir sem eru í boði fyrir lestur á skjali en í lokin er tekin fyrir aðferð sem heitir .close() sem gerir það að verkum að við getum með hent skjalinu annars staðar því að það er hvergi opið á vélinni. 
+Það gæti verið vesen að þurfa að muna eftir því að loka skjalinu og því viljum við skoða annan möguleika með nýju lykilorði \textbf{with}, við höfum séð \textbf{as} sem býr til alias eða annað heiti.
+Sjáum kóðabút \ref{lst:skjalavinnsla-open-as} 
+ 
+\begin{lstlisting}[caption=Hér sjáum við nýja leið til að opna skjal og loka því eftir notkun sjálfkrafa, label=lst:skjalavinnsla-open-as]
+with open('skjal1.txt', encoding='utf-8') as test:
+	# hér kemur inndreginn kóði sem keyrist á meðan skjalið er opið 
+	# þegar þessi kóði er búinn er skjalinu lokað.
+	# breytan sem vísar í skjalið er test
+	efni = test.read()
+	test.seek(0)
+	efni_i_listum = test.readlines()
+
+# breyturnar eru enn aðgengilegar víðværu gildissviði svo við þurfum ekki að hafa áhyggjur af því að skjalinu hafi verið lokað
+print(efni_i_listum)
+
+with open('skjal1.txt', encoding='utf-8', mode= 'w+') as blergh:
+	# hér kemur inndreginn kóði sem keyrist á meðan skjalið er opið 
+	# þegar þessi kóði er búinn er skjalinu lokað.
+	# nú heitir breytan sem vísar í skjalið blergh
+	efni = blergh.write('Ég yfirskrifaði allt og á nú tómt skjal sem heitir það sama')
+	blergh.seek(0)
+	efni_i_listum = blergh.readlines()
+
+# enn er allt í skjalinu aðgengilegt
+print(efni_i_listum)
+\end{lstlisting}
