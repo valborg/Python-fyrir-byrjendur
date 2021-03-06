@@ -378,4 +378,27 @@ print(p3.BLEK)
 \end{lstlisting}
 
 Í kóðabút \ref{lst:klasar-erfðir} er einungis verið að yfirskrifa aðferðina prentun því að það er aðferðin sem við vildum að væri með einhverjum sértækum hætti.
-Við vildum ekki bara prenta út einu sinni heldur fá notandann til að segja okkur hversu oft og hvað á að prenta, við vildum kannski geta gert það handahófskennt oft.
+Við vildum ekki bara prenta út einu sinni heldur fá notandann til að segja okkur hversu oft og hvað á að prenta, eða geta gert það handahófskennt oft.
+
+\subsubsection{Fjölmótun}
+Tengt erfðum er þess virði að nefna fjölmótun (e. polymorphism) í Python.
+Því það er fráburgðið t.d. C++ og Java.
+
+Fjölmótun í Python virkar þannig að klasar þurfa ekki að erfa frá öðrum klösum til að haga sér eins og þeir.
+Þetta er vegna þess að þegar vélin athugar hvort að einhver hlutur eigi einhver tiltekin eigindi skoðar hún klasann og þá klasa sem hann erfir frá (í röð) og skilar þeirri útgáfu af eigindinu sem finnst.
+
+Til dæmis HandahofsPrentari og eigindið stada\_bleks(), þá er fyrst athugað innan klasans HandahofsPrentari og svo Prentari hvernig eigi að nota stada\_bleks.
+Hins vegar ef við værum að vinna með eitthvað sem við vildum að hegðaði sér eins og prentari án þess að spá í öllu sem prentaraklasinn er hugsaður fyrir gætum við búið til hlut sem útfærir bara aðferðina stada\_bleks og erfir ekki frá neinum.
+Hlutinn myndum við kannski kalla Blekathugun, og það sem aðferðin stada\_bleks gerir í þeim klasa er að skrifa stöðu bleksins, á einhverju tæki sem vill notfæra sér þessa aðferð, í tölvupóst.
+
+Ef við tökum praktískara dæmi þá er hægt að sjá fyrir sér klasa sem sér um að vinna með gögn og til þess að geta sent gögnin frá þessum klasa á ákveðinn máta má láta hann fá hlut í hendurnar sem útfærir \textit{write} aðferð.
+Klasinn sem útfærir write aðferðina þarf ekkert að gera annað en að útfæra þessa einu aðferð á einhvern ákveðinn máta og þá er hægt að fullvissa sig um að gögnin hafi verið skrifuð á þann máta.
+
+Svo ef við viljum eiga nokkra mismunandi klasa sem allir kunna mismunandi write aðferðir þá þurfum við bara að ganga úr skugga um að gangavinnsluklasinn okkar fékk write fallið sem við vildum nota úr viðeigandi klasa.
+
+Þetta er kallað \textbf{duck typing} og bjóða ekki öll forritunarmál upp á það.
+Hugtakið kemur úr frasanum ,,if it looks lika a duck, quacks like a duck and walks like a duck, it's a duck''.
+Hugmyndin er að klasinn sem útfærir einungis aðferðina write fyrir okkur er alveg jafn mikil önd eins og kóðasafnið \textit{os} sem sér um að vinna með skrársafnið og skrifa í skjöl.
+
+Ef við höldum áfram með dæmið um klasana sem útfæra write, þá gæti einn þeirra skrifað í skjal á tölvu úti í þýskalandi, einn sendir skjalið í tölvupósti og einn lætur talgervil lesa það upp í strætó leið 14.
+Upphaflegi gagnaklasinn veit ekkert um það heldur treystir bara á að fá einhvern hlut í hendurnar sem kann þessa aðferð sama hvernig hún er útfærð.
