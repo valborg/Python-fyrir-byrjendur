@@ -55,22 +55,327 @@ Eins og kom fram í inngangi þessa kafla þá getum við litið svo á að þet
 Eins og sést að hefur engin áhrif á breytuna annad\_eintak því að það fær bara grunnstillinguna á klasanum til sín og hefur ekkert að gera með hitt eintakið okkar.
 
 \section{Tilviksbreytur}\index{Tilveiksbreytur}\label{uk:klasar-tilviksbreytur}
-class lorem ipsum
+Nú höfum við seð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir} er sérstaklega ber og gagnlítill.
+En hvers eru klasar megnugir?
 
-\todo{panta mat af matseðli samlíking}
+Athugum eftirfarandi samlíkingu áður en lengra er haldið.
+Þegar við förum á veitingastað þá er okkur boðinn ákveðinn matseðill, við fáum að vita að það séu þrír réttir á matseðlinum (þrír klasar) og í þeim réttum eru ákveðin hráefni (tilviksbreytur) og þegar við pöntum okkur mat fáum við í hendurnar eitt tiltekið tilvik af skilgreiningunni á matseðlinum (tilvik af klasa).
+Nú eru hráefnin kannski ekki okkur að skapi og við viljum fá að hafa áhrif á hvaða hráefni fara í réttinn okkar (okkar tiltekna tilvik) svo við gefum upp hvað við viljum fá (inntak) sem skilar sér í okkar tiltekna rétti (úttak).
+
+Í þessari samlíkingu er matreiðslufólkið smiðurinn á bakvið klasann, í kóðabút \ref{lst:klasar-notkun} er aðferðin \_\_init\_\_ sá smiður.
+Aðferðin smíðar fyrir okkur tilvik af klasanum með því inntaki sem hún fær.
 
 \begin{lstlisting}[caption=Klasar skilgreindir með töfraaðferðinni \_\_init\_\_, label=lst:klasar-notkun]
-	class Bill():
+class Samloka():
 	# sjáum að hér er klasinn skilgreindur með svigum
 	
 	def __init__(self):
-	pass
+		# aðferðin tekur ekki við neinu og gerir ekkert
+		pass
 	
-	subaru = Bill()
+samlokan_min = Rettur()
+# nú eigum við tilvik af klasanum Samloka í breytunni samlokan_min en við getum lítið gert við það, sjáum hvernig væri ef við hefðum einhver hráefni
+
+class Samloka():
+	def __init__(self, sosa, alegg):
+		self.sosa = sosa
+		self.alegg = alegg
+		
+samlokan_min = Samloka('bbq', ['skinka', 'ostur', 'paprika'])
+# nú á ég tiltekna samloku sem hefur bbq sósu og þrjár áleggstegundir
+
+# Athugum nú að matreiðslufólkið gæti boðið upp á einhverja ákveðna samloku
+class Samloka_med_skinku():
+	def __init__(self, sosa = "", alegg = ['skinka']):
+		self.sosa = sosa
+		self.alegg = alegg
+		
+skinku_samloka = Samloka_med_skinku('bbq')
+# Nú eigum við tilvik af skinkusamloku sem er með bbq sósu og einu áleggi, skinku.
 \end{lstlisting}
 
-\section{Aðferðir}\index{Aðferðir}\label{uk:klasar-aðferðir}
-class lorem ipsum
+Samlíkingin okkar með samlokur á veitingastað er ágæt en nú skulum við skoða hvað er eiginlega í gangi í kóðabút \ref{lst:klasar-notkun}.
+Fyrir það fyrsta er klasinn núna skilgreindur sem \textit{Samloka()} með svigum, það var ekki þannig í kóðabút \ref{lst:klasar-skilgreindir}.
+Ástæðan er svipuð og í kafla \ref{k:segðir} þar sem mátti sleppa svigum utan um segðir fyrir skilyrðissetningar nema það væri þörf á þeim til útreiknings.
+Klasar eiga möguleika á að \textbf{erfa} (e. inherit) frá öðrum klösum, við munum tala um það í undirkafla \ref{uk:klasar-erfðir}, og þeir erfa í grunninn allir frá klasanum \textit{Object}.
+Það sem tómur svigi þýðir (eða að sleppa sviganum alfarið) er að klasi erfi ekki frá öðrum klasa.
+Því er það upp á einstaklinginn komið að venja sig á að gera alltaf annað hvort, höfundur hefur vanið sig á tóma sviga en er það enginn heilagur sannleikur.
 
-\section{Innbyggðar aðferðir}\index{Innbyggðar aðferðir}\label{uk:klasar-innbyggðar-aðferðir}
-class lorem ipsum
+Næsta sem við þurfum að athuga er töfraaðferðin init og orðið \textit{self}.
+Orðið self eitt og sér er ekki töfraorð, það má skipta því út fyrir eitthvað annnað, hins vegar hefur komist ákveðin venja á að nota það orð og gerir það kóða læsilegri að halda sig við það.
+En hvað gerir orðið self?
+Þetta orð er eins konar vísir fyrir klasann til að vita að það sér verið að nota skilgreiningar innan klasans sjálfs sem tilvikið hefur aðgang að.
+Í klasanum Samloka eru viðföngin sosa (sem við búumst við að sé strengur án þess að athuga það neitt sérstaklega, sjá kafla \ref{k:villur} um hvernig megi taka á því) og alegg (sem við búumst við að sé listi af strengjum).
+Ef notandinn gefur okkur ekkert inntak við gerð samlokunnar þá er ekki hægt að búa til tilvik af samlokunni, því klasinn býst við tveimur stöðubundnum viðföngum inn í aðferðina init og getur ekkert gert án þeirra nema skila villu (eins og klasinn er skilgreindur þarna).
+Þegar við skilgreindum samlokan\_min þá sögðum við við klasasmiðinn (init) að við ætluðum að eiga aðgang að inntakinu okkar ('bbq' og ['skinka', 'ostur', 'paprika']).
+Þannig að sosa inniheldur núna strenginn bbq fyrir þetta tiltekna tilvik af klasanum og þennan tiltekna lista af áleggstegundum.
+
+Það þriðja og kannski það erfiðasta að skilja er að init aðferðin í klasanum Samloka\_med\_skinku tekur við nefndum viðföngum, eins og við sáum í kafla \ref{uk:föll-sjálfgefin}, sem hafa einhver tiltekin gildi nú þegar skilgreind.
+Sem þýðir að við getum búið til einhverja óbreytta, staðlaða, sjálfgefna skinku samloku.
+Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, hins vegar ef okkur langar til þess að fá samloku með einhverri sósu og einhverju öðru áleggi þurfum við að gefa það upp og við getum gert það alveg eins og þegar við notum föll með sjálfgefnum/nefndum viðföngum.
+
+\section{Aðferðir}\index{Aðferðir}\label{uk:klasar-aðferðir}
+Við þekkjum aðferðir, við höfum séð þær notaðar á týpurnar sem við þekkjum, eins og .capitalize() á strengi, .sort() á lista og .get("x", "y") á orðabækur.
+\todo{vera viss um að kynna .get í dict kafla}
+Aðferðir eru í raun föll sem eru skilgrein inni í klösum og verka á hlutinn sem klasinn skilgreinir.
+
+Nú ætlum við að skilgreina okkar eigin aðferðir á hlutina okkar.
+Við ætlum að skoða aðferðir með tilliti til rafbíla.
+Það sem við viljum geta gert þegar við búum til tilvik af rafbíl er að segja hvaða tegund hann hefur, hvaða árgerð hann er af, hversu mikla drægni hann hefur á 100km, hversu margar kílówatt stundir rafhlaðan er og hversu marga kílómetra er búið að aka bílnum.
+
+\begin{lstlisting}[caption=Klasa aðferðir á rafbílaklasa, label=lst:klasar-aðferðir1]
+
+class Rafbill():
+	def __init__(self, tegund, model, draegni = 16.7, kws = 40, akstur = 0):
+		self.tegund = tegund     
+		self.argerd = argerd        
+		self.eydsla = draegni/100     # hversu mörgum kw stundum bíllinn eyðir á 1 km
+		self.kws = kws               # hversu mikil hleðsla kemst fyrir
+		self.akstur = akstur         # km sem hafa verið eknir
+
+	def breyta_tegund(self, ny_tegund):
+		# kom í ljós að bíllinn var vitlaust skráður og það þarf að endurskoða gildið tegund
+		self.tegund = ny_tegund
+
+	def breyta_model(self, nytt_model):
+		# kom í ljós að módelið var vitlaust skráð, og við lögum það
+		self.model = nytt_model
+
+	def keyra_km(self, km):
+		# við aukum við keyrða kílómetra og við minnkum hleðsluna sem um nemur eyðslu á kílómetra bílsins
+		self.akstur += km
+		self.kws -= self.eydsla * km  
+
+	def hlada_bilinn(self, kw):
+		# Nú viljum við auka við hleðsluna í rafhlöðunni okkkar
+		self.kws += kw
+		
+billinn_minn = Rafbill('Rafio', 2021) # við stillum bílinn í upphafi sem bara staðlaðan rafbíl frá fyrirtækinu Rafio.
+billinn_minn.keyra_km(500)
+print(billinn_minn.akstur) # skilar úttakinu 500
+billinn_minn.hlada_bilinn(900)
+print(billinn_minn.kws) # skilar úttakinu 856.5
+\end{lstlisting}
+
+Við viljum að það að aka bílnum ákveðna kílómetra hafi áhrif á stöðu rafhlöðunnar.
+Við viljum líka geta hlaðið bílinn.
+En eins og sést í kóðabút \ref{lst:klasar-aðferðir1} þá er hægt að hlaða bílinn endalaust og það er hægt að keyra hann endalaust líka.
+Við settum engin takmörk á það hvað má keyra marga kílómetra, við höldum bara áfram að lækka hleðsluna og við leyfðum okkur svo að hlaða bílinn langt umfram það hversu margar kílówattstundir komast fyrir í rafhlöðunni.
+Einnig er galli á þessum klasa að engin leið er til að halda utan um hvert er hámark hleðslu rafhlöðunnar.
+
+En þetta dugar til að sýna fram á hvernig aðferðir eru skilgreindar, hvernig á að kalla í þær, hvernig þær hafa áhrif á tilveiksbreyturnar okkar og svo hvernig má kalla í tilviksbreyturnar til að sjá áhrifin.
+
+Aðferðir þurfa þó ekki endilega að hafa áhrif á tilvikið okkar heldur geta skilað okkur til baka einhverri niðurstöðu, eins og flestar aðferðir á strengi (því við munum að strengir eru óbreytanlegir).
+
+Engin aðferðanna í þessum klasa skilaði nokkurri niðurstöðu.
+
+Tökum nú nýtt dæmi þar sem við skoðum ímyndað lestarkerfi á Íslandi.
+Í þessu dæmi höldum við utan um tvennt með klösum, annars vegar lestarstöðvar sem hafa nöfn og eru í ákveðinni fjarlægð frá upphafsstöðinni á leiðinni sinni og hins vegar lestar sem eru á ákveðinni leið og eru staddar á ákveðinni stöð.
+Í kóðabút \ref{lst:klasar-aðferðir-lestar} sjáum við hvernig aðferðir geta skilað einhverju án þess að hafa áhrif á tilviksbreytur og við sjáum einnig að smiðurinn init tekur bara við tveimur breytum frá notanda en skilgreinir þrjár tilviksbreytur, þetta er vegna þess að klasinn býður notandanum ekki að hafa áhrif á þessa breytu við smíð klasans.
+Notandinn verður því að fá í hendurnar við grunnstillingu lest sem hefur ekki ferðast neitt.
+
+\begin{lstlisting}[caption=Aðferðir kynntar með lestarkerfi, label=lst:klasar-aðferðir-lestar]
+class Stod():
+	def __init__(self, nafn, fjarlaegd):
+		self.nafn = nafn
+		self.fjarlaegd = fjarlaegd
+		self.farnir_km = 0
+	
+	
+class Lest():
+	def __init__(self, leid, byrjunar_stod):
+		self.leid = leid
+		self.nuverandi_stod = byrjunar_stod
+	
+	def fara_til_numer(self, numer):
+		# Þessi aðferð tekur við sætisnúmeri í leidalistanum self.leid
+		#
+		# Hún á að skila fjarlægðinni sem þarf að fara frá núverandi stöð að stöðinni í því sætisnúmeri
+		return abs(self.leid[numer].fjarlaegd - self.nuverandi_stod.fjarlaegd)
+	
+	def fara_til_stod(self, stod):
+		# Þessi aðferð tekur við hlut af týpunni Stod
+		#
+		# Hún á að skila fjarlægðinni sem þarf að fara frá núverandi stöð til að komast á stöðina í inntakinu
+		return abs(stod.fjarlaegd - self.nuverandi_stod.fjarlaegd)
+	
+	def fara_til_stodvarnafn(self, stodvarnafn):
+		# Þessi aðferð tekur við streng sem er stöðvarnafn
+		#
+		# Hún á að skila fjarlægðinni frá núverandi stöð að fjarlægðinni að stöðinni með nafnið í inntakinu
+		for stod in self.leid:
+			if(stod.nafn == stodvarnafn):
+				return abs(stod.fjarlaegd - self.nuverandi_stod.fjarlaegd)
+	
+    # Það sem við viljum gera núna er að geta uppfært núverandi stöð á lestinni okkar
+	# Og við viljum þá uppfæra hversu marga km hún hefur ferðast
+	def ny_nuverandi_stod(self, stod):
+		# aðferðin tekur við hlut af týpunni Stod
+		#
+		# Það sem aðferðin gerir er að uppfæra tilviksbreytuna nuverandi_stod sem inntaksstodina
+		# og setja í tilviksbreytuna farnir_km hversu langt lestin þurfti að ferðast til að komast þangað
+		#
+		# Aðferðin á að skila km sem voru farnir til að komast þangað
+		
+		km = self.fara_til_stod(stod)
+		self.farnir_km += km
+		self.nuverandi_stod = stod
+		
+		return self.farnir_km
+		
+# Þetta eru lestarstöðvar
+# Stöðvarnar hafa nöfn og fjarlægð frá aðalbrautarstöðinni í Reykjavík
+reykjavik = Stod("Reykjavík", 0)
+borgarnes = Stod("Borgarnes", 76)
+akureyri = Stod("Akureyri", 388)
+egilsstadir = Stod('Egilsstaðir', 636)
+
+# leið 1, hún fer frá Reykjavík til Egilsstaða, með tveimur stoppum á milli
+leid1 = [reykjavik, borgarnes, akureyri, egilsstadir]
+
+# lest1 er ferðast þessa tilteknu leið og hún byrjar ferð sína í Reykjavík
+lest1 = Lest(leid1, reykjavik)
+
+lest1.fara_til_numer(3)
+lest1.fara_til_stod(egilsstadir)
+lest1.fara_til_stodvarnafn('Egilsstaðir')
+# allar þessar aðferðir skila okkur tölunni 636
+
+hofn = Stod('Höfn í Hornafirði', 820)
+lest1.ny_stod_a_leid(hofn)
+# skilar okkur lista af hlutum af týpunni Stod sem er nú nýja leið lestarinnar okkar lest1
+\end{lstlisting}
+
+\section{Töfra aðferðir}\index{Töfra aðferðir}\label{uk:klasar-töfra-aðferðir}
+Nú höfum við séð hvernig á að skilgreina okkar eigin aðferðir á klasa.
+Og við höfum verið að nota eina töfraaðferð til þess að smíða klasana okkar, init.
+En það er til mýgrútur af töfraaðferðum sem við getum nýtt okkur til þess að gera klasana okkar nothæfari.
+Í þessum kafla verða nokkrar slíkar teknar fyrir en alls ekki allar.
+Við munum að töfraaðferðir (e. magic methods, double underscore methods, dunder methods) eru aðferðir sem eru með tveimur undirstrikum fyrir framan sig og aftan og gegna því hlutverki að útfæra innbyggða virkni.
+
+Helst ber að nefna \_\_str\_\_ aðferðina, sem nemendur vilja oftast geta beitt strax og skilja ekki hvers vegna print skilar einhverju furðulegu.
+Hingað til höfum við ekki verið að beita innbyggða fallinu print á klasana okkar í kóðabútum því að hún gerir ekkert skilmerkilegt ennþá.
+Til þess að hún geri það þurfum við að útfæra töfraaðferðina str.
+Það sem sú aðferð þarf að gera er að skila streng.
+Nú er það upp á okkur komið hvað okkur finnst vera nógu merkilegar upplýsingar til þess að setja í strenginn sem á að prenta.
+Hingað til þegar við beitum print fallinu höfum við verið að skoða úttak sem er af einhverri týpu sem við þekkjum, heiltölur eða strengir til dæmis.
+En nú þegar við erum með okkar eigin klasa/hluti viljum við kannski fá einvherjar tilteknar upplýsingar í ákveðinni röð.
+
+Skoðum kóðabút \ref{lst:klasar-str} þar sem við skilgreinum klasa sem heldur utan um rafbílinn okkar aftur, hins vegar ætlum við að sleppa aðferðunum á bílinn og bæta við nokkrum klasaföstum.
+Klasafastar eru skilgreindir efst í klasa og er nafnavenjan með þá að nota eingöngu hástafi.
+Það sem klasafastar gera fyrir okkur er að halda utan um breytur sem við viljum að séu aðgengilegar allsstaðar í klasanum, við viljum ekki endilega að þær séu hluti af inntaki frá notanda við smíð klasans og þeir gera yfirferð og prófun klasans auðveldari.
+Með auðveldari prófunum er átt við að gildi séu ekki harðkóðuð víðsvegar og erfitt að skipta þeim út (eins og ef nota ætti ákveðna námundun á pí) heldur eru þau skilgreind á einum stað og auðvelt að átta sig á notkun þeirra (ef breytuheitin eru skýr).
+
+\begin{lstlisting}[caption=Töfraaðferðin \_\_str\_\_, label=lst:klasar-str]
+class Leikur():
+	HAMARKS_LIF  = 100
+	LAGMARKS_LIF = 0
+	HAMARKS_PENINGUR = 9999
+	LAGMARKS_PENINGUR = -9999
+	
+	def __init__(self, nafn, lif, peningur):
+		self.nafn = nafn
+		if(lif > self.HAMARKS_LIF or lif < self.LAGMARKS_LIF):
+			# líf er utan þess sem er leyfilegt
+			self.lif = 100
+		else:
+			self.lif = lif
+		if(peningur > self.HAMARKS_PENINGUR or peningur < self.LAGMARKS_PENINGUR):
+			# peningar er utan þess sem er leyfilegt
+			self.peningur = 0
+		else:
+			self.peningur = peningur
+	
+	def __str__(self):
+		return "Persónan heitir {} og á {} gullpeninga og hefur {} í líf".format(self.nafn, self.lif, self.peningur)
+
+valborg = Leikur('Valborg', 200, 90)
+print(valborg)
+# skilar úttakinu "Persónan heitir Valborg og á 100 gullpeninga og hefur 90 í líf"
+\end{lstlisting}
+
+Ef þessarar str töfraaðferðar nyti ekki við þá væri úttakið á þessa leið \textit{<\_\_main\_\_.Leikur object at *minnissvæði*}.
+Einnig er nýtt í þessum kóðabút að við vinnum eitthvað með inntakið frá notandanum áður en við stillum tilviksbreyturnar.
+Þetta er ekki gert á nógu tryggan máta og við munum sjá í kafla \ref{k:villur} hvernig má meðhöndla inntak frá notanda þannig að vafalaust sé um réttinntak að ræða.
+En við ætlum enn sem komið er að skoða hlutina á einfaldan og brothættan máta því við erum að kynnast svo mörgu nýju og óþarfi að gera allt kórrétt frá upphafi, mikilvægara er að byggja upp skilning hægt og rólega.
+
+Það sem töfraaðferðirnar gera er að gera okkur kleyft að beita innbyggðum föllum eins og print og len á tilvik af klösunum okkar, og að beita hinum ýmsu virkjum (reikni-, samanburðar- og rökvikjum) milli tilvika eða annara gilda.
+
+
+
+
+\section{Erfðir}\index{erfðir}\label{uk:klasar-erfðir}
+Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segir vélinni að þeir erfi ekki frá neinum klasa nema \textit{object} sem gerði það að verkum að við gátum útfært töfraaðferðir.
+
+Nú ætlum við að skoða í kóðabút \ref{lst:klasar-erfðir} hvernig á að búa til \textbf{yfirklasa} (e. superclass) og \textbf{undirklasa} (e. subclass).
+Við skoðum dæmi þar sem prentari er tekinn fyrir, það sem hann þarf að kunna að gera er að prenta út streng, segja til um blekhlutfallið sitt og minnka blekið um eitt prósentustig.
+Þetta er alfarið æfing og því ekki endilega mjög raunhæft dæmi, en þar sem við erum að reyna að átta okkur á því hvað erfðir eru þá ætlum við að gera ráð fyrir því að við viljum að allir prentararnir okkar byrji með 100\% af bleki og hafi möguleikann á að lækka það.
+Hins vegar er það ekki útrætt hvernig eigi að fara að því að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndlar prentun á annan máta.
+
+Undirliggjandi ástæður fyrir því að við myndum vilja gera þetta er sú að við viljum að einhver grunn virkni sé til staðar og sé aðgengileg, en það er einhver tiltekin virkni sem við viljum að sé öðruvísi.
+Tökum sem dæmi klasa sem vinnur talar við gagnasafn og fær til baka helling af gögnum, vinnur gögnin einhvern veginn fyrir okkur og skilar þeim til okkar sem streng.
+En við viljum kannski hafa þann möguleika að í stað þess að fá streng þá sendir klasinn gögnin sem tölvupóst eða býr til skjal á tölvunni sem geymir þau.
+Þá myndum við nota erfðir fyrir þá tilteknu notkun.
+
+\begin{lstlisting}[caption=Erfðir kynntar með klasanum Prentari, label=lst:klasar-erfðir]
+
+class Prentari():
+	BLEK = 100
+	
+	def prentun(self, strengur):
+		print(strengur)
+	
+	def minnka_blek(self):
+		self.BLEK -= 1
+	
+	def stada_bleks(self):
+		print(self.BLEK)
+
+p1 = Prentari()
+p1.prentun('Valborg')
+p1.minnka_blek()
+print(p1.BLEK)
+
+# úttakið verður
+# Valborg
+# 99
+
+import random
+class HandahofsPrentari(Prentari):
+	def prentun(self, strengur):
+		handahof = random.randint(1,5)
+			for i in range(handahof):
+				print(strengur)
+
+p2 = HandahofsPrentari()
+p2.prentun('Forritun')
+p2.minnka_blek()
+p2.stada_bleks()
+# úttakið verður (handahófskennt)
+# Forritun
+# Forritun
+# Forritun
+# 99
+
+
+class InntaksPrentari(Prentari):
+	def prentun(self):
+		strengur = input('hvað viltu prenta? ')
+		fjoldi = int(input('hversu oft viltu prenta það? '))
+		for i in range(fjoldi):
+			print(strengur)
+
+p3 = InntaksPrentari()
+p3.prentun()
+#> hvað viltu prenta? Tölva
+#> hversu oft viltu prenta það? 3
+print(p3.BLEK)
+# úttakið verður
+# Tölva
+# Tölva
+# Tölva
+# 100
+\end{lstlisting}
+
+Í kóðabút \ref{lst:klasar-erfðir} er einungis verið að yfirskrifa aðferðina prentun því að það er aðferðin sem við vildum að væri með einhverjum sértækum hætti.
+Við vildum ekki bara prenta út einu sinni heldur fá notandann til að segja okkur hversu oft og hvað á að prenta, við vildum kannski geta gert það handahófskennt oft.
