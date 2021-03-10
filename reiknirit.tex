@@ -1,21 +1,73 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Reiknirit}\index{Reiknitir}\label{k:reiknirit}
-Lorem ipsuuuum
+Reiknirit (e. algorythm) er forritsbútur sem sinnir sérhæfðum útreikningi.
+Dularfyllra er það ekki.
+Reiknirit sinna því ákveðnum tilgangi og eru þau oft í grunninn stærðfræðlegs eðlis.
 
+Dæmi um reiknirit sem við höfum séð áður í þessari bók væri útfærsla á fjarlægð milli lesta og að setja nýja lestarstöð inn á leið lestar í kóðabút \ref{lst:klasar-aðferðir-lestar}.
+
+Ástæðan fyrir því að nauðsyn þykir að kynna reiknirit í bók sem þessari er að ef nemendur hafa áhuga á að kynna sér tölvunarfræði í framhaldssnámi er gott að hafa fengið nasasjón af því hvað felst í að beita reikniritum og útfæra þau.
+Margir nemendur hefja nám í tölvunarfræði með ýmsar forhugmyndir sem eiga sér sumar ekki stoð í raunveruleikanum.
+Þessi kafli og sá næsti fjalla um þau atriði sem leikmenn átta sig ekki endilega á að séu stór hluti af tölvunarfræðum og hugbúnaðarþróun.
+Stærðfræði og samvinna.
+Þessi kafli er um stærðfræðilegu hliðina og næsti um samvinnuna.
+
+\comment{
 \section{Reiknirit sem við höfum séð}\index{Reiknirit sem við höfum séð}\label{uk:reiknirit-okkar}
 omg omg omg
 \begin{lstlisting}[caption=Við höfum séð eftirfarandi reiknirit, label=lst:reiknirit-okkar]
 # kóði
 \end{lstlisting}
+}
 
 \section{Þekkt reiknirit}\index{Þekkt reiknirit}\label{uk:reiknirit-þekkt}
+Það sem við ætlum að skoða í þessum kafla eru tvö ákveðin reiknirit, bæði mjög þekkt og svo hugmyndin um endurkvæmni.
+
 
 \subsection{Endurkvæmni}\index{Endurkvæmni}\label{uk:reiknirit-endurkvæmni}
-omg
+Endurkvæmni (e. recursion) er sú virkni forrits að vísa í sig sjálft.
+Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring.
+Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir aftan og þið sáuð ótal spegilmyndir raðast af ykkur.
+
+Í forritun heitir það endurkvæmni þegar við látum forrit vísa í sig sjálft, nota sinn eigin kóða.
+Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhverja gildi í fibonacci röðinni.
+En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
+Í kóðabút \ref{lst:reiknirit-endurkvæmni1} sjáum við einfalda útgáfu af endurkvæmni, þar sem hugmyndin er í raun kynnt án þess að fallið sé neitt gagnlegt.
+Það eina sem fallið gerir er að athuga hvort að talan sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með einu lægra gildi, annars ef talan er ekki stærri en núll prentast ,,þú kannt á endurkvæmni''.
+Hveru oft ætli það prentist ef við setjum inn töluna 5?
+
+\begin{lstlisting}[caption=Endurkvæmni - einfalt, label=lst:reiknirit-endurkvæmni1]
+def endurkvæmt_fall(tala):
+	if(tala > 0):
+		# á meðan talan er hærri en 0 þá köllum við aftur í fallið
+		# en við köllum í það af gildi einu lægra
+		return endurkvæmt_fall(tala-1)
+	else:
+		# hér erum við komin niður í 0 og prentum eftirfarandi texta
+		print('við kunnum endurkvæmni')
+		
+endurkvæmt_fall(5)
+# úttakið verður
+# 'við kunnum endurkvæmni'
+\end{lstlisting}
+
+Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við kölluðum í fallið með tölunni 5 þá fengum við bara einu sinni út strenginn ,,við kunnum endurkvæmni''.
+Það er vegna þess að við kölluðum í fallið fyrir fimm og það sem fallið gerir fyrir okkur er að klára endurkvæmnina fyrir það kall, það verða ekki til fjögur önnur köll.
+Heldur verður fimm að fjórum sem skilar okkur svo niðurstöðunni fyrir þrjá og svo koll af kolli þar til við erum komin niður í núll og þá hættir forritið.
+
+Það sem þetta reiknirit okkar gerir ekki er að skila einhverri niðurstöðu til baka, en nú skulum við skoða tvö þannig reiknirit sem eru endurkvæm.
+Annað þeirra reiknar summu af einhverri tölu og öllum jákvæðum tölum lægri en henni, svo talan 5 gæfi útkomuna 5 + 4 + 3 + 2 + 1 sem er 15 og fyrir 100 væri það 100 + 99 + ... + 1 sem gæfi 5050.
+Hitt reiknar n-tu töluna í fibonacci rununni.
 
 \subsection{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
-omg
+Byrjum á að skoða eitthvert þekktasta reiknirit sem til er. 
+Helmingunarleit að tölu á bili. 
+Hugsum okkur að við séum með raðaðan lista af tölum og við viljum finna eina tiltekna tölu. 
+Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þá tæki það mjög langan tíma.
+Eða allavega fyrir okkur sem manneskjur, en allur tímasparnaður er góður.
+Því að aðgerðin ,,að skoða spil'' kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar.
+
 
 \subsection{Bubble sort}\index{Bubble sort}\label{uk:reiknirit-bubble}
 omg
