@@ -261,7 +261,7 @@
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
 \newtheorem{problem}{Problem}[chapter]
-\newtheorem{exerciseT}{Exercise}[chapter]
+\newtheorem{exerciseT}{Verkefni}[chapter]
 \theoremstyle{blacknumex}
 \newtheorem{exampleT}{Example}[chapter]
 \theoremstyle{blacknumbox}
@@ -296,7 +296,7 @@ rightline=false,
 leftline=true,
 topline=false,
 bottomline=false,
-backgroundcolor=ocre!10,
+%backgroundcolor=ocre!10,
 linecolor=ocre,
 innerleftmargin=5pt,
 innerrightmargin=5pt,
@@ -304,7 +304,7 @@ innertopmargin=5pt,
 innerbottommargin=5pt,
 leftmargin=0cm,
 rightmargin=0cm,
-linewidth=4pt]{eBox}	
+linewidth=2pt]{eBox}	
 
 % Definition box
 \newmdenv[skipabove=7pt,
@@ -585,5 +585,11 @@ addtohook={%
 
 \newcommand{\comment}[1]{}
 
-
-
+\usepackage[lastexercise,answerdelayed]{exercise}
+\newboolean{firstanswerofthechapter}  
+\renewcommand{\AnswerName}{Verkefni}
+\renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
+	{\bigskip\noindent\textcolor{ocre}{\textbf{\huge Kafli \thechapter}}\newline\newline%
+		\noindent\bfseries{\textcolor{ocre}{\AnswerName\ \ExerciseHeaderNB}}\smallskip\newline}
+	{\noindent\bfseries{\textcolor{ocre}{\AnswerName\ \ExerciseHeaderNB}}\smallskip\newline}}
+\setlength{\QuestionIndent}{16pt}
