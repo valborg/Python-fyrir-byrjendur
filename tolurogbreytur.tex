@@ -425,3 +425,24 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
 		print(c)\end{lstlisting}
 	Þá er c 5 í þessu tilfelli en hér má setja hvaða tölur inn sem er til að komast að því hvað c þyrfti að vera löng hlið til þess að þríhyrningurinn sé rétthyrndur.
 \end{Answer}
+
+\begin{exercise}\label{tol-villa}
+	Skrifaðu kóða sem veldur eftirfarandi villum:
+	\begin{tasks}(2)
+		\task\label{tol-villa1} Nafnavilla.  
+		\task\label{tol-villa2} Málskipunarvilla.
+		\task\label{tol-villa3} Inndráttarvilla.
+	\end{tasks}
+\end{exercise}
+\begin{Answer}[ref={tol-villa}]
+	\begin{lstlisting}
+		# nafnavilla
+		breyta = breyta8 # breyta8 hefur ekki verið skilgreind
+	
+		# Málskipunarvilla
+		3breyta = 3 # tölustafur má ekki vera fremst í breytuheiti
+		
+		# Inndráttarvilla
+		    breyta3 = 3 # of mikið bil fremst í línunni
+	\end{lstlisting}
+\end{Answer}
