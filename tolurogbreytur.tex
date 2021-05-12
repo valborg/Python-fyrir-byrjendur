@@ -96,11 +96,6 @@ Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur
 	En hvað gerist ef við breytum aðeins fyrri tölunni en ekki seinni tölunni?
 	Þá ertu að nota ólíkar týpur og slíkt er vandmeðfarið, en í þessu tilviki er það í lagi þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og þú hafir verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
 \end{valBox}
-Í öllum þessum dæmum var verið að vinna með heiltölur, þó var útkoman úr deilingunni (stundum kölluð fullkomin deiling) fleytitala. 
-Hvað gerist ef þessir sömu útreikningar eru gerðir með fleytitölum? 
-Ef við myndum skipta út hverri tölu fyrir sig og setja í staðinn sömu tölu með .0 fyrir aftan þá yrðu útkomurnar þær sömu nema fleytitölur. 
-En hvað gerist ef við breytum aðeins fyrri tölunni en ekki seinni tölunni?
-Þá ertu að nota ólíkar týpur og slíkt er vandmeðfarið, en í þessu tilviki er það í lagi þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og þú hafir verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
 
 \section{Breytur}\index{Breytur}
 Nú höfum við séð hvernig má keyra kóða einfaldlega eins og í reiknivél.
@@ -333,7 +328,7 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
 		Það er tölu sem er annað hvort jákvæð eða neikvæð og er ekki með punkt og aukastafi.
 	\begin{lstlisting}
 		# til dæmis
-		eitthvad_loglegt_breytuheiti = 5
+		eitthvad_loglegt_breytuheiti_fyrir_heiltolu = 5
 		neikvaed_tala = -1234567890
 	\end{lstlisting}
 \end{Answer}
@@ -346,9 +341,25 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
 	Hér þurfum við að hafa það sama í huga eins og í æfingu \ref{tol1} nema að talan sem við veljum okkur verður að vera með punkti og einum eða fleiri aukastöfum.
 	\begin{lstlisting}
 		# til dæmis
-		eitthvad_loglegt_breytuheiti = 5.0
-		neikvaed_tala = -12.9999
-	\end{lstlisting}
+		eitthvad_loglegt_breytuheiti_fyrir_fleytitolu = 5.0
+		neikvaed_tala = -12.9999\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{tol2-5}
+	Búðu til breytu sem inniheldur samlagningu breytanna úr verkefnum \ref{tol1} og \ref{tol2}. Af hvaða týpu er þessi þriðja breyta?
+\end{exercise}
+\begin{Answer}[ref={tol2-5}]
+	Nú þurfum við að athuga að nota nákvæmlega sömu nöfn og við notuðum í fyrri verkefnum.
+	Vegna þess að hér erum við að vísa í breytur sem búið var að skilgreina, við fáum nafnavillu ef við skrifum nöfn hægra megin við jafnaðarmerkið sem tölvan hefur ekki aðgang að í minni.
+	\begin{lstlisting}
+		# til dæmis
+		thridja_breytan = eitthvad_loglegt_breytuheiti_fyrir_heiltolu + eitthvad_loglegt_breytuheiti_fyrir_fleytitolu
+		print(thridja_breytan)\end{lstlisting}
+	Svo er einnig spurt af hvaða týpu er þessi þriðja breyta?
+	Þar sem önnur breytan er fleytitala verður útkoman fleytitala, það má sjá með því að gera eftirfarandi:
+	
+	\begin{lstlisting}
+		type(thridja_breytan)\end{lstlisting}
 \end{Answer}
 
 
@@ -370,8 +381,7 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
 		# eða
 		allt = 1000
 		helmingur = allt/2
-		helmingur_af_helmingnum = allt/2/2  # eða allt/4 því helmginur af helmingnum er fjórðungur
-	\end{lstlisting}
+		helmingur_af_helmingnum = allt/2/2  # eða allt/4 því helmginur af helmingnum er fjórðungur\end{lstlisting}
 \end{Answer}
 
 
@@ -389,8 +399,7 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
 		print(allt)
 		
 		allt /= 2
-		print(allt)
-	\end{lstlisting}
+		print(allt)\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{tol5}
@@ -413,7 +422,6 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
 		
 		c_i_odru_veldi = a**2 + b**2
 		c = c_i_odru_veldi**0.5
-		print(c)
-	\end{lstlisting}
+		print(c)\end{lstlisting}
 	Þá er c 5 í þessu tilfelli en hér má setja hvaða tölur inn sem er til að komast að því hvað c þyrfti að vera löng hlið til þess að þríhyrningurinn sé rétthyrndur.
 \end{Answer}
