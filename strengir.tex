@@ -228,11 +228,33 @@ Höfundur hvetur þó til að lesandi geri ítarlegar tilraunir og prófanir.
 
 \section{Verkefni}
 \begin{exercise}\label{str1}
-	Hvernig ætti að gera eftirfarandi?? þæð´
+	Búðu til breytu sem inniheldur streng
 \end{exercise}
+\setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={str1}]
-	Allt annað svar 
-	\begin{lstlisting}[caption=Aðferðir kynntar, label=lst:lausnir-adferdir]
-		strengur = "kex með smjöri, osti og sultu"
-	\end{lstlisting}
+	Hér þurfum við að átta okkur á því hvernig strengir eru skilgreindir, annað hvort með tvöföldum eða einföldum gæsalöppum.
+	Svo og að breytur eru skilgreindar með því að setja nafnið á breytunni vinstra megin við jafnaðarmerki og gildið, í þessu tilfelli streng, hægra megin við jafnaðarmerki.
+	\begin{lstlisting}
+strengur = "hér er textinn sem geymist í breytunni strengur" #tvöfaldar gæsalappir báðu megin
+strengur = 'hér er verið að nota einfaldar gæsalappir'
+strengur = '' # þetta er tómur strengur\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{str2}
+	Búðu til breytu sem inniheldur streng, búðu til aðra breytu sem geymir fyrsta stafinn úr þeirri breytu.
+\end{exercise}
+\begin{Answer}[ref={str2}]
+	\begin{lstlisting}
+strengur = "texti byrjar á t"
+stafur = strengur[0]\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str3}
+	Notaðu innbyggt fall til þess að finna lengdina á strengnum "halló góðan daginn í dag".
+\end{exercise}
+\begin{Answer}[ref={str3}]
+	\begin{lstlisting}
+strengur = "halló góðan daginn í dag"
+len(strengur)\end{lstlisting}
 \end{Answer}
