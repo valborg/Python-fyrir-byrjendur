@@ -242,9 +242,10 @@ strengur = '' # þetta er tómur strengur\end{lstlisting}
 \setboolean{firstanswerofthechapter}{false}
 
 \begin{exercise}\label{str2}
-	Búðu til breytu sem inniheldur streng, búðu til aðra breytu sem geymir fyrsta stafinn úr þeirri breytu.
+	Búðu til breytu sem inniheldur streng, búðu til aðra breytu sem geymir fremsta stafinn úr þeirri breytu.
 \end{exercise}
 \begin{Answer}[ref={str2}]
+	Fremsti stafurinn er í núllta stæði.
 	\begin{lstlisting}
 strengur = "texti byrjar á t"
 stafur = strengur[0]\end{lstlisting}
@@ -257,4 +258,100 @@ stafur = strengur[0]\end{lstlisting}
 	\begin{lstlisting}
 strengur = "halló góðan daginn í dag"
 len(strengur)\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str4}
+	Notaðu innbyggt fall til þess prenta út þann staf sem er í þriðja stæði í strengnum 'kex!'.
+\end{exercise}
+\begin{Answer}[ref={str4}]
+\begin{lstlisting}
+strengur = "kex!"
+print(strengur[3])\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str4-5}
+	Notaðu innbyggt fall til þess finna lengdina á strengnum 'kex!'.
+\end{exercise}
+\begin{Answer}[ref={str4-5}]
+\begin{lstlisting}
+len("kex!")
+# eða
+print(len("kex!"))\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str5}
+	Notaðu heiltöludeilingu til að prenta út þann staf sem er í miðju strengsins "allra handa", sem er strengur af lengd 11 og því skilgreiningaratriði hvort stakið í stæði 4 eða 5 sé í miðjunni.
+	Hvort kemur tómt bil eða stafurinn a?
+\end{exercise}
+\begin{Answer}[ref={str5}]
+\begin{lstlisting}
+s = "allra handa"
+print(s[len(s)//2])\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str6}
+	Búðu til tvær breytur sem innihalda strengi, búðu svo til þriðju breytuna sem inniheldur samskeytingu af þessum tveimur breytum.
+	Lengdu þriðju breytuna, þannig að samskeytingin sé endurtekin að minnsta kosti tvisvar sinnum.
+\end{exercise}
+\begin{Answer}[ref={str6}]
+	Athugaðu að þegar er verið að lengja breytuna þá er hún endurskilgreind.
+	Þetta er gert því beðið er um að lengja þriðju breytuna og því gefið í skyn að breytan eigi að fá uppfært gidli.
+	Ef þú hinsvegar lagðir annan skilning í verkefnið og bjóst til fjórðu breytu þá er það líka í lagi að svo stöddu, við erum ekki að besta fyrir minnisnotkun.
+\begin{lstlisting}
+s1 = "allra handa"
+s2 = " bil fremst"
+s3 = s1 + s2
+s3 = s3*4\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str7}
+Gefum okkur að til séu tveir strengir, n1 og n2, þeir innihalda fyrsta nafnið þitt og eftirnafn þitt.
+Gefum okkur einnig að þeir séu ekki rétt ritaðir skv. íslenskum ritunarreglum.
+Hvernig setjum við þá saman í einn streng eftir að hafa beitt á þá aðferðum til að þeir séu örugglega með fyrsta staf stóran og alla aðra litla?
+\end{exercise}
+\begin{Answer}[ref={str7}]
+	Hér látum n1 og n2 vera á einhvern hátt stangast á við íslenskar ritunarreglur, svo skeytum við þeim saman eftir að hafa beitt á þá aðferðinni .capitalize() sem lagar þá til eins og fyrirmælin segja til um.
+\begin{lstlisting}
+n1 = "valBorg"
+n2 = "sturluDóttir"
+rett_nafn = n1.capitalize() + n2.capitalize()\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{str8}
+Nú gerum við ráð fyrir að vera með streng í höndunum sem er geymdur í breytunni lykill.
+Strengurinn á að verða sterkt lykilorð og við viljum rugla hann töluvert til þess að hann verði ekki einfalt orð sem auðvelt er að giska á.
+Til þess ætlum við að gera eftirfarandi:
+\begin{enumerate}
+	\item Búa til annan streng sem inniheldur einhver tákn (tölur, bókstafi og önnur tákn)
+	\item Búa til breytu sem inniheldur lengdina á tákna strengnum og aðra sem inniheldur lengdina á lykilstrengnum
+	\item Búta upp lykil strenginn (sama sætisnúmer má nota oftar en einu sinni en öll þurfa að vera til staðar), skeyta við hvern bút einhverjum bút úr táknastrengnum.
+		Í þessu skrefi má lengja bútana og/eða beyta strengjaaðferðum á þá og endurskilgreina lykil strenginn sem þessa breytingu.
+	\item Að lokum á að snúa strengnum við, þannig að hann sé afturábak.
+\end{enumerate}
+\end{exercise}
+\begin{Answer}[ref={str8}]
+Við höfum ansi frjálsar hendur í þessu verkefni, en athugið að við höfum enn ekki kynnst því hvernig á að gera eitthvað með skilyrðum, lykkjum eða handahófskennt.
+Svo við verðum að beita einungis þeim aðferðum sem við höfum séð hingað til.
+Einnig verðum við að passa að ekki sé verið að vísa í sætisnúmer sem eru ekki til staðar í strengjunum.
+Takið eftir að þessi lausn er einungis hugmynd, í skrefi 1 má skipta um strengi, í skrefi 3 má klippa í sundur á mismunandi hátt, beita fleiri aðferðum og lengja sjaldnar eða oftar eða með öðrum tölum.
+Aðalatriðið í skrefi þrjú er að sama hvaða strengir eru settir inn í skrefi 1 þá er aldrei vísað út fyrir strenginn og allur lykilstrengurinn er notaður, hvert einasta stæði.
+
+Prófaðu að setja inn mismunandi strengi og prenta út lykilinn í lokin.
+
+Ef þú leystir verkefnið með ákveðnum sætisvísum þar sem þú vissir hversu mörg stafabil voru í strengnum þínum er kóðinn einungis nothæfur á strengi af nákvæmlega sömu lengd.
+Gott er að skrifa kóða sem leysir verkefni almennt en ekki bara það tiltekna verkefni sem er fyrir framan þig.
+\begin{lstlisting}
+#skref 1
+lykill = "þetta á að verða gott lykilorð"
+takn = "0123456789!$%&()acptrewq" 
+
+#skref 2 
+lengd_l = len(lykill)
+lengd_t = len(takn)
+
+#skref 3
+lykill = lykill[0:lengd_l//4].upper()+takn[0:lengd_t//8]*2 + lykill[lengd_l//4:lengd_l//2] + takn[lengd_t//7:lengd_t//4] + lykill[lengd_l//2:-1] + takn[0:lengd_t//3] + lykill[-1]*2+takn[-1]*3 
+
+#skref 4
+lykill = lykill[::-1]\end{lstlisting}
 \end{Answer}
