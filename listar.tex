@@ -236,3 +236,89 @@ print(starfsfolk)
 starfsfolk.sort() 
 # þetta veldur núna villu þar sem raðað er eftir fremsta staki hvers lista og fremstu stökin eru ekki af týpum sem hægt er að bera saman
 \end{lstlisting}
+
+\section{Verkefni}
+\begin{exercise}\label{lst1}
+	Búðu til breytu sem inniheldur lista
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={lst1}]
+Við búum til lista með hornklofum.
+Breytan má ekki heita list því það er frátekið lykilorð í Python.
+\begin{lstlisting}
+listi = []
+listi_med_stokum = ["hér settum við eitthvað inn"]\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{lst2}
+		Verkefnið er tvíþætt:
+\begin{enumerate}
+
+	\item Búðu til lista sem inniheldur 4 stök sem öll eru af mismunandi týpum.
+	\item Vitandi hvar strengurinn er í listanum, skaltu svo breyta stakinu í listanum sem inniheldur strenginn og setja einhvern annan streng í staðinn.
+\end{enumerate}
+\end{exercise}
+\begin{Answer}[ref={lst2}]
+Við höfum kynnst núna fjórum týpum, heiltölum (int), fleytitölum (float), strengjum (str) og listum (list).
+Við lausn þessa verkefnis skiptir ekki öllu máli hvort að stökin voru fyrst sett í breytur og listinn skilgreindur með þeim eða hvort að stökin voru sett beint inn í skilgreininguna.
+Einnig skiptir ekki öllu máli hvort að stökin hafi verið sett inn um leið og listinn var skilgreindur eða notuð var append() eða instert() aðferðin til að setja í listann.
+
+Aðalatriðið er að listinn varð til og að hann inniheldur þau gögn sem hann átti að innihalda (í hvaða röð sem er).
+
+Til að búa til lista sem inniheldur lista er það gert eins og hvert annað stak, hann er gerður með hornklofum og inniheldur 0 eða fleiri stök.
+
+Svo til að leysa seinna verkefnið þá þarf að vita hvar strengurinn var settur, í þessu tilfelli stæði 2.
+Svo þarf að endurskilgreina það hvað stæði 2 í listanum inniheldur. 
+\begin{lstlisting}
+listi = [1, 1.2, "strengur", []]
+
+listi[2] = "nýr strengur í stað þess sem var"\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{lst3}
+Gefin er eftirfarandi kóði.
+Það sem við viljum gera er að fletta upp heimavist og netfangi nemanda 1 og 2.
+Við viljum búa til strengjabreytu sem inniheldur þessi gögn fyrir hvorn nemanda fyrir sig.
+Án þess að vita hvernig nem1 og nem2 breyturnar líta út (eins og við höfum fengið þær gefnar að nafninu til og sjáum ekki hvað þær geyma) við fáum að vita að breyturnar séu listar sem séu eins uppbyggðir og header listinn.
+
+Við þurfum því að beita index aðferðinni til að finna gögnin.
+\begin{lstlisting}
+header = ["nemandi", "sími", "heimavist", "netfang", "lykilorð", "áfangar"]
+nem1 = ["Valborg", "9999999", "vestur", "valborg@netfang.is", "best_practice", "FORR2**"]
+nem2 = ["Sturludóttir", '00000000', 'austur', "valborg@example.com", "1234", "FORR1**"]\end{lstlisting}
+
+\end{exercise}
+\begin{Answer}[ref={lst3}]
+	Vegna þess að við sjáum að heimavist er í staki 2 gætum við þess vegna skrifað nem1[2], en nú skulum við hugsa fram í tímann.
+	Hvað ef listauppbyggingunni yrði breytt og kennitölu yrði bætt við fremst í listann?
+	Þá myndi kóðinn okkar ekki uppfylla skilyrðin ,,sækja heimavist og netfang'' heldur myndi kóðinn okkar sækja síma og heimavist.
+	Með því að reiða okkur eingöngu á það að header listinn sé réttur og að gögnin í nemendalistunum séu í samræmi við hann þá fáum við alltaf rétt gögn sem eru vistuð í dálknum ,,heimavist'' með header.index('heimavist').
+
+
+	Einnig hefðum við getað, í þessu tilfelli bara horft á nem1 og nem2 og skrifað strengina upp.
+	En við viljum horfa fram í tímann þegar við verðum að vinna með lista sem innihalda kannski 50 eða 500 gagnapunkta og að við ætlum ekki að fletta upp heimavistum tveggja nemenda heldur 800.
+	Þá viljum við vera búin að temja okkur að láta tölvuna vinna sem mest fyrir okkur. 
+\begin{lstlisting}
+header = ["nemandi", "sími", "heimavist", "netfang", "lykilorð", "áfangar"]
+nem1 = ["Valborg", "9999999", "vestur", "valborg@flensborg.is", "best_practice", "FORR2**"]
+nem2 = ["Sturludóttir", '00000000', 'austur', "valborg@example.com", "1234", "FORR1**"]
+
+uppl_nem1 = nem1[header.index('heimavist')] + nem1[header.index('netfang')]
+uppl_nem2 = nem2[header.index('heimavist')] + nem2[header.index('netfang')]\end{lstlisting}
+\end{Answer}
+Gefinn er eftirfarandi kóðabútur, náðu í strenginn "valli" þannig að hann sé geymdur í breytu og type fallið af breytunni skili niðurstöðunni str.
+Náðu einnig í töluna 0 innan listans og geymdu í breytu þannig að type fallið af henni skilið int. 
+\begin{exercise}\label{lst4}
+	\begin{lstlisting}
+	nested_list = [[[[0],1],2],["hvar"],["er"],[["valli"],"?"]]\end{lstlisting}
+\end{exercise}
+\begin{Answer}[ref={lst4}]
+Hér þurfum við að athuga að listinn inniheldur marga lista og það má hreiðra notkun hornklofa til að sækja gögn.
+	\begin{lstlisting}
+valli = nested_list[3][0][0]
+print(type(valli))
+zero = nested_list[0][0][0][0]
+print(type(zero), zero)\end{lstlisting}
+\end{Answer}
+
