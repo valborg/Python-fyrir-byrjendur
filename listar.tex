@@ -307,11 +307,12 @@ nem2 = ["Sturludóttir", '00000000', 'austur', "valborg@example.com", "1234", "F
 uppl_nem1 = nem1[header.index('heimavist')] + nem1[header.index('netfang')]
 uppl_nem2 = nem2[header.index('heimavist')] + nem2[header.index('netfang')]\end{lstlisting}
 \end{Answer}
-Gefinn er eftirfarandi kóðabútur, náðu í strenginn "valli" þannig að hann sé geymdur í breytu og type fallið af breytunni skili niðurstöðunni str.
-Náðu einnig í töluna 0 innan listans og geymdu í breytu þannig að type fallið af henni skilið int. 
+
 \begin{exercise}\label{lst4}
-	\begin{lstlisting}
-	nested_list = [[[[0],1],2],["hvar"],["er"],[["valli"],"?"]]\end{lstlisting}
+	Gefinn er eftirfarandi kóðabútur, náðu í strenginn "valli" þannig að hann sé geymdur í breytu og type fallið af breytunni skili niðurstöðunni str.
+	Náðu einnig í töluna 0 innan listans og geymdu í breytu þannig að type fallið af henni skilið int. 
+\begin{lstlisting}
+nested_list = [[[[0],1],2],["hvar"],["er"],[["valli"],"?"]]\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={lst4}]
 Hér þurfum við að athuga að listinn inniheldur marga lista og það má hreiðra notkun hornklofa til að sækja gögn.
@@ -322,3 +323,53 @@ zero = nested_list[0][0][0][0]
 print(type(zero), zero)\end{lstlisting}
 \end{Answer}
 
+\begin{exercise}\label{lst5}
+Hvers vegna prentast hér \textbf{tómur} listi? 
+\begin{lstlisting}
+listed = ["stak í núllta stæði", "fyrsta", "öðru", "þriðja", "fjórða"]
+print(listed[2:2])\end{lstlisting}
+\end{exercise}
+\begin{Answer}[ref={lst5}]
+Hér er verið að sækja öll þau gögn í listanum ,,listed'' sem ná frá stæði 2 að stæði 2.
+Það er byrjað er að lesa fyrir framan stæði 2 en einnig er hætt á þeim stað svo stæði 2 er aldrei lesið.
+Leshausinn hættir á sama stað og hann byrjar, færist ekkert og ekkert tákn er lesið.
+
+Þar sem við erum að vinna með lista skilast gögn af týpunni listi, athugaðu þetta með streng og þú færð tóman streng.
+\end{Answer}
+
+\begin{exercise}\label{lst6}
+Leystu eftirfarandi verkefni í röð:
+\begin{enumerate}
+	\item Búðu til lista sem inniheldur nokkur nöfn, þetta á að vera tengiliðalisti.
+	\item Raðaðu listanum í stafrófsröð, eins og Python gefur kost á fyrir íslensku.
+	\item Það gleymdist að setja Agnesi í listann, hvernig bætirðu henni við aftast í listann?
+	\item Það kemur alveg hrikalega út að hafa Agnesi aftast eftir að hafa raðað listanum, raðaðu listanum aftur í stafrófsröð
+	\item Æ, nú er listinn orðinn of langur, nú skaltu fjarlægja eitthvað nafn úr listanum, þó ekki það aftasta.
+\end{enumerate}
+\end{exercise}
+\begin{Answer}[ref={lst6}]
+Hér væri einnig gott að beita print skipunum til að sjá hvað er að gerast í hverju skrefi.
+\begin{lstlisting}
+tengilidir = ["Halldóra", "Freyja", "Pétur", "Haukur"]
+tengilidir.sort()
+tengilidir.append("Agnes")
+tengilidir.sort()
+tengilidir.pop(2))\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{lst6}
+Leystu eftirfarandi verkefni í röð:
+\begin{enumerate}
+	\item Búðu til lista sem inniheldur nokkra innri lista, innri listarnir eru upplýsingar um gæludýr (nafn, aldur og tegund).
+	\item Kemur í ljós að Askja, 13 ára gömul border collie tík gleymdist, bættu henni í listann.
+	\item Askja á sér það áhugamál að elta laufblöð, bættu því aftast í listann sem inniheldur gögnin um Öskju.
+	\item Nú skaltu raða ytri listanum.
+	\item Kemur í ljós að það hentar ekki að geyma gögn um áhugamálið hennar Öskju, fjarlægðu þau gögn úr listanum um Öskju.
+	\item Æ, nú er Askja dáin og það þarf að fjarlægja hana úr ytri listanum.
+\end{enumerate}
+\end{exercise}
+\begin{Answer}[ref={lst6}]
+Hér þurfum við að athuga að listinn inniheldur marga lista og það má hreiðra notkun hornklofa til að sækja gögn.
+\begin{lstlisting}
+\todo{leysa}\end{lstlisting}
+\end{Answer}
