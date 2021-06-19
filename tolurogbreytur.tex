@@ -33,24 +33,15 @@ Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þes
 Grunnreikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en aðrar eru framandi og við skulum skoða aðeins betur.
 
 Táknin eru flest eins og á reiknivélum +, -, *, / en þar að auki er annars konar deiling sem er táknuð með tveimur deilimerkjum //, veldishafning er táknuð með tveimur margföldunarmerkjum **, og svo er leifareikningur táknaður með \%.
+Munurinn á deilingunni er sá að með einu skástriki er beitt hefðbundinni deilingu\footnote{stundum kölluð fullkomin deiling} en tvö skástrik er heiltöludeiling.
 
-\begin{valBox}
-Heiltöludeiling og leifarreikningur eru líklega ný á nálinni fyrir flestum lesendum og því allt í lagi að útskýra þær aðgerðir aðeins nánar.
-Þessar aðgerðir eru einmitt mjög skyldar í raun.
-Deilingin segir okkur hversu oft ein tala gengur upp í aðra þar sem útkoman er heil tala (eða fleytitala með 0 sem eina aukastafinn), okkur er sama um afganginn sem verður eftir.
-Í þessari deilingu er svarið 2 við bæði 5//2 og 4//2.
-En í leifareikningnum viljum við eingöngu vita hver er afgangurinn þegar heiltöludeilingu er beitt svo 5\%2 væri 1, því það er einn í afgang þegar fimm er deilt með tveimur.
-Og það er 0 í afgang þegar fjórum er deilt með tveimur svo 4\%2 er 0.
-\end{valBox}
-
-Í eftirfarandi dæmum í kóðabút \ref{lst:reiknadg} er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
-Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
+Í eftirfarandi dæmum í kóðabút, \ref{lst:reiknadg}, er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
+Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir (e. comments) eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
 Eins og sést í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur en hún er í keyrslu tölvunnar álitin ein heild línu 20.
-Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er ein heild.
-Einnig eru þarna bil á milli talna fremst í línu og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni enn sem komið er.
-Athugasemdir í kóða eru mjög mikilvægur hluti af skjölun kóða og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
+Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er ein lína.
+Einnig eru bil á milli talna og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni.
+Athugasemdir í kóða eru mjög mikilvægur hluti af skjölun (e. documentation) og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
 Í fyrstu erum við ekki að skrifa flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni ekki augljós er gott að skrifa athugasemdir.
-Flest allir kóðabútar eru skjalaðir með athugasemdum til að gera þá læsilegri því allur kóði í bókinni er skrifaður fyrir fólk til að skilja.
 Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur sjálfum skiljanlegur þegar þið komið að honum seinna.
 Því er gott að venja sig strax á að skrifa lýsandi athugasemdir. 
 
@@ -68,12 +59,12 @@ Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur
 10 * 2 
 
 # Deiling framkvæmd með / 
-# Athugið að þetta er fleytitöludeiling sem skilar nákvæmu svari
+# Athugið að þetta er fleytitöludeiling sem skilar nákvæmu svari.
 # Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10.0
 60 / 6 
 
 # Heiltöludeiling framkvæmd með //
-# Athugið að þessi deiling er frábrugðin þeirri sem þið kannist við
+# Athugið að þessi deiling er frábrugðin þeirri sem þið kannist við.
 # Hér viljum við vita hversu oft, heil tala, ein tala gengur upp í aðra og okkur er sama um afganginn
 # Þegar eftirfarandi kóði er keyrður ætti svarið að vera 10
 177 // 17
@@ -85,7 +76,7 @@ Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur
 3 ** 2
 
 # Leifareikningur framkvæmdur með % (e. modulus)
-# Þetta er eitthvað alveg nýtt og framandi, en þó ekki óskiljanlegt
+# Þetta er eitthvað alveg nýtt og framandi.
 # Það sem þetta reiknar er hversu mikil leif eða afgangur er eftir þegar heiltöludeilingu er beitt.
 # Þegar eftirfarandi kóði er keyrður ætti svarið að vera 7
 177 % 17
@@ -93,39 +84,52 @@ Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur
 \end{lstlisting}
 
 \begin{valBox}
-	Í öllum þessum dæmum var verið að vinna með heiltölur, þó var útkoman úr deilingunni (stundum kölluð fullkomin deiling) fleytitala. 
-	Hvað gerist ef þessir sömu útreikningar eru gerðir með fleytitölum? 
-	Ef við myndum skipta út hverri tölu fyrir sig og setja í staðinn sömu tölu með .0 fyrir aftan þá yrðu útkomurnar þær sömu nema fleytitölur. 
-	En hvað gerist ef við breytum aðeins fyrri tölunni en ekki seinni tölunni?
-	Þá ertu að nota ólíkar týpur og slíkt er vandmeðfarið, en í þessu tilviki er það í lagi þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og þú hafir verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
+	Heiltöludeiling og leifarreikningur eru líklega ný á nálinni fyrir flestum lesendum og því allt í lagi að útskýra þær aðgerðir aðeins nánar.
+	Þessar aðgerðir eru einmitt mjög skyldar í raun.
+	Deilingin segir okkur hversu oft ein tala gengur upp í aðra þar sem útkoman er heil tala (eða fleytitala með 0 sem eina aukastafinn), okkur er sama um afganginn sem verður eftir.
+	Í þessari deilingu er svarið 2 við bæði 5//2 og 4//2.
+	En í leifareikningnum viljum við eingöngu vita hver er afgangurinn þegar heiltöludeilingu er beitt svo 5\%2 væri 1, því það er einn í afgang þegar fimm er deilt með tveimur.
+	Og það er 0 í afgang þegar fjórum er deilt með tveimur svo 4\%2 er 0.
 \end{valBox}
+
+Það er gott að byrja á því að átta sig á því hvernig á að keyra kóða og í kóðabút \ref{lst:reiknadg} vorum við vissulega að keyra kóða.
+Hann gerði ekkert merkilegt en við erum strax byrjuð að forrita.
+Við skulum svo ekki gleyma þessum undirstöðu reikniaðgerðum og reiknivirkjum þegar við höldum áfram og gerum flóknari hluti\footnote{
+	Í öllum verkefnum í kóðabút \ref{lst:reiknadg} var verið að vinna með heiltölur, þó var útkoman úr deilingunni fleytitala. 
+	Ef við myndum skipta út hverri tölu fyrir sig og setja í staðinn sömu tölu með .0 fyrir aftan þá yrðu útkomurnar þær sömu nema fleytitölur. 
+	Ef við notum ólíkar týpur, og slíkt er vandmeðfarið, er það í lagi í þessu tilfelli þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og við höfum verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
+}.
+
+Reiknivirkjarnir gera svo ólíka hluti eftir því með hvaða týpum þeir eru notaðir, í þessum kafla notum við eingöngu talnatýpur en munum seinna sjá þessa sömu reiknivirkja skila okkur öðrum niðurstöðum með öðrum týpum.
 
 \section{Breytur}\index{Breytur}
 Nú höfum við séð hvernig má keyra kóða einfaldlega eins og í reiknivél.
 Höldum okkur við samlíkinguna um reiknivélina til að útskýra breytur.
-Á hefbundinni reiknivél sem notuð er í stærðfræðitíma í framhaldsskóla er takki sem á stendur ANS.
-Það stendur fyrir answer og ef ýtt er á hann getur vélin geymt síðasta gildið sem hún gaf sem svar og unnið svo með það til að gefa næsta svar.
+Á hefbundinni reiknivél sem notuð er í stærðfræðitíma í framhaldsskóla er takki sem á stendur ANS (stytting á enska orðinu \textit{answer}).
+Vélin getur geymt síðasta svar sem fékkst og þegar ýtt er á þennan takka sækir vélin úr minni það svar.
 Flottari vélar geta svo geymt nokkuð mörg svör en það er útfyrir gagnsemi þessarar samlíkingu.
-Þegar ýtt er á þennan takka er minnisvæði í reiknivélinni tekið frá og skrifað er í það gildi, sem er svo sótt þegar ANS er notað í útreikningi.
-Að sama skapi má láta Python úthluta minnissvæði í tölvunni fyrir þær breytur sem þið viljið geyma.
-Munurinn er sá að þið nefnið sjálf hvað minnisvæðið er merkt sem, eruð ekki bundin við að nota ANS og að þið eruð svo gott sem með óteljandi minnissvæði.
+Þegar ýtt er á þennan takka er gildi sótt úr minnisvæðinu og á skjáinn kemur textinn ANS en á bakvið tjöldin er vélin að nota gildið úr minnissvæðinu þó að við sjáum ekki hvað það er, sem er mjög gagnlegt þegar talan sem við ætluðum að nota er eitthvað á við $\frac{3}{4}\sqrt[3]{\pi*7} $ og við nennum ekki að skrifa það aftur og aftur.
+
+Að sama skapi má láta Python úthluta minnissvæði í tölvunni fyrir þær breytur sem við viljum geyma.
+Munurinn er sá að við nefnum sjálf hvað minnisvæðið heitir, erum ekki bundin við að nota ANS og að við erum með, svo gott sem, óteljandi minnissvæði.
 
 Að gefa minnissvæði merkingu og gildi er gert með \textit{gildisveitingu}.
-Gildisveiting þýðir að nú er einhver ákveðinn merkimiði kominn með eitthvað til að geyma.
-Sjáum einfalt dæmi um þetta.
+Gildisveiting (e. assignment) þýðir að nú er einhver ákveðinn merkimiði kominn með eitthvað til að geyma.
+Gildisveiting er gerð með því að skrifa nafnið sem við viljum geta vísað í vinstra megin við jafnaðarmerki og gildið sem við viljum geyma í þeirri breytu hægra megin við jafnaðarmerkið, eins og sést í kóðabút \ref{lst:breytur-kynntar}
 
-\begin{lstlisting}[caption=Breytur kynntar]
+\begin{lstlisting}[caption=Breytur kynntar, label=lst:breytur-kynntar]
 # Hér er ég að fara að búa til breytu sem heitir val
 val = 5
 
-# Þegar ég keyri línuna fyrir ofan segi ég vélinni að hafa aðgengilegt minnisvæði sem ég get notað með því að skrifa orðið val, og settu í það svæði gildið 5.
-
-# Svo ég er að veita breytunni val gildið 5, þess vegar er það kallað gildisveiting.
-
-# Svo get ég notað breytuna mína
 # þegar þetta er keyrt fæst svarið 10
 val + 5
 \end{lstlisting}
+
+Þegar ég keyri línuna fyrir ofan segi ég vélinni að hafa aðgengilegt minnisvæði sem ég get notað með því að skrifa orðið val, og settu í það svæði gildið 5.
+
+Svo ég er að veita breytunni val gildið 5, þess vegar er það kallað gildisveiting.
+
+Svo get ég notað breytuna mína
 
 Ef þú prófar þig áfram við að búa til breytur gætir þú rekist á svolítið sem hefur ekki gerst áður í vinnubók, að þegar sella inniheldur eingöngu gildisveitingu og er keyrð þá ,,gerist ekkert''.
 Þetta finnst mörgum mjög skrýtið því þau vilja fá einhverja útkomu.
