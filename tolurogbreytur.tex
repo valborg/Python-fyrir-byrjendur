@@ -12,9 +12,9 @@ Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þes
 
 \begin{itemize}
 	\item \textbf{Heiltölur} - tölur sem eru ekki með neinum aukastaf. 
-	Á ensku eru þessar tölur kallaðar integers og er lykilorð þeirra því \textbf{int}.
+	Á ensku eru þessar tölur kallaðar \textit{integers} og er lykilorð þeirra því \textbf{int}.
 	\item \textbf{Fleytitölur} - tölur sem eru með aukastaf, sem er fyrir aftan punkt (ekki kommu, fleytitölur eru oft kallaðar kommutölur á íslensku). 
-	Á ensku eru þessar tölur kallaðar floating point numbers og er því lykilorðið þeirra \textbf{float}.
+	Á ensku eru þessar tölur kallaðar \textit{floating point numbers} og er því lykilorðið þeirra \textbf{float}.
 \end{itemize}
 
 \begin{lstlisting}[caption=Heiltölur og fleytitölur]
@@ -33,12 +33,15 @@ Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þes
 Grunnreikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en aðrar eru framandi og við skulum skoða aðeins betur.
 
 Táknin eru flest eins og á reiknivélum +, -, *, / en þar að auki er annars konar deiling sem er táknuð með tveimur deilimerkjum //, veldishafning er táknuð með tveimur margföldunarmerkjum **, og svo er leifareikningur táknaður með \%.
+
+\begin{valBox}
 Heiltöludeiling og leifarreikningur eru líklega ný á nálinni fyrir flestum lesendum og því allt í lagi að útskýra þær aðgerðir aðeins nánar.
 Þessar aðgerðir eru einmitt mjög skyldar í raun.
 Deilingin segir okkur hversu oft ein tala gengur upp í aðra þar sem útkoman er heil tala (eða fleytitala með 0 sem eina aukastafinn), okkur er sama um afganginn sem verður eftir.
 Í þessari deilingu er svarið 2 við bæði 5//2 og 4//2.
 En í leifareikningnum viljum við eingöngu vita hver er afgangurinn þegar heiltöludeilingu er beitt svo 5\%2 væri 1, því það er einn í afgang þegar fimm er deilt með tveimur.
 Og það er 0 í afgang þegar fjórum er deilt með tveimur svo 4\%2 er 0.
+\end{valBox}
 
 Í eftirfarandi dæmum í kóðabút \ref{lst:reiknadg} er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
 Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
