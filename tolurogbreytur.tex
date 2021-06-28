@@ -118,27 +118,24 @@ Gildisveiting (e. assignment) þýðir að nú er einhver ákveðinn merkimiði 
 Gildisveiting er gerð með því að skrifa nafnið sem við viljum geta vísað í vinstra megin við jafnaðarmerki og gildið sem við viljum geyma í þeirri breytu hægra megin við jafnaðarmerkið, eins og sést í kóðabút \ref{lst:breytur-kynntar}
 
 \begin{lstlisting}[caption=Breytur kynntar, label=lst:breytur-kynntar]
-# Hér er ég að fara að búa til breytu sem heitir val
+# Búum til breytu með nafnið var
 val = 5
 
 # þegar þetta er keyrt fæst svarið 10
 val + 5
 \end{lstlisting}
 
-Þegar ég keyri línuna fyrir ofan segi ég vélinni að hafa aðgengilegt minnisvæði sem ég get notað með því að skrifa orðið val, og settu í það svæði gildið 5.
+Þegar við keyrum línu 2 í kóðabút \ref{lst:breytur-kynntar} segjum við vélinni að hafa aðgengilegt minnissvæði sem við getum notað með því að skrifa orðið val, og setja í það minnissvæði gildið 5.
+Breytan er svo notuð í línu 5, nafnið hennar er notað í útreikningi sem er alveg eins í kóðabút \ref{lst:reiknadg}.
 
-Svo ég er að veita breytunni val gildið 5, þess vegar er það kallað gildisveiting.
-
-Svo get ég notað breytuna mína
-
-Ef þú prófar þig áfram við að búa til breytur gætir þú rekist á svolítið sem hefur ekki gerst áður í vinnubók, að þegar sella inniheldur eingöngu gildisveitingu og er keyrð þá ,,gerist ekkert''.
+Ef þú prófar þig áfram við að búa til breytur í vinnubók og keyra sellur gætir þú rekist á svolítið sem hefur ekki gerst áður, að þegar sella inniheldur eingöngu gildisveitingu og er keyrð þá ,,gerist ekkert''.
 Þetta finnst mörgum mjög skrýtið því þau vilja fá einhverja útkomu.
 En útkoman er sú að þú sagðir vélinni að geyma þetta, þú sagðir henni ekki að gera neitt annað.
 
 Breytur eru skilgreindar vinstra megin við jafnaðarmerki í Python.
 Eins og það væri lesið, val fær gildið 5.
 Það væri lítið vit í því að hafa það öfugt, 5 er núna jafngilt val.
-Það sem við værum þá að segja tölvunni að í hver sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu val.
+Það sem við værum þá að segja tölvunni að í hvert sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu val.
 Það er alls ekki það sem við viljum.
 
 Nokkrar reglur í nafnavali á breytum, þetta vill vefjast fyrir sumum en lærist fljótlega:
@@ -193,6 +190,7 @@ Ef við snúum okkur aftur að reiknivélasamlíkingunni um ANS takkann þá æt
 Fyrst segi ég vélinni hvað það er sem ANS vísar á, svo segi ég vélinni að mig langar til þess að búa til nýja breytu sem á að byggja á því sem ANS inniheldur.
 Í þessum kóðabút er svo haldið áfram með þessa afleiddu breytu og önnur afleidd breyta búin til útfrá henni.
 Það sem gerist svo í endann er sambærilegt við það að ýta á ,,='' takkann á reiknivélinni.
+
 Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur print með svigum fyrir aftan og inni í svigunum er breytan okkar.
 Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak} 
 \footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. Kannski verður úttaki varpað beint inn í heilann á forriturum einhvern tíma?} 
