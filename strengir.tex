@@ -4,10 +4,11 @@ Lykilorð fyrir þessa týpu er \textbf{str}.
 
 \section{Strengir skilgreindir}\index{Strengir skilgreindir}
 Til þess að afmarka texta og segja vélinni að fara með hann sem af týpunni strengur þarf að nota tákn.
-Við þurftum ekki að gera það þegar við skrifuðum tölurnar en nú, og seinna, munum við þurfa sér tákn til þess að segja vélinni gögn af hvaða týpu hún er að vinna með.
+Við þurftum ekki að gera það þegar við skrifuðum tölurnar en nú, og seinna, notum við ákveðin tákn fyrir ákveðnar týpur.
 
 Táknin sem skilgreina strengi eru gæsalappir.
-Einfaldar eða tvöfaldar.
+Einfaldar gæsalappir eru úrfellingakomman sem venjulega er lengst til hægri á lyklaborði, tvöfaldar gæsalappir eru sér tákn sem er venjulega á sama takka og 2.
+Einnig er hægt að gera streng með þremur einföldum gæsalöppum.´
 
 \begin{lstlisting}[caption=Strengir skilgreindir]
 # Fyrsti strengurinn okkar
@@ -30,7 +31,7 @@ En það er enginn raun munur á því hvernig Python meðhöndlar þær.
 \section{Strengir og reikniaðgerðir}\index{Strengir og reikniaðgerðir}
 Við erum búin að sjá að það megi leggja tölur saman og margfalda þær.
 Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma með strengi og hvaða áhrif það hefur.
-
+\comment{
 \todo{vísa í vinnubók inni í þessum kóðabút}
 
 \begin{lstlisting}[caption=Strengir og reikniaðgerðir]
@@ -44,11 +45,11 @@ Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma með 
 # En hvað gerist þegar við notum þær?
 
 \end{lstlisting}
-
+}
 
 Þegar við notum + til að setja saman strengi þá erum við að beita \textit{samskeytingu} (e. concatenation).
 Samskeyting þýðir að einum streng er bætt við fyrir aftan annan streng.
-Það skiptir máli hvor er fyrir framan: "halló" + "bless" verður að "hallóbless" en "bless" + "halló" verður að "blesshalló".
+Það skiptir máli hvor er fyrir framan: \texttt{"halló" + "bless"} verður að \texttt{"hallóbless"} en \texttt{"bless" + "halló"} verður að \texttt{"blesshalló"}.
 
 \begin{lstlisting}[caption=Samskeyting strengja]
 
@@ -70,7 +71,7 @@ sameinadir_b_og_a = b + a
 
 # Takið eftir að þarna er ekkert bil á milli strengjanna.
 
-# Á þessu er hægt að svindla:
+# Hægt er að komast framhjá því svona:
 fyrsta_nafn = "Valborg"
 seinna_nafn = "Sturludóttir"
 fullt_nafn = fyrsta_nafn + " " + seinna_nafn
@@ -85,7 +86,7 @@ Strengjalenging virkar þannig að þú tilgreinir hversu oft, í heilum tölum,
 eitt_ord = "kex"
 eitt_ord*3
 
-#skilar okkur
+# skilar okkur
 "kexkexkex"
 \end{lstlisting}
 
@@ -135,13 +136,13 @@ Ef við búum til breytu eins og í kóðabút \ref{lst:reiknivirkjagildisveitin
 Þá erum við búin að endurskilgreina breytuna okkar, hún var eitthvað áður en nú er hún eitthvað annað.
 
 Þar sem strengir eru með ákveðin númeraða vísa sem benda á ákveðin tákn gætum við þá ekki bara sagt við vélina ,,mig langar að breyta bara tákni númer 0''?
-Það er ekki í boði því að í Python eru strengir óbreytanlegir (e. immutable) og því er bara hægt að vinna með því eins og þeir eru eða endurskilgreina þá alveg.
+Það er ekki í boði því að í Python eru strengir óbreytanlegir (e. immutable) og því er bara hægt að vinna með þá eins og þeir eru eða endurskilgreina þá alveg.
 
 \subsection{Neikvæðir vísar}
 Það má einnig telja frá hægri til vinstri.
 Ef okkur langar að vinna með öftustu stökin í streng þurfum við ekki að vita hvað strengurinn er langur, við getum talið frá hægri endanum og unnið með neikvæða vísa.
-Í því tilfelli byrjum við ekki að telja í 0, því að þá myndi verða til tvíræðni (e. ambiguity).
-Tölvan myndi ekki vita hvorn 0 vísinn við værum að biðja um þegar við segðum strengur[0], hvort við værum að tala um núll frá vinstri eða hægri.
+Í því tilfelli byrjum við ekki að telja í 0, því það væri tvírætt (e. ambiguous).
+Tölvan myndi ekki vita hvorn 0 vísinn við værum að biðja um þegar við segðum \texttt{strengur[0]}, hvort við værum að tala um núll frá vinstri eða hægri.
 Þess vegna byrjum við að telja frá hægri í -1, og höldum þannig áfram þar til við erum komin niður í -n þar sem n er lengdin á strengnum.
 Svo strengurinn "kex" er með vísana 0,1 og 2 en einnig vísana -3, -2 og -1 bæði í þessari röð, svo vísir -1 er alltaf síðasta táknið í streng.
 
