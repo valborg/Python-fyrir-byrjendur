@@ -128,9 +128,11 @@ val + 5
 Þegar við keyrum línu 2 í kóðabút \ref{lst:breytur-kynntar} segjum við vélinni að hafa aðgengilegt minnissvæði sem við getum notað með því að skrifa orðið val, og setja í það minnissvæði gildið 5.
 Breytan er svo notuð í línu 5, nafnið hennar er notað í útreikningi sem er alveg eins í kóðabút \ref{lst:reiknadg}.
 
+\begin{valBox}
 Ef þú prófar þig áfram við að búa til breytur í vinnubók og keyra sellur gætir þú rekist á svolítið sem hefur ekki gerst áður, að þegar sella inniheldur eingöngu gildisveitingu og er keyrð þá ,,gerist ekkert''.
 Þetta finnst mörgum mjög skrýtið því þau vilja fá einhverja útkomu.
-En útkoman er sú að þú sagðir vélinni að geyma þetta, þú sagðir henni ekki að gera neitt annað.
+En útkoman er sú að þú sagðir vélinni að geyma þetta, þú sagðir henni ekki að gera neitt annað.	
+\end{valBox}
 
 Breytur eru skilgreindar vinstra megin við jafnaðarmerki í Python.
 Eins og það væri lesið, val fær gildið 5.
@@ -141,7 +143,7 @@ Eins og það væri lesið, val fær gildið 5.
 Nokkrar reglur í nafnavali á breytum, þetta vill vefjast fyrir sumum en lærist fljótlega:
 \vspace{0.5cm}
 \begin{enumerate}
-	\item Kóðalitunin á breytuheitinu má ekki vera annað en venjulegi liturinn fyrir kóða, þannig að ef nafnið fær áherslumerkingu (annan lit) er það ekki löglegt breytuheiti. 
+	\item Kóðalitunin á breytuheitinu má ekki vera annað en venjulegi liturinn fyrir kóða, þannig að ef nafnið fær áherslumerkingu (annan lit) er það ekki löglegt breytuheiti því það er frátekið lykilorð í Python. 
 	Áherslulitunin í númeruðu kóðabútunum í þessari bók er marklaus því hún er mjög frumstæð.
 	Dæmi um það sem fær áherslulitun eru frátekin lykilorð og tölustafir.
 	\item Breytuheitið ætti ekki að innihalda séríslenskan staf (það er löglegt í jupyter vinnubókum en er hrikalega slæmur ávani því það er ekki löglegt allsstaðar).
@@ -152,7 +154,7 @@ Nokkur tilmæli um breytunöfn með tilliti til nafnavenja í Python:
 \vspace{0.5cm}
 \begin{enumerate}
 	\item Breytuheiti byrja á litlum staf.
-	\item Ef það þarf að gera löng breytuheiti er venjan að nota snákaframsetningu (e. snake casing) sem felur í sér að gera niðurstrik á milli orða, dæmi \texttt{thetta\_er\_langt\_nafn\_a\_breytu}.
+	\item Ef það þarf að nota löng breytuheiti er venjan að nota snákaframsetningu (e. snake casing) sem felur í sér að gera niðurstrik á milli orða, dæmi \texttt{thetta\_er\_langt\_nafn\_a\_breytu}.
 	Annars er til kamelframsetning (e. camel casing) sem felur í sér að annað hvert orð er með stórum staf, dæmi \texttt{thettaErLikaLangtBreytuheiti}.
 	Hvort sem þið endið á að nota meira, haldið ykkur bara við annað þeirra.
 	\item Breytuheiti eiga að vera lýsandi.
@@ -185,10 +187,10 @@ utreiknud_laun_eftir_skatt = 0.65 * laun
 # frábært, lýsandi og gott breytuheiti (hér er þó gert ráð fyrir að vélin þekki breytuna laun)
 \end{lstlisting}
 
-Nú þegar við höfum séð hvernig má skilgreina breytu viljum við vita hvernig á að nota þessa breytu.
+Nú þegar við höfum séð hvernig má skilgreina breytu með gildisveitingu viljum við vita hvernig á að nota þessa breytu.
 Ef við snúum okkur aftur að reiknivélasamlíkingunni um ANS takkann þá ætti kóðabútur \ref{lst:notabreytu} að geta sýnt með eðlislægum hætti hvernig breytur nýtast.
-Fyrst segi ég vélinni hvað það er sem ANS vísar á, svo segi ég vélinni að mig langar til þess að búa til nýja breytu sem á að byggja á því sem ANS inniheldur.
-Í þessum kóðabút er svo haldið áfram með þessa afleiddu breytu og önnur afleidd breyta búin til útfrá henni.
+Fyrst segjum við vélinni hvað það er sem ANS á að vísa á. Svo í línu 5 segjum við vélinni að geyma aðra breytu, x, sem byggir á ANS breytunni okkar.
+Í þessum kóðabút er svo haldið áfram með þessa afleiddu breytu x og önnur afleidd breyta búin til útfrá henni.
 Það sem gerist svo í endann er sambærilegt við það að ýta á ,,='' takkann á reiknivélinni.
 
 Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur print með svigum fyrir aftan og inni í svigunum er breytan okkar.
@@ -199,22 +201,28 @@ Ef þar hefði staðið \texttt{print(halft\_x)} hefðum við fengið svarið se
 
 \begin{lstlisting}[caption=Að nota breytu, label=lst:notabreytu]
 # Hér framkvæmi ég einhvern útreikning sem ég geymi í breytunni ANS
-ANS = 5**2 + (4+8.9)**2
+ANS = 3/4 * (3.1415 * 7)**(1/3)
 
-# Segjum að þetta hafi verið endapunkturinn í löngu algebrudæmi og nú veit ég hvað y er, og get þá nýtt það til að finna x eins og verða vill svo oft í stærðfræði að x sé týnt. Gefum okkur að x = 3 * y og því fæst
+# fáum afleidda breytu
 x = 3 * ANS
 
-# Nú ef við viljum reikna eitthvað út með x eigum við það til í minnissvæði merktu x með réttu gildi. Til dæmis með því að búa til breytu fyrir hálft x.
+# fáum afleidda breytu aftur
 halft_x = x/2
-
 
 # Nú langar okkur til að vera viss um að við séum við vitrænt svar svo við biðjum tölvuna um að segja okkur hvað er geymt í breytunni x.
 print(x)
-
 \end{lstlisting}
+Í línu 2 í kóðabút \ref{lst:notabreytu} er breytan ANS skilgreind, í línu 5 er hún svo notuð,
+Í línu 5 er breytan x skilgreind og í línu 8 er hún notuð, og í línu 8 er halft\_x skilgreind og í línu 11 er hún notuð.
+Breytu má einungis nota eftir að hún hefur verið skilgreind.
+Ef við reynum að vísa í breytu án þess að hafa tekið frá minnishólf með sama nafni þá lendir vélin í vandræðum.
+Eins ef við værum að segja vinum okkar sögu og nefna Hafstein á nafn án þess að kynna hann myndi viðmælendur okkar truflast og biðja um útskýringu.
+Gerið tilraun á þessu með því að færa til línurnar í kóðabútnum og sjá hvað gerist þegar kóðinn er keyrður.
 
-Við megum beita print skipuninni óspart og hvetur höfundur til þess að lesandi venji sig á að skoða úttakið sitt í hverju þrepi áður en leitað er hjálpar til annarra.
-Print er \textit{fall}, við skoðum föll nánar í kafla \ref{k:föll} en þangað til munum við kynnast nokkrum innbyggðum föllum eins og print().
+
+Print, sem er notað í línu 11, er \textit{fall}, við skoðum föll nánar í kafla \ref{k:föll} en þangað til munum við kynnast nokkrum innbyggðum föllum eins og print().
+Við megum beita print skipuninni óspart og hvetur höfundur til þess að lesandi venji sig á að skoða úttakið sitt í hverju þrepi áður en leitað er hjálpar til annarra, einnig má fletta upp í listanum yfir algengar villur í kafla \ref{uk:villur-algengar}.
+
 
 Núna höfum við séð tvær týpur, heiltölur og fleytitölur.
 Breyta getur innihaldið hvernig týpu sem er.
@@ -273,7 +281,6 @@ laun *= 1 + verdbolga # þetta má svo keyra endurtekið til að skoða fram í 
 
 Hér sést að það er gagnlegt og fljótlesið þegar það á að uppfæra gildi á breytu að gera það með því að nota reiknivirkjann með gildisveitingunni.
 Í kóðabútnum að ofan sést að athugasemdir eru skrifaðar inni í línum líka, það er stundum gagnlegt að skrifa stuttar athugasemdir inni í kóða með þessum hætti en betra er þó að skjala hann skilmerkilega efst við viðeigandi kóðabút.
-Allar athugasemdir eru hunsaðar af vélinni og því hefur allt sem er fyrir aftan \# merkið, hver sem það er, engin áhrif á útkomuna.
 
 \section{Villur}\index{Villur}\label{uk:tolur-villur}
 Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
