@@ -150,19 +150,31 @@ Svo strengurinn "kex" er með vísana 0,1 og 2 en einnig vísana -3, -2 og -1 b�
 Nú vitum við hvernig á að sækja eitt stakt tákn upp úr streng.
 En hvernig náum við í einhvern hluta úr honum?
 Það er einnig gert með hornklofunum og við notum þá með ákveðnum hætti, við fáum að setja inn fleiri upplýsingar heldur en bara hvaða staka vísi við viljum.
-Við notum vísana svona: [vísir sem á að byrja fyrir framan : vísir sem á að hætta fyrir framan: stærð á skrefi sem á að taka við lesturinn].
-Þarna eru semsagt tveir tvípunktar sem er verið að nota og tölurnar sem koma á milli þeirra er afmörkunin á því hvað við viljum lesa upp úr tilteknum streng.
-Nú er vert að nefna að þegar við notum þessa málskipan eru ákveðin gildi sjálfgefin, það er við þurfum ekki að taka þau fram.
+Þá megum við nýta okkur allt að þrjá stika (e. parameters).
 
-Sjálfgefin gildi við að ná í hlutstreng:
+Stikarnir okkar eru hvar við viljum byrja að lesa hlutstrenginn okkar, hvar við viljum hætta og hvað við viljum taka stór skref.
+Þetta er gert með heilum tölum með tvípunktum á milli, sem má sjá í kóðabút \ref{lst:hlutstrengir}.
+Í línu 4 eru tveir tvípunktar innan hornklofanna og tölurnar sem koma á milli þeirra er afmörkunin á því hvað við viljum lesa upp úr \texttt{strengur}.
+Nú er vert að nefna að þegar við notum þessa málskipan eru ákveðin gildi sjálfgefin, skoðum hvað það þýðir.
+
+Tökum dæmi um \texttt{strengurinn\_minn[a:b:c]} þar sem a, b og c eru stikar til að sækja hlutstreng, hvað getur staðið fyrir a, b, og c? Hvað ef við sleppum þeim? Hver eru sjálfgefin gildi þessara stika?
+
+Stikarnir a, b, og c verða að vera:
 \begin{enumerate}
-	\item vísirinn sem við byrjum fyrir framan er fremsti stafurinn, eða fremst.
-	\item vísirinn sem við hættum fyrir framan er fyrir aftan aftasta stafinn, svo síðasta táknið er lesið.
-	\item skrefastærðin er sjálfgefin 1, það er að við skoðum hvert einasta tákn og hoppum ekki yfir neitt stak.
+	\item a er vísirinn sem við byrjum fyrir framan, ef þetta væri 0 væri \textit{leshaus} vélarinnar staddur fyrir framan núllta táknið og það yrði lesið næst.
+	Þessi vísir verður að vera lægri en b (annars fæst tómur strengur).
+	Sjálfgefið er að a sé fremsti stafurinn í strengnum.
+	\item b er vísirinn sem við hættum fyrir framan, þar stoppum við leshausinn og vélin les ekki það tákn.
+	Sjálfgefið er fyrir aftan aftasta stafinn svo síðasta táknið er lesið, sem gerir það að verkum að við þurfum ekki að vita hvað strengur er langur til að geta sótt hann allan.
+	\item c er skrefastærðin sem er sjálfgefin 1, það er að við skoðum hvert einasta tákn og hoppum ekki yfir neitt stak.
+	Ef c er valið stærra er það fjöldinn tákna sem á að hoppa yfir frá lesstað að næsta tákni.
 \end{enumerate}
 
 \begin{lstlisting}[caption=Hlutstrengir, label=lst:hlutstrengir]
 strengur = "kex með smjöri, osti og sultu"
+
+# Sækjum einhvern hluta úr strengnum
+print(strengur[1:8:1])
 
 # mig langar að sækja allan strenginn
 sami_strengur = strengur[::] # hér nota ég þann kost í Python að setja inn fyrir mig sjálfgefin gildi
@@ -185,20 +197,20 @@ ofugur = strengur[::-1]
 \end{lstlisting}
 
 
-\section{Aðferðir á strengi}\index{Aðferðir á strengi}
+\section{Strengjaaðferðir}\index{Strengjaaðferðir}
 Áður en aðferðir á strengi eru kynntar þarf að útskýra stuttlega hvað aðferðir eru.
-Við höfum séð print() fallið notað t.d. í kóðabút \ref{lst:notabreytu} og í kóðabút \ref{lst:stafabil}, það er innbyggt fall í Python sem prentar það sem beðið er um á staðalúttak. \todo{er ég búin að útskýra staðalúttak?}
-Það fall virkar eitt og sér og þarf bara að skrifa nafnið á því, gera sviga og setja inn í svigana það sem við viljum láta fallið fá \todo{vísa í falla kaflann}.
+Við höfum séð print() fallið notað t.d. í kóðabút \ref{lst:notabreytu} og í kóðabút \ref{lst:stafabil}, það er innbyggt fall í Python sem prentar það sem beðið er um á staðalúttak.
+Það að fall sé innbyggt þýðir að nafnið á því er frátekið og hægt er að beita því án þess að beita kóðasafni (sjá kafla \ref{k:import}).
+Innbyggð föll í Python eru nokkur og koma þau fyrir hér og þar í bókinni, ekki er þörf á að kynna virkni þeirra sérstaklega heldur er gagnlegra að kynna þau til sögunnar jafnóðum eftir því sem við þurfum á þeim að halda.
+
+Í fljótu bragði virkar fall eins og við þekkjum föll úr stærðfræði, það heitir einhverju nafni, eins og \texttt{cos}, og tekur við einhverju viðfangi innan sviga, eins og \texttt{cos(x)}, og getur skilað einhverri niðurstöðu, sjá má meira um föll í kafla \ref{k:föll}.
 Aðferðir eru sérhæfð föll sem virka á ákveðnar gagnatýpur.
 Þannig að allar aðferðir eru föll, ekki öll föll eru aðferðir.
 Á ensku eru aðferðir kallaðar \textit{methods} og föll \textit{functions}.
 Aðferðir eru í raun ,,hengdar aftan á" þá týpu sem þær eiga að verka á, það er gert með því að skrifa nafnið á breytunni sem inniheldur gögnin sem við viljum framkvæma aðferðina á, gera svo punkt, skrifa nafnið á aðferðinni og setja sviga, inn í svigana fara öll þau viðföng sem aðferðin tekur við.
-\todo{vísa í eitthvað sem útskýrir viðföng}
 
-\begin{lstlisting}[caption=Aðferðir kynntar, label=lst:adferdir]
-strengur = "kex með smjöri, osti og sultu"
-\end{lstlisting}
-\todo{fylla inn í þennan kóðabút}
+Þetta er í raun fyrstu kynni okkar af hlutbundinni forritun.
+Strengurinn er hlutur og aðferðinn verkar á hlutinn.
 
 Annað sem þarf að hafa í huga áður en við vinnum með aðferðir á strengi er að strengir eru óbreytanlegir (e. immutable) sem þýðir að aðferðir sem eru notaðar á þá skila öðrum strengjum í stað þess að breyta strengnum sem við keyrðum aðferðina á.
 Með það í huga skulum við skoða eftirfarandi lista af aðferðum sem áhugavert er að taka fyrir.
@@ -212,9 +224,9 @@ Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær séu að verka �
 	\item strengur.lower() skilar strengnum "valborg sturludóttir" þar sem allir stafir eru nú lágstafir.
 	\item strengur.switchcase() skilar strengnum "VALBORG sTURLUDÓTTIR" þar sem búið er að skipta út lágstöfum fyrir hástafi og öfugt.
 	\item strengur.index('v') skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
-	\item strengur.index('x') skilar villu þar sem táknið 'x' hefur engann vísi í strengnum
+	\item strengur.index('x') skilar villu þar sem táknið 'x' kemur ekki fyrir í strengnum
 	\item strengur.find('v') skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
-	\item strengur.find('x') skilar tölvunni -1 þar sem 'x' finnst ekki í stregnum. 
+	\item strengur.find('x') skilar tölunni -1 þar sem 'x' finnst ekki í stregnum. 
 \end{enumerate}
 \vspace{10px}
 
@@ -226,6 +238,11 @@ Takið eftir því að þarna er orðið lykilorðið ,,skilar" það er að vi�
 Í þessari bók verða ekki gerð skil á öllum þeim aðferðum sem eru í boði fyrir þær týpur sem við skoðum.
 Þær eru mýmargar og til ýmiss gagnlegar en það er út fyrir svið þessarar bókar að taka hverja fyrir sig fyrir og því munum við bara nefna þær gagnast okkur að skoða.
 Höfundur hvetur þó til að lesandi geri ítarlegar tilraunir og prófanir.
+
+\begin{lstlisting}[caption=Aðferðir kynntar, label=lst:adferdir]
+	strengur = "kex með smjöri, osti og sultu"
+\end{lstlisting}
+\todo{fylla inn í þennan kóðabút, setja inn .format()??}
 
 \section{Verkefni}
 \begin{exercise}\label{str1}
