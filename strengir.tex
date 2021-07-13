@@ -235,6 +235,12 @@ Takið eftir því að þarna er orðið lykilorðið ,,skilar" það er að vi�
 Þannig að ef við viljum vinna með einhverja útkomu byggða á streng þá þurfum við að fá útkomuna í hendurnar, því strengurinn sem aðferðinni var beitt á breytist ekki neitt við að kalla í aðferðina.
 Í upptalningunni hér að ofan getum við keyrt allar þessar línur í röð eins og kóða og búist við að fá þessi svör því að breytan strengur verður aldrei fyrir neinum breytingum, hún helst sem "valborg Sturludóttir" þrátt fyrir að við köllum í alla þessa fylkingu af aðferðum.
 
+Þar sem það sem strengjaaðferðirnar skila flestar eru strengir má setja hverja aðferðina á eftir annarri, eins og \texttt{"Valborg".upper().lower().swapcase().capitalize()}.
+Þessi aðgerðar-súpa er tiltölulega vitlaus en leyfileg, það sem er að gerast er að fyrst er \texttt{upper} keyrt og svo er \texttt{lower} keyrt á það sem upper skilaði, og svo koll af kolli.
+Einnig má þarna á milli ná í hlutstreng og gera t.d. \texttt{"Valborg"[0:3].lower()}.
+Svona vinnur vélin sig frá vinstri til hægri svo lengi sem að það sem skilast vinstra megin sé eitthvað sem er löglegt að beita hægri hliðinni á.
+Dæmi um ólöglegt væri \texttt{"Valborg".index('b').upper()} þar sem .index() skilar heiltölu og á þær er ekki hægt að beita aðferinni .upper().
+
 Í þessari bók verða ekki gerð skil á öllum þeim aðferðum sem eru í boði fyrir þær týpur sem við skoðum.
 Þær eru mýmargar og til ýmiss gagnlegar en það er út fyrir svið þessarar bókar að taka hverja fyrir sig fyrir og því munum við bara nefna þær gagnast okkur að skoða.
 Höfundur hvetur þó til að lesandi geri ítarlegar tilraunir og prófanir.
