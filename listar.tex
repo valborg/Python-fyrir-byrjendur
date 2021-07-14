@@ -5,8 +5,8 @@ Listar eru gagnagrindur, sem þýðir að þeir geta geymt fyrir okkur hin ýmsu
 Listar eru skilgreindir með hornklofum [ ] og er lykilorðið þeirra \textbf{list}.
 
 \section{Listar skilgreindir}\index{Listar skilgreindir}\label{uk:listar-skilgreindir}
-Listar geyma, í ákveðinni röð, þau gögn sem við viljum geyma sem mega vera af hvaða týpu sem er.
-Gögnin sem eru sett inn í listann eru kölluð stök og röðin sem þau eru í eru aðgengileg eftir vísum eða sætisnúmerum alveg eins og strengir.
+Listar geyma, í ákveðinni röð, þau gögn sem við viljum geta notað, þau mega vera af hvaða týpu sem er.
+Gögnin sem eru sett inn í listann eru kölluð stök og röðin sem þau eru í eru aðgengileg eftir vísum eða sætisnúmerum alveg eins og tákn í strengjum.
 Stökin eru aðgreind með kommum.
 Þær týpur sem við höfum séð hingað til eru heiltölur, fleytitölur, strengir og listar.
 Allt eru þetta möguleg stök í lista.
@@ -16,12 +16,30 @@ Allt eru þetta möguleg stök í lista.
 listinn_minn = []
 
 # þegar við skilgreinum lista aðgreinum við stökin með kommum
+talna_listi = [1, 2, -3000, 4.8, -3.14, 9]
+
+strengja_listi = ["halló", "bless", "11", "6"]
+
+tala_null = talna_listi[0]
+
+strengur_eitt = strengjalisti[1]
+
+listi_af_listastrengjunum = strengja_listi[1:3]
+
 nyr_listi = ["núllta stakið", 1, 2, 3.0, "fjórða stakið", [5]]
+
+talan_fimm = nyr_listi[5][0]
 \end{lstlisting}
 
-Í kóðabút \ref{lst:listar-skilgreindir} sjáum við að við erum með 6 stök í listanum nyr\_listi sem er skilgreindur í línu 6 \todo{passa að breyta ekki kóðabút til að þessi vísun haldist}.
+Í kóðabút \ref{lst:listar-skilgreindir} sjáum við fjóra lista skilgreinda, sá fyrsti inniheldur ekkert stak og er tómur listi, næstu tveir innihalda einsleit gögn og sá fjórði inniheldur fjölbreytt gögn.
+Í línum 9, 11 og 13 eru svo sótt gögn úr þessum einsleitu listum.
+Breytan í línu 9 fær gildið 1 sem er heiltala, breytan í línu 11 verður strengurinn \texttt{bless} og breytan í línu 13 verður listi sem inniheldur strengina \texttt{bless} og \texttt{11}. \todo{athuga formatinng}
+Við sjáum einnig að við erum með 6 stök í listanum nyr\_listi sem er skilgreindur í línu 15 \todo{passa að breyta ekki kóðabút til að þessi vísun haldist}.
 Fremsta stakið er strengur, næstu þrjú eru tölur, síðan kemur annar strengur og síðasta stakið í sæti 5 er listi.
 Sá listi inniheldur eitt stak sem er þá í núllta vísi í þessum innri lista.
+Það sem sést svo í línu 17 er að hornklofa málskipan er beitt á hornklofa málskipan.
+Þetta er eins og að skeyta einni strengjaaðferð fyrir aftan aðra eins og við sáum í lok síðasta kafla.
+Það sem gerist er að fyrst skoðar vélin hvað er í 5 sæti í breytunni \texttt{nyr\_listi}, sem er listinn [5], þá nær vélin í það sem er í núllta sæti í þeim lista sem er heiltalan 5.
 
 Ef við hugsum okkur töflureikni eins og Calc eða Excel þá getum við ímyndað okkur að ein lína sé eins og einn listi, hver dálkur er stak í listanum og ein röð er listinn sem heldur utan um þau.
 Þá getum við líka ímyndað okkur að ef við erum með margar raðir séu þær geymdar á einni örk eða einu skjali.
@@ -38,7 +56,7 @@ Sjáum hvernig það myndi líta út í kóðabút \ref{lst:listar-arkir}
 
 starfsfolk = [["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"],
 			  ["Kristján Kristjánsson", "kristjan@fyrirtaki.is","Laun","4445589"],
-			  ["Halldóra Halldórudóttir", "halldora@fyrirtaeki", "Skrifstofa", "4445500"]]
+			  ["Halldóra Halldórudóttir", "halldora@fyrirtaeki.is", "Skrifstofa", "4445500"]]
 
 \end{lstlisting}
 
