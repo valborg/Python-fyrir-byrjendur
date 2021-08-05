@@ -32,16 +32,16 @@ talan_fimm = nyr_listi[5][0]
 \end{lstlisting}
 
 Í kóðabút \ref{lst:listar-skilgreindir} sjáum við fjóra lista skilgreinda, sá fyrsti inniheldur ekkert stak og er tómur listi, næstu tveir innihalda einsleit gögn og sá fjórði inniheldur fjölbreytt gögn.
-Í línum 9, 11 og 13 eru svo sótt gögn úr þessum einsleitu listum.
+Í línum 9, 11 og 13 eru gögn svo sótt úr þessum einsleitu listum.
 Breytan í línu 9 fær gildið 1 sem er heiltala, breytan í línu 11 verður strengurinn \texttt{bless} og breytan í línu 13 verður listi sem inniheldur strengina \texttt{bless} og \texttt{11}. \todo{athuga formatinng}
 Við sjáum einnig að við erum með 6 stök í listanum nyr\_listi sem er skilgreindur í línu 15 \todo{passa að breyta ekki kóðabút til að þessi vísun haldist}.
 Fremsta stakið er strengur, næstu þrjú eru tölur, síðan kemur annar strengur og síðasta stakið í sæti 5 er listi.
 Sá listi inniheldur eitt stak sem er þá í núllta vísi í þessum innri lista.
-Það sem sést svo í línu 17 er að hornklofa málskipan er beitt á hornklofa málskipan.
+Það sem sést svo í línu 17 er keðjun (e. chain) hornklofa, þannig að hornklofa er beitt á það sem fyrri hornklofinn skilaði.
 Þetta er eins og að skeyta einni strengjaaðferð fyrir aftan aðra eins og við sáum í lok síðasta kafla.
 Það sem gerist er að fyrst skoðar vélin hvað er í 5 sæti í breytunni \texttt{nyr\_listi}, sem er listinn [5], þá nær vélin í það sem er í núllta sæti í þeim lista sem er heiltalan 5.
 
-Ef við hugsum okkur töflureikni eins og Calc eða Excel þá getum við ímyndað okkur að ein lína sé eins og einn listi, hver dálkur er stak í listanum og ein röð er listinn sem heldur utan um þau.
+Ef við hugsum okkur töflureikni eins og Calc eða Excel þá getum við ímyndað okkur að ein lína þar sé eins og einn listi hér, að hver dálkur þar innihaldi gögn sem væri stak í listanum hér.
 Þá getum við líka ímyndað okkur að ef við erum með margar raðir séu þær geymdar á einni örk eða einu skjali.
 Sjáum hvernig það myndi líta út í kóðabút \ref{lst:listar-arkir}
 
@@ -66,7 +66,7 @@ Einnig tökum við eftir því að hér sjáum við í fyrsta sinn inndrátt, þ
  
 \section{Að vinna með gögn}\index{Að vinna með gögn}\label{uk:gagnavinnsla-listar}
 Þegar við geymum gögn viljum við að þau séu aðgengileg og að við getum skoðað þau, breytt þeim og unnið með á máta sem hentar okkur.
-Listar gera okkur kleyft að nálgast gögn eftir sætisvísum.
+Listar gera okkur kleift að nálgast gögn eftir sætisvísum, við eigum eftir að sjá gagnagrindur sem geyma stökin á annan máta.
 Við náum í gögn upp úr lista eftir sætisvísi alveg eins og við sóttum tiltekið tákn úr streng, með því að nota hornklofa og það vísa sem við vildum.
 Sætisvísar eru frá 0 upp í lengdina á listanum að einum frádregnum, svo ef það eru þrjú stök í listanum eins og í kóðabút \ref{lst:listar-arkir}, þá er listinn af lengd 3 og vísarnir í honum er 0,1 og 2.
 Einnig megum við nota neikvæða vísa, eins og í strengjum, þar sem síðasta stakið er í vísi -1 og fremsta stakið er í vísi sem er jafn neikvæðri lengd listans.
@@ -87,13 +87,13 @@ listinn = [1,2,3, "langur strengur sem hefur einnig sætisnúmer"]
 listinn[1] # skilar okkur tölunni 2
 
 # Við getum líka sótt gögn upp úr þeim gögnum sem leyfa það
-listinn[3][0] # skilar okkur stafnum l
+listinn[3][1] # skilar okkur stafnum a
 \end{lstlisting}
 
-Við sjáum í kóðabút \ref{lst:listar-gogn-sott} í línu 11 að þar erum við að keðja (e. to chain) hornklofana okkar.
-Þetta megum við því að listinn[3] skilar okkur til baka strengnum "langur strengur sem hefur einnig sætisnúmer" og við megum sækja úr honum stak númer 0 sem er aðgengilegt með því að gera [0] fyrir aftan listinn[3].
-Þetta gagnast okkur sérstaklega þegar við lítum aftur á starfsmanahaldið okkar hér á undan og viljum geta sótt gögn upp úr innri listum.
-Sjáum hvernig við getum fengið upplýsingar sem eru skráðar um tiltekið starfsman úr listanum sem við geymdum í kóðabút \ref{lst:listar-arkir}.
+Við sjáum í kóðabút \ref{lst:listar-gogn-sott} í línu 11 að þar erum við að keðja hornklofana okkar.
+Þetta megum við því að listinn[3] skilar okkur til baka strengnum \texttt{"langur strengur sem hefur einnig sætisnúmer"} og við megum sækja úr honum stak númer 0 sem er aðgengilegt með því að gera \texttt{[0]} fyrir aftan \texttt{listinn[3]}.
+Þetta gagnast okkur sérstaklega þegar við lítum aftur á starfsmanahaldið okkar í kóðabút \ref{lst:listar-arkir} og viljum geta sótt gögn upp úr innri listum.
+Sjáum hvernig við getum fengið upplýsingar sem eru skráðar um tiltekið starfsman úr listanum.
 
 \begin{lstlisting}[caption=Unnið með gögn úr lista, label=lst:listar-gagnanotkun]
 print(starfsfolk[0])
@@ -130,7 +130,7 @@ print(starfsfolk)
 
 Eins og tekið var fram í kaflanum um strengi þá er ekki ætlunin að fara yfir allar þær innbyggðu aðferðir sem til eru fyrir lista heldur draga fram nokkrar sem eru mjög gagnlegar til að auka skilning á notkun á aðferðum.
 
-Gefum okkur að við eigum listann [0,2,1,3] sem er geymdur í breytunni listinn\_minn
+Gefum okkur að við eigum listann \texttt{[0,2,1,3]} sem er geymdur í breytunni \texttt{listinn\_minn}
 
 \begin{itemize}
 	\item listinn\_minn.pop() 
@@ -153,7 +153,7 @@ Gefum okkur að við eigum listann [0,2,1,3] sem er geymdur í breytunni listinn
 	\begin{itemize}
 		\item það sem þetta gerir er að raða listanum í röð með samanburðarvirkjum (þeir verða kynntir í kafla \nameref{k:segðir}), og stökin í listanum þurfa þá að vera samanburðarhæf.
 		\item aðferðin raðar listanum í röð frá lægsta gildi til hæsta gildis, það er okkur tamt þegar við skoðum talna lista en í því tilfelli að listinn innihaldi bara strengi þýðir það að listanum er raðað í stafrófsröð sem er skilgreind eftir því táknakerfi sem Python notar.
-		\item listinn\_minn.sort myndi gera það að verkum að hann sé nú geymdur sem [0,1,2,3] (gerum ráð fyrir að við höfum ekki keyrt neinar aðrar aðferðir á hann).
+		\item listinn\_minn.sort() myndi gera það að verkum að hann sé nú geymdur sem [0,1,2,3] (gerum ráð fyrir að við höfum ekki keyrt neinar aðrar aðferðir á hann).
 		\item aðferðin skilar engu svo það er ekkert vit í því að gera x = listinn\_minn.sort()
 		\item sjá notkun í kóðabút \ref{lst:listar-sort}.
 	\end{itemize}
@@ -198,6 +198,7 @@ print(test)
 # lengdin á listanum er enn bara 3 og vísarnir eru 0,1 og 2.
 
 \end{lstlisting}
+\todo{Laga þetta allt, þessi kóðabútur er ekki hnitmiðaður og það vantar format á þennan texta hér og það þarf að laga hann líka til}
 Athugum hér að í kóðabút \ref{lst:listar-append} í línu ?? þá er stak í vísi 0 1, stak í vísi 1 er "nú bætum við streng aftast í listann" og í vísi 2 er stakið ["hér er heill listi", "með nokkrum stökum", "en hann er samt einn stakur listi", "og telst því sem að bæta við einu staki"].
 Þar sem stakið í vísi 2 er einnig listi þá má nota aðferðina .append() á hann og það sem gerist í línu ?? er að gögn eru sótt upp úr listanum með hornklofanotkun, eins og í kóðabút \ref{lst:listar-gagnanotkun}.
 Þannig keðjum við og getum bætt aftast í þennan innri lista með .append().
@@ -333,7 +334,7 @@ uppl_nem2 = nem2[header.index('heimavist')] + nem2[header.index('netfang')]\end{
 nested_list = [[[[0],1],2],["hvar"],["er"],[["valli"],"?"]]\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={lst4}]
-Hér þurfum við að athuga að listinn inniheldur marga lista og það má hreiðra notkun hornklofa til að sækja gögn.
+Hér þurfum við að athuga að listinn inniheldur marga lista og það má keðja notkun hornklofa til að sækja gögn.
 	\begin{lstlisting}
 valli = nested_list[3][0][0]
 print(type(valli))
@@ -387,7 +388,14 @@ Leystu eftirfarandi verkefni í röð:
 \end{enumerate}
 \end{exercise}
 \begin{Answer}[ref={lst6}]
-Hér þurfum við að athuga að listinn inniheldur marga lista og það má hreiðra notkun hornklofa til að sækja gögn.
+Hér þurfum við að athuga að í þessari lausn er gert ráð fyrir að við vitum hvað Askja endar eftir að hafa verið bætt við og eftir að listanum er raðað.
+Einnig er hægt að gera þetta með því að nota \texttt{index()} til þess að komast að því hvar innri listinn um Öskju er.
 \begin{lstlisting}
-\todo{leysa}\end{lstlisting}
+dyr= [["Bolli", 3, "Hamstur"], ["Snælda", 5, "köttur"]]
+dyr.append(["Askja", 13, "hundur"])
+dyr[2].append("eltir lauf") 
+dyr.sort()
+dyr[0].pop()
+dyr.pop(0)
+\end{lstlisting}
 \end{Answer}
