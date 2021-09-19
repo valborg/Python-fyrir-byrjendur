@@ -7,19 +7,28 @@ Við ætlum að kynnast því til hvers þær eru ætlaðar og hvers þær eru m
 Byrjum á því að skoða til hvers ,,að lykkja'' og hvað það eiginlega þýðir.
 Það að nota lykkju þýðir að skrifa forritsbút sem keyrir endurtekið.
 
-Nöfnin á lykkjunum verða ekki þýdd sérstaklega í þessari bók, öðruvísi en að nota hugmyndina á bakvið nöfnin til að segja að við gerum eitthvað á meðan eða fyrir hvert stak þó lykkjurnar séu enn kallaðar for og while lykkjur.
+Nöfnin á for og while verða ekki þýdd sérstaklega í þessari bók, en við segjum t.a.m. ,,að gera eitthvað á meðan'' eða ,,gera eitthvað fyrir hvert stak''.
 
 Tökum dæmi úr daglegu lífi; ef við viljum framkvæma einhverja aðgerð eins og að vaska upp búum við til reglu eins og að setja fyrst upp uppþvottahanska, láta vatnið renna og stafla öllu sem er óhreint við hliðina á vaskinum. 
 Svo viljum við endurtaka aðgerðina að þrífa hvern hlut sem er öðru megin við vaskinn, þar til þeir eru allir komnir hreinir hinu megin.
 Endurtekningin þarna er að taka upp hvern óhreinan hlut og þrífa hann.
-Þá gætum við sagt að fyrir hvern hlut sem er hægra megin, viljum við þrífa hann og setja svo vinstra megin (fer eftir því hvernig vaskurinn snýr) og hætta þegar hlutirnir hægra megin eru búnir.
-Þetta á ágætlega við um virkni for lykkja.
+Þá gætum við sagt að fyrir hvern hlut sem er hægra megin, viljum við þrífa hann og setja svo vinstra megin (fer eftir því hvernig vaskurinn snýr) og hætta þegar engir hlutir eru eftir hægra megin.
+Þetta ferli að framkvæma sömu aðgerð á stök í mengi er einmitt það sem for lykkja getur gert.
 
 Tökum annað dæmi úr daglegu lífi; ef við ætlum að bíða eftir einhverjum og framkvæma svo einhverja aðgerð þegar viðkomandi kemur þá myndum við væntanlega bíða þangað til að viðkomandi kemur.
 Svo á meðan viðkomandi er ekki enn kominn þá höldum við áfram að bíða.
 En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við myndum gefast upp.
-Þetta á ágætlega við um virkni while lykkja.
+Þetta ferli að halda áfram að framkvæma einhverja aðgerð þangað til að eitthvað skilyrði á ekki við er það sem while lykkja getur gert.
 
+Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
+Lykkjur eru kóðabútar sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
+For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
+While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
+
+\comment{
+	
+	%%%%%%%%%%%%%%%% comment byrjar
+	
 \section{Gagnleg lykilorð}\index{lykilord}\label{uk:lykkjulykilorð}
 Áður en lengra er haldið í hvernig á að beita lykkjum er ágætt að nefna nokkur grunn lykilorð sem hjálpa okkur gríðarlega.
 Þau eru \textbf{pass}, \textbf{continue}, \textbf{break} og \textbf{in}.
@@ -41,18 +50,7 @@ En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við 
 
 Skoðum nú lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
 
-Það sem þetta orð gerir er að spyrja hvort að eitthvað sé ,,í'' einhverju öðru eða taka fyrir stak í hlut sem hefur vísa eða stök.
-Þannig að þetta býr til segð sem skilar sanngildi eða einu tilteknu tákni eða staki úr hlut.
 
-\begin{lstlisting}[caption=Lykilorðið in, label=lst:lykkjur-in]
-# við viljum vita hvort að eitthvað tiltekið tákn sé í einhverjum ákveðnum streng:
-"a" in "Valborg"
-# þetta er eins og að spyrja með samanburðarvirkja hvort eitthvað sé satt eða ekki
-# þetta skilar okkur True þar sem táknið a er til staðar í strengnum Valborg
-
-"x" in "Valborg"
-# þetta skilar okkur False þar sem táknið x er ekki til staðar í strengum Valborg
-\end{lstlisting}
 
 Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
 Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
@@ -61,42 +59,62 @@ Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má
 Heiltölur, fleytitölur og sanngildi eru ekki ítranleg og því ekki hægt að rúlla í gegnum þau með for lykkju.
 Hægt er að komast framhjá því með því að kasta þeim í strengi.
 
+
+
+%% búið að nota þetta !
+
 \section{Lykkjur}\index{Lykkjur}
 Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
-Lykkjur eru kóðabútur sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
+Lykkjur eru kóðabútar sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
 For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
 While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
 
-\subsection{For}\index{For lykkjur}
-For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu textbf{in}, við höfum séð hvernig á að nota lykilorðið in, og fengið samlíkingu úr daglegu lífi til að átta okkur á því hvað for lykkjan gerir.
+%%%%%% comment endar
+}
+
+\section{For}\index{For lykkjur}
+For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu \textbf{in}.
+Það sem in gerir þegar það er notað eitt og sér er að spyrja hvort að \textit{eitthvað} sé ,,í'' \textit{einhverju öðru} (sjá kóðabút \ref{lst:lykkjur-in}) en í sem hluti af for lykkju þá er það in sem úthlutar lykkjunni næsta staki úr menginu til að skoða.
+Þannig að þetta býr til segð sem skilar sanngildi eða einu tilteknu tákni eða staki úr hlut.
 Nú skulum við líta á kóðabút \ref{lst:lykkjur-for} til að átta okkur á því hvernig lykkjan er notuð, hvernig við beitum inndrætti til að skilgreina stef lykkjunnar (það sem tilheyrir henni) og hvernig skilyrðissetningar bætast við þetta.
+
+\begin{lstlisting}[caption=Lykilorðið in, label=lst:lykkjur-in]
+print('er táknið a í strengum Valborg?')
+print("a" in "Valborg")
+
+print('er táknið x í Valborg?')
+print("x" in "Valborg")
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+'er táknið a í strengum Valborg?'
+True
+'er táknið x í strengum Valborg?'
+False
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Eins og sést í kóðabút \ref{lst:lykkjur-in} þá virkar in nokkuð svipað því sem orðið í gerir í setningu.
+Ekki gleyma þessu lykilorði við lykkjugerðina.
+Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á lykkjum.
 
 \begin{lstlisting}[caption=For lykkjur, label=lst:lykkjur-for]
 # við byrjum á að skilgreina streng
 strengur = "Valborg"
+print(strengur)
 
-# athugum hvernig á að setja upp okkar fyrstu lykku
+# athugum hvernig á að setja upp okkar fyrstu lykkju
 for stafur in strengur:
 	print(stafur)
 
-# Hérna búum við til breytuna stafur sem fær gildi hvers staks fyrir sig uppúr breytunni strengur
-# úttakið verður
-# V
-# a
-# l
-# b
-# o
-# r
-# g
-
-# sjáum hvernig við getum sett skilyrði inn í lykkjuna
+print()
 
 for stafur in strengur:
+	# við vitum að það er a í Valborg svo þetta mun einhvern tímann gerast
 	if(stafur == 'a'):
 		print(stafur)
 		
-# úttakið okkar verður
-# a
+print()
 
 # Skoðum nú hvernig við ítrum í gegnum lista:
 listinn_minn = [0, "0", [0]]
@@ -110,6 +128,25 @@ for x in listinn_minn:
 # 0
 # [0]
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Valborg
+V
+a
+l
+b
+o
+r
+g
+	
+a
+	
+0
+0
+[0]
+\end{lstlisting}
+
+\lstset{style=venjulegt}
 
 Tökum eftir í kóðabút \ref{lst:lykkjur-for} að breytan sem notuð er til að ítra í gegn er ekki skilgreind áður en við komum að lykkjunni, við þurfum ekki að gera x =  eða strengur = áður en við komum að lykkjunni.
 Það er vegna þess að breytan er skilgreind inni í lykkjunni fyrir okkur, hún er áfram aðgengileg en er ósköp gagnslaus eftir keyrsluna svo okkur er alveg sama um hana, hún er svokölluð tímabundin (e. temporary) breyta sem hættir að skipta máli eftir notkun innan lykkjunnar.
@@ -219,7 +256,7 @@ Við sjáum að lykkjunni er lokið því að print(storar\_tolur) kemur fram í
 Að sama skapi þá prentum við ekki út 13 því að break gerist fyrir ofan print() kallið.
 Þetta lykilorð getur reynst ómetanlegt þegar við skoðum while lykkjur.
 
-\subsection{While}\index{While lykkjur}
+\section{While}\index{While lykkjur}
 While lykkjur nota lykilorðið \textbf{while} og keyra ,,á meðan'' eitthvað skilyrði er enn satt.
 Þær eru helst ganglegar þegar við vitum ekki hvað við viljum að lykkjan keyri lengi eða þegar við viljum að hún keyri endalaust nema annað sé tekið fram (t.d. með break).
 
