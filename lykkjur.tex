@@ -87,9 +87,9 @@ print("x" in "Valborg")
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
-'er táknið a í strengum Valborg?'
+er táknið a í strengum Valborg?
 True
-'er táknið x í strengum Valborg?'
+er táknið x í Valborg?
 False
 \end{lstlisting}
 \lstset{style=venjulegt}
@@ -97,40 +97,22 @@ False
 Eins og sést í kóðabút \ref{lst:lykkjur-in} þá virkar in nokkuð svipað því sem orðið í gerir í setningu.
 Ekki gleyma þessu lykilorði við lykkjugerðina.
 Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á lykkjum.
+Í næstu kóðabútum verður sýnd grunnvirkni for-lykkjunnar.
 
-\begin{lstlisting}[caption=For lykkjur, label=lst:lykkjur-for]
+\begin{lstlisting}[caption=For lykkjur kynntar, label=lst:lykkjur-for-kynning]
 # við byrjum á að skilgreina streng
 strengur = "Valborg"
-print(strengur)
+print(strengur, "til viðmiðunar")
 
-# athugum hvernig á að setja upp okkar fyrstu lykkju
 for stafur in strengur:
 	print(stafur)
-
-print()
-
-for stafur in strengur:
-	# við vitum að það er a í Valborg svo þetta mun einhvern tímann gerast
-	if(stafur == 'a'):
-		print(stafur)
-		
-print()
-
-# Skoðum nú hvernig við ítrum í gegnum lista:
-listinn_minn = [0, "0", [0]]
-
-for x in listinn_minn:
-	# nú hleypur x í gegnum stökin í breytunni listinn_minn
-	print(x)
 	
-# þetta skilar okkur úttakinu
-# 0
-# 0
-# [0]
+print()
+print('lykkjan er búin')
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
-Valborg
+Valborg til viðmiðunar
 V
 a
 l
@@ -138,24 +120,84 @@ b
 o
 r
 g
-	
-a
-	
-0
-0
-[0]
+
+lykkjan er búin
 \end{lstlisting}
 
-\lstset{style=venjulegt}
-
-Tökum eftir í kóðabút \ref{lst:lykkjur-for} að breytan sem notuð er til að ítra í gegn er ekki skilgreind áður en við komum að lykkjunni, við þurfum ekki að gera x =  eða strengur = áður en við komum að lykkjunni.
+Í kóðabút \ref{lst:lykkjur-for-kynning} hvernig rúllað er í gegnum strenginn \texttt{Valborg} með breytunni \texttt{stafur}.
+Sú breyta er búin til í línu 6 þegar lykkjan er búin til, það þurfti ekki að skilgreina hana áður.
 Það er vegna þess að breytan er skilgreind inni í lykkjunni fyrir okkur, hún er áfram aðgengileg en er ósköp gagnslaus eftir keyrsluna svo okkur er alveg sama um hana, hún er svokölluð tímabundin (e. temporary) breyta sem hættir að skipta máli eftir notkun innan lykkjunnar.
+
+Allt það sem tilheyrir svo lykkjunni eða á að gerast í hverri keyrslu hennar er inndregið undir henni.
+Línur 9 og 10 eru ekki hluti af stefi lykkjunnar og keyrast því ekki nema einu sinni, eins og lína 3 prentast bara einu sinni.
+
+Það sem kemur á úttakið úr línu 7, breytan \texttt{stafur}, er hvert tákn fyrir sig í þeirri röð sem það kemur fyrir í strengnum sem verið er að ítra í gegnum.
+Lesið yfir þennan kóðabút og gerið tilraunir á eigin spýtur til að átta ykkur á því hvað það er sem er að gerast.
+
+Hvað gerist ef inndrátturinn breytist?
+Hvað prentast þá út?
+Hvað gerist ef eitthvað annað orð er sett í staðinn fyrir \texttt{stafur}?
+En \texttt{strengur}?
+Haldið áfram að gera tilraunir með þetta þangað til að þið áttið ykkur betur á því hvernig þetta hangir saman.
+
+Sjáum nú hvernig megi flétta skilyrðissetningar inn í þetta.
+
+\lstset{style=venjulegt}
+\begin{lstlisting}[caption=For lykkja og skilyrðissetningar, label=lst:lykkjur-for-skil]
+for stafur in strengur:
+	# við vitum að það er a í Valborg svo þetta mun einhvern tímann gerast
+	if(stafur == 'a'):
+		print(stafur)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+a
+\end{lstlisting}
+
+Í kóðabútum \ref{lst:lykkjur-for-kynning} og \ref{lst:lykkjur-for-skil} vorum við að vinna með sama strenginn, en í fyrra skiptið prentaðist hann allur út en í seinna skiptið fengum við bara eitt stakt tákn út.
+Munurinn er sá að í kóðabút \ref{lst:lykkjur-for-skil} þá þegar við vorum komin með táknið í hendurnar vildum við gera eitthvað við það svo við spurðum er þetta tákn jafngilt \texttt{a}, einungis í því tilfelli vildum við prenta eitthvað út.
+Við ákváðum að prenta út táknið sem við vorum að skoða sem er geymt í breytunni \texttt{stafur} en hefðu hæglega getað gert eitthvað annað.
 
 Við sjáum einnig að þegar við settum inn skilyrðissetningu þá bættist við annar inndráttur, það er vegna þess að inndráttarnotkunin breytist ekki sama hvar við erum að nota kóða sem krefst inndráttar heldur dregst kóðinn bara lengst til hægri eftir því sem við förum innar. 
 Því getur verið ágætt að takmarka hreiðrun til þess að kóðinn sé sem læsilegastur.
 
-For lykkjur eru því helst gagnlegar þegar við vitum hversu oft við viljum að lykkjan keyri, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{range()} sem gefur okkur hlut af tölum á ákveðnu bili.
-Fallið range() tekur við sömu viðföngum eins og hornklofarnir þegar við sóttum nokkur tákn upp úr streng eða lista, nema þau eru viðföng í fall svo þau eru aðgreind með kommum en ekki tvípunktum.
+Gerið nú tilraunir til að átta ykkur betur á því hvernig megi skoða ítranlegan hlut en framkvæma einungis aðgerð ef eitthvað skilyrði á við.
+Hvað gerist ef við breytum skilyrðissetningunni?
+En ef við breytum því sem er undir henni?
+Hvað gerist ef við bætum við \textit{annars} klausu?
+Má setja eitthvað inn í stef lykkjunnar á eftir skilyrðissetningunni?
+
+Næst skoðum við annan ítranlegan hlut með for lykkju, það er listi.
+
+\lstset{style=venjulegt}	
+	
+\begin{lstlisting}[caption=For lykkja með lista, label=lst:lykkjur-for-listi]
+listinn_minn = [0, "strengur", [0, 1, 2]]
+
+for x in listinn_minn:
+	# nú hleypur x í gegnum stökin í breytunni listinn_minn
+	print(x)
+
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}	
+0
+strengur
+[0, 1, 2]
+\end{lstlisting}
+
+
+
+\lstset{style=venjulegt}
+
+Tökum eftir í kóðabút \ref{lst:lykkjur-for-listi} þá fær x það gildi sem er næst í röðinni í listanum, og það skiptir ekki máli af hvaða týpu gögnin eru.
+Listinn í línu 1 inniheldur gögn af þremur týpum, breytan \texttt{x} kippir sér ekkert upp við það og birtir gögnin í þeirri röð sem þau bárust.
+
+Prófið ykkur nú aðeins áfram og reynið í staðinn fyrir \texttt{listinn\_minn} að setja einhvern annan lista, sem er ekki geymdur í breytu.
+Prófið nú að setja inn skilyrðissetningu þarna og nota \texttt{type()} með skilyrðissetningu til að prenta einungis þau x sem eru strengir.
+
+For lykkjur eru því helst gagnlegar þegar við vitum hversu oft við viljum að lykkjan keyri, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
+Fallið \texttt{range()} tekur við sömu viðföngum eins og hornklofarnir\footnote{það eru í raun ekki viðföng, í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðvöng beinlínis heldur vísar.} þegar við sóttum nokkur tákn upp úr streng eða lista, þau eru þó aðgreind með kommum\footnote{Við höfum áður séð viðföng notuð í falli eins og print() fallið, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli þess.}.
 Viðföngin eru heilartölur og þeim er raðað svona:
 
 \begin{enumerate}
