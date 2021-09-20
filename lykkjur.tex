@@ -198,64 +198,97 @@ Prófið nú að setja inn skilyrðissetningu þarna og nota \texttt{type()} me�
 
 For lykkjur eru því helst gagnlegar þegar við vitum hversu oft við viljum að lykkjan keyri, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
 Fallið \texttt{range()} tekur við sömu viðföngum eins og hornklofarnir\footnote{það eru í raun ekki viðföng, í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðvöng beinlínis heldur vísar.} þegar við sóttum nokkur tákn upp úr streng eða lista, þau eru þó aðgreind með kommum\footnote{Við höfum áður séð viðföng notuð í falli eins og print() fallið, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli þess.}.
-Viðföngin eru heilartölur og þeim er raðað svona:
+
+Viðföngin í \texttt{range(a,b,c)} fallið eru heilartölur og þeim er raðað svona:
 
 \begin{enumerate}
-	\item talan sem á að byrja að nota (hér má sleppa því að setja þetta inn því að sjálfgefið gildi er 0)
-	\item talan sem á að hætta fyrir framan (þetta verður að setja inn, því að þetta er aðalatriðið)
-	\item tala sem segir til um skrefastærðina (sjálfgefið gildi er 1 og þessu má sleppa)
+	\item \textbf{a}: talan sem á að byrja að nota (hér má sleppa því að setja þetta inn því að sjálfgefið gildi er 0)
+	\item \textbf{b}: talan sem á að hætta fyrir framan (þetta verður að setja inn, því að þetta er aðalatriðið)
+	\item \textbf{c}: tala sem segir til um skrefastærðina (sjálfgefið gildi er 1 og þessu má sleppa), ef skrefastærð er tekin með þarf að velja upphafsstað (annars myndast tvíræðni)
 \end{enumerate}
 
-\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range]
-# við viljum prenta út sléttar tölur á bilinu 0 og upp í 10 þar sem 10 er með
-for tala in range(11):
-	# við tókum fram að við hættum fyrir framan 11 og næsta heila tala þar fyrir neðan er 10 svo hún er með
-	if(tala%2 == 0):
-		# ef afgangurinn úr deilingu með tveimur er jafngildur 0, þá hlýtur tala að vera deilanleg með tveimur og er því slétt
-		print(tala)
-		
-# þetta skilar okkur úttakinu:
-# 0
-# 2
-# 4
-# 6
-# 8 
-# 10
+Ef við viljum leysa verkefni sem felst í því að finna sléttar tölur frá 0 og upp að 1000 hvernig myndum við fara að því?
+En ef við viljum vera viss um að eitthvað gerist ákveðið oft?
+Skoðum kóðabút \ref{lst:lykkjur-range-kynnt} þar sem fyrra verkefnið er leyst á tvo mismunandi vegu.
 
-# við viljum núna skoða hvaða tölur eru deilanlegar með 3 á bilinu 10 upp í 20, við viljum ekki telja 20 með.
+\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range-kynnt]
+for tala in range(5):
+	if(tala%2 == 0):
+		print(tala)		
+
+print()
+
+for tala in range(0,5,2):
+	print(tala)
+
+print()
+
+for x in range(3):
+	print('bílalúgudýraspítali', x)
+\end{lstlisting}		
+		
+\lstset{style=uttak}
+\begin{lstlisting}
+0
+2
+4
+
+0
+2
+4
+
+bílalúgudýraspítali 0
+bílalúgudýraspítali 1
+bílalúgudýraspítali 2
+\end{lstlisting}
+
+Aðalatriðið sem þarf að hafa í huga þarna í kóðabút \ref{lst:lykkjur-range-kynnt} er að for lykkjan hleypur í gegnum lista af tölum svo að við vitum alltaf hvar við erum stödd og við vitum hvað við keyrum lykkjuna oft.
+Sjáum í línu 13 þá er x prentað og á úttakinu (línur 9-11) sést að það er hlaupandi númer sem byrjar í 0 og hættir í 2 sem er talan fyrir framan 3 og þar vildum við hætta.
+Nú getið þið breytt þessum lykkjum til að skoða til dæmis sléttar tölur undir 1000 eða tölur deilanlegar með 17 undir 100.
+
+En við þurfum ekki endilega að byrja í núll, sjáum í kóðabút \ref{lst:lykkjur-range-meira} hvernig hægt er að velja afmarkaðra talnabil og svo sjáum við í kóðabút \ref{lst:lykkjur-range-mest} að hægt er að telja afturábak.
+
+Allt er þetta þó spurning um að finna það sem hentar því verkefni sem við erum að reyna að leysa.
+Næstu sýnidæmi eru meira til þess fallin að sýna virkni \texttt{range()} fallsins og for lykkja yfirhöfuð án þess þó að vera að leysa einhver flókin vandamál.
+Eftir að hafa séð þetta, gætuð þið prófað ykkur áfram og náð þannig tökum á þessu.
+
+Það sem skiptir mestu máli til að ná ákveðinni leikni er að prófa sig áfram, gera tilraunir og þora að mistakast.
+
+\lstset{style=venjulegt}
+\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range-meira]
 for tala in range(10, 20):
 	if(tala%3 == 0):
 		print(tala)
+\end{lstlisting}
 
-# þetta skilar okkur úttakinu
-# 12
-# 15
-# 18
+\lstset{style=uttak}
+\begin{lstlisting}
+12
+15
+18
+\end{lstlisting}
 
-# við viljum núna prenta aðrahvora tölu á bilinu 100 til 106, báðar meðtaldar
-for tala in range(100, 107, 2):
-	print(tala)
-	
-# þetta skilar okkur úttakinu:
-# 100
-# 102
-# 104
-# 106
+Eins og áður kom fram þá þarf að taka fram upphafspunkt ef nota á skrefastærð svo að í línu 1 í kóðabút \ref{lst:lykkjur-range-mest} fer ekki milli mála að byrja á fyrir framan töluna 10 og enda fyrir framan töluna 20.
+Svo er athugað hvort að hver og ein tala sem er á því bili sé deilanleg með þremur ef svo er er talan prentuð út.
 
-# við viljum að lykkjan okkar prenti út einhver skilaboð ákveðið oft, segjum 3 sinnum.
-for x in range(3):
-	# fyrst er x 0, svo 1, svo 2, sem þýðir að lykkjan keyrir þrisvar sinnum
-	print('bílalúgudýraspítali')
-	
-# þetta skilar okkur úttakinu 
-# bílalúgudýraspítali
-# bílalúgudýraspítali
-# bílalúgudýraspítali
+
+\lstset{style=venjulegt}
+\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range-mest]
+for tala in range(100, 70, -1):
+	if(str(tala)[-1] == '9'):
+		print(tala, 'endar á 9')
+\end{lstlisting}
+
+\lstset{style=uttak}
+\begin{lstlisting}
+99 endar á 9
+89 endar á 9
+79 endar á 9
 \end{lstlisting}
 
 Nú vitum við að ef okkur vantar eitthvað ákveðið oft, eða við vitum nákvæmlega hversu oft við viljum að lykkjan keyri þá getum við beitt range() fallinu.
 Nú skulum við skoða hvernig lykkju lykilorðin sem við skoðuðum í undirkaflanum \nameref{uk:lykkjulykilorð} (\ref{uk:lykkjulykilorð}) nýtast með for lykkjum í kóðabút \ref{lst:lykkjur-for-lykilorð}.
-
+\lstset{style=venjulegt}
 \begin{lstlisting}[caption=Lykilorðin pass\, continue og break notuð með for lykkju, label=lst:lykkjur-for-lykilorð]
 # við viljum búa til lykkju sem á að rúlla í gegnum 1000 tölur en við erum ekki viss hvað á að gera innan í lykkjunni
 for x in range(1000):
