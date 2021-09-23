@@ -1,13 +1,16 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Lykkjur}\index{Lykkjur}\label{k:lykkjur}
+Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
+Lykkjur eru kóðabútar sem keyrist endurtekið, eða ítrar, eftir ákveðnum reglum.
+Þær lykkjur sem eru til í Python eru \textbf{for} lykkjur og \textbf{while} lykkjur.
+For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
+While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
+Nöfnin á for og while verða ekki þýdd sérstaklega í þessari bók, en við segjum t.a.m. ,,að gera eitthvað á meðan'' eða ,,gera eitthvað fyrir hvert stak''.
 
-Í Python eru til tvær tegundir af lykkjum, þær heita \textbf{for} og \textbf{while}.
 Við ætlum að kynnast því til hvers þær eru ætlaðar og hvers þær eru megnugar, í hvaða tilfellum á að nota hvora fyrir sig og lykilorð sem gera notkun þeirra öflugri.
 Byrjum á því að skoða til hvers ,,að lykkja'' og hvað það eiginlega þýðir.
 Það að nota lykkju þýðir að skrifa forritsbút sem keyrir endurtekið.
-
-Nöfnin á for og while verða ekki þýdd sérstaklega í þessari bók, en við segjum t.a.m. ,,að gera eitthvað á meðan'' eða ,,gera eitthvað fyrir hvert stak''.
 
 Tökum dæmi úr daglegu lífi; ef við viljum framkvæma einhverja aðgerð eins og að vaska upp búum við til reglu eins og að setja fyrst upp uppþvottahanska, láta vatnið renna og stafla öllu sem er óhreint við hliðina á vaskinum. 
 Svo viljum við endurtaka aðgerðina að þrífa hvern hlut sem er öðru megin við vaskinn, þar til þeir eru allir komnir hreinir hinu megin.
@@ -19,58 +22,6 @@ Tökum annað dæmi úr daglegu lífi; ef við ætlum að bíða eftir einhverju
 Svo á meðan viðkomandi er ekki enn kominn þá höldum við áfram að bíða.
 En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við myndum gefast upp.
 Þetta ferli að halda áfram að framkvæma einhverja aðgerð þangað til að eitthvað skilyrði á ekki við er það sem while lykkja getur gert.
-
-Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
-Lykkjur eru kóðabútar sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
-For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
-While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
-
-\comment{
-	
-	%%%%%%%%%%%%%%%% comment byrjar
-	
-\section{Gagnleg lykilorð}\index{lykilord}\label{uk:lykkjulykilorð}
-Áður en lengra er haldið í hvernig á að beita lykkjum er ágætt að nefna nokkur grunn lykilorð sem hjálpa okkur gríðarlega.
-Þau eru \textbf{pass}, \textbf{continue}, \textbf{break} og \textbf{in}.
-
-Það sem þessi lykilorð gera er má sjá í kóðabút \ref{lst:lykkjur-for-lykilorð}, sjá einnig kóðabúta \ref{lst:lykkjur-for} og \ref{lst:lykkjur-while}:
-\begin{itemize}
-	\item pass er lykilorð sem gerir ekkert, tölvan heldur áfram keyrslu sinni eins og ekkert hafi verið gert, nema að þarna er kóði sem er rétt inndreginn og gerir það að verkum að tölvan kvartar ekki yfir því að hafa búist við einhverju inndregnu en fengið ekkert.
-	Þetta notum við þegar við erum ekki viss hvað á að vera í lykkjunni og við setjum þetta orð inn svo að við getum haldið áfram með annað sem átti að forrita.
-	pass er gagnlegt sem staðhaldari (e. placeholder) þegar við erum ekki viss hvernig á að halda áfram en verðum að setja eitthvað því að annars fengjum við málskipunar villu (e. syntax error).
-	Þetta lykilorð má nota annarsstaðar en í lykkjum og er einnig gagnlegt sem staðhaldari í föllum.
-	\item continue er lykilorð sem lætur vélina stoppa þar sem hún er í lykkjunni, hunsa allt sem kemur á eftir því og fara efst í lykkjuna.
-	Continue er gagnlegt þegar kemur að því að það er bara ákveðin virkni sem á að framkvæma undir vissum aðstæðum og við viljum ekki að vélin geri allar aðgerðir sem koma fram í lykkjunni okkar.
-	Þetta lykilorð má einungis nota inni í lykkjum.
-	\item break hættir keyrslu lykkjunnar, ólíkt continue þá förum við alfarið út úr lykkjunni þegar kallað er í þetta lykilorð og keyrir vélin næst kóða sem er ekki inndreginn undir lykkjunni.
-	Þetta lykilorð má einungis nota inni í lykkjum.
-\end{itemize}
-
-Án þess að fara meira út í hvernig kóðinn fyrir þessi lykilorð virka þá er þess virði að nefna að þau eru ekki nauðsynleg í hverri lykkju sem við forritum hér eftir, þau eru gagnleg þegar þau eiga við og við þurfum að átta okkur á hvernær svo er.
-
-Skoðum nú lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
-
-
-
-Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
-Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
-Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
-Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
-Heiltölur, fleytitölur og sanngildi eru ekki ítranleg og því ekki hægt að rúlla í gegnum þau með for lykkju.
-Hægt er að komast framhjá því með því að kasta þeim í strengi.
-
-
-
-%% búið að nota þetta !
-
-\section{Lykkjur}\index{Lykkjur}
-Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
-Lykkjur eru kóðabútar sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
-For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
-While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
-
-%%%%%% comment endar
-}
 
 \section{For}\index{For lykkjur}
 For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu \textbf{in}.
@@ -125,13 +76,13 @@ lykkjan er búin
 \end{lstlisting}
 
 Í kóðabút \ref{lst:lykkjur-for-kynning} hvernig rúllað er í gegnum strenginn \texttt{Valborg} með breytunni \texttt{stafur}.
-Sú breyta er búin til í línu 6 þegar lykkjan er búin til, það þurfti ekki að skilgreina hana áður.
-Það er vegna þess að breytan er skilgreind inni í lykkjunni fyrir okkur, hún er áfram aðgengileg en er ósköp gagnslaus eftir keyrsluna svo okkur er alveg sama um hana, hún er svokölluð tímabundin (e. temporary) breyta sem hættir að skipta máli eftir notkun innan lykkjunnar.
+Sú breyta er búin til í línu 5 þegar lykkjan er búin til, það þurfti ekki að skilgreina hana áður.
+Það er vegna þess að breytan er skilgreind inni í lykkjunni fyrir okkur, hún er áfram aðgengileg en er ósköp gagnslaus eftir keyrsluna svo okkur er alveg sama um hana, hún er svokölluð \emph{tímabundin} (e. temporary) breyta sem hættir að skipta máli eftir notkun innan lykkjunnar.
 
 Allt það sem tilheyrir svo lykkjunni eða á að gerast í hverri keyrslu hennar er inndregið undir henni.
 Línur 9 og 10 eru ekki hluti af stefi lykkjunnar og keyrast því ekki nema einu sinni, eins og lína 3 prentast bara einu sinni.
 
-Það sem kemur á úttakið úr línu 7, breytan \texttt{stafur}, er hvert tákn fyrir sig í þeirri röð sem það kemur fyrir í strengnum sem verið er að ítra í gegnum.
+Það sem prentast á úttakið úr línu 6, breytan \texttt{stafur}, er hvert tákn fyrir sig í þeirri röð sem það kemur fyrir í strengnum sem verið er að ítra í gegnum.
 Lesið yfir þennan kóðabút og gerið tilraunir á eigin spýtur til að átta ykkur á því hvað það er sem er að gerast.
 
 Hvað gerist ef inndrátturinn breytist?
@@ -190,13 +141,14 @@ strengur
 
 \lstset{style=venjulegt}
 
-Tökum eftir í kóðabút \ref{lst:lykkjur-for-listi} þá fær x það gildi sem er næst í röðinni í listanum, og það skiptir ekki máli af hvaða týpu gögnin eru.
+Tökum eftir í kóðabút \ref{lst:lykkjur-for-listi} þá fær \texttt{x} það gildi sem er næst í röðinni í listanum, og það skiptir ekki máli af hvaða týpu gögnin eru.
+Nafnið á breytunni er ekki lýsandi, ekki eins og \texttt{stafur} eða \texttt{strengur} í kóðabút \ref{lst:lykkjur-for-skil}, ástæðan fyrir því að nafnið x varð fyrir valinu er til að sýna lesendum að þetta er breytuheiti eins og hvert annað og lútir sömu venjum og við sáum í kafla \ref{k:tolur}.
 Listinn í línu 1 inniheldur gögn af þremur týpum, breytan \texttt{x} kippir sér ekkert upp við það og birtir gögnin í þeirri röð sem þau bárust.
 
 Prófið ykkur nú aðeins áfram og reynið í staðinn fyrir \texttt{listinn\_minn} að setja einhvern annan lista, sem er ekki geymdur í breytu.
 Prófið nú að setja inn skilyrðissetningu þarna og nota \texttt{type()} með skilyrðissetningu til að prenta einungis þau x sem eru strengir.
 
-For lykkjur eru því helst gagnlegar þegar við vitum hversu oft við viljum að lykkjan keyri, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
+For lykkjur eru því helst gagnlegar þegar við vitum hversu mörg stök lykkjan á mörgulega að skoða, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
 Fallið \texttt{range()} tekur við sömu viðföngum eins og hornklofarnir\footnote{það eru í raun ekki viðföng, í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðvöng beinlínis heldur vísar.} þegar við sóttum nokkur tákn upp úr streng eða lista, þau eru þó aðgreind með kommum\footnote{Við höfum áður séð viðföng notuð í falli eins og print() fallið, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli þess.}.
 
 Viðföngin í \texttt{range(a,b,c)} fallið eru heilartölur og þeim er raðað svona:
@@ -207,13 +159,13 @@ Viðföngin í \texttt{range(a,b,c)} fallið eru heilartölur og þeim er raða�
 	\item \textbf{c}: tala sem segir til um skrefastærðina (sjálfgefið gildi er 1 og þessu má sleppa), ef skrefastærð er tekin með þarf að velja upphafsstað (annars myndast tvíræðni)
 \end{enumerate}
 
-Ef við viljum leysa verkefni sem felst í því að finna sléttar tölur frá 0 og upp að 1000 hvernig myndum við fara að því?
+Ef við viljum leysa verkefni sem felst í því að finna odda tölur frá 0 og upp að 1000 hvernig myndum við fara að því?
 En ef við viljum vera viss um að eitthvað gerist ákveðið oft?
 Skoðum kóðabút \ref{lst:lykkjur-range-kynnt} þar sem fyrra verkefnið er leyst á tvo mismunandi vegu.
 
-\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range-kynnt]
-for tala in range(5):
-	if(tala%2 == 0):
+\begin{lstlisting}[caption=range() fallið kynnt með for lykkju, label=lst:lykkjur-range-kynnt]
+for tala in range(6):
+	if(tala%2 != 0):
 		print(tala)		
 
 print()
@@ -229,9 +181,9 @@ for x in range(3):
 		
 \lstset{style=uttak}
 \begin{lstlisting}
-0
-2
-4
+1
+3
+5
 
 0
 2
@@ -243,7 +195,7 @@ bílalúgudýraspítali 2
 \end{lstlisting}
 
 Aðalatriðið sem þarf að hafa í huga þarna í kóðabút \ref{lst:lykkjur-range-kynnt} er að for lykkjan hleypur í gegnum lista af tölum svo að við vitum alltaf hvar við erum stödd og við vitum hvað við keyrum lykkjuna oft.
-Sjáum í línu 13 þá er x prentað og á úttakinu (línur 9-11) sést að það er hlaupandi númer sem byrjar í 0 og hættir í 2 sem er talan fyrir framan 3 og þar vildum við hætta.
+Sjáum í línu 13 þá er \texttt{x} prentað og á úttakinu (línur 9-11) sést að það er hlaupandi númer sem byrjar í 0 og hættir í 2 sem er talan fyrir framan 3 og þar vildum við hætta.
 Nú getið þið breytt þessum lykkjum til að skoða til dæmis sléttar tölur undir 1000 eða tölur deilanlegar með 17 undir 100.
 
 En við þurfum ekki endilega að byrja í núll, sjáum í kóðabút \ref{lst:lykkjur-range-meira} hvernig hægt er að velja afmarkaðra talnabil og svo sjáum við í kóðabút \ref{lst:lykkjur-range-mest} að hægt er að telja afturábak.
@@ -255,7 +207,7 @@ Eftir að hafa séð þetta, gætuð þið prófað ykkur áfram og náð þanni
 Það sem skiptir mestu máli til að ná ákveðinni leikni er að prófa sig áfram, gera tilraunir og þora að mistakast.
 
 \lstset{style=venjulegt}
-\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range-meira]
+\begin{lstlisting}[caption=for lykkja og range() fallið með skilyrðissetningu, label=lst:lykkjur-range-meira]
 for tala in range(10, 20):
 	if(tala%3 == 0):
 		print(tala)
@@ -268,15 +220,17 @@ for tala in range(10, 20):
 18
 \end{lstlisting}
 
-Eins og áður kom fram þá þarf að taka fram upphafspunkt ef nota á skrefastærð svo að í línu 1 í kóðabút \ref{lst:lykkjur-range-mest} fer ekki milli mála að byrja á fyrir framan töluna 10 og enda fyrir framan töluna 20.
-Svo er athugað hvort að hver og ein tala sem er á því bili sé deilanleg með þremur ef svo er er talan prentuð út.
+Eins og áður kom fram þá þarf að taka fram upphafspunkt ef nota á skrefastærð svo að í línu 1 í kóðabút \ref{lst:lykkjur-range-mest} fer ekki milli mála að byrja á fyrir framan töluna 10 og enda fyrir aftan töluna 20.
+Svo það sem gerist í skilyrðissetningunni er að tölunni er kastað í streng og spurt er hvort að síðasta táknið í strengnum sé talan 9.
+Ef svo er þá prentum við út töluna ásamt textanum \texttt{endar á 9}, svo þegar keyrslu lykkjunnar lýkur fáum við að sjá hvað breytan \texttt{tala} inniheldur.
 
 
 \lstset{style=venjulegt}
-\begin{lstlisting}[caption=range() fallið, label=lst:lykkjur-range-mest]
+\begin{lstlisting}[caption=for lykkja range() fallið notað til að telja aftur á bak, label=lst:lykkjur-range-mest]
 for tala in range(100, 70, -1):
 	if(str(tala)[-1] == '9'):
 		print(tala, 'endar á 9')
+print('lykkjan er búin, hvað er tala?', tala)
 \end{lstlisting}
 
 \lstset{style=uttak}
@@ -284,129 +238,206 @@ for tala in range(100, 70, -1):
 99 endar á 9
 89 endar á 9
 79 endar á 9
+lykkjan er búin, hvað er tala? 71
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+\subsection{Gagnleg lykilorð}\index{lykilord}\label{uk:lykkjulykilorð}
+	Áður en lengra er haldið í hvernig á að beita lykkjum er ágætt að nefna nokkur grunn lykilorð sem hjálpa okkur gríðarlega.
+	Þau eru \textbf{pass}, \textbf{continue} og, \textbf{break}.
+
+\lstset{style=venjulegt}
+\begin{lstlisting}[caption=Lykilorðið pass notað með for lykkju, label=lst:lykkjur-for-pass]
+for x in range(15):
+	if(x % 3 != 0):
+		pass
+	else:
+		print('þetta gerðist fyrir töluna', x)
+		
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+þetta gerðist fyrir töluna 0
+þetta gerðist fyrir töluna 3
+þetta gerðist fyrir töluna 6
+þetta gerðist fyrir töluna 9
+þetta gerðist fyrir töluna 12
 \end{lstlisting}
 
-Nú vitum við að ef okkur vantar eitthvað ákveðið oft, eða við vitum nákvæmlega hversu oft við viljum að lykkjan keyri þá getum við beitt range() fallinu.
-Nú skulum við skoða hvernig lykkju lykilorðin sem við skoðuðum í undirkaflanum \nameref{uk:lykkjulykilorð} (\ref{uk:lykkjulykilorð}) nýtast með for lykkjum í kóðabút \ref{lst:lykkjur-for-lykilorð}.
 \lstset{style=venjulegt}
-\begin{lstlisting}[caption=Lykilorðin pass\, continue og break notuð með for lykkju, label=lst:lykkjur-for-lykilorð]
-# við viljum búa til lykkju sem á að rúlla í gegnum 1000 tölur en við erum ekki viss hvað á að gera innan í lykkjunni
-for x in range(1000):
-	pass
-# hér fáum við ekkert úttak en jafnframt enga villu.
-
-# við viljum búa til streng úr stórum tölum í einhverjum lista, tölum sem eru hærri en 50
-storar_tolur = ""
-for x in [1, 2, 52, 9, 53, 2]:
+\begin{lstlisting}[caption=Lykilorðið continue notað með for lykkju, label=lst:lykkjur-for-cont]
+for x in [1, 2, 59, 9, 53, 2]:
 	if (x < 50):
 		continue
-		print(x)
-	storar_tolur += str(x)
-
-print(storar_tolur)
-# þetta skilar okkur úttakinu
-# 5253
-
-# við viljum búa til lykkju sem ítrar í gegnum lista af tölum en ef hún sér töluna 13 þá hættir hún keyrslu
+	print(x)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+59
+53
+\end{lstlisting}
+\lstset{style=venjulegt}
+\begin{lstlisting}[caption=Lykilorðið continue notað með for lykkju, label=lst:lykkjur-for-break]
 listi_af_tolum = [1,5,7,9,13,15,17,18]
 for tala in listi_af_tolum:
 	if(tala == 13):
+		print("það er þrettán í listanum")
 		break
-		print(tala)
+	elif(tala != 13):
+		continue
 	else:
-		print(tala)
-
-# þetta skilar okkur úttakinu
-# 1
-# 5 
-# 7
-# 9
+		print("þetta prentast aldrei")
+		
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+"það er þrettán í listanum"
+\end{lstlisting}
+\lstset{style=venjulegt}
+Í kóðabútum \ref{lst:lykkjur-for-pass}, \ref{lst:lykkjur-for-cont} og, \ref{lst:lykkjur-for-break} sjáum við að lykilorðin geta gefið okkur möguleika á að hætta keyrslu, nota bara hluta úr kóða eða gefa okkur kost á að nýta staðhaldara þegar við vitum ekki hvaða kóði á að koma þangað.
+Án þess að fara meira út í hvernig kóðinn fyrir þessi lykilorð virka þá er þess virði að nefna að þau eru ekki nauðsynleg í hverri lykkju sem við forritum hér eftir, þau eru gagnleg þegar þau eiga við og við þurfum að átta okkur á hvernær svo er.
 
-Tökum eftir að í kóðabút \ref{lst:lykkjur-for-lykilorð} þá er tilfellið sem notað er til að sýna continue kannski ekki mjög nytsamlegt þar sem auðvelt væri að gera bara if (x > 50) : storar\_tolur += str(x) en þar sem við erum að reyna að kynnast notkun lykilorðsins þá er þetta ágætis dæmi.
-Það sem gerist er að ef x < 50 er satt þá förum við inn í skilyrðissetninguna og þar sem við förum inn í hana þá rekumst við á orðið continue og um leið og það er lesið þá förum við efst í lykkjuna og úthlutum x nýju staki, print(x) gerist ekki og því er eina úttakið okkar það sem við prentum eftir að keyrslu lykkjunnar lýkur.
-Við sjáum að lykkjunni er lokið því að print(storar\_tolur) kemur fram í sama inndrætti og for lykilorðið, sem þýðir að kallið print(storar\_tolur) tilheyrir ekki lykkjunni, er ekki undir henni.
 
-Þegar við notum break gerist það sama, um leið og break er notað þá hættir keyrsla lykkjunnar, breytan tala fær ekki nýtt gildi og hún endar með sem talan 13.
-Að sama skapi þá prentum við ekki út 13 því að break gerist fyrir ofan print() kallið.
-Þetta lykilorð getur reynst ómetanlegt þegar við skoðum while lykkjur.
+\begin{valBox}
+	
+
+
+\begin{itemize}
+	\item \textbf{pass} er lykilorð sem gerir ekkert, tölvan heldur áfram keyrslu sinni eins og ekkert hafi verið gert, nema að þarna er kóði sem er rétt inndreginn og gerir það að verkum að tölvan kvartar ekki yfir því að hafa búist við einhverju inndregnu en fengið ekkert.
+	Þetta notum við þegar við erum ekki viss hvað á að vera í lykkjunni og við setjum þetta orð inn svo að við getum haldið áfram með annað sem átti að forrita.
+	pass er gagnlegt sem staðhaldari (e. placeholder) þegar við erum ekki viss hvernig á að halda áfram en verðum að setja eitthvað því að annars fengjum við málskipanar villu (e. syntax error).
+	Þetta lykilorð má nota annarsstaðar en í lykkjum og er einnig gagnlegt sem staðhaldari í föllum.
+	\item \textbf{continue} er lykilorð sem lætur vélina stoppa þar sem hún er í lykkjunni, hunsa allt sem kemur á eftir því og fara efst í lykkjuna.
+	Continue er gagnlegt þegar kemur að því að það er bara ákveðin virkni sem á að framkvæma undir vissum aðstæðum og við viljum ekki að vélin geri allar aðgerðir sem koma fram í lykkjunni okkar.
+	Þetta lykilorð má einungis nota inni í lykkjum.
+	\item \textbf{break} hættir keyrslu lykkjunnar, ólíkt continue þá förum við alfarið út úr lykkjunni þegar kallað er í þetta lykilorð og keyrir vélin næst kóða sem er ekki inndreginn undir lykkjunni.
+	Þetta lykilorð má einungis nota inni í lykkjum.		
+	Þetta lykilorð getur reynst ómetanlegt þegar við skoðum while lykkjur.
+\end{itemize}
+
+\end{valBox}
+\comment{
+	
+	%%%%%%%%%%%%%%%% comment byrjar
+	
+
+	
+	Skoðum nú lykilorðið in áður en lengra er haldið til þess að öðlast dýpri skilning á því hvernig for lykkjan virkar.
+	
+	
+	
+	Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
+	Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
+	Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
+	Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
+	Heiltölur, fleytitölur og sanngildi eru ekki ítranleg og því ekki hægt að rúlla í gegnum þau með for lykkju.
+	Hægt er að komast framhjá því með því að kasta þeim í strengi.
+	
+	
+	
+	%% búið að nota þetta !
+	
+	\section{Lykkjur}\index{Lykkjur}
+	Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
+	Lykkjur eru kóðabútar sem keyrist endurtekið eftir ákveðnum reglum, þær lykkjur sem eru til í Python eru for lykkjur og while lykkur.
+	For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
+	While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu'').
+	
+	%%%%%% comment endar
+}
+
 
 \section{While}\index{While lykkjur}
-While lykkjur nota lykilorðið \textbf{while} og keyra ,,á meðan'' eitthvað skilyrði er enn satt.
+While lykkjur nota lykilorðið \textbf{while} og keyra ,,á meðan'' eitthvað skilyrði er satt.
 Þær eru helst ganglegar þegar við vitum ekki hvað við viljum að lykkjan keyri lengi eða þegar við viljum að hún keyri endalaust nema annað sé tekið fram (t.d. með break).
 
-Skilyrðið fyrir keyrslunnar er metið sem sanngildi, annað hvort með sanngildinu sjálfu eða segð sem skilar sanngildi.
+Skilyrðið fyrir keyrslunni er metið sem sanngildi, annað hvort með sanngildinu sjálfu eða segð sem skilar sanngildi.
 Þá gefst okkur tækifæri á að forrita lausn á vanda eins og ,,ef það er enginn eftir í stofunni á að slökkva ljósið'' og forritið keyrir á meðan ,,einhver er eftir í stofunni''.
 Þarna þurfum við ekki að gera annað en að fylgjast með aðstæðum.
 While lykkjur eru vandmeðfarnar og harla líklegt að lenda í því að skrifa lykkju sem keyrir endalaust við fyrstu notkun.
 Þær eru jafnframt öflugar til að leysa ýmsan vanda sem krefst þess að aðstæður hverju sinni séu skoðaðar.
 
-Skoðum kóðabút \ref{lst:lykkjur-while} til þess að sjá hvernig má auðveldlega lenda í vandræðum við gerð slíkra lykkja og hvernig uppsetning þeirra lítur út.
+Skoðum kóðabút \ref{lst:lykkjur-while-endalaust} til þess að sjá hvernig má auðveldlega lenda í vandræðum við gerð slíkra lykkja og hvernig uppsetning þeirra lítur út.
 
 
-\begin{lstlisting}[caption=while lykkjur, label=lst:lykkjur-while]
-# Grunnuppbyggingin kynnt:
+\begin{lstlisting}[caption=while lykkja sem keyrir að eilífu, label=lst:lykkjur-while]
 while(True):
 	# inndreginn kóði sem tilheyrir lykkjunni - stef lykkjunnar
 	pass
-	
-# þessi lykkja keyrir að eilífu vegna þess að skilyrðið fyrir henni er True og ekkert breytir því í stefi hennar
+print('kemst ekki hingað því lykkjan er enn að keyra')
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+# ef lykkjan okkar gerði eitthvað væri þessi bútur troðfullur
+\end{lstlisting}
+\lstset{style=venjulegt}
+Lykkjan í kóðabút \ref{lst:lykkjur-while} keyrir að eilífu vegna þess að skilyrðið fyrir henni er \texttt{True} og ekkert breytir því í stefi hennar.
+Hægt er að stöðva vélina handvirkt í þessum aðstæðum\footnote{Í Jupyter Notebooks er það gert með Kernel -> Restart Kernel}.
+En nú viljum við að þetta gerist ekki aftur svo við notum break lykilorðið.
 
+
+\begin{lstlisting}[caption=while lykkja sem keyrir að eilífu, label=lst:lykkjur-while-break]
 while(True):
 	# nú ætlum við að reyna að komast út
 	break
-	
-# við komumst út úr lykkjunni, hún keyrði einu sinni og hætti strax keyrslu, ekki mjög gagnleg lykkja en hún keyrði allavega ekki að eilífu
+print('vei við komumst út, en hvað kostaði það?')
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+vei við komumst út, en hvað kostaði það?
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Við komumst út úr lykkjunni, hún keyrði einu sinni og hætti strax keyrslu, ekki mjög gagnleg lykkja en hún keyrði allavega ekki að eilífu.
+Skoðum nú einhverja gagnlega lykkju.
+Segjum að við skuldum 10000krónur og við ætlum að borga inn á skuldina okkar 1000 krónur í einu.
+Við viljum að sjálfsögðu hætta að borga þegar við skuldum ekkert lengur og auðvitað viljum við að skuldin okkar lækki.
 
 while(False):
 	print('þetta mun aldrei prentast því að stef lykkjunnar mun aldrei keyrast')
 
-# prófum núna að gera segð sem skilyrði
+ prófum núna að gera segð sem skilyrði
 
-x = 5
-while(x > 1):
-	# Við munum keyra stef lykkjunnar að minnsta kosti einu sinni þar sem segðin er sönn í fyrstu keyrslu, 5 er vissulega stærri en 1
-	# en nú verðum við að gera eitthvað sem hefur áhrif á x þannig að lykkjan okkar eigi möguleika á að hætta, það er við verðum að gera það að verkum að x > 1 verði einhvern tímann ósatt.
-	if(x > 1):
-		print("talan er", x, "og hún er enn stærri en 1")
-		x -= 1
-		
-# úttakið verður:
-# talan er 5 og hún er enn stærri en 1
-# talan er 4 og hún er enn stærri en 1
-# talan er 3 og hún er enn stærri en 1
-# talan er 2 og hún er enn stærri en 1
+\begin{lstlisting}[caption=while lykkja sem eitthvað vit er í, label=lst:lykkjur-while-skuld]
+skuld = 10000
+innborgun = 1000
+while(skuld > 0):
+	skuld = skuld - innborgun
+	print('nú er skuldin', skuld)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+nú er skuldin 9000
+nú er skuldin 8000
+nú er skuldin 7000
+nú er skuldin 6000
+nú er skuldin 5000
+nú er skuldin 4000
+nú er skuldin 3000
+nú er skuldin 2000
+nú er skuldin 1000
+nú er skuldin 0
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-# Tökum aðeins sértækara dæmi, sem byggir á sauðakóða en ekki Python kóða sem hægt er að keyra. 
-# Til þess að sjá fyrir okkur betur hvað er að gerast.
+Nú þegar við höfum skoðað haldbært dæmi um eitthvað sem vit er í skulum við skoða óhlutbundið dæmi þar sem við erum að vinna með hugmyndina um að slökkva ljósin í stofunni ef allir eru farnir.
 
-fjoldi_i_stofu = 5
+\begin{lstlisting}
 while(True):
-	if(fjoldi_i_stofu == 0):
+	if(fjöldi nemenda er 0):
 		slökkva ljós
 		break
 		
-	# við komumst bara hingað ef það er einhver í stofunni svo við ætlum að telja fjölda í stofu aftur
-	fjoldi_i_stofu = talning
-	
-# Stef þessarar lykkju byggir á því að tölvan viti hvað slökkva ljós og talning þýðir, en þar sem ætlunin var ekki að gera kóða sem virkar heldur sýna lesanda virknina fær lykkjan að vera í friði svona.
-
-
+	fjöldi nemenda talinn aftur
 \end{lstlisting}
+\lstset{style=venjulegt}
+
+Þetta er ekki alvöru Python kóði, heldur \emph{sauðakóði} (e. psudocode) sem kemur þó merkingunni til skila, að aðalatriðið er að vera í sífellu að skoða það hvort að engir nemendur séu eftir og telja þá aftur.
+Þar kemur while lykkjan sterk inn, að við viljum gera eitthvað á meðan eitthvað ástand varir.
 
 Annað sem má gera við while lykkjur er að koma fram við þær sem skilyrðissetningu sem má fá else klausu aftan við sig sem keyrist þegar skilyrði lykkjunnar verður ósatt.
 
-\begin{lstlisting}[caption=Ap nota else með while, label=lst:lykkjur-while-else]
-# Við viljum áfram skoða það hvenær á að slökkva ljósin og við getum gert það svona:
-while(fjoldi_i_stofu > 0):
-	fjoldi_i_stofu = talning
-else:
-	slökkva ljósin
-	
-# nú slökkvast ljósin þegar fjoldi_i_stofu er orðinn 0.
-
-# skoðum dæmi sem hægt er að keyra
-
+\begin{lstlisting}[caption=Að nota else með while, label=lst:lykkjur-while-else]
 x = 5
 while(x > 1):
 	print("talan er", x, "sem er stærra en 1")
@@ -414,10 +445,13 @@ while(x > 1):
 else:
 	print("nú er talan orðin 1 því 1 er ekki stærri en 1 -->", x)
 	
-# þetta skilar okkur úttakinu
-# talan er 5 sem er stærra en 1
-# talan er 4 sem er stærra en 1
-# talan er 3 sem er stærra en 1
-# talan er 2 sem er stærra en 1
-# nú er talan orðin 1 því 1 er ekki stærri en 1 --> 1
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+talan er 5 sem er stærra en 1
+talan er 4 sem er stærra en 1
+talan er 3 sem er stærra en 1
+talan er 2 sem er stærra en 1
+nú er talan orðin 1 því 1 er ekki stærri en 1 --> 1
+\end{lstlisting}
+\lstset{style=venjulegt}
