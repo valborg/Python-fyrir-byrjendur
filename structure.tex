@@ -260,8 +260,9 @@
 \numberwithin{dummy}{section}
 \theoremstyle{ocrenumbox}
 \newtheorem{theoremeT}[dummy]{Theorem}
+\newtheorem{itarefniutl}{Ítarefni}[chapter] %breytt
 \newtheorem{problem}{Problem}[chapter]
-\newtheorem{exerciseT}{Verkefni}[chapter]
+\newtheorem{exerciseT}{Verkefni}[chapter] %breytt
 \theoremstyle{blacknumex}
 \newtheorem{exampleT}{Example}[chapter]
 \theoremstyle{blacknumbox}
@@ -666,5 +667,7 @@ roundcorner=50,
 fontcolor=gray!85,
 linewidth=4pt]{valBox}
 
+\newcounter{valBox}[section]
+\newenvironment{itarefni}{\begin{valBox}\begin{itarefniutl}}{\end{itarefniutl}\end{valBox}}
 
 \usepackage{tasks}

@@ -360,7 +360,7 @@ While lykkjur eru vandmeðfarnar og harla líklegt að lenda í því að skrifa
 Skoðum kóðabút \ref{lst:lykkjur-while-endalaust} til þess að sjá hvernig má auðveldlega lenda í vandræðum við gerð slíkra lykkja og hvernig uppsetning þeirra lítur út.
 
 
-\begin{lstlisting}[caption=while lykkja sem keyrir að eilífu, label=lst:lykkjur-while]
+\begin{lstlisting}[caption=while lykkja sem keyrir að eilífu, label=lst:lykkjur-while-endalaust]
 while(True):
 	# inndreginn kóði sem tilheyrir lykkjunni - stef lykkjunnar
 	pass
@@ -371,7 +371,7 @@ print('kemst ekki hingað því lykkjan er enn að keyra')
 # ef lykkjan okkar gerði eitthvað væri þessi bútur troðfullur
 \end{lstlisting}
 \lstset{style=venjulegt}
-Lykkjan í kóðabút \ref{lst:lykkjur-while} keyrir að eilífu vegna þess að skilyrðið fyrir henni er \texttt{True} og ekkert breytir því í stefi hennar.
+Lykkjan í kóðabút \ref{lst:lykkjur-while-endalaust} keyrir að eilífu vegna þess að skilyrðið fyrir henni er \texttt{True} og ekkert breytir því í stefi hennar.
 Hægt er að stöðva vélina handvirkt í þessum aðstæðum\footnote{Í Jupyter Notebooks er það gert með Kernel -> Restart Kernel}.
 En nú viljum við að þetta gerist ekki aftur svo við notum break lykilorðið.
 
