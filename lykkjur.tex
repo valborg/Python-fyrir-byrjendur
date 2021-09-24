@@ -50,6 +50,16 @@ Ekki gleyma þessu lykilorði við lykkjugerðina.
 Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á lykkjum.
 Í næstu kóðabútum verður sýnd grunnvirkni for-lykkjunnar.
 
+\begin{itarefni}
+	\textbf{Nánar um \texttt{in} og vísa}\\
+	Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
+	Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
+	Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
+	Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
+	Heiltölur, fleytitölur og sanngildi eru ekki ítranleg og því ekki hægt að rúlla í gegnum þau með for lykkju.
+	Hægt er að komast framhjá því með því að kasta þeim í strengi.
+\end{itarefni}
+
 \begin{lstlisting}[caption=For lykkjur kynntar, label=lst:lykkjur-for-kynning]
 # við byrjum á að skilgreina streng
 strengur = "Valborg"
@@ -298,24 +308,22 @@ for tala in listi_af_tolum:
 Án þess að fara meira út í hvernig kóðinn fyrir þessi lykilorð virka þá er þess virði að nefna að þau eru ekki nauðsynleg í hverri lykkju sem við forritum hér eftir, þau eru gagnleg þegar þau eiga við og við þurfum að átta okkur á hvernær svo er.
 
 
-\begin{valBox}
-	
-
-
-\begin{itemize}
-	\item \textbf{pass} er lykilorð sem gerir ekkert, tölvan heldur áfram keyrslu sinni eins og ekkert hafi verið gert, nema að þarna er kóði sem er rétt inndreginn og gerir það að verkum að tölvan kvartar ekki yfir því að hafa búist við einhverju inndregnu en fengið ekkert.
-	Þetta notum við þegar við erum ekki viss hvað á að vera í lykkjunni og við setjum þetta orð inn svo að við getum haldið áfram með annað sem átti að forrita.
-	pass er gagnlegt sem staðhaldari (e. placeholder) þegar við erum ekki viss hvernig á að halda áfram en verðum að setja eitthvað því að annars fengjum við málskipanar villu (e. syntax error).
-	Þetta lykilorð má nota annarsstaðar en í lykkjum og er einnig gagnlegt sem staðhaldari í föllum.
-	\item \textbf{continue} er lykilorð sem lætur vélina stoppa þar sem hún er í lykkjunni, hunsa allt sem kemur á eftir því og fara efst í lykkjuna.
-	Continue er gagnlegt þegar kemur að því að það er bara ákveðin virkni sem á að framkvæma undir vissum aðstæðum og við viljum ekki að vélin geri allar aðgerðir sem koma fram í lykkjunni okkar.
-	Þetta lykilorð má einungis nota inni í lykkjum.
-	\item \textbf{break} hættir keyrslu lykkjunnar, ólíkt continue þá förum við alfarið út úr lykkjunni þegar kallað er í þetta lykilorð og keyrir vélin næst kóða sem er ekki inndreginn undir lykkjunni.
-	Þetta lykilorð má einungis nota inni í lykkjum.		
-	Þetta lykilorð getur reynst ómetanlegt þegar við skoðum while lykkjur.
+\begin{itarefni}
+\textbf{Nánar um lykkju lykilorðin}\\	
+\begin{itemize}[leftmargin=*]
+\item \textbf{pass} er lykilorð sem gerir ekkert, tölvan heldur áfram keyrslu sinni eins og ekkert hafi verið gert, nema að þarna er kóði sem er rétt inndreginn og gerir það að verkum að tölvan kvartar ekki yfir því að hafa búist við einhverju inndregnu en fengið ekkert.
+Þetta notum við þegar við erum ekki viss hvað á að vera í lykkjunni og við setjum þetta orð inn svo að við getum haldið áfram með annað sem átti að forrita.
+pass er gagnlegt sem staðhaldari (e. placeholder) þegar við erum ekki viss hvernig á að halda áfram en verðum að setja eitthvað því að annars fengjum við málskipanar villu (e. syntax error).
+Þetta lykilorð má nota annarsstaðar en í lykkjum og er einnig gagnlegt sem staðhaldari í föllum.
+\item \textbf{continue} er lykilorð sem lætur vélina stoppa þar sem hún er í lykkjunni, hunsa allt sem kemur á eftir því og fara efst í lykkjuna.
+Continue er gagnlegt þegar kemur að því að það er bara ákveðin virkni sem á að framkvæma undir vissum aðstæðum og við viljum ekki að vélin geri allar aðgerðir sem koma fram í lykkjunni okkar.
+Þetta lykilorð má einungis nota inni í lykkjum.
+\item \textbf{break} hættir keyrslu lykkjunnar, ólíkt continue þá förum við alfarið út úr lykkjunni þegar kallað er í þetta lykilorð og keyrir vélin næst kóða sem er ekki inndreginn undir lykkjunni.
+Þetta lykilorð má einungis nota inni í lykkjum.		
+Þetta lykilorð getur reynst ómetanlegt þegar við skoðum while lykkjur.
 \end{itemize}
 
-\end{valBox}
+\end{itarefni}
 \comment{
 	
 	%%%%%%%%%%%%%%%% comment byrjar
@@ -326,12 +334,7 @@ for tala in listi_af_tolum:
 	
 	
 	
-	Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
-	Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
-	Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
-	Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
-	Heiltölur, fleytitölur og sanngildi eru ekki ítranleg og því ekki hægt að rúlla í gegnum þau með for lykkju.
-	Hægt er að komast framhjá því með því að kasta þeim í strengi.
+
 	
 	
 	
