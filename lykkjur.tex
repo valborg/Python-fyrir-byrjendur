@@ -379,7 +379,7 @@ Hægt er að stöðva vélina handvirkt í þessum aðstæðum\footnote{Í Jupyt
 En nú viljum við að þetta gerist ekki aftur svo við notum break lykilorðið.
 
 
-\begin{lstlisting}[caption=while lykkja sem keyrir að eilífu, label=lst:lykkjur-while-break]
+\begin{lstlisting}[caption=while lykkja sem keyrir ekki að eilífu en hún gerir ekkert, label=lst:lykkjur-while-break]
 while(True):
 	# nú ætlum við að reyna að komast út
 	break
@@ -392,14 +392,30 @@ vei við komumst út, en hvað kostaði það?
 \lstset{style=venjulegt}
 
 Við komumst út úr lykkjunni, hún keyrði einu sinni og hætti strax keyrslu, ekki mjög gagnleg lykkja en hún keyrði allavega ekki að eilífu.
-Skoðum nú einhverja gagnlega lykkju.
-Segjum að við skuldum 10000krónur og við ætlum að borga inn á skuldina okkar 1000 krónur í einu.
-Við viljum að sjálfsögðu hætta að borga þegar við skuldum ekkert lengur og auðvitað viljum við að skuldin okkar lækki.
+Annað sem við þurfum líka að hugsa um er að skilyrðið okkar sé alveg örugglega rétt skilgreint, að við séum að ná að fanga þær aðstæður sem við vildum halda í.
+Skoðum næsta kóðabút þar sem skilyrðið mun aldrei verða satt og því mun stef lykkjunnar aldrei keyrast og breytan sem er þar skilgreind aldrei fá stað í minni, sem veldur villu þegar á að nota breytuna á eftir lykkjunni. 
 
-while(False):
+\begin{lstlisting}[caption=while lykkja sem keyrir aldrei, label=lst:lykkjur-while-false]
+while(3 < 2):
 	print('þetta mun aldrei prentast því að stef lykkjunnar mun aldrei keyrast')
+	x = 5
+print(x)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+NameError                                 Traceback (most recent call last)
+<ipython-input-21-8ba2a8c60ab2> in <module>
+2         print('þetta mun aldrei prentast því að stef lykkjunnar mun aldrei keyrast')
+3         x = 5
+----> 4 print(x)
 
- prófum núna að gera segð sem skilyrði
+NameError: name 'x' is not defined
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Skoðum nú einhverja gagnlega lykkju.
+Segjum að við skuldum 10.000 krónur og við ætlum að borga inn á skuldina okkar 1.000 krónur í einu.
+Við viljum að sjálfsögðu hætta að borga þegar við skuldum ekkert lengur og auðvitað viljum við að skuldin okkar lækki.
 
 \begin{lstlisting}[caption=while lykkja sem eitthvað vit er í, label=lst:lykkjur-while-skuld]
 skuld = 10000
@@ -437,6 +453,43 @@ while(True):
 
 Þetta er ekki alvöru Python kóði, heldur \emph{sauðakóði} (e. psudocode) sem kemur þó merkingunni til skila, að aðalatriðið er að vera í sífellu að skoða það hvort að engir nemendur séu eftir og telja þá aftur.
 Þar kemur while lykkjan sterk inn, að við viljum gera eitthvað á meðan eitthvað ástand varir.
+
+Hugsum okkur nú að nota segð fyrir eitthvað flóknara skilyrði en við sáum í kóðabút \ref{lst:lykkjur-while-false}.
+Eins og við sáum á myndum \ref{fig:flæðirit} og \ref{fig:flæðirit-neitun} þá skiptir máli hvernig við orðum skilyrðin okkar, eins og setningin ,,á meðan það er óuppvaskaður diskur við hliðina á vaskinum eða við eldhúsborðið þá ætla ég að vaska upp'' hvernig yrði hún forrituð sem skilyrði inn í while lykkju?
+Athugum að þarna erum við með rökvirkjann \emph{eða} og því þarf annað hvort að vera skítugur diskur við vaskinn eða á borðinu.
+\begin{lstlisting}[caption=while lykkja óhlutbundin til að sýna rökvirkja, label=lst:lykkjur-while-or]
+while(það er skítugur diskur við vaskinn eða það er skítugur diskur við borðið):
+	vaska upp disk
+print(allir diskar eru hreinir)
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hér sjáum við eitt sem vefst fyrir mörgum, það er að skilyrðið í línu 1 virðist vera óþarflega nákvæmt, til hvers að taka fram skítugur diskur tvisvar?
+Það er vegna þess að segðinni ,,það er skítugur diskur við vaskinn'' er hægt að svara og sömuleiðis ,,það er skítugur diskur við borðið''.
+En ef skilyrðið okkar hefði einungis verið ,,það er skítugur diskur við vaksinn eða borðið'' þá lendir vélin í því að fá í hendurnar segð sem hægt er að svara, þessi fyrri, og svo ,,borðið''.
+Hvernig á að svara ,,eða borðið''?
+Tökum dæmi um svona rökvirkjanotkun í skilyrði í lykkju í kóðabút.
+
+\begin{lstlisting}[caption=while lykkja með og rökvirkjanum, label=lst:lykkjur-while-and]
+hiti = 37.0
+while(hiti < 37.6 and hiti > 36.0):
+	# mælum hitann með þessari óvísindalegu aðferð
+	hiti = hiti + 0.5
+	print(hiti)
+print()
+print(hiti)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+37.5
+38.0
+
+38.0
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Við sjáum að skilyrðið í kóðabút \ref{lst:lykkjur-while-and} er ekki með \emph{eða} heldur \emph{og}, það sem er verið að spyrja er ,,er hitinn á milli talnanna 36.0 og 37.6?''.
+Þannig að fyrst er spurt er hitinn lægri en 37.6, svo er spurt hvort hann sé hærri en 36.0 og ef svarið við báðum spurningum er já þá hlýtur hitinn að vera á milli þessara talna. 
 
 Annað sem má gera við while lykkjur er að koma fram við þær sem skilyrðissetningu sem má fá else klausu aftan við sig sem keyrist þegar skilyrði lykkjunnar verður ósatt.
 
