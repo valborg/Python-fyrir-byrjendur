@@ -262,7 +262,7 @@
 \newtheorem{theoremeT}[dummy]{Theorem}
 \newtheorem{itarefniutl}{Ítarefni}[chapter] %breytt
 \newtheorem{problem}{Problem}[chapter]
-\newtheorem{exerciseT}{Verkefni}[chapter] %breytt
+\newtheorem{exerciseT}{Æfing}[chapter] %breytt
 \theoremstyle{blacknumex}
 \newtheorem{exampleT}{Example}[chapter]
 \theoremstyle{blacknumbox}
@@ -640,7 +640,7 @@ addtohook={%
 
 \usepackage[lastexercise,answerdelayed]{exercise}
 \newboolean{firstanswerofthechapter}  
-\renewcommand{\AnswerName}{Verkefni}
+\renewcommand{\AnswerName}{Æfing}
 \renewcommand{\AnswerHeader}{\ifthenelse{\boolean{firstanswerofthechapter}}%
 	{\bigskip\noindent\textcolor{ocre}{\textbf{\huge Kafli \thechapter}}\newline\newline%
 		\noindent\bfseries{\textcolor{ocre}{\AnswerName\ \ExerciseHeaderNB}}\smallskip\newline}
