@@ -1,10 +1,10 @@
 
 \chapter{Tölur og breytur}\index{Tölur og breytur}\label{k:tolur}
 Í þessum kafla ætlum við að hefjast handa við að forrita. 
-Það fyrsta sem við ætlum að gera er að kynnast talnatýpum og keyra kóða eins og við værum að nota reiknivél. 
+Það fyrsta sem við ætlum að gera er að kynnast \emph{talnatýpum} og keyra kóða eins og við værum að nota reiknivél. 
 Við könnumst við reiknivélar og hvernig þær afgreiða röð aðgerða. 
 Nú viljum við sannreyna að þær reikniaðgerðir sem við þekkjum séu til í Python og að þegar við keyrum kóðann okkar þá verði útkoman sú sama og við áttum von á. 
-Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þess þurfum við breytur (e. variables).
+Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þess þurfum við \emph{breytur} (e. variables).
 
 \section{Tölur - talnatýpur}\index{Tölur - talnatýpur}
 Í Pyhton eru í grunninn tvær týpur af tölum (en til eru tvær týpur af hvorri fyrir sig, sem snýr meira að minnisnotkun og er út fyrir svið þessarar bókar). 
@@ -17,17 +17,26 @@ Við viljum líka geta geymt útkomuna okkar til að nota aftur seinna, til þes
 	Á ensku eru þessar tölur kallaðar \textit{floating point numbers} og er því lykilorðið þeirra \textbf{float}.
 \end{itemize}
 
-\begin{lstlisting}[caption=Heiltölur og fleytitölur]
+\begin{lstlisting}[caption=Heiltölur og fleytitölur, label=lst:tolur-kynntar]
 # Heiltölur, enginn aukastafur
 42
-100000
 -139
 
 # Fleytitölur, aukastafur/ir fyrir aftan punkt
 4.0
-3.1415926
--100.98
+-3.1415926
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+-3.1415926
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Heiltölur og fleytitölur eru sambærilegar og má nota þær saman í reikningi.
+Báðar talnatýpurnar ná niður í ansi mikinn mínus og ansi hátt upp.
+Í kóðabút \ref{lst:tolur-kynntar} sjáum við tvennt áhugavert, þegar við keyrðum þennan kóða þá kom úttakið \texttt{-3.1415926}, af hverju skyldi það vera?
+Þetta gerist í Jupyter Notebooks, úttakið verður það síðasta sem við \emph{kölluðum} í, eða báðum vélina um að segja okkur.
+Skoðum þetta nánar í kóðabút \todo{vísa í kóðabút sem er neðar og þar er kallað í x}
 
 \section{Reikniaðgerðir og tákn}\index{Reikniaðgerðir og tákn}
 Grunnreikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en aðrar eru framandi og við skulum skoða aðeins betur.
@@ -40,49 +49,60 @@ Munurinn á deilingunni er sá að með einu skástriki er beitt hefðbundinni d
 Eins og sést í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur en hún er í keyrslu tölvunnar álitin ein heild línu 20.
 Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er ein lína.
 Einnig eru bil á milli talna og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni.
-Athugasemdir í kóða eru mjög mikilvægur hluti af skjölun (e. documentation) og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
-Í fyrstu erum við ekki að skrifa flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni ekki augljós er gott að skrifa athugasemdir.
+Athugasemdir í kóða eru mjög mikilvægur hluti af \emph{skjölun} (e. documentation) og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
+Í fyrstu skrifum við ekki flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni ekki augljós er gott að skrifa athugasemdir.
 Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur sjálfum skiljanlegur þegar þið komið að honum seinna.
 Því er gott að venja sig strax á að skrifa lýsandi athugasemdir. 
 
 \begin{lstlisting}[caption=Reikniaðgerðir, label=lst:reiknadg]
 # Samlagning framkvæmd með + 
-# Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10
 6 + 4 
 
 # Frádráttur framkvæmdur með -
-# Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10
 14 - 4 
 
 # Margföldun framkvæmd með * 
-# Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10
 10 * 2 
 
 # Deiling framkvæmd með / 
-# Athugið að þetta er fleytitöludeiling sem skilar nákvæmu svari.
-# Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10.0
 60 / 6 
 
 # Heiltöludeiling framkvæmd með //
-# Athugið að þessi deiling er frábrugðin þeirri sem þið kannist við.
-# Hér viljum við vita hversu oft, heil tala, ein tala gengur upp í aðra og okkur er sama um afganginn
-# Þegar eftirfarandi kóði er keyrður ætti svarið að vera 10
 177 // 17
 
 # Veldishafning framkvæmd með **
-# Hér er mikilvægt, eins og með deilinguna, að hafa í huga hvor talan kemur á undan.
-# Fyrst kemur talan sem hefja á í veldi og svo kemur talan sem er veldisvísirinn
-# Þegar eftirfarandi kóði er keyrður ætti svarið að vera 9
 3 ** 2
 
 # Leifareikningur framkvæmdur með % (e. modulus)
+177 % 17
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+7
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hér vorum við einnig að biðja tölvuna um að reikna einhvern heilan helling en við báðum vélina aldrei um að segja okkur neitt frá útkomunni sérstaklega eða geymdum hana neinstaðar.
+Í kóðabút \ref{lst:reiknadg} sést hvernig á að keyra kóða án þess að fá einhverjar villur (sjá kafla \ref{uk:tolur-villur}) eða gera neitt sérstakt.
+Markmiðið hjá okkur núna er að skilja hvernig reikniaðgerðirnar virka og því ættuð þið núna að prófa ykkur áfram, skoða forgangsröð aðgerða\footnote{\href{https://is.wikibooks.org/wiki/Forgangsr\%C3\%B6\%C3\%B0\_a\%C3\%B0ger\%C3\%B0a}{https://is.wikibooks.org/wiki/Forgangsröð\_aðgerða}}, og þora að gera villur og reyna að lesa í þær.
+Nánar um hvernig þessir \emph{reiknivirkjar} (e. arithmic operators) verka má sjá á síðu W3Schools, sem er frábær síða til að læra meira um forritun, \href{https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp}{hér}.
+
+\comment{
 # Þetta er eitthvað alveg nýtt og framandi.
 # Það sem þetta reiknar er hversu mikil leif eða afgangur er eftir þegar heiltöludeilingu er beitt.
 # Þegar eftirfarandi kóði er keyrður ætti svarið að vera 7
-177 % 17
 
-\end{lstlisting}
+# Hér er mikilvægt, eins og með deilinguna, að hafa í huga hvor talan kemur á undan.
+# Fyrst kemur talan sem hefja á í veldi og svo kemur talan sem er veldisvísirinn
+# Þegar eftirfarandi kóði er keyrður ætti svarið að vera 9
 
+# Athugið að þessi deiling er frábrugðin þeirri sem þið kannist við.
+# Hér viljum við vita hversu oft, heil tala, ein tala gengur upp í aðra og okkur er sama um afganginn
+# Þegar eftirfarandi kóði er keyrður ætti svarið að vera 10
+
+# Athugið að þetta er fleytitöludeiling sem skilar nákvæmu svari.
+# Þegar eftirfarandi kóði er keyrður ætti útkonan að vera 10.0
+}
 \begin{itarefni}
 \textbf{Heiltöludeiling og leifareikningur}\\
 	Heiltöludeiling og leifarreikningur eru líklega ný á nálinni fyrir flestum lesendum og því allt í lagi að útskýra þær aðgerðir aðeins nánar.
@@ -95,7 +115,7 @@ Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur
 
 Það er gott að byrja á því að átta sig á því hvernig á að keyra kóða og í kóðabút \ref{lst:reiknadg} vorum við vissulega að keyra kóða.
 Hann gerði ekkert merkilegt en við erum strax byrjuð að forrita.
-Við skulum svo ekki gleyma þessum undirstöðu reikniaðgerðum með þessum reiknivirkjum (e. arithmetic operators) þegar við höldum áfram og gerum flóknari hluti\footnote{
+Við skulum svo ekki gleyma þessum undirstöðu reikniaðgerðum með þessum reiknivirkjum þegar við höldum áfram og gerum flóknari hluti\footnote{
 	Í öllum verkefnum í kóðabút \ref{lst:reiknadg} var verið að vinna með heiltölur, þó var útkoman úr deilingunni fleytitala. 
 	Ef við myndum skipta út hverri tölu fyrir sig og setja í staðinn sömu tölu með .0 fyrir aftan þá yrðu útkomurnar þær sömu nema fleytitölur. 
 	Ef við notum ólíkar týpur, og slíkt er vandmeðfarið, er það í lagi í þessu tilfelli þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og við höfum verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
@@ -105,11 +125,11 @@ Reiknivirkjarnir gera svo ólíka hluti eftir því með hvaða týpum þeir eru
 
 \section{Breytur}\index{Breytur}
 Nú höfum við séð hvernig má keyra kóða einfaldlega eins og í reiknivél.
-Höldum okkur við samlíkinguna um reiknivélina til að útskýra breytur.
+Höldum okkur við samlíkinguna um reiknivélina til að útskýra \emph{breytur} (e. variables).
 Á hefbundinni reiknivél sem notuð er í stærðfræðitíma í framhaldsskóla er takki sem á stendur ANS (stytting á enska orðinu \textit{answer}).
 Vélin getur geymt síðasta svar sem fékkst og þegar ýtt er á þennan takka sækir vélin úr minni það svar.
-Flottari vélar geta svo geymt nokkuð mörg svör en það er útfyrir gagnsemi þessarar samlíkingu.
-Þegar ýtt er á þennan takka er gildi sótt úr minnisvæðinu og á skjáinn kemur textinn ANS en á bakvið tjöldin er vélin að nota gildið úr minnissvæðinu þó að við sjáum ekki hvað það er, sem er mjög gagnlegt þegar talan sem við ætluðum að nota er eitthvað á við $\frac{3}{4}\sqrt[3]{\pi*7} $ og við nennum ekki að skrifa það aftur og aftur.
+Flottari vélar geta svo geymt nokkuð mörg svör en það er útfyrir gagnsemi þessarar samlíkingar.
+Þegar ýtt er á þennan takka er gildi sótt úr minnisvæðinu og á skjáinn kemur textinn ANS en á bakvið tjöldin er reiknivélin að nota gildið úr minnissvæðinu þó að við sjáum ekki hvað það er, sem er mjög gagnlegt þegar talan sem við ætluðum að nota er eitthvað á við $\frac{3}{4}\sqrt[3]{\pi*7} $ og við nennum ekki að skrifa það aftur og aftur.
 
 Að sama skapi má láta Python úthluta minnissvæði í tölvunni fyrir þær breytur sem við viljum geyma.
 Munurinn er sá að við nefnum sjálf hvað minnisvæðið heitir, erum ekki bundin við að nota ANS og að við erum með, svo gott sem, óteljandi minnissvæði.
@@ -119,41 +139,49 @@ Gildisveiting (e. assignment) þýðir að nú er einhver ákveðinn merkimiði 
 Gildisveiting er gerð með því að skrifa nafnið sem við viljum geta vísað í vinstra megin við jafnaðarmerki og gildið sem við viljum geyma í þeirri breytu hægra megin við jafnaðarmerkið, eins og sést í kóðabút \ref{lst:breytur-kynntar}
 
 \begin{lstlisting}[caption=Breytur kynntar, label=lst:breytur-kynntar]
-# Búum til breytu með nafnið var
 val = 5
 
-# þegar þetta er keyrt fæst svarið 10
 val + 5
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+10
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Þegar við keyrum línu 2 í kóðabút \ref{lst:breytur-kynntar} segjum við vélinni að hafa aðgengilegt minnissvæði sem við getum notað með því að skrifa orðið val, og setja í það minnissvæði gildið 5.
-Breytan er svo notuð í línu 5, nafnið hennar er notað í útreikningi sem er alveg eins í kóðabút \ref{lst:reiknadg}.
+Þegar við keyrum línu 1 í kóðabút \ref{lst:breytur-kynntar} segjum við vélinni að hafa aðgengilegt minnissvæði sem við getum notað með því að skrifa orðið \texttt{val}, og setja í það minnissvæði gildið 5.
+Breytan er svo notuð í línu 3, nafnið hennar er notað í útreikningi sem sambærilegum kóðabút \ref{lst:reiknadg}.
+Það sem gerist er að við veitum breytinni \texttt{val} gildi og svo köllum við í breytuna okkar með því að skrifa nafnið hennar.
+Prófið að breyta röðinni og sjá hvað gerist, en hvað gerist ef þið breytið bæði röðinni á línunum tveimur og nafninu á breyunni?
+Prófið ykkur áfram.
 
 \begin{itarefni}
 \textbf{Hvað gerist þegar við keyrum kóða?}\\
 Ef þú prófar þig áfram við að búa til breytur í vinnubók og keyra sellur gætir þú rekist á svolítið sem hefur ekki gerst áður, að þegar sella inniheldur eingöngu gildisveitingu og er keyrð þá ,,gerist ekkert''.
 Þetta finnst mörgum mjög skrýtið því þau vilja fá einhverja útkomu.
-En útkoman er sú að þú sagðir vélinni að geyma þetta, þú sagðir henni ekki að gera neitt annað.	
+En útkoman er sú að þið sögðuð vélinni að geyma eitthvað, þið sögðuð henni ekki að gera neitt annað.	
 \end{itarefni}
 
 Breytur eru skilgreindar vinstra megin við jafnaðarmerki í Python.
-Eins og það væri lesið, val fær gildið 5.
-Það væri lítið vit í því að hafa það öfugt, 5 er núna jafngilt val.
-Það sem við værum þá að segja tölvunni að í hvert sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu val.
-Það er alls ekki það sem við viljum.
+Eins og það væri lesið, \texttt{val} fær gildið 5.
+Það væri lítið vit í því að hafa það öfugt, 5 er núna jafngilt \texttt{val}.
+Það sem við værum þá að segja tölvunni að í hvert sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu \texttt{val}.
+Það er alls ekki það sem við viljum (eða mjög ólíklega).
 
-Nokkrar reglur í nafnavali á breytum, þetta vill vefjast fyrir sumum en lærist fljótlega:
-\vspace{0.5cm}
+\vspace{0.3cm}
+
+Nokkrar \textbf{reglur} í nafnavali á breytum, þetta vill vefjast fyrir sumum en lærist fljótlega:
+\vspace{0.3cm}
 \begin{enumerate}
 	\item Kóðalitunin á breytuheitinu má ekki vera annað en venjulegi liturinn fyrir kóða, þannig að ef nafnið fær áherslumerkingu (annan lit) er það ekki löglegt breytuheiti því það er frátekið lykilorð í Python. 
-	Áherslulitunin í númeruðu kóðabútunum í þessari bók er marklaus því hún er mjög frumstæð.
 	Dæmi um það sem fær áherslulitun eru frátekin lykilorð og tölustafir.
+	Athugið að áherslulitunin í númeruðu kóðabútunum í þessari bók er mjög frumstæð.
 	\item Breytuheitið ætti ekki að innihalda séríslenskan staf (það er löglegt í jupyter vinnubókum en er hrikalega slæmur ávani því það er ekki löglegt allsstaðar).
 	\item Breytuheitið má ekki innihalda bil.
 \end{enumerate}
-\vspace{0.5cm}
-Nokkur tilmæli um breytunöfn með tilliti til nafnavenja í Python:
-\vspace{0.5cm}
+\vspace{0.3cm}
+Nokkur \textbf{tilmæli} um breytunöfn með tilliti til nafnavenja í Python:
+\vspace{0.3cm}
 \begin{enumerate}
 	\item Breytuheiti byrja á litlum staf.
 	\item Ef það þarf að nota löng breytuheiti er venjan að nota snákaframsetningu (e. snake casing) sem felur í sér að gera niðurstrik á milli orða, dæmi \texttt{thetta\_er\_langt\_nafn\_a\_breytu}.
@@ -164,66 +192,70 @@ Nokkur tilmæli um breytunöfn með tilliti til nafnavenja í Python:
 	En ef ég væri að búa til reiknirit sem býr til tölvuleikjapersónu af handahófi með því að velja tilviljanakennt nafn, aldur og starf þá væru breytuheitin \texttt{a}, \texttt{b} og \texttt{c} alveg glötuð því þegar ég kæmi aftur að kóðanum mínum myndi ég ekki hafa hugmynd um hvað a, b og c væru. 
 	Betra væri að breyturnar hétu \texttt{nafn}, \texttt{aldur} og \texttt{starf}.
 \end{enumerate}
+\vspace{0.3cm}
 
-\begin{lstlisting}[caption=Dæmi um gildisvetingar\, réttar og rangar]
-# Hér er ég að fara að búa til breytu sem heitir val
+Í kóðabút \ref{lst:tolur-gildisveitingar} eru nokkrar gildisveitingar, það er látið eftir sem æfing að laga þennan kóðabút þannig að hann keyri villulaust (án þess að gera allt að athugasemdum) og átta sig á því hvað var að hverju sinni.
+Ein gildisveiting er þó svo svæsið vitlaus að þið þurfið að endurræsa kjarnann í Jupyter vinnubókinni ykkar til að geta haldið áfram (fyrir hvert skipti sem þið keyrið kóðabútinn án þess að hafa lagað villuna).
+
+\begin{lstlisting}[caption=Dæmi um gildisvetingar\, réttar og rangar, label=lst:tolur-gildisveitingar]
 val = 5
 
-# Hér er ég ekki að búa til breytu sem heitir val heldur er ég að segja að talan fimm er ekki lengur til sem heiltala heldur gæti hún vísað í hvað sem er sem er geymt í minnisvæði merktu val, ólöglegt.
 5 = val
 
-# Hér bý ég til breytu sem heitir heiltala sem fær gildið 0
 heiltala = 0
 
-# Hér yfirskrifa ég lykilorðið fyrir týpuna heiltala og læt það innihalda 0
-int = 0
-# þetta er harðbannað og ef þetta gerist er ekki nóg að þurrka þetta út og keyra aftur, nú þarf að endurræsa kjarna vinnubókarinnar.
+int = 0 
 
 Gott nafn = 1.0
-# Þetta er ekki bara bannað vegna bilsins á milli orðanna ,,Gott'' og ,,nafn'' heldur er það líka ljótt því að það byrjar á stórum staf
 
 3_litlar_mys = 3
-# má ekki byrja á tölustaf eða tákni
 
 utreiknud_laun_eftir_skatt = 0.65 * laun
-# frábært, lýsandi og gott breytuheiti (hér er þó gert ráð fyrir að vélin þekki breytuna laun)
 \end{lstlisting}
 
 Nú þegar við höfum séð hvernig má skilgreina breytu með gildisveitingu viljum við vita hvernig á að nota þessa breytu.
 Ef við snúum okkur aftur að reiknivélasamlíkingunni um ANS takkann þá ætti kóðabútur \ref{lst:notabreytu} að geta sýnt með eðlislægum hætti hvernig breytur nýtast.
-Fyrst segjum við vélinni hvað það er sem ANS á að vísa á. Svo í línu 5 segjum við vélinni að geyma aðra breytu, x, sem byggir á ANS breytunni okkar.
-Í þessum kóðabút er svo haldið áfram með þessa afleiddu breytu x og önnur afleidd breyta búin til útfrá henni.
+Fyrst segjum við vélinni hvað það er sem ANS á að vísa á. 
+Svo í línu 5 segjum við vélinni að geyma aðra breytu, \texttt{x}, sem byggir á \texttt{ANS} breytunni okkar.
+Í þessum kóðabút er svo haldið áfram með þessa afleiddu breytu \texttt{x} og önnur afleidd breyta búin til útfrá henni.
 Það sem gerist svo í endann er sambærilegt við það að ýta á ,,='' takkann á reiknivélinni.
 
-Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur print með svigum fyrir aftan og inni í svigunum er breytan okkar.
-Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak} 
-\footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. Kannski verður úttaki varpað beint inn í heilann á forriturum einhvern tíma?} 
-það gildi sem breytan \textbf{x} inniheldur.
+Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur \texttt{print} með svigum fyrir aftan og inni í svigunum er breyta.
+Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak} \footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. Kannski verður úttaki varpað beint inn í heilann á forriturum einhvern tíma?} 
+það gildi sem breytan inniheldur.
 Ef þar hefði staðið \texttt{print(halft\_x)} hefðum við fengið svarið sem er geymt í breytunni \texttt{print(halft\_x)}.
 
 \begin{lstlisting}[caption=Að nota breytu, label=lst:notabreytu]
-# Hér framkvæmi ég einhvern útreikning sem ég geymi í breytunni ANS
 ANS = 3/4 * (3.1415 * 7)**(1/3)
-
-# fáum afleidda breytu
+print(ANS)
 x = 3 * ANS
-
-# fáum afleidda breytu aftur
-halft_x = x/2
-
-# Nú langar okkur til að vera viss um að við séum við vitrænt svar svo við biðjum tölvuna um að segja okkur hvað er geymt í breytunni x.
 print(x)
+halft_x = x/2
+print(halft_x)
 \end{lstlisting}
-Í línu 2 í kóðabút \ref{lst:notabreytu} er breytan ANS skilgreind, í línu 5 er hún svo notuð,
-Í línu 5 er breytan x skilgreind og í línu 8 er hún notuð, og í línu 8 er halft\_x skilgreind og í línu 11 er hún notuð.
+\lstset{style=uttak}
+\begin{lstlisting}
+2.1012269615581634
+6.30368088467449
+3.151840442337245
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+
+Í línu 1 í kóðabút \ref{lst:notabreytu} er breytan \texttt{ANS} skilgreind, í línum 2 og 3 er hún svo notuð,
+Í línu 3 er breytan \texttt{x} skilgreind og í línum 4 og 5 er hún notuð, sama gildir um \texttt{halft\_x}
 Breytu má einungis nota eftir að hún hefur verið skilgreind.
 Ef við reynum að vísa í breytu án þess að hafa tekið frá minnishólf með sama nafni þá lendir vélin í vandræðum.
 Eins ef við værum að segja vinum okkar sögu og nefna Hafstein á nafn án þess að kynna hann myndi viðmælendur okkar truflast og biðja um útskýringu.
 Gerið tilraun á þessu með því að færa til línurnar í kóðabútnum og sjá hvað gerist þegar kóðinn er keyrður.
 
 
-Print, sem er notað í línu 11, er \textit{fall}, við skoðum föll nánar í kafla \ref{k:föll} en þangað til munum við kynnast nokkrum innbyggðum föllum eins og print().
-Við megum beita print skipuninni óspart og hvetur höfundur til þess að lesandi venji sig á að skoða úttakið sitt í hverju þrepi áður en leitað er hjálpar til annarra, einnig má fletta upp í listanum yfir algengar villur í kafla \ref{uk:villur-algengar}.
+Skipunin \emph{print} sem kemur þarna oft fyrir er \textit{fall}, við skoðum föll nánar í kafla \ref{k:föll} en þangað til munum við kynnast nokkrum innbyggðum föllum eins og \texttt{print()}, \texttt{type()} og \texttt{len()}.
+Við beitum föllunum með því að skrifa nöfn þeirra og setja inn í þau \emph{viðföng} (e. parameters).
+Með því er átt að þið setjið inn í svigana fyrir aftan print, það sem þið viljið að prentist.
+Við megum beita print skipuninni óspart, það hjálpar gífurlega við að skilja hvað það er sem er að gerast og hvað, ef eitthvað, er að fara úrskeiðis.
+
+Þið eruð einnig hvött til þess að venja ykkur á að skoða úttakið í hverju þrepi áður en leitað er hjálpar til annarra, einnig má fletta upp í listanum yfir algengar villur í kafla \ref{uk:villur-algengar}.
 
 
 Núna höfum við séð tvær týpur, heiltölur og fleytitölur.
@@ -233,103 +265,96 @@ Hingað til höfum við eingöngu skoðað reikniaðgerðir sem eru framkvæmdar
 Við sjáum það gert í kafla \ref{k:strengir} þegar við skoðum hvernig megi vinna með texta.
 
 Að því sögðu þá þurfum við að skoða breytur nokkuð betur áður en við förum að beita þeim á skilvirkan hátt.
-Við erum búin að skoða reiknivirkja og gildisveitingu, og nú ætlum við að skoða \textit{reiknivirkjagildisveitingu} þar sem við uppfærum gildi í breytu með því að nota reiknivirkja eins og + eða - með gildisveitingu =.
-Þetta sést betur í kóðabút
+Við erum búin að skoða reiknivirkja og gildisveitingu, og nú ætlum við að skoða \textit{reiknivirkjagildisveitingu} (e. assignment operators) þar sem við uppfærum gildi í breytu með því að nota reiknivirkja (eins og + eða -) með gildisveitingu (=).
+Þetta sést betur í kóðabút \ref{lst:reiknivirkjagildisveiting} þar sem við byrjum á að búa til breytu því að reiknivirkjagildisveiting snýst um að gefa gömlu minnissvæði gildi sem byggir á því sem þar áður var.
+Línur 2 og 3 í kóðaútnum eru jafngildar en vegna þess að þær eru báðar keyrðar þá uppfærist gildið á breytunni \texttt{nem} tvisvar.
 
 \begin{lstlisting}[caption="Reiknivirkjagildisveiting", label=lst:reiknivirkjagildisveiting]
-# ég ætla að telja nemendur inn í stofuna
-# ég byrja með 0 nemendur
 nem = 0
-
-# svo sé ég fyrsta nemandann minn og endurskilgreini þar með breytuna nem
 nem = nem + 1
-
-# þá uppfæri ég gildið sem nem breytan inniheldur og er hún núna það sem hún var (0) + 1, ef ég keyrði þessa línu aftur væri það orðið að (1) + 1 og svo koll af kolli eftir því sem ég keyri þessa línu oftar
-
-# önnur leið til að skrifa þetta er með reiknivirkjagildisveitingu
 nem += 1
-
-# þá uppfæri ég gildið nem um það sem hún var + 1
-
-#segjum að nemendur koma inn í stofuna í pörum þá væri formúlan svona:
+print(nem)
 nem += 2
 
-# þá uppfærist gildið í nem um +2 í hvert sinn sem þessi kóðalína er keyrð
-
-# Ef ég væri að reikna stofnstærð á bakteríum sem tvöfaldast á hverjum klukkutíma gæti ég gert það svona:
 stofn_staerd = 30
-stofn_staerd *= 2 # og keyrt svo þessa línu fyrir hvern klukkutíma
+stofn_staerd *= 2 
 
-# Tökum annað dæmi, byrjum á að skoða hvernig megi geyma útreikninga í mismunandi breytum
 thusund = 1000
 fimm_hundrud = thusund/2
 tvo_hundrud_og_fimmtiu = fimm_hundrud/2
+print(tvo_hundrud_og_fimmtiu)
 
-# ef ef mér er sama um breytuna thusund og vil þess í stað bara halda utan um alla upphæðina mína í einni breytu og helminga hana tvisvar þá get ég gert þetta
 allt = 1000
 allt /= 2
 allt /= 2
-
-#nú er allt orðið að 250
-
-# ég má líka nota aðrar breytur í uppfærslunni minni
-# hér ætla ég að reikna út hver hækkun launa yrði milli ára ef ég fengi alltaf 2% launahækkun
+print(allt)
 
 laun = 100
 verdbolga = 0.02
-laun *= 1 + verdbolga # þetta má svo keyra endurtekið til að skoða fram í tímann
-
+laun *=  1 + verdbolga
+print(laun)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+2
+250.0
+250.0
+102.0
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Hér sést að það er gagnlegt og fljótlesið þegar það á að uppfæra gildi á breytu að gera það með því að nota reiknivirkjann með gildisveitingunni.
-Í kóðabútnum að ofan sést að athugasemdir eru skrifaðar inni í línum líka, það er stundum gagnlegt að skrifa stuttar athugasemdir inni í kóða með þessum hætti en betra er þó að skjala hann skilmerkilega efst við viðeigandi kóðabút.
+Hér í kóðabút \ref{lst:reiknivirkjagildisveiting} sést að það er gagnlegt og fljótlesið þegar það á að uppfæra gildi á breytu að gera það með því að nota reiknivirkjann með gildisveitingunni.
+Það er skýrara því við sjáum þá strax að eiga á við breytuna eins og hún er en ekki með einhverju öðru gildi.
+Dæmin sem eru tekin eru í röð: fjöldi nemenda aukinn línulega, stofnstærð á einhverri tegund margfaldast, peningafjárhæð minnkuð (í fyrra dæminu eru fleiri breytur sem gæti verið gagnlegt en í því seinna er ein sem breytist) og svo það síðasta er launahækkun sem um nemur einhverri verðbólguspá.
 
 \section{Villur}\index{Villur}\label{uk:tolur-villur}
-Að svo stöddu er gott að hafa í huga hinar ýmsu villur sem geta komið upp.
-Þegar við forritum í Python fáum við yfirleitt í hendurnar mjög lýsandi villur sem segja okkur hvað við gerðum vitlaust og hvar.
+Að svo stöddu er gott að hafa í huga hinar ýmsu \emph{villur} (e. errors) sem geta komið upp.
+Þegar við forritum í Python fáum við yfirleitt í hendurnar mjög lýsandi villur sem segja okkur hvað við gerðum vitlaust og hvar\footnote{í kóðabút \ref{lst:lykkjur-while-false} má sjá villuskilaboð í úttaki}.
 Áður en lengra er haldið er vitlegt að kynnast þeim algengu villum sem koma upp, hvað þær þýða og hvernig á að taka á þeim.
 
-\begin{itemize}
-	\item Nafna villa (e. NameError), þar sem við reyndum að nota breytu sem við höfum enn ekki skilgreint.
+\begin{itemize}[leftmargin=*]
+	\item \textbf{Nafna villa} (e. NameError), þar sem við reyndum að nota breytu sem við höfum enn ekki skilgreint.
 	Þessi villa kemur upp þegar við skrifum nafnið á breytunni okkar vitlaust þegar við ætlum að beita henni eða við gleymdum að skilgreina hana áður en við beittum henni.
-	Til dæmis myndum við fá nafnavillu við að skilgreina breytuna Valborg en nota svo breytuna valborg, þar sem hástafir og lágstafir skipta máli í Python og eru þessar tvær breytur algerlega óskyldar í minninu.
+	Til dæmis myndum við fá nafnavillu við að skilgreina breytuna \texttt{Valborg} en nota svo breytuna \texttt{valborg}, þar sem hástafir og lágstafir skipta máli í Python og eru þessar tvær breytur algerlega óskyldar í minninu.
 	Einnig getur þessi villa komið upp þegar við ætlum að nota strengi en gleymum að skilgreina þá sem strengi með gæsalöppum og látum vélina halda að við séum að vinna með breytur.
 	Sjáum í kafla \ref{k:strengir} hvernig á að skilgreina strengi.
 	
 	Þetta lögum við með því að sjá hvaða nafn við ætluðum að nota og pössum okkur að það nafn hefur fengið einhverja skilgreiningu áður en að við reynum að nota það (það er ofar í kóðanum).
 	
-	\item Týpu villa (e. TypeError), þar sem eitthvað var gert við gögn sem týpan af gögnunum leyfir ekki.
+	\item \textbf{Týpu villa} (e. TypeError), þar sem eitthvað var gert við gögn sem týpan af gögnunum leyfir ekki.
 	Til dæmis að beita reiknivirkja á breytu sem styður ekki notkun hans.
-	\item Málskipunar villar (e. SyntaxError), þar sem eitthvað var vitlaust skrifað, vitlaust tákn á vitlausum stað.
+	\item \textbf{Málskipanar villa} (e. SyntaxError), þar sem eitthvað var vitlaust skrifað, vitlaust tákn á vitlausum stað.
 	Til dæmis var komma notuð í stað punkts eða breytuheiti byrjaði á tákni eða tölu.
 	
 	Það sem við gerum í því að fá þessa villu er að lesa okkur til um hvað það er sem má gera við týpuna okkar og athuga hvernig við fáum fram þá virkni sem við vildum með því að leysa vandann á annan máta.
 	Hér erum við í rauninni að misskilja hvað má og hvað má ekki og við þurfum að átta okkur betur á því hvað er í boði.
 	
-	\item Inndráttar villa (e. IndendationError), þar sem kóðinn er ekki rétt inndreginn.
+	\item \textbf{Inndráttar villa} (e. IndendationError), þar sem kóðinn er ekki rétt inndreginn.
 	Eins og kom fram í inngangi þá þarf Python kóði að vera vel uppsettur til þess að hann keyri.
 	Við sjáum fyrst í kafla \ref{k:segðir} hvernig við beitum inndrætti svo núna ef við fáum þessa villu þá er það vegna þess að við erum með óþarfa bil fyrir framan kóðann okkar. 
 	
 	Það sem við gerum er að skilja hvað á að vera í hvaða inndrætti og laga kóðann þannig að hann sé vel uppsettur.
 	
-	\item Vísis villa (e. IndexError), þar sem við reyndum að ná í sætisvísi sem er ekki til í gögnunum okkar.
+	\item \textbf{Vísis villa} (e. IndexError), þar sem við reyndum að ná í sætisvísi sem er ekki til í gögnunum okkar.
 	Í kafla \ref{k:strengir} sjáum við týpu sem hefur sætisvísa.
 	
 	Það sem við gerum í þessari villu er að átta okkur á því hversu margir sætisvísar eru til staðar og hvaða vísa við vildum fá, laga svo kóðann í samræmi við það sem við ætluðum að sækja.
 	
-	\item Gildis villa (e. ValueError), þar sem við reyndum að ná í eða nota gildi úr gögnum sem er ekki til.
+	\item \textbf{Gildis villa} (e. ValueError), þar sem við reyndum að ná í eða nota gildi úr gögnum sem er ekki til.
 	Gögnin eru til en gildið er ekki til staðar í þeim.
 	
 	Athugum hér að við reyndum að sækja eitthvað, næstum því eins og upp úr poka, og í stað þess að segja áttu þetta til? Þá sögðum við við vélina ,,þú átt þetta til, láttu mig hafa það!''. Svo það sem við getum gert til að laga það er að segja ,,áttu þetta til?'' eða ,,reyndu að láta mig hafa það ef þú átt það''. 
 	Þessi lausn er ansi óljós að svo stödu þar sem við höfum ekki farið yfir hvernig á að ná í gildi upp úr gögnunum okkar en vonandi verður þetta ljósara þegar þar að kemur.
 	
-	\item Eiginda villa (e. AttributeError), þar sem við reynum að ná í eða beita eigindum sem gögnin okkar búa ekki yfir.
+	\item \textbf{Eiginda villa} (e. AttributeError), þar sem við reynum að ná í eða beita eigindum sem gögnin okkar búa ekki yfir.
 	Við getum séð hvaða eigindum gögnin okkar búa yfir með því að lesa skjölun um þau eða kíkja snöggt undir húddið með því að gera punkt fyrir aftan gögnin og ýta á tab takkann \todo{vísa hérna aftur í tab takkann} og þá sjáum við þau eigindi sem týpan býr yfir.
 	Ef við skoðum þau eigindi sem eru til fyrir heiltölur og fleytitölur sjáum við að þau eru ekki alveg eins og ef við reynum að nota þau sem eru til fyrir annað en ekki hitt á víxl þá fáum við eigindavillu.
 	
 	Það sem við gerum í þessu er svipað týpu villunni, það er að lesa okkur til um hvaða eigindi gögnin okkar búa yfir og hvað við getum náð í og notað.
 	Eigindi eru mismunandi eftir týpum og er mikilvægt að átta sig á því hvaða eigindi eru í boði hverju sinni svo að við veljum rétta týpu fyrir gögnin okkar.
 \end{itemize}
+
+\newpage
 
 \section{Verkefni}
 \begin{exercise}\label{tol1}
