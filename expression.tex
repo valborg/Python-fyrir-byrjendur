@@ -1,28 +1,31 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Segðir, skilyrðissetningar og sanngildi}\label{k:segðir}
-\todo{laga þessa kynningu}
-Kóða má skipta í segðir (e. expressions) og yrðingar (e. statements).
-Segðir eru línur þar sem eitthvað er metið sem gildi, ef við líkjum því við tungumál væru það setningar þar sem einhver niðurstaða fæst eins og ,,er rigning''? 
-Yrðingar eru línur þar sem eitthvað er sett fram sem þarf ekki að meta, í tungumáli væru það setningar á borð við ,,mér er kalt''
+Kóða má skipta í \emph{segðir} (e. expressions) og \emph{yrðingar} (e. statements).
+Segð er eitthvað sem krefst svars, ,,er rigning?''.
+Svarið er metið sem gildi og við fáum útkomu.
+Yrðing er eitthvað sem er sett fram sem staðreynd ,,það er rigning''.
 
-Þessi skipting er ekkert sérlega merkileg að svö stöddu en í þessum kafla ætlum við að einbeita okkur að því að meta útkomu og fá í hendurnar svör sem við getum svo gert eitthvað við.
+Núna ætlum við að velta fyrir okkur segðum, í þessum kafla ætlum við að einbeita okkur að því að meta útkomu og fá í hendurnar svör sem við getum svo gert eitthvað við.
 
-Til þess að gera það þurfum við að læra á nýja týpu sem heitir Boolean og hefur lykilorðið \textbf{bool}, boolean gildi eru kölluð búlsk gildi eða sanngildi.
-Boolean týpan er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt og eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka og því hvetur höfundur til að lesandi fletti allavega upp wikipedia greininni.} (e. Boolean algebra). 
-Nú er það flestum kunnug staðreynd að tölvur vinna með 0 1 í grunninn, en hvernig það er notað í æðri forritunarmálum (e. high level programming languages) er ekki eins augljóst.
+Til þess að gera það þurfum við að læra á nýja týpu sem heitir \texttt{boolean} og hefur lykilorðið \textbf{bool}, boolean gildi eru kölluð sanngildi (stundum búlsk gildi).
+Boolean týpan er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt.
+Þau eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka, endilega kíkið á ensku \href{https://en.wikipedia.org/wiki/Boolean_algebra}{Wikipedia síðuna}.} (e. Boolean algebra). 
+Nú er það flestum kunnug staðreynd að tölvur vinna með 0 og 1 í grunninn, en hvernig það er notað í almennri forritun í æðri forritunarmálum er viðfangsefnið okkar núna.
 
-Í þessum kafla verður farið yfir búlísk gildi, samanburð (e. comparison) og samanburðarvirkja (e. comparison operators), rökvirkja (e. logical operators) og svo skilyrðissetningar (e. conditional statements).
+Í þessum kafla verður farið yfir sanngildi,  \emph{samanburð} (e. comparison) og \emph{samanburðarvirkja} (e. comparison operators), \emph{rökvirkja} (e. logical operators) og svo \emph{skilyrðissetningar} (e. conditional statements).
+Það er mikilvægt að ná góðum tökum á þessum kafla ef halda á lengra inn í námsefnið, ef ekki er skilingur fyrir hendi á því hvernig segðir virka eða hvernig á að setja upp skilyrðissetningu er erfitt að ætla að halda mikið áfram.
+Því er gott að gefa sér nægan tíma í þetta efni og gera ítarlegar tilraunir.
 
 \section{Sanngildi}\index{Sanngildi}
 
-Eins og kom fram í inngangi kaflans eru búlsk gildi einungis tvö, True og False.
+Eins og kom fram í inngangi kaflans eru sanngildi einungis tvö, True og False.
 Hægt er að geyma þau í breytum eins og gögn af öðrum týpum sem við höfum séð.
 Sanngildi eru einnig metin sem 1 eða 0, fyrir True annars vegar og False hinsevegar.
 
 Vitandi að gildin geta verið 0 eða 1 (aldrei bæði í einu) þá er þess virði að nefna hérna sanntöflur.
 Látum p vera yrðinguna ,,það er rigning'' og látum q vera yrðinguna ,,mér er kalt''.
-Þá gætum við, með því að skoða mismunandi aðstæður, fengið rökrétt svar við t.d. spurningunni ,,er rigning og er mér kalt?'' sem við getum skrifað sem s1 og svo annarri spurningu sem er ,,er rigning eða er mér kalt?'' sem við getum kallað s2.
+Þá gætum við, með því að skoða mismunandi aðstæður, fengið rökrétt svar við t.d. spurningunni ,,er rigning og er mér kalt?'' sem við getum skrifað sem spurning1 (eða s1) og svo annarri spurningu sem er ,,er rigning eða er mér kalt?'' sem við getum kallað spurning2 (eða s2).
 
 \begin{center}
 \centering
@@ -56,18 +59,9 @@ Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á 
 Þannig að til þess að svarið við spurningu 1 sé játandi þá þarf mér bæði að vera kalt og það þarf að vera rigning, svo þegar yrðingarnar eru ekki sannar á sama tíma þá skiptir ekki máli hvor sé sönn því að önnur er ósönn og því er svarið neitandi.
 En spurning 2 er þannig orðuð að það sé nóg að annað hvort sé mér kalt eða það sé rigning úti til þess að svarið sé játandi, svo þegar yrðingarnar eru sannar á víxl þá er svarið alltaf játandi.
 \begin{lstlisting}[caption=Sanngildi geymd sem breytur, label=lst:bool-breytur]
-test = True
-# þetta geymir gögn af týpunni Bool
-
-test = true
-# þetta veldur villu þar sem nú er verið að biðja um að test innihaldi það sama og breytan true vísar á
-# munurinn er í stóru og litlu t.
-
-test = "True"
-# þetta er ekki af týpunni Bool heldur er þetta strengur
-
-test = False
-# þetta geymir gögn af týpunni Bool
+satt = True
+strengur = "True"
+osatt = False
 \end{lstlisting}
 
 Akkúrat núna þurfum við bara að vita að týpan Boolean sé til og hvernig eigi að nota hana, með hástaf fremst.
@@ -77,7 +71,7 @@ Sjáum svo í seinni köflum hvernig hún gagnast okkur.
 \section{Segðir}\index{Segðir}
 
 Eins og kom fram í inngangi kaflans má líta svo á að segðir séu sá hluti af kóðans sem er metinn sem eitthvað gildi, eins og 4 + 5 er segð en x = 5 er yrðing.
-Nú ætlum við þó að einblína á búlskar segðir, það er horfa á spurningar sem hafa svar sem er annað hvort satt eða ósatt.
+Nú ætlum við þó að einblína á búlskar segðir, horfa á spurningar sem hafa svar sem er annað hvort satt eða ósatt.
 Er rigning?
 Þá horfum við út og sjáum að miðað við aðstæður þá er svarið annað hvort satt eða ósatt og það breytist eftir því hvenær við horfum.
 
@@ -86,64 +80,59 @@ Hvað er samanburður?
 Það er þegar eitthvað er metið miðað við eitthvað annað, eins og er þetta stærra en hitt?
 Er þetta þyngra?
 Er þetta jafngilt?
+Athugið hér að aðalatriðið er að bera saman eitthvað tvennt, ekki er hægt að nota samanburð nema vera með tvennt í höndunum.
+Þið hafið kannski lent á spjalli við barn sem segir ,,er ég stærri?'', stærri en hvað er ekki ljóst og við eigum því erfitt með að svara spurningunni.
 
-Nú þurfum við nýtt hugtak, við erum búin að kynnast reiknivirkjum eins og + og - í kafla \ref{k:tolur}.
+Nú þurfum við nýtt hugtak, við erum búin að kynnast reiknivirkjum eins og + og - í kafla \ref{uk:tolur-reiknivirkjar}.
 Nýja hugtakið okkar eru \textbf{samanburðarvirkjar}.
 Samanburðarvirkjar eru notaðir til að spyrja hvort að ákveðin tengsl gilda á milli einhverja tveggja hluta.
 Eins og í daglegu tali þegar við segjum ,,er þetta epli stærra en þessi appelsína?'' og erum þannig að bera saman epli og appelsínur, samanburðarvirkjar eru til þess að gera slíka setningu formlega svo að tölva geti svarað spurningunni.
 
 Samanburðarvirkjar eru nokkir í Python:
 \begin{itemize}
-	\item == þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu jafngildir
-	\item != þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu ólíkir
-	\item < þá er spurt hvort að það sem er vinstra megin sé strangt minna en það sem hægra megin (3 er ekki minna en 3 t.d.)
-	\item > þá er spurt hvort að það sem er vinstra megin sé strangt stærra en það sem er hægra megin
-	\item <= þá er spurt hvort að það sem er vinstra megin sé minna eða jafnt því sem er hægra megin
-	\item >= þá er spurt hvort að það sem er vinstra megin sé stærra eða jafnt því sem er hægra megin
+	\item[] \textbf{==} þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu jafngildir
+	\item[] \textbf{!=} þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu ólíkir
+	\item[] \textbf{<} þá er spurt hvort að það sem er vinstra megin sé strangt minna en það sem hægra megin (3 er ekki minna en 3 t.d.)
+	\item[] \textbf{>} þá er spurt hvort að það sem er vinstra megin sé strangt stærra en það sem er hægra megin
+	\item[] \textbf{<=} þá er spurt hvort að það sem er vinstra megin sé minna eða jafnt því sem er hægra megin
+	\item[] \textbf{>=} þá er spurt hvort að það sem er vinstra megin sé stærra eða jafnt því sem er hægra megin
 \end{itemize}
 
 Skoðum kóðabút þar sem þessir samanburðarvirkjar eru nýttir til þess annars vegar að fá niðurstöður með tölur og hinsvegar strengi.
 \begin{lstlisting}[caption=Samanburðarvirkjar, label=lst:bool-samanburður]
-# nú viljum bera saman einhver gögn, búum okkur til breytur til að bera saman
 strengur1 = "abc"
 strengur2 = "bcd"
 strengur3 = "3"
 tala1 = 3
 tala2 = 3.0
 tala3 = 4
+print('jafngildissamanburður')
+print(tala1 == tala3)
+print(strengur1 == strengur2)
+print(tala1 == tala2)
+print(strengur3 == tala1)
 
-# nú erum við komin með nokkrar breytur til að gera prófanir á:
+print('minna en')
+print(strengur1 < strengur2)
 
-# byrjum á að skoða hvort að 3 sé jafngilt 4 eða tveir jafnlangir strengir séu jafngildir
-tala1 == tala3 
-# þetta skilar False
-
-strengur1 == strengur2
-# þetta skilar False
-
-# en hvað með þetta?
-tala1 == tala2
-# þetta skilar True þar sem til að geta borið talnatýpur saman er þeim kastað í sambærileg gögn (skoðum kast í seinna í kaflanum)
-
-strengur3 == tala1 
-# þetta skilar False þar sem ekki er verið að vinna með eingöngu gögn af talnatýpum
-
-# Allt það sem skilar okkur True með == skilar okkur False með != 
-# og öfugt, það sem skilar False með == skilar okkur True með !=
-
-# skoðum þá minna en og stærra en
-
-strengur1 < strengur2
-# þetta skilar okkur True þar sem strengur1 er framar í stafrófinu, ekki er verið að bera saman lengdina á strengjunum
-
-tala1 < tala2
-# þetta skilar okkur False þar sem tölurnar eru jafngildar, sáum það að hér að ofan, og önnur getur ekki verið bæði minni og jöfn á sama tíma
-
-tala1 <= tala2
-# þetta skilar okkur True þar sem spurt er hvort að tala1 sé annað hvort minni en eða jöfn hinni breytunni
-
-# Það skiptir máli hvernig goggarnir snúa, a > b hér er spurt hvort a sé stærra en b, b < a, hér er spurt hvort b sé minna en a (sem er sama spurningin).
+print('minna eða jafnt')
+print(tala1 <= tala2)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+jafngildissamanburður
+False
+False
+True
+False
+minna en
+True
+minna eða jafnt
+True
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Í kóðabút \ref{lst:bool-samanburður} er ekki verið að nota alla samanburðarvirkjana heldur einungis sýna hvernig er hægt að prófa sig áfram með þá.
 
 \subsection{Rökvirkjar}\index{Rökvirkjar}
 Rökvirkjar (e. logical operators) í Python eru þrír, þeir eru \textbf{og}, \textbf{eða}  og \textbf{ekki} táknað með \texttt{and}, \texttt{or} og \texttt{not}.
@@ -154,21 +143,21 @@ Hægt er að meta hvort að kaffið sé heitt eða ekki, og fá þannig út sann
 En tökum eftir að á milli þessara tveggja segða er rökvirkinn \textit{og}, sem segir okkur að til þess að meta gildi allrar setningarinnar þurfa báðar segðirnar sitthvoru megin við rökvirkjann að vera sannar til þess að setningin í heild sinni skili sönnu annars er hún ósönn.
 \vspace{10pt}
 \begin{itemize}
-	\item \textbf{and} til þess að segð með þessum rökvirkja sé sönn þurfa báðar hliðar að vera sannar, annars er hún ósönn
+	\item[] \textbf{and} til þess að segð með þessum rökvirkja sé sönn þurfa báðar hliðar að vera sannar, annars er hún ósönn
 	\begin{itemize}
 		\item Það má líta á \textit{og} rökvirkjann eins og margföldun, hann hefur forgang umfram \underline{eða}.
 		\item Þar sem satt er 1 og ósatt 0 þá ef við margöldum með 0 fáum við alltaf 0 út.
 		\item ,,það er heitt úti'' og ,,það er kalt úti'' myndi skila okkur ósönnu því ekki getur bæði verið satt.
 		\item ,,það er heitt úti'' og ,,klukkan er fimm'' myndi skila okkur sönnu eftir aðstæðum.
 	\end{itemize}
-	\item \textbf{or} til þess að segð með þessum rökvirkja sé sönn þarf önnur hvor hliðin að vera sönn, annars er hún ósönn.
+	\item[] \textbf{or} til þess að segð með þessum rökvirkja sé sönn þarf önnur hvor hliðin að vera sönn, annars er hún ósönn.
 	\begin{itemize}
 		\item Það má líta á \textit{eða} rökvirkjann eins og samlagningu.
 		\item Þar sem satt er 1 og ósatt 0, þá þurfum við bara að sjá 1 einu sinni til þess að útkoman í heild sinni verði sönn.
 		\item ,,það er heitt úti'' eða ,,það er kalt úti'' myndi skila okkur sönnu ef þetta væru þau einu tvö hitastig sem væru í boði.
 		\item ,,það er heitt úti'' eða ,,klukkan er fimm'' myndi skila sönnu eftir aðstæðum.
 	\end{itemize}
-	\item \textbf{not} snýr við sanngildi segðar, not er ekki sett á milli segða heldur fyrir framan eins segð.
+	\item[] \textbf{not} snýr við sanngildi segðar, not er ekki sett á milli segða heldur fyrir framan eins segð.
 	\begin{itemize}
 		\item Það má líta á rökvirkjan \textit{ekki} eins og mínus, hann snýr við sanngildi eins og formerki
 		\item Ekki satt yrði ósatt, ekki ósatt yrði satt.
