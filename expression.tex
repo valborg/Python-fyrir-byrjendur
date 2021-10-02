@@ -166,7 +166,6 @@ En tökum eftir að á milli þessara tveggja segða er rökvirkinn \textit{og},
 \end{itemize}
 
 \vspace{5pt}
-\todo{formatting}
 \begin{itarefni}
 \textbf{Rökvirkjar sem reikniaðgerðir}\\
 Til að halda áfram með þessa samlíkingu með margföldun, samlagningu og mínus skulum við skoða eftirfarandi reikningsdæmi:
@@ -240,10 +239,10 @@ Skoðum þetta í töflu \ref{tbl:sanntafla-kaffi}, sambærilegri þeirri sem vi
 			% Use & to separate the columns
 			\hline  
 			% Put a horizontal line between the table header and the rest.
-			0 & 0 & Bæði ósatt, gengur ekki upp\\
+			0 & 0 & Bæði ósatt, getur ekki verið\\
 			0 & 1 &\\
 			1 & 0 &\\
-			1 & 1 & Bæði satt á sama tíma, gengur ekki upp\\
+			1 & 1 & Bæði satt á sama tíma, getur ekki verið\\
 			\hline
 		\end{tabular}
 		
@@ -264,7 +263,7 @@ Skoðum því nú hvað það þýðir að nota skilyrðissetningar (e. conditio
 \subsection{if}\index{if}
 Fyrsta lykilorðið sem við tökum fyrir er \textbf{if}, þar sem ekki er hægt að búa til skilyrðissetningu án þess.
 Og nú þurfum við að huga að því hvernig kóðinn okkar er uppsettur.
-Það sem á að framkvæma undir ef setningunni/if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann \todo{íslenskt orð}.
+Það sem á að framkvæma undir ef setningunni/if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann\footnote{Hann er fyrir ofan ,,CapsLock'' takkann.}.
 Eina sem ræður því hvað fer mikið af kóða undir hverja yrðingu er hóf og skynsemi.
 Við sjáum svo í kafla \ref{uk:hreiðrun} um hreiðrun hvers vegna það er mikilvægt að skilyrðissetningar séu skýrar.
 
@@ -295,45 +294,48 @@ Svo með því að orða spurninguna öðruvísi erum við búin að setja upp s
 \end{figure}
 
 Skoðum nú kóðabút \ref{lst:if} og hvað er átt við með réttum inndrætti, hér er einungis sýnt if setning ein og stök.
+Í kóðabútnum tökum við fyrir segðina ,,er til mjólk?'' og veitum henni gildið \texttt{True} svo við erum stödd í þeim aðstæðum að við eigum vissulega til mjólk, skoðið töflu \ref{tbl:sanntafla-kaffi} til að sannfærast og það sem er að gerast.
 Við sjáum í næsta undirkafla hvað við getum gert ef við förum framhjá if setningunni okkar og viljum gera eitthvað í því tilfelli.
 
 \begin{lstlisting}[caption=if notað, label=lst:if]
-m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
+mjolk = True 
 
 if(not m):
-	# fara í búð
 	print('við fórum í búðina og keyptum mjólk')
-	
-	# Við áttum mjólk svo þetta prentast ekki, við förum framhjá aðgerðunum sem eru undir if skipuninni
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+# við áttum mjólk svo ekkert prentast
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 \subsection{else}\index{else}
 Lykilorðið \textbf{else} má fylgja \textbf{if}, en það er ekki nauðsynlegt.
-Hinsvegar verður að vera eitthvað ef til þess að það geti verið eitthvað annars.
+Hinsvegar verður að vera eitthvað \emph{ef} til þess að það geti verið eitthvað \emph{annars}.
 Setningin ,,annars kaupi ég mjólk'' er ekki sérlega vitræn því að okkur vantar alveg fyrri hlutann.
 Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars kaupi ég kex annars kaupi ég te annars...''.
 Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}.
-Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, og það eru einu skilyrðin.
+Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, það er eina skilyrðið.
 Það þarf ekki að spyrja neinnar spurningar sem er metið sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni var ósönn.
 
 \begin{lstlisting}[caption=else notað, label=lst:else]
-m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
+mjolk = True
 
-if(not m):
-	# fara í búð
+if(not mjolk):
 	print('við fórum í búðina og keyptum mjólk')
 else:
-	# takið eftir að hér var ekkert skilyrði athugað
-	# við förum hingað inn ef skilyrðið fyrir ofan var ekki keyrt
 	print('vera heima')
-
-# Við áttum mjólk svo við fáum út 'vera heima'
 
 if(3 < 4):
 	print("þrír er minna en fjórir")
 else:
 	print('ég fer ekki hingað inn, því 3 er vissulega minna en fjórir, en það er gott að vera við öllu búin')
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+vera heima
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 Að geta sett svona annars-klausu er mikilvægt því að við viljum geta brugðist við ef upphaflega skilyrðið okkar er ósatt.
 Við viljum geta tekið á öðrum tilfellum heldur en bara upphafsskilyrðinu okkar.
@@ -343,31 +345,22 @@ En hvað ef við viljum geta tekið á einhverju sérstöku tilfelli, sem kemur 
 Við viljum ekki bara grípa það að inngangspunkturinn okkar var ósannur heldur viljum við einnig skoða eitthvað fleira?
 Þarna kemur setningin um mjólkina, kexið og búðarferðirnar aftur inn.
 Þá getum við sagt ,,ef það er ekki til mjólk, fer ég í búð, \textbf{annars ef} það er ekki til kex fer ég í búð og kaupi kex, nú annars er engin ástæða til að fara í búðina og ég verð bara heima''.
+Við viljum bara nota þetta seinna ef í ákveðnu tilfelli, við höfum ekkert að gera við kexið ef það er engin mjólk svo það er aðeins keyrt ef við vissulega eigum hana.
 Sjáum þetta forritað í kóðabút \ref{lst:elif}.
 
 Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \textbf{if} svo mega koma núll eða fleiri \textbf{elif} og að lokum má setja 0 eða 1 \textbf{else}.
-Þetta er eins og málfræðilegur skilningur okkar er á tungumálinu, við megum hengja endalaust af annars ef klausum inn í setningarnar okkar, þær verða þá bara erfiðari að skilja.
+Þetta er eins og málfræðilegur skilningur okkar er á tungumálinu, við megum hengja endalaust af annars ef klausum inn í setningarnar okkar, þær verða þá bara erfiðari að skilja (kóðinn sömuleiðis).
 
 \begin{lstlisting}[caption=elif notað, label=lst:elif]
-m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
-k = False # k er yrðingin hvort að til sé kex eða ekki, við gefum okkar að í upphafi sé ekki til neitt kex og k er því False
-
+mjolk = True 
+kex = False 
 
 if(not m):
-	# fara í búð
 	print('við fórum í búðina og keyptum mjólk')
 elif(not k):
-	# keyrist ef not m var metið sem False OG not k metið sem True
 	print('við fórum í búðina og keyptum kex')
 else:
-	# takið eftir að hér var ekkert skilyrði athugað
-	# við förum hingað inn ef skilyrðið fyrir ofan var ekki keyrt
-	# tökum eftir að það skilyrði er nú elif setningin okkar
 	print('vera heima')
-
-# Við áttum mjólk en við áttum ekki kex, svo not k var metið sem True og við fáum svo við fáum 'við fórum í búðina og keyptum kex'
-
-# Við förum ekki niður í else nema að allt fyrir ofan sé ósatt.
 
 if(5 < 4):
 	print("fimm er minna en fjórir")
@@ -376,46 +369,47 @@ elif(4 < 4):
 elif(3 < 4):
 	print("þrír er minna en fjórir")
 elif(2 < 4):
-	print("þetta prentast ekki því að ég get bara farið inn í eina klausu í hverri skilyrðissetningu")
-	print("og það gerðist hérna fyrir ofan, svo þetta skilyrði verður ekki keyrt")
+	print("en 2 er líka minna en fjórir!")
 else:
-	print('ég fer ekki hingað inn, því 3 er vissulega minna en fjórir, en það er gott að vera við öllu búin')
+	print('eitthvað er að')
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+við fórum í búðina og keyptum kex
+þrír er minna en fjórir
+\end{lstlisting}
+\lstset{style=venjulegt}
+
 
 \subsection{Hreiðrun}\index{Hreiðrun}\label{uk:hreiðrun}
-Hreiðrun (e. nesting) þýðir að setja endurtekið undir eitthvað annað, eins og babúska dúkkur eða að pakka gjöf inn í mörg lög af gjafapappír.
+\emph{Hreiðrun} (e. nesting) þýðir að setja eitthvað endurtekið undir eitthvað annað, eins og babúska dúkkur eða að pakka gjöf inn í mörg lög af gjafapappír.
 Í forritun þýðir hreiðrun að yrðing af einhverri tegund tilheyri og sé keyrð innan í yrðingu af sömu tegund.
 Við getum hugsað þetta í samhengi við skilyrðissetningar að við séum með innri skilyrðissetningar sem þarf einnig að meta til þess að komast að niðurstöðu.
 Skoðum þetta aftur í samhengi við mjólkurkaupin nema nú bætum við því við að við eigum bara ákveðið mikinn pening sjá kóðabút \ref{lst:nesting}.
 
 \begin{lstlisting}[caption=Hreiðrun, label=lst:nesting]
-m = True # m er yrðingin hvort að til sé mjólk eða ekki, við gefum okkur í upphafi að til sé mjólk því er m upphafsstillt sem True
-k = False # k er yrðingin hvort að til sé kex eða ekki, við gefum okkar að í upphafi sé ekki til neitt kex og k er því False
-p = 100 # p eru hversu mikinn pening við erum við á okkur.
+mjolk = True 
+kex = False 
+peningar = 100 
 
-if(not m):
-	# fara í búð, ef við komumst hingað inn þá var m False og not m var þá True
-	# nú sjáum við hvað þarf að gerast til þess að við getum keypt mjólkina ef við komumst hingað inn
+if(not mjolk):
 	if(p > 200):
 		print('við fórum í búðina og keyptum mjólk því við vorum með nógu mikinn pening')
 	else:
 		print('okkur vantaði mjólk en við vorum ekki með nógu mikinn pening')
-elif(not k):
-	# keyrist ef not m var metið sem False OG not k metið sem True
+elif(not kex):
 	if(p > 99):
 		print('við fórum í búðina og keyptum kex því við vorum með nægan pening')
 	else:
 		print('okkur vantaði kex en við vorum ekki með nægan pening')
 else:
-	# takið eftir að hér var ekkert skilyrði athugað
-	# við förum hingað inn ef skilyrðið fyrir ofan var ekki keyrt
-	# tökum eftir að það skilyrði er nú elif setningin okkar
 	print('vera heima og geyma allan peninginn')
-
-# Við áttum mjólk sem var heppilegt, því að við hefðum ekki getað keypt hana
-# Við áttum ekki kex, og svo heppilega vildi til að við vorum með nóg fyrir kexpakka og því fáum við niðurstöðuna:
-# 'við fórum í búðina og keyptum kex því við vorum með nægan pening'
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+við fórum í búðina og keyptum kex því við vorum með nægan pening
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 Hreiðrun er gagnleg því að við viljum skoða eitthvað innra skilyrði aðeins ef ytra skilyrðinu er mætt.
 
@@ -425,54 +419,58 @@ Nú höfum við verið að skoða spurningar og svör við þeim sem við skrá�
 Við þurfum að fá inntak (e. input) frá notandanum.
 
 Þá lærum við um nýtt innbyggt fall í Python sem heitir \texttt{input()}.
-Það sem input() gerir er að það tekur við streng sem það birtir á úttaki (e. output) þar sem notandinn sér það og getur sett eitthvað inn.
-\todo{er ég ekki búin að tala um output?}
-Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.
-Skoðum kóðadæmi í kóðabút \ref{lst:input}, þar sem við geymum svarið frá notanda í breytu og viðfangið sem við setjum inn í fallið er strengur sem inniheldur spurninguna sem notandinn sér.
-Vert er að athuga að allt sem er sett inn sem svar í þennan glugga er kastað í streng, það er breytan sem við notum til að taka á móti því sem input() fallið skilar er af týpunni strengur.
+Það sem input() gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þartilgert svæði, og við getum notað það í forritinu okkar\footnote{Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.}.
+
+Skoðum kóðadæmi í kóðabút \ref{lst:input}, þar sem við geymum svarið frá notanda í breytunni \texttt{svar} og viðfangið sem við settum inn í input fallið er strengur sem inniheldur spurninguna sem notandinn sér.
+Þar sést þó ekki þegar inntak glugginn var notaður.
+
+Fallið input() skilar okkur alltaf streng.
 Ef við viljum geta spurt notandann um tölustafi þurfum við að kunna að kasta á milli gagnataga sjálf og við sjáum hvernig það er gert í kóðabút \ref{lst:kast}
 
 
 \begin{lstlisting}[caption=input() fallið notað, label=lst:input]
 svar = input('skrifaðu nafnið þitt')
-
-# hér birtist gluggi fyrir okkur til að skrifa eitthvað inn í sem er merktur sem 'skrifaðu nafnið þitt'
-# ég skrifa nafnið mitt og ýti á vendibil (e. enter) takkann og þá er svarið mitt komið í breytuna svar
-
-print('halló', svar, 'mikið heitir þú fallegu nafni')
-
-# Fyrir inntakið Valborg myndi nú prentast:
-# 'halló Valborg mikið heitir þú fallegu nafni'
+print('halló', svar)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+ Valborg
+halló Valborg
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 Þetta er mikilvægt fall fyrir okkur að skilja og nota á þessu stigi málsins, því að við verðum að átta okkur á því að þegar við forritum þá erum við miklu meira að vinna með breytunöfn heldur en gögn sem við getum horft á.
 Í kóðabút \ref{lst:input} þá kemur hvergi fram í kóðanum að nafnið sé Valborg, og það getur verið hvað sem er, við prentum bara út það sem notandinn gaf okkur án þess að vera eitthvað að skoða hvað það er.
-Oft vilja byrjendur horfa á gögnin sín og setja inn niðurstöður fyrir tölvuna, til dæmis verkefnið ,,búðu til breytu sem inniheldur nafn og prentaðu út breytuna ásamt strengnum "halló:"'' endar í kóða eins og sést í kóðabút \ref{lst:byrjendur}
+Oft vilja byrjendur horfa á gögnin sín og setja inn niðurstöður fyrir tölvuna, til dæmis verkefnið ,,búðu til breytu sem inniheldur nafn og prentaðu út breytuna ásamt strengnum "halló:"'' endar í kóða eins og sést í kóðabút \ref{lst:byrjendur}.
+Eða að finna miðju í streng sem hægt væri að gera með \texttt{len(strengur)//2}, en byrjendum finnst eðlislægara að finna lengdina, og finna svo helminginn af því og nota svo loks þá tölu
 
 \begin{lstlisting}[caption=Oft forðast byrjendur að nota breytur og treysta meira á að sjá hvað ætti að koma út, label=lst:byrjendur]
-# Búðu til breytu sem inniheldur nafnið þitt:
 nafn = 'Valborg'
-# prentaðu hana út ásamt "halló:"
-print('Halló: Valborg') # hér er ekkert verið að nota breytuna nafn heldur horfir forritarinn á kóðann og sér að tölvan eigi að prenta út 'Valborg' og setur það inn handvirkt.
+print('Halló: Valborg')
 
-# Annað dæmi væri að finna tákn sem er í miðjum streng
-strengur = "þessi strengur hefur 29 tákn!"
-# miðjan í þeim streng er því í tákni 14 sem tölvan getur náð í með len(strengur)//2
-# og getur því fundið miðjutáknið með 
-strengur[len(strengur)//2] # skilar okkur tákninu í vísi 14
+strengur = "þessi strengur hefur 31 tákn!!!"
+# þetta þyrfti að gera í skrefum
+print(len(strengur)) 
+print(31/2) 
+print(strengur[15])
 
-# en hér er einnig hægt að taka nokkur skref sem er algengt að byrjendur geri
-print(len(strengur)) # þetta skilar okkur 29
-print(29/2) # þetta skilar okkur 14.5 eða print(29//2) sem skilar 14
-print(strengur[14]) # þetta skilar okkur tákninu í miðjunni
-
+print(strengur[len(strengur)//2])
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Halló: Valborg
+31
+15.5
+h
+h
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Eins og sést í kóðabút \ref{lst:byrjendur} að til að komast að því að setja vísi 14 inn og fá táknið þarf að keyra fyrst línuna len(strengur) til þess að sjá þá tölu og svo þarf að deila þeirra tölu með tveimur til að finna miðjuna og svo þarf handvirkt að setja þá tölu inn eftir að hafa breytt henni í næstu heilu tölu.
+Eins og sést í kóðabút \ref{lst:byrjendur} að til að komast að því að setja vísi 15 inn og fá táknið þarf að keyra fyrst línuna \texttt{len(strengur)} til þess að sjá þá tölu og svo þarf að deila þeirra tölu með tveimur til að finna miðjuna og svo þarf handvirkt að setja þá tölu inn eftir að hafa breytt henni í næstu heilu tölu.
 Það sem er að gerast er ekkert rangt, það er hinsvegar mikil vannýting á því sem tölvan getur gert fyrir okkur og eykur vinnuna fyrir okkur sjálf umtalsvert því að það þarf að keyra hvert skref í kóðabútnum fyrir sig til að komast að því hvað eigi að gera í næsta skrefi, í stað þess að gera það í einni línu eins og í línu 10.
 
 \subsection{Kastað á milli gagnataga}
-Til þess að geta unnið með gögn eins og þá týpu sem við viljum þurfum við að læra að kasta á milli taga/týpna (e. typecasting).
+Til þess að geta unnið með gögn eins og þá týpu sem við viljum þurfum við að læra að \emph{kasta} á milli taga/týpna (e. typecasting).
 Þetta þýðir að við látum vélina umrita gögnin okkar yfir í annað gagnatag, sem er einungis hægt ef að gögnin eru sambærileg týpunni sem á að kasta í.
 
 Þá koma lykilorðin sem við höfum lært fyrir týpurnar okkar að gagni.
@@ -486,43 +484,18 @@ Ef að strengurinn inniheldur einungis tölur á bilinu 0-9 er hægt að geyma h
 
 
 \begin{lstlisting}[caption=Hvernig á að kasta á milli gagnataga, label=lst:kast]
-# Þessi strengur inniheldur bara tölur
 talnastrengur = "123"
+heiltala = int(talnastrengur)
+fleytitala = float(talnastrengur)
 
-# og því má kasta honum í heiltölu eða fleytitölu
-int(talnastrengur)
-# þetta skilar okkur tölunni 123
-
-float(talnastrengur)
-# þetta skilar okkur tölunni 123.0
-
-fleytitolustrengur = "123.0"
-
-float(fleytitolustrengur) 
-# þetta skilar okkur tölunni 123.0
-
-int(fleytitolustrengur)
-# þetta skilar okkur villu því að heiltölur eru ekki með punkti þó að þetta sé í grunninn sama tala og 123
-
-# Nánast öllu má svo kasta í streng, þá er hverju tákni úthlutað sætisvísi og geymt eins og það er skrifað.
-str(123)
-# þetta skilar okkur "123"
-
-str([1,2,3])
-# þetta skilar okkur "[1,2,3]"
-
-# Það sem gerist þegar við köstum í lista er að hverju ítranlegum hluta af gögnum er varpað í stak í listanum
-# Skoðum betur í kafla um lykkjur hvað ítranlegt þýðir.
-
-list("123.0")
-# þetta skilar okkur ["1", "2", "3", ".", "0"]
-
-list(123.0)
-# Þetta skilar okkur villu því að tölur eru ekki ítranlegar, þær hafa ekki sætisnúmer (ekki eins og tölvan skilgreinir þau). 
+fleytitolustrengur = "3.1415"
+talan_pi = float(fleytitolustrengur)
 \end{lstlisting}
 
 Nú þar sem við vitum að við getum fengið streng í hendurnar frá notanda, vitandi það að við báðum um tölu, getum við leyft okkur að kasta strengnum í það talnatag sem okkur hentar.
-Við sjáum svo í seinni hluta bókarinnar hvernig á að taka á mismunandi tilfellum og reyna á eitthvað sem gæti valdið villu án þess að það skemmi fyrir okkur, en núna ætlum við að láta sem að við getum treyst notendum til að gefa okkur inntak sem samræmist því sem við báðum um. \todo{vísa í kafla um try except}
+Við sjáum svo í seinni hluta bókarinnar hvernig á að taka á mismunandi tilfellum og reyna á eitthvað sem gæti valdið villu án þess að það skemmi fyrir okkur, en núna ætlum við að láta sem að við getum treyst notendum til að gefa okkur inntak sem samræmist því sem við báðum um.
+Prófið ykkur nú áfram með að kasta á milli taga, þið munið fá einhverjar villur og það er frábært.
+Gerið tilraunir og prófanir, kastið á milli allra þeirra taga sem þið þekkið í öll þau tög sem þið þekkið, hvað má hvað má ekki?
 
 Ástæðan fyrir því að vilja kasta á milli taga er til að geta beitt þeim aðgerðum og aðferðum sem eru í boði fyrir það gagnatag sem við sækjumst eftir að nota, til dæmis er ekki hægt að sækja þriðja tölustafinn í heiltölu en ef við köstum henni í streng getum við sótt táknið í sætisnúmeri 2 og fengið þannig þriðja tölustafinn.
 
