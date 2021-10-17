@@ -1,24 +1,27 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Orðabækur}\index{Orðabækur}\label{k:orðabækur}
-Ný týpa sem vil ætlum að nú að fást við heitir \textbf{orðabækur} (e. dictionaries)  og lykilorðið þeirra er \textbf{dict}.
-Orðabækur er orð sem hentar fyrir þýðingu á týpunni í Python en hún er einnig þekkt sem hakkatafla (e. hash table / hash map) í öðrum forritunarmálum.
-Til þess að búa til orðabók eru notaðir slaufusvigar \{\}].
-Orðabækur eru gagnagrindur eins og listar, það er þær geyma fyrir okkur gögn af öðrum týpum.
-Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa.
+Ný týpa sem vil ætlum að nú að fást við heitir \textbf{orðabók} (e. dictionary)  og lykilorðið hennar er \textbf{dict}.
+Orðabók er orð sem hentar fyrir þýðingu á týpunni í Python en hún er einnig þekkt sem hakkatafla (e. hash table / hash map) í öðrum forritunarmálum.
+Til þess að búa til orðabók eru notaðir slaufusvigar \{\}.
+
+Orðabækur eru gagnagrindur eins og listar og ndir, það er þær geyma fyrir okkur gögn af einhverjum týpum.
+Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa sem hægt er að nota\footnote{Í Python >3.6 eru þær ekki alveg óraðar, stök eru sett inn í ákveðinni röð og helst sú ,,röðun'' þegar orðabókin er notuð fyrir það voru stökin aðgenileg með handahófskenndri röð fyrir minnisbestun.}.
 Við getum því ekki sótt gögn í orðabækur með því að vita \textit{hvar} þau eru við þurfum að vita \textit{hver} þau eru.
 Orðabækur eru mjög öflugt fyrirbæri, og því þess virði að kynna sér vel hvernig þessi týpa virkar.
 
 Þetta er vegna þess að orðabækur eru skipulagðar sem lykla og gildis pör, við finnum þau gildi sem við viljum með því að vita hvaða lykill gengur að þeim.
-Þetta er ekki ósvipað því að horfa á lyklakippurnar okkar, ef við grípum einhvers staðar í lyklakippuhringinn og horfum á þann lykil sem er hægra megin við fingurgóma okkar sem fremsta lykilinn og númerum lyklana eftir því þá er ekki víst að næst þegar við tökum kippuhringinn upp að við grípum á sama stað niður og að sami lykill verði fremstur.
-En við getum alltaf reitt okkur á það að sama hvar einhver ákveðinn lykill er þá gengur hann alltaf að sama lásnum, svo ef við þekkjum lyklana okkar getum við auðveldlega náð í þann sem við viljum til þess að opna þann lás sem við viljum hverju sinni.
+Þetta er ekki ósvipað því að horfa á lyklakippurnar okkar.
+Lyklarnir eru allir ólíkir.
+Við getum alltaf reitt okkur á það að sama hvar einhver ákveðinn lykill er þá gengur hann alltaf að sama lásnum, svo ef við þekkjum lyklana okkar getum við auðveldlega náð í þann sem við viljum til þess að opna þann lás sem við viljum hverju sinni.
 
 Lyklarnir verða því að vera ólíkir hverjum öðrum, annars gætum við ekki þekkt þá í sundur og tveir eins lyklar gætu ekki gengið að tveimur mismunandi lásum.
 Svo lyklar verða að vera aðgreinanlegir.
-Við skoðum betur hvernig við getum gengið úr skugga um aðgreinanleika og hvað það þýðir.
 
 Einnig skoðum við í þessum kafla hvernig má ítra í gegnum orðabækur og hvers vegna það var ágætt að vera búin að skoða ndir áður en við komum að þessari mikilvægu týpu.
-
+%---- Athuga hvort þetta eigi heima einhversstaðar
+Við skoðum betur hvernig við getum gengið úr skugga um aðgreinanleika og hvað það þýðir.
+%---
 \section{Lyklar og gildi}\index{Lyklar og gildi}
 Eins og kom fram í inngangi er gögnum í orðabókum skipt niður á lyklana sem ganga að þeim.
 Lyklarnir þurfa að vera aðgreinanlegir, hvað þýðir það?
