@@ -3,92 +3,118 @@
 \chapter{N-dir}\index{Ndir}\label{k:ndir}
 Nú ætlum við að kynnast nýrri týpu, hún heitir \textbf{n-d} (lesist ennd) eða n-und (e. tuple) \footnote{\href{http://stæ.is/os}{Skoðið endilega orðasafn stærðfræðifélagssins}}.
 Lykilorð þessarar týpu er \textbf{tuple}.
-Nafnið er komið frá hugmyndinni um tvenndir og þrenndir, nema við vitum ekki hversu mörg stök er verið að hópa saman, þau gætu verið af n fjölda svo við köllum týpuna n-d eða n-und.
+Nafnið er komið frá hugmyndinni um tvenndir og þrenndir, nema við vitum ekki hversu mörg stök er verið að hópa saman, þau gætu verið af n fjölda svo við köllum týpuna n-d eða n-und (þá frá tvíund og þríund).
 Líklega eina orðið í íslensku sem inniheldur ekki sérhljóða.
-Hér eftir verður týpan kölluð \emph{nd}, þó margir noti tvíund, þríund og þá n-und.
+Hér eftir verður týpan kölluð \emph{nd}, þó margir noti n-und.
  
 Hún líkist listum að því leitinu til að margar af sömu aðgerðum sem má gera á lista má gera á ndir.
 Hún líkist strengjum því að hún er óbreytanleg.
 Það má ekki bæta við, breyta eða taka út stök eftir að ndin er skilgreind.
 
-Ástæðan til að nota ndir í stað lista er sú að það getur verið hagkvæmara, ndir nota ekki eins mikið minni, og við sjáum í kafla \ref{k:föll} um hvernig megi fá eina nd í stað margra skilagilda.
+Ástæður fyrir því að nota ndir í stað lista er sú að það getur verið hagkvæmara, ndir nota ekki eins mikið minni, eða okkur er umhugað um gagnaheilindi, og svo sjáum við í kafla \ref{k:föll} um hvernig megi fá eina nd í stað margra skilagilda.
 
 \section{Skilgreining}\index{Skilgreining n-da}
 Við skilgreinum nd með svigum.
 Athugið að hingað til höfum við notað sviga til að aðgreina segðir og það er vandmeðfarið að átta sig á því hvenær er sviginn stærðfræðilegur (þ.e. einungis fyrir forritarann til að aðgreina samhengi) og hins vegar skilgreining á gögnum af týpunni nd.
-Aðgreiningin er augljós þegar við áttum okkur á því að til þess að skilgreina nd þá þurfum við, líkt og með lista, að aðgreina stökin innan ndinnar með kommum.
+Aðgreiningin verður augljós þegar við áttum okkur á því að til þess að skilgreina nd þá þurfum við, líkt og með lista, að aðgreina stökin innan ndinnar með kommum.
 Sjáum í kóðabút \ref{lst:ndir-kynntar} hvernig má skilgreina ndir og hvernig svigar gera það ekki nema við notum kommur.
 \todo{vísa í kóðabút úr segðum eða tölum þar sem segðir eru aðgreindar með svigum til útskýringar, mögulega er todo að búa það til}
-Þar sjáum við einnig að það eru einungis tvær aðferðir til fyrir týpuna, .count() og .index().
+Þar sjáum við einnig að það eru einungis tvær aðferðir til fyrir týpuna, \texttt{.count()} og \texttt{.index()}.
 Hvernig má það vera að týpan líkist listum þegar það eru bara til tvær aðferðir?
 Var ekki verið að taka fram að það mætti gera margt það sama?
 Jú, aðgerðir og aðferðir er ekki það sama.
-Við getum ítrað í gegnum nd, við getum skeytt einni nd aftan við aðra (fáum þá nýja nd), við getum náð í hluta úr ndinni (með hornklofum eins og hlutstrengi eða hluta úr lista)
+Við getum ítrað í gegnum nd, við getum skeytt einni nd aftan við aðra (fáum þá nýja nd en breytum henni ekki), við getum náð í hluta úr ndinni (með hornklofum eins og hlutstrengi eða hluta úr lista).
+
+Skoðum nú í kóðabút \ref{lst:ndir-kynntar} hvernig svigar geta annars vegar verið til að afmarka stærfræðilegan forgang og hins vegar til að skilgreina nýju týpuna okkar.
+Tökum sérstaklega eftir notkuninni á innbyggða fallinu \texttt{type()} sem auðveldar okkur að skilja hvenær nd verður til.
 
 \begin{lstlisting}[caption=Ndir skilgreindar, label=lst:ndir-kynntar]
-# byrjum á því að sýna hvernig svigar skilgreina ekki endilega nd
 a = (3+4)*2
-# hér fær breytan a gildið 14 því að sviginn er notaður fyrir röð aðgerða.
+print("a er af taginu", type(a))
 
 b = (1)
-# hér gerir sviginn ekkert og b inniheldur töluna 1, það er sviginn heldur utan um röð aðgerða en þær eru engar
+print("b er af taginu", type(b))
 
-# Nú skilgreinum við ndir
-a = () # þetta verður tóm nd
-b = (1,) # þetta verður nd sem inniheldur eitt stak, athugið kommunotkunina
-c = (1, 1, 2, 2, 5) # þetta verður nd sem inniheldur 5 stök
+c = () # þetta verður tóm nd
+d = (1,) # þetta verður nd sem inniheldur eitt stak, athugið kommunotkunina
+e = (1, 1, 2, 2, 5) # þetta verður nd sem inniheldur 5 stök
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+a er af taginu <class 'int'>
+b er af taginu <class 'int'>
+c er <class 'tuple'> d er <class 'tuple'> og e er <class 'tuple'>
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-# Nú skulum við skoða hvaða aðferðir eru til á þessa nýju týpu og notum til þess breyturnar b og c
-b.index(1) # skilar okkur úttakinu 0 þar sem talan 1 er í 0ta vísi í ndinni b.
-c.count(1) # skilar okkur úttakinu 2 þar sem talan 1 kemur tvisvar sinnum fyrir í ndinni c
-c + b # skilar okkur nýrri nd sem inniheldur (1, 1, 2, 2, 5, 1) þar sem b hefur verið skeytt aftan við 1
+Nú gerum við ráð fyrir að eiga ennþá ndirnar \texttt{c,d} og \texttt{e} úr kóðabút \ref{lst:ndir-kynntar}, skoðum þá aðferðirnar tvær sem eru innbyggðar í kóðabút \ref{lst:ndir-adfr}, ásamt því hvað gerist þegar við skeytum einni nd aftan við aðra, hvernig ítrun með for lykkju er lík því sem við þekkjum með lista og að lokum hvernig megi sækja hlut-nd.
 
-for tala in c:
+\begin{lstlisting}[caption=Ndir aðgerðir og aðferðir , label=lst:ndir-adfr]
+print(d.index(1))
+print(e.count(1)) 
+print(e + d)
+print()
+
+for tala in e:
 	print(tala)
-	
-#skilar okkur úttakinu
-# 1
-# 1
-# 2
-# 2
-# 5
 
 # Athugum að við megum ekki breyta nd, svo eftirfarandi kóði veldur villu
-c[4] = 3
+# c[4] = 3
 
-c[1:3] # skilar okkur úttakinu (1, 2)
+print(e[1:3])
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+0
+2
+(1, 1, 2, 2, 5, 1)
+
+1
+1
+2
+2
+5
+(1, 2)
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+
 
 \section{Notkun}\index{Notkun nda}
 Þar sem ndir eru óbreytanlegar er gagnlegt að nota þær til að halda utan um ástand sem við viljum ekki að sé hróflað við.
 Segjum að það séu ákveðin tengsl á milli tveggja gilda og við viljum halda heilindum þeirra þá væri gott að nota nd.
-Við getum líka notaðað þær til að spara minni þegar við þurfum litla lista sem þarf bara að nota tímabundið.
+Við getum líka notaðað þær til að spara minni þegar við þurfum litla lista sem þarf bara að nota tímabundið og breytast ekki.
 Einnig geta þær nýst til að halda utan um breytur sem á svo að nota hverja í sínu lagi seinna.
-Við sjáum þetta í kóðabút \ref{lst:nd-notkun} og tökum eftir að vissulega megi útfæra fyrri þrjú, af þessum fjórum atriðum nefndum, með listum þá er það ekki endilega það besta í stöðunni, ef við ætlum að hugsa um gagnaheilindi og minnisnotkun.
+Tökum eftir að vissulega megi útfæra fyrri þrjú, af þessum fjórum atriðum nefndum, með listum.
 
-\begin{lstlisting}[caption=Ndir notaðar, label=lst:nd-notkun]
-# byrjum á því að skilgreina eina nd til að nota
+Skoðum kóðabút \ref{lst:nd-notkun} þar sem við sjáum dæmi um nd sem við viljum að haldist óbreytt þó hún sé skoðuð en við viljum getað úthlutað hverju staki í einhverja breytu (e. unpack) til að nota og skoða án þess að það hafi áhrif á ndina.
+Við viljum ekki keyra aðferðir á borð við \texttt{.sort()} á ndina því að þá breytist hún, við viljum heldur ekki geta haft áhrif á einstaka sætisvísi (skoðið hvaða villu fæst við þá aðgerð með því að keyra línu 10 í kóðabút \ref{lst:ndir-adfr}), það sem við viljum er létt gagnagrind sem passar upp á gögnin.
+
+
+\begin{lstlisting}[caption=Ndir notaðar fyrir það sem þær eru gagnlegar, label=lst:nd-notkun]
 notanda_upplysingar = ("valborg", "rosalega gott lykilorð", "netfang@internet.is")
 
-# við fengjum villu við að gera notanda_upplysingar.sort(), notanda_upplysingar.append(x) eða notanda_upplysingar.remove(x) því að þessar aðferðir eru ekki til á hlut af taginu nd
-# þær eru til þess fallnar að breyta listum og við megum ekki breyta ndum
-
-# en það sem við getum gert er að sækja þessi gögn og vista í breytum
-# vissulega er hægt að gera þetta:
 notandanafn = notanda_upplysingar[0]
 lykilord = notenda_upplysingar[1]
 netfang = notenda_upplysingar[2]
 
-# en það sem er öflugra og snjallara að gera er að láta Python "aftroða" (e. unpack) á eftirfarandi máta:
 notandanafn, lykilord, netfang = notenda_upplysingar
 
-# nú parast hvert stak í ndinni á þessar breytur í þeirri röð sem þær eru skilgreindar.
-# núllti vísir á fremstu breytuna og svo koll af kolli
-
-# Hér er mikilvægt að til þess að aftroða ndinni með þessum hætti þurfa að vera jafnmargar breytur vinstra megin við jafnaðarmerkið eins og eru stök í ndinni, annars fáum við villu. 
-
+print(notandanafn)
+notandanafn = notandanafn.upper()
+print(notenda_upplysingar)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+valborg
+('valborg', 'rosalega gott lykilorð', 'netfang@internet.is')
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Að ná í nokkrar breytur í einu getur verið ákjósanlegt þegar við erum við fáar breytur, eins og við sjáum í kóðabút \ref{lst:nd-notkun} þá er lína 14 ágætlega þægileg (auðvelt að skilja hana og lesa) á meðan línur 8-10 taka óþarflega mikið pláss og eru ekkert endilega læsilegri fyrir vikið.
+Línur 3-5 og lína 7 eru jafngildar í kóðabút \ref{lst:nd-notkun}.
+Þessi ,,afpökkun'' er læsileg og þægileg leið til að vinna með nd, við sjáum það svo betur þegar við skoðum skilagildi í kafla \ref{uk:skilagildi} hversu mikilvægt er að kunna á þetta.
+Takið einnig eftir í úttakinu og þrátt fyrir að breytan \texttt{notandanafn} hafi verið uppfærð þá hafði það engin áhrif á ndina.
+Reynið nú að uppfæra það gildi í ndinni, reynið að setja í staðinn fyrir fremsta stakið þessa nýju breytu og sjáið hvaða villu þið fáið.
+
 Að sjálfsögðu er markmiðið okkar ekki enn sem komið er orðið að því að skrifa kóða í sem fæstum línum mögulegum, en það sem við viljum þó geta gert er að gera kóðann okkar eins læsilegan og mögulegt er með því að nota þær aðgerðir sem Python býður upp á.
 Jafnvel þó að eini ávinningurinn er að við sjálf skiljum kóðann ennþá þegar við skoðum hann seinna.
