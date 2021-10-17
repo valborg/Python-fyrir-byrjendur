@@ -118,3 +118,61 @@ Reynið nú að uppfæra það gildi í ndinni, reynið að setja í staðinn fy
 
 Að sjálfsögðu er markmiðið okkar ekki enn sem komið er orðið að því að skrifa kóða í sem fæstum línum mögulegum, en það sem við viljum þó geta gert er að gera kóðann okkar eins læsilegan og mögulegt er með því að nota þær aðgerðir sem Python býður upp á.
 Jafnvel þó að eini ávinningurinn er að við sjálf skiljum kóðann ennþá þegar við skoðum hann seinna.
+
+%-------------------------------
+\newpage
+\section{Æfingar}
+\begin{exercise}\label{nd1}
+Búið til nd sem inniheldur 3 stök og setjið svo aftasta stakið í breytu.
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={nd1}]
+Hér vitum við að það eru þrjú stök í ndinni, svo að aftasta stakið hefur sætisnúmerið 2.
+\begin{lstlisting}
+nd = (1,2,3)
+tala = nd[2]\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{nd2}
+Búið til nd sem inniheldur eingöngu tölur, ítrið í gegnum ndina og prentið út þær tölur sem eru stærri en 100.
+\end{exercise}
+\begin{Answer}[ref={nd2}]
+Rifjum upp að til að ítra í gegnum hlut af gefinni stærð er best að nota for lykkju.
+\begin{lstlisting}
+talna_nd = (1,34,432,324,999,1,2,3,1,3,55,664,10000)
+for tala in talna_nd:
+	if tala > 100:
+		print(tala)\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{nd3}
+Búið til nd sem inniheldur tvær tölur, úthlutið svo þeim tveimur tölum í tvær breytur með afpökkun.
+Geymið svo útkomuna úr því hvort að fremri talan sé stærri en sú seinni og búið til nýja nd þar sem útkomunni er skeytt aftan við upphaflegu ndina.
+\end{exercise}
+\begin{Answer}[ref={nd3}]
+Við erum beðin um að búa til nd eð tveimur stökum, svo erum við beðin um að geyma útkomu sem þýðir að við þurfum breytu.
+Sú breyta á að innihalda svarið við hvort að fyrri talan sé stærri en sú seinni svo það er sanngildi.
+Að því loknu erum við beðin um að nota samskeytingu en útkoman er ekki nd svo við þurfum að setja hana í nd til að geta beytt samskeytingu.
+	\begin{lstlisting}
+nd = (1,2)
+tala1, tala2 = nd
+svar = tala1 > tala2
+ny_nd = nd + (svar,)\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{nd4}
+Búið til tóma nd.
+Búið til lykkju sem keyrir fjórum sinnum og í hvert sinn spyr hún notandann um uppáhaldslitinn sinn.
+Í hvert sinn sem notandinn er búinn að svara skal endurskilgreina ndina sem það sem hún var áður að viðskeyttu nýja svarinu.
+Þegar lykkjan hefur lokið keyrslu sinni skulið þið prenta út ndina.
+\end{exercise}
+\begin{Answer}[ref={nd4}]
+Rifjum upp  \texttt{input()} fallið úr kafla \ref{k:segðir}, einnig \texttt{range()} fallið úr kafla \ref{k:lykkjur}.
+\begin{lstlisting}
+nd = ()
+for i in range(4):
+	svar = input("hver er uppáhalds liturinn þinn?")
+	nd = nd + (svar,)
+print(nd)\end{lstlisting}
+\end{Answer}
