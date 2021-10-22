@@ -8,7 +8,6 @@ Til þess að búa til orðabók eru notaðir slaufusvigar \{\}.
 Orðabækur eru gagnagrindur eins og listar og ndir, það er þær geyma fyrir okkur gögn af einhverjum týpum.
 Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa sem hægt er að nota\footnote{Í Python >3.6 eru þær ekki alveg óraðar, stök eru sett inn í ákveðinni röð og helst sú ,,röðun'' þegar orðabókin er notuð fyrir það voru stökin aðgenileg með handahófskenndri röð fyrir minnisbestun.}.
 Við getum því ekki sótt gögn í orðabækur með því að vita \textit{hvar} þau eru við þurfum að vita \textit{hver} þau eru.
-Orðabækur eru mjög öflugt fyrirbæri, og því þess virði að kynna sér vel hvernig þessi týpa virkar.
 
 Þetta er vegna þess að orðabækur eru skipulagðar sem lykla og gildis pör, við finnum þau gildi sem við viljum með því að vita hvaða lykill gengur að þeim.
 Þetta er ekki ósvipað því að horfa á lyklakippurnar okkar.
@@ -18,12 +17,99 @@ Við getum alltaf reitt okkur á það að sama hvar einhver ákveðinn lykill e
 Lyklarnir verða því að vera ólíkir hverjum öðrum, annars gætum við ekki þekkt þá í sundur og tveir eins lyklar gætu ekki gengið að tveimur mismunandi lásum.
 Svo lyklar verða að vera aðgreinanlegir.
 
+Orðabókin er mjög öflugt fyrirbæri, og því þess virði að kynna sér vel hvernig þessi týpa virkar.
 Einnig skoðum við í þessum kafla hvernig má ítra í gegnum orðabækur og hvers vegna það var ágætt að vera búin að skoða ndir áður en við komum að þessari mikilvægu týpu.
 %---- Athuga hvort þetta eigi heima einhversstaðar
-Við skoðum betur hvernig við getum gengið úr skugga um aðgreinanleika og hvað það þýðir.
+% Við skoðum betur hvernig við getum gengið úr skugga um aðgreinanleika og hvað það þýðir.
 %---
-\section{Lyklar og gildi}\index{Lyklar og gildi}
-Eins og kom fram í inngangi er gögnum í orðabókum skipt niður á lyklana sem ganga að þeim.
+\section{Orðabækur skilgreindar og notaðar}\index{Orðabækur skilgreindar og notaðar}
+Eins og kom fram í inngangi er gögnum í orðabókum skipt niður á lyklana sem ganga að þeim (sjá ítarefni \todo{vísa í ítarefnið} um hvað má vera lykill og hvað aðgreinanleiki þýðir).
+Sjáum fyrir okkur lyklakippuna okkar þar sem við erum með stóran ASSA lykil að útidyrahurðinni, lítinn lykil með svörtu plasti að hjólalásnum, kassalaga lykil að útidyrahurðinni hennar ömmu og einn pínulítinn lykil að geymslunni.
+Við eigum auðvelt með að halda utan um þetta litla lyklasafn og við vitum að hverju allir lyklarnir ganga.
+En ef við værum nú með 10.000 lykla?
+Skoðum kóðabút ?? til að sjá hvernig megi búa til orðabók sem heldur utan um lyklakippuna sem var lýst hér að ofan.
+Takið eftir að einungis er unnið með strengi innan orðabókarinnar.
+
+\begin{lstlisting}[caption=Orðabók kynnt með lyklakippusamlíkingu, label=lst:dict-kynnt]
+tom_ordabok = {}
+kippa = {'ASSA': 'útidyrahurðin heima ', 'lítill svartur': 'hjólið', 'kassalaga': 'heima hjá ömmu', 'pínulítill': 'geymslulykillinn'}
+
+print(kippa['lítill svartur'])
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+hjólið
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Takið eftir hvernig stökin eru aðgreind, með kommum alveg eins og áður.
+Nema núna eru stökin tvenndir sem hanga saman með tvípunkti.
+Við sjáum einnig að til þess að nálgast gögn þá notum við hornklofa eins og áður en við gerum það ekki með sætisvísi heldur gerum við það með lyklinum sem við viljum finna gögnin að.
+En ef lykill er heiltala þá náum við vissulega í gögnin á þeim lykli með því að nota heiltölu innan hornklofanna (sjá línu 4 í kóðabút \ref{lst:dict-kynnt2} \todo{viðhalda línuref})
+Í kóðabút \ref{lst:dict-kynnt} þá sjáum við hvernig á að búa til tóma bók í fyrstu línu, við gerum ekkert frekar með þessa orðabók í þessum kóðabút en í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig má setja stök (lykla og gildis pör) inn í orðabók eftir að hún er skilgreind og við sjáum í kóðabút \ref{lst:dict-kynnt3} hvaða aðferðir eru til á þessa týpu.
+
+\begin{lstlisting}[caption=Gögnum bætt við og þau tekin út, label=lst:dict-kynnt2]
+ordabok2 = {1: 'gildi á lykli 1 sem er heiltala', 8: 'gildi sem er á lykli 8', 5: 'takið eftir að pörin eru aðgreind með kommu'}
+
+print(ordabok2[5])
+
+ordabok2[1] = 'nýtt gildi' 
+ordabok2['nýr lykill'] = 'nýtt gildi'
+print(ordabok2)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+takið eftir að pörin eru aðgreind með kommu
+{1: 'nýtt gildi', 8: 'gildi sem er á lykli 8', 5: 'takið eftir að pörin eru aðgreind með kommu', 'nýr lykill': 'nýtt gildi'}
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig heilartölur geta verið lyklarnir í orðabókinni en við höfum þó aðeins verið að vinna með strengi sem gildi.
+Í raun eru skorður á því hvað geta verið lyklar en ekki hvað geta verið gildi, við getum geymt hvað sem er sem gildi og við sjáum í kóðabút \ref{lst:dict-itrad} þegar við notum lista sem gildi.
+
+\begin{itarefni}
+\textbf{Aðgreinanleiki}\\
+Í Python er til \texttt{hash()} fall sem skilar ,,hakki'' af því sem því er gefið sem viðfang.
+Við sáum í kafla \ref{k:tolur} að 1 og 1.0 var hægt að reikna með þó þær væru af mismunandi tagi og í kafla \ref{k:segðir} sáum við að 1 og 1.0 var jafngilt.
+Það sem \texttt{hash()} gerir er að skila heiltölugildi fyrir viðfangið og þegar við viljum athuga hvort að eitthvað sé jafngilt með rökvirkjanum == erum við að spyrja hvort að fallið skili mismunandi heilum tölum fyrir það sem er sitthvoru megin við rökvirkjann.
+Í tilfellinu 1, 1.0 og True þá eru þau ekki aðgreinanleg og því ekki hægt að nota þau sem þrjá mismunandi lykla í sömu orðabókinni.
+
+Prófið ykkur áfram með \texttt{hash()} fallið og sjáið hvaða tögum gögnin eru sem þið megið hakka. 
+\end{itarefni}
+
+Nú höfum við séð grunnvirknina við það að búa til orðabók og ná í gögn á lykil en hvaða aðferðir eru til á þær?
+Þær eru ekki margar og þess virði að taka nokkrar fyrir sérstaklega vegna þess hve gagnlegar þær eru strax fyrir byrjendur.
+
+\begin{itemize}
+\item[] \texttt{get()} leyfir okkur að athuga hvort að lykill sé til í orðabók án þess að valda villu, og ef við viljum skila stöðlu gildi ef lykillinn fannst ekki.
+\item[] \texttt{pop()} fjarlægir það stak sem síðast var sett inn (fjarlægir eitthvað stak í Python <3.6)
+\item[] \texttt{popitem()} fjarlægir nákvæmlega það stak sem við viljum með því að við gefum upp lykil
+\item[] \texttt{items(), keys()} og \texttt{values()} skilar okkur ítranlegum hlut af því sem við viljum geta unnið með, items eru lykla og gildis pör sem ndir, keys eru bara lyklarnir og values eru gildin.
+\end{itemize}
+
+Skoðum aðeins nánar hvernig \texttt{items(), keys()} og \texttt{values()} virka því að við viljum geta ítrað í gegnum orðabækur.
+
+\begin{lstlisting}[caption=Aðferðir á orðabækur, label=lst:dict-kynnt3]
+ordabok3 = {1: [1,2,3,4,5], 2: ["strengir", "í", "lista"], "þrír": [-1,-2,-3]}
+print("gildin:", ordabok3.values())
+print("lyklarnir", ordabok3.keys())
+print("ndir af pörum", ordabok3.items())
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+gildin: dict_values([[1, 2, 3, 4, 5], ['strengir', 'í', 'lista'], [-1, -2, -3]])
+lyklarnir dict_keys([1, 2, 'þrír'])
+ndir af pörum dict_items([(1, [1, 2, 3, 4, 5]), (2, ['strengir', 'í', 'lista']), ('þrír', [-1, -2, -3])])
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Höfum ekki óþarfa áhyggjur af úttakinu þar sem stendur dict\_ eitthvað.
+Það sem við þurfum að átta okkur á er að við fáum lista í hvert sinn og að stökin í listunum fást upp úr orðabókinni okkar með útreiknanlegum hætti.
+
+Skoðum nú í næsta undirkafla hvernig megi vinna með þetta.
+
+\comment{
+
 Lyklarnir þurfa að vera aðgreinanlegir, hvað þýðir það?
 Skoðum innbyggða fallið hash() til þess að átta okkur á því hvað má nota sem lykil, sjá kóðabút \ref{lst:dict-hash}.
 Það sem hash() fallið gerir er að skila okkur einu tilteknu heiltölu gildi, tveir hlutir sem eru álitnir jafngildir fá sömu heiltöluna úr hash() fallinu.
@@ -52,21 +138,8 @@ hash(d) # skilar 12
 
 Ástæðan fyrir því að við þurfum að skilja þetta er vegna þess að við þurfum að átta okkur á því hvað má setja sem lykil og hvers vegna við getum kannski ekki notað einhvern tiltekinn lykil.
 
-\begin{lstlisting}[caption=Orðabækur kynntar, label=lst:dict-kynntar]
-# Skilgreinum orðabækur:
-ordabok1 = {} # inniheldur ekkert
-ordabok2 = {'lykill': 'gildi'} # inniheldur strenginn lykill sem lykil og svo er tvípunktur sem aðgreinir lykilinn frá gildinu sem er strengurinn 'gildi'
 
-ordabok3 = {1: 'gildi á lykli 1 sem er heiltala, 2: 'gildi sem er á lykli 2', 3: 'takið eftir að pörin eru aðgreind með kommu'}
-
-# Hvernig á að sækja gögn ef þau eru ekki með sætisnúmeri:
-ordabok2['lykill'] # þetta skilar okkar 'gildi' 
-ordabok3[3] # þetta skilar okkur 'takið eftir að pörin eru aðgreind með kommu'
-
-# Hvernig á að setja inn gögn eða endurskilgreina lykil
-ordabok2['lykill'] = 'nýtt gildi' # nú er búið að endurskilgreina gildið á þessum lykli
-ordabok2['nýr lykill'] = 'nýtt gildi' # nú er búið að búa til nýjan lykil sem fékk eitthvað gildi
-\end{lstlisting}
+}
 
 \section{Ítrað í gegnum orðabækur}\index{Ítrað í gegnum orðabækur}
 
