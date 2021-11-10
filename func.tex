@@ -2,15 +2,15 @@
 
 \chapter{Föll}\index{Föll}\label{k:föll}
 Föll (e. functions), eins og lykkjur, eru kóðabútar sem má keyra oft.
-Þau líkjast hins vegar frekar skilgreiningum eða uppskriftum frekar en lykkjum þar sem það þarf að nota þau til þess að þau geri eitthvað ekki bara skrifa þau.
+Þau líkjast hins vegar frekar skilgreiningum eða uppskriftum frekar en lykkjum þar sem það þarf að \emph{nota} þau til þess að þau geri eitthvað ekki bara búa þau til.
 
 Ágætar samlíkingar fyrir föll eru til dæmis stærðfræðilegar skilreiningar, uppskriftir eða réttir á matseðli.
 
 \begin{itemize}
-	\item Stærðfræðilega skilgreining á hring er eftirfarandi ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju'' sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
+	\item Stærðfræðilega skilgreining á hring er eftirfarandi: ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju'' sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
 	Skilgreining þessi réttir okkur ekki hring með miðju í punkti (0,0) og radíus 3 þegar við setjum hana fram.
 	En vegna þess að við eigum hana getum við notað hana til þess að búa til alla þá hringi sem okkur henta.
-	\item Uppskrift í bók er ákveðin runa af aðgerðum sem þarf að framkvæma, eins og kom fram í kafla \ref{uk:keyra-koda} um hnetusmjörssamlokuna, það að skrifa niður röð aðgerðanna og það sem þarf til er ekki jafngilt því að framkvæma aðgerðirnar og enda með matinn í höndunum
+	\item Uppskrift í matreiðslubók er ákveðin runa af aðgerðum sem þarf að framkvæma, eins og kom fram í kafla \ref{uk:keyra-koda} um hnetusmjörssamlokuna, það að skrifa niður röð aðgerðanna og það sem þarf til er ekki jafngilt því að framkvæma aðgerðirnar og enda með matinn í höndunum
 	\item Réttur á matseðli er skilreindur á ákveðinn hátt, með ákveðnu meðlæti og þess háttar.
 	Við gætum þó viljað gera breytingu á þessari skilgreiningu til þess að fá mat sem er okkur meira að skapi en það sem kokknum datt í hug.
 	Það gerum við með því að biðja um skilgreininguna á réttinum nema með breytingum.
@@ -18,18 +18,18 @@ Föll (e. functions), eins og lykkjur, eru kóðabútar sem má keyra oft.
 
 Höfum þessar samlíkingar í huga þegar kemur að því að skrifa og beita föllum, því það hjálpar að átta sig á því strax að þegar við skilgreinum föll þá búum við til uppskrift sem hægt er að fylgja án þess þó að biðja vélina um að fylgja þeim.
 
-Við höfum séð föll áður, eins og: \todo{kynna min og max einhvern tímann áður}
+Við höfum séð föll áður, eins og: 
 
 \begin{itemize}
 	\item print("fyrsta viðfangið", "næsta viðfang sem fallið tekur", "print er sér á báti, því það tekur við svo mörgum viðföngum")
 	\item len("breyta sem ég vil vita lengdina á")
-	\item min("breyta sem ég vil fá minnsta gildið úr")
-	\item min(nokkrar, tölur, og, ég, vil, vita, hver, er minnst)
 	\item range(0,50)
 	\item type("breyta sem viðfang sem ég vil vita týpuna á")
 \end{itemize}
 
-Þetta eru innbyggð föll, við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut en fall keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
+Þetta eru innbyggð föll\footnote{\href{https://docs.python.org/3/library/functions.html}{Python skjölunin} inniheldur lista og upplýsingar um öll innbyggð föll}, það að þau séu innbyggð þýðir að við getum notað þau án þess að ná í einhvern annan kóða (sjá kafla \ref{k:import}) og eru þau flest svo gagnleg að ákveðið var að gefa notendum auðveldara aðgengi að þeim.
+
+Við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut en fall keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
 Allar aðferðir eru föll, ekki öll föll eru aðferðir.
 
 Til dæmis sáum við aðferðirnar .capitalize() á strengi og .sort() á lista.
@@ -39,135 +39,208 @@ Föll (e.function) og aðferðir (e. methods) eru aðgreinanlegar að þessu lei
 Við sjáum svo í öðrum hluta bókarinnar hvernig við skilgreinum aðferðir.
 
 \section{Tilgangur falla}\index{Tilgangur falla}
-Eins og með allt annað sem við lærum er gott að vita hvers vegna við erum á annað borð að læra það.
+Eins og með allt annað sem við lærum er gott að vita hvers vegna við erum á annað borð að læra um það.
 Ástæðan fyrir því að við viljum læra um föll er að þau eru eitthvað það öflugasta sem við beitum í forritun, skoðum eftirfarandi lista til að skilja hvers megnug þau eru:
 
 \begin{itemize}
-	\item Við getum endurnýtt föll í stað þess að skrifa upp sama kóðann á bakvið þau á mörgum stöðum
-	\item Við getum gert föll aðgengileg út fyrir skjalið sem við skilgreindum þau í
-	\item Við getum unnið með inntak frá notanda á skilvirkan máta
-	\item Föll halda utan um einhverja tiltekna virkni sem við viljum hafa aðgang að og eru skilvirk leið til að afmarka virkni
+	\item Við getum endurnýtt föll í stað þess að skrifa upp sama kóðann á bakvið þau á mörgum stöðum.
+	\item Við getum gert föll aðgengileg út fyrir skjalið þar sem við skilgreindum þau.
+	\item Við getum unnið með inntak frá notanda á skilvirkan máta.
+	\item Föll halda utan um einhverja tiltekna virkni sem við viljum hafa aðgang að og eru skilvirk leið til að afmarka virkni.
 \end{itemize}
 
-Við höfum hingað til ekki fengist við meira en að átta okkur á grunnvirkni í forritun með hjálp Pyhton en nú erum við komin á þann stað að við getum farið að leysa flókin vandamál.
+Við höfum hingað til ekki fengist við meira en að átta okkur á grunnvirkni í forritun með hjálp Python en nú erum við komin á þann stað að við getum farið að leysa flókin vandamál.
 
 
 \section{Að skilgreina föll}
 Til þess að skrifa föll þurfum við að læra nýtt lykilorð, \textbf{def}.
-Það stendur fyrir define eða að skilgreina, þar sem við erum með því að búa til ákveðna skilgreiningu sem vélin getur svo notað til þess að framkvæma aðgerðir.
+Það stendur fyrir \emph{define} eða að skilgreina, þar sem við erum með því að búa til ákveðna skilgreiningu sem vélin getur svo notað til þess að framkvæma aðgerðir.
 
 Það næsta sem þarf er að búa til nafn á fallið, nafnið er það sem vð notum til þess að beita fallinu okkar eftir að hafa skilgreint það.
 Alveg eins og með aðrar breytur þá megum við ekki nota föll fyrr en búið er að skilgreina þau.
 
-Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er einum inndrætti innar en def lykilorðið tilheyrir fallinu okkar.
+Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er a.m.k. einum inndrætti innar en def lykilorðið tilheyrir fallinu okkar.
 
+Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til, við ætlum að skoða minni úr forritun\footnote{Venjulega það fyrsta sem gert er í nýju forritunarmáli er að prenta út á staðalúttak "Halló Heimur!", þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á.} og prenta út einfalda setningu.
+
+Takið eftir að fallið er skilgreint og svo er það sem er inndregið undir því það sem fallið gerir, fyrir neðan skilgreininguna (ekki lengur inndregið undir henni) er svo kallað í fallið með því að skrifa nafnið á því og tóma sviga fyrir aftan nafnið.
+Svigarnir eru nauðsynlegir því að þannig segjum við vélinni að við séum að kalla í fall.
 
 \begin{lstlisting}[caption=Föll skilgreind, label=lst:foll-skilgreining]
-# Búum til okkar fyrsta fall, það sem það á að gera er að prenta "Halló Heimur!" því að það er tölvunarfræðileg klisja sem má ekki sleppa.
 def prentunarfall():
-	# fallið heitir prentunarfall og það er notað með því að kalla í prentunarfall()
 	print("Halló Heimur!")
-	
-# athugið að hér notuðum við lykilorðið def og svo skrifuðum við nafnið á fallinu, það sem fallið gerir er að keyra eina print skipun.
-# en hér er ekkert úttak, þar sem við kölluðum ekki í fallið heldur skilgreindum það eingöngu
 
-# til að kalla í fallið og nota það þarf að keyra eftirfarandi línu, að sjálfsögðu eftir að hafa keyrt skilgreininguna að ofan
 prentunarfall()
-# úttakið verður
-# Halló Heimur!
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Halló Heimur!
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Ástæðan fyrir því að svigarnir eru tómir í línu 4 er vegna þess að þeir eru tómir í línu 1 í skilgreiningunni.
+Prófið að setja eitthvað á annan staðinn en ekki hinn og keyra svo kóðann.
 
 \section{Viðföng}
 Nú höfum við séð að hægt er að búa til skilgreiningar á föllum, en tökum eftir að í kóðabút \ref{lst:foll-skilgreining} þá eru tómir svigar fyrir aftan nafnið á fallinu.
 Þessir svigar eru ekki þarna að ástæðulausu og þeir eru ekki tómir í þessum kóðabút að ástæðulausu heldur.
 
-Það sem fer inn í svigana eru svo kölluð viðföng (e. arguments), viðföngin skiptast í tvær tegundir \textbf{stöðubundin} (e. postitional) og \textbf{sjálfgefin} (e. named).
+Það sem fer inn í svigana eru svo kölluð \emph{viðföng} (e. arguments), viðföngin skiptast í tvær tegundir \textbf{stöðubundin} (e. postitional) og \textbf{sjálfgefin} (e. named).
 Hægt er að nota bæði í bland og eina viðmiðið er að gefa kost á þeim viðföngum sem notandinn ætti að fá eitthvað um að segja.
 
-Til dæmis ef við værum að raða í íslenska stafrófsröð væri lítið vit í því að bjóða notandanum að setja inn sem viðfang eitthvert annað stafróf.
-Eða ef við værum að lóðsa bílstjóra með GPS myndum við ekki vilja leyfa bílstjóranum að setja inn nýjar götur.
+\begin{lstlisting}[caption=Föll með viðföngum, label=lst:foll-vidfong]
+def prentunarfall(vidfang):
+	print("Halló", vidfang, "!")
+	
+prentunarfall("Valborg")
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Halló Valborg!
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Annað sem mikilvægt er að átta sig á er að viðföng fá breytuheiti sem eru aðeins aðgengileg innan fallsins en ekki utan þess. Því ætlum við að skoða nýtt hugtak áður en við skoðum stöðubundin og sjálfgefin viðföng.
+Annað sem mikilvægt er að átta sig á er að viðföng fá breytuheiti sem eru aðeins aðgengileg innan fallsins en ekki utan þess.
+Eins og breytan \texttt{vidfang} er aldrei formlega skilgreind svo við sjáum, allt í einu er hún bara komin þarna inn í svigann í línu 1 og strax notuð í línu 2.
+Það er í rauninni ekki keyrsluröðin, það sem gerist er að vélin fær skilgreininguna á \texttt{prentunarfall} og að þeirri skilgreiningu fylgir einhver staðhaldari sem mun seinna fá eitthvað gildi.
+Sem er það sem gerist í línu 4, við gefum breytunni gildið \texttt{"Valborg"}.
+
+Við ætlum þá að skoða nýtt hugtak áður en við skoðum stöðubundin og sjálfgefin viðföng til þess að átta okkur á hvar þessi staðhaldari er í raun til.
 
 \subsection{Gildissvið}\label{uk:gildissvið}
 Gildissvið (e. scope) skiptis í staðvært (e. local) og víðvært (e. global). 
 Það sem gildissvið þýðir er hvar eitthvað sé aðgengilegt.
 Ef við búum til Jupyter vinnubók eða .py skjal þar sem við skilgreinum breytuna x er sú breyta ekki aðgengileg í öðru skjali.
 Hins vegar ef við búum til breytu í vinnubók í einhverri sellu, með engum inndrætti, er sú breyta hluti af viðværu gildissviði og aðgengileg öllum sellum og allri virkni sem við viljum beita þessari breytu í.
-Hins vegar þegar við skilgreinum föll þá förum við inn á staðvært gildissvið sem þýðir að þegar kallað er í breytu byrjar vélin á að skoða hvort að breytan sé skilgreind innan þess sviðs, ef ekki þá notar hún víðværa gildissviðið.
+En þegar við skilgreinum föll þá förum við inn á staðvært gildissvið sem þýðir að þegar kallað er í breytu byrjar vélin á að skoða hvort að breytan sé skilgreind innan þess sviðs, ef ekki þá notar hún víðværa gildissviðið.
 En ef okkur langar að nota breytu sem var skilgreind innan einhvers falls (einhvers staðværs gildissviðs) þá höfum við ekki aðgang að henni í hinu víðværa gildisssviði.
+
+Þetta virðist ótrúlega flókið í svona tæknilegu og löngu máli en skoðið kóðabút \ref{lst:foll-gildissvid} og skoðið hvaða x er verið að vísa í hverju sinni.
+Það x sem er skilgreint í línu eitt er hluti af víðværu gildissviði og það sem er skilgreint innan fallsins í línu 3 er hluti af staðværu gildissviði og þetta eru því tvö mismunandi x sem hafa ekki áhrif hvort á annað.
+
+\begin{lstlisting}[caption=Gildissvið, label=lst:foll-gildissvid]
+x = 20
+def gildissvids_prufa(x):
+	x = x + 20
+	print(x)
+
+gildissvids_prufa(10)
+
+def prufa_tvo():
+	print(x)
+
+prufa_tvo()
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+30
+20
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 Það má líta á þetta eins og að horfa á gosbrunn, þar sem víðværa gildissviðið er þar sem vatnið kemur upp efst í brunninum og svo fellur það niður í staðværa gildissviðið sem er neðri hluti brunnsins.
 Allt sem er til í efri hlutanum getur neðri hlutinn fengið en það sem er í neðri hlutanum fer ekki upp (í þessari samlíkingu ætlum við að horfa framhjá innri virkni gosbrunnsins og sjá bara fyrir okkur hvernig er að horfa á fallegan gosbrunn sem er á tveimur eða fleiri hæðum).
 
-Ástæða þess að það er mikilvægt að nefna gilssvið að svo stöddu er vegna þess að byrjendur vilja oft ruglast á breytunotkun með þessum hætti.
-Vilja meina að viðföng séu skilreindar breytur sem hægt sé að láta fallið hafa aftur, þegar það er líkara hugmyndinni um breytuna en ekki breytan sjálf.
+Ástæða þess að það er mikilvægt að nefna gilssvið að svo stöddu er vegna þess að byrjendur vilja oft ruglast á breytunotkun með þessum hætti og halda að viðföng séu skilreindar breytur sem hægt sé að láta fallið hafa aftur, þegar það er líkara hugmyndinni um breytuna en ekki breytan sjálf.
 
 Þetta skýrist þegar við skoðum stöðubundin viðföng.
 
 \subsection{Stöðubundin viðföng}
 Stöðubundin viðföng (e. postitional arguements) fá nafn og röðun þegar þau eru sett í skilgreiningu á falli.
 Nöfnin á þeim lúta sömu lögmálum og nafnavenjur sem við höfum séð á breytum og er best að hafa nöfnin lýsandi fyrir virkni þeirra.
-Dæmi væri:
-\newline def prentunarfall(strengur): 
-\newline \phantom{----}print(strengur)
-\newline
-Þegar við köllum í fallið með prentunarfall() þá fáum við villu því að það vantar að setja inn hvað strengur á að vera, strengur er nafnið á viðfanginu en það skiptir ekki öllu máli á þessu stigi málsins, öðru en að villumeldingin sem við fáum upp segir vantar eitt stöðubundið viðfang sem er strengur.
-Við þurfum þá að kalla í fallið og setja eitthvað inn í svigann þegar við köllum í það, eins og prentunarfall('Halló Heimur!') sem myndi þá prenta út "Halló Heimur!".
+
+Þegar við köllum í fall sem skilgreint er með einu viðfangi og við gefum því engin viðföng þá fáum við villu, villumeldingin sem við fáum upp segir vantar eitt stöðubundið viðfang.
+Í kóðabút \ref{lst:foll-villa-vidfang} sjáum við þessa villu og í kóðabút \ref{lst:foll-stodubundin-kynning} sjáum við hvernig má komast hjá þessari villu og þá hvernig viðföngin eru í raun stöðubundin, svo loks í kóðabút \ref{lst:foll-stodubundin-betra} sjáum við hvernig breytuheitin geta hjalpað okkur við notkun viðfanganna.
+
+\begin{lstlisting}[caption=Villumelding fyrir ranga notkun á viðföngum, label=lst:foll-villa-vidfang]
+def fall_sem_tekur_vid_streng(strengur):
+	print(strengur.capitalize())
+fall_sem_tekur_vid_streng()
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+---------------------------------------------------------------------------
+TypeError                                 Traceback (most recent call last)
+<ipython-input-128-0e947c4208c2> in <module>
+1 def fall_sem_tekur_vid_streng(strengur):
+2         print(strengur.capitalize())
+----> 3 fall_sem_tekur_vid_streng()
+
+TypeError: fall_sem_tekur_vid_streng() missing 1 required positional argument: 'strengur'
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hér sjáum við að breytuheitið okkar hjálpar okkur við að sjá hvað það er sem við eigum að setja inn, það er einhvers konar stengur.
+Það er ekki breytan strengur því að þá fengjum við nafnavillu (við eigum enga breytu sem heitir strengur).
+
+Við þurfum þá að kalla í fallið og setja eitthvað inn í svigann þegar við köllum í það, eins og 'Halló Heimur!' sem myndi þá prenta út "Halló heimur!".
+
+Nú viljum við skoða röðunina á viðföngunum ef fallið tekur við nokkrum.
+Athugum svo að það skiptir máli í hvað röð viðföngin eru sett inn, í línum 4-6 í kóðabút \ref{lst:foll-stodubundin-kynning} er verið að setja inn fyrir \texttt{a}, \texttt{b} og \texttt{c} en aldrei í sömu röð og því er úttakið alltaf mismunandi.
 
 \begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-stodubundin-kynning]
 def fall(a,b,c):
-	a**b/c
-	
-# Þarna eru viðföngin a b og c sett inn í fallið, sem þýðir að þegar fallið er notað þarf að setja gögn, sem á að gefa fallinu, í þessari röð, því það skiptir máli hvernig á að vinna með viðföngin inni í fallinu.
-# a þarf að koma fyrst því að það er það sem er hafið í veldið af b sem er svo deilt með c
-# þar sem við þekkjum röð aðgerða og þessa tilteknu reiknivirka vitum við að a = 2, b = 3 og c = 5 gefur okkur ekki sömu niðurstöðu og a = 5, b = 2 og c = 3
+	print(a**b/c)
+
+fall(1,2,3)
+fall(2,3,1)
+fall(3,1,2)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+0.3333333333333333
+8.0
+1.5
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 Athugum að í kóðabút \ref{lst:foll-stodubundin-kynning} þá er hvorki nafnið á fallinu né viðfanga þess sérlega lýsandi.
 Nafnið á fallinu gefur ekki til kynna hvað það gerir og nöfnin á viðföngunum segja ekkert til um hvernig þau verða notuð eða af hvaða týpu þau eiga að vera.
 Þetta fall væri mögulega nothæft fyrir okkur sjálf, en um leið og annað fólk á að fara að nota kóðann okkar þá er eins gott að venja sig af því að nota svona ógegnsæjar nafnavenjur.
 Betra væri, fyrir þessa tilteknu formúlu að finna eitthvað nafn á hana eða nefna fallið eftir nákvæmri virkni formúlunnar og nefna svo viðföngin eftir því hvar þau eru sett inn í formúluna.
 
-Annað sem vert er að athuga er að þó að við hefðum kallað í fallið þá hefði ekkert skéð, þar sem fallið gerir ekkert við útreikninginn.
+Hingað til hafa öll föllin okkar verið að prenta út, við viljum geta gert eitthvað annað en það.
 Við sjáum í kafla \ref{uk:skilagildi} hvað hægt er að gera annað en að prenta bara út.
-En þetta fall hvorki prentar út né skilar og það er eingöngu hugsað til útskýringar á fyrirbærinu stöðubundin viðföng.
 
 Lítum á kóðabút \ref{lst:foll-stodubundin-betra} til að sjá hvernig betur mætti fara með skilgreininguna úr kóðabút \ref{lst:foll-stodubundin-kynning}.
+Takið eftir að úttakið er að sjálfsögðu það sama því að kallað er í fallið með sömu tölum, það eina sem breyttist er að nú vitum við hvað er að fara inn fyrir hvað í útreikningunum.
 
-\begin{lstlisting}[caption=Stöðubundin viðföng kynnt, label=lst:foll-stodubundin-betra]
+\begin{lstlisting}[caption=Stöðubundin viðföng með skýrari breytuheitum, label=lst:foll-stodubundin-betra]
 def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling):	
-	grunntala**veldisvisir/deiling
+	print(grunntala**veldisvisir/deiling)
 
-# Þarna er öllum sem hafa aðgang að þessum kóða gerð skýr skil á því hvað þetta fall gerir og greinilegt sé að inntakið eigi að vera tölur
-# Fallið gerir þó enn ekkert annað en að vera uppfræðandi því að ekkert kemur út þegar við notum fallið
+hefja_i_veldi_og_deila(1,2,3)
+hefja_i_veldi_og_deila(2,3,1)
+hefja_i_veldi_og_deila(3,1,2)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+0.3333333333333333
+8.0
+1.5
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Ef við rifjum upp hugtakið gildissvið úr fyrri undirkafla og skoðum hvernig það á við um kóðabút \ref{lst:foll-stodubundin-betra} þá sjáum við að fallið heitir hefja\_i\_veldi\_og\_deila og það tekur við þremur viðföngum sem verða að vera sett inn í þeirri röð sem fallið kallar eftir þeim, fyrst grunntöluna svo töluna sem á að nota sem veldisvísi og svo loks töluna sem á að deila með.
+Ef við rifjum upp hugtakið gildissvið úr fyrri undirkafla og skoðum hvernig það á við um kóðabút \ref{lst:foll-stodubundin-betra} þá sjáum við að fallið heitir \texttt{hefja\_i\_veldi\_og\_deila} og það tekur við þremur viðföngum sem verða að vera sett inn í þeirri röð sem fallið kallar eftir þeim, fyrst grunntöluna svo töluna sem á að nota sem veldisvísi og svo loks töluna sem á að deila með.
 
 Nú er við hæfi að taka fram hvers konar byrjenda mistök eru algeng hérna og ef meiri skilningur værir fyrir hendi á hvernig gildissvið virka myndu þessi mistök eiga sér sjaldnar stað.
 Það er að breyturnar grunntala, veldisvisir og deiling eru hluti af staðværu gildissviði þessa falls, neðri hluta brunnsins sem efri hlutinn getur ekki sótt vatn úr.
-Þess vegna getum við ekki kallað í fallið svona: hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
+Þess vegna getum við ekki kallað í fallið svona: \texttt{hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling)} (það er skrifað inn nöfnin á breytunum) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
 
 Ef við horfum aftur til skilgreiningar hrings og myndum búa til fall sem lýsir því hvernig eigi að teikna hring með ákveðna miðju og tiltekin radíus.
-Fallið gætið litið svona út: \newline def hringur(radius, midja): \newline \phantom{----}\# það sem fallið gerir. \newline
-Nú ef mig langar til að fá einhvern hring í hendurnar get ég ekki sagt við vélina láttu með hafa hring með radíus radius.
+Nú ef okkur langar til að fá einhvern hring í hendurnar getum við ekki sagt við vélina láttu okkur hafa hring með radíus \texttt{radius} nema að sú breyta hafi þegar fengið gildið sem við ætluðum að nota.
 Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!''
 Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
 
 Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki inntakið þegar við setjum það í augljóslega ranga röð.
 Hún annað hvort vinnur með vitlausa inntakið okkar og við fáum í hausinn eitthvað úttak sem við skiljum ekki eða við fáum villu.
-\todo{er búið að tala um try except sem mun koma}
+Kíkið á kafla \ref{k:villur} til þess skoða hvernig megi taka á því þegar upp koma villur en við viljum að kóðinn okkar haldi samt áfram að keyra.
 
 \subsection{Sjálfgefin viðfögn}\label{uk:föll-sjálfgefin}
 Ef við viljum vera viss um að við getum unnið með eitthvað viðfang án þess að neyða notandann til þess að gefa okkur það getum við notað sjálfgefin viðföng (e. named arguments, default arguments), einnig kölluð nefnd viðföng.
 Þá skilgreinum við fall og búum til skilgreiningu á viðföngunum þar sem við tökum þau fram.
-Dæmi væri:
-\newline def prentunarfall(strengur = "Halló Heimur!"): 
-\newline \phantom{----}print(strengur)
-\newline
-Ef við köllum í fallið með prentunarfall() og gefum því ekkert viðfang þá notar tölvan skilgreininguna sem er innan svigans þar sem viðföngin eru tekin fram.
-Sjáum þetta í kóðabút \ref{lst:foll-sjalfgefin}, hvernig megi nota bæði stöðubundin og sjálfgefin saman og hvernig megi kalla í föll sem eru með bæði.
+Skoðum þetta í kóðabút \ref{lst:foll-sjalfgefin} þar sjáum við hvernig megi nota bæði stöðubundin og sjálfgefin saman og hvernig megi kalla í föll sem eru með bæði.
+
 Þegar bæði er notað saman í bland þá þarf að setja stöðubundnu viðfögnin fremst og svo á eftir þeim koma sjálfgefnu viðföngin.
 
 Athugum að bæði er í lagi að nota sjálfgefin viðföng sem stöðubundin, en þá verðum við líka að setja þau inn í réttri röð, og hins vegar að skrifa inn nafnið á viðfanginu og skilgreina það sem eitthvað (hvort sem það séu einhver gögn sem við setjum beint inn eða notum breytu), einnig er í lagi að sleppa því að taka þau fram.
