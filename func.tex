@@ -225,9 +225,9 @@ Ef við rifjum upp hugtakið gildissvið úr fyrri undirkafla og skoðum hvernig
 
 Nú er við hæfi að taka fram hvers konar byrjenda mistök eru algeng hérna og ef meiri skilningur værir fyrir hendi á hvernig gildissvið virka myndu þessi mistök eiga sér sjaldnar stað.
 Það er að breyturnar grunntala, veldisvisir og deiling eru hluti af staðværu gildissviði þessa falls, neðri hluta brunnsins sem efri hlutinn getur ekki sótt vatn úr.
-Þess vegna getum við ekki kallað í fallið svona: \texttt{hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling)} (það er skrifað inn nöfnin á breytunum) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
+Þess vegna getum við ekki kallað í fallið svona: \texttt{hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling)} (það er skrifað inn nöfnin á viðföngunum eins og við eigum þau til sem breytur) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
 
-Ef við horfum aftur til skilgreiningar hrings og myndum búa til fall sem lýsir því hvernig eigi að teikna hring með ákveðna miðju og tiltekin radíus.
+Ef við horfum aftur til skilgreiningar hrings og myndum búa til fall sem lýsir því hvernig eigi að teikna hring með ákveðna miðju og tiltekinn radíus.
 Nú ef okkur langar til að fá einhvern hring í hendurnar getum við ekki sagt við vélina láttu okkur hafa hring með radíus \texttt{radius} nema að sú breyta hafi þegar fengið gildið sem við ætluðum að nota.
 Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!''
 Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
@@ -249,50 +249,54 @@ Athugum að bæði er í lagi að nota sjálfgefin viðföng sem stöðubundin, 
 def hefja_i_veldi_og_deila(grunntala = 1,veldisvisir = 1,deiling = 1):	
 	print(grunntala**veldisvisir/deiling)
 	
-hefja_i_veldi_og_deila() 
-# hér köllum við í fallið en gefum því ekkert, við fáum þó enga villu, því sjálfgefnu skilgreiningarnar eru notaðar
-# úttakið er
-# 1
-
+hefja_i_veldi_og_deila()
 hefja_i_veldi_og_deila(2, 2, 2)
-# hér gefum við fallinu í té tölur í röð eins og þetta séu stöðubundin viðföng
-# ef við gefum upp fleiri viðföng fáum við villu, ef við gefum upp færri þá parast þau í þeirri röð sem þau berast
-# úttakið verður 
-# 2 
-
 hefja_i_veldi_og_deila(deiling = 2)
-# hér notum við sjálfgefin gildi fyrir allt nema deiling, við tökum sérstaklega fram hvað það á að vera
-# úttakið verður
-# 0.5
-
 hefja_i_veldi_og_deila(deiling = 2, veldisvisir = 1, grunntala = 4)
-# hér notum við sjálfgefin gildi, í annarri röð en þau voru skilgreind, það veldur ekki villu því að tölvan parar viðföngin eftir nafni
-# úttakið verður
-# 2
 
-# skoðum núna blöndu, endurskilgreinum sama fallið með nýjum viðföngum:
-
-def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = 1):	
+def hefja_i_veldi_og_deila_2(grunntala,veldisvisir,deiling = 1):	
 	print(grunntala**veldisvisir/deiling)
 
-# Athugum hér að stöðubundnu viðföngin verða að koma á undan.
-# köllum nú í fallið með mismunandi aðferðum:
+print()
+hefja_i_veldi_og_deila_2(1,2) 
+hefja_i_veldi_og_deila_2(1, 2, 2) 
+hefja_i_veldi_og_deila_2(1, 2, deiling = 4) 
 
-hefja_i_veldi_og_deila() # hér fáum við villu því búist er við að notandi gefi grunntala og veldisvisir í té.
-
-hefja_i_veldi_og_deila(1,2) # hér fáum við á úttakið 2 
-
-hefja_i_veldi_og_deila(1, 2, 2) # hér fáum á úttakið 0.5
-
-hefja_i_veldi_og_deila(1, 2, deiling = 4) # hér fáum við á úttakið 0.25
-
-# notum breytur til að setja inn í fallið:
+print()
 tala = 2
 veldi = 2
 deila = 2
-hefja_i_veldi_og_deila(tala, veldi, deiling = deila) # hér fáum við á úttakið 2
-
+hefja_i_veldi_og_deila_2(tala, veldi, deiling = deila)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+1.0
+2.0
+0.5
+2.0
+
+1.0
+0.5
+0.25
+
+2.0
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Skoðið hér hvernig er kallað í fallið \texttt{hefja\_i\_veldi\_og\_deila} í línum 4-7 í kóðabút \ref{lst:foll-sjalfgefin} og berið það saman við hvernig var kallað í föllin í kóðabútum \ref{lst:foll-villa-vidfang} og \ref{lst:foll-stodubundin-betra}.
+Þar þurfti alltaf að setja inn öll viðföng annars fékkst villa, en vegna þess að í  skilgreiningunni kom fram að sjálfgefin gildi eru ákveðnar tölur sem hægt er að nota í útreikningum þá lendir vélin ekki í vandræðum þegar einhver viðföng vantar.
+
+Að sjálfsögðu megum við ekki setja inn of mörg viðföng, þá lendum við í vandræðum, prófið ykkur áfram með það.
+
+Takið líka eftir í línu 7 er kallað í viðföngin í ,,rangri'' röð með því að nota nöfnin á þeim.
+Prófið að gera það með línu 21, að setja breyturnar inn fyrir viðföngin í annarri röð.
+Takið eftir því að stöðubundnu viðföngin verða að koma á undan.
+
+Í línu 5 og 14 er kallað eins í föllin, þá er komið fram við sjálfgefnu viðföngin eins og stöðubundin.
+Þannig að sett er inn fyrir viðföngin í þeirri röð sem þau eru skilgreind í línum 1 og 9.
+
+Eins og hefur komið fram er nauðsynlegt að gera tilraunir og prófanir til að ná árangri og skilningi á efninu.
+
 
 \section{Skilagildi}\label{uk:skilagildi}
 Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með sjálfgefið inntak og það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila gildum þannig að hægt sé að fá útkomu úr þeim sem megi nota áfram.
