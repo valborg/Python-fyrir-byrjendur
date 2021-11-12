@@ -299,15 +299,15 @@ Eins og hefur komið fram er nauðsynlegt að gera tilraunir og prófanir til a�
 
 
 \section{Skilagildi}\label{uk:skilagildi}
-Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með sjálfgefið inntak og það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila gildum þannig að hægt sé að fá útkomu úr þeim sem megi nota áfram.
+Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með viðföng, það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila útkomu sem megi nota áfram.
 Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum streng sem byggir á strengnum sem við notuðum aðferðina á (sjá kóðabút \ref{lst:str-adferdir}), til þess að geta notað úttkomuna þá getum við búið til breytu sem grípur það sem aðferðin \textit{skilar}.
-Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið hefja\_i\_veldi skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum, það sem er gert er annað hvort ekkert eða úttkoman er prentuð.
+Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið \texttt{hefja\_i\_veldi} skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum, það sem er að prenta útkomuna.
 Það dugar okkur ekki ef við þurfum að nota útreikninginn að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
 Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt.''
 Því að við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
 
-Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð (eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar).
-Það sem lykilorðið gerir er svipað break lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
+Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð\footnote{eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar}.
+Það sem lykilorðið gerir er svipað \emph{break} lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
 Sjáum í kóðabút \ref{lst:foll-skilagildi}
 
 \begin{lstlisting}[caption=Hvernig á að láta fall skila gildi með return skipuninni, label=lst:foll-skilagildi]
