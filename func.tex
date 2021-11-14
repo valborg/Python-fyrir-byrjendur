@@ -301,8 +301,9 @@ Eins og hefur komið fram er nauðsynlegt að gera tilraunir og prófanir til a�
 \section{Skilagildi}\label{uk:skilagildi}
 Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með viðföng, það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila útkomu sem megi nota áfram.
 Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum streng sem byggir á strengnum sem við notuðum aðferðina á (sjá kóðabút \ref{lst:str-adferdir}), til þess að geta notað úttkomuna þá getum við búið til breytu sem grípur það sem aðferðin \textit{skilar}.
-Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið \texttt{hefja\_i\_veldi} skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum, það sem er að prenta útkomuna.
-Það dugar okkur ekki ef við þurfum að nota útreikninginn að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
+
+Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið \texttt{hefja\_i\_veldi} skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum,útkoman er bara prentuð.
+Það dugar okkur ekki, ef við þurfum að nota útreikninginn, að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
 Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt.''
 Því að við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
 
@@ -311,135 +312,206 @@ Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð se
 Sjáum í kóðabút \ref{lst:foll-skilagildi}
 
 \begin{lstlisting}[caption=Hvernig á að láta fall skila gildi með return skipuninni, label=lst:foll-skilagildi]
-def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = deiling):	
+def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = 1):
+	print('kallað var í fallið')
 	return grunntala**veldisvisir/deiling
 	
-# nú höfum við séð mýgrút leiða til að kalla í fallið svo við ætlum að einbeita okkur að því hvernig megi nota það sem fallið skilar í stað þess hvernig eigi að kalla í það með mismunandi viðföngum.
-# Athugum að  hefja_i_veldi_og_deila(2, 2, 2) skilar okkur 2
-
-tala = fall(2,2,2)
-print(tala)
-# hér verður úttakið 2
-
-utreikningur = fall(2,2,2) * 4
-print(utreikning)
-# hér verður úttakið 8
-
-breyta = utreikningur * tala
-print(breyta)
-# hér verður úttakið 16
+print("í hvaða röð gerast hlutirnir?")
+utkoma = hefja_i_veldi_og_deila(2, 2, 2)
+print("útkoman var", utkoma, "og hún margfölduð með tveimur er", utkoma*2)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+í hvaða röð gerast hlutirnir?
+kallað var í fallið
+útkoman var 2.0 og hún margfölduð með tveimur er 4.0
+\end{lstlisting}
+\lstset{style=venjulegt}
+
  
-Nú höfum við skilað einu gildi sem er heiltala eða fleytitala og unnið með hana með þeim aðgerðum og reiknivirkjum sem okkur langaði til að prófa.
+Nú höfum við skilað einu gildi sem er fleytitala og unnið með hana með þeim reiknivirkja sem okkur langaði til að prófa.
 Hægt er að skila gögnum af hvaða týpu sem er, og jafnvel fleiru en einu gildi í einu, og það af mismunandi týpum.
 
 Sjáum í kóðabút \ref{lst:foll-ndir-skilagildi} hvernig hægt er að skila mörgum gildum og setja þau í breytu eða breytur.
+Það sem fallið tekur við er strengur, tala og listi.
+Fallið skilar tveimur tölum og listanum aftur óbreyttum
+Fyrri talan er hversu oft strengurinn í viðfanginu kom fyrir í listanum
+Seinni talan er hversu margar tölur í listanum eru stærri en talan í viðfanginu
+
 
 \begin{lstlisting}[caption=Hvernig á að skila mörgum gildum, label=lst:foll-ndir-skilagildi]
 def skilum_morgum_gildum(strengur, tala, listi):
-	# Þetta fall tekur við streng, tölu og lista
-	# Fallið skilar tveimur tölum og listanum aftur óbreyttum
-	# Fyrri talan er hversu oft strengurinn í viðfanginu kom fyrir í listanum
-	# Seinni talan er hversu margar tölur í listanum eru stærri en talan í viðfanginu
-	
+
 	skilatala = 0
 	strengja_talning = 0
-	for x in listi:
+	for stak in listi:
 		# x stendur það stak sem verið er skoða úr listanum listi
-		if x == strengur:
+		if stak == strengur:
 			strengja_talning +=1
-		if(type(x) == int or type(x) == float ):
-			if (tala < x):
+		if(type(stak) == int or type(stak) == float ):
+			if (tala < stak):
 				skilatala += 1
 	return strengja_talning, skilatala,  listi
-	
-# hér gerist ekkert nema að við köllum í fallið
-skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
-# Þetta skilar okkur úttakinu
-(1, 2, ["halló", "bless", 11, 6])
-
-# En ef okkur langar ekki að fá út n-d þá getum við gert dálitla töfra 
-talning_strengs, staerri_tolur, listinn = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
-
-# Nú fáum við ekkert úttak en breyturnar innihalda 1, 2 og ["halló", "bless", 11, 6] í þessari röð
-
-# Við getum ekki notað fleiri en eina breytu nema að fjöldi þeirra passi við fjölda skilagilda:
-a, b = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
-
-# þetta veldur villu því annað hvort er í boði að hafa eina breytu sem inniheldur n-d eða þrjár breytur sem taka hver við sínu skilagildi.
 \end{lstlisting}
 
-\section{Lokun}
+Nú þegar við erum búin að skilgreina fallið þá getum við notað það og vegna þess að við viljum skoða nokkrar mismunandi leiðir brjótum við það upp í nokkra kóðabúta.
+Þetta heimfærist ágætlega á Jupyter vinnubækur og við getum litið svo á að hver þessara kóðabúta sé sér sella.
+Til þess að geta keyrt sellurnar fyrir neðan þarf að vera búið að keyra selluna fyrir ofan.
+
+\begin{lstlisting}[caption=Fallið úr kóðabút \ref{lst:foll-ndir-skilagildi} notað án þess að útkoman sé geymd, label=lst:foll-skil1]
+skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+# ekkert gerist
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hér gerðum við ekkert við útkomuna, við kölluðum vissulega í fallið og útreikningarnir voru framkvæmdir en við höfum ekkert í höndunum um það.
+Reynum að setja útkomuna í breytu eins og við höfum gert ótal sinnum áður.
+
+\begin{lstlisting}[caption=Fallið úr kóðabút \ref{lst:foll-ndir-skilagildi} notað og útkoman geymd í einni breytu, label=lst:foll-skil2]
+utkoma = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+print(utkoma)
+print(type(utkoma))
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+(1, 2, ['halló', 'bless', 11, 6])
+<class 'tuple'>
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Þannig að þegar mörgum skilagildum er komið fyrir í einni breytu er þeim komið fyrir sem nd.
+En við munum að það er hægt að úthluta stökum ndar í nokkrar breytur í einu skrefi.
+
+\begin{lstlisting}[caption=Fallið úr kóðabút \ref{lst:foll-ndir-skilagildi} notað og skilagildunum úthlutað í breytur rétt, label=lst:foll-skil3]
+talning_strengs, staerri_tolur, listinn = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+
+print("Hversu oft kom strengurinn fyrir:", talning_strengs)
+print("Hversu margar tölur voru stærri en 2:", staerri_tolur)
+print("listinn óbreyttur:", listinn)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Hversu oft kom strengurinn fyrir: 1
+Hversu margar tölur voru stærri en 2: 2
+listinn óbreyttur: ['halló', 'bless', 11, 6]
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+En við munum einnig að við þurfum að úthluta öllum stökum í eina ákveðna breytu og því virkar eftirfarandi kóðabútur ekki.
+
+\begin{lstlisting}[caption=Fallið úr kóðabút \ref{lst:foll-ndir-skilagildi} notað og skilagildunum úthlutað í breytur rangt, label=lst:foll-skil3]
+a, b = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+---------------------------------------------------------------------------
+ValueError                                Traceback (most recent call last)
+<ipython-input-143-dc266568ff5c> in <module>
+----> 1 a, b = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
+
+ValueError: too many values to unpack (expected 2)
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+\section{Innri föll}\index{Innri föll}
 
 Föll mega innihalda önnur föll, athugum það sem við fórum yfir í kafla \ref{uk:gildissvið}, þessi föll geta verið gagnleg til að útfæra útreikning sem er svo notaður oft innan fallsins.
 Sjáum dæmi í kóðabút \ref{lst:foll-innri-foll}, athugið sérstaklega gildissviðið því að í innra fallinu er vísað í viðfang sem heitir strengur og það er líka vísað í viðfang í ytra fallinu sem heitir strengur, en vegna þess að gildissviðið krefst þess að fyrst er athugað staðvært hvernig breytan er skilgreind þá skiptir ekki máli að breyturnar heita það sama.
 
+
 \begin{lstlisting}[caption=Innri föll kynnt, label=lst:foll-innri-foll]
 def breyta_strengjum(strengur):
-	# þetta fall tekur við streng og skilar honum eftir að hafa breytt honum einhvern veginn
-	
 	def fremsti_stafur_er_nuna_aftastur(strengur):
-		# þetta fall tekur við streng og lætur fremsta stafinn í honum aftast og aftasta stafinn fremst og skilar breytingunni 
-		# ef strengurinn er eitt eða færra stafabil gerir fallið ekkert við strenginn og skilar honum óbreyttum
-		if(len(strengur > 2)):
+		if(len(strengur) > 2):
 			fremst = strengur[0]
 			aftast = strengur[-1]
 			strengur = aftast + strengur[1:-1] + fremst
 			return strengur
 		else:
 			return strengur
-			
-	# nú er skilgreiningin á innra fallinu búin og við erum stödd í ytra fallinu
-	# nú getum við kallað í innra fallið
-	
+
 	skilastrengur = fremsti_stafur_er_nuna_aftastur(strengur)
 	return skilastrengur
-	
-# Nú getum við kallað í ytra fallið
-strengur = breyta_strengjum("halló")
-# strengur inniheldur núna
-# "óllah"
-
-# En ytra fallið gerði samt eiginlega ekki neitt, hvers vegna erum við að nota það en ekki innra fallið?
-strengur =  fremsti_stafur_er_nuna_aftastur("halló")
-
-# hér fáum við villu því að það er ekkert fall til, í því gildissviði sem við erum stödd, sem heitir þessu nafni sem við höfum aðgang að, þess vegna verðum við að nota ytra fallið.
-		
 \end{lstlisting}
+
+Eins og áður er fallið skilgreint fyrst og svo skoðum við frekari notkun í næstu kóðabútum.
+Athugum sérstaklega að það er bara eitt innra fall þarna og það er ekki ýkja merkilegt, það tekur fremsta og aftasta tákn í streng og víxlar þeim.
+Við gætum verið með mörg önnur föll og kallað í þau handahófskennt byggt á einhverju eins og hvaða tákn er í þriðja vísi eða álíka.
+Aðalatriðið hér er að sýna að það er fall sem heitir \texttt{fremsti\_stafur\_er\_nuna\_aftastur} og það er einungis hægt að kalla í það innan fallsins \texttt{breyta\_strengjum}.
+Takið vel eftir inndrætti og því að vissulega er kallað í innra fallið í línu 11.
+
+Köllum nú í fallið með einhverju viðfangi og sjáum hvað gerist.
+
+\begin{lstlisting}[caption=Innri föll kynnt, label=lst:foll-innri-foll-ut1]
+strengur = breyta_strengjum("halló")
+print(strengur)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+óallh	
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Og nú sjáum við að við getum ekki kallað í innra fallið því að við höfum ekki aðgang að því.
+
+\begin{lstlisting}[caption=Innri föll kynnt, label=lst:foll-innri-foll-ut2]
+strengur =  fremsti_stafur_er_nuna_aftastur("halló")
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+---------------------------------------------------------------------------
+NameError                                 Traceback (most recent call last)
+<ipython-input-147-970f41b86e0c> in <module>
+----> 1 strengur =  fremsti_stafur_er_nuna_aftastur("halló")
+
+NameError: name 'fremsti_stafur_er_nuna_aftastur' is not defined
+\end{lstlisting}
+\lstset{style=venjulegt}
+
 
 Nú höfum við séð hvernig megi skilgreina innri föll og það sem við ætlum að skoða næst er að það má skila föllum.
 Skipunin return er þá notuð alveg eins og ef við værum að skila einu gildi, eða fleirum.
 Sjáum í kóðabút \ref{lst:foll-lokun} hvernig við skilum falli og hvernig á að nota skilagildið sem inniheldur fallið.
 Við sjáum í seinni hluta þessarar bókar, í umfjöllun um klasa, hvernig megi framkvæma sömu virkni en með því að sleppa klösum þá er vinnslutíminn umtalsvert minni.
-Svo ef það skiptir máli að gera eitthvað hratt sem má leysa með lokun þá ætti frekar að beita henni heldur en klösum.
+Svo ef það skiptir máli að gera eitthvað hratt sem má leysa með \emph{lokun} (e. closure) þá ætti frekar að beita henni heldur en klösum.
 
 \begin{lstlisting}[caption=Lokun kynnt, label=lst:foll-lokun]
 def prentunarfall(strengur):
-	# prentunarfall tekur við einu viðfangi
-	# prentunarfall skilar falli sem prentar þann streng ásamt viðbót
 	def prentum():
-		# prentum tekur ekki við neinu en notar viðfangið úr ytra fallinu
-		# prentum skilar strengnum úr viðfanginu ásamt viðskeytingunni 'hér er viðbót af akademískri ástæðu'
 		return str(strengur) + " hér er viðbót af akademískri ástæðu"
 	return prentum
-
-a = prentunarfall('halló heimur')
-print(a) # skilar okkur að a sé fall sem sé geymt í einhverju minnishólfi
-print(a()) # nú köllum við í fallið a sem skilar okkur úttakinu 'halló heimur hér er viðbót af akademískri ástæðu'
-
-# Við megum svo nota prentunarfallið okkar aftur með einhverju öðru viðfangi
-b = prentunarfall('nýr strengur')
-print(b()) # skilar okkur úttakinu 'nýr strengur hér er viðbót af akademískri ástæðu'
-
-# Sjáum ögn haldbærari notkun
-
-def niðurtalning(n):
-	# niðurtalning tekur við tölu
-	# niðurtalning skilar falli sem telur niður úr þeirri tölu
 	
+a = prentunarfall('halló heimur')
+print(a) 
+print(a())
+
+b = prentunarfall('nýr strengur')
+print(b())
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+<function prentunarfall.<locals>.prentum at 0x7fce9ed740d0>
+halló heimur hér er viðbót af akademískri ástæðu
+nýr strengur hér er viðbót af akademískri ástæðu
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Úttakið hér minnir okkur á strengjaaðferðir (\ref{uk:strengjaaðferðir}) þar sem við þurftum að muna að nota sviga til að kalla í aðferðirnar okkar.
+Það er vegna þess að \texttt{a} er fall, það sem \texttt{prentunarfall} skilar er fall sem þarf að kalla í með svigum til að nota.
+
+Það er ekki sérlega merkilegt fall, það hermir virkni sem við þekkjum vel úr \texttt{print()} fallinu, nema með þessari strengjaviðbót.
+
+Skoðum nú að lokum fall sem er aðeins merkilegra.
+Við viljum geta búið til niðurteljara sem telur niður úr einhverri tölu en á einhverjum tilteknum tíma.
+Við leysum það með því að skila falli sem telur niður úr þeirri tölu sem fallinu var gefið.
+
+
+\begin{lstlisting}[caption=Innri föll kynnt, label=lst:foll-lokun2]
+def niðurtalning(n):
 	def teljari():
-		# nú lendum við í vandræðum með n, þar sem við höfum ekki aðgang að því hérna 
-		# og við lögum það með því að nota lykilorðið nonlocal (eða óstaðvært) til að segja vélinni að leita annarsstaðar að gildi fyrir n
 		nonlocal n
 		while(n>-1):
 			print(n)
@@ -447,23 +519,27 @@ def niðurtalning(n):
 	
 	return teljari
 	
-# nú getum við skilgreint fall sem telur niður frá 10 og notað það þegar okkur hentar
-teljum_fra_tiu = niðurtalning(5)
+teljum_fra_fimm = niðurtalning(5)
+teljum_fra_tiu = niðurtalning(10)
 
-# nú hentar okkur að nota það:
 teljum_fra_fimm()
-# það skilar okkur úttakinu
-# 5
-# 4
-# 3
-# 2
-# 1
-# 0
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+5
+4
+3
+2
+1
+0
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Við höfum enn ekki fundið góðan tíma til að telja niður frá tíu svo við geymum þá breytu.
 
 Tökum eftir að í skilgreiningum á a og b í kóðabút \ref{lst:foll-lokun} þá erum við að nota ákveðinn streng sem þau eiga að prenta út.
 Þetta er á þessu stigi málsins eilítið óhlutstætt og ekki augljóst hvernig það nýtist okkur því dæmið í kóðabútnum er ekki sérlega nothæft fall.
 Niðurtalningarfallið hinsvegar er að framkvæma einhverja virkni sem við viljum hafa aðgang að þegar okkur hentar.
-Við notuðum breytuna teljum\_fra\_fimm til þess að geyma fyrir okkur að kalla í fallið niðurtalning() með viðfanginu 5, svo þegar okkur hentar þá getum við beitt fallinu sem telur niður fyrir okkur.
+
 Athugum þó sérstaklega að gildissviðið sem innrafallið teljari() tilheyrir það hefur ekki aðgang að neinu staðværu n-i svo það skilar villu nema að við segjum því falli sérstaklega að nota ekki staðvært n heldur leita út fyrir gildissviðið með lykilorðinu \textbf{nonlocal}.
 Við munum ekki nota það orð af neinu viti í seinni hluta bókarinnar en það er þess virði að taka það fram að svo stöddu að þetta orð sé til og hvað það gerir.

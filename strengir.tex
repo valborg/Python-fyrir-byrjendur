@@ -213,7 +213,7 @@ kex með smjöri, osti og sultu  með smjöri, osti og sultu kex sultu kex með 
 
 Takið eftir að hvar sem engin tala kemur fyrir þegar tvípunktur er notaður þá er setur vélin sjálfgefið gildi í staðinn.
 
-\section{Strengjaaðferðir}\index{Strengjaaðferðir}
+\section{Strengjaaðferðir}\index{Strengjaaðferðir}\label{uk:strengjaaðferðir}
 Áður en aðferðir á strengi eru kynntar þarf að útskýra stuttlega hvað aðferðir eru.
 Við höfum séð \texttt{print()} fallið notað, það er innbyggt fall í Python sem prentar það sem beðið er um á staðalúttak.
 Það að fall sé innbyggt þýðir að nafnið á því er frátekið og hægt er að beita því án þess að beita kóðasafni (sjá kafla \ref{k:import}).
@@ -227,7 +227,7 @@ Aðferðir eru í raun ,,hengdar aftan á'' þá týpu sem þær eiga að verka 
 Það er gert með því að skrifa nafnið á breytunni sem inniheldur gögnin sem við viljum framkvæma aðferðina á, gera svo punkt, skrifa nafnið á aðferðinni og setja sviga, inn í svigana fara öll þau viðföng sem aðferðin tekur við.
 
 Þetta er í raun fyrstu kynni okkar af hlutbundinni forritun.
-Strengurinn er hlutur og aðferðinn verkar á hlutinn.
+Strengurinn er hlutur og aðferðin verkar á hlutinn.
 
 Annað sem þarf að hafa í huga áður en við vinnum með aðferðir á strengi er að strengir eru óbreytanlegir (e. immutable) sem þýðir að aðferðir sem eru notaðar á þá \emph{skila} öðrum strengjum í stað þess að breyta strengnum sem við keyrðum aðferðina á.
 Með það í huga skulum við skoða eftirfarandi lista af aðferðum sem áhugavert er að taka fyrir.
@@ -259,10 +259,22 @@ Svona vinnur vélin sig frá vinstri til hægri svo lengi sem að það sem skil
 Dæmi um ólöglegt væri \texttt{"Valborg".index('b').upper()} þar sem .index() skilar heiltölu og á þær er ekki hægt að beita aðferinni .upper().
 
 Í þessari bók verða ekki gerð skil á öllum þeim aðferðum sem eru í boði fyrir þær týpur sem við skoðum.
-Þær eru mýmargar og til ýmiss gagnlegar en það er út fyrir svið þessarar bókar að taka hverja fyrir sig fyrir og því munum við bara nefna þær gagnast okkur að skoða.
+Þær eru mýmargar og til ýmiss gagnlegar en það er út fyrir svið þessarar bókar að taka hverja fyrir sig fyrir og því munum við bara nefna þær sem gagnast okkur að skoða.
 
 Gerið ítarlegar tilraunir.
 Ekki lesa þennan undirkafla bara, gerið ykkar eigin prófanir og áttið ykkur á því hvernig þetta hangir saman.
+Prófið allavega þangað til að þið sjáið eftirfarandi skilaboð:
+\begin{enumerate}
+	\item <function str.upper()> 
+	\item TypeError: index() takes at least 1 argument (0 given)
+	\item TypeError: must be str, not int (á index() aðferðinni)
+	\item TypeError: upper() takes no arguments (1 given)
+\end{enumerate}
+
+Fyrsta villan þarna gefur ekki villu því að það er lögleg skipun að spyrja ,,hvað er þetta?'' án þess að kalla í aðferðina til að nota hana.
+Hvernig náðuð þið að gera það? 
+
+
 Að því sögðu ætlum við að skoða eina strengjaaðferð sérstaklega \texttt{.format()} sem tekur við eins mörgum viðföngum og við viljum setja inn í einhvern annan streng sem inniheldur jafn marga slaugusviga, \{\}, og við viljum setja inn í staðinn fyrir.
 
 \begin{lstlisting}[caption=Aðferðin .format() kynnt, label=lst:str-format]
