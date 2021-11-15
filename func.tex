@@ -543,3 +543,206 @@ Niðurtalningarfallið hinsvegar er að framkvæma einhverja virkni sem við vil
 
 Athugum þó sérstaklega að gildissviðið sem innrafallið teljari() tilheyrir það hefur ekki aðgang að neinu staðværu n-i svo það skilar villu nema að við segjum því falli sérstaklega að nota ekki staðvært n heldur leita út fyrir gildissviðið með lykilorðinu \textbf{nonlocal}.
 Við munum ekki nota það orð af neinu viti í seinni hluta bókarinnar en það er þess virði að taka það fram að svo stöddu að þetta orð sé til og hvað það gerir.
+
+%-------------------------------
+\newpage
+\section{Æfingar}
+Athugið að til þess að átta ykkur á því hvort að föllin ykkar séu rétt gerð þurfið þið að gera ítarlegar prófanir á þeim, með mismunandi inntaki.
+Kallið í föllin í öllum æfingum.
+
+\begin{exercise}\label{fun1}
+Búið til fall sem tekur við tveimur stöðubundnum breytum og prentar þær út nema fyrri breytan er prentuð á eftir hinni breytunni.
+Prófið að kalla í fallið með streng og tölu, með tveimur strengjum, og með tveimur tölum.
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={fun1}]
+Við þurfum ekkert að hugsa um return á þessu stigi málsins bara að muna eftir hvernig á að setja upp fall og nota það.
+	\begin{lstlisting}
+def fall1(a, b):
+	print(b, a)
+fall1(1,"halló")
+fall1("prufa", "hvað?")	
+fall1(2, 4)\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+
+\begin{exercise}\label{fun2}
+Búið til fall sem tekur við þremur nefndum viðföngum, sem eiga að vera strengir, ef ekkert er gefið upp ákveðið þið sjálf hvert gildi viðfanganna eigi að vera.
+Innan fallsins athugið þið svo hver strengjanna er aftastur í stafrófinu og prentið hann út.
+\end{exercise}
+\begin{Answer}[ref={fun2}]
+Hér erum við komin í smá vandræði, það er að við viljum að notandinn setji inn strengi í fallið okkar en við gerum ekkert til þess að fullvissa okkur um að svo sé (sjáum það í kafla \ref{k:villur}) svo við ætlum að sjá hvað gerist þegar við notum fallið eins og okkur sýnist þó svo að við vitum að fallið taki bara við strengjum.
+
+Það sem þarf að gerast er einföld skilyrðissetning og útprentun.
+Einföld á þann hátt að hún er ekki hreiðruð og að við þurfum bara fáa samanburðarvirkja.
+En að vísu má sleppa samanburðarvirkjunum með því að nota innbyggt fall sem heitir \emph{max()}.
+Prófið ykkur áfram með að breyta þessari lausn og setja inn þrjá eins strengi.
+
+Lausnin með samanburðinum er ófullkomin því að aldrei er leyfilegt að tveir strengir sem eru aftar í stafrófinu séu jafnir (hvað þá allir þrír).
+
+Reynið að leysa þetta án þess að nota max() í else.
+\begin{lstlisting}
+def fall2(a = "Anna", b = "Bára", c = "Carl"):
+	if(a > b and a > c):
+		print(a)
+	elif(b > a and b > c):
+		print(b)
+	elif(c > a and c > b):
+		print(c)
+	else:
+		print(max(a,b,c))\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{fun3}
+Búið til fall sem tekur við lista af tölum og skilar næsthæstu tölunni.
+\end{exercise}
+\begin{Answer}[ref={fun3}]
+Nú getum við aftur beitt max fallinu en þá til þess að henda þeirri tölu út svo að við getum beitt max aftur.
+Athugum að muna eftir því að skila.
+	\begin{lstlisting}
+def fall3(listi):
+	gildi = max(listi)
+	listi.remove(gildi)
+	haesta = max(listi)
+	return haesta
+
+fall3([1,2,3,4,55,66])\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{fun4}
+Búið til fall sem að tekur við gildi og lista sem viðföng og skilar hversu oft gildið kemur fyrir í listanum.
+\end{exercise}
+\begin{Answer}[ref={fun4}]
+Nú þurfum við lykkju fyrir listann, samanburð við gildið og breytu sem heldur utan um talninguna.
+	\begin{lstlisting}
+def fall4(gildi, listi):
+	talning = 0
+	for stak in listi:
+		if stak == gildi:
+			talning += 1
+	return talning
+
+fall4(4, [1,2,3,4,5,4,2,3,4,5,4444])
+fall4("halló", ["halló", 123, {}, {"halló": "halló"}, ["telst ekki með hér", "halló"]])\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{fun5}
+Búið til fall sem tekur við tveimur strengjum, ef strengirnir byrja báðir á sérhljóða eða á sama samhljóðanum þá skiliði True gildi annars False.
+\end{exercise}
+\begin{Answer}[ref={fun5}]
+Hér erum við í fyrsta sinn að vinna með skilagildi af týpunni Boolean, spennandi.
+
+
+	\begin{lstlisting}
+def fall5(str1, str2):
+	if(str1[0].lower() == str2[0].lower()):
+		return True
+	elif(str1[0].lower() in "aáeéiíoóuúæyýö" and str2[0].lower() in "aáeéiíoóuúæyýö" ):
+		return True
+	return False
+
+fall5("breki", "Bolli")
+fall5("ester", "Ösp")
+fall5("kanína", "Portúgal")
+\end{lstlisting}
+Hér sjáum við að return False kemur fyrir í sama inndrætti og skilyrðissetningin, má það?
+Það er vegna þess að ef við fórum aldrei inn í skilyrðissetninguna, þá gátum við aldrei skilað True og því hljótum við að eiga skila False.
+Sama niðurstaða fengist með því að bæta við \texttt{else return False}.
+Takið svo eftir .lower() til að staðla inntakið svo að við fáum örugglega True fyrir Bolli og breki, og ester og Ösp.
+
+\end{Answer}
+
+\begin{exercise}\label{fun6}
+Búið til fall sem tekur við tveimur tölum, ef tölurnar eru báðar sléttar skiliði þeirri tölu sem er lægri.
+Ef önnur eða hvorug er slétt skilarðu þeirri tölu sem er hærri.
+Nú er gott að benda á að \texttt{min()} skilar minnsta gildi alveg eins og \texttt{max()} skilar hæsta gildi.
+\end{exercise}
+\begin{Answer}[ref={fun6}]
+	
+	\begin{lstlisting}
+def fall6(tala1, tala2):
+	if tala1%2 == 0 and tala2%2 == 0:
+		return min(tala1, tala2)
+	return max(tala1, tala2)
+
+fall6(2, 4)
+fall6(1, 3)
+fall6(8, 1)
+fall6(9, 3)\end{lstlisting}
+
+\end{Answer}
+
+
+\begin{exercise}\label{fun7}
+Hér fall sem tekur við lista og athugar hvort að stökin 0, 0, 7 komi fyrir í listanum í þessari röð (önnur stök mega vera á milli).
+Dæmi Listinn [1,2,3,0,1,20,0,7] myndi skila True en listinn [7,0,0,0,0,0,6] myndi skila False.
+Athugið  eitthvað vantar í fallið og þið þurfið að fylla í eyðurnar.
+Breytan talning telur hversu mörg tákn við erum komin með af þeim þremur sem við þurfum, við erum fyrst með núll og svo hækkum við talninguna eftir því sem við sjáum táknin í þeirri röð sem við viljum sjá þau.
+\begin{lstlisting}
+def fall6(listi):
+	talning = 0
+	for stak in listi:
+		if stak == 0 ?? talning == ??:
+			talning = 1
+		?? stak == 0 ?? talning == ??:
+			talning = 2
+		?? stak == 7 ?? talning == ??:
+			return True
+	??
+
+fall6([1,2,3,0,1,20,0,7])
+fall6([1,7,0,0,0,0,0,0,0,0])
+\end{lstlisting}
+\end{exercise}
+\begin{Answer}[ref={fun7}]
+
+	\begin{lstlisting}
+def fall6(listi):
+	talning = 0
+	for stak in listi:
+		if stak == 0 and talning == 0:
+			talning = 1
+		elif stak == 0 and talning == 1:
+			talning = 2
+		elif stak == 7 and talning == 2:
+			return True
+	return False\end{lstlisting}
+	Hér sjáum við að return False kemur fyrir í sama inndrætti for, það er vegna þess að þegar for lykkjan er búin þá höfum við ekki náð að finna 7 á eftir tveimur núllum og því skilum við false.
+	Sú setning má ekki vera inni í for lykkjunni því að þá myndum við ekki klára að skoða öll stökin áður en við myndum úrskurða um hvort mynstrið væri til staðar eða ekki.
+	
+\end{Answer}
+
+\begin{exercise}\label{fun8}
+Búið til fall sem tekur við einu viðfangi sem er tala, það sem fallið gerir er lausnin á verkefni \ref{nd4} en í stað þess að prenta út ndina á fallið að skila ndinni til baka.
+Áður en for lykkjan er keyrð skulið þið keyra skilyrðissetningu sem athugar hvort að viðfangið sé af týpunni heiltala (int), ef svo er ekki skulið þið skila tómri nd.
+Það er hægt að athuga með type() fallinu og int lykilorðinu, með != samanburðinum.
+
+Ef viðfangið er heiltala skal halda áfram og sú tala fer inn í range fallið í for lykkjunni.
+Þannig erum við komin með fall sem getur búið til ndir sem spyrja x oft hver er uppáhalds litur notandans.
+\end{exercise}
+\begin{Answer}[ref={fun8}]
+Rifjum upp svarið við \ref{nd4}
+\begin{lstlisting}
+nd = ()
+for i in range(4):
+	svar = input("hver er uppáhalds liturinn þinn?")
+	nd = nd + (svar,)
+print(nd)\end{lstlisting}
+
+Við vildum nota þetta innan falls og við vildum ekki bara prenta útkomuna heldur skila henni, en við vildum jafnframt vera aðeins að athuga inntakið með skilyrðissetningu.
+
+Prófið fallið með bæði tölu og streng eða öðru tagi.
+
+\begin{lstlisting}
+def fall8(x):
+	nd = ()
+	if type(x) != int:
+		return nd
+
+	for i in range(x):
+		svar = input("hver er uppáhalds liturinn þinn?")
+		nd = nd + (svar,)
+	return nd\end{lstlisting}
+\end{Answer}
+
