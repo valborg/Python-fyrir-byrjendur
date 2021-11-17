@@ -166,12 +166,23 @@ print(nuna-adan)\end{lstlisting}
 
 \begin{exercise}\label{imp2}
 Gefinn er eftirfarandi listi: 
-['Lorem','ipsum','dolor','sit','amet,','consectetur','adipiscing','elit,','sed','do','eiusmod','tempor','incididunt','ut','labore','et','dolore','magna','aliqua.','Ut','enim','ad','mini','veniam,','quis','nostrud','exercitation','ullamco','laboris','nisi','ut','aliquip','ex','e','commodo','consequat.','Duis','aute','irure','dolor','in','reprehenderit','in','voluptate','velit','esse','cillum','dolore','eu','fugiat','nulla','pariatur.','Excepteur','sint','occaect','cupidatat','non','proident,','sunt','in','culpa','qui','officia','deserunt','mollit','ani','id','est','laborum.']
+['Lorem','ipsum','dolor','sit','amet,','consectetur',
+'adipiscing','elit,','sed','do','eiusmod','tempor',
+'incididunt','ut','labore','et','dolore','magna','aliqua.',
+'Ut','enim','ad','mini','veniam,','quis','nostrud',
+'exercitation','ullamco','laboris','nisi','ut','aliquip',
+'ex','e','commodo','consequat.','Duis','aute','irure',
+'dolor','in','reprehenderit','in','voluptate','velit',
+'esse','cillum','dolore','eu','fugiat','nulla','pariatur.',
+'Excepteur','sint','occaect','cupidatat','non','proident,',
+'sunt','in','culpa','qui','officia','deserunt','mollit',
+'ani','id','est','laborum.']
 
 Náið í orð af handahófi úr listanum og náið svo í tákn af handahófi úr því orði.
 \end{exercise}
 \begin{Answer}[ref={imp2}]
 Hér þurfum við aðallega að átta okkur á því hvaða föll við viljum nota úr random pakkanum, úr listanum viljum við nota choice en til að finna eitthvað tákn viljum nota randint.
+Athugum hér að þegar við notum randint þá gefum við upp bil af tölum eins og 1,10 þá eru bæði 1 og 10 með, svo þegar við notum það til að búa til sætisvísi af handahófi verðum við að passa að fara ekki út fyrir löglega sætisvísa.
 	\begin{lstlisting}
 rugl_ord = random.choice(listi)
 rugl_takn = rugl_ord[random.randint(0,len(rugl_ord)-1)]

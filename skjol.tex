@@ -1,85 +1,241 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
 \chapter{Skjalavinnsla}\index{Skjalavinnsla}\label{k:skjalavinnsla}
-Að vinna með skjöl án þess að hafa þau opin í ritli, eins og Word, Write, Notepad eða álíka, er mjög ákjósanlegt ef t.d. þarf að gera litla breytingu í stóru skjali eða einhverja breytingu í mjög mörgum skjölum (skilgreiningin á mjög mörgum er sveiginaleg, sumum finnst það vera að gera eitthvað oftar en þrisvar).
-
-Í JupyterNotebooks er hægt að búa til skjal með töfratáknum (innbyggt þar en er ekki sérstakt Python fyrirbæri) sem eru tvö prósentu merki, \%\%, sjá kóðabút \ref{lst:skjol-kynning} um hvernig skjöl eru búin til í hefðbundnum Python ritli og hvernig er hægt að gera þau í JupyterNotebooks.
+Að vinna með skjöl án þess að hafa þau opin í ritli, eins og MS Word, LibreOffice Write, Notepad eða álíka, er mjög ákjósanlegt ef t.d. þarf að gera litla breytingu í stóru skjali eða einhverja breytingu í mjög mörgum skjölum (skilgreiningin á mjög mörgum er sveiginaleg, sumum finnst það vera að gera eitthvað oftar en þrisvar).
+Segjum sem svo að við hefðum skrifað ritgerð og við yfirlestur á henni tækjum við eftir að við gerðum eina ákveðna villu alltaf.
+Villan væri að við hefðum gleymt að setja stóran staf í upphafi allra setinganna okkar!
+Ó nei, hvernig tókst okkur að gleyma þessu?
+Það á eftir að taka óratíma að lesa yfir og laga hvern einasta staf því ritgerðin er 20 blaðsíður.
+En vegna þess að við erum snjöll og kunnum að vinna með strengi þá getum við gert þetta með hjálp Python.
 
 Hægt er að búa til skjöl, opna þau, lesa þau, skrifa inn í þau, yfirskrifa þau, loka þeim og henda þeim.
-Þetta er mikilvægt vegna þess að við viljum geta sagt tölvunni að nálgast skjöl og gera eitthvað við þau, við viljum ekki þurfa að handstýra tölvunni að óþörfu.
-Til þess er hún.
+Þetta er mikilvægt vegna þess að við viljum geta sagt tölvunni að nálgast skjöl og gera eitthvað við þau, við viljum ekki þurfa að handstýra tölvunni að óþörfu, til dæmis með því að lesa sjálf yfir 20 blaðsíður í leit að litlum staf þar sem á að vera stór.
+Til þess er tölvan.
 
 \begin{lstlisting}[caption=Hér sjáum við hvernig má búa til skjöl, label=lst:skjalavinnsla-kynning]
-	
-skjal1 = open('skjal1.txt', mode = 'w+') # mode stendur fyrir hvernig á að opna skjalið í boði eru:
+skjal = open('skjal1.txt', mode = 'w+') 
 
-#'r' read only - aðeins hægt að lesa
+skjal.write('hér kemur eitthvað sem við viljum setja inn í skjalið okkar')
 
-#'w' write only - aðeins hægt að skrifa
-
-#'a' append only - aðeins hægt að bæta við aftast
-
-#'r+' read and write - les og skrifar
-
-#'w+' read and write and owerwrite or create new files - les of yfirskrifar eða býr til nýtt skjal
-
-skjal1.write('hér kemur eitthvað sem við viljum setja inn í skjalið okkar')
-
-# í JupyterNotebooks er hægt að gera þetta:
-%%writefile skjal2
-hér kemur allur textinn sem á að fara inn í þetta skjal
+skjal.close()
 \end{lstlisting}
+
+Nú getum við séð, á sama stað og þessi kóði er keyrður, í skrársafninu (e. filesystem) okkar skjal sem heitir \texttt{skjal1.txt} vegna þess að við völdum það nafn í línu 1 innan svigans, ástæðan fyrir því að þarna stendur \emph{.txt} er sú að sú skráarending er fyrir einföld textaskjöl\footnote{svipað eins og .doc sem við könnumst flest við}.
+Þar kemur einnig fram \texttt{mode} sem er valið sem \texttt{w+}, sem leyfir okkur að lesa og skrifa eða yfirskrifa.
+Við veljum máta sem hentar okkur hverju sinni, þeir sem eru í boði eru:
+\begin{itemize}
+	\item \textbf{r} : leyfir okkur aðeins að lesa (read).
+	\item \textbf{w} : leyfir okkur aðeins að skrifa (write).
+	\item \textbf{a} : leyfir okkur aðeins að bæta við aftast (append).
+	\item \textbf{r+} : leyfir okkur að lesa og skrifa (read +).
+	\item \textbf{w+} : leyfir okkur að lesa og skrifa og yfirskrifar (write +).
+\end{itemize}
+
+Við tökum einnig eftir í kóðabút \ref{lst:skjalavinnsla-kynning} að við notum þrjú föll, fallið \texttt{open()} er það sem býr til skjalið með w+ og nafninu sem við gefum því, þá er skjalið opið og aðgengilegt.
+Þá köllum við í \texttt{write} sem skrifar inn í skjalið, sú skipun er í boði vegna þess að við notuðum w+ (er ekki möguleg fyrir r t.d.).
+Við erum vissulega bara að gera einfalda hluti en þetta er til að sýna virknina í grunninnn ekki til að finna upp hjólið.
+Svo að lokum sjáum við eitthvað áhugavert, það er \texttt{close()}.
+Til hvers að gera það?
+Hafið þið lent í því að við það að reyna að henda skjali í ruslið af tölvunni ykkar fáið þið villu um að það sé ekki hægt því að skjalið er opið einhversstaðar?
+Það er það sem við erum að fyrirbyggja hérna með því að loka skjalinu þegar við erum búin að vinna með það.
+Við erum í rauninni bara að ganga frá eftir okkur svo að það sé ekki eitthvað opið sem er fyrir.
 
 \section{Unnið með skjöl}\index{Unnið með skjöl}\label{uk:skjalavinnsla-kynnt}
 Til þess að geta unnið með skjöl þurfum við að geta vísað í þau, til þess notum við breytur.
-Breytan okkar stendur þá ekki fyrir einhverja grunntýpu í Python heldur er það heilt skjal á skráarsafninu okkar.
+Eins og breytan \texttt{skjal} í kóðabúr \ref{lst:skjalavinnsla-kynning}.
+Breytan okkar stendur þá ekki fyrir einhverja grunntýpu í Python heldur er það vísun í heilt skjal á skráarsafninu okkar.
 
 Í kóðabút \ref{lst:skjalavinnsla-open} koma fram nokkrar aðferðir sem Python býður upp á fyrir skjöl sem búið er að opna.
+Til þess að sækja upplýsingar úr skrá þarf tölvan að lesa hana.
 Við tökum eftir því að þar er eitthvað til sem heitir \textit{seek}, ástæðan fyrir því að við þurfum það er að tölvan les frá vinstri til hægri eins og henni er sagt en ef hún á að lesa eitthvað aftur frá byrjun eða öðrum stað þá þarf að segja henni að færa leshausinn sinn þangað.
 Nú er hætta á því að enginn lesandi hafi nokkurn tímann séð segulband en hugmyndin þar er sú sama, tölvan sem les segulbandið getur bara lesið bandið sem er undir leshausnum og sér ekkert annað.
 Ef tölvan á að lesa einhvern annan hluta af segulbandinu þarf að spóla fram eða til baka.
 Sama er upp á teningnum hérna, við þurfum að stilla leshausinn fyrir framan það gildi sem við viljum lesa hverju sinni.
 Ef vélin er búin að lesa skjalið er leshausinn kominn út í enda og við getum ekki lesið meira nema færa hann.
 
-\begin{lstlisting}[caption=Hér sjáum við hvernig má opna skjal sem við eigum til á sama stað og þessi kóði er geymdur, label=lst:skjalavinnsla-open]
-	
-breytuheiti = open('skjal1.txt', encoding = 'utf-8', mode = 'r')	
-	
-breytuheiti.read() # les allann textann sem streng
+Þetta er svipað því eins og ef við settum puttann niður í bók og mættum bara lesa orðin fyrir ofan puttann og svo bara til hægri, þá til að lesa eitthvað aftur eða fara lengra inn í bókina þyrftum við að taka upp puttann og færa hann þangað.
 
-breytuheiti.readlines() # les hverja línu og setur hana sem stak í lista
+Byrjum á að gera textaskjalið okkar aðeins bitastæðara með því að keyra eftirfarandi kóða í sér sellu í vinnubók\footnote{virkar aðeins í Jupyter Notebooks og er ekki sér Python fyrirbæri heldur sérstætt fyrir þessar vinnubækur, þetta leyfir okkur að sleppa við $\backslash$n eða newline character og æfingar tengdum því}:
+\begin{verbatim}
+%%writefile skjal1.txt
+hér kemur eitthvað sem við viljum setja inn í skjalið okkar
+hér er næsta lína í skjalinu
+úps engin lína endar á punkti og engin lína hefst á stórum staf
+En nú lagast það.
+æ, það gleymdist stór stafur.
+Og nú gleymdist punktur
+\end{verbatim}
 
-breytuheiti.readline() # les eina línu, þar sem við erum stödd hverju sinni
+Skoðum svo hvað hægt er að gera við þennan texta\footnote{Þarna kemur fram annað viðfang sem heitir encoding, þarna er það valið sem utf-8 sem er það táknasafn sem nær yfir alla séríslenka stafi. Ef þið lendið í vandræðum við að íslenskir stafir eru í ruglinu er gott að vita til þess að stafakóðunin er þá mögulega önnur en utf-8. Þetta á alls ekki bara við um Python heldur er þetta alþjóðlegur staðall sem nýtist hvarvetna.}.
 
-breytuheiti.seek(0) # setur leshausinn aftur á upphaf skjalsins
+\begin{lstlisting}[caption=Hér sjáum við einfalda skjalavinnslu, label=lst:skjalavinnsla-open]
+vinnuskjal = open('skjal1.txt', encoding = 'utf-8', mode = 'r')	
 
-breytuheiti.close() # Nú er skjalið lokað og það má henda því eða opna það annarsstaðar.
+linurnar = vinnuskjal.readlines()
+vinnuskjal.seek(150)
+print(vinnuskjal.read())
+
+for lina in linur:
+	if lina[0].islower() and lina[-1] != ".":
+		print("línan byrjar á litlum staf og endar ekki á punkti")
+	elif lina[0].islower() or lina[-1] != ".":
+		print("línan endar ekki á punkti eða byrjar á litlum staf")
+	else:
+		print(lina)
+
+vinnuskjal.close()
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+t á stórum staf
+En nú lagast það.
+æ, það gleymdist stór stafur.
+Og nú gleymdist punktur
 
-Í kóðabút \ref{lst:skjalavinnsla-open} eru teknar fyrir þær helstu aðferðir sem eru í boði fyrir lestur á skjali en í lokin er tekin fyrir aðferð sem heitir .close() sem gerir það að verkum að við getum með hent skjalinu annars staðar því að það er hvergi opið á vélinni. 
-Það gæti verið vesen að þurfa að muna eftir því að loka skjalinu og því viljum við skoða annan möguleika með nýju lykilorði \textbf{with}, við höfum séð \textbf{as} sem býr til alias eða annað heiti.
-Sjáum kóðabút \ref{lst:skjalavinnsla-open-as} 
+línan byrjar á litlum staf og endar ekki á punkti
+línan byrjar á litlum staf og endar ekki á punkti
+línan byrjar á litlum staf og endar ekki á punkti
+línan endar ekki á punkti eða byrjar á litlum staf
+línan byrjar á litlum staf og endar ekki á punkti
+línan endar ekki á punkti eða byrjar á litlum staf
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Í kóðabút \ref{lst:skjalavinnsla-open} eru teknar fyrir þær helstu aðferðir sem eru í boði fyrir lestur á skjali \texttt{read()} og \texttt{readlines()}, annað gefur okkur streng en hitt gefur okkur lista af línum sem við getum ítrað í gegnum.
+Takið eftir því að leshausinn er settur á stað 150 og svo er útkoman prentuð, en það hefur ekki áhrif á \texttt{linur} því að sú breyta var skilgreind þegar leshausinn var á 0 og færðist út í enda við það að nota \texttt{readlines()}.
+Prófið ykkur áfram með röðunina á kóðalínunum.
  
-\begin{lstlisting}[caption=Hér sjáum við nýja leið til að opna skjal og loka því eftir notkun sjálfkrafa, label=lst:skjalavinnsla-open-as]
+Það gæti verið vesen að þurfa að muna eftir því að loka skjalinu og því viljum við skoða annan möguleika með nýju lykilorði \textbf{with}, við höfum séð \textbf{as} sem býr til \textit{alias} eða annað heiti.
+Sjáum kóðabút \ref{lst:skjalavinnsla-open-as}, þar sem öll vinnslan í skjalinu tilheyrir inndrætti undir \texttt{with} og \texttt{as}.
+Þetta er eins og með föll, þegar við skrifum eitthvað í sama inndrætti og í línu 1 þá erum við komin út fyrir skjalavinnsluna okkar og skjalið er ekki lengur aðgengilegt því þá er verið að reyna að vinna með skrá sem er lokuð.
+ 
+\begin{lstlisting}[caption=Hér sjáum við nýja leið til að opna skjal og loka því sjálfkrafa, label=lst:skjalavinnsla-open-as]
 with open('skjal1.txt', encoding='utf-8') as test:
-	# hér kemur inndreginn kóði sem keyrist á meðan skjalið er opið 
-	# þegar þessi kóði er búinn er skjalinu lokað.
-	# breytan sem vísar í skjalið er test
 	efni = test.read()
 	test.seek(0)
 	efni_i_listum = test.readlines()
 
-# breyturnar eru enn aðgengilegar víðværu gildissviði svo við þurfum ekki að hafa áhyggjur af því að skjalinu hafi verið lokað
-print(efni_i_listum)
-
 with open('skjal1.txt', encoding='utf-8', mode= 'w+') as blergh:
-	# hér kemur inndreginn kóði sem keyrist á meðan skjalið er opið 
-	# þegar þessi kóði er búinn er skjalinu lokað.
-	# nú heitir breytan sem vísar í skjalið blergh
-	efni = blergh.write('Ég yfirskrifaði allt og á nú tómt skjal sem heitir það sama')
+	efni = blergh.write('Ég yfirskrifaði allt og á nú skjal sem heitir það sama en inniheldur bara þetta')
 	blergh.seek(0)
-	efni_i_listum = blergh.readlines()
+	efni_i_listum2 = blergh.readlines()
 
-# enn er allt í skjalinu aðgengilegt
 print(efni_i_listum)
+print(efni_i_listum2)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+['hér kemur eitthvað sem við viljum setja inn í skjalið okkar\n', 'hér er næsta lína í skjalinu\n', 'úps engin lína endar á punkti og engin lína hefst á stórum staf\n', 'En nú lagast það.\n', 'æ, það gleymdist stór stafur.\n', 'Og nú gleymdist punktur\n']
+['Ég yfirskrifaði allt og á nú skjal sem heitir það sama en inniheldur bara þetta']
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Tökum eftir hér að við fáum villu við að reyna að vísa í breyturnar \texttt{test} og \texttt{blergh} en hinar breyturnar sem við búum til á meðan vinnslunni stendur eru enn aðgengilegar eins og sést í línum 12 og 13.
+
+En þá skulum við skoða hvernig við eigum að fara að því að laga textann án þess að opna skjalið handvirkt og breyta táknunum sjálf.
+Það sem við vitum er að fremsti stafur á alltaf að vera stór og aftasta táknið á alltaf að vera punktur.
+Við getum svo breytt handvirkt þeim fáeinu setningum sem við viljum að endi á spurningarmerki eða upphrópunarmerki.
+
+\begin{lstlisting}[caption=Leysum punkta og hástafa vandann okkar, label=lst:skjalavinnsla-lausn]
+with open('skjal1.txt', encoding='utf-8', mode= 'r') as lausn:
+	lausn.seek(0)
+	linur = lausn.readlines()
+	for lina in linur:
+		i = linur.index(lina)
+		lina = lina[0].upper() + lina[1:]
+		if lina[-2] != ".":
+			lina = lina[:-1] + "." + lina[-1]
+		linur[i] = lina
+
+with open('skjal1.txt', encoding = 'utf-8', mode = 'w+') as laga:
+	laga.writelines(linur)
+	laga.seek(0)
+	print(laga.read())
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Hér kemur eitthvað sem við viljum setja inn í skjalið okkar.
+Hér er næsta lína í skjalinu.
+Úps engin lína endar á punkti og engin lína hefst á stórum staf.
+En nú lagast það.
+Æ, það gleymdist stór stafur.
+Og nú gleymdist punktur.
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Þó það hefði mögulega verið minni hausverkur að laga þessar fáeinu setningar og að læra rétta stafsetningu þá er pælingin hérna var að við vorum búin að gera þetta síðustu tuttugu blaðsíðurnar og við vildum alls ekki gera einhverja villu með því að gleyma punkti einu sinni því að það fór framhjá okkur.
+Við ættum að temja okkur að láta tölvuna sjá um allt það sem við erum fær um að útskýra fyrir henni hvernig eigi að gera.
+
+%-------------------------------
+\newpage
+\section{Æfingar}
+
+\begin{exercise}\label{doc1}
+Búiið til skjal með .txt endingu, setjið inn í það nokkrar mismunandi línur (annað hvort með \%\%writefile eða annarri leið og munið þá eftir $\backslash$n til þess að fá mismunandi línur).
+Lykkjið svo í gegnum línurnar og prentið út þær sem byrja á sérhljóða.
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={doc1}]
+
+	\begin{lstlisting}
+%%writefile doc1.txt
+Þessi byrjar ekki á sérhljóða
+En þessi gerir það
+
+with open('doc1.txt', mode = 'r') as doc1:
+linur = doc1.readlines()
+for lina in linur:
+if(lina[0].lower() in 'aáeéiíoóuúyýæö'):
+print(lina)\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+
+\begin{exercise}\label{doc2}
+Búið til textaskjal sem inniheldur söngtexta úr einhverju lagi (þá er gott að nota \%\%writefile), lesið svo skjalið og geymið línurnar í lista.
+Prentið svo eina línu af handahófi úr listanum.
+\end{exercise}
+\begin{Answer}[ref={doc2}]
+	\begin{lstlisting}
+%%writefile doc2.txt
+Krummi svaf í klettagjá,
+kaldri vetrarnóttu á,
+::verður margt að meini::
+Fyrr en dagur fagur rann,
+freðið nefið dregur hann
+::undan stórum steini.::
+
+Allt er frosið úti gor,
+ekkert fæst við ströndu mor
+::svengd er metti mína.::
+Ef að húsum heim ég fer
+heimafrakkur bannar mér
+::seppi´ úr sorp að tína.::
+
+Öll er þakin ísi jörð,
+ekki séð á holtabörð
+::fleygir fuglar geta.::
+En þó leiti út um mó,
+auða hvergi lítur tó;
+::hvað á hrafn að éta.::
+
+Á sér krummi ýfði stél,
+einnig brýndi gogginn vel,
+::flaug úr fjallagjótum::
+Lítur yfir byggð og bú
+á bænum fyrr en vakna hjú,
+::veifar vængjum skjótum.::
+
+Sálaður á síðu lá
+sauður feitur garði hjá,
+::fyrrum frár á velli.::
+Krunk, krunk, nafnar, komið hér,
+krunk, krunk, því oss búin er
+::krás á köldu svelli.::		
+		
+import random 
+with open('doc2.txt', mode = 'r') as doc1:
+	linur = doc1.readlines()
+	print(random.choice(linur))
+\end{lstlisting}
+\end{Answer}
