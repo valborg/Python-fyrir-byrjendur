@@ -181,7 +181,8 @@ Lykkjið svo í gegnum línurnar og prentið út þær sem byrja á sérhljóða
 %%writefile doc1.txt
 Þessi byrjar ekki á sérhljóða
 En þessi gerir það
-
+\end{lstlisting}
+\begin{lstlisting}´
 with open('doc1.txt', mode = 'r') as doc1:
 linur = doc1.readlines()
 for lina in linur:
@@ -210,7 +211,7 @@ ekkert fæst við ströndu mor
 ::svengd er metti mína.::
 Ef að húsum heim ég fer
 heimafrakkur bannar mér
-::seppi´ úr sorp að tína.::
+::seppi' úr sorp að tína.::
 
 Öll er þakin ísi jörð,
 ekki séð á holtabörð
@@ -232,7 +233,8 @@ sauður feitur garði hjá,
 Krunk, krunk, nafnar, komið hér,
 krunk, krunk, því oss búin er
 ::krás á köldu svelli.::		
-		
+\end{lstlisting}
+	\begin{lstlisting}
 import random 
 with open('doc2.txt', mode = 'r') as doc1:
 	linur = doc1.readlines()
