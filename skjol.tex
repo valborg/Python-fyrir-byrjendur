@@ -163,7 +163,8 @@ Og nú gleymdist punktur.
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Þó það hefði mögulega verið minni hausverkur að laga þessar fáeinu setningar og að læra rétta stafsetningu þá er pælingin hérna var að við vorum búin að gera þetta síðustu tuttugu blaðsíðurnar og við vildum alls ekki gera einhverja villu með því að gleyma punkti einu sinni því að það fór framhjá okkur.
+Athugið sérstaklega notkun á -1 og -2, athugið hvað gerist ef þið breytið því, þetta er útaf því að síðasta táknið er ,,new line character'' eða $\backslash$n (þó þetta eru í raun tvö tákn þá er þetta saman eitt tákn).
+Þó það hefði mögulega verið minni hausverkur að laga þessar fáeinu setningar og að læra rétta stafsetningu þá er pælingin hérna var að við vorum búin að gera þetta síðustu tuttugu blaðsíðurnar og við vildum alls ekki gera einhverja villu í yfirferðinni með því að gleyma punkti einu sinni því að það fór framhjá okkur.
 Við ættum að temja okkur að láta tölvuna sjá um allt það sem við erum fær um að útskýra fyrir henni hvernig eigi að gera.
 
 %-------------------------------
@@ -236,8 +237,8 @@ krunk, krunk, því oss búin er
 \end{lstlisting}
 	\begin{lstlisting}
 import random 
-with open('doc2.txt', mode = 'r') as doc1:
-	linur = doc1.readlines()
+with open('doc2.txt', mode = 'r') as doc2:
+	linur = doc2.readlines()
 	print(random.choice(linur))
 \end{lstlisting}
 \end{Answer}
