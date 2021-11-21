@@ -1,60 +1,81 @@
 \chapterimage{chapter_head_2.pdf} % Chapter heading image
 
-\chapter{Klasar}\index{Klasar}\label{k:klasar}
-Klasar eru hlutir sem hugsaðir eru til þess að geyma eitthvað ástand, halda utan um eitthvað og mögulega hafa áhrif á það.
-Klasar eru það sem gera forritunarmál að hlutbundnum málum, Python er hlutbundið forritunarmál.
+\chapter{Klasar og hlutir}\index{Klasar og hlutir}\label{k:klasar}
+Forritun snýst um að meðhöndla gögn, hingað til höfum við kynnst nokkrum gagnatögum (t.d. strengir og listar), þær gegna mismunandi hlutverkum og bjóða upp á mismunandi aðgerðir til að vinna með gögnin.
+Þessar innbyggðu týpur duga þó ekki alltaf og því er mikilvægt að vita að þegar við forritum getum við smíðað okkar eigin.
+Þannig getum við aðlagað týpurnar okkar að þeim gögnum sem forritið okkar meðhöndlar og útfært okkar eigin aðferðir á þær.
+Klasar gera forriturum kleift að skilgreina sína eigin hluti í flestum hlutbundnum málum, Python er hlutbundið forritunarmál.
 Til þess að læra á hvernig eigi að búa til klasa þarf að átta sig á til hvers þeir eru nytsamlegir.
-Hugmyndin er að eiga tilvik sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum.
-Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.
-
-Klasar nota lykilorðið \textbf{class} og eru skilgreindir með því orði, allt sem tilheyrir klasanum er inndregið undir honum.
-
-Hugsum okkur að við búum til skilgreiningu á bíl, hann þarf að vera af einhverri tegund og hafa árgerð.
-Svo viljum við fá tilvik af skilgreiningunni í hendurnar og búum okkur til breytu sem heitir fyrsti\_billinn\_minn sem er Subaru 2002 módel.
-Það kemur ekki í veg fyrir það að við getum átt fleiri bíla, en nú erum við með einhverja ákveðna breytu sem heldur utan um ástandið á nákvæmlega þessum bíl okkar.
-Segjum að við fáum okkur svo annan bíl, þá getum við búið til aðra breytu sem inniheldur aðra tegund og annað módel, t.d. Citroen 2017.
-Nú eigum tvær breytur sem við getum unnið með, kannski setja bensín á bílinn eða fylla á rúðuvökva og þá gerum við það við þá tilteknu breytu sem við ætlum að framkvæma þá aðgerð á.
 
 Gagnlegt er að hugsa sér klasa sem skilgreiningu eða uppskrift alveg eins og föll.
 Skilgreiningin ein og sér gerir ekki neitt, það er ekki fyrr en við búum okkur til ákveðna útgáfu sem við getum farið að vinna með hana.
-Gott dæmi um það er skilgreiningin á rétti á matseðli á veitingastað, textinn á matseðlinum er eingöngu hvað er í boði að fá en er ekki útgáfa af matnum sjálfum.
+Gott dæmi um það er skilgreiningin á rétti á matseðli á veitingastað, textinn á matseðlinum er eingöngu hvað er í boði en er ekki útgáfa af matnum sjálfum.
+
+Klasar eru hlutir sem hugsaðir eru til þess að búa til eintök af og geyma þannig eitthvert ástand og mögulega hafa áhrif á það.
+Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.
+Hér er tilvalið að skoða ,,meta programming''}.
+
+Klasar nota lykilorðið \textbf{class} og eru skilgreindir með því orði, allt sem tilheyrir klasanum er inndregið undir honum.
+
+\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir]
+class Bíll:
+	tegund = "Citroen"
+	argerd = 2022
+
+citroen = Bíll()
+print(citroen.tegund)
+subaru = Bíll()
+subaru.tegund = "Subaru"
+print(subaru.tegund)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Citroen
+Subaru
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hugsum okkur að við búum til skilgreiningu á bíl, hann þarf að vera af einhverri tegund og hafa árgerð og skoðum línur 1-3 í kóðabút \ref{lst:klasar-skilgreindir}.
+Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 5), þá búum okkur til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
+Það kemur ekki í veg fyrir það að við getum átt fleiri bíla, en nú erum við með einhverja ákveðna breytu sem heldur utan um ástandið á nákvæmlega þessum bíl okkar.
+Segjum að við fáum okkur svo annan bíl, þá getum við búið til aðra breytu sem inniheldur aðra tegund og annað módel (lína 7).
+Nú eigum tvær breytur sem við getum unnið með, kannski setja bensín á bílinn eða fylla á rúðuvökva og þá gerum við það við þá tilteknu breytu sem við ætlum að framkvæma þá aðgerð á.
+En þessi skilgreining innihélt engar aðferðir svo það er ekki hægt að framkæma aðra aðgerð en að breyta eigindum (lína 8).
 
 \section{Klasar skilgreindir}\index{Klasar skilgreindir}\label{uk:klasar-skilgreindir}
 Til þess að skilgreina klasa þarf einungis lykilorðið \textbf{class} og réttan inndrátt.
-Í kóðabút \ref{lst:klasar-skilgreindir} sjáum við hvernig má búa til eins einfaldan klasa og mögulegt er og svo sjáum við í kóðabút \ref{lst:klasar-notkun} hvernig við beitum klösum á hnitmiðaðri máta með svo kallaðari \textit{töfraaðferð} (e. magic method, double underscore method, dunder method (þarna er orðunum double og under skeytt saman í dunder))
+Í kóðabút \ref{lst:klasar-skilgreindir} sjáum við hvernig má búa til eins einfaldan klasa og mögulegt er og svo sjáum við í kóðabút \ref{lst:klasar-skilgreindir2} hvernig á að bæta við aðferð á klasa.
 
-\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir]
-# hér er klasi sem hefur eina staðværa breytu
-# tökum eftir að breytuheitið fyrir klasann er Klasi með stóru K, því að nafnavenjan í Pyhton er að klasar heiti nöfnum með stórum stöfum fremst.
-class Klasi:
+Við munum svo beita klösum á hnitmiðaðri máta með svo kölluðum \textit{töfra aðferð} (e. magic method, double underscore method, dunder method\footnote{þarna er orðunum double og under skeytt saman í dunder}) og skoða hvernig á að útbúa hlut með ákveðnum grunnupplýsingum.
+
+\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir2]
+class Tala():
 	x = 5
-	# Þetta er heill klasi.
-	
-# til þess að búa til tilvik af klasanum þá búum við til breytu og köllum í klasann með nafni hans og setjum sviga.
-tilvik = Klasi()
-print(tilvik.x)
-# úttakið verður fimm
+	def leggja_saman(self, x):
+		print(self.x + x)
 
-tilvik.x = 7
-# nú er búið að endurskilgreina x fyrir þetta tiltekna tilvik af klasanum
-
-annad_tilvik = Klasi()
-print(annad_tilvik.x)
-# úttakið verður fimm 
+t = Tala()
+t.leggja_saman(6)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+11
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-Tökum eftir hvernig breytan tilvik er skilgreind í kóðabút \ref{lst:klasar-skilgreindir}, hún er skilgreind eins og hvaða önnur breyta sem við höfum búið til áður.
+Tökum eftir hvernig breytan \texttt{t} er skilgreind í kóðabút \ref{lst:klasar-skilgreindir2}, hún er skilgreind eins og hvaða önnur breyta sem við höfum búið til áður.
 En það sem kemur hinu megin við jafnaðarmerkið er eins og verið sé að kalla í fall.
 Eina sem gefur til kynna að þetta sé ekki fall er að Klasi er með stórum staf.
 Ef við gleymum að gera svigana þá fáum við ekki eintak af klasanum til að vinna með heldur fáum við nýja vísun á klasann sjálfan.
-Það er við erum með nýtt nafn sem gerir það sama og breytan Klasi gerir, annan vísi á Klasi.
+Það er við erum með nýtt nafn sem gerir það sama og breytan \texttt{Tala} gerir, annan vísi á \texttt{Tala} en ekki útgáfu til að vinna með.
 
-En við viljum fá tilvik af klasanum sem við getum gert eitthvað við, þessi klasi er þó ekkert stórbrotinn svo það er ekki mikið sem við getum gert.
-Innan klasans er ein breyta skilgreind, það er x sem er jafngilt 5.
-Tilvikið okkar sem er geymt í breytunni tilvik hefur aðgang að þessu x-i og það sem gerist eftir skilreininguna á tilvik er að við sækjum eigindið (e. attribute) x á tilvikið af klasanum og fáum að vita að það sé fimm.
-Svo leyfum við okkur að breyta því, við veitum því nýtt gildi fyrir þetta tiltekna tilvik af klasanum.
-Eins og kom fram í inngangi þessa kafla þá getum við litið svo á að þetta sé eins og einn tiltekinn bíll og við vorum að aðlaga bensínstöðuna á honum.
-Eins og sést að hefur engin áhrif á breytuna annad\_tilvik því að það fær bara grunnstillinguna á klasanum til sín og hefur ekkert að gera með hitt tilvikið okkar.
+Það er nafnavenja í Python að klasar séu nefndir með stórum staf, það auðveldar lestur fyrir mannfólk.
+
+Þá sjáum við að í línu 7 er kallað í aðferðina \texttt{leggja\_saman}, hún tekur við einu viðfangi.
+En ef við skoðum skilgreininguna á aðferðinni þá eru þar skilgreind tvö viðföng.
+Fyrra viðfangið \texttt{self} er þarna notað fyrir klasann til að vita að það sé verið að tala um hann sjálfan, svo þarna inni eru tvö mismunandi x.
+Fyrra x-ið er úr línu 2 og seinna x-ið er úr viðfanginu.
+Þetta getur verið ruglandi en við munum sjá fleiri dæmi um þetta og vonandi verður þetta skýrara.
 
 \section{Tilviksbreytur}\index{Tilveiksbreytur}\label{uk:klasar-tilviksbreytur}
 Nú höfum við seð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir} er sérstaklega ber og gagnlítill.
