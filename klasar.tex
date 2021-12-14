@@ -15,18 +15,36 @@ Klasar eru hlutir sem hugsaðir eru til þess að búa til eintök af og geyma �
 Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.
 Hér er tilvalið að skoða ,,meta programming''}.
 
+\section{Klasar skilgreindir}\index{Klasar skilgreindir}\label{uk:klasar-skilgreindir}
+
 Klasar nota lykilorðið \textbf{class} og eru skilgreindir með því orði, allt sem tilheyrir klasanum er inndregið undir honum.
 
-\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir]
+\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir-tegund]
 class Bíll:
 	tegund = "Citroen"
-	argerd = 2022
 
-citroen = Bíll()
-print(citroen.tegund)
-subaru = Bíll()
-subaru.tegund = "Subaru"
-print(subaru.tegund)
+fyrsti_billinn = Bíll()
+print(fyrsti_billinn.tegund)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Citroen
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hugsum okkur að við búum til skilgreiningu á bíl, hann þarf að vera af einhverri tegund, skoðum línur 1-2 í kóðabút \ref{lst:klasar-skilgreindir-tegund}.
+Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 3), þá búum okkur til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
+Prófið núna að búa til annað tilvik af klasanum \texttt{Bíll} án þess að nota svigana og prófið þá að prenta út það sem \texttt{type} skilar fyrir breyturnar tvær.
+
+\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir-subaru]
+class Bíll:
+	tegund = "Citroen"
+	
+fyrsti_billinn = Bíll()
+print(fyrsti_billinn.tegund)
+annar_bill = Bíll()
+annar_bill.tegund = "Subaru"
+print(annar_bill.tegund)
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
@@ -35,14 +53,43 @@ Subaru
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Hugsum okkur að við búum til skilgreiningu á bíl, hann þarf að vera af einhverri tegund og hafa árgerð og skoðum línur 1-3 í kóðabút \ref{lst:klasar-skilgreindir}.
-Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 5), þá búum okkur til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
-Það kemur ekki í veg fyrir það að við getum átt fleiri bíla, en nú erum við með einhverja ákveðna breytu sem heldur utan um ástandið á nákvæmlega þessum bíl okkar.
-Segjum að við fáum okkur svo annan bíl, þá getum við búið til aðra breytu sem inniheldur aðra tegund og annað módel (lína 7).
-Nú eigum tvær breytur sem við getum unnið með, kannski setja bensín á bílinn eða fylla á rúðuvökva og þá gerum við það við þá tilteknu breytu sem við ætlum að framkvæma þá aðgerð á.
-En þessi skilgreining innihélt engar aðferðir svo það er ekki hægt að framkæma aðra aðgerð en að breyta eigindum (lína 8).
+Breytan \texttt{fyrsti\_bilinn} kemur ekki í veg fyrir það að við getum átt fleiri bíla, en hún heldur utan um ástandið á nákvæmlega þessum bíl okkar.
+Segjum að við fáum okkur svo annan bíl, þá getum við búið til aðra breytu (lína 6) í kóðabút \ref{lst:klasar-skilgreindir-subaru} fyrir annað tilvik af klasanum.
+Bílarnir eru, fyrir okkur, óaðgreinanlegir í línu 6\footnote{Þar sem ekki hefur verið útfærð \_\_eq\_\_ aðferðin þá er notast við id() fallið úr type klasanum sem klasinn okkar erfir frá bakvið tjöldin.
+Við skoðum erfðir betur seinna í kaflanum.} en það breytist svo snarlega þegar við endurskilgreinum \emph{klasabreytuna}\footnote{Í öðrum hlutbundnum málum er venjulega talað um klasafasta en í Python er auðvelt að breyta þeim svo við hæfi að nota annað orð en klasa\textbf{fasti}} í línu 7, \texttt{tegund}.
 
-\section{Klasar skilgreindir}\index{Klasar skilgreindir}\label{uk:klasar-skilgreindir}
+Prófið nú að skipta um gildi á klasabreytunni \texttt{tegund} fyrir ykkar eigið tilvik af \texttt{Bíll}.
+
+Þá skulum við skoða dálítið sérkennilegt fyrirbæri í Python, það er að við getum endurskilgreint klasabreyturnar okkar, sem hefur áhrif á öll tilvikin okkar.
+Til að skoða það skulum við nota aftur kóðann úr kóðabút \ref{lst:klasar-skilgreindir-tegund}.
+
+\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir-tegund2]
+class Bíll:
+	tegund = "Citroen"
+	
+fyrsti_billinn = Bíll()
+print(fyrsti_billinn.tegund)
+Bíll.tegund = "Volvo"
+print(fyrsti_billinn.tegund)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Citroen
+Volvo
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Hér sjáum við hvernig tilvikið okkar, \texttt{fyrsti\_billinn}, af bílaklasanum breytist.
+Í línu 5 er \texttt{tegund} "Citroen" en í línu 7 er það orðið að "Volvo".
+Þetta gerist því að tilvikið okkar er af þessum klasa og hann breyttist í línu 6.
+Við endurskilgreindum klasann og því breytast öll tilvik af honum í samræmi.
+
+Nú eigum við tvær breytur sem við getum unnið með, kannski setja bensín á bílinn eða fylla á rúðuvökva og þá gerum við það við þá tilteknu breytu sem við ætlum að framkvæma þá aðgerð á.
+En þessi skilgreining innihélt engar aðferðir, við sjáum það í hluta  \ref{uk:klasar-aðferðir}.
+
+-----------------------------------------------------
+
+
 Til þess að skilgreina klasa þarf einungis lykilorðið \textbf{class} og réttan inndrátt.
 Í kóðabút \ref{lst:klasar-skilgreindir} sjáum við hvernig má búa til eins einfaldan klasa og mögulegt er og svo sjáum við í kóðabút \ref{lst:klasar-skilgreindir2} hvernig á að bæta við aðferð á klasa.
 
