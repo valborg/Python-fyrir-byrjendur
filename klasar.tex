@@ -18,8 +18,9 @@ Hér er tilvalið að skoða ,,meta programming''}.
 \section{Klasar skilgreindir}\index{Klasar skilgreindir}\label{uk:klasar-skilgreindir}
 
 Klasar nota lykilorðið \textbf{class} og eru skilgreindir með því orði, allt sem tilheyrir klasanum er inndregið undir honum.
+Nöfn klasa eru með stórum staf í Python og flestum hlutbundnum forritunarmálum.
 
-\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir-tegund]
+\begin{lstlisting}[caption=Klasinn Bíll skilgreindur, label=lst:klasar-skilgreindir-tegund]
 class Bíll:
 	tegund = "Citroen"
 
@@ -33,10 +34,10 @@ Citroen
 \lstset{style=venjulegt}
 
 Hugsum okkur að við búum til skilgreiningu á bíl, hann þarf að vera af einhverri tegund, skoðum línur 1-2 í kóðabút \ref{lst:klasar-skilgreindir-tegund}.
-Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 3), þá búum okkur til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
+Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 4), þá búum við til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
 Prófið núna að búa til annað tilvik af klasanum \texttt{Bíll} án þess að nota svigana og prófið þá að prenta út það sem \texttt{type} skilar fyrir breyturnar tvær.
 
-\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir-subaru]
+\begin{lstlisting}[caption=Klasinn Bíll skilgreindur og tvö tilvik búin til, label=lst:klasar-skilgreindir-subaru]
 class Bíll:
 	tegund = "Citroen"
 	
@@ -63,7 +64,7 @@ Prófið nú að skipta um gildi á klasabreytunni \texttt{tegund} fyrir ykkar e
 Þá skulum við skoða dálítið sérkennilegt fyrirbæri í Python, það er að við getum endurskilgreint klasabreyturnar okkar, sem hefur áhrif á öll tilvikin okkar.
 Til að skoða það skulum við nota aftur kóðann úr kóðabút \ref{lst:klasar-skilgreindir-tegund}.
 
-\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir-tegund2]
+\begin{lstlisting}[caption=Endurskilgreining á því sem klasinn býður upp á, label=lst:klasar-skilgreindir-tegund2]
 class Bíll:
 	tegund = "Citroen"
 	
@@ -81,34 +82,47 @@ Volvo
 
 Hér sjáum við hvernig tilvikið okkar, \texttt{fyrsti\_billinn}, af bílaklasanum breytist.
 Í línu 5 er \texttt{tegund} "Citroen" en í línu 7 er það orðið að "Volvo".
-Þetta gerist því að tilvikið okkar er af þessum klasa og hann breyttist í línu 6.
+Þetta gerist því að tilvikið okkar er af þessum klasa og klasinn breyttist í línu 6.
 Við endurskilgreindum klasann og því breytast öll tilvik af honum í samræmi.
 
 Nú eigum við tvær breytur sem við getum unnið með, kannski setja bensín á bílinn eða fylla á rúðuvökva og þá gerum við það við þá tilteknu breytu sem við ætlum að framkvæma þá aðgerð á.
 En þessi skilgreining innihélt engar aðferðir, við sjáum það í hluta  \ref{uk:klasar-aðferðir}.
 
------------------------------------------------------
-
-
-Til þess að skilgreina klasa þarf einungis lykilorðið \textbf{class} og réttan inndrátt.
-Í kóðabút \ref{lst:klasar-skilgreindir} sjáum við hvernig má búa til eins einfaldan klasa og mögulegt er og svo sjáum við í kóðabút \ref{lst:klasar-skilgreindir2} hvernig á að bæta við aðferð á klasa.
+\comment{
+	
+	--------------
 
 Við munum svo beita klösum á hnitmiðaðri máta með svo kölluðum \textit{töfra aðferð} (e. magic method, double underscore method, dunder method\footnote{þarna er orðunum double og under skeytt saman í dunder}) og skoða hvernig á að útbúa hlut með ákveðnum grunnupplýsingum.
 
-\begin{lstlisting}[caption=Klasar skilgreindir, label=lst:klasar-skilgreindir2]
+Áður en við höldum svo langt skulum við byrja á að skoða orðið \texttt{self} sem er ekki frátekið lykilorð heldur er það hefð og venja að nota það orð til að segja klasanum að nú sé hann að nota sig sjálfan (sjá endurkvæmni í kafla \ref{k:reiknirit})\footnote{Skipta má út orðinu self fyrir hvað sem er, en það þarf þá að halda samhengi, best er að venja sig á nota self svo kóðinn verði læsilegri}.
+
+-----------
+
+}
+
+\comment{
+	
+------------------------
+	
+Við sáum þetta í \ref{lst:klasar-self} þegar búið að er að setja fall inn í klasann, við munum hvernig föll eru skilgreind úr kafla \ref{k:föll}, hvernig þau vinna með viðföng og hvernig á að kalla í þau.
+
+\begin{lstlisting}[caption=Klasar , label=lst:klasar-self]
 class Tala():
 	x = 5
 	def leggja_saman(self, x):
 		print(self.x + x)
 
-t = Tala()
-t.leggja_saman(6)
+talan_min = Tala()
+talan_min.leggja_saman(6)
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
 11
 \end{lstlisting}
 \lstset{style=venjulegt}
+
+Við sjáum að fallið tekur við tveimur viðföngum \texttt{self} og \texttt{x}.
+
 
 Tökum eftir hvernig breytan \texttt{t} er skilgreind í kóðabút \ref{lst:klasar-skilgreindir2}, hún er skilgreind eins og hvaða önnur breyta sem við höfum búið til áður.
 En það sem kemur hinu megin við jafnaðarmerkið er eins og verið sé að kalla í fall.
@@ -124,6 +138,12 @@ Fyrra viðfangið \texttt{self} er þarna notað fyrir klasann til að vita að 
 Fyrra x-ið er úr línu 2 og seinna x-ið er úr viðfanginu.
 Þetta getur verið ruglandi en við munum sjá fleiri dæmi um þetta og vonandi verður þetta skýrara.
 
+
+----------------
+}
+
+
+
 \section{Tilviksbreytur}\index{Tilveiksbreytur}\label{uk:klasar-tilviksbreytur}
 Nú höfum við seð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir} er sérstaklega ber og gagnlítill.
 En hvers eru klasar megnugir?
@@ -132,36 +152,23 @@ Athugum eftirfarandi samlíkingu áður en lengra er haldið.
 Þegar við förum á veitingastað þá er okkur boðinn ákveðinn matseðill, við fáum að vita að það séu þrír réttir á matseðlinum (þrír klasar) og í þeim réttum eru ákveðin hráefni (tilviksbreytur) og þegar við pöntum okkur mat fáum við í hendurnar eitt tiltekið tilvik af skilgreiningunni á matseðlinum (tilvik af klasa).
 Nú eru hráefnin kannski ekki okkur að skapi og við viljum fá að hafa áhrif á hvaða hráefni fara í réttinn okkar (okkar tiltekna tilvik) svo við gefum upp hvað við viljum fá (inntak) sem skilar sér í okkar tiltekna rétti (úttak).
 
-Í þessari samlíkingu er matreiðslufólkið smiðurinn á bakvið klasann, í kóðabút \ref{lst:klasar-notkun} er aðferðin \_\_init\_\_ sá smiður.
+Í þessari samlíkingu er matreiðslufólkið smiðurinn á bakvið klasann, í kóðabút \ref{lst:klasar-notkun} er aðferðin \texttt{\_\_init\_\_} sá smiður.
 Aðferðin smíðar fyrir okkur tilvik af klasanum með því inntaki sem hún fær.
 
 \begin{lstlisting}[caption=Klasar skilgreindir með töfraaðferðinni \_\_init\_\_, label=lst:klasar-notkun]
-class Samloka():
-	# sjáum að hér er klasinn skilgreindur með svigum
-	
-	def __init__(self):
-		# aðferðin tekur ekki við neinu og gerir ekkert
-		pass
-	
-samlokan_min = Rettur()
-# nú eigum við tilvik af klasanum Samloka í breytunni samlokan_min en við getum lítið gert við það, sjáum hvernig væri ef við hefðum einhver hráefni
-
 class Samloka():
 	def __init__(self, sosa, alegg):
 		self.sosa = sosa
 		self.alegg = alegg
 		
 samlokan_min = Samloka('bbq', ['skinka', 'ostur', 'paprika'])
-# nú á ég tiltekna samloku sem hefur bbq sósu og þrjár áleggstegundir
 
-# Athugum nú að matreiðslufólkið gæti boðið upp á einhverja ákveðna samloku
 class Samloka_med_skinku():
 	def __init__(self, sosa = "", alegg = ['skinka']):
 		self.sosa = sosa
 		self.alegg = alegg
 		
 skinku_samloka = Samloka_med_skinku('bbq')
-# Nú eigum við tilvik af skinkusamloku sem er með bbq sósu og einu áleggi, skinku.
 \end{lstlisting}
 
 Samlíkingin okkar með samlokur á veitingastað er ágæt en nú skulum við skoða hvað er eiginlega í gangi í kóðabút \ref{lst:klasar-notkun}.
