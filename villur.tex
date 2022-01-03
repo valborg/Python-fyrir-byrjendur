@@ -10,21 +10,21 @@ Við viljum geta sagt vélinni að reyna að gera eitthvað og ef henni tekst þ
 Byrjum á að rifja upp algengar villur og bætum nokkrum við:
 
 \begin{itemize}
-	\item Nafna villa - NameError, nafn á breytu var notað sem er ekki skilgreint
-	\item Inndráttar villa - IndentationError, röngum inndrætti beitt
-	\item Málskipunar villa - SyntaxError, rangt tákn notað eða tákn notað vitlaust
-	\item Týpu villa - TypeError, týpan styður ekki aðgerðina sem er verið að framkvæma
-	\item Vísis villa - IndexError, verið er að nota sætisvísi sem er ekki til í hlutnum
-	\item Gildis villa - ValueError, verið er að nota gildi sem er ekki til
-	\item Eiginda villa - AttributeError, verið er að nota eigindi sem hluturinn á ekki til
-	\item Lykla villa - KeyError, verið er að ná í lykil sem er ekki til
-	\item Endurkvæmnis villa - RecursionError, þegar búið er að ná hámarks leyfilegri endurkvæmni án niðurstöðu
-	\item Staðvær nafna villa - UnboundLocalError, þegar verið er að vísa í staðvært breytuheiti en það hefur ekki verið skilgreint á þeim stað í gildissviðinu
-	\item Inntaks/úttaks villa - IOError, þegar villa kom upp við meðhöndlun inntaks eða úttaks.
+	\item \textbf{Nafna villa} - \emph{NameError}, nafn á breytu var notað sem er ekki skilgreint
+	\item \textbf{Inndráttar villa }- \emph{IndentationError}, röngum inndrætti beitt
+	\item \textbf{Málskipanar villa} - \emph{SyntaxError}, rangt tákn notað eða tákn notað vitlaust
+	\item \textbf{Týpu villa} - \emph{TypeError}, týpan styður ekki aðgerðina sem er verið að framkvæma
+	\item \textbf{Vísis villa} - \emph{IndexError}, verið er að nota sætisvísi sem er ekki til í hlutnum
+	\item \textbf{Gildis villa} - \emph{ValueError}, verið er að nota gildi sem er ekki til
+	\item \textbf{Eiginda villa} - \emph{AttributeError}, verið er að nota eigindi sem hluturinn á ekki til
+	\item \textbf{Lykla villa} - \emph{KeyError}, verið er að ná í lykil sem er ekki til
+	\item \textbf{Endurkvæmnis villa} - \emph{RecursionError}, þegar búið er að ná hámarks leyfilegri endurkvæmni án niðurstöðu
+	\item \textbf{Staðvær nafna villa} - \emph{UnboundLocalError}, þegar verið er að vísa í staðvært breytuheiti en það hefur ekki verið skilgreint á þeim stað í gildissviðinu
+	\item \textbf{Inntaks/úttaks villa} - \emph{IOError}, þegar villa kom upp við meðhöndlun inntaks eða úttaks.
 \end{itemize}
-
-Ástæðan fyrir því að nefna nákvæmlega þessar villur en ekki allar sem eru skráðar í skjölun (e. documention) Python forritunarmálsins er vegna þess að þessar villur eru líklegri en aðrar til að koma upp hjá byrjendum og við viljum geta tekið á þeim.
-Inndráttarvillur og málskipunarvillur er þó ekki hægt að grípa í keyrslutíma því að þær eru gripnar áður en keyrsla á sér stað og kóðinn hreinlega keyrir ekki neitt.
+\vspace{0.5cm}
+Ástæðan fyrir því að nefna nákvæmlega þessar villur en ekki allar sem eru skráðar í skjölun\footnote{\href{https://docs.python.org/}{Opinbera skjölun Python}} (e. documention) Python forritunarmálsins er vegna þess að þessar villur eru líklegri en aðrar til að koma upp hjá byrjendum og við viljum geta tekið á þeim.
+Inndráttarvillur og málskipanarvillur er þó ekki hægt að grípa á keyrslutíma því að þær eru gripnar áður en keyrsla á sér stað og kóðinn hreinlega keyrir ekki neitt.
 Það er ágætt að hafa í huga að kóðinn okkar þarf að vera réttur og rétt upp settur til þess að geta keyrt yfirhöfuð.
 
 Hinar villurnar viljum við kannski geta gripið og meðhöndlað svo að við getum haldið áfram með það sem við vorum að gera, við viljum ekki að notandinn sé allt í einu læstur úti eða forritið hætti alfarið keyrslu ef eitthvað minniháttar kemur upp eins og að inntakið frá notanda var ekki af réttri týpu eða ekki var hægt að kasta því í rétta týpu.
@@ -40,11 +40,13 @@ Annars (else) ef það virkaði að keyra kóðann þá getum við gert eitthva�
 Svo að lokum getum við gert eitthvað burt séð frá því hvort það olli villu eða ekki, finally klausan mun alltaf keyrast.
 
 Flæðiritið fyrir þessa hugmynd er nokkuð svipað skilyrðissetningum með if elif og else.
-Það kemur ein try setning, á eftir henni koma eins margar except setningar og við viljum (þar sem ver og ein er þá að taka á einhverri tiltekinni villu), þá má koma ein else setning og að lokum má koma ein finally setning.
+Það kemur ein try setning, á eftir henni koma eins margar except setningar og við viljum (þar sem hver og ein er þá að taka á einhverri tiltekinni villu), þá má koma ein else setning og að lokum má koma ein finally setning.
 Hún keyrist sama hvað og er notuð til þess að framkvæma þá virkni sem verður að eiga sér stað, eins og til dæmis að loka skjali sem verið er að vinna í.
 
 Ástæða þess að það er gagnlegt að vita hvað villurnar heita er að except klausurnar okkar geta gripið ákveðnar villur og ef sú tiltekna villa kom upp getum við tekið á nákvæmlega því tilfelli.
-Sjáum í kóðabút \ref{lst:villur-grip} hvernig á að beita þessum nýju lykilorðum og hvernig uppsetningin á þeim þarf að vera.
+Sjáum í kóðabút \ref{lst:villur-grip-kynnt} hvernig á að beita þessum nýju lykilorðum og hvernig uppsetningin á þeim þarf að vera.
+Gerum ráð fyrir að breytan \texttt{tala} sé sett sem eitthvað eins og \# í stað skiljanlegrar tölu.
+Prófið ykkur áfram með það. \todo{prófið ykku áfram}
 
 \begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt]
 tala = input('veldu tölu ')
@@ -55,10 +57,8 @@ except:
 	tala = 0 # notum þá bara eitthvað annað gildi
 	
 print('talan sem þú ert með er', tala)
-# hér er tekið á því tilfelli að ekki gekk að kasta inntakinu og breytan er samt skilgreind.
 
-# hvaða villu erum við samt að grípa?
-tala = input('veldu tölu')
+tala = input('veldu tölu: ')
 try:
 	int(tala)
 except TypeError:
@@ -68,15 +68,24 @@ except ValueError:
 except AttributeError:
 	print('ekki gekk að kasta í tölu útaf eigindavillu')
 except:
-	print('ekki gekk að kasta útaf einhverri annarri villu sem ekki er reynt að grípa sérstaklega)
+	print('ekki gekk að kasta útaf einhverri annarri villu sem ekki er reynt að grípa sérstaklega')
 else:
 	print('það gekk bara víst að kasta í tölu')
-	
-> veldu tölu strengur # inntakið verður strengur
-# úttakið verður
-# ekki gekk að kasta útaf gildisvillu
+\end{lstlisting}
+\begin{lstlisting}
+þú gafst ekki upp neitt sem mátti túlka sem tölu
+talan sem þú ert með er 0
+veldu tölu: #
+ekki gekk að kasta í tölu útaf gildisvillu
+\end{lstlisting}
+\lstset{style=venjulegt}
 
-# Hvernig virkar finally?
+Hér er fyrst einungis gripið ef einhver villa á sér stað en í seinni hlutanum er tekið á þremur mismunandi tilfellum áður en gefist er upp.
+Þetta gæti verið gott þegar þrjár tilteknar villur eru líklegar og þörf er á að taka á þeim.
+
+Líklega er best að hafa try klausurnar hnitmiðaðar en ekki öll framkvæmdin í forritunu okkar, svona ef ské kynni að eitthvað gæti farið úrskeiðis einhvers staðar.
+
+\begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt-2]
 try:
 	int('strengur')
 except TypeError:
@@ -87,40 +96,38 @@ else:
 	print('það er ljóst að við förum ekki hingað inn því kóðinn veldur villu')
 finally:
 	print('við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við gleymdum að grípa villuna og forritið hætti keyrslu')
-	
-# úttakið verður:
-# hér er tekið á öllum öðrum villum, ef þessari klausu er sleppt munum við ekki grípa neina villu því þetta er vissulega ekki týpuvilla
-# við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við gleymdum að grípa villuna og forritið hætti keyrslu
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+hér er tekið á öllum öðrum villum, ef þessari klausu er sleppt munum við ekki grípa neina villu því þetta er vissulega ekki týpuvilla
+við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við gleymdum að grípa villuna og forritið hætti keyrslu
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+
 
 Þegar við erum að reyna að grípa svona margar villur eins og í kóðabút \ref{lst:villur-grip-kynnt} er það vegna þess að við erum ekki viss hvað það er sem mun fara úrskeiðis, try klausan okkar er tiltölulega einföld og því fátt sem kemur til greina til að fara úrskeiðis, en við gætum verið að reyna á margt í einu og því gagnlegt að vita af því að við getum verið að grípa margar villur á einu bretti.
-Þó er líklega best að hafa try klausurnar hnitmiðaðar en ekki öll framkvæmdin í forritunu okkar, svona ef ské kynni að eitthvað gæti farið úrskeiðis einhvers staðar.
+
 
 Annar möguleiki sem við viljum geta reynt á er að hreiðra klausurnar okkar þannig að ef við reyndum eitthvað sem gekk ekki viljum við grípa það en reyna eitthvað annað.
 Þar kemur einnig sterkt inn að vita hvað villurnar okkar heita svo að við getum reynt eitthvað ákveðið byggt á því hvaða villu við fengum.
 Í kóðabút \ref{lst:villur-grip-hreiðrað} sjáum við hvernig hægt er að halda áfram við að reyna að kasta inntaki þegar það gekk ekki við fyrstu tilraun.
 
 \begin{lstlisting}[caption=Hvernig á má hreiðra try - except - else, label=lst:villur-grip-hreiðrað]
-# Við viljum kannski reyna eitthvað byggt á því að hafa reynt eitthvað annað sem olli villu.
-
 try:
 	tala = input('skrifaðu tölustaf ')
 	tala = int(tala)
 except:
-	# grípum allar villur sem gætu komið upp með einni klausu en reynum þá eitthvað annað
-	# kannski skrifaði notandinn tölustaf en gerði punkt eða setti eitthvað tákn fyrir aftan?
 	try:
-		tala = int(tala[0]) # við vitum að tala er strengur því input skilar alltaf streng og við sækjum fremstu táknið
+		tala = int(tala[0])
 	except:
 		print('þú skrifaðir ekki tölu sem hægt var að skilja')
-		tala = 0 # hér tryggjum við að geta notað breytuna án þess að valda nafnavillu 
+		tala = 0
 
 print('talan var', tala)
-
-> skrifaðu tölustaf 9.
-# úttakið verður 
-# talan var 9
 \end{lstlisting}
 
+\comment{
 \subsection{Að meðhöndla eigin villur}\index{Að meðhöndla eigin villur}\label{uk:villur-raise}
 ræða við mér vitrara fólk 
+}
