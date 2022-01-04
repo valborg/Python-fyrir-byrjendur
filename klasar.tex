@@ -289,13 +289,6 @@ class Lest():
 		for stod in self.leid:
 			if(stod.nafn == stodvarnafn):
 				return abs(stod.fjarlaegd - self.nuverandi_stod.fjarlaegd)
-
-	def ny_nuverandi_stod(self, stod):
-		km = self.fara_til_stod(stod)
-		self.farnir_km += km
-		self.nuverandi_stod = stod
-		
-		return self.farnir_km
 \end{lstlisting}
 
 Skoðið hér að þrjár aðferðir eru til þess að segja til um fjarlægð lestar frá stöð og það er til þess fallið að sýna að oft eru margar leiðir til þess að leysa verkefni, sérstaklega þegar þau verða flóknari.
@@ -490,3 +483,52 @@ Hugmyndin er að klasinn sem útfærir einungis aðferðina write fyrir okkur er
 
 Ef við höldum áfram með dæmið um klasana sem útfæra write, þá gæti einn þeirra skrifað í skjal á tölvu úti í þýskalandi, einn sendir skjalið í tölvupósti og einn lætur talgervil lesa það upp í strætó leið 14.
 Upphaflegi gagnaklasinn veit ekkert um það heldur treystir bara á að fá einhvern hlut í hendurnar sem kann þessa aðferð sama hvernig hún er útfærð.
+
+%-------------------------------
+\newpage
+\section{Æfingar}
+\begin{exercise}\label{kla1}
+Útfærið nýja aðferð í klasann \texttt{Lest} úr kóðabút \ref{lst:klasar-aðferðir-lestar} sem uppfærir núverandi stöðu lestarinnar.
+Aðferðin tekur við hlut af taginu \texttt{Stod} og notar hann til að uppfæra hvar lestin er staðsett, og hversu langt hún hefur farið.
+
+Afritið kóðann úr kóðabútnum, og bætið þessari nýju aðferð inn í klasann og prófið hana.
+Til þess að prófa hana þurfið þið nýja stöð, athugið kóðabút \ref{lst:klasar-aðferðir-lestar-2} til að sjá hvernig það var gert.
+Til dæmis væri hægt að setja Höfn í Hornafirði sem er í 820km fjarlægð frá Reykjavík ef farið er norður.
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={kla1}]
+Það sem þarf að athuga hér er að \texttt{Lest} á tilviksbreytuna \texttt{nuverandi\_stod} sem við viljum uppfæra en það má ekki gerast fyrr en við erum búin að reikna hversu langt er þangað.
+Til þess að finna hvað er langt á milli getum við notað einhverja af þeim þremur aðferðum sem búið var að útfæra.
+Einnig má ekki gleymast að uppfæra kílómetrastöðuna.
+EFtirfarandi er kóðinn fyrir útfærsluna á aðferðinni en prófanir eru eftirlátnar lesanda.
+	\begin{lstlisting}
+def ny_nuverandi_stod(self, stod):
+	km = self.fara_til_stod(stod)
+	self.farnir_km += km
+	self.nuverandi_stod = stod
+
+	return self.farnir_km\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{kla2}
+Notið klasann \texttt{Leikur} úr kóðabút \ref{lst:klasar-str} til þess að útfærið töfraaðferðirnar \texttt{\_\_eq\_\_} og \texttt{\_\_lt\_\_}, sem eru til þess að geta notað samanburðarvirkjana == og <.
+Búið svo til tvö eintök af klasanum og berið þau saman með þessum samanburðarvirkjum.
+
+Skoðið vel kóðabútinn og sjáið hvernig \texttt{\_\_str\_\_} er útfærð, þar er einungis verið að skila streng.
+Svo skilagildið úr þessum aðferðum sem við erum að vinna í að útfæra hér eru fengið með þeim samanburðarvirkjum sem þau snúast um.
+\end{exercise}
+\begin{Answer}[ref={kla2}]
+	Hér eru margar leiðir til þess að leysa verkefnið, hvað er það sem gerir tvo leiki jafna?
+	Hér er það útfært þannig að tveir leikir eru jafnir ef nöfnin eru þau sömu, sömuleiðis er útfærslan á < er þannig að einn leikur er strangt minni en annar ef þar er minni peningur.
+	
+	Þetta gæti líka verið gert með rökvirkjum, til þess að tveir leikir séu jafnir þurfa allar tilviksbreytur að vera eins, eða einhvern veginn allt öðruvísi.
+	
+	Prófanir eru eftirlátnar lesanda.
+	\begin{lstlisting}
+def __eq__(self, other):
+	return self.nafn == other.nafn
+
+def __lt__(self,other):
+	return self.peningur < other.peningur\end{lstlisting}
+\end{Answer}
