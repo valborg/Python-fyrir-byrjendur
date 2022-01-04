@@ -4,23 +4,23 @@
 Hingað til þegar við fáum villur í kóðann okkar hefur hann hreinlega hætt keyrslu og við þurft að laga eitthvað.
 Í kafla \ref{uk:tolur-villur} sáum við upptalningu á þeim helstu villum sem við getum lent í.
 Það sem við viljum hinsvegar geta gert er að bregðast við villum til þess að forritin okkar haldi áfram keyrslu þrátt fyrir að eitthvað hafi farið úrskeiðis.
-Við viljum geta sagt vélinni að reyna að gera eitthvað og ef henni tekst það ekki því að það myndi valda villu þá viljum við geta gert eitthvað annað og haldið áfram.
+Við viljum geta sagt vélinni að reyna að gera eitthvað og ef henni tekst það ekki því að það myndi valda villu þá viljum við geta gert eitthvað annað og haldið áfram eða hætt.
 
 \section{Algengar villur}\index{Algengar villur}\label{uk:villur-algengar}
 Byrjum á að rifja upp algengar villur og bætum nokkrum við:
 
 \begin{itemize}
-	\item \textbf{Nafna villa} - \emph{NameError}, nafn á breytu var notað sem er ekki skilgreint
+	\item \textbf{Nafnavilla} - \emph{NameError}, nafn á breytu var notað sem er ekki skilgreint
 	\item \textbf{Inndráttar villa }- \emph{IndentationError}, röngum inndrætti beitt
-	\item \textbf{Málskipanar villa} - \emph{SyntaxError}, rangt tákn notað eða tákn notað vitlaust
-	\item \textbf{Týpu villa} - \emph{TypeError}, týpan styður ekki aðgerðina sem er verið að framkvæma
+	\item \textbf{Málskipanarvilla} - \emph{SyntaxError}, rangt tákn notað eða tákn notað vitlaust
+	\item \textbf{Týpuvilla} - \emph{TypeError}, týpan styður ekki aðgerðina sem er verið að framkvæma
 	\item \textbf{Vísis villa} - \emph{IndexError}, verið er að nota sætisvísi sem er ekki til í hlutnum
-	\item \textbf{Gildis villa} - \emph{ValueError}, verið er að nota gildi sem er ekki til
-	\item \textbf{Eiginda villa} - \emph{AttributeError}, verið er að nota eigindi sem hluturinn á ekki til
-	\item \textbf{Lykla villa} - \emph{KeyError}, verið er að ná í lykil sem er ekki til
-	\item \textbf{Endurkvæmnis villa} - \emph{RecursionError}, þegar búið er að ná hámarks leyfilegri endurkvæmni án niðurstöðu
-	\item \textbf{Staðvær nafna villa} - \emph{UnboundLocalError}, þegar verið er að vísa í staðvært breytuheiti en það hefur ekki verið skilgreint á þeim stað í gildissviðinu
-	\item \textbf{Inntaks/úttaks villa} - \emph{IOError}, þegar villa kom upp við meðhöndlun inntaks eða úttaks.
+	\item \textbf{Gildisvilla} - \emph{ValueError}, verið er að nota gildi sem er ekki til
+	\item \textbf{Eigindavilla} - \emph{AttributeError}, verið er að nota eigindi sem hluturinn á ekki til
+	\item \textbf{Lyklavilla} - \emph{KeyError}, verið er að ná í lykil sem er ekki til
+	\item \textbf{Endurkvæmnisvilla} - \emph{RecursionError}, þegar búið er að ná hámarks leyfilegri endurkvæmni án niðurstöðu
+	\item \textbf{Staðvær-nafnavilla} - \emph{UnboundLocalError}, þegar verið er að vísa í staðvært breytuheiti en það hefur ekki verið skilgreint á þeim stað í gildissviðinu
+	\item \textbf{Inntaks/úttaks-villa} - \emph{IOError}, þegar villa kom upp við meðhöndlun inntaks eða úttaks.
 \end{itemize}
 \vspace{0.5cm}
 Ástæðan fyrir því að nefna nákvæmlega þessar villur en ekki allar sem eru skráðar í skjölun\footnote{\href{https://docs.python.org/}{Opinbera skjölun Python}} (e. documention) Python forritunarmálsins er vegna þess að þessar villur eru líklegri en aðrar til að koma upp hjá byrjendum og við viljum geta tekið á þeim.
@@ -126,8 +126,82 @@ except:
 
 print('talan var', tala)
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+skrifaðu tölustaf fimmtán
+þú skrifaðir ekki tölu sem hægt var að skilja
+talan var 0
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+Við viljum temja okkur að taka á villum, við viljum heldur sjá snyrtileg villuskilaboð sem væru lýsandi fyrir vandamálið en ekki stafasúpu af torskildum tækniupplýsingum.
+
+Þetta nýtist t.d. ef við erum með forrit sem brothætt og við viljum að notendur skilji hvað fór úrskeiðis eða við erum með vél sem keyrir endalaust (eins og hitamælir á pallinum) sem sendir okkur svo tölvupóst ef hún lendir í villu.
 
 \comment{
 \subsection{Að meðhöndla eigin villur}\index{Að meðhöndla eigin villur}\label{uk:villur-raise}
 ræða við mér vitrara fólk 
 }
+
+
+
+
+%-------------------------------
+\newpage
+\section{Æfingar}
+\begin{exercise}\label{vil1}
+Búið til fall sem tekur við einu viðfangi og prentar út hvort það sé stærra eða minna en 0 (True eða False dugar, True fyrir stærra og False fyrir minna).
+Athugið að ekki er hægt að bera saman ólík tög og þið þurfið því að villumeðhöndla inntakið, ef það er ekki sambærilegt við 0 skulið þið í staðinn prenta "ekki sambærilegt".
+Athugið sérstaklega fleytitölur, að ef fleytitölunni 0.1 er kastað í heiltölu verður hún að 0, að ef strengnum "0.1" er kastað í heiltölu fæst villa, og því þurfið þið að vera á varðbergi fyrir mögulegum fleytitölum.
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={vil1}]
+Nú þurfum við að vera vakandi fyrir því hvað það er sem notandinn getur sett inn sem tölu, hvað við viljum prenta út hverju sinni og hvernig við prófum að við höfum náð öllum tilvikum.
+	\begin{lstlisting}
+def samanburdur_vid_null(vidfang):
+	try:
+		int(vidfang)
+	except:
+		try:
+			float(vidfang)
+		except:
+			print("ekki sambærilegt")
+		else:
+			print(0 < float(vidfang))
+	else:
+		if(type(vidfang) == float):
+			print(0 < vidfang)
+		else:
+			print(0 < int(vidfang))
+
+samanburdur_vid_null("0.1")
+samanburdur_vid_null(0.1)
+samanburdur_vid_null("3")
+samanburdur_vid_null([1])
+samanburdur_vid_null("fimm")
+samanburdur_vid_null({"a":1})
+samanburdur_vid_null(-23)
+	\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{vil2}
+Skrifaðu kóða sem grípur eftirfarandi villur:
+	\begin{tasks}(2)
+		\task\label{vil2-a} Nafnavilla.  
+		\task\label{vil2-b} Eigindavilla.
+		\task\label{vil2-c} Lykilavilla.
+		\task\label{vil2-d} Gildisvilla.
+	\end{tasks}
+\end{exercise}
+\begin{Answer}[ref={vil2}]
+Hér eru kóðastubbar sem valda eftirfarandi villum, fleiri leiðir eru til að fá villurnar.
+Svarið í a. lið er að því gefnu að breytan \texttt{bolti} hafi aldrei verið skilgreind áður.
+Hér er það í höndum lesenda að skrifa svo kóðann sem grípur villurnar.
+\begin{tasks}
+	\task \texttt{bolti}
+	\task \texttt{"halló".sort()}
+	\task \texttt{{}["a"]} 
+	\task \texttt{int("vidfang")}
+\end{tasks}
+\end{Answer}
