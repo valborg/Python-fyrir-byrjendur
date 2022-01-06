@@ -22,19 +22,192 @@ omg omg omg
 }
 
 \section{Þekkt reiknirit}\index{Þekkt reiknirit}\label{uk:reiknirit-þekkt}
-Það sem við ætlum að skoða í þessum kafla eru tvö ákveðin reiknirit, bæði mjög þekkt og svo hugmyndin um endurkvæmni.
+Það sem við ætlum að skoða í þessum kafla eru nokkur grundvallar reiknirit, og hugmyndin um endurkvæmni.
 
+
+\subsection{Röðun}\index{Röðun}\label{uk:reiknirit-röðun}
+Áður en við getum farið að leita ætlum við að raða.
+Ef við ímyndum okkur að nokkur spil úr spilastokk séu fyrir framan okkur, þau snúa upp svo við sjáum hvaða spil þetta eru en við sjáum einnig að þau eru ekki í réttri röð.
+Sú röð gæti verið hver sem er, en gerum ráð fyrir, til einföldunar, að þau séu ekki í vaxandi röð með lægsta spilið vinstra megin og hæsta spilið hægra megin.
+Hvað er það fyrsta sem við gerum?
+Það er ekki eitt svar við því.
+Hugsum okkur hér hvað sé fyrsta skrefið og svo næsta og koll af kolli.
+Reynum svo að lýsa því, eins og með hnetusmjörssamlokuna í kafla \ref{uk:keyra-koda}, þannig að við gætum snúið baki við einhverjum spilum og lýst fyrir einhverri annarri manneskju hvernig hún gæti farið að því að raða spilunum með aðferðinni okkar.
+
+Hér er sterklega mælt með því að þið reynið á þessa æfingu áður en lengra er haldið.
+
+
+Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og skipta þeim ef það hærra er vinstra megin og gera það fyrir öll spilin út röðina, skoðum töflu \ref{tbl:insert} til að sjá hvernig það myndi ganga fyrir sig.
+Þar erum við með einhverja ákveðna upphafsstöðu á spilunum og byrjum á að skoða fremstu tvö spilin, þá ,,svissum'' við þeim til að hærra spilið sé hægra megin.
+Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum'' því þangað til að það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
+Þá vegna þess að við erum bara með fjögur spil skoðum við síðasta spilið og látum það berast niður spilaröðina þar til það passar.
+
+
+\begin{table}
+\begin{center}\begin{tabular}{!{\vrule width 2pt}c!{\vrule width 2pt}P|P|P|P!{\vrule width 2pt}}
+	\noalign{\hrule height 2pt}
+	upphafsstaðan &\textbf{\textcolor{ocre}{K}} & \textbf{\textcolor{ocre}{10}} & 4 & 8 \tabularnewline
+	\cline{1-5}
+	& 10 & K & \textbf{\textcolor{ocre}4} & 8 \tabularnewline
+	\cline{2-5}
+	& 4 & 10 & K & \textbf{\textcolor{ocre}8} \tabularnewline
+	\cline{1-5}
+	%\hline
+	lokastaðan & 4 & 8 & 10 & K \tabularnewline
+	\noalign{\hrule height 2pt}
+\end{tabular}
+\end{center}
+\caption{Hér sést hvernig fjórum spilum er raðað í vaxandi röð. Í hverri stöðu er einungis verið að skoða takmarkaðan fjölda spila til að raða, þau spil eru sýnd með grænum lit í töflunni.}
+\label{tbl:insert}
+\end{table}
+
+Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} eða innsetningarröðun og í kóðabút \ref{lst:reiknirit-insertion} ætlum við að skoða hvernig skiptingarnar eiga sér stað.
+Á mynd \ref{tbl:insert-abstract} sést hvað er að gerast í einhverju tilteknu skrefi þar sem þarf að finna stað fyrir næsta stak sem á að raða, x.
+
+\begin{table}
+	%\begin{table}
+		\begin{center}
+			\begin{tabular}{c|c |c|c}
+				\multicolumn{2}{c}{Búið að raða þessum hluta} &\multicolumn{2}{c}{ Á eftir að raða} \tabularnewline
+				\noalign{\hrule height 2pt}
+				minna eða jafnt x & stærra en x & x & ??? 
+				\tabularnewline \noalign{\hrule height 1.5pt}
+				\multicolumn{4}{c}{Í næsta ástandi er röðun spila orðin:}
+				
+				\tabularnewline
+				\multicolumn{3}{c}{Búið að raða þessum hluta} &\multicolumn{1}{c}{ Á eftir að raða}  \tabularnewline
+				\noalign{\hrule height 2pt}
+				minna eða jafnt x& x & stærra en x  & ??? 
+				\tabularnewline \noalign{\hrule height 1.5pt}
+			\end{tabular}
+		\end{center}
+	%\end{table}
+\caption{Hér sést hvernig staðan er þegar á að finna stað fyrir eitthvað x, sem gæti verið tala eða spil eða einhver annar hlutur. Athugið að annað hvort eða bæði hólfin gætu verið tóm.}
+\label{tbl:insert-abstract}
+\end{table}
+
+Skoðum nú kóðann á bakvið þetta reiknirit.
+
+\begin{lstlisting}[caption=Insertion sort reikniritið, label=lst:reiknirit-insertion]
+def insertion_sort(A):
+	#raðar í vaxandi röð
+	i = 1
+	while i < len(A):
+		j = i
+		while j > 0 and A[j-1] > A[j]:
+			#skiptum stökunum ef þau eru ekki rétt röðuð
+			aj = A[j]
+			ajminus = A[j-1]
+			A[j] = ajminus
+			A[j-1] = aj
+			j = j - 1
+		i = i + 1
+\end{lstlisting}
+
+Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum er að:
+\begin{itemize}
+	\item Reyna að nota reikniritið fyrir einhvern lista af tölum.
+	\item Reyna að finna leið til þess að gera línur 8-11 í einni línu, Python býður upp á það.
+	\item Reyna að láta reikniritið raða í minnkandi röð.
+\end{itemize}
+
+Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á bubble sort.
+Útfærslan felst í tveimur hreiðruðum for-lykkjum\footnote{sem er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.}.
+
+Reikniritið virkar í grunninn þannig að það tekur við lista sem á að raða, það rúllar í gegnum listann frá upphafi og út í enda og ýtir stærsta stakinu út í enda.
+Eins og loftbólur sem þrýstast upp á yfirborðið.
+Þegar það er búið að rúlla einu sinni í gegnum listann er stærsta stakið komið út í enda og það stak er ekki skoðað aftur heldur álitið á sínum stað.
+Þá er aftur rúllað í gegnum listann og stakið sem er þá stærst fer út í enda vinstra megin við stakið sem var stærst.
+
+Þannig að ytri for lykkjan keyrir fyrir hvert stak í listanum, eða segir til um hversu oft þurfi að finna stærsta stakið, og innri lykkjan sér um samanburðinn og skiptingarnar.
+Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin þegar við erum að bera saman og það er vegna þess að við hættum fyrir framan aftasta stakið hverju sinni í innri lykkjunni.
+%Ef við myndum bara beita breytunni \texttt{vinstri\_hlid} sem \texttt{n-i} þá myndum við fá vísisvillu því við værum að vísa út fyrir listann okkar en vegna þess að við lækkum okkur um 1 þar að auki þá er möguleiki að skoða \texttt{listi[j+1]} sem er næsta stak hægra megin við það stak sem við erum stödd í \texttt{listi[j]}.
+
+\begin{lstlisting}[caption=Bubble sort reikniritið, label=lst:reiknirit-bubble]
+	def bubblesort(listi):
+	# n er þá fjöldi staka í listanum
+	n = len(listi)
+	
+	# Förum í gegnum öll stökin
+	for i in range(n):
+		# vinstri hliðin er óröðuð 
+		# í fyrstu ítrun er i 0 og vinstri_hlid er því jöfn n-1
+		# sem er síðasta stakið í listanum
+		# svo verður vinstri_hlid alltaf minni og minni
+		# Því síðustu i stökin eru komin á sinn stað
+		vinstri_hlid = n-i-1
+		
+		for j in range(0, vinstri_hlid):
+			vinstra = listi[j]
+			haegra = listi[j+1]
+			# Hér förum við frá 0 upp í n-i-1
+			# af því að viljum byrja úti í vinstri enda 
+			# og við viljum geta skoðað næsta stak fyrir aftan
+			# 
+			# Svo skiptum við á stakinu við stakið hægra megin
+			# ef stakið er stærra en það sem er hægra megin
+			if vinstra > haegra:
+			listi[j] = haegra
+			listi[j+1] = vinstra
+		
+	return listi
+\end{lstlisting}
+
+
+
+\subsection{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
+Nú þegar við kunnum að raða þá getum við farið að leita.
+Skoðum nú eitthvert þekktasta reiknirit sem til er. 
+Helmingunarleit að tölu á bili. 
+Hugsum okkur að við séum með raðaðan lista af tölum og við viljum finna eina tiltekna tölu. 
+Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þá tæki það mjög langan tíma.
+Eða allavega fyrir okkur sem manneskjur, en allur tímasparnaður er góður.
+Því að aðgerðin ,,að skoða spil'' kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar\footnote{Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
+	Þetta er kallað tímaflækja (e. time complexity) og er tölvunarfræðingum mjög hugleikin.
+	Tímaflækja helmingunarleitar er sérstaklega lág eða $log_2{n}$ vegna þess að reikniritið helmingar alltaf vandamálið (e. problem space).}.
+
+Hugmyndin er sú, að verið sé að skoða í fyrstu allan listann sem er raðaður (mjög mikilvægt, annars virkar þetta engan veginn) og miðju gildið er skoðað, ef gildið sem við leitum að er stærra en miðjugildið þá eigum við að vera að leita þeim megin við miðjugildið sem stærri gildi eru.
+Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við höfum annað hvort fundið gildið sem við leitum að eða bilið sem við erum að leita á inniheldur engin stök.
+
+
+\begin{lstlisting}[caption=Helmingunarleit að tölu í röðuðum lista með lykkju, label=lst:reiknirit-helm-for]
+	def helmingunarleit_med_lykkju(listi, x):
+	# Þetta fall tekur við lista sem er raðaður í vaxandi röð
+	# og gildi sem á að leita að í listanum
+	# Þetta er gert með lykkju og án endurkvæmni
+	
+	# Fallið skilar sætisvísinum sem gildið er í eða -1 ef gildið er ekki í listanum
+	
+	# minnsti og hæsti vísirinn í listanum
+	minnsti = 0
+	haesti = len(listi)-1
+	
+	while minnsti <= haesti:
+		# Þetta keyrist á meðan minnsti er enn minni eða jafn og haesti, það er við erum enn með bil til að leita á
+	
+		midjan = int((minnsti + haesti)/2)
+		if listi[midjan] == x:
+			# við fundum gildið og skilum vísinum sem það er í
+			return midjan
+		if listi[midjan] > x:
+			haesti = midjan - 1
+		else:
+			minnsti = midjan + 1
+	
+	# lykkjan hætti keyrslu svo minnsti vísirinn er orðinn hærri en sá hæsti og þá vitum við að talan er ekki í listanum 
+	# við skilum því tölunni -1 til að segja að það var enginn vísir sem x var í
+	return -1
+\end{lstlisting}
 
 \subsection{Endurkvæmni}\index{Endurkvæmni}\label{uk:reiknirit-endurkvæmni}
 Endurkvæmni (e. recursion) er sú virkni forrits að vísa í sig sjálft.
 Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring.
 Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir aftan og þið sáuð ótal spegilmyndir raðast af ykkur.
 
-Í forritun heitir það endurkvæmni þegar við látum forrit vísa í sig sjálft, nota sinn eigin kóða.
 Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhverja gildi í fibonacci röðinni.
 En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
 Í kóðabút \ref{lst:reiknirit-endurkvæmni1} sjáum við einfalda útgáfu af endurkvæmni, þar sem hugmyndin er í raun kynnt án þess að fallið sé neitt gagnlegt.
-Það eina sem fallið gerir er að athuga hvort að talan sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með einu lægra gildi, annars ef talan er ekki stærri en núll prentast ,,þú kannt á endurkvæmni''.
+Það eina sem fallið gerir er að athuga hvort að tala sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með gildi sem er einum lægra, annars ef talan er ekki stærri en núll prentast ,,við kunnum á endurkvæmni''.
 Hveru oft ætli það prentist ef við setjum inn töluna 5?
 
 \begin{lstlisting}[caption=Endurkvæmni - einfalt, label=lst:reiknirit-endurkvæmni1]
@@ -48,9 +221,12 @@ def endurkvæmt_fall(tala):
 		print('við kunnum endurkvæmni')
 		
 endurkvæmt_fall(5)
-# úttakið verður
-# 'við kunnum endurkvæmni'
 \end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+við kunnum endurkvæmni
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við kölluðum í fallið með tölunni 5 þá fengum við bara einu sinni út strenginn ,,við kunnum endurkvæmni''.
 Það er vegna þess að við kölluðum í fallið fyrir fimm og það sem fallið gerir fyrir okkur er að klára endurkvæmnina fyrir það kall, það verða ekki til fjögur önnur köll.
@@ -67,16 +243,22 @@ Svo fib(4) skila því sem fib(2) + fib(3) skila, þau köll skila okkur annars 
 Fyrri hlutinn sem fékkst úr fib(2), sem varð að fib(0) + fib(1) skilar sér sem 0 + 1 = 1.
 Og seinni hlutinn er fib(1) + fib(2) og fib(1) skilar 1 og við vitum að fib(2) mun skila 1 svo þar stendur 1 + 1 = 2 svo við fáum upp til baka að fib(4) = 1 + 2 = 3.
 
-\begin{lstlisting}[caption=Endurkvæmni - þar sem við skilum gildum upp keðjuna, label=lst:reiknirit-endurkvæmni2]
+\begin{lstlisting}[caption=Summa reiknuð endurkvæmt, label=lst:reiknirit-endurkvæmni-summa]
 def summa(n):
 	if n <= 1:
 		return 1
 	else:
-		return n + f(n-1)
+		return n + summa(n-1)
 
-summa(100)
-# úttakið verður 5050
-	
+summa(6)
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+21
+\end{lstlisting}
+\lstset{style=venjulegt}
+
+\begin{lstlisting}[caption=Fibonacci tölur reiknaðar endurkvæmt, label=lst:reiknirit-endurkvæmni-fib]
 def fib(n):
 	if n <= 1:
 		return n
@@ -84,58 +266,15 @@ def fib(n):
 		return fib(n-2) + fib(n-1)
 
 fib(4)
-# fjórða talan í fionacci röðinni er 3
 \end{lstlisting}
-
-\subsection{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
-Byrjum á að skoða eitthvert þekktasta reiknirit sem til er. 
-Helmingunarleit að tölu á bili. 
-Hugsum okkur að við séum með raðaðan lista af tölum og við viljum finna eina tiltekna tölu. 
-Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þá tæki það mjög langan tíma.
-Eða allavega fyrir okkur sem manneskjur, en allur tímasparnaður er góður.
-Því að aðgerðin ,,að skoða spil'' kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar.
-
-Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
-Þetta er kallað tímaflækja (e. time complexity) og er tölvunarfræðingum mjög hugleikin.
-Tímaflækja helmingunarleitar er sérstaklega lág eða $log_2{n}$ vegna þess að reikniritið helmingar alltaf vandamálið (e. problem space).
-
-Skoðum nú tvær útgáfur af reikniritinu í kóðabút \ref{lst:reiknirit-helm-for} er while-lykkju beitt til þess að finna gildið x í listanum listi, í kóðabút \ref{lst:reiknirit-helm-end} er gefið upp listinn sem á að leita að x í og þau sætisnúmer í listanum sem á að leita á milli.
-
-Hugmyndin er sú sama í báðum útfærslum, að verið sé að skoða í fyrstu allan listann sem er raðaður (mjög mikilvægt, annars virkar þetta engan veginn) og miðju gildið er skoðað, ef gildið sem við leitum að er stærra en miðjugildið þá eigum við að vera að leita þeim megin við miðjugildið sem stærri gildi eru.
-Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við höfum annað hvort fundið gildið sem við leitum að eða bilið sem við erum að leita á inniheldur engin stök.
-
-
-\begin{lstlisting}[caption=Helmingunarleit að tölu í röðuðum lista með lykkju, label=lst:reiknirit-helm-for]
-def helmingunarleit_med_lykkju(listi, x):
-	# Þetta fall tekur við lista sem er raðaður í vaxandi röð
-	# og gildi sem á að leita að í listanum
-	# Þetta er gert með lykkju og án endurkvæmni
-	
-	# Fallið skilar sætisvísinum sem gildið er í eða -1 ef gildið er ekki í listanum
-	
-	# minnsti og hæsti vísirinn í listanum
-	minnsti = 0
-	haesti = len(listi)-1
-
-	while minnsti <= haesti:
-		# Þetta keyrist á meðan minnsti er enn minni eða jafn og haesti, það er við erum enn með bil til að leita á
-
-		midjan = int((minnsti + haesti)/2)
-		if listi[midjan] == x:
-			# við fundum gildið og skilum vísinum sem það er í
-			return midjan
-		if listi[midjan] > x:
-			haesti = midjan - 1
-		else:
-			minnsti = midjan + 1
-	
-	# lykkjan hætti keyrslu svo minnsti vísirinn er orðinn hærri en sá hæsti og þá vitum við að talan er ekki í listanum 
-	# við skilum því tölunni -1 til að segja að það var enginn vísir sem x var í
-	return -1
+\lstset{style=uttak}
+\begin{lstlisting}
+3
 \end{lstlisting}
+\lstset{style=venjulegt}
 
-Nú höfum við séð þessa lykkju útfærslu sem keyrir á meðan við höfum bil til að leita á en nú skulum við skoða hvernig megi gera þetta endurkvæmt.
-\todo{útlit}
+
+Nú höfum við séð lykkju útfærslu á helmingunarleit sem keyrir á meðan við höfum bil til að leita á en nú skulum við skoða hvernig megi gera þetta endurkvæmt.
 
 \begin{lstlisting}[caption=Helmingunarleit að tölu í röðuðum lista með endurkvæmni, label=lst:reiknirit-helm-end]
 def helmingunarleit_med_endurkvaemni(listi, vinstri, haegri, x): 
@@ -168,52 +307,63 @@ def helmingunarleit_med_endurkvaemni(listi, vinstri, haegri, x):
 		return -1
 \end{lstlisting}
 
-\subsection{Bubble sort}\index{Bubble sort}\label{uk:reiknirit-bubble}
-Nú þegar við höfum leyst það hvernig á að leita að tölu á bili ef bilið er raðað, þá er mikilvægt að skoða hvernig er eiginlega hægt að raða?
+%\subsection{Bubble sort}\index{Bubble sort}\label{uk:reiknirit-bubble}
+%Nú þegar við höfum leyst það hvernig á að leita að tölu á bili ef bilið er raðað, þá er mikilvægt að skoða hvernig er eiginlega hægt að raða?
 
-Við höfum séð að listar, innbyggða gagnatagið í Python, hefur innbyggðu aðferðina sort().
-Það sem sort gerði var að breyta lista fyrir okkur þannig að hann væri raðaður í vaxandi röð.
+%Við höfum séð að listar, innbyggða gagnatagið í Python, hefur innbyggðu aðferðina sort().
+%Það sem sort gerði var að breyta lista fyrir okkur þannig að hann væri raðaður í vaxandi röð.
 
-Nú viljum við hinsvegar átta okkur á því hvernig við getum útfært reiknirit sem raðar fyrir okkur stökum í lista.
-Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á bubble sort.
-Útfærslan felst í tveimur hreiðruðum for-lykkjum sem er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.
+%Nú viljum við hinsvegar átta okkur á því hvernig við getum útfært reiknirit sem raðar fyrir okkur stökum í lista.
 
-Reikniritið virkar í grunninn þannig að það tekur við lista sem á að raða, það rúllar í gegnum listann frá upphafi og út í enda og ýti stærsta stakinu út í enda.
-Þegar það er búið að rúlla einu sinni í gegnum listann er stærsta stakið komið út í enda og það stak er ekki skoðað aftur heldur álitið á sínum stað.
-Þá er aftur rúllað í gegnum listann og stakið sem er þá stærst fer út í enda vinstra megin við stakið sem var stærst.
 
-Þannig að ytri for lykkjan keyrir fyrir hvert stak í listanum, eða segir til um hversu oft þurfi að finna stærsta stakið, og innri lykkjan sér um samanburðinn og skiptingarnar.
-Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin þegar við erum að bera saman og það er vegna þess að við hættum fyrir framan aftasta stakið hverju sinni í innri lykkjunni.
-Ef við myndum bara beita breytunni vinstri\_hlid sem n-i þá myndum við fá vísisvillu því við værum að vísa út fyrir listann okkar en vegna þess að við lækkum okkur um 1 þar að auki þá er möguleiki að skoða listi[j+1] sem er næsta stak hægra megin við það stak sem við erum stödd í listi[j]
-\todo{útlit}
+%-------------------------------
+\newpage
+\section{Æfingar}
+\begin{exercise}\label{rei1}
+Búið til fall sem tekur við tveimur hnitum, x og y gildum.
+Það sem fallið á að gera er að skila tölu byggt á því hversu margar hreyfingar hrókur, taflmaðurinn, þyrfti að fara til að komast úr einu hniti í annað.
+Í boði eru þrír möguleikar, tvær, ein eða engin hreyfing.
 
-\begin{lstlisting}[caption=Bubble sort reikniritið, label=lst:reiknirit-bubble]
-def bubblesort(listi):
-	# n er þá fjöldi staka í listanum
-	n = len(listi)
-	
-	# Förum í gegnum öll stökin
-	for i in range(n):
-		# vinstri hliðin er óröðuð 
-		# í fyrstu ítrun er i 0 og vinstri_hlid er því jöfn n-1
-		# sem er síðasta stakið í listanum
-		# svo verður vinstri_hlid alltaf minni og minni
-		# Því síðustu i stökin eru komin á sinn stað
-		vinstri_hlid = n-i-1
-	
-		for j in range(0, vinstri_hlid):
-			vinstra = listi[j]
-			haegra = listi[j+1]
-			# Hér förum við frá 0 upp í n-i-1
-			# af því að viljum byrja úti í vinstri enda 
-			# og við viljum geta skoðað næsta stak fyrir aftan
-			# 
-			# Svo skiptum við á stakinu við stakið hægra megin
-			# ef stakið er stærra en það sem er hægra megin
-			if vinstra > haegra:
-				listi[j] = haegra
-				listi[j+1] = vinstra
-			
-	return listi
+Gerum ráð fyrir að öll möguleg rauntöluhnit séu lögleg fyrir þennan ofurhrók.
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={rei1}]
+	\begin{lstlisting}
+def hnit(hni11, hnit2):
+	# gert er ráð fyrir að hnit sé annað hvort nd eða listi
+	if(hnit1 == hnit2):
+		return 0
+	if(hnit1[0] == hnit2[0] or hnit1[1] == hnit2[1]):
+		return 1
+	else:
+		return 2\end{lstlisting}
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{rei2}
+Við viljum geta sagt til um hvaða leið er styst og hver er lengst, gefið er ákveðin lestarleið í formi lista af tölum.
+Tölurnar tákna hversu langt stoppin eru frá upphafstöðinni.
+Þið eigið annars vegar að búa til fall sem tekur við lista og skilar stystu fjarlægð milli tveggja nærliggjandi stöðva og hins vegar eigið þið að búa til fall sem tekur við sambærilegum lista en skilar lengstu fjarlægð milli tveggja nærliggjandi stöðva.
+
+Athugið að fyrir listann \texttt{[1,3,7,19]} væri svarið 2 fyrir fyrra fallið en 12 fyrir seinna fallið.
+Athugið hér sérstaklega bubblesort og hvernig á að skoða tvö stök í einu.
+\end{exercise}
+\begin{Answer}[ref={rei2}]
+Hér er mikið atriði að prófa allskonar mismunandi lista til að vera viss um að þið séuð með kórréttan kóða.
+	\begin{lstlisting}
+def minnsta_fjarl(listi):
+	styst = abs(listi[1]-listi[0])
+	for i in range(len(listi)-1):
+		if(styst > abs(listi[i+1]-listi[i])):
+			styst = abs(listi[i+1]-listi[i])
+	return styst
+
+def mest_fjarl(listi):
+	mest = abs(listi[1]-listi[0])
+	for i in range(len(listi)-1):
+		if(mest < abs(listi[i+1]-listi[i])):
+			mest = abs(listi[i+1]-listi[i])
+	return mest
+
 \end{lstlisting}
-
+\end{Answer}
