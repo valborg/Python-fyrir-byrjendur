@@ -60,8 +60,8 @@
 \thispagestyle{empty} % Suppress headers and footers on the title page
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
-\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Inngangur að forritun í Python\\[15pt] % Book title
-{\Large Forritun fyrir byrjendur}\\[20pt] % Subtitle
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Inngangur að forritun\\[15pt] % Book title
+{\Large Python fyrir byrjendur}\\[20pt] % Subtitle
 {\huge Valborg Sturludóttir}}}; % Author name
 \end{tikzpicture}
 \vfill
@@ -105,7 +105,7 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Fyrri hluti - Grunnurinn}
+\part{Fyrri hluti-\\ Grunnurinn}\index{Fyrri hluti test}
 \todo{laga gæsalappir og vspace staðla}
 \input{inngangur.tex}
 
@@ -128,170 +128,12 @@
 \input{func.tex}
 
 
-
-% ---------------------------------------------- 
-
-% SNIÐMÁT
-
-% ----------------------------------------------
-%
-%\subsection{Descriptions and Definitions}\index{Lists!Descriptions and Definitions}
-
-%\begin{description}
-%\item[Name] Description
-%\item[Word] Definition
-%\item[Comment] Elaboration
-%\end{description}
-
-%----------------------------------------------------------------------------------------
-%	CHAPTER 2
-%----------------------------------------------------------------------------------------
-
-% Búið að gera athugasemd utan um þetta allt
-\comment{
-\chapter{In-text Elements}
-
-\section{Theorems}\index{Theorems}
-
-This is an example of theorems.
-
-\subsection{Several equations}\index{Theorems!Several Equations}
-This is a theorem consisting of several equations.
-
-
-\begin{theorem}[Name of the theorem]
-In $E=\mathbb{R}^n$ all norms are equivalent. It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{theorem}
-
-
-\subsection{Single Line}\index{Theorems!Single Line}
-This is a theorem consisting of just one line.
-
-\begin{theorem}
-A set $\mathcal{D}(G)$ in dense in $L^2(G)$, $|\cdot|_0$. 
-\end{theorem}
-
-%------------------------------------------------
-
-\section{Definitions}\index{Definitions}
-
-This is an example of a definition. A definition could be mathematical or it could define a concept.
-
-\begin{definition}[Definition name]
-Given a vector space $E$, a norm on $E$ is an application, denoted $||\cdot||$, $E$ in $\mathbb{R}^+=[0,+\infty[$ such that:
-\begin{align}
-& ||\mathbf{x}||=0\ \Rightarrow\ \mathbf{x}=\mathbf{0}\\
-& ||\lambda \mathbf{x}||=|\lambda|\cdot ||\mathbf{x}||\\
-& ||\mathbf{x}+\mathbf{y}||\leq ||\mathbf{x}||+||\mathbf{y}||
-\end{align}
-\end{definition}
-
-%------------------------------------------------
-
-\section{Notations}\index{Notations}
-
-\begin{notation}
-Given an open subset $G$ of $\mathbb{R}^n$, the set of functions $\varphi$ are:
-\begin{enumerate}
-\item Bounded support $G$;
-\item Infinitely differentiable;
-\end{enumerate}
-a vector space is denoted by $\mathcal{D}(G)$. 
-\end{notation}
-
-%------------------------------------------------
-
-\section{Remarks}\index{Remarks}
-
-This is an example of a remark.
-
-\begin{remark}
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{remark}
-
-%------------------------------------------------
-
-\section{Corollaries}\index{Corollaries}
-
-This is an example of a corollary.
-
-\begin{corollary}[Corollary name]
-The concepts presented here are now in conventional employment in mathematics. Vector spaces are taken over the field $\mathbb{K}=\mathbb{R}$, however, established properties are easily extended to $\mathbb{K}=\mathbb{C}$.
-\end{corollary}
-
-%------------------------------------------------
-
-\section{Propositions}\index{Propositions}
-
-This is an example of propositions.
-
-\subsection{Several equations}\index{Propositions!Several Equations}
-
-\begin{proposition}[Proposition name]
-It has the properties:
-\begin{align}
-& \big| ||\mathbf{x}|| - ||\mathbf{y}|| \big|\leq || \mathbf{x}- \mathbf{y}||\\
-&  ||\sum_{i=1}^n\mathbf{x}_i||\leq \sum_{i=1}^n||\mathbf{x}_i||\quad\text{where $n$ is a finite integer}
-\end{align}
-\end{proposition}
-
-\subsection{Single Line}\index{Propositions!Single Line}
-
-\begin{proposition} 
-Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\varphi)_0$ then $f = g$. 
-\end{proposition}
-
-}
-
-%------------------------------------------------
-
-%\section{Examples}\index{Examples}
-
-%This is an example of examples.
-
-%\subsection{Equation and Text}\index{Examples!Equation and Text}
-
-%\begin{example}
-%Let $G=\{x\in\mathbb{R}^2:|x|<3\}$ and denoted by: $x^0=(1,1)$; consider the function:
-%\begin{equation}
-%f(x)=\left\{\begin{aligned} & \mathrm{e}^{|x|} & & \text{si $|x-x^0|\leq 1/2$}\\
-%& 0 & & \text{si $|x-x^0|> 1/2$}\end{aligned}\right.
-%\end{equation}
-%The function $f$ has bounded support, we can take $A=\{x\in\mathbb{R}^2:|x-x^0|\leq 1/2+\epsilon\}$ for all %$\epsilon\in\intoo{0}{5/2-\sqrt{2}}$.
-%\end{example}
-
-%\subsection{Paragraph of Text}\index{Examples!Paragraph of Text}
-
-%\begin{example}[Example name]
-%\lipsum[2]
-%\end{example}
-
-%------------------------------------------------
-
-
-%------------------------------------------------
-
-%\section{Vocabulary}\index{Vocabulary}
-
-%Define a word to improve a students' vocabulary.
-
-%\begin{vocabulary}[Word]
-%Definition of word.
-%\end{vocabulary}
-
 %----------------------------------------------------------------------------------------
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Seinni hluti - Hlutbundin forritun }
+\part{Seinni hluti-\\ Hlutbundin forritun}\label{Seinni hluti - hlutbundin forritun}
 
-%----------------------------------------------------------------------------------------
-%	CHAPTER 3
-%----------------------------------------------------------------------------------------
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
 
@@ -308,105 +150,10 @@ Let $f,g\in L^2(G)$; if $\forall \varphi\in\mathcal{D}(G)$, $(f,\varphi)_0=(g,\v
 \input{dev.tex}
 
 
-\comment{
-
-\section{Exercises}\index{Exercises}
-
-This is an example of an exercise.
-
-\begin{exercise}
-	This is a good place to ask a question to test learning progress or further cement ideas into students' minds.
-\end{exercise}
-
-%------------------------------------------------
-
-\section{Problems}\index{Problems}
-
-\begin{problem}
-	What is the average airspeed velocity of an unladen swallow?
-\end{problem}
-
-
-\chapter{Presenting Information}
-
-\section{Table}\index{Table}
-
-\begin{table}[h]
-\centering
-\begin{tabular}{l l l}
-\toprule
-\textbf{Treatments} & \textbf{Response 1} & \textbf{Response 2}\\
-\midrule
-Treatment 1 & 0.0003262 & 0.562 \\
-Treatment 2 & 0.0015681 & 0.910 \\
-Treatment 3 & 0.0009271 & 0.296 \\
-\bottomrule
-\end{tabular}
-\caption{Table caption}
-\label{tab:example} % Unique label used for referencing the table in-text
-%\addcontentsline{toc}{table}{Table \ref{tab:example}} % Uncomment to add the table to the table of contents
-\end{table}
-
-Referencing Table \ref{tab:example} in-text automatically.
-
-%------------------------------------------------
-
-\section{Figure}\index{Figure}
-
-\begin{figure}[h]
-\centering\includegraphics[scale=0.5]{placeholder.jpg}
-\caption{Figure caption}
-\label{fig:placeholder} % Unique label used for referencing the figure in-text
-%\addcontentsline{toc}{figure}{Figure \ref{fig:placeholder}} % Uncomment to add the figure to the table of contents
-\end{figure}
-
-Referencing Figure \ref{fig:placeholder} in-text automatically.
-
-}
-
-%----------------------------------------------------------------------------------------
-%	BIBLIOGRAPHY
-%----------------------------------------------------------------------------------------
-\comment{
-
-
-\chapter*{Bibliography}
-\addcontentsline{toc}{chapter}{\textcolor{ocre}{Bibliography}} % Add a Bibliography heading to the table of contents
-
-%------------------------------------------------
-
-\section*{Articles}
-\addcontentsline{toc}{section}{Articles}
-\printbibliography[heading=bibempty,type=article]
-
-%------------------------------------------------
-
-\section*{Books}
-\addcontentsline{toc}{section}{Books}
-\printbibliography[heading=bibempty,type=book]
-
-}
-
-\part{Lausnir}
+\part{Lausnir verkefna}
 
 \input{tolurlausnir.tex}
-\comment{
-\input{strengurlausnir.tex}
 
-\input{listarlausnir.tex}
-\input{expressionlausnir.tex}
-\input{lykkjurlausnir.tex}
-\input{ndlausnir.tex}
-\input{dictlausnir.tex}
-\input{setlausnir.tex}
-\input{funclausnir.tex}
-\input{importlausnir.tex}
-\input{skjollausnir.tex}
-\input{klasarlausnir.tex}
-\input{villurlausnir.tex}
-\input{reikniritlausnir.tex}
-\input{devlausnir.tex}
-}
 %----------------------------------------------------------------------------------------
 %	INDEX
 %----------------------------------------------------------------------------------------
@@ -415,7 +162,7 @@ Referencing Figure \ref{fig:placeholder} in-text automatically.
 \phantomsection
 \setlength{\columnsep}{0.75cm} % Space between the 2 columns of the index
 \addcontentsline{toc}{chapter}{\textcolor{ocre}{Index}} % Add an Index heading to the table of contents
-\printindex % Output the index
+%\printindex % Output the index
 
 %----------------------------------------------------------------------------------------
 
