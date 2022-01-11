@@ -392,8 +392,13 @@ innerbottommargin=5pt]{cBox}
 % Numbered part in the table of contents
 \newcommand{\@mypartnumtocformat}[2]{%
 	\setlength\fboxsep{0pt}%
-	\noindent\colorbox{ocre!20}{\strut\parbox[c][.7cm]{\ecart}{\color{ocre!70}\Large\sffamily\bfseries\centering#1}}\hskip\esp\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth-\ecart-\esp}{\Large\sffamily\centering#2}}%
+	\noindent\colorbox{ocre!20}{\strut\parbox[c][1.3cm]{\ecart}{\color{ocre!70}\Large\sffamily\bfseries\centering#1}}\hskip\esp\colorbox{ocre!40}{\strut\parbox[c][1.3cm]{\linewidth-\ecart-\esp}{\Large\sffamily\centering#2}}%
 }
+
+%\newcommand{\@mypartnumtocformat}[2]{%
+%	\setlength\fboxsep{0pt}%
+%\noindent\colorbox{ocre!20}{\strut\parbox[c][.7cm]{\ecart}{\color{ocre!70}\Large\sffamily\bfseries\centering#1}}\hskip\esp\colorbox{ocre!40}{\strut\parbox[c][.7cm]{\linewidth-\ecart-\esp}{\Large\sffamily\centering#2}}%
+%}
 
 % Unnumbered part in the table of contents
 \newcommand{\@myparttocformat}[1]{%

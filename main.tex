@@ -60,9 +60,12 @@
 \thispagestyle{empty} % Suppress headers and footers on the title page
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{background.pdf}};
-\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Inngangur að forritun\\[15pt] % Book title
+\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]
+{\Huge\centering\bfseries\sffamily\parbox[c][][t]{\paperwidth}{\centering Inngangur að forritun\\[15pt] % Book title
 {\Large Python fyrir byrjendur}\\[20pt] % Subtitle
-{\huge Valborg Sturludóttir}}}; % Author name
+{\huge Valborg Sturludóttir }\\
+{\Large DRÖG GEFIN ÚT JANÚAR 2022}} % Author name
+};
 \end{tikzpicture}
 \vfill
 \endgroup
@@ -75,15 +78,16 @@
 ~\vfill
 \thispagestyle{empty}
 
-\noindent Copyright \copyright\ 2020 Valborg Sturludóttir\\ % Copyright notice
+\noindent Copyright \copyright\ 2022 Valborg Sturludóttir\\ % Copyright notice
 
 % \noindent \textsc{Published by Publisher}\\ % Publisher
 
 % \noindent \textsc{book-website.com}\\ % URL
 
-\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an \textsc{``as is'' basis, without warranties or conditions of any kind}, either express or implied. See the License for the specific language governing permissions and limitations under the License.\\ % License information, replace this with your own license (if any)
+\noindent Licensed under the Creative Commons Attribution-NonCommercial 3.0 Unported License (the ``License''). Þú hefur leyfi til að deila, prenta og vinna með efnið ef þú vísar í höfund, þú mátt ekki hagnast af sölu bókarinnar eða efni hennar.
+%You may not use this file except in compliance with the License. You may obtain a copy of the License at \url{http://creativecommons.org/licenses/by-nc/3.0}. Unless required by applicable law or agreed to in writing. See the License for the specific language governing permissions and limitations under the License.\\ % License information, replace this with your own license (if any)
 
-\noindent \textit{First printing, Sept 2020} % Printing/edition date
+\noindent \textit{Fyrstu drög, janúar 2022} % Printing/edition date
 
 %----------------------------------------------------------------------------------------
 %	TABLE OF CONTENTS
@@ -105,8 +109,7 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Fyrri hluti-\\ Grunnurinn}\index{Fyrri hluti test}
-\todo{laga gæsalappir og vspace staðla}
+\part{Fyrri hluti\\ Grunnurinn}\index{Fyrri hluti test}
 \input{inngangur.tex}
 
 \input{tolurogbreytur.tex}
@@ -132,7 +135,7 @@
 %	PART
 %----------------------------------------------------------------------------------------
 
-\part{Seinni hluti-\\ Hlutbundin forritun}\label{Seinni hluti - hlutbundin forritun}
+\part{Seinni hluti\\ Hlutbundin forritun}\label{Seinni hluti - hlutbundin forritun}
 
 
 \chapterimage{chapter_head_1.pdf} % Chapter heading image
