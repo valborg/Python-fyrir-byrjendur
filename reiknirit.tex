@@ -9,9 +9,10 @@ Dæmi um reiknirit sem við höfum séð áður í þessari bók væri útfærsl
 
 Ástæðan fyrir því að nauðsyn þykir að kynna reiknirit í bók sem þessari er að ef nemendur hafa áhuga á að kynna sér tölvunarfræði í framhaldssnámi er gott að hafa fengið nasasjón af því hvað felst í að beita reikniritum og útfæra þau.
 Margir nemendur hefja nám í tölvunarfræði með ýmsar forhugmyndir sem eiga sér sumar ekki stoð í raunveruleikanum.
-Þessi kafli og sá næsti fjalla um þau atriði sem leikmenn átta sig ekki endilega á að séu stór hluti af tölvunarfræðum og hugbúnaðarþróun.
-Stærðfræði og samvinna.
+Þessi kafli og sá næsti fjalla um þau atriði sem leikmenn átta sig ekki endilega á að séu stór hluti af tölvunarfræði og hugbúnaðarþróun; stærðfræði og samvinna.
 Þessi kafli er um stærðfræðilegu hliðina og næsti um samvinnuna.
+
+Það sem við ætlum að skoða í þessum kafla eru nokkur grundvallar reiknirit, og hugmyndin um endurkvæmni.
 
 \comment{
 \section{Reiknirit sem við höfum séð}\index{Reiknirit sem við höfum séð}\label{uk:reiknirit-okkar}
@@ -21,11 +22,11 @@ omg omg omg
 \end{lstlisting}
 }
 
-\section{Þekkt reiknirit}\index{Þekkt reiknirit}\label{uk:reiknirit-þekkt}
-Það sem við ætlum að skoða í þessum kafla eru nokkur grundvallar reiknirit, og hugmyndin um endurkvæmni.
+%\section{Þekkt reiknirit}\index{Þekkt reiknirit}\label{uk:reiknirit-þekkt}
 
 
-\subsection{Röðun}\index{Röðun}\label{uk:reiknirit-röðun}
+
+\section{Röðun}\index{Röðun}\label{uk:reiknirit-röðun}
 Áður en við getum farið að leita ætlum við að raða.
 Ef við ímyndum okkur að nokkur spil úr spilastokk séu fyrir framan okkur, þau snúa upp svo við sjáum hvaða spil þetta eru en við sjáum einnig að þau eru ekki í réttri röð.
 Sú röð gæti verið hver sem er, en gerum ráð fyrir, til einföldunar, að þau séu ekki í vaxandi röð með lægsta spilið vinstra megin og hæsta spilið hægra megin.
@@ -36,7 +37,7 @@ Reynum svo að lýsa því, eins og með hnetusmjörssamlokuna í kafla \ref{uk:
 
 Hér er sterklega mælt með því að þið reynið á þessa æfingu áður en lengra er haldið.
 
-
+\paragraph{}
 Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og skipta þeim ef það hærra er vinstra megin og gera það fyrir öll spilin út röðina, skoðum töflu \ref{tbl:insert} til að sjá hvernig það myndi ganga fyrir sig.
 Þar erum við með einhverja ákveðna upphafsstöðu á spilunum og byrjum á að skoða fremstu tvö spilin, þá ,,svissum'' við þeim til að hærra spilið sé hægra megin.
 Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum'' því þangað til að það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
@@ -46,22 +47,24 @@ Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og
 \begin{table}
 \begin{center}\begin{tabular}{!{\vrule width 2pt}c!{\vrule width 2pt}P|P|P|P!{\vrule width 2pt}}
 	\noalign{\hrule height 2pt}
-	upphafsstaðan &\textbf{\textcolor{ocre}{K}} & \textbf{\textcolor{ocre}{10}} & 4 & 8 \tabularnewline
 	\cline{1-5}
-	& 10 & K & \textbf{\textcolor{ocre}4} & 8 \tabularnewline
-	\cline{2-5}
-	& 4 & 10 & K & \textbf{\textcolor{ocre}8} \tabularnewline
-	\cline{1-5}
+	upphafsstaðan &\cellcolor{ocre!30}\textbf{\textcolor{ocre}{K}} & \cellcolor{ocre!30}\textbf{\textcolor{ocre}{10}} & 4 & 8 \tabularnewline
+	
+	\noalign{\hrule height 2pt}
+	& \cellcolor{laurple}10 & \cellcolor{laurple}K & \cellcolor{ocre!30}\textbf{\textcolor{ocre}4} & 8 
+	\tabularnewline \hhline{|~|-|-|-|-|}
+	
+	& \cellcolor{laurple}4 & \cellcolor{laurple}10 & \cellcolor{laurple}K & \cellcolor{ocre!30}¨\textbf{\textcolor{ocre}8} \tabularnewline
+	%\cline{1-5}
 	%\hline
-	lokastaðan & 4 & 8 & 10 & K \tabularnewline
+	\noalign{\hrule height 2pt}
+	lokastaðan & \cellcolor{laurple}4 & \cellcolor{laurple}8 & \cellcolor{laurple}10 & \cellcolor{laurple}K \tabularnewline
 	\noalign{\hrule height 2pt}
 \end{tabular}
 \end{center}
-\caption{Hér sést hvernig fjórum spilum er raðað í vaxandi röð. Í hverri stöðu er einungis verið að skoða takmarkaðan fjölda spila til að raða, þau spil eru sýnd með grænum lit í töflunni.} 
+\caption{Hér sést hvernig fjórum spilum er raðað í vaxandi röð. Í hverri stöðu er einungis verið að skoða takmarkaðan fjölda spila til að raða, þau spil eru sýnd með grænum lit í töflunni. Þau spil sem búið er að raða eru sýndi með fjólubláum lit.} 
 \label{tbl:insert}
 \end{table}
-
-\todo{og hvaða lit á að setja á það sem búið er að raða}
 
 Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} eða innsetningarröðun og í kóðabút \ref{lst:reiknirit-insertion} ætlum við að skoða hvernig skiptingarnar eiga sér stað.
 Á mynd \ref{tbl:insert-abstract} sést hvað er að gerast í einhverju tilteknu skrefi þar sem þarf að finna stað fyrir næsta stak sem á að raða, x.
@@ -74,7 +77,12 @@ Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} e�
 				\noalign{\hrule height 2pt}
 				minna eða jafnt x & stærra en x & x & ??? 
 				\tabularnewline \noalign{\hrule height 1.5pt}
-				\multicolumn{4}{c}{Í næsta ástandi er röðun spila orðin:}
+				\tabularnewline
+				\multicolumn{4}{c}{\phantom{0}}
+				\tabularnewline
+				\multicolumn{4}{c}{Í næsta ástandi er röðun orðin:}
+				\tabularnewline
+				\multicolumn{4}{c}{\phantom{0}}
 				
 				\tabularnewline
 				\multicolumn{3}{c}{Búið að raða þessum hluta} &\multicolumn{1}{c}{ Á eftir að raða}  \tabularnewline
@@ -157,7 +165,7 @@ Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin �
 
 
 
-\subsection{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
+\section{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
 Nú þegar við kunnum að raða þá getum við farið að leita.
 Skoðum nú eitthvert þekktasta reiknirit sem til er. 
 Helmingunarleit að tölu á bili. 
@@ -201,10 +209,14 @@ Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við h
 	return -1
 \end{lstlisting}
 
-\subsection{Endurkvæmni}\index{Endurkvæmni}\label{uk:reiknirit-endurkvæmni}
+\section{Endurkvæmni}\index{Endurkvæmni}\label{uk:reiknirit-endurkvæmni}
 Endurkvæmni (e. recursion) er sú virkni forrits að vísa í sig sjálft.
-Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring.
+Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring. \todo{setja mynd}
 Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir aftan og þið sáuð ótal spegilmyndir raðast af ykkur.
+
+Reynum að átta okkur vel á þessu áður en við reynum að beita því.
+Tökum aðeins óhlutbundnara dæmi.
+Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremasta barninu og segir ,,hvað viljiði marga íspinna?'', barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?'' það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk'', þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir það sem þau vilja, og þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ''59 íspinna takk fyrir okkur.''
 
 Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhverja gildi í fibonacci röðinni.
 En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
@@ -235,15 +247,41 @@ Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við k�
 Heldur verður fimm að fjórum sem skilar okkur svo niðurstöðunni fyrir þrjá og svo koll af kolli þar til við erum komin niður í núll og þá hættir reikniritið keyrslu.
 Í þessu tilfelli skilar það engu til baka upp fallakallið en klárast engu að síður þarna í línu 8 þegar það kemst þangað.
 
-Það sem þetta reiknirit okkar gerir ekki er að skila einhverri niðurstöðu til baka, en nú skulum við skoða tvö þannig reiknirit sem eru endurkvæm í kóðabút \ref{lst:reiknirit-endurkvæmni2}.
-Annað þeirra reiknar summu af einhverri tölu og öllum jákvæðum tölum lægri en henni, svo talan 5 gæfi útkomuna 5 + 4 + 3 + 2 + 1 sem er 15 og fyrir 100 væri það 100 + 99 + ... + 1 sem gæfi 5050.
-Hitt reiknar n-tu töluna í fibonacci rununni.
+
+Það sem þetta reiknirit okkar gerir ekki er að skila einhverri niðurstöðu til baka, en nú skulum við skoða endurkvæmt reiknirit sem skilar summu í  \ref{lst:reiknirit-endurkvæmni-summa}.
+Það reiknar summu af einhverri tölu og öllum jákvæðum tölum lægri en henni, svo talan 5 gæfi útkomuna 5 + 4 + 3 + 2 + 1 sem er 15.
 Endurkvæmnin er því fólgin í því að upphaflega fallakallið með summa(100) skilar okkur 100 + summa(99), sem skilar okkur 100 + 99 + summa(98) og svo koll af kolli þar til talan 1 fæst, og við fáum útreikninginn 100 + 99 + ... + 1 sem skilar okkur 5050.
 
+Einnig skulum við skoða fall sem reiknar n-tu töluna í fibonacci rununni.
 Endurkvæmnin í fib(4) er fólgin í því að skoða alltaf tvær summur í einu en þær skila sér í sama fallakallið.
-Svo fib(4) skila því sem fib(2) + fib(3) skila, þau köll skila okkur annars vegar fib(0) + fib(1) og hins vegar fib(1) + fib(2).
-Fyrri hlutinn sem fékkst úr fib(2), sem varð að fib(0) + fib(1) skilar sér sem 0 + 1 = 1.
-Og seinni hlutinn er fib(1) + fib(2) og fib(1) skilar 1 og við vitum að fib(2) mun skila 1 svo þar stendur 1 + 1 = 2 svo við fáum upp til baka að fib(4) = 1 + 2 = 3.
+Svo fib(4) skila því sem fib(2) + fib(3) skila.
+Kóðann má sjá í kóðabút \ref{lst:reiknirit-endurkvæmni-fib} og á mynd \ref{fig:reiknirit-fib}, nú erum við ekki lengur að skila einu gildi og hala af útreikningi heldur erum við að skila tveimur hölum.
+
+\begin{figure}
+	\begin{center}
+		
+		\begin{tikzpicture}[level distance=10mm]
+			\tikzstyle{level 1}=[sibling distance=20mm]
+			\tikzstyle{level 2}=[sibling distance=10mm]
+			\tikzstyle{level 3}=[sibling distance=10mm]
+			\node at (0,0) {$f_4$}
+			child { node {$f_3$}
+				child { node {$f_2$}
+					child { node {$f_1$} }
+					child { node {$f_0$} }
+				}
+				child { node {$f_1$} }
+			}
+			child { node {$f_2$}
+				child { node {$f_1$} }
+				child { node {$f_0$} }
+			};
+		\end{tikzpicture}  
+	\end{center}
+\label{fig:reiknirit-fib}
+	\caption{hér sést hvernig fibonacci fallið kallar alltaf í tvö gildi. Svo eru neðstu gildin, gildin sem vísa ekki í neitt annað, þau sem leggjast saman.}
+\end{figure}
+
 
 \begin{lstlisting}[caption=Summa reiknuð endurkvæmt, label=lst:reiknirit-endurkvæmni-summa]
 def summa(n):
@@ -368,4 +406,28 @@ def mest_fjarl(listi):
 	return mest
 
 \end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{rei2}
+Búið til fall sem spyr notandann um fjölda barna sem eru að biðja um íspinna, innan þess falls skulið vera með fall sem endurkvæmt reiknar út summu íspinna sem börnin vilja.
+Notið random kóðasafnið til að búa til einhvern fjölda íspinna sem hvert barn vill.
+\end{exercise}
+\begin{Answer}[ref={rei2}]
+Hér gætum við að notað input fallið og randint
+	\begin{lstlisting}
+import random as rnd
+def ispinnar():
+	def summa(fjoldi):
+		if fjoldi <= 1:
+			return 10
+		else:
+			return rnd.randint(0,10) + summa(fjoldi - 1)
+
+	fjoldi = input('Hvað eru mörg börn í röðinni? ')
+	try:
+		int(fjoldi)
+		return summa(int(fjoldi))
+	except:
+		return 10
+	\end{lstlisting}
 \end{Answer}

@@ -19,6 +19,10 @@
 %	VARIOUS REQUIRED PACKAGES AND CONFIGURATIONS
 %----------------------------------------------------------------------------------------
 
+\usepackage[table]{xcolor} % Required for specifying colors by name
+\definecolor{ocre}{RGB}{34,139,34} % Define the orange color used for highlighting throughout the book
+\definecolor{laurple}{RGB}{180, 178,  214}
+
 \usepackage{graphicx} % Required for including pictures
 \graphicspath{{Pictures/}} % Specifies the directory where pictures are stored
 
@@ -34,8 +38,7 @@
 
 \usepackage{booktabs} % Required for nicer horizontal rules in tables
 
-\usepackage{xcolor} % Required for specifying colors by name
-\definecolor{ocre}{RGB}{34,139,34} % Define the orange color used for highlighting throughout the book
+
 
 %----------------------------------------------------------------------------------------
 %	MARGINS
@@ -531,9 +534,9 @@ addtohook={%
 % Viðbætur frá mér
 %--------------------
 \usepackage{array}
+\usepackage{hhline}
 \newcolumntype{P}{%
 	>{\rule[-0.6cm]{0pt}{1.5cm}\centering$}p{1cm}<{$}}
-
 
 \usepackage{todonotes}
 
