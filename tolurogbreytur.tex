@@ -1,3 +1,4 @@
+\chapterimage{chapters1.png} % Chapter heading image
 
 \chapter{Tölur og breytur}\index{Tölur og breytur}\label{k:tolur}
 Í þessum kafla ætlum við að hefjast handa við að forrita. 
@@ -43,15 +44,24 @@ Grunnreikniaðgerðir eru nokkrar sem við könnumst við úr grunnskóla en að
 
 Táknin eru flest eins og á reiknivélum +, -, *, / en þar að auki er annars konar deiling sem er táknuð með tveimur deilimerkjum //, veldishafning er táknuð með tveimur margföldunarmerkjum **, og svo er leifareikningur táknaður með \%.
 Munurinn á deilingunni er sá að með einu skástriki er beitt hefðbundinni deilingu\footnote{stundum kölluð fullkomin deiling} en tvö skástrik er heiltöludeiling.
+\begin{wrapfigure}{I}{0.2\textwidth}
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
+%\includegraphics{ghoist2.png}
 
 Í eftirfarandi dæmum í kóðabút, \ref{lst:reiknadg}, er vert að draga fram nokkur atriði sem eru ekki augljós byrjanda. 
-Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd}, athugasemdir (e. comments) eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
-Eins og sést í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur en hún er í keyrslu tölvunnar álitin ein heild línu 20.
+Það fyrsta er að myllumerkið (\#) þýðir að allt sem kemur fyrir aftan það er \textit{athugasemd} (e. comments), þær eru engöngu til að gera kóða læsilegri fyrir fólk, þær eru hunsaðar af tölvunni þegar hún breytir kóðanum í eitthvað sem hún skilur.
+
+Eins og sést í línu merktri númer 20 er athugasemdin svo löng að hún birtist okkur sem tvær línur, en hún er í keyrslu tölvunnar álitin ein heild línu 20.
 Þess vegna þurfum við ekki að hafa áhyggjur af þessum inndrætti sem birtist, hann er í rauninni ekki til staðar þar sem þessi hluti textans er ein lína.
 Einnig eru bil á milli talna og tákna, það er líka til að gera kóðan læsilegri, bilin mega bara ekki vera fremst í línunni.
+%\includegraphics{ghoist2.png}
+
 Athugasemdir í kóða eru mjög mikilvægur hluti af \emph{skjölun} (e. documentation) og ættu öll sem vilja tileinka sér forritun að venja sig á að skrifa athugasemdir.
-Í fyrstu skrifum við ekki flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni ekki augljós er gott að skrifa athugasemdir.
-Kóði sem þið komið til með að skrifa seinna meir á einnig að vera ykkur sjálfum skiljanlegur þegar þið komið að honum seinna.
+Í fyrstu, skrifum við ekki flókinn kóða svo athugasemdirnar segja okkur ekki mikið, en þegar kóðinn er ekki augljós eða lausn á verkefni flókin er gott að skrifa athugasemdir.
+Kóði sem þið komið til með að skrifa á einnig að vera ykkur sjálfum skiljanlegur þegar þið komið að honum seinna.
 Því er gott að venja sig strax á að skrifa lýsandi athugasemdir. 
 
 \begin{lstlisting}[caption=Reikniaðgerðir, label=lst:reiknadg]
