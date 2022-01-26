@@ -6,7 +6,11 @@ Lykilorð þessarar týpu er \textbf{tuple}.
 Nafnið er komið frá hugmyndinni um tvenndir og þrenndir, nema við vitum ekki hversu mörg stök er verið að hópa saman, þau gætu verið af n fjölda svo við köllum týpuna n-d eða n-und (þá frá tvíund og þríund).
 Líklega eina orðið í íslensku sem inniheldur ekki sérhljóða.
 Hér eftir verður týpan kölluð \emph{nd}, þó margir noti n-und.
- 
+ \begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+ 	\begin{center}
+ 		\includegraphics{ghoist2.png}
+ 	\end{center}
+ \end{wrapfigure}
 Hún líkist listum að því leitinu til að margar af sömu aðgerðum sem má gera á lista má gera á ndir.
 Hún líkist strengjum því að hún er óbreytanleg.
 Það má ekki bæta við, breyta eða taka út stök eftir að ndin er skilgreind.
@@ -91,6 +95,8 @@ Skoðum kóðabút \ref{lst:nd-notkun} þar sem við sjáum dæmi um nd sem við
 Við viljum ekki keyra aðferðir á borð við \texttt{.sort()} á ndina því að þá breytist hún, við viljum heldur ekki geta haft áhrif á einstaka sætisvísi (skoðið hvaða villu fæst við þá aðgerð með því að keyra línu 10 í kóðabút \ref{lst:ndir-adfr}), það sem við viljum er létt gagnagrind sem passar upp á gögnin.
 
 
+
+
 \begin{lstlisting}[caption=Ndir notaðar fyrir það sem þær eru gagnlegar, label=lst:nd-notkun]
 notanda_upplysingar = ("valborg", "rosalega gott lykilorð", "netfang@internet.is")
 
@@ -118,6 +124,12 @@ Reynið nú að uppfæra það gildi í ndinni, reynið að setja í staðinn fy
 
 Að sjálfsögðu er markmiðið okkar ekki enn sem komið er orðið að því að skrifa kóða í sem fæstum línum mögulegum, en það sem við viljum þó geta gert er að gera kóðann okkar eins læsilegan og mögulegt er með því að nota þær aðgerðir sem Python býður upp á.
 Jafnvel þó að eini ávinningurinn er að við sjálf skiljum kóðann ennþá þegar við skoðum hann seinna.
+
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics{ghoist2.png}
+\end{center}
+%\end{wrapfigure}
 
 %-------------------------------
 \newpage

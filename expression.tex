@@ -9,6 +9,11 @@ Yrðing er eitthvað sem er sett fram sem staðreynd ,,það er rigning''.
 Núna ætlum við að velta fyrir okkur segðum, í þessum kafla ætlum við að einbeita okkur að því að meta útkomu og fá í hendurnar svör sem við getum svo gert eitthvað við.
 
 Til þess að gera það þurfum við að læra á nýja týpu sem heitir \texttt{boolean} og hefur lykilorðið \textbf{bool}, boolean gildi eru kölluð sanngildi (stundum búlsk gildi).
+\begin{wrapfigure}{I}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
 Boolean týpan er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt.
 Þau eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka, endilega kíkið á ensku \href{https://en.wikipedia.org/wiki/Boolean_algebra}{Wikipedia síðuna}.} (e. Boolean algebra). 
 Nú er það flestum kunnug staðreynd að tölvur vinna með 0 og 1 í grunninn, en hvernig það er notað í almennri forritun í æðri forritunarmálum er viðfangsefnið okkar núna.
@@ -183,6 +188,11 @@ Nú viljum við vita til hvers í ósköpunum við vorum eiginlega að leggja þ
 Til dæmis viljum við geta framkvæmt einhverja aðgerð í forritinu okkar \textbf{ef} einhver skilyrði eru fyrir hendi.
 Segjum að við séum með vekjaraklukku sem við forritum til að hringja þegar klukkan er orðin 8.
 Þá viljum við geta spurt tölvuna hvort að það sé satt eða ósatt að klukkan sé orðin 8.
+\begin{wrapfigure}{I}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
 Ef klukkan er ekki orðin 8 viljum við ekki gera neitt, en ef hún er orðin átta þá viljum við að hún spili einhvern hljóm eða titri.
 Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef spilarinn er ekki búinn að giska á alla stafina í orðinu okkar viljum við geta beðið viðkomandi að spyrja aftur.
 \textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð \footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}.
@@ -266,7 +276,11 @@ Og nú þurfum við að huga að því hvernig kóðinn okkar er uppsettur.
 Það sem á að framkvæma undir ef setningunni/if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann\footnote{Hann er fyrir ofan ,,CapsLock'' takkann.}.
 Eina sem ræður því hvað fer mikið af kóða undir hverja yrðingu er hóf og skynsemi.
 Við sjáum svo í kafla \ref{uk:hreiðrun} um hreiðrun hvers vegna það er mikilvægt að skilyrðissetningar séu skýrar.
-
+\begin{wrapfigure}{o}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
 Góð venja er að búa til skilyrðissetningar þar sem aðalvirknin á sér stað inni í if yrðingunni, þannig að segðin sem fer þar inn passi við hvað eigi að framkvæma.
 Ef við tökum aftur dæmið um mjólkina og búðarferðina í mynd \ref{fig:flæðirit} og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin.
 Það er að við skoðum hvernig uppsetningin á flæðiritinu verður bjöguð ef við orðum spurninguna með játun en ekki neitun: Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.
@@ -317,7 +331,7 @@ Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars k
 Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}.
 Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, það er eina skilyrðið.
 Það þarf ekki að spyrja neinnar spurningar sem er metið sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni var ósönn.
-
+\newpage \todo{formatting}
 \begin{lstlisting}[caption=else notað, label=lst:else]
 mjolk = True
 
@@ -414,10 +428,14 @@ við fórum í búðina og keyptum kex því við vorum með nægan pening
 Hreiðrun er gagnleg því að við viljum skoða eitthvað innra skilyrði aðeins ef ytra skilyrðinu er mætt.
 
 \section{Inntak}\index{Inntak}
+\begin{wrapfigure}{o}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
 Nú höfum við verið að skoða spurningar og svör við þeim sem við skráðum sjálf.
 Það sem við viljum geta gert er að spyrja notandann að einhverju og geta gert eitthvað byggt á því svari.
 Við þurfum að fá inntak (e. input) frá notandanum.
-
 Þá lærum við um nýtt innbyggt fall í Python sem heitir \texttt{input()}.
 Það sem input() gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þartilgert svæði, og við getum notað það í forritinu okkar\footnote{Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.}.
 
@@ -493,6 +511,11 @@ talan_pi = float(fleytitolustrengur)
 \end{lstlisting}
 
 Nú þar sem við vitum að við getum fengið streng í hendurnar frá notanda, vitandi það að við báðum um tölu, getum við leyft okkur að kasta strengnum í það talnatag sem okkur hentar.
+\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
 Við sjáum svo í seinni hluta bókarinnar hvernig á að taka á mismunandi tilfellum og reyna á eitthvað sem gæti valdið villu án þess að það skemmi fyrir okkur, en núna ætlum við að láta sem að við getum treyst notendum til að gefa okkur inntak sem samræmist því sem við báðum um.
 Prófið ykkur nú áfram með að kasta á milli taga, þið munið fá einhverjar villur og það er frábært.
 Gerið tilraunir og prófanir, kastið á milli allra þeirra taga sem þið þekkið í öll þau tög sem þið þekkið, hvað má hvað má ekki?
