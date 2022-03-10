@@ -58,6 +58,7 @@
 
 \begingroup
 \thispagestyle{empty} % Suppress headers and footers on the title page
+%\comment{ %til þess að geta gert skjalið minna er þetta sett inn til að taka út forsíðu
 \begin{tikzpicture}[remember picture,overlay]
 \node[inner sep=0pt] (background) at (current page.center) {\includegraphics[width=\paperwidth]{cover.png}};
 %\draw (current page.center) node [fill=ocre!30!white,fill opacity=0.6,text opacity=1,inner sep=1cm]
@@ -67,6 +68,7 @@
 %{\Large DRÖG GEFIN ÚT JANÚAR 2022}} % Author name
 %};
 \end{tikzpicture}
+%}
 \vfill
 \endgroup
 
@@ -93,7 +95,7 @@
 %	TABLE OF CONTENTS
 %----------------------------------------------------------------------------------------
 
-%\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
+\usechapterimagefalse % If you don't want to include a chapter image, use this to toggle images off - it can be enabled later with \usechapterimagetrue
 
 \chapterimage{chapters7.png} % Table of contents heading image
 
@@ -138,7 +140,7 @@
 \part{Seinni hluti\\ Hlutbundin forritun}\label{Seinni hluti - hlutbundin forritun}
 
 
-\chapterimage{chapter_head_1.pdf} % Chapter heading image
+%\chapterimage{chapter_head_1.pdf} % Chapter heading image
 
 \input{import.tex}
 
