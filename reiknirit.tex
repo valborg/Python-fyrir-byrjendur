@@ -211,14 +211,20 @@ Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við h
 
 \section{Endurkvæmni}\index{Endurkvæmni}\label{uk:reiknirit-endurkvæmni}
 Endurkvæmni (e. recursion) er sú virkni forrits að vísa í sig sjálft.
-Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring. \todo{setja mynd}
+Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring. 
 Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir aftan og þið sáuð ótal spegilmyndir raðast af ykkur.
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.50\textwidth]{stairs.png}
+	\caption{Mynd í anda Escher fengin af openclipart.org}
+	\label{fig: Escher}
+\end{figure}
 
 Reynum að átta okkur vel á þessu áður en við reynum að beita því.
 Tökum aðeins óhlutbundnara dæmi.
 Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremasta barninu og segir ,,hvað viljiði marga íspinna?'', barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?'' það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk'', þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir það sem þau vilja, og þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ''59 íspinna takk fyrir okkur.''
 
-Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhverja gildi í fibonacci röðinni.
+Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhver gildi í fibonacci röðinni.
 En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
 Í kóðabút \ref{lst:reiknirit-endurkvæmni1} sjáum við einfalda útgáfu af endurkvæmni, þar sem hugmyndin er í raun kynnt án þess að fallið sé neitt gagnlegt.
 Það eina sem fallið gerir er að athuga hvort að tala sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með gildi sem er einum lægra, annars ef talan er ekki stærri en núll prentast ,,við kunnum á endurkvæmni''.
