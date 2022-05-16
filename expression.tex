@@ -33,11 +33,11 @@ Látum p vera yrðinguna ,,það er rigning'' og látum q vera yrðinguna ,,mér
 Þá gætum við, með því að skoða mismunandi aðstæður, fengið rökrétt svar við t.d. spurningunni ,,er rigning og er mér kalt?'' sem við getum skrifað sem spurning1 (eða s1) og svo annarri spurningu sem er ,,er rigning eða er mér kalt?'' sem við getum kallað spurning2 (eða s2).
 
 \begin{center}
-\centering
-\begin{table}
+%\centering
+\begin{table}[h]
 	\centering
 \caption{Sanntafla}
-\vspace{3pt}
+\vspace{6pt}
 \label{tbl:sanntafla}
 \begin{tabular}{|c c|c|c|}
 	% |c c|c| means that there are three columns in the table and% a vertical bar ’|’ will be printed on the left and right borders,
@@ -55,7 +55,11 @@ Látum p vera yrðinguna ,,það er rigning'' og látum q vera yrðinguna ,,mér
 
 \end{table}
 \end{center}
-\todo{laga þetta ótrúlega mikla pláss sem er á milli textans og töflunnar}
+
+\begin{center}
+	\includegraphics{ghoist2.png}
+\end{center}
+
 Ef við horfum á töflu \ref{tbl:sanntafla} þá sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand, og allar mögulegar samsetningar koma fram \footnote{Fjöldi lína í sanntöflu byggir á fjölda yrðinga sem á að skoða. Ef það er bara ein yrðing þá er fjöldi lína 2, það er satt eða ósatt. Fjöldi lína er 2 í veldi fjölda staðhæfinga, eins og í töflu \ref{tbl:sanntafla} þá eru yrðingarnar tvær svo línurnar eru 2², og ef þær væru þrjár þá væri línufjöldinn 2³ og svo framvegis.}.
 Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á hvað, og í fjórðu línu eru þær báðar sannar.
 Þá eru dálkarnir fyrir s1 og s2 svörin við spurningunum hér að ofan miðað við sanngildi yrðinganna í þeim tilteknu aðstæðum.
@@ -188,7 +192,7 @@ Nú viljum við vita til hvers í ósköpunum við vorum eiginlega að leggja þ
 Til dæmis viljum við geta framkvæmt einhverja aðgerð í forritinu okkar \textbf{ef} einhver skilyrði eru fyrir hendi.
 Segjum að við séum með vekjaraklukku sem við forritum til að hringja þegar klukkan er orðin 8.
 Þá viljum við geta spurt tölvuna hvort að það sé satt eða ósatt að klukkan sé orðin 8.
-\begin{wrapfigure}{I}{0.2\textwidth} %i o r l 
+\begin{wrapfigure}{I}{0.25\textwidth} %i o r l 
 	\begin{center}
 		\includegraphics{ghoist2.png}
 	\end{center}
@@ -215,11 +219,14 @@ Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það 
 \begin{figure}[H]
 	\centering
 \begin{tikzpicture}[node distance=2cm]
+
 \node (mjolk) [decision] {Engin mjólk};
+\node (s0) [left of=mjolk, xshift=-3cm] {};
 \node (kex) [decision, below of=mjolk, yshift=-1.5cm] {Ekkert kex};
 \node (bud1) [process, right of=mjolk, xshift=3cm] {Kaupa mjólk};
 \node (bud2) [process, right of=kex, xshift=3cm] {Kaupa kex};
 \node (bud3) [process, below of=kex, yshift=-0.5cm] {Vera heima};
+\draw [arrow] (s0) -- node[anchor=south] {byrja} (mjolk);
 \draw [arrow] (mjolk) -- node[anchor=west] {ósatt} (kex);
 \draw [arrow] (mjolk) -- node[anchor=south] {satt} (bud1);
 \draw [arrow] (kex) -- node[anchor=south] {satt} (bud2);
@@ -291,10 +298,12 @@ Svo með því að orða spurninguna öðruvísi erum við búin að setja upp s
 	\centering
 	\begin{tikzpicture}[node distance=2cm]
 	\node (mjolk) [decision] {Mjólk er til};
+	\node (s0) [left of=mjolk, xshift=-3cm] {};
 	\node (kex) [decision, right of=mjolk, xshift=2cm] {Kex er til};
 	\node (bud1) [process, below of=mjolk, yshift=-4cm] {Kaupa mjólk};
 	\node (bud2) [process, below of=kex, yshift=-2cm] {Kaupa kex};
 	\node (bud3) [process, right of=kex, xshift=2cm] {Vera heima};
+	\draw [arrow] (s0) -- node[anchor=south] {byrja} (mjolk);
 	\draw [arrow] (mjolk) -- node[anchor=south] {satt} (kex);
 	\draw [arrow] (mjolk) -- node[anchor=west] {ósatt} (bud1);
 	\draw [arrow] (kex) -- node[anchor=west] {ósatt} (bud2);
@@ -314,7 +323,7 @@ Við sjáum í næsta undirkafla hvað við getum gert ef við förum framhjá i
 \begin{lstlisting}[caption=if notað, label=lst:if]
 mjolk = True 
 
-if(not m):
+if(not mjolk):
 	print('við fórum í búðina og keyptum mjólk')
 \end{lstlisting}
 \lstset{style=uttak}
@@ -348,6 +357,7 @@ else:
 \lstset{style=uttak}
 \begin{lstlisting}
 vera heima
+þrír er minna en fjórir
 \end{lstlisting}
 \lstset{style=venjulegt}
 
@@ -435,7 +445,7 @@ Hreiðrun er gagnleg því að við viljum skoða eitthvað innra skilyrði aðe
 \end{wrapfigure}
 Nú höfum við verið að skoða spurningar og svör við þeim sem við skráðum sjálf.
 Það sem við viljum geta gert er að spyrja notandann að einhverju og geta gert eitthvað byggt á því svari.
-Við þurfum að fá inntak (e. input) frá notandanum.
+Við þurfum að fá \emph{inntak} (e. input) frá notandanum.
 Þá lærum við um nýtt innbyggt fall í Python sem heitir \texttt{input()}.
 Það sem input() gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þartilgert svæði, og við getum notað það í forritinu okkar\footnote{Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.}.
 
@@ -530,3 +540,136 @@ Seinna munum við sjá gagnatýpuna mengi, ein gagnleg notkun á kasti milli tag
 \texttt{a = list(b)}\\
 Nú er listinn \texttt{a} orðinn að \texttt{[1,2]}, sjá meira um það í kafla \ref{k:sett}.
 \end{itarefni}
+
+
+
+
+
+\newpage
+\section{Æfingar}
+\begin{exercise}\label{exp1}
+Búið til tvær talnabreytur, látið svo skilyrðissetningu prenta út þá sem er stærri
+\end{exercise}
+\setboolean{firstanswerofthechapter}{true}
+\begin{Answer}[ref={exp1}]
+Byrjum á svari og förum svo í réttara svar og svo loks ekki rétt svar.
+
+Við erum beðin um skilyrðissetningu svo við þurfum \texttt{if}	
+\begin{lstlisting}
+a = 3
+b = 4
+if(a > b):
+	print(a)
+else:
+	print(b)\end{lstlisting}
+
+Hér tökum við ekki á því tilviki að \texttt{a} og \texttt{b} séu jafnstór, sem gæti verið mikilvægt að hunsa ekki.
+Svo við lögum til, miðað við aðstæður (þessi lausn gæti verið óhentug egar við förum að skoða skilagildi í kafla \ref{k:föll}).
+\begin{lstlisting}
+a = 3
+b = 4
+if(a > b):
+	print(a)
+elif(b > a):
+	print(b)
+else:
+	print('breyturnar eru jafnstórar')\end{lstlisting}
+
+	
+Hér ætlum við að svo að skoða eina nálgun sem skilar okkur ekki réttri lausn, því að við erum beðin um að prenta út þá breytu sem er stærri en ekki hvort að fyrri sé stærri en hin
+\begin{lstlisting}
+a = 3
+b = 4
+print(a > b)\end{lstlisting}
+Þetta skilar okkur svarinu False því að \texttt{a} er vissulega ekki stærra en \texttt{b} en þarna er skilyrði ekki satt? Nei, heldur ekki, skilyrðissetning er með \texttt{if}, þarna erum við með segð.
+\end{Answer}
+\setboolean{firstanswerofthechapter}{false}
+
+\begin{exercise}\label{exp2}
+Búið til tvær breytur sem innihalda báðar sanngildi (True eða False), að eigin vali.
+Skrifið svo segð þar sem spurt er: fyrri breytan eða ekki seinni breytan?
+\end{exercise}
+\begin{Answer}[ref={exp2}]
+Hér erum við að æfa okkur að nota rökvirkja, við eigum að nota \texttt{or} og \texttt{not}
+	\begin{lstlisting}
+fyrri = False
+seinni = True
+print(fyrri or not seinni)\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{exp3}
+Búið til þrjár talnabreytur og skrifið svo segð sem spyr eftirfarandi spurningar um þær breytur: eru breytur 1 og 2 jafngildar og er breyta 2 lægri en breyta 3 eða er breyta 1 stærri en breyta 3?
+\end{exercise}
+\begin{Answer}[ref={exp3}]
+	Hér erum við að æfa okkur að nota rökvirkja og samanburðarvirkja, við eigum að nota \texttt{or}, \texttt{and}, \texttt{==}, \texttt{<}, \texttt{>} í þessari segð.
+	\begin{lstlisting}
+eitt = 1
+tvo = 1
+thrju = 1
+print(eitt == tvo and tvo < thrju or eitt > thrju)\end{lstlisting}
+\end{Answer}
+
+\begin{exercise}\label{exp4}
+Nú skulum við búa til þrjár breytur sem eru hliðar í þríhyrningi.
+Þríhyrningar geta verið margskonar en við ætlum að einbeita okkur að tveimur tegundum, jafnhliða (allar hliðar jafnlangar) og jafnarma (tvær hliðar jafnlangar).
+
+Nú ætlið þið að skrifa forritsbút þar sem eru þrjár talnabreytur fyrir hliðarnar þjár á einhverjum þríhyrningi og forritið ykkar prentar út, með skilyrðissetningu, hvort að þríhyrningurinn sé jafnhliða, jafnarma eða hvorugt.
+
+Prófið svo að keyra aftur fyrir aðrar tölur þannig að þið sannfærist um að kóðinn sé réttur.
+\end{exercise}
+\begin{Answer}[ref={exp4}]
+Setjum hliðarnar sem a, b, og c og fullvissum okkur um að 1, 2, og 3 skili hvorugt niðurstöðunni, 1, 2, og 2 skili jafnarma niðurstöðunni og 2, 2, og 2 skili jafnhliða niðurstöðunni.
+
+Athugið að jafnarma er flóknast að athuga.
+	\begin{lstlisting}
+a = 1
+b = 2
+c = 3
+if(a == b == c):
+	print('þríhyrningurinn er jafnhliða')
+elif(a == b != c or a == c != b or b == c != a ):
+	print('þríhyrningurinn er jafnarma')
+else:
+	print('hvorki jafnarma né jafnhliða þríhyrningur')\end{lstlisting}
+
+Athugið að ef \texttt{a == b} og \texttt{b == c} (því það er og þarna á milli þegar tveir samanburðarvirkjar eru notaðir) þá hlýtur \texttt{a == c}.
+
+Það sem er svo að gerast í athuguninni á jafnarma er að verið er að spyrja eru tvær hliðar jafnar OG er hin hliðin frábrugðin, þetta þarf að gera fyrir allar hliðar.
+Farið er óþarflega nákvæmlega í þetta skref, hægt er að sleppa \texttt{!=} en aðeins vegna þess að í skrefinu á undan er verið að spyrja sérstaklega um jafnhliða og því mun það aldrei gerast í þessu skrefi að allar hliðar séu jafnar.
+Þetta er hinsvegar haft með vegna þess að það er mikilvægt að skilja hvernig eigi að skoða þetta tilvik.
+\end{Answer}
+
+\begin{exercise}\label{exp5}
+Spyrjið notandann hvort að viðkomandi hafi fengið sér morgunverð í dag, og ef svarið er á einhvern hátt játandi skulið þið svara "vonandi var hann góður" en ef ekki skulið þið svara "þú hefur enn tíma".
+
+Reynið að vinna með svarið svo að það sé hægt að meta hvort það hafi verið já eða einhver útgáfa af já, eins og kannski játz.
+\end{exercise}
+\begin{Answer}[ref={exp5}]
+Hér ætlum við að nota skilyrðissetningu og inntaksskipun.
+	\begin{lstlisting}
+svar = input("borðaðirðu morgunverð?")
+if (svar[0].lower() == 'j'):
+	print("vonandi var hann góður")
+else:
+	print("þú hefur enn tíma")\end{lstlisting}
+
+Þetta má svo hreiðra til þess að gera tölvuleik eða spjallþjark.
+Sjáum dæmi:
+\begin{lstlisting}
+svar1 = input("þú ert á leiðinni niður í göng, hvort viltu a. kveikja á vasaljósi eða b. kveikja á lukt?")
+if svar1[0] == 'a':
+	print("það kviknar ljós")
+	svar2 = input("þú sérð dyr á móti þér hvort viltu a. halda áfram að leita að einhverju eða b. taka í húninn?")
+	if (svar2[0] == 'a'):
+		print("þú dettur ofan í holu og hverfur að eilífu")
+	elif(svar2[0] == 'b'):
+		print("þú kemur út hinu megin, strax, göngin voru ekki lengri...")
+	else:
+		print('þú valdir eitthvað skrítið, verst að leikurinn er ekki lengri svo það er ekkert tekið á því')
+elif(svar1[0] == 'b'):
+	print("þú brennir þig og ferð heim")
+else:
+	print('þú reyndir að velja að taka upp köttinn, hann hljóp út, þú hljópst á eftir honum')\end{lstlisting}
+
+\end{Answer}
+

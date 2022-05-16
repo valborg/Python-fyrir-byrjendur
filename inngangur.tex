@@ -93,10 +93,9 @@ Einnig eru á nokrum stöðum stuttar efnisgreinar af ítarefni sem er ekki nau�
 Þessi kennslubók byggir á notkun Jupyter Notebooks með hjálp Anaconda hugbúnaðarins, sem er öflugt pakkakerfi og tólakista sem hefur upp á mikið meira en bara Jupyter að bjóða. 
 Hægt er að nálgast Anaconda á \href{www.anaconda.com}{anaconda.com}.
 Hægt er að nota Jupyter án þess að ná í Anaconda með síðum eins og \href{www.cocalc.com}{cocalc.com}. 
-Einnig er hægt að keyra kóða á netinu í gegnum síður eins og \href{www.repl.it}{repl.it}, nota ritla (eins og notepad eða sublime) og keyra .py skrár í skipanalínu, eða nota þyngri umhverfi eins og pycharm sem eru sérhönnuð fyrir hugbúnaðarþróun. 
-Hér er gert ráð fyrir Juptyter umhverfinu og verður bókin öll miðuð að því. \todo{er verið að gera ráð fyrir því?}
+Einnig er hægt að keyra kóða á netinu í gegnum síður eins og \href{www.repl.it}{repl.it}, nota ritla (eins og notepad eða sublime) og keyra .py skrár í skipanalínu, eða nota þyngri umhverfi eins og pycharm sem eru sérhönnuð fyrir hugbúnaðarþróun.
 
-Þessari bók fylgja einnig vinnubækur úr Jupyter sem lesandinn getur nýtt sér \todo{setja hlekk á þær}. 
+Jupyter er byrjendavænt umhverfi og því eru verkefnin sem fylgja þessari bók sett upp í Jupyter vinnubókum,sem lesandinn getur nýtt sér \todo{setja hlekk á þær}. 
 Virkninni er skipt upp í sellur og keyrsluröð sellanna skiptir máli, við sjáum seinna mikilvægi þess að geta skipt upp kóða svona og hvers vegna þetta umhverfi er þægilegt til að byrja í. 
 En hver sella hefur aðgang að svokölluðu skilgreiningarsvæði vinnubókarinnar en er þó sín eigin eining, því má keyra eina sellu í einu án þess að keyra allan kóðann í vinnubókinni.
 Þetta er þægilegt ef við lendum í því að fá villu í einni sellu þá hefur ekki áhrif á neina aðra sellu og við getum haldið áfram.
@@ -166,7 +165,9 @@ Líkja má því við að þurfa ekki að hafa greinarmerki í huga þegar við 
 breyta = 9 * 2
 \end{lstlisting}
 
-Þessi næsti kóðabútur hinsvegar er ekki nógu vel uppsettur, þar eru ,,setningar'' sem virðast hanga undir öðrum og vera þeim háðar.
+Við munum sjá seinna hverjar reglurnar eru en sjáum dæmi sem, ef keyrt, veldur villu (á eftir villu) tekið er fram með athugasemdum hverjar villurnar verða.
+
+Ekki hafa áhyggjur af því að sjá ekki endilega hvað það er sem er að, hér er einungis verið að sýna dæmi um slæma uppsetningu og illa skrifaðan kóða.
 
 \begin{lstlisting}[caption=Rangur Python kóði sem veldur villu, label=lst:inng-malskipanarvilla]
 # Illa skrifaður Python kóði sem keyrist ekki
@@ -175,8 +176,8 @@ breyta = 9 * 2
 breyta = 9 * 2 * # málskipanarvilla fæst hér því síðasta táknið er á röngum stað
 \end{lstlisting}
 
-Svona inndrætti er einungis beitt ef lína á beinlínis að hanga undir línunni að ofan og tilheyrir henni. 
-Þess vegna þarf að huga að því hvernig kóði er uppsettur. 
+Svona inndrætti er einungis beitt ef lína á beinlínis að hanga undir línunni að ofan og tilheyra henni, eins og kommusetning sem getur ekki staðið ein og sér og er háð samhengi setningarinnar sem hún tilheyrir.
+Þess vegna þarf að huga að því hvernig Python kóði er uppsettur. 
 Í öðrum málum eru notuð greinamerki til að segja tölvunni að lína sé búin og að aðrar línur eigi að heyra undir eitthvað ákveðið samhengi en ekki í Python, þar er treyst á að forritarinn setji kóðann upp á máta sem hægt er að sjá að sé réttur. 
 Dæmi um hvernig línur geta verið aðgreindar í öðrum málum:
 

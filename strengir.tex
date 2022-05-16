@@ -24,7 +24,7 @@ einfaldar_gaesalappir = 'ég má líka skrifa innan einfaldra gæsalappa'
 thetta_virkar_ekki = 'gæsalappirnar þurfa að passa saman" 
 \end{lstlisting}
 
-Í sumum forritunarmálum er munur á því að nota einfaldar og gæsalappir, þar sem einfaldar eru notaðar fyrir staka stafi (sér gagnatýpa) og tvöfaldar fyrir strengi.
+Í sumum forritunarmálum er munur á því að nota einfaldar og tvöfaldar gæsalappir, þar sem einfaldar eru notaðar fyrir staka stafi (sér gagnatýpa) og tvöfaldar fyrir strengi.
 En það er enginn raun munur á því hvernig Python meðhöndlar þær.
 
 \section{Strengir og reikniaðgerðir}\index{Strengir og reikniaðgerðir}
@@ -52,7 +52,7 @@ TypeError: unsupported operand type(s) for //: 'str' and 'int'
 Hér er aðalatriðið að fá annað hvort eitthvað út á úttakið eða að fá týpuvillu, ef þið fenguð málskipanarvillu (SyntaxError) þá skrifuðuð þið bara eitthvað vitlaust og þurfið að laga það.
 
 
-Nú þegar þið eruð búin að gera nokkuð margar tilraunir og komast á því að tvær reikniaðgerðir eru leyfilegar.
+Nú þegar þið eruð búin að gera nokkuð margar tilraunir þá hafið þið komist að því að tvær reikniaðgerðir eru leyfilegar.
 
 Þegar við notum + til að setja saman strengi þá erum við að beita \textit{samskeytingu} (e. concatenation).
 Samskeyting þýðir að einum streng er bætt við fyrir aftan annan streng.
@@ -62,7 +62,7 @@ Samskeyting þýðir að einum streng er bætt við fyrir aftan annan streng.
 Þannig að \texttt{"halló" * 3} verður \texttt{"hallóhallóhalló"} en takið eftir að \texttt{"halló " * 3} verður \texttt{"halló halló halló "}, sjáiði muninn?
 Í línu 2 í kóðabút \ref{lst:str-conmul} er þessu einnig beitt, að setja bil þar sem búist er við að strengjum sem skeytt saman.
 Þetta er eingöngu gert til að einfalda okkur lífið að svo stöddu, við skulum ekki venja okkur á að setja óþarfa bil fyrir aftan strengina okkar.
-Sjá má hvernig hægt að er að komast hjá þessari bilnotkun í línu 9.
+Sjá má hvernig hægt að er að komast hjá þessari bilnotkun í línu 9 í sama kóðabút.
 Takið einnig eftir hvernig \texttt{print()} skipunin er látin prenta út nokkrar breytur með því að setja kommur á milli.
 
 \begin{lstlisting}[caption=Samskeyting og lenging strengja, label=lst:str-conmul]
@@ -111,10 +111,10 @@ print(len(strengur2))
 
 Nú þegar við vitum hversu mörg stafabil eru í strengnum getum við notað þau.
 Við getum sagt við vélina mig langar til að fá \emph{vísi}(e. index) (einnig kallað sætisnúmer, sæti og stæði) númer 1 og séð hvaða tákn er í þeim vísi.
-Til að ná í eitthvað upp úr streng þurfum við að nota hornklofa (e. square brackets), tákn sem eru eins og kassalaga svigar [ og ].
-Við notum þessi tákn í Python til að ná í gögn upp úr einhverri gagnagrind, sjáum nánari útskýringu á því fyrirbæri í kaflanum \ref{k:listar}.
+Til að ná í eitthvað upp úr streng þurfum við að nota hornklofa (e. square brackets), tákn sem eru eins og kassalaga svigar, [ og ].
+Við notum þessi tákn í Python til að ná í gögn upp úr einhverri gagnagrind, sjáum nánari útskýringu á því fyrirbæri í kafla \ref{k:listar}.
 Nú lítum við svo á að strengir séu til þess að geyma fyrir okkur tákn í ákveðinni röð og við getum nálgast þessi tákn með því að nota hornklofa.
-Inn í hornklofann ætlum við að láta þann vísi (eða það sætisnúmer) sem við viljum vinna með.
+Inn í hornklofana ætlum við að láta þann vísi (eða það sætisnúmer) sem við viljum vinna með.
 Skoðum aftur sama streng og í kóðabút \ref{lst:str-stafabil} og sjáum hvað er í vísi 1 í þeim streng.
 \begin{lstlisting}[caption=Vísir 1, label=lst:str-visir1]
 strengur = "kex"
@@ -134,7 +134,13 @@ Hver er þá síðasti vísirinn?
 Nú höfum við komist að þeirri niðurstöðu (í kóðabút \ref{lst:str-stafabil}) að strengurinn "kex" hefur þrjú stafabil, að það séu þrír sætisvísar í strengnum, að k sé í vísi 0, e sé í vísi 1 og þá hlýtur x að vera í vísi 2.
 Síðasti vísirinn í streng er því einum lægri heldur en lengdin á strengnum.
 Þannig að strengur af lengdinni fimm, eins og strengurinn "texti", hefur fimm stafabil sem eru í vísum númer 0,1,2,3 og 4.
-
+%\begin{wrapfigure}{H}
+\vspace{1cm}
+\begin{center}
+	\includegraphics{ghoist2.png}
+\end{center}
+%\end{wrapfigure}
+\newpage
 \begin{itarefni}
 \textbf{Vísar í streng}\\
 Strengur af lengd n hefur n tákn augljóslega, en númerin á vísunum fyrir táknin ná frá 0 upp í n-1.
@@ -142,6 +148,8 @@ Strengur af lengd n hefur n tákn augljóslega, en númerin á vísunum fyrir t�
 Það er þó ekki þannig að tölvan byrji að telja í 0, heldur byrjar hún að geyma röð hluta í minnishólfi og fremsta minnishólfið í röðuðum hlut fær sætisnúmerið 0.
 Ástæðan er einfaldari útreikningar við að sækja röðuð gögn.
 Fremsta stakið í röðuðum hlut er þá kallað núllta stakið.
+Þá eftir fyrst hreyfinguna þína, fyrstu aðgerðina eða fyrstu tilfærsluna ertu með stak númer 1.
+Þannig helst í hendur hversu mörg skref þú hefur tekið í gegnum hlutinn þinn og hvaða vísi þú ert í.
 \end{itarefni}
 
 \subsection{Óbreytanleiki}
@@ -170,12 +178,19 @@ En hvernig náum við í einhvern hluta úr honum?
 
 Stikarnir okkar eru hvar við viljum byrja að lesa hlutstrenginn okkar, hvar við viljum hætta og hvað við viljum taka stór skref.
 Þetta er gert með heilum tölum með tvípunktum á milli, sem má sjá í kóðabút \ref{lst:hlutstrengir}.
+
+\begin{wrapfigure}{r}{0.25\textwidth}
+	\begin{center}
+		\includegraphics{ghoist2.png}
+	\end{center}
+\end{wrapfigure}
 Í línu 3 eru tveir tvípunktar innan hornklofanna og tölurnar sem koma á milli þeirra er afmörkunin á því hvað við viljum lesa upp úr \texttt{strengur}.
 Nú er vert að nefna að þegar við notum þessa málskipan eru ákveðin gildi sjálfgefin, skoðum hvað það þýðir.
 
 Tökum dæmi um \texttt{strengurinn\_minn[a:b:c]} þar sem a, b og c eru stikar til að sækja hlutstreng, hvað getur staðið fyrir a, b, og c? Hvað ef við sleppum þeim? Hver eru sjálfgefin gildi þessara stika?
 
-Stikarnir a, b, og c verða að vera:
+\newpage
+Stikarnir a, b, og c úr \texttt{strengurinn\_minn[a:b:c]} verða að vera:
 \begin{enumerate}
 	\item a er vísirinn sem við byrjum fyrir framan, ef þetta væri 0 væri \textit{leshaus} vélarinnar staddur fyrir framan núllta táknið og það yrði lesið næst.
 	Þessi vísir verður að vera lægri en b (annars fæst tómur strengur).
@@ -274,7 +289,7 @@ Prófið allavega þangað til að þið sjáið eftirfarandi skilaboð:
 	\item TypeError: upper() takes no arguments (1 given)
 \end{enumerate}
 
-Fyrsta villan þarna gefur ekki villu því að það er lögleg skipun að spyrja ,,hvað er þetta?'' án þess að kalla í aðferðina til að nota hana.
+Fyrstu skilaboðin þarna eru ekki villuskilaboð því að það er lögleg skipun að spyrja ,,hvað er þetta?'' án þess að kalla í aðferðina til að nota hana.
 Hvernig náðuð þið að gera það? 
 
 
