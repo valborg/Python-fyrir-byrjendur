@@ -160,7 +160,7 @@ En hvers eru klasar megnugir?
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 \begin{center}
-	\includegraphics[scale=1]{doooodles_valborg-02.png}
+	\includegraphics[scale=0.6]{doooodles_valborg-02.png}
 \end{center}
 %\end{wrapfigure}
 
@@ -218,7 +218,7 @@ Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, h
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 \begin{center}
-	\includegraphics[scale=0.3]{doooodles_valborg-02.png}
+	\includegraphics[scale=0.68]{doooodles_valborg-02.png}
 \end{center}
 %\end{wrapfigure}
 
@@ -347,11 +347,24 @@ print(lest1)
 Sjáum hvernig við leysum það í næsta kafla.
 
 \section{Töfra aðferðir}\index{Töfra aðferðir}\label{uk:klasar-töfra-aðferðir}
+\begin{wrapfigure}{i}{0.15\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=0.3]{doooodles_valborg-02.png}
+\end{center}
+\end{wrapfigure}
 Nú höfum við séð hvernig á að skilgreina okkar eigin aðferðir á klasa.
 Og við höfum verið að nota eina töfraaðferð til þess að smíða klasana okkar, init.
 En það er til mýgrútur af töfraaðferðum sem við getum nýtt okkur til þess að gera klasana okkar nothæfari.
 Í þessum kafla verða nokkrar slíkar teknar fyrir (en alls ekki allar).
 Við munum að töfraaðferðir eru aðferðir sem eru með tveimur undirstrikum fyrir framan sig og aftan og gegna því hlutverki að útfæra innbyggða virkni.
+\phantom{}
+\begin{wrapfigure}{o}{0.15\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=0.3]{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
+
+\vspace{10pt}
 
 Helst ber að nefna \texttt{\_\_str\_\_} aðferðina, sem nemendur vilja oftast geta beitt strax og skilja ekki hvers vegna print skilar einhverju furðulegu.
 Hingað til höfum við ekki verið að beita innbyggða fallinu print á klasana okkar í kóðabútum því að hún gerir ekkert skilmerkilegt ennþá (eins og í úttaki kóðabúts \ref{lst:klasar-aðferðir-lestar-2}).
@@ -361,9 +374,19 @@ Nú er það upp á okkur komið hvað okkur finnst vera nógu merkilegar upplý
 Hingað til þegar við beitum print fallinu höfum við verið að skoða úttak sem er af einhverri týpu sem við þekkjum, heiltölur eða strengir til dæmis.
 En nú þegar við erum með okkar eigin klasa/hluti viljum við kannski fá einvherjar tilteknar upplýsingar í ákveðinni röð.
 
+
+\begin{wrapfigure}{i}{0.15\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=0.3]{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
+
 Skoðum kóðabút \ref{lst:klasar-str} þar sem við skilgreinum klasa sem heldur utan um tölvuleikjapersónuna okkar aftur, hins vegar ætlum við að sleppa aðferðunum að sinni og bæta við nokkrum klasabreytum.
+
+\paragraph{}
+
 Klasabreytur eru skilgreindar efst í klasa og er nafnavenjan með þá að nota eingöngu hástafi.
-Það sem klasabreytur gera fyrir okkur er að halda utan um breytur sem við viljum að séu aðgengilegar allsstaðar í klasanum, við viljum ekki endilega að þær séu hluti af inntaki frá notanda við smíð klasans og þeir gera yfirferð og prófun klasans auðveldari.
+Það sem klasabreytur gera fyrir okkur er að halda utan um breytur sem við viljum að séu aðgengilegar allsstaðar í klasanum, við viljum ekki endilega að þær séu hluti af inntaki frá notanda við smíð klasans og hástafirnir gera yfirferð og prófun klasans auðveldari.
 Með auðveldari prófunum er átt við að gildi séu ekki harðkóðuð víðsvegar og erfitt að skipta þeim út (eins og ef nota ætti ákveðna námundun á pí) heldur eru þau skilgreind á einum stað og auðvelt að átta sig á notkun þeirra (ef breytuheitin eru skýr).
 
 \begin{lstlisting}[caption=Töfraaðferðin \_\_str\_\_, label=lst:klasar-str]
@@ -408,6 +431,11 @@ En við ætlum enn sem komið er að skoða hlutina á einfaldan og brothættan 
 
 
 \section{Erfðir}\index{erfðir}\label{uk:klasar-erfðir}
+\begin{wrapfigure}{i}{0.4\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
 Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segir vélinni að þeir erfi ekki frá neinum klasa nema \textit{object} sem gerði það að verkum að við gátum útfært töfraaðferðir.
 Það gerist sjálfkrafa bakvið tjöldin.
 
@@ -415,6 +443,11 @@ Nú ætlum við að skoða í kóðabút \ref{lst:klasar-erfðir} hvernig á að
 Við skoðum dæmi þar sem prentari er tekinn fyrir, það sem hann þarf að kunna að gera er að prenta út streng, segja til um blekhlutfallið sitt og minnka blekið um eitt prósentustig.
 Þetta er alfarið æfing og því ekki endilega mjög raunhæft dæmi, en þar sem við erum að reyna að átta okkur á því hvað erfðir eru þá ætlum við að gera ráð fyrir því að við viljum að allir prentararnir okkar byrji með 100\% af bleki og hafi möguleikann á að lækka það.
 Hins vegar er það ekki útfært hvernig eigi að fara að því að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndlar prentunina sjálfa á annan máta.
+\begin{wrapfigure}{o}{0.4\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=0.75]{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
 
 Undirliggjandi ástæður fyrir því að við myndum vilja gera þetta er sú að við viljum að einhver grunn virkni sé til staðar og sé aðgengileg, en það er einhver tiltekin virkni sem við viljum að sé öðruvísi.
 Tökum dæmi um spilastokk með 52 spilum og við viljum útfæra reglur fyrir nýtt spil sem minnir á ólsen ólsen nema hvað við breytum reglunni að áttan breytir ekki um lit heldur lætur einhvern annan spilara draga tvö spil.
