@@ -77,7 +77,7 @@ Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} e�
 				\noalign{\hrule height 2pt}
 				minna eða jafnt x & stærra en x & x & ??? 
 				\tabularnewline \noalign{\hrule height 1.5pt}
-				\tabularnewline
+				%\tabularnewline
 				\multicolumn{4}{c}{\phantom{0}}
 				\tabularnewline
 				\multicolumn{4}{c}{Í næsta ástandi er röðun orðin:}
@@ -92,9 +92,16 @@ Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} e�
 			\end{tabular}
 		\end{center}
 	%\end{table}
-\caption{Hér sést hvernig staðan er þegar á að finna stað fyrir eitthvað x, sem gæti verið tala eða spil eða einhver annar hlutur. Athugið að annað hvort eða bæði hólfin gætu verið tóm sem búið er að raða og einnig gæti verið ekkert sem eftir á að raða.}
+\caption{Hér sést í efri línunni hvernig staðan er þegar á að finna stað fyrir eitthvað x, sem gæti verið tala eða spil eða einhver annar hlutur. Athugið að annað hvort eða bæði hólfin, minna eða stærra en x, gætu verið tóm og einnig gæti verið ekkert sem eftir á að raða.Í neðri línunni sést svo að búið er að finna stað fyrir x á milli staka sem eru lægri en það og staka sem eru hærri en það. Þá myndi þriðja línan vera næsta stak sem er fremst í ??? hlutanum.}
 \label{tbl:insert-abstract}
 \end{table}
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=0.6]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
 
 Skoðum nú kóðann á bakvið þetta reiknirit.
 
@@ -114,12 +121,19 @@ def insertion_sort(A):
 		i = i + 1
 \end{lstlisting}
 
+\vspace{1cm}
+
 Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum er að:
 \begin{itemize}
 	\item Reyna að nota reikniritið fyrir einhvern lista af tölum.
 	\item Reyna að finna leið til þess að gera línur 8-11 í einni línu, Python býður upp á það.
 	\item Reyna að láta reikniritið raða í minnkandi röð.
 \end{itemize}
+
+Allar þessar æfingar krefjast þess að við skiljum náið hvað það er sem er að gerast í hverju skrefi og hvers vegna röð skrefanna er eins og hún er.
+Markmiðið okkar er að skilja að sem við höfum í höndunum og geta unnið með það á okkar eigin forsendu.
+
+\vspace{1cm}
 
 Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á bubble sort.
 Útfærslan felst í tveimur hreiðruðum for-lykkjum\footnote{sem er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.}.
@@ -132,6 +146,13 @@ Eins og loftbólur sem þrýstast upp á yfirborðið.
 Þannig að ytri for lykkjan keyrir fyrir hvert stak í listanum, eða segir til um hversu oft þurfi að finna stærsta stakið, og innri lykkjan sér um samanburðinn og skiptingarnar.
 Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin þegar við erum að bera saman og það er vegna þess að við hættum fyrir framan aftasta stakið hverju sinni í innri lykkjunni.
 %Ef við myndum bara beita breytunni \texttt{vinstri\_hlid} sem \texttt{n-i} þá myndum við fá vísisvillu því við værum að vísa út fyrir listann okkar en vegna þess að við lækkum okkur um 1 þar að auki þá er möguleiki að skoða \texttt{listi[j+1]} sem er næsta stak hægra megin við það stak sem við erum stödd í \texttt{listi[j]}.
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=1.0]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
 
 \begin{lstlisting}[caption=Bubble sort reikniritið, label=lst:reiknirit-bubble]
 	def bubblesort(listi):
@@ -163,6 +184,9 @@ Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin �
 	return listi
 \end{lstlisting}
 
+Ástæðan fyrir því að taka fyrir bubblesort og insertion sort er að þetta eru aðferðir sem fólk beitir til að raða hlutum í höndunum, það byrjar á að færa öftustu hlutina aftast eða bera saman og skipta um staði, þó auðvitað ekki nákvæmlega eins því að fólk og tölvur eru ekki með sömu takmarkanir. 
+Tölvuna vatnar þessa gífurlegu yfirsýn sem við höfum og okkur skortir hraðann sem hún hefur.
+En þessi tvö reiknirit raða nokkurnveginn eins og innsæið okkar segði okkur að fara að því.
 
 
 \section{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
@@ -171,6 +195,12 @@ Skoðum nú eitthvert þekktasta reiknirit sem til er.
 Helmingunarleit að tölu á bili. 
 Hugsum okkur að við séum með raðaðan lista af tölum og við viljum finna eina tiltekna tölu. 
 Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þá tæki það mjög langan tíma.
+
+\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=0.9]{doooodles_valborg-02.png}
+\end{center}
+\end{wrapfigure}
 Eða allavega fyrir okkur sem manneskjur, en allur tímasparnaður er góður.
 Því að aðgerðin ,,að skoða spil'' kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar\footnote{Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
 	Þetta er kallað tímaflækja (e. time complexity) og er tölvunarfræðingum mjög hugleikin.
@@ -224,6 +254,12 @@ Reynum að átta okkur vel á þessu áður en við reynum að beita því.
 Tökum aðeins óhlutbundnara dæmi.
 Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremasta barninu og segir ,,hvað viljiði marga íspinna?'', barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?'' það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk'', þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir það sem þau vilja, og þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ''59 íspinna takk fyrir okkur.''
 
+
+\begin{wrapfigure}{o}{0.35\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=0.9]{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
 Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhver gildi í fibonacci röðinni.
 En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
 Í kóðabút \ref{lst:reiknirit-endurkvæmni1} sjáum við einfalda útgáfu af endurkvæmni, þar sem hugmyndin er í raun kynnt án þess að fallið sé neitt gagnlegt.
@@ -288,6 +324,13 @@ Kóðann má sjá í kóðabút \ref{lst:reiknirit-endurkvæmni-fib} og á mynd 
 	\caption{hér sést hvernig fibonacci fallið kallar alltaf í tvö gildi. Svo eru neðstu gildin, gildin sem vísa ekki í neitt annað, þau sem leggjast saman.}
 \end{figure}
 
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=0.9]{doooodles_valborg-02.png}
+	\end{center}
+%\end{wrapfigure}
+
 
 \begin{lstlisting}[caption=Summa reiknuð endurkvæmt, label=lst:reiknirit-endurkvæmni-summa]
 def summa(n):
@@ -319,6 +362,11 @@ fib(4)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=1.9]{doooodles_valborg-02.png}
+	\end{center}
+%\end{wrapfigure}
 
 Nú höfum við séð lykkju útfærslu á helmingunarleit sem keyrir á meðan við höfum bil til að leita á en nú skulum við skoða hvernig megi gera þetta endurkvæmt.
 

@@ -15,10 +15,19 @@ Klasar eru hlutir sem hugsaðir eru til þess að búa til eintök af og geyma �
 Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.
 Hér er tilvalið að skoða ,,meta programming''}.
 
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=0.6]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
 \section{Klasar skilgreindir}\index{Klasar skilgreindir}\label{uk:klasar-skilgreindir}
 
 Klasar nota lykilorðið \textbf{class} og eru skilgreindir með því orði, allt sem tilheyrir klasanum er inndregið undir honum.
-Nöfn klasa eru með stórum staf í Python og flestum hlutbundnum forritunarmálum.
+Nöfn klasa eru með stórum staf í Python eins og flestum hlutbundnum forritunarmálum.
+Þetta gerir kóðalestur auðveldara fyrir fólk, forritarar ættu því að temja sér þessa hefð, sem og aðrar nafnavenjur.
+Ekki bara tölvur lesa kóða.
 
 \begin{lstlisting}[caption=Klasinn Bíll skilgreindur, label=lst:klasar-skilgreindir-tegund]
 class Bíll:
@@ -145,8 +154,15 @@ Fyrra x-ið er úr línu 2 og seinna x-ið er úr viðfanginu.
 
 
 \section{Tilviksbreytur}\index{Tilveiksbreytur}\label{uk:klasar-tilviksbreytur}
-Nú höfum við seð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir} er sérstaklega ber og gagnlítill.
+Nú höfum við seð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir-tegund2} er sérstaklega ber og gagnlítill.
 En hvers eru klasar megnugir?
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=1]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
 
 Athugum eftirfarandi samlíkingu áður en lengra er haldið.
 Þegar við förum á veitingastað þá er okkur boðinn ákveðinn matseðill, við fáum að vita að það séu þrír réttir á matseðlinum (þrír klasar) og í þeim réttum eru ákveðin hráefni (tilviksbreytur) og þegar við pöntum okkur mat fáum við í hendurnar eitt tiltekið tilvik af skilgreiningunni á matseðlinum (tilvik af klasa).
@@ -198,6 +214,13 @@ Ef notandinn gefur okkur ekkert inntak við gerð samlokunnar þá er ekki hægt
 Það þriðja og kannski það erfiðasta að skilja er að \texttt{init} aðferðin í klasanum Samloka\_med\_skinku tekur við nefndum viðföngum, eins og við sáum í kafla \ref{uk:föll-sjálfgefin}, sem hafa einhver tiltekin gildi nú þegar skilgreind.
 Sem þýðir að við getum búið til einhverja óbreytta, staðlaða, sjálfgefna skinku samloku.
 Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, hins vegar ef okkur langar til þess að fá samloku með einhverri sósu og einhverju öðru áleggi þurfum við að gefa það upp og við getum gert það alveg eins og þegar við notum föll með sjálfgefnum/nefndum viðföngum.
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=0.3]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
 
 \section{Aðferðir}\index{Aðferðir}\label{uk:klasar-aðferðir}
 Við þekkjum aðferðir, við höfum séð þær notaðar á týpurnar sem við þekkjum, eins og .capitalize() á strengi, .sort() á lista og .get("x", "y") á orðabækur.
@@ -386,15 +409,16 @@ En við ætlum enn sem komið er að skoða hlutina á einfaldan og brothættan 
 
 \section{Erfðir}\index{erfðir}\label{uk:klasar-erfðir}
 Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segir vélinni að þeir erfi ekki frá neinum klasa nema \textit{object} sem gerði það að verkum að við gátum útfært töfraaðferðir.
+Það gerist sjálfkrafa bakvið tjöldin.
 
 Nú ætlum við að skoða í kóðabút \ref{lst:klasar-erfðir} hvernig á að búa til \textbf{yfirklasa} (e. superclass) og \textbf{undirklasa} (e. subclass).
 Við skoðum dæmi þar sem prentari er tekinn fyrir, það sem hann þarf að kunna að gera er að prenta út streng, segja til um blekhlutfallið sitt og minnka blekið um eitt prósentustig.
 Þetta er alfarið æfing og því ekki endilega mjög raunhæft dæmi, en þar sem við erum að reyna að átta okkur á því hvað erfðir eru þá ætlum við að gera ráð fyrir því að við viljum að allir prentararnir okkar byrji með 100\% af bleki og hafi möguleikann á að lækka það.
-Hins vegar er það ekki útrætt hvernig eigi að fara að því að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndlar prentun á annan máta.
+Hins vegar er það ekki útfært hvernig eigi að fara að því að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndlar prentunina sjálfa á annan máta.
 
 Undirliggjandi ástæður fyrir því að við myndum vilja gera þetta er sú að við viljum að einhver grunn virkni sé til staðar og sé aðgengileg, en það er einhver tiltekin virkni sem við viljum að sé öðruvísi.
-Tökum dæmi um spilastokk með 52 spilum og við viljum útfæra nýtt spil sem minnir á ólsen ólsen nema hvað við breytum reglunni að áttan breytir ekki hún lit heldur lætur einhvern annan spilara draga tvö spil.
-Þá í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen þá skrifum við bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi''.
+Tökum dæmi um spilastokk með 52 spilum og við viljum útfæra reglur fyrir nýtt spil sem minnir á ólsen ólsen nema hvað við breytum reglunni að áttan breytir ekki um lit heldur lætur einhvern annan spilara draga tvö spil.
+Þá í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen þá skrifum við bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi á eftirfarandi máta''.
 
 \begin{lstlisting}[caption=Erfðir kynntar með klasanum Prentari, label=lst:klasar-erfðir]
 class Prentari():

@@ -46,7 +46,7 @@ Hún keyrist sama hvað og er notuð til þess að framkvæma þá virkni sem ve
 Ástæða þess að það er gagnlegt að vita hvað villurnar heita er að except klausurnar okkar geta gripið ákveðnar villur og ef sú tiltekna villa kom upp getum við tekið á nákvæmlega því tilfelli.
 Sjáum í kóðabút \ref{lst:villur-grip-kynnt} hvernig á að beita þessum nýju lykilorðum og hvernig uppsetningin á þeim þarf að vera.
 Gerum ráð fyrir að breytan \texttt{tala} sé sett sem eitthvað eins og \# í stað skiljanlegrar tölu.
-Prófið ykkur áfram með það. \todo{prófið ykku áfram}
+Prófið ykkur áfram með það.
 
 \begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt]
 tala = input('veldu tölu ')
@@ -72,6 +72,7 @@ except:
 else:
 	print('það gekk bara víst að kasta í tölu')
 \end{lstlisting}
+\lstset{style=uttak}
 \begin{lstlisting}
 þú gafst ekki upp neitt sem mátti túlka sem tölu
 talan sem þú ert með er 0
@@ -84,6 +85,7 @@ Hér er fyrst einungis gripið ef einhver villa á sér stað en í seinni hluta
 Þetta gæti verið gott þegar þrjár tilteknar villur eru líklegar og þörf er á að taka á þeim.
 
 Líklega er best að hafa try klausurnar hnitmiðaðar en ekki öll framkvæmdin í forritunu okkar, svona ef ské kynni að eitthvað gæti farið úrskeiðis einhvers staðar.
+
 
 \begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt-2]
 try:
@@ -113,6 +115,15 @@ Annar möguleiki sem við viljum geta reynt á er að hreiðra klausurnar okkar 
 Þar kemur einnig sterkt inn að vita hvað villurnar okkar heita svo að við getum reynt eitthvað ákveðið byggt á því hvaða villu við fengum.
 Í kóðabút \ref{lst:villur-grip-hreiðrað} sjáum við hvernig hægt er að halda áfram við að reyna að kasta inntaki þegar það gekk ekki við fyrstu tilraun.
 
+\todo{formatting}
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=3.6]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
+
 \begin{lstlisting}[caption=Hvernig á má hreiðra try - except - else, label=lst:villur-grip-hreiðrað]
 try:
 	tala = input('skrifaðu tölustaf ')
@@ -133,10 +144,13 @@ skrifaðu tölustaf fimmtán
 talan var 0
 \end{lstlisting}
 \lstset{style=venjulegt}
+\phantom{easter egg}
 
 Við viljum temja okkur að taka á villum, við viljum heldur sjá snyrtileg villuskilaboð sem væru lýsandi fyrir vandamálið en ekki stafasúpu af torskildum tækniupplýsingum.
 
 Þetta nýtist t.d. ef við erum með forrit sem brothætt og við viljum að notendur skilji hvað fór úrskeiðis eða við erum með vél sem keyrir endalaust (eins og hitamælir á pallinum) sem sendir okkur svo tölvupóst ef hún lendir í villu.
+
+
 
 \comment{
 \subsection{Að meðhöndla eigin villur}\index{Að meðhöndla eigin villur}\label{uk:villur-raise}

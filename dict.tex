@@ -19,6 +19,12 @@ Svo lyklar verða að vera aðgreinanlegir.
 
 Orðabókin er mjög öflugt fyrirbæri, og því þess virði að kynna sér vel hvernig þessi týpa virkar.
 Einnig skoðum við í þessum kafla hvernig má ítra í gegnum orðabækur og hvers vegna það var ágætt að vera búin að skoða ndir áður en við komum að þessari mikilvægu týpu.
+
+%\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-02.png}
+	\end{center}
+%\end{wrapfigure}
 %---- Athuga hvort þetta eigi heima einhversstaðar
 % Við skoðum betur hvernig við getum gengið úr skugga um aðgreinanleika og hvað það þýðir.
 %---
@@ -41,10 +47,17 @@ print(kippa['lítill svartur'])
 hjólið
 \end{lstlisting}
 \lstset{style=venjulegt}
+ \begin{wrapfigure}{o}{0.29\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
+\phantom{}
 
 Takið eftir hvernig stökin eru aðgreind, með kommum alveg eins og áður.
 Nema núna eru stökin tvenndir sem hanga saman með tvípunkti.
 Við sjáum einnig að til þess að nálgast gögn þá notum við hornklofa eins og áður en við gerum það ekki með sætisvísi heldur gerum við það með lyklinum sem við viljum finna gögnin að.
+
 En ef lykill er heiltala þá náum við vissulega í gögnin á þeim lykli með því að nota heiltölu innan hornklofanna (sjá línu 3 í kóðabút \ref{lst:dict-kynnt2})
 Í kóðabút \ref{lst:dict-kynnt} þá sjáum við hvernig á að búa til tóma bók í fyrstu línu, við gerum ekkert frekar með þessa orðabók í þessum kóðabút en í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig má setja stök (lykla og gildis pör) inn í orðabók eftir að hún er skilgreind og við sjáum í kóðabút \ref{lst:dict-kynnt3} hvaða aðferðir eru til á þessa týpu.
 
@@ -110,12 +123,18 @@ Höfum ekki óþarfa áhyggjur af úttakinu þar sem stendur dict\_ eitthvað.
 Skoðum nú í næsta undirkafla hvernig megi vinna með þetta.
 
 \section{Ítrað í gegnum orðabækur}\index{Ítrað í gegnum orðabækur}
+ \begin{wrapfigure}{r}{0.21\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-02.png}
+	\end{center}
+\end{wrapfigure}
 
 Nú höfum við séð for lykkjur í kafla \ref{k:lykkjur} og hvernig mátti lykkja í gegnum lista í kóðabút \ref{lst:lykkjur-for}.
 Nú hins vegar þurfum við að fara yfir hvernig í ósköpunum á eiginlega að skoða stak í orðabók á kerfisbundinn máta þegar eitt stak er bæði lykill og gildi.
 
 Þetta útfærsluatriði var gert þannig í Python að þegar óskað er eftir að ítra í gegnum orðabók eru lyklarnir hennar eingöngu teknir fyrir.
 Hins vegar er hægt að ítra yfir lykla og gildi eða einungis gildin með því að kalla í aðferðirnar sem teknar voru fyrir í lok síðasta undirkafla.
+
 Nú eru nöfnin á þessum aðferðum ágætlega lýsandi:
 
 \begin{itemize}
@@ -162,6 +181,12 @@ Svo gerist það sama aftur fyrir næsta höfund í röð lykla.
 Svo við gerum ráð fyrir að hún sé enn aðgengileg í kóðabút \ref{lst:dict-bokasafn2}.
 Markmiðið þar er ekki að skoða bækur eftir höfundum heldur prenta út nöfnin á öllum bókum sem eru af nægilega löng.
 Vegna þess að gildin eru listar af bókum þá getum við ítrað í gegnum hvern fyrir sig og þá hreiðrað aðra for lykkju inn í þá lykkju sem sér um að ítra í gegnum bókasafnið okkar.
+
+%\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-02.png}
+	\end{center}
+%\end{wrapfigure}
 		
 \begin{lstlisting}[caption=Ítrun í gegnum orðabækur með .values(), label=lst:dict-bokasafn2]
 for bokalisti in bokasafn.values():

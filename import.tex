@@ -19,8 +19,8 @@ Eins og kom fram í kynningu þá viljum við geta einbeitt okkur að því að 
 Tilgangur þeirra er að létta okkur lífið og gera virkni aðgengilega.
 Í næsta undirkafla verða tekin fyrir nokkur gagnleg kóðasöfn en við getum varla talað um tilgang og gagnsemi kóðasafna án þess að taka eitthvert þeirra fyrir.
 Í inngangi voru kóðasöfnin time og random nefnd.
-Skoðum þau aðeins núna, sjá kóðabút \ref{lst:kóðasöfn-kynnt} þar sem kóðasöfnin time og random eru tekin fyrir.
-Þau bjóða bæði upp á aragrúa aðferða og eiginda sem er út fyrir efni þessarar bókar að ræða í þaula en þó þess virði að taka fyrir ákveðna virkni sem búist er við að nota í æfingum í lok kaflans. \todo{Athugið hér er talað um æfingar í lok kaflans}
+Skoðum þau aðeins núna, sjá kóðabúta \ref{lst:kóðasöfn-kynnt-time} og \ref{lst:kóðasöfn-kynnt-rand} þar sem kóðasöfnin \texttt{time} og \texttt{random} eru tekin fyrir.
+Þau bjóða bæði upp á aragrúa aðferða og eiginda sem er út fyrir efni þessarar bókar að ræða í þaula en þó þess virði að taka fyrir ákveðna virkni sem búist er við að nota í æfingum í lok kaflans.
 \paragraph{}
 Um kóðasafnið time:
 
@@ -39,7 +39,7 @@ Um kóðasafnið random:Þetta kóðasafn gerir forriturum auðveldara fyrir me�
 	\item random.choice() nær í stak af handahófi upp úr ítranlegum hlut
 	\item random.shuffle() stokkar upp í raðanlegum hlut.
 \end{itemize}
-
+\vspace{1cm}
 \begin{lstlisting}[caption=Notkun kóðasafna með time, label=lst:kóðasöfn-kynnt-time]
 import time
 
@@ -55,10 +55,18 @@ print(thrir)
 3.001107931137085
 \end{lstlisting}
 \lstset{style=venjulegt}
-
+\vspace{1cm}
 Þið fáið ekki nákvæmlega sömu tölu, og ekki einu sinni ef þið reynið að keyra þetta oft, það er líka ómögulegt að ná keyrslu upp á millisekúndu-nákvæmni með þessu móti.
 
 Skoðum næst handahófskennd.
+
+\phantom{easter egg}
+%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=1.9]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
+\phantom{}
 
 \begin{lstlisting}[caption=Notkun kóðasafna með random, label=lst:kóðasöfn-kynnt-rand]
 import random
