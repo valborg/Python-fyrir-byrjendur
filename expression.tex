@@ -409,13 +409,13 @@ Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \text
 		\node (annarss) [below of= annars, yshift = -1cm] {};
 		\draw [arrow] (s0) -- node[anchor=south] {byrja} (ef);
 		\draw [arrow] (ef) -| node[anchor=south] {ósatt} (annars1);
-		\draw [arrow] (annars1) -| node[anchor=south] {ósatt} (annars2);
-		\draw [arrow] (annars2) -| node[anchor=south] {ósatt} (annars3);
+		\draw [arrow, dashed] (annars1) -| node[anchor=south] {} (annars2);
+		\draw [arrow, dashed] (annars2) -| node[anchor=south] {} (annars3);
 		\draw [arrow] (annars3) -| node[anchor=south] {ósatt} (annars);
 		\draw [arrow] (ef) -- node[anchor=west] {satt} (efs);
 		\draw [arrow] (annars1) -- node[anchor=west] {satt} (annars1s);
 		
-		\draw [arrow] (annars2) -- node[anchor=west] {satt} (annars2s);
+		\draw [arrow] (annars2) -- node[anchor=west] {} (annars2s);
 		
 		\draw [arrow] (annars3) -- node[anchor=west] {satt} (annars3s);
 		
