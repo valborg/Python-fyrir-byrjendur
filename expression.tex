@@ -9,14 +9,16 @@ Yrðing er eitthvað sem er sett fram sem staðreynd ,,það er rigning''.
 Núna ætlum við að velta fyrir okkur segðum, í þessum kafla ætlum við að einbeita okkur að því að meta útkomu og fá í hendurnar svör sem við getum svo gert eitthvað við.
 
 Til þess að gera það þurfum við að læra á nýja týpu sem heitir \texttt{boolean} og hefur lykilorðið \textbf{bool}, boolean gildi eru kölluð sanngildi (stundum búlsk gildi).
-\begin{wrapfigure}{I}{0.2\textwidth} %i o r l 
-	\begin{center}
-		\includegraphics{doooodles_valborg-12.png}
-	\end{center}
-\end{wrapfigure}
+
 Boolean týpan er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt.
 Þau eru upprunin úr búlískri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka, endilega kíkið á ensku \href{https://en.wikipedia.org/wiki/Boolean_algebra}{Wikipedia síðuna}.} (e. Boolean algebra). 
 Nú er það flestum kunnug staðreynd að tölvur vinna með 0 og 1 í grunninn, en hvernig það er notað í almennri forritun í æðri forritunarmálum er viðfangsefnið okkar núna.
+
+\begin{wrapfigure}{o}{0.25\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-09.png}
+	\end{center}
+\end{wrapfigure}
 
 Í þessum kafla verður farið yfir sanngildi,  \emph{samanburð} (e. comparison) og \emph{samanburðarvirkja} (e. comparison operators), \emph{rökvirkja} (e. logical operators) og svo \emph{skilyrðissetningar} (e. conditional statements).
 Það er mikilvægt að ná góðum tökum á þessum kafla ef halda á lengra inn í námsefnið, ef ekki er skilingur fyrir hendi á því hvernig segðir virka eða hvernig á að setja upp skilyrðissetningu er erfitt að ætla að halda mikið áfram.
@@ -57,7 +59,7 @@ Látum p vera yrðinguna ,,það er rigning'' og látum q vera yrðinguna ,,mér
 \end{center}
 
 \begin{center}
-	\includegraphics{doooodles_valborg-09.png}
+	\includegraphics[scale=0.65]{doooodles_valborg-12.png}
 \end{center}
 
 Ef við horfum á töflu \ref{tbl:sanntafla} þá sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand, og allar mögulegar samsetningar koma fram \footnote{Fjöldi lína í sanntöflu byggir á fjölda yrðinga sem á að skoða. Ef það er bara ein yrðing þá er fjöldi lína 2, það er satt eða ósatt. Fjöldi lína er 2 í veldi fjölda staðhæfinga, eins og í töflu \ref{tbl:sanntafla} þá eru yrðingarnar tvær svo línurnar eru 2², og ef þær væru þrjár þá væri línufjöldinn 2³ og svo framvegis.}.
@@ -280,7 +282,7 @@ Skoðum því nú hvað það þýðir að nota skilyrðissetningar (e. conditio
 \subsection{if}\index{if}
 Fyrsta lykilorðið sem við tökum fyrir er \textbf{if}, þar sem ekki er hægt að búa til skilyrðissetningu án þess.
 Og nú þurfum við að huga að því hvernig kóðinn okkar er uppsettur.
-Það sem á að framkvæma undir ef setningunni/if yrðingunni er inndregið um fjögur bil eða einu sinni á ,,tab'' takkann\footnote{Hann er fyrir ofan ,,CapsLock'' takkann.}.\todo{er að tala um tab takkann}
+Það sem á að framkvæma undir ef setningunni/if yrðingunni er inndregið um fjögur bil eða einu sinni á tab takkann.
 Eina sem ræður því hvað fer mikið af kóða undir hverja yrðingu er hóf og skynsemi.
 Við sjáum svo í kafla \ref{uk:hreiðrun} um hreiðrun hvers vegna það er mikilvægt að skilyrðissetningar séu skýrar.
 \begin{wrapfigure}{o}{0.2\textwidth} %i o r l 
@@ -317,13 +319,15 @@ Svo með því að orða spurninguna öðruvísi erum við búin að setja upp s
 \end{figure}
 
 Skoðum nú kóðabút \ref{lst:if} og hvað er átt við með réttum inndrætti, hér er einungis sýnt if setning ein og stök.
-Í kóðabútnum tökum við fyrir segðina ,,er til mjólk?'' og veitum henni gildið \texttt{True} svo við erum stödd í þeim aðstæðum að við eigum vissulega til mjólk, skoðið töflu \ref{tbl:sanntafla-kaffi} til að sannfærast og það sem er að gerast.
+Í kóðabútnum tökum við fyrir segðina ,,er til mjólk?'' og veitum henni gildið \texttt{True} svo við erum stödd í þeim aðstæðum að við eigum vissulega til mjólk, skoðið töflu \ref{tbl:sanntafla-kaffi} til að sannfærast um það sem er að gerast.
 Við sjáum í næsta undirkafla hvað við getum gert ef við förum framhjá if setningunni okkar og viljum gera eitthvað í því tilfelli.
+Þannig að akkúrat núna getum við spurt ,,er rigning'' og ef svo er gert eitthvað í því eins og að prenta út einhvern streng.
+Þannig að við keyrum kóðann í línu 4 einungis ef við komumst þangað inn, að komast framhjá , eins og var orðað hér að ofan, væri ef segðin skilaði ekki sanngildi í línu 3.
 
 \begin{lstlisting}[caption=if notað, label=lst:if]
 mjolk = True 
 
-if(not mjolk):
+if(mjolk):
 	print('við fórum í búðina og keyptum mjólk')
 \end{lstlisting}
 \lstset{style=uttak}
@@ -340,7 +344,7 @@ Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars k
 Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}.
 Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, það er eina skilyrðið.
 Það þarf ekki að spyrja neinnar spurningar sem er metið sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni var ósönn.
-\newpage \todo{formatting}
+\todo{formatting}
 \begin{lstlisting}[caption=else notað, label=lst:else]
 mjolk = True
 
@@ -374,6 +378,45 @@ Sjáum þetta forritað í kóðabút \ref{lst:elif}.
 
 Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \textbf{if} svo mega koma núll eða fleiri \textbf{elif} og að lokum má setja 0 eða 1 \textbf{else}.
 Þetta er eins og málfræðilegur skilningur okkar er á tungumálinu, við megum hengja endalaust af annars ef klausum inn í setningarnar okkar, þær verða þá bara erfiðari að skilja (kóðinn sömuleiðis).
+
+\begin{figure}[H]
+	\centering
+	\begin{tikzpicture}[node distance=1cm]
+
+		
+		
+		\node (ef) [decision] {ef};
+		\node (s0) [left of=ef, xshift=-2cm] {};
+		\node (annars1) [decision, minimum height = 1cm,minimum width = 1cm, 
+		right of=ef, xshift=2cm, yshift = -2cm] {annars ef};
+		\node (annars2) [decision, minimum height = 1cm,minimum width = 1cm, 
+		right of=annars1, xshift= 2cm, yshift=-2cm] {...};
+		\node (annars3) [decision, minimum height = 1cm,minimum width = 1cm, 
+		right of=annars2, xshift= 2cm, yshift=-2cm] {annars ef};
+		\node (annars) [process, minimum height = 1cm,minimum width = 1cm, 
+		right of=annars3, xshift=2cm, yshift=-2cm] {annars};
+		\node (efs) [below of= ef, yshift = -2.5cm] {};
+		\node (annars1s) [below of= annars1, yshift = -2cm] {};
+		\node (annars2s) [below of= annars2, yshift = -2cm] {};
+		\node (annars3s) [below of= annars3, yshift = -2cm] {};
+		\node (annarss) [below of= annars, yshift = -1cm] {};
+		\draw [arrow] (s0) -- node[anchor=south] {byrja} (ef);
+		\draw [arrow] (ef) -| node[anchor=south] {ósatt} (annars1);
+		\draw [arrow] (annars1) -| node[anchor=south] {ósatt} (annars2);
+		\draw [arrow] (annars2) -| node[anchor=south] {ósatt} (annars3);
+		\draw [arrow] (annars3) -| node[anchor=south] {ósatt} (annars);
+		\draw [arrow] (ef) -- node[anchor=west] {satt} (efs);
+		\draw [arrow] (annars1) -- node[anchor=west] {satt} (annars1s);
+		
+		\draw [arrow] (annars2) -- node[anchor=west] {satt} (annars2s);
+		
+		\draw [arrow] (annars3) -- node[anchor=west] {satt} (annars3s);
+		
+		\draw [arrow] (annars) -- node[anchor=west] {} (annarss);
+	\end{tikzpicture}
+	\caption{Hér sjáum við flæðirit yfir virkni skilyrðissetninga, að það verður að vera ein \textbf{if} setning fremst, svo mega koma eins margar \textbf{elif} setningar þar fyrir neðan eins og við viljum og að lokum má koma nákvæmlega ein \textbf{else} klausa.}
+	\label{fig:flæðirit-skilyrði}
+\end{figure}
 
 \begin{lstlisting}[caption=elif notað, label=lst:elif]
 mjolk = True 
