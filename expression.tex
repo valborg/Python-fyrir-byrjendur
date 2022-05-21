@@ -194,11 +194,7 @@ Nú viljum við vita til hvers í ósköpunum við vorum eiginlega að leggja þ
 Til dæmis viljum við geta framkvæmt einhverja aðgerð í forritinu okkar \textbf{ef} einhver skilyrði eru fyrir hendi.
 Segjum að við séum með vekjaraklukku sem við forritum til að hringja þegar klukkan er orðin 8.
 Þá viljum við geta spurt tölvuna hvort að það sé satt eða ósatt að klukkan sé orðin 8.
-\begin{wrapfigure}{I}{0.25\textwidth} %i o r l 
-	\begin{center}
-		\includegraphics{doooodles_valborg-05.png}
-	\end{center}
-\end{wrapfigure}
+
 Ef klukkan er ekki orðin 8 viljum við ekki gera neitt, en ef hún er orðin átta þá viljum við að hún spili einhvern hljóm eða titri.
 Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef spilarinn er ekki búinn að giska á alla stafina í orðinu okkar viljum við geta beðið viðkomandi að spyrja aftur.
 \textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð \footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}.
@@ -213,8 +209,8 @@ Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það 
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
-\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=3cm, text centered, draw=black, fill=green!30]
+\tikzstyle{process} = [rectangle, minimum width=3cm, minimum height=1cm, text centered, draw=black, fill=laurapurple!40]
+\tikzstyle{decision} = [diamond, minimum width=3cm, minimum height=3cm, text centered, draw=black, fill=ocre!60]
 \tikzstyle{arrow} = [thick,->,>=stealth]
 
 \vspace{5pt}
@@ -243,6 +239,10 @@ Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það 
 Vegna þess að áherslan er lögð á ,,við eigum ekki mjólk'' þá er vitlegast að setja inn segð sem er með neitun.
 Ef yrðingin m stendur fyrir setninguna ,, við eigum mjólk'' þá er yrðingin ekki m (not m) ,,við eigum ekki mjólk''.
 Skoðum þetta í töflu \ref{tbl:sanntafla-kaffi}, sambærilegri þeirri sem við sáum áður (tafla \ref{tbl:sanntafla}), nema í staðinn fyrir p og q notum við yrðinguna ,,það er til mjólk''.
+
+Ef þessu væri skellt í eina spurningu með rökvirkjanum \emph{og} þá yrði spurningin ,,er engin mjólk og ekkert kex til?'' ef henni yrði svo svarað neitandi vitum við ekki hvort að það var útaf mjólkinni eða kexinu.
+Það gæti þó verið að það skipti ekki máli og því nauðsynlegt að geta beitt rökvirkjunum á hagnýtan máta.
+
 \begin{center}
 	\centering
 	\begin{table}[H]
@@ -302,7 +302,7 @@ Svo með því að orða spurninguna öðruvísi erum við búin að setja upp s
 	\node (mjolk) [decision] {Mjólk er til};
 	\node (s0) [left of=mjolk, xshift=-3cm] {};
 	\node (kex) [decision, right of=mjolk, xshift=2cm] {Kex er til};
-	\node (bud1) [process, below of=mjolk, yshift=-4cm] {Kaupa mjólk};
+	\node (bud1) [process, below of=mjolk, yshift=-2cm] {Kaupa mjólk};
 	\node (bud2) [process, below of=kex, yshift=-2cm] {Kaupa kex};
 	\node (bud3) [process, right of=kex, xshift=2cm] {Vera heima};
 	\draw [arrow] (s0) -- node[anchor=south] {byrja} (mjolk);
@@ -344,7 +344,9 @@ Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars k
 Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}.
 Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, það er eina skilyrðið.
 Það þarf ekki að spyrja neinnar spurningar sem er metið sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni var ósönn.
-\todo{formatting}
+
+\newpage
+
 \begin{lstlisting}[caption=else notað, label=lst:else]
 mjolk = True
 
@@ -367,6 +369,11 @@ vera heima
 
 Að geta sett svona annars-klausu er mikilvægt því að við viljum geta brugðist við ef upphaflega skilyrðið okkar er ósatt.
 Við viljum geta tekið á öðrum tilfellum heldur en bara upphafsskilyrðinu okkar.
+%\begin{wrapfigure}{o}{0.2\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics{doooodles_valborg-02.png}
+	\end{center}
+%\end{wrapfigure}
 
 \subsection{elif}\index{elif}
 En hvað ef við viljum geta tekið á einhverju sérstöku tilfelli, sem kemur einungis upp í ákveðnum aðstæðum?
@@ -385,7 +392,7 @@ Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \text
 
 		
 		
-		\node (ef) [decision] {ef};
+		\node (ef) [decision, minimum height = 2.0cm, minimum width = 2.0cm] {ef};
 		\node (s0) [left of=ef, xshift=-2cm] {};
 		\node (annars1) [decision, minimum height = 1cm,minimum width = 1cm, 
 		right of=ef, xshift=2cm, yshift = -2cm] {annars ef};
@@ -479,11 +486,12 @@ við fórum í búðina og keyptum kex því við vorum með nægan pening
 \lstset{style=venjulegt}
 
 Hreiðrun er gagnleg því að við viljum skoða eitthvað innra skilyrði aðeins ef ytra skilyrðinu er mætt.
+Skoðið aftur núna myndir \ref{fig:flæðirit} og \ref{fig:flæðirit-neitun} og sjáið að þar er í raun verið að beita hreiðrun.
 
 \section{Inntak}\index{Inntak}
-\begin{wrapfigure}{o}{0.2\textwidth} %i o r l 
+\begin{wrapfigure}{i}{0.4\textwidth} %i o r l 
 	\begin{center}
-		\includegraphics{doooodles_valborg-08.png}
+		\includegraphics[scale=2]{doooodles_valborg-08.png}
 	\end{center}
 \end{wrapfigure}
 Nú höfum við verið að skoða spurningar og svör við þeim sem við skráðum sjálf.

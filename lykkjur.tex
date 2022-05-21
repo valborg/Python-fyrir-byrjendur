@@ -9,7 +9,7 @@ While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta ke
 Nöfnin á for og while verða ekki þýdd sérstaklega í þessari bók, en við segjum t.a.m. ,,að gera eitthvað á meðan'' eða ,,gera eitthvað fyrir hvert stak''.
 \begin{wrapfigure}{I}{0.15\textwidth} %i o r l 
 	\begin{center}
-		\includegraphics{doooodles_valborg-10.png}
+		\includegraphics[scale=0.5]{doooodles_valborg-10.png}
 	\end{center}
 \end{wrapfigure}
 Við ætlum að kynnast því til hvers þær eru ætlaðar og hvers þær eru megnugar, í hvaða tilfellum á að nota hvora fyrir sig og lykilorð sem gera notkun þeirra öflugri.
@@ -53,7 +53,7 @@ Eins og sést í kóðabút \ref{lst:lykkjur-in} þá virkar in nokkuð svipað 
 Ekki gleyma þessu lykilorði við lykkjugerðina.
 Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á lykkjum.
 Í næstu kóðabútum verður sýnd grunnvirkni for-lykkjunnar.
-
+\vspace{1cm}
 \begin{itarefni}
 	\textbf{Nánar um \texttt{in} og vísa}\\
 	Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
@@ -63,10 +63,10 @@ Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á l
 	Heiltölur, fleytitölur og sanngildi eru ekki ítranleg.
 \end{itarefni}
 \todo{formatting}
-\vspace{4cm}
+\vspace{2cm}
 %\begin{wrapfigure}{}{0.4\textwidth} %i o r l 
 	\begin{center}
-		\includegraphics{doooodles_valborg-07.png}
+		\includegraphics[scale=1.3]{doooodles_valborg-07.png}
 	\end{center}
 %\end{wrapfigure}
 
@@ -184,6 +184,12 @@ Viðföngin í \texttt{range(a,b,c)} fallið eru heilartölur og þeim er raða�
 Ef við viljum leysa verkefni sem felst í því að finna odda tölur frá 0 og upp að 1000 hvernig myndum við fara að því?
 En ef við viljum vera viss um að eitthvað gerist ákveðið oft?
 Skoðum kóðabút \ref{lst:lykkjur-range-kynnt} þar sem fyrra verkefnið er leyst á tvo mismunandi vegu.
+
+%\begin{wrapfigure}{}{0.4\textwidth} %i o r l 
+\begin{center}
+	\includegraphics[scale=0.4]{doooodles_valborg-02.png}
+\end{center}
+%\end{wrapfigure}
 
 \begin{lstlisting}[caption=range() fallið kynnt með for lykkju, label=lst:lykkjur-range-kynnt]
 for tala in range(6):
@@ -436,7 +442,7 @@ Segjum að við skuldum 10.000 krónur og við ætlum að borga inn á skuldina 
 Við viljum að sjálfsögðu hætta að borga þegar við skuldum ekkert lengur og auðvitað viljum við að skuldin okkar lækki.
 
 \begin{lstlisting}[caption=while lykkja sem eitthvað vit er í, label=lst:lykkjur-while-skuld]
-skuld = 10000
+skuld = 8000
 innborgun = 1000
 while(skuld > 0):
 	skuld = skuld - innborgun
@@ -444,8 +450,6 @@ while(skuld > 0):
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
-nú er skuldin 9000
-nú er skuldin 8000
 nú er skuldin 7000
 nú er skuldin 6000
 nú er skuldin 5000
