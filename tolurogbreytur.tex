@@ -93,8 +93,7 @@ Kóði sem þið komið til með að skrifa á einnig að vera ykkur sjálfum sk
 
 Hér vorum við einnig að biðja tölvuna um að reikna einhvern heilan helling en við báðum vélina aldrei um að segja okkur neitt frá útkomunni sérstaklega eða geymdum hana neinstaðar.
 Í kóðabút \ref{lst:reiknadg} sést hvernig á að keyra kóða án þess að fá einhverjar villur (sjá kafla \ref{uk:tolur-villur}) eða gera neitt sérstakt.
-Markmiðið hjá okkur núna er að skilja hvernig reikniaðgerðirnar virka og því ættuð þið núna að prófa ykkur áfram, skoða forgangsröð aðgerða\footnote{\href{https://is.wikibooks.org/wiki/Forgangsr\%C3\%B6\%C3\%B0\_a\%C3\%B0ger\%C3\%B0a}{https://is.wikibooks.org/wiki/Forgangsröð\_aðgerða}}, og þora að gera villur og reyna að lesa í þær.
-Nánar um hvernig þessir \emph{reiknivirkjar} (e. arithmic operators) verka má sjá á síðu W3Schools, sem er frábær síða til að læra meira um forritun, \href{https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp}{hér}.
+Markmiðið hjá okkur núna er að skilja hvernig reikniaðgerðirnar virka og því ættuð þið núna að prófa ykkur áfram, skoða forgangsröð aðgerða\footnote{\href{https://is.wikibooks.org/wiki/Forgangsr\%C3\%B6\%C3\%B0\_a\%C3\%B0ger\%C3\%B0a}{https://is.wikibooks.org/wiki/Forgangsröð\_aðgerða}}, og þora að gera villur og reyna að lesa í þær\footnote{Nánar um hvernig þessir \emph{reiknivirkjar} (e. arithmic operators) verka má sjá á síðu W3Schools, sem er frábær síða til að læra meira um forritun, \href{https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp}{hér}}.
 
 \comment{
 # Þetta er eitthvað alveg nýtt og framandi.
@@ -149,7 +148,6 @@ Gildisveiting er gerð með því að skrifa nafnið sem við viljum geta vísa�
 
 \begin{lstlisting}[caption=Breytur kynntar, label=lst:breytur-kynntar]
 val = 5
-
 val + 5
 \end{lstlisting}
 \lstset{style=uttak}
@@ -177,10 +175,10 @@ Eins og það væri lesið, \texttt{val} fær gildið 5.
 Það sem við værum þá að segja tölvunni að í hvert sinn sem hún vill nota heiltöluna fimm þá á hún að hætta við að nota töluna sjálfa og í staðinn vísa eingöngu í það sem er í minnissvæði merktu \texttt{val}.
 Það er alls ekki það sem við viljum (eða mjög ólíklega).
 
-\vspace{0.3cm}
+\vspace{0.1cm}
 
 Nokkrar \textbf{reglur} í nafnavali á breytum, þetta vill vefjast fyrir sumum en lærist fljótlega:
-\vspace{0.3cm}
+\vspace{0.1cm}
 \begin{enumerate}
 	\item Kóðalitunin á breytuheitinu má ekki vera annað en venjulegi liturinn fyrir kóða, þannig að ef nafnið fær áherslumerkingu (annan lit) er það ekki löglegt breytuheiti því það er frátekið lykilorð í Python. 
 	Dæmi um það sem fær áherslulitun eru frátekin lykilorð og tölustafir.
@@ -188,9 +186,10 @@ Nokkrar \textbf{reglur} í nafnavali á breytum, þetta vill vefjast fyrir sumum
 	\item Breytuheitið ætti ekki að innihalda séríslenskan staf (það er löglegt í jupyter vinnubókum en er hrikalega slæmur ávani því það er ekki löglegt allsstaðar).
 	\item Breytuheitið má ekki innihalda bil.
 \end{enumerate}
-\vspace{0.3cm}
+\vspace{0.1cm}
+
 Nokkur \textbf{tilmæli} um breytunöfn með tilliti til nafnavenja í Python:
-\vspace{0.3cm}
+\vspace{0.1cm}
 \begin{enumerate}
 	\item Breytuheiti byrja á litlum staf.
 	\item Ef það þarf að nota löng breytuheiti er venjan að nota snákaframsetningu (e. snake casing) sem felur í sér að gera niðurstrik á milli orða, dæmi \texttt{thetta\_er\_langt\_nafn\_a\_breytu}.
