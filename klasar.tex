@@ -12,8 +12,8 @@ Skilgreiningin ein og sér gerir ekki neitt, það er ekki fyrr en við búum ok
 Gott dæmi um það er skilgreiningin á rétti á matseðli á veitingastað, textinn á matseðlinum er eingöngu hvað er í boði en er ekki útgáfa af matnum sjálfum.
 
 Klasar eru hlutir sem hugsaðir eru til þess að búa til eintök af og geyma þannig eitthvert ástand og mögulega hafa áhrif á það.
-Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.
-Hér er tilvalið að skoða ,,meta programming''}.
+Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum.
+\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.}
 
 
 \phantom{easter egg}
@@ -65,8 +65,8 @@ Subaru
 
 Breytan \texttt{fyrsti\_bilinn} kemur ekki í veg fyrir það að við getum átt fleiri bíla, en hún heldur utan um ástandið á nákvæmlega þessum bíl okkar.
 Segjum að við fáum okkur svo annan bíl, þá getum við búið til aðra breytu (lína 6) í kóðabút \ref{lst:klasar-skilgreindir-subaru} fyrir annað tilvik af klasanum.
-Bílarnir eru, fyrir okkur, óaðgreinanlegir í línu 6\footnote{Þar sem ekki hefur verið útfærð \_\_eq\_\_ aðferðin þá er notast við id() fallið úr type klasanum sem klasinn okkar erfir frá bakvið tjöldin.
-Við skoðum erfðir betur seinna í kaflanum.} en það breytist svo snarlega þegar við endurskilgreinum \emph{klasabreytuna}\footnote{Í öðrum hlutbundnum málum er venjulega talað um klasafasta en í Python er auðvelt að breyta þeim svo við hæfi að nota annað orð en klasa\textbf{fasti}} í línu 7, \texttt{tegund}.
+Bílarnir eru, fyrir okkur, óaðgreinanlegir í línu 6\footnote{Þar sem ekki hefur verið útfærð \texttt{\_\_eq\_\_} aðferðin þá er notast við \texttt{id()} fallið úr \texttt{type} klasanum sem klasinn okkar erfir frá bakvið tjöldin.
+Við skoðum erfðir betur seinna í kaflanum.} en það breytist svo snarlega þegar við endurskilgreinum \emph{klasabreytuna}\footnote{Í öðrum hlutbundnum málum er venjulega talað um klasafasta en í Python er auðvelt að breyta þeim svo við hæfi að nota annað orð en klasa\textbf{fasti}.} í línu 7, \texttt{tegund}.
 
 Prófið nú að skipta um gildi á klasabreytunni \texttt{tegund} fyrir ykkar eigið tilvik af \texttt{Bíll}.
 
@@ -101,9 +101,10 @@ En þessi skilgreining innihélt engar aðferðir, við sjáum það í hluta  \
 	
 	--------------
 
-Við munum svo beita klösum á hnitmiðaðri máta með svo kölluðum \textit{töfra aðferð} (e. magic method, double underscore method, dunder method\footnote{þarna er orðunum double og under skeytt saman í dunder}) og skoða hvernig á að útbúa hlut með ákveðnum grunnupplýsingum.
+Við munum svo beita klösum á hnitmiðaðri máta með svo kölluðum \textit{töfra aðferð} (e. magic method, double underscore method, eða dunder method\footnote{Þarna er orðunum double og under skeytt saman í dunder}) og skoða hvernig eigi að útbúa hlut með ákveðnum grunnupplýsingum.
 
-Áður en við höldum svo langt skulum við byrja á að skoða orðið \texttt{self} sem er ekki frátekið lykilorð heldur er það hefð og venja að nota það orð til að segja klasanum að nú sé hann að nota sig sjálfan (sjá endurkvæmni í kafla \ref{k:reiknirit})\footnote{Skipta má út orðinu self fyrir hvað sem er, en það þarf þá að halda samhengi, best er að venja sig á nota self svo kóðinn verði læsilegri}.
+Áður en við höldum svo langt skulum við byrja á að skoða orðið \texttt{self} sem er ekki frátekið lykilorð heldur er það hefð og venja að nota það orð til að segja klasanum að nú sé hann að nota sig sjálfan (sjá endurkvæmni í kafla \ref{k:reiknirit}).
+\footnote{Skipta má út orðinu \texttt{self} fyrir hvað sem er, en það þarf þá að halda samhengi, best er að venja sig á nota \texttt{self} svo kóðinn verði læsilegri.}
 
 -----------
 
@@ -188,7 +189,7 @@ skinku_samloka = Samloka_med_skinku('bbq')
 \end{lstlisting}
 
 Í fyrri klasanum, \texttt{Samloka}, verðum við að gefa upp inntak fyrir \texttt{sosa} og \texttt{alegg} þegar við búum okkur til hlut því annars fáum við villu en í seinni klasanum, \texttt{Samloka\_med\_skinku} þá eru tilviksbreyturnar með sjálfgefin gildi.
-Þetta rímar ágætlega við raunheiminn, þar sem við verðum að tilgreina hvað við meinum með ,,samloka'' en ,,skinkusamloka'' er mun afmarkaðra.
+Þetta rímar ágætlega við raunheiminn, þar sem við verðum að tilgreina hvað við meinum með ,,samloka“ en ,,skinkusamloka“ er mun afmarkaðra.
 
 Samlíkingin okkar með samlokur á veitingastað er ágæt en nú skulum við skoða hvað er eiginlega í gangi í kóðabút \ref{lst:klasar-notkun}.
 Fyrir það fyrsta er klasinn núna skilgreindur sem \texttt{Samloka()} með svigum, það var ekki þannig í kóðabútum \ref{lst:klasar-skilgreindir-tegund} - \ref{lst:klasar-skilgreindir-tegund2}.
@@ -201,7 +202,7 @@ Klasar eiga möguleika á að \textbf{erfa} (e. inherit) frá öðrum klösum, v
 Því er það upp á einstaklinginn komið að venja sig á að gera alltaf annað hvort, höfundur hefur vanið sig á tóma sviga en er það enginn heilagur sannleikur.
 \end{itarefni}
 
-Næsta sem við þurfum að athuga er töfraaðferðin\footnote{töfraaðferðir (e. magic methods, double underscore methods, dunder methods (þarna er orðunum double og under skeytt saman í dunder)) er hópur aðferða sem Python býður upp sem staðlað viðmót sem gerir forriturum kleift að nýta grunnvirkni eins og samanburður með samanburðarvirkja.} \texttt{\_\_init\_\_} og orðið \emph{self}.
+Næsta sem við þurfum að athuga er \emph{töfraaðferðin} \footnote{töfraaðferðir (e. magic methods, double underscore methods, dunder methods (þarna er orðunum double og under skeytt saman í dunder)) er hópur aðferða sem Python býður upp sem staðlað viðmót sem gerir forriturum kleift að nýta grunnvirkni eins og samanburð með samanburðarvirkja.} \texttt{\_\_init\_\_} og orðið \emph{self}.
 Orðið self eitt og sér er ekki lykilorð, það má skipta því út fyrir eitthvað annnað, hins vegar hefur komist ákveðin venja á að nota það orð og gerir það kóða læsilegri að halda sig við það.
 En hvað gerir orðið self?
 Þetta orð er breyta sem inniheldur tilviki af klasanum sjálfum, í okkar tilfelli er það \texttt{samlokan\_min} í línu 6, þetta skýrist kannski þegar við skoðum endurkvæmni í kafla \ref{k:reiknirit}.
@@ -451,7 +452,7 @@ Hins vegar er það ekki útfært hvernig eigi að fara að því að prenta út
 
 Undirliggjandi ástæður fyrir því að við myndum vilja gera þetta er sú að við viljum að einhver grunn virkni sé til staðar og sé aðgengileg, en það er einhver tiltekin virkni sem við viljum að sé öðruvísi.
 Tökum dæmi um spilastokk með 52 spilum og við viljum útfæra reglur fyrir nýtt spil sem minnir á ólsen ólsen nema hvað við breytum reglunni að áttan breytir ekki um lit heldur lætur einhvern annan spilara draga tvö spil.
-Þá í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen þá skrifum við bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi á eftirfarandi máta''.
+Þá í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen þá skrifum við bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi á eftirfarandi máta“.
 
 \begin{lstlisting}[caption=Erfðir kynntar með klasanum Prentari, label=lst:klasar-erfðir]
 class Prentari():
@@ -535,7 +536,7 @@ Klasinn sem útfærir write aðferðina þarf ekkert að gera annað en að útf
 Svo ef við viljum eiga nokkra mismunandi klasa sem allir kunna mismunandi write aðferðir þá þurfum við bara að ganga úr skugga um að gangavinnsluklasinn okkar fékk write aðferðin sem við vildum nota úr viðeigandi klasa.
 
 Þetta er kallað \textbf{duck typing} og bjóða ekki öll forritunarmál upp á það.
-Hugtakið kemur úr frasanum ,,if it looks lika a duck, quacks like a duck and walks like a duck, it's a duck''.
+Hugtakið kemur úr frasanum ,,if it looks like a a duck, quacks like a duck and walks like a duck, it's a duck“.
 Hugmyndin er að klasinn sem útfærir einungis aðferðina write fyrir okkur er alveg jafn mikil önd eins og kóðasafnið \textit{os} sem sér um að vinna með skrársafnið og skrifa í skjöl.
 
 Ef við höldum áfram með dæmið um klasana sem útfæra write, þá gæti einn þeirra skrifað í skjal á tölvu úti í þýskalandi, einn sendir skjalið í tölvupósti og einn lætur talgervil lesa það upp í strætó leið 14.

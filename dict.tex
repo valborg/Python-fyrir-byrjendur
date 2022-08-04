@@ -6,7 +6,8 @@ Orðabók er orð sem hentar fyrir þýðingu á týpunni í Python en hún er e
 Til þess að búa til orðabók eru notaðir slaufusvigar \{\}.
 
 Orðabækur eru gagnagrindur eins og listar og ndir, það er þær geyma fyrir okkur gögn af einhverjum týpum.
-Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa sem hægt er að nota\footnote{Í Python >3.6 eru þær ekki alveg óraðar, stök eru sett inn í ákveðinni röð og helst sú ,,röðun'' þegar orðabókin er notuð fyrir það voru stökin aðgenileg með handahófskenndri röð fyrir minnisbestun.}.
+Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa sem hægt er að nota.
+\footnote{Í Python >3.6 eru þær ekki alveg óraðar, stök eru sett inn í ákveðinni röð og helst sú ,,röðun“ þegar orðabókin er notuð fyrir það voru stökin aðgenileg með handahófskenndri röð fyrir minnisbestun.}
 Við getum því ekki sótt gögn í orðabækur með því að vita \textit{hvar} þau eru við þurfum að vita \textit{hver} þau eru.
 
 Þetta er vegna þess að orðabækur eru skipulagðar sem lykla og gildis pör, við finnum þau gildi sem við viljum með því að vita hvaða lykill gengur að þeim.
@@ -82,7 +83,7 @@ takið eftir að pörin eru aðgreind með kommu
 
 \begin{itarefni}
 \textbf{Aðgreinanleiki}\\
-Í Python er til \texttt{hash()} fall sem skilar ,,hakki'' af því sem því er gefið sem viðfang.
+Í Python er til \texttt{hash()} fall sem skilar ,,hakki“ af því sem því er gefið sem viðfang.
 Við sáum í kafla \ref{k:tolur} að 1 og 1.0 var hægt að reikna með þó þær væru af mismunandi tagi og í kafla \ref{k:segðir} sáum við að 1 og 1.0 var jafngilt.
 Það sem \texttt{hash()} gerir er að skila heiltölugildi fyrir viðfangið og þegar við viljum athuga hvort að eitthvað sé jafngilt með rökvirkjanum == erum við að spyrja hvort að fallið skili mismunandi heilum tölum fyrir það sem er sitthvoru megin við rökvirkjann.
 Í tilfellinu 1, 1.0 og True þá eru þau ekki aðgreinanleg og því ekki hægt að nota þau sem þrjá mismunandi lykla í sömu orðabókinni.

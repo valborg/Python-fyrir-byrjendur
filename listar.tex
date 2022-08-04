@@ -270,13 +270,13 @@ nem2 = ["Sturludóttir", '00000000', 'austur', "valborg@example.com", "1234", "F
 
 \end{exercise}
 \begin{Answer}[ref={lst3}]
-	Vegna þess að við sjáum að heimavist er í staki 2 gætum við þess vegna skrifað nem1[2], en nú skulum við hugsa fram í tímann.
+	Vegna þess að við sjáum að \texttt{heimavist} er í staki 2 gætum við þess vegna skrifað \texttt{nem1[2]}, en nú skulum við hugsa fram í tímann.
 	Hvað ef listauppbyggingunni yrði breytt og kennitölu yrði bætt við fremst í listann?
-	Þá myndi kóðinn okkar ekki uppfylla skilyrðin ,,sækja heimavist og netfang'' heldur myndi kóðinn okkar sækja síma og heimavist.
-	Með því að reiða okkur eingöngu á það að header listinn sé réttur og að gögnin í nemendalistunum séu í samræmi við hann þá fáum við alltaf rétt gögn sem eru vistuð í dálknum ,,heimavist'' með header.index('heimavist').
+	Þá myndi kóðinn okkar ekki uppfylla skilyrðin ,,sækja heimavist og netfang“ heldur myndi kóðinn okkar sækja síma og heimavist.
+	Með því að reiða okkur eingöngu á það að header listinn sé réttur og að gögnin í nemendalistunum séu í samræmi við hann þá fáum við alltaf rétt gögn sem eru vistuð í dálknum ,,heimavist“ með \texttt{header.index('heimavist')}.
 
 
-	Einnig hefðum við getað, í þessu tilfelli bara horft á nem1 og nem2 og skrifað strengina upp.
+	Einnig hefðum við getað, í þessu tilfelli bara horft á \texttt{nem1} og \texttt{nem2} og skrifað strengina upp.
 	En við viljum horfa fram í tímann þegar við verðum að vinna með lista sem innihalda kannski 50 eða 500 gagnapunkta og að við ætlum ekki að fletta upp heimavistum tveggja nemenda heldur 800.
 	Þá viljum við vera búin að temja okkur að láta tölvuna vinna sem mest fyrir okkur. 
 \begin{lstlisting}
@@ -310,7 +310,7 @@ listed = ["stak í núllta stæði", "fyrsta", "öðru", "þriðja", "fjórða"]
 print(listed[2:2])\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={lst5}]
-Hér er verið að sækja öll þau gögn í listanum ,,listed'' sem ná frá stæði 2 að stæði 2.
+Hér er verið að sækja öll þau gögn í listanum \texttt{listed} sem ná frá stæði 2 að stæði 2.
 Það er byrjað er að lesa fyrir framan stæði 2 en einnig er hætt á þeim stað svo stæði 2 er aldrei lesið.
 Leshausinn hættir á sama stað og hann byrjar, færist ekkert og ekkert tákn er lesið.
 

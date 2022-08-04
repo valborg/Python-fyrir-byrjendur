@@ -39,8 +39,8 @@ Hér er sterklega mælt með því að þið reynið á þessa æfingu áður en
 
 \paragraph{}
 Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og skipta þeim ef það hærra er vinstra megin og gera það fyrir öll spilin út röðina, skoðum töflu \ref{tbl:insert} til að sjá hvernig það myndi ganga fyrir sig.
-Þar erum við með einhverja ákveðna upphafsstöðu á spilunum og byrjum á að skoða fremstu tvö spilin, þá ,,svissum'' við þeim til að hærra spilið sé hægra megin.
-Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum'' því þangað til að það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
+Þar erum við með einhverja ákveðna upphafsstöðu á spilunum og byrjum á að skoða fremstu tvö spilin, þá ,,svissum“ við þeim til að hærra spilið sé hægra megin.
+Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum“ því þangað til að það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
 Þá vegna þess að við erum bara með fjögur spil skoðum við síðasta spilið og látum það berast niður spilaröðina þar til það passar.
 
 
@@ -136,7 +136,8 @@ Markmiðið okkar er að skilja að sem við höfum í höndunum og geta unnið 
 \vspace{1cm}
 
 Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á bubble sort.
-Útfærslan felst í tveimur hreiðruðum for-lykkjum\footnote{sem er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.}.
+Útfærslan felst í tveimur hreiðruðum for-lykkjum.
+\footnote{Það er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.}
 
 Reikniritið virkar í grunninn þannig að það tekur við lista sem á að raða, það rúllar í gegnum listann frá upphafi og út í enda og ýtir stærsta stakinu út í enda.
 Eins og loftbólur sem þrýstast upp á yfirborðið.
@@ -202,9 +203,10 @@ Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þ
 \end{center}
 \end{wrapfigure}
 Eða allavega fyrir okkur sem manneskjur, en allur tímasparnaður er góður.
-Því að aðgerðin ,,að skoða spil'' kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar\footnote{Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
-	Þetta er kallað tímaflækja (e. time complexity) og er tölvunarfræðingum mjög hugleikin.
-	Tímaflækja helmingunarleitar er sérstaklega lág eða $log_2{n}$ vegna þess að reikniritið helmingar alltaf vandamálið (e. problem space).}.
+Því að aðgerðin ,,að skoða spil“ kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar.
+\footnote{Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
+Þetta er kallað tímaflækja (e. time complexity) og er tölvunarfræðingum mjög hugleikin.
+Tímaflækja helmingunarleitar er sérstaklega lág eða $log_2{n}$ vegna þess að reikniritið helmingar alltaf vandamálið (e. problem space).}
 
 Hugmyndin er sú, að verið sé að skoða í fyrstu allan listann sem er raðaður (mjög mikilvægt, annars virkar þetta engan veginn) og miðju gildið er skoðað, ef gildið sem við leitum að er stærra en miðjugildið þá eigum við að vera að leita þeim megin við miðjugildið sem stærri gildi eru.
 Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við höfum annað hvort fundið gildið sem við leitum að eða bilið sem við erum að leita á inniheldur engin stök.
@@ -252,7 +254,7 @@ Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir 
 
 Reynum að átta okkur vel á þessu áður en við reynum að beita því.
 Tökum aðeins óhlutbundnara dæmi.
-Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremasta barninu og segir ,,hvað viljiði marga íspinna?'', barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?'' það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk'', þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir það sem þau vilja, og þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ''59 íspinna takk fyrir okkur.''
+Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremasta barninu og segir ,,hvað viljiði marga íspinna?“, barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?“ það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk“, þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir það sem þau vilja, og þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ,,59 íspinna takk fyrir okkur“.
 
 
 \begin{wrapfigure}{o}{0.35\textwidth} %i o r l 
@@ -263,7 +265,7 @@ Tökum aðeins óhlutbundnara dæmi.
 Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhver gildi í fibonacci röðinni.
 En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
 Í kóðabút \ref{lst:reiknirit-endurkvæmni1} sjáum við einfalda útgáfu af endurkvæmni, þar sem hugmyndin er í raun kynnt án þess að fallið sé neitt gagnlegt.
-Það eina sem fallið gerir er að athuga hvort að tala sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með gildi sem er einum lægra, annars ef talan er ekki stærri en núll prentast ,,við kunnum á endurkvæmni''.
+Það eina sem fallið gerir er að athuga hvort að tala sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með gildi sem er einum lægra, annars ef talan er ekki stærri en núll prentast ,,við kunnum á endurkvæmni“.
 Hveru oft ætli það prentist ef við setjum inn töluna 5?
 
 \begin{lstlisting}[caption=Endurkvæmni - einfalt, label=lst:reiknirit-endurkvæmni1]
@@ -284,7 +286,7 @@ við kunnum endurkvæmni
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við kölluðum í fallið með tölunni 5 þá fengum við bara einu sinni út strenginn ,,við kunnum endurkvæmni''.
+Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við kölluðum í fallið með tölunni 5 þá fengum við bara einu sinni út strenginn ,,við kunnum endurkvæmni“.
 Það er vegna þess að við kölluðum í fallið fyrir fimm og það sem fallið gerir fyrir okkur er að klára endurkvæmnina fyrir það kall, það verða ekki til fjögur önnur köll.
 Heldur verður fimm að fjórum sem skilar okkur svo niðurstöðunni fyrir þrjá og svo koll af kolli þar til við erum komin niður í núll og þá hættir reikniritið keyrslu.
 Í þessu tilfelli skilar það engu til baka upp fallakallið en klárast engu að síður þarna í línu 8 þegar það kemst þangað.

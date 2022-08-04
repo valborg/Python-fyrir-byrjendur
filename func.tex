@@ -7,7 +7,7 @@ Föll (e. functions), eins og lykkjur, eru kóðabútar sem má keyra oft.
 Ágætar samlíkingar fyrir föll eru til dæmis stærðfræðilegar skilreiningar, uppskriftir eða réttir á matseðli.
 
 \begin{itemize}
-	\item Stærðfræðilega skilgreining á hring er eftirfarandi: ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju'' sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
+	\item Stærðfræðilega skilgreining á hring er eftirfarandi: ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju“ sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
 	Skilgreining þessi réttir okkur ekki hring með miðju í punkti (0,0) og radíus 3 þegar við setjum hana fram.
 	En vegna þess að við eigum hana getum við notað hana til þess að búa til alla þá hringi sem okkur henta.
 	\item Uppskrift í matreiðslubók er ákveðin runa af aðgerðum sem þarf að framkvæma, eins og kom fram í kafla \ref{uk:keyra-koda} um hnetusmjörssamlokuna, það að skrifa niður röð aðgerðanna og það sem þarf til er ekki jafngilt því að framkvæma aðgerðirnar og enda með matinn í höndunum
@@ -27,7 +27,7 @@ Við höfum séð föll áður, eins og:
 	\item type("breyta sem viðfang sem ég vil vita týpuna á")
 \end{itemize}
 
-Þetta eru innbyggð föll\footnote{\href{https://docs.python.org/3/library/functions.html}{Python skjölunin} inniheldur lista og upplýsingar um öll innbyggð föll}, það að þau séu innbyggð þýðir að við getum notað þau án þess að ná í einhvern annan kóða (sjá kafla \ref{k:import}) og eru þau flest svo gagnleg að ákveðið var að gefa notendum auðveldara aðgengi að þeim.
+Þetta eru innbyggð föll \footnote{\href{https://docs.python.org/3/library/functions.html}{Python skjölunin} inniheldur lista og upplýsingar um öll innbyggð föll (og aðsjálfsögðu margt fleira).}, það að þau séu innbyggð þýðir að við getum notað þau án þess að ná í einhvern annan kóða (sjá kafla \ref{k:import}) og eru þau flest svo gagnleg að ákveðið var að gefa notendum auðveldara aðgengi að þeim.
 
 Við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut en fall keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
 Allar aðferðir eru föll, ekki öll föll eru aðferðir.
@@ -73,7 +73,8 @@ Alveg eins og með aðrar breytur þá megum við ekki nota föll fyrr en búið
 
 Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er a.m.k. einum inndrætti innar en def lykilorðið tilheyrir fallinu okkar.
 
-Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til, við ætlum að skoða minni úr forritun\footnote{Venjulega það fyrsta sem gert er í nýju forritunarmáli er að prenta út á staðalúttak "Halló Heimur!", þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á.} og prenta út einfalda setningu.
+Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til, við ætlum að skoða minni úr forritun
+\footnote{Venjulega er það fyrsta sem er gert í nýju forritunarmáli er að prenta út á staðalúttak \texttt{Halló Heimur!}, þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á.} og prenta út einfalda setningu.
 
 Takið eftir að fallið er skilgreint og svo er það sem er inndregið undir því það sem fallið gerir, fyrir neðan skilgreininguna (ekki lengur inndregið undir henni) er svo kallað í fallið með því að skrifa nafnið á því og tóma sviga fyrir aftan nafnið.
 Svigarnir eru nauðsynlegir því að þannig segjum við vélinni að við séum að kalla í fall.
@@ -253,7 +254,7 @@ Nú ef okkur langar til að fá einhvern hring í hendurnar getum við ekki sagt
 		\includegraphics{doodles31-14.png}
 	\end{center}
 \end{wrapfigure}
-Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!''
+Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!“
 Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
 
 Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki inntakið þegar við setjum það í augljóslega ranga röð.
@@ -320,7 +321,7 @@ Skoðið hér hvernig er kallað í fallið \texttt{hefja\_i\_veldi\_og\_deila} 
 
 Að sjálfsögðu megum við ekki setja inn of mörg viðföng, þá lendum við í vandræðum, prófið ykkur áfram með það.
 
-Takið líka eftir í línu 7 er kallað í viðföngin í ,,rangri'' röð með því að nota nöfnin á þeim.
+Takið líka eftir í línu 7 er kallað í viðföngin í ,,rangri“ röð með því að nota nöfnin á þeim.
 Prófið að gera það með línu 21, að setja breyturnar inn fyrir viðföngin í annarri röð.
 Takið eftir því að stöðubundnu viðföngin verða að koma á undan.
 
@@ -336,10 +337,11 @@ Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum stre
 
 Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið \texttt{hefja\_i\_veldi} skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum,útkoman er bara prentuð.
 Það dugar okkur ekki, ef við þurfum að nota útreikninginn, að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
-Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt.''
+Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt“.
 Því að við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
 
-Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð\footnote{eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar}.
+Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð.
+\footnote{Eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar.}
 Það sem lykilorðið gerir er svipað \emph{break} lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
 Sjáum í kóðabút \ref{lst:foll-skilagildi}
 
