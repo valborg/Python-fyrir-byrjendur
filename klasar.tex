@@ -12,8 +12,7 @@ Skilgreiningin ein og sér gerir ekki neitt, það er ekki fyrr en við búum ok
 Gott dæmi um það er skilgreiningin á rétti á matseðli á veitingastað, textinn á matseðlinum er eingöngu hvað er í boði en er ekki útgáfa af matnum sjálfum.
 
 Klasar eru hlutir sem hugsaðir eru til þess að búa til eintök af og geyma þannig eitthvert ástand og mögulega hafa áhrif á það.
-Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum.
-\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.}
+Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum.\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.}
 
 
 \phantom{easter egg}
@@ -103,8 +102,7 @@ En þessi skilgreining innihélt engar aðferðir, við sjáum það í hluta  \
 
 Við munum svo beita klösum á hnitmiðaðri máta með svo kölluðum \textit{töfra aðferð} (e. magic method, double underscore method, eða dunder method\footnote{Þarna er orðunum double og under skeytt saman í dunder}) og skoða hvernig eigi að útbúa hlut með ákveðnum grunnupplýsingum.
 
-Áður en við höldum svo langt skulum við byrja á að skoða orðið \texttt{self} sem er ekki frátekið lykilorð heldur er það hefð og venja að nota það orð til að segja klasanum að nú sé hann að nota sig sjálfan (sjá endurkvæmni í kafla \ref{k:reiknirit}).
-\footnote{Skipta má út orðinu \texttt{self} fyrir hvað sem er, en það þarf þá að halda samhengi, best er að venja sig á nota \texttt{self} svo kóðinn verði læsilegri.}
+Áður en við höldum svo langt skulum við byrja á að skoða orðið \texttt{self} sem er ekki frátekið lykilorð heldur er það hefð og venja að nota það orð til að segja klasanum að nú sé hann að nota sig sjálfan (sjá endurkvæmni í kafla \ref{k:reiknirit}).\footnote{Skipta má út orðinu \texttt{self} fyrir hvað sem er, en það þarf þá að halda samhengi, best er að venja sig á nota \texttt{self} svo kóðinn verði læsilegri.}
 
 -----------
 
@@ -202,7 +200,7 @@ Klasar eiga möguleika á að \textbf{erfa} (e. inherit) frá öðrum klösum, v
 Því er það upp á einstaklinginn komið að venja sig á að gera alltaf annað hvort, höfundur hefur vanið sig á tóma sviga en er það enginn heilagur sannleikur.
 \end{itarefni}
 
-Næsta sem við þurfum að athuga er \emph{töfraaðferðin} \footnote{töfraaðferðir (e. magic methods, double underscore methods, dunder methods (þarna er orðunum double og under skeytt saman í dunder)) er hópur aðferða sem Python býður upp sem staðlað viðmót sem gerir forriturum kleift að nýta grunnvirkni eins og samanburð með samanburðarvirkja.} \texttt{\_\_init\_\_} og orðið \emph{self}.
+Næsta sem við þurfum að athuga er \emph{töfraaðferðin}\footnote{töfraaðferðir (e. magic methods, double underscore methods, dunder methods (þarna er orðunum double og under skeytt saman í dunder)) er hópur aðferða sem Python býður upp sem staðlað viðmót sem gerir forriturum kleift að nýta grunnvirkni eins og samanburð með samanburðarvirkja.} \texttt{\_\_init\_\_} og orðið \emph{self}.
 Orðið self eitt og sér er ekki lykilorð, það má skipta því út fyrir eitthvað annnað, hins vegar hefur komist ákveðin venja á að nota það orð og gerir það kóða læsilegri að halda sig við það.
 En hvað gerir orðið self?
 Þetta orð er breyta sem inniheldur tilviki af klasanum sjálfum, í okkar tilfelli er það \texttt{samlokan\_min} í línu 6, þetta skýrist kannski þegar við skoðum endurkvæmni í kafla \ref{k:reiknirit}.

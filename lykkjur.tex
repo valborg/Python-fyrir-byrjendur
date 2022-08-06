@@ -171,8 +171,7 @@ Prófið ykkur nú aðeins áfram og reynið í staðinn fyrir \texttt{listinn\_
 Prófið nú að setja inn skilyrðissetningu þarna og nota \texttt{type()} með skilyrðissetningu til að prenta einungis þau x sem eru strengir.
 
 For lykkjur eru því helst gagnlegar þegar við vitum hversu mörg stök lykkjan á mörgulega að skoða, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
-Fallið \texttt{range()} tekur við sömu viðföngum eins og hornklofarnir\footnote{Það eru í raun ekki viðföng, í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðvöng beinlínis heldur vísar.} þegar við sóttum nokkur tákn upp úr streng eða lista, þau eru þó aðgreind með kommum.
-\footnote{Við höfum áður séð viðföng notuð í falli eins og \texttt{print()} fallið, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli.}
+Fallið \texttt{range()} tekur við sömu viðföngum eins og hornklofarnir\footnote{Það eru í raun ekki viðföng, í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðvöng beinlínis heldur vísar.} þegar við sóttum nokkur tákn upp úr streng eða lista, þau eru þó aðgreind með kommum.\footnote{Við höfum áður séð viðföng notuð í falli eins og \texttt{print()} fallið, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli.}
 
 Viðföngin í \texttt{range(a,b,c)} fallið eru heilartölur og þeim er raðað svona:
 
@@ -399,8 +398,7 @@ print('kemst ekki hingað því lykkjan er enn að keyra')
 \end{lstlisting}
 \lstset{style=venjulegt}
 Lykkjan í kóðabút \ref{lst:lykkjur-while-endalaust} keyrir að eilífu vegna þess að skilyrðið fyrir henni er \texttt{True} og ekkert breytir því í stefi hennar.
-Hægt er að stöðva vélina handvirkt í þessum aðstæðum.
-\footnote{Í Jupyter Notebooks er það gert með Kernel -> Restart Kernel.}
+Hægt er að stöðva vélina handvirkt í þessum aðstæðum.\footnote{Í Jupyter Notebooks er það gert með Kernel -> Restart Kernel.}
 En nú viljum við að þetta gerist ekki aftur svo við notum break lykilorðið.
 
 
@@ -640,8 +638,7 @@ Búið til lista með nokkrum strengjum, prentið út alla þá strengi sem inni
 \end{exercise}
 \begin{Answer}[ref={lyk5}]
 Athugið hér að nafnalistinn er ólíkur ykkar, þessi listi var gerður til að sýna að ANNA og Albert innihalda ekki táknið sem beðið var um og komast því ekki í gegn.
-Ef óskað væri eftir að hafa það tákn líka væri hægt að rifja upp \texttt{.lower()} úr kafla \ref{k:strengir} eða hvernig eigi að nota rökvirkja í segð.
-\footnote{Þá í stað \texttt{if "a" in stak} væri \texttt{if "a" in stak.lower()}, eða með rökvirkja \texttt{if "a" in stak or "A" in stak}.}
+Ef óskað væri eftir að hafa það tákn líka væri hægt að rifja upp \texttt{.lower()} úr kafla \ref{k:strengir} eða hvernig eigi að nota rökvirkja í segð.\footnote{Þá í stað \texttt{if "a" in stak} væri \texttt{if "a" in stak.lower()}, eða með rökvirkja \texttt{if "a" in stak or "A" in stak}.}
 	
 \begin{lstlisting}
 listi = ["Halldóra", "ANNA", "Sigurður", "Albert", "Jóna", "Valborg", "Unnur", "Pétur", "Unnar"]

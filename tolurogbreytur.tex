@@ -93,8 +93,7 @@ Kóði sem þið komið til með að skrifa á einnig að vera ykkur sjálfum sk
 
 Hér vorum við einnig að biðja tölvuna um að reikna einhvern heilan helling en við báðum vélina aldrei um að segja okkur neitt frá útkomunni sérstaklega eða geymdum hana neinstaðar.
 Í kóðabút \ref{lst:reiknadg} sést hvernig á að keyra kóða án þess að fá einhverjar villur (sjá kafla \ref{uk:tolur-villur}) eða gera neitt sérstakt.
-Markmiðið hjá okkur núna er að skilja hvernig reikniaðgerðirnar virka og því ættuð þið núna að prófa ykkur áfram, skoða forgangsröð aðgerða \footnote{\href{https://is.wikibooks.org/wiki/Forgangsr\%C3\%B6\%C3\%B0\_a\%C3\%B0ger\%C3\%B0a}{https://is.wikibooks.org/wiki/Forgangsröð\_aðgerða}.}, og þora að gera villur og reyna að lesa í þær.
-\footnote{Nánar um hvernig þessir \emph{reiknivirkjar} (e. arithmic operators) verka má sjá á \href{https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp}{síðu W3Schools}, sem er frábær síða til að læra meira um forritun.}
+Markmiðið hjá okkur núna er að skilja hvernig reikniaðgerðirnar virka og því ættuð þið núna að prófa ykkur áfram, skoða forgangsröð aðgerða\footnote{\href{https://is.wikibooks.org/wiki/Forgangsr\%C3\%B6\%C3\%B0\_a\%C3\%B0ger\%C3\%B0a}{https://is.wikibooks.org/wiki/Forgangsröð\_aðgerða}.}, og þora að gera villur og reyna að lesa í þær.\footnote{Nánar um hvernig þessir \emph{reiknivirkjar} (e. arithmic operators) verka má sjá á \href{https://www.w3schools.com/python/gloss_python_arithmetic_operators.asp}{síðu W3Schools}, sem er frábær síða til að læra meira um forritun.}
 
 \comment{
 # Þetta er eitthvað alveg nýtt og framandi.
@@ -124,8 +123,7 @@ Markmiðið hjá okkur núna er að skilja hvernig reikniaðgerðirnar virka og 
 
 Það er gott að byrja á því að átta sig á því hvernig á að keyra kóða og í kóðabút \ref{lst:reiknadg} vorum við vissulega að keyra kóða.
 Hann gerði ekkert merkilegt en við erum strax byrjuð að forrita.
-Við skulum svo ekki gleyma þessum undirstöðu reikniaðgerðum með þessum reiknivirkjum þegar við höldum áfram og gerum flóknari hluti.
-\footnote{
+Við skulum svo ekki gleyma þessum undirstöðu reikniaðgerðum með þessum reiknivirkjum þegar við höldum áfram og gerum flóknari hluti.\footnote{
 	Í öllum verkefnum í kóðabút \ref{lst:reiknadg} var verið að vinna með heiltölur, þó var útkoman úr deilingunni fleytitala. 
 	Ef við myndum skipta út hverri tölu fyrir sig og setja í staðinn sömu tölu með .0 fyrir aftan þá yrðu útkomurnar þær sömu nema fleytitölur. 
 	Ef við notum ólíkar týpur, og slíkt er vandmeðfarið, er það í lagi í þessu tilfelli þar sem Python gerir þá ráð fyrir að það sé í lagi að reikna allt með fleytitölum og framkvæmir reikninginn eins og við höfum verið að beita fleytitölum í hvívetna og niðurstaðan verður þá að sjálfsögðu fleytitala.
@@ -231,8 +229,7 @@ Svo í línu 5 segjum við vélinni að geyma aðra breytu, \texttt{x}, sem bygg
 Það sem gerist svo í endann er sambærilegt við það að ýta á = takkann á reiknivélinni.
 
 Takið eftir að þarna er notuð ný framsetning sem við höfum ekki séð áður, þarna stendur \texttt{print} með svigum fyrir aftan og inni í svigunum er breyta.
-Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak}
-\footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. 
+Ef þessi kóðabútur er keyrður þá kemur á \textit{staðalúttak}\footnote{Þann stað sem texti myndi prentast þegar forritið er notað, hvort sem það er á skjá eða beint á pappír úr prentara eða eitthvað allt annað. 
 Kannski verður úttaki varpað beint inn í heilann á forriturum einhvern tíma?} 
 það gildi sem breytan inniheldur.
 Ef þar hefði staðið \texttt{print(halft\_x)} hefðum við fengið svarið sem er geymt í breytunni \texttt{print(halft\_x)}.
@@ -321,8 +318,7 @@ Dæmin sem eru tekin eru í röð: fjöldi nemenda aukinn línulega, stofnstær�
 
 \section{Villur}\index{Villur}\label{uk:tolur-villur}
 Að svo stöddu er gott að hafa í huga hinar ýmsu \emph{villur} (e. errors) sem geta komið upp.
-Þegar við forritum í Python fáum við yfirleitt í hendurnar mjög lýsandi villur sem segja okkur hvað við gerðum vitlaust og hvar.
-\footnote{Td. í kóðabútum \ref{lst:str-reikniadg} og \ref{lst:lykkjur-while-false} má sjá villuskilaboð í úttaki.}
+Þegar við forritum í Python fáum við yfirleitt í hendurnar mjög lýsandi villur sem segja okkur hvað við gerðum vitlaust og hvar.\footnote{Td. í kóðabútum \ref{lst:str-reikniadg} og \ref{lst:lykkjur-while-false} má sjá villuskilaboð í úttaki.}
 Áður en lengra er haldið er vitlegt að kynnast þeim algengu villum sem koma upp, hvað þær þýða og hvernig á að taka á þeim.
 
 \begin{itemize}[leftmargin=*]

@@ -27,7 +27,8 @@ Við höfum séð föll áður, eins og:
 	\item type("breyta sem viðfang sem ég vil vita týpuna á")
 \end{itemize}
 
-Þetta eru innbyggð föll \footnote{\href{https://docs.python.org/3/library/functions.html}{Python skjölunin} inniheldur lista og upplýsingar um öll innbyggð föll (og aðsjálfsögðu margt fleira).}, það að þau séu innbyggð þýðir að við getum notað þau án þess að ná í einhvern annan kóða (sjá kafla \ref{k:import}) og eru þau flest svo gagnleg að ákveðið var að gefa notendum auðveldara aðgengi að þeim.
+Þetta eru innbyggð föll.\footnote{\href{https://docs.python.org/3/library/functions.html}{Python skjölunin} inniheldur lista og upplýsingar um öll innbyggð föll (og aðsjálfsögðu margt fleira).}
+Að þau séu innbyggð þýðir að við getum notað þau án þess að ná í einhvern annan kóða (sjá kafla \ref{k:import}) og eru þau flest svo gagnleg að ákveðið var að gefa notendum auðveldara aðgengi að þeim.
 
 Við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut en fall keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
 Allar aðferðir eru föll, ekki öll föll eru aðferðir.
@@ -71,10 +72,9 @@ Alveg eins og með aðrar breytur þá megum við ekki nota föll fyrr en búið
 	\end{center}
 \end{wrapfigure}
 
-Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er a.m.k. einum inndrætti innar en def lykilorðið tilheyrir fallinu okkar.
+Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er a.m.k. einum inndrætti innar en \texttt{def} lykilorðið, tilheyrir fallinu okkar.
 
-Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til, við ætlum að skoða minni úr forritun
-\footnote{Venjulega er það fyrsta sem er gert í nýju forritunarmáli er að prenta út á staðalúttak \texttt{Halló Heimur!}, þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á.} og prenta út einfalda setningu.
+Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til, við ætlum að skoða minni úr forritun\footnote{Venjulega er það fyrsta sem er gert í nýju forritunarmáli er að prenta út á staðalúttak \texttt{Halló Heimur!} þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á. Hér er \textit{minni} orð úr bókmenntafræðum.} og prenta út einfalda setningu.
 
 Takið eftir að fallið er skilgreint og svo er það sem er inndregið undir því það sem fallið gerir, fyrir neðan skilgreininguna (ekki lengur inndregið undir henni) er svo kallað í fallið með því að skrifa nafnið á því og tóma sviga fyrir aftan nafnið.
 Svigarnir eru nauðsynlegir því að þannig segjum við vélinni að við séum að kalla í fall.
@@ -340,8 +340,7 @@ Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum stre
 Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt“.
 Því að við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
 
-Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð.
-\footnote{Eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar.}
+Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð.\footnote{Eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar.}
 Það sem lykilorðið gerir er svipað \emph{break} lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
 Sjáum í kóðabút \ref{lst:foll-skilagildi}
 

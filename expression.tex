@@ -11,7 +11,7 @@ Núna ætlum við að velta fyrir okkur segðum, í þessum kafla ætlum við a�
 Til þess að gera það þurfum við að læra á nýja týpu sem heitir \texttt{boolean} og hefur lykilorðið \textbf{bool}, boolean gildi eru kölluð sanngildi (stundum búlsk gildi).
 
 Boolean týpan er frábrugðin þeim týpum sem við höfum séð hingað til því að það eru eingöngu tvö möguleg gildi sem Boolean getur verið, \textbf{True} og \textbf{False} sem þýðast sem 1 og 0, satt og ósatt.
-Þau eru upprunin úr búlskri algebru \footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka, endilega kíkið á ensku \href{https://en.wikipedia.org/wiki/Boolean_algebra}{Wikipediu síðuna}.} (e. Boolean algebra).
+Þau eru upprunin úr búlskri algebru\footnote{Ekki verður farið yfir búlíska algebru af neinu ráði í þessari bók en þau fræði eru gífurlega góður grunnur til að skilja betur hvernig segðir og rökvirkjar virka, endilega kíkið á ensku \href{https://en.wikipedia.org/wiki/Boolean_algebra}{Wikipediu síðuna}.} (e. Boolean algebra).
 Nú er það flestum kunnug staðreynd að tölvur vinna með 0 og 1 í grunninn, en hvernig það er notað í almennri forritun í æðri forritunarmálum er viðfangsefnið okkar núna.
 
 \begin{wrapfigure}{o}{0.25\textwidth} %i o r l 
@@ -62,8 +62,7 @@ Látum p vera yrðinguna ,,það er rigning“ og látum q vera yrðinguna ,,mé
 	\includegraphics[scale=0.65]{doooodles_valborg-14.png}
 \end{center}
 
-Ef við horfum á töflu \ref{tbl:sanntafla} þá sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand, og allar mögulegar samsetningar koma fram.
-\footnote{Fjöldi lína í sanntöflu byggir á fjölda yrðinga sem á að skoða. Ef það er bara ein yrðing þá er fjöldi lína 2, það er satt eða ósatt. Fjöldi lína er 2 í veldi fjölda staðhæfinga, eins og í töflu \ref{tbl:sanntafla} þá eru yrðingarnar tvær svo línurnar eru 2², og ef þær væru þrjár þá væri línufjöldinn 2³ og svo framvegis.}
+Ef við horfum á töflu \ref{tbl:sanntafla} þá sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand, og allar mögulegar samsetningar koma fram.\footnote{Fjöldi lína í sanntöflu byggir á fjölda yrðinga sem á að skoða. Ef það er bara ein yrðing þá er fjöldi lína 2, það er satt eða ósatt. Fjöldi lína er 2 í veldi fjölda staðhæfinga, eins og í töflu \ref{tbl:sanntafla} þá eru yrðingarnar tvær svo línurnar eru 2², og ef þær væru þrjár þá væri línufjöldinn 2³ og svo framvegis.}
 Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á hvað, og í fjórðu línu eru þær báðar sannar.
 Þá eru dálkarnir fyrir s1 og s2 svörin við spurningunum hér að ofan miðað við sanngildi yrðinganna í þeim tilteknu aðstæðum.
 Í þeim aðstæðum þar sem er hvorki rigning né mér er kalt þá er svarið við báðum spurningum einnig neitandi (0).
@@ -198,8 +197,7 @@ Segjum að við séum með vekjaraklukku sem við forritum til að hringja þega
 
 Ef klukkan er ekki orðin 8 viljum við ekki gera neitt, en ef hún er orðin átta þá viljum við að hún spili einhvern hljóm eða titri.
 Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef spilarinn er ekki búinn að giska á alla stafina í orðinu okkar viljum við geta beðið viðkomandi að spyrja aftur.
-\textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð.
-\footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}
+\textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð.\footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}
 Einnig gætum við viljað gera eitthvað tiltekið þá og því aðeins að eitthvað annað var ósatt.
 Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarandi setningu: Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.
 Hér er aðaláherslan lögð á mjólkurstöðuna okkar, ef við eigum ekki mjólk viljum við laga það, en ef við eigum mjólk þá getum við gert eitthvað annað.
@@ -500,8 +498,7 @@ Nú höfum við verið að skoða spurningar og svör við þeim sem við skrá�
 Það sem við viljum geta gert er að spyrja notandann að einhverju og geta gert eitthvað byggt á því svari.
 Við þurfum að fá \emph{inntak} (e. input) frá notandanum.
 Þá lærum við um nýtt innbyggt fall í Python sem heitir \texttt{input()}.
-Það sem input() gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þartilgert svæði, og við getum notað það í forritinu okkar.
-\footnote{Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.}
+Það sem input() gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þartilgert svæði, og við getum notað það í forritinu okkar.\footnote{Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.}
 
 Skoðum kóðadæmi í kóðabút \ref{lst:input}, þar sem við geymum svarið frá notanda í breytunni \texttt{svar} og viðfangið sem við settum inn í input fallið er strengur sem inniheldur spurninguna sem notandinn sér.
 Þar sést þó ekki þegar inntak glugginn var notaður.

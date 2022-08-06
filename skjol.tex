@@ -20,8 +20,7 @@ skjal.write('hér kemur eitthvað sem við viljum setja inn í skjalið okkar')
 skjal.close()
 \end{lstlisting}
 \vspace{0.3cm}
-Nú getum við séð, á sama stað og þessi kóði er keyrður, í skrársafninu (e. filesystem) okkar skjal sem heitir \texttt{skjal1.txt} vegna þess að við völdum það nafn í línu 1 innan svigans, ástæðan fyrir því að þarna stendur \emph{.txt} er sú að sú skráarending er fyrir einföld textaskjöl.
-\footnote{Svipað eins og .doc sem við könnumst flest við}
+Nú getum við séð, á sama stað og þessi kóði er keyrður, í skrársafninu (e. filesystem) okkar skjal sem heitir \texttt{skjal1.txt} vegna þess að við völdum það nafn í línu 1 innan svigans, ástæðan fyrir því að þarna stendur \emph{.txt} er sú að sú skráarending er fyrir einföld textaskjöl.\footnote{Svipað eins og .doc sem við könnumst flest við}
 Þar kemur einnig fram \texttt{mode} sem er valið sem \texttt{w+}, sem leyfir okkur að lesa og skrifa eða yfirskrifa.
 \todo{formatting}
 \newpage
@@ -64,7 +63,7 @@ Ef vélin er búin að lesa skjalið er leshausinn kominn út í enda og við ge
 
 Þetta er svipað því eins og ef við settum puttann niður í bók og mættum bara lesa orðin fyrir ofan puttann og svo bara til hægri, þá til að lesa eitthvað aftur eða fara lengra inn í bókina þyrftum við að taka upp puttann og færa hann þangað.
 
-Byrjum á að gera textaskjalið okkar aðeins bitastæðara með því að keyra eftirfarandi kóða í sér sellu í vinnubók \footnote{Virkar aðeins í Jupyter Notebooks og er ekki sér Python fyrirbæri heldur sérstætt fyrir þessar vinnubækur, þetta leyfir okkur að sleppa við $\backslash$n eða newline character og æfingar tengdum því}:
+Byrjum á að gera textaskjalið okkar aðeins bitastæðara með því að keyra eftirfarandi kóða í sér sellu í vinnubók\footnote{Virkar aðeins í Jupyter Notebooks og er ekki sér Python fyrirbæri heldur sérstætt fyrir þessar vinnubækur, þetta leyfir okkur að sleppa við $\backslash$n eða newline character og æfingar tengdum því}:
 \begin{verbatim}
 %%writefile skjal1.txt
 hér kemur eitthvað sem við viljum setja inn í skjalið okkar
@@ -110,8 +109,7 @@ línan endar ekki á punkti eða byrjar á litlum staf
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Í kóðabút \ref{lst:skjalavinnsla-open} eru teknar fyrir þær helstu aðferðir sem eru í boði fyrir lestur á skjali \texttt{read()} og \texttt{readlines()}, annað gefur okkur streng en hitt gefur okkur lista af línum sem við getum ítrað í gegnum.
-\footnote{Þarna kemur fram annað viðfang sem heitir \texttt{encoding}, þarna er það valið sem utf-8 sem er það táknasafn sem nær yfir alla séríslenka stafi. Ef þið lendið í vandræðum við að íslenskir stafir eru í ruglinu er gott að vita til þess að stafakóðunin er þá mögulega önnur en utf-8. Þetta á alls ekki bara við um Python heldur er þetta alþjóðlegur staðall sem nýtist hvarvetna.}
+Í kóðabút \ref{lst:skjalavinnsla-open} eru teknar fyrir þær helstu aðferðir sem eru í boði fyrir lestur á skjali \texttt{read()} og \texttt{readlines()}, annað gefur okkur streng en hitt gefur okkur lista af línum sem við getum ítrað í gegnum.\footnote{Þarna kemur fram annað viðfang sem heitir \texttt{encoding}, þarna er það valið sem utf-8 sem er það táknasafn sem nær yfir alla séríslenka stafi. Ef þið lendið í vandræðum við að íslenskir stafir eru í ruglinu er gott að vita til þess að stafakóðunin er þá mögulega önnur en utf-8. Þetta á alls ekki bara við um Python heldur er þetta alþjóðlegur staðall sem nýtist hvarvetna.}
 Takið eftir því að leshausinn er settur á stað 150 og svo er útkoman prentuð, en það hefur ekki áhrif á \texttt{linur} því að sú breyta var skilgreind þegar leshausinn var á 0 og færðist út í enda við það að nota \texttt{readlines()}.
 Prófið ykkur áfram með röðunina á kóðalínunum.
  
