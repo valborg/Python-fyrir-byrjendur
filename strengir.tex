@@ -281,7 +281,7 @@ Takið eftir því að þarna er orðið lykilorðið ,,skilar", sem þýðir a�
 
 Þar sem strengjaaðferðirnar skila flestar strengjum má setja hverja aðferðina á eftir annarri, eins og \texttt{"Valborg".upper().lower().swapcase().capitalize()}.
 Þessi aðgerðar-súpa er tiltölulega vitlaus en leyfileg, það sem gerist er að fyrst keyrist \texttt{upper}, svo keyrist \texttt{lower} á það sem \texttt{upper} skilaði og svo koll af kolli.
-Þetta heitir að keðja (e. to chain) og við munum sjá þetta oftar.
+Þetta heitir að \textit{keðjun} (e. chain) og við munum sjá þetta oftar.
 Einnig má þarna á milli ná í hlutstreng og gera t.d. \texttt{"Valborg"[0:3].lower()}.
 Svona vinnur vélin sig frá vinstri til hægri svo lengi sem að það sem skilast vinstra megin er eitthvað sem er löglegt að beita hægri hliðinni á.
 Dæmi um ólöglegt væri \texttt{"Valborg".index('b').upper()} þar sem \texttt{.index()} skilar heiltölu og á þær er ekki hægt að beita aðferinni \texttt{.upper()}.

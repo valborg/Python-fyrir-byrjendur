@@ -5,8 +5,8 @@ Listar eru gagnagrindur, sem þýðir að þeir geta geymt fyrir okkur hin ýmsu
 Listar eru skilgreindir með hornklofum [ ] og er lykilorðið þeirra \textbf{list}.
 
 \section{Listar skilgreindir}\index{Listar skilgreindir}\label{uk:listar-skilgreindir}
-Listar geyma, í ákveðinni röð (eins og strengir), þau gögn sem við viljum geta notað, þau mega vera af hvaða týpu sem er.
-Gögnin sem eru sett inn í listann eru kölluð stök og röðin sem þau eru í eru aðgengileg eftir vísum eða sætisnúmerum alveg eins og tákn í strengjum.
+Listar geyma þau gögn sem við viljum geta notað í ákveðinni röð (eins og strengir) og þau mega vera af hvaða týpu sem er.
+Gögnin sem eru sett inn í listann eru kölluð stök og röðin sem þau eru í er aðgengileg eftir vísum eða sætisnúmerum alveg eins og tákn í strengjum.
 Stökin eru aðgreind með kommum.
 Þær týpur sem við höfum séð hingað til eru heiltölur, fleytitölur, strengir og listar.
 Allt eru þetta möguleg stök í lista.
@@ -32,25 +32,25 @@ print(listinn_minn,talan_null,strengur_eitt,listi_af_strengjunum,talan_fimm)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Í kóðabút \ref{lst:listar-skilgreindir} sjáum við fimm lista skilgreinda, sá fyrsti inniheldur ekkert stak og er tómur listi, næstu tveir innihalda einsleit gögn, sá fjórði er búinn til sem sneið (e. slice) og sá fimmti inniheldur fjölbreytt gögn.
+Í kóðabút \ref{lst:listar-skilgreindir} sjáum við fimm lista skilgreinda, sá fyrsti inniheldur ekkert stak og er tómur listi, næstu tveir innihalda einsleit gögn, sá fjórði er búinn til sem \textit{sneið} (e. slice) og sá fimmti inniheldur fjölbreytt gögn.
 Breytan í línu 6 fær gildið 1 sem er heiltala, breytan í línu 7 verður strengurinn \texttt{bless} og breytan í línu 8 verður listi sem inniheldur strengina \texttt{bless} og \texttt{11}.
 
 Við sjáum einnig að við erum með 6 stök í listanum nyr\_listi sem er skilgreindur í línu 10.
 Fremsta stakið er strengur, næstu þrjú eru tölur, síðan kemur annar strengur og síðasta stakið í sæti 5 er listi.
 Sá listi inniheldur eitt stak sem er þá í núllta vísi í þessum innri lista.
-Það sem sést svo í línu 11 er keðjun (e. chain) hornklofa, þannig að hornklofa er beitt á það sem fyrri hornklofinn skilaði.
+Það sem sést svo í línu 11 er keðjun hornklofa, þannig að hornklofa er beitt á það sem fyrri hornklofinn skilaði.
 Þetta er eins og að skeyta einni strengjaaðferð fyrir aftan aðra eins og við sáum í lok síðasta kafla.
-Það sem gerist er að fyrst skoðar vélin hvað er í 5 sæti í breytunni \texttt{nyr\_listi}, sem er listinn \texttt{[5]}, þá nær vélin í það sem er í núllta sæti í þeim lista sem er heiltalan 5.
+Það sem gerist er að fyrst skoðar vélin hvað er í 5. sæti í breytunni \texttt{nyr\_listi}, sem er listinn \texttt{[5]}, þá nær vélin í það sem er í núllta sæti í þeim lista sem er heiltalan 5.
 
 Þetta getum við svo sannreynt með því að skoða úttakið og gera okkar eigin tilraunir.
 
 
-Ef við hugsum okkur töflureikni eins og Calc eða Excel þá getum við ímyndað okkur að ein lína þar sé eins og einn listi hér, að hver dálkur þar innihaldi gögn sem væri stak í listanum hér.
+Ef við hugsum okkur töflureikni eins og Calc eða Excel getum við ímyndað okkur að ein lína þar sé eins og einn listi hér, að hver dálkur þar innihaldi gögn sem væru stak í listanum hér.
 Þá getum við líka ímyndað okkur að ef við erum með margar raðir séu þær geymdar á einni örk eða einu skjali.
 Sjáum hvernig það myndi líta út í kóðabút \ref{lst:listar-arkir} þar sem við viljum halda utan um starfsfólk í fyrirtæki.
 Ef við ættum skjal í töflureikni sem héldi utan um allt starfsfólk í fyrirtæki gæti hausinn á því litið svona út: Nafn \hspace{0.1cm} Tölvupóstur \hspace{0.1cm}Deild\hspace{0.1cm} Símanúmer 
 
-Svo er hver röð fyrir neðan það útfyllt með upplýsingum um einhvað tiltekið starfsman.
+Svo er hver röð fyrir neðan það útfyllt með upplýsingum um eitthvað tiltekið starfsman.
 
 \begin{lstlisting}[caption=Listar af listum, label=lst:listar-arkir]
 starfsfolk = [["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"],
@@ -59,8 +59,8 @@ starfsfolk = [["Jóna Jónsdóttir", "jona@fyrirtaeki.is", "Póstur", "4445555"]
 
 \end{lstlisting}
 
-Við tökum eftir því að listinn \texttt{starfsfolk} í kóðabút \ref{lst:listar-arkir} inniheldur þrjá aðra lista, og þeir eru aðgreindir með kommum alveg eins og stökin inni í hverjum innri lista fyrir sig eru líka aðgreind með kommum.
-Einnig tökum við eftir því að hér sjáum við í fyrsta sinn inndrátt, það er í raun bara aukalegt bil sem vélin hunsar við að skilgreina breytuna starfsfolk og auðveldar það okkur að lesa kóðann.
+Við tökum eftir því að listinn \texttt{starfsfolk} í kóðabút \ref{lst:listar-arkir} inniheldur þrjá aðra lista og þeir eru aðgreindir með kommum, alveg eins og stökin inni í hverjum innri lista fyrir sig eru líka aðgreind með kommum.
+Einnig tökum við eftir því að hér sjáum við í fyrsta sinn inndrátt, það er í raun bara aukalegt bil sem vélin hunsar við að skilgreina breytuna \texttt{starfsfolk} og auðveldar það okkur að lesa kóðann.
 Þetta er ekki eins og inndrátturinn sem við munum sjá og beita í næsta kafla, \nameref{k:segðir}.
 Takið eftir því að gögnin eru einsleit, að fremsta stakið í öllum innri listum er af sömu týpu og svo koll af kolli.
 Þetta auðveldar gagnavinnslu því að við getum gert ráð fyrir því að lína númer 10.000 líti eins út án þess að þurfa að skoða hana.
@@ -68,14 +68,14 @@ Takið eftir því að gögnin eru einsleit, að fremsta stakið í öllum innri
 \section{Að vinna með gögn}\index{Að vinna með gögn}\label{uk:gagnavinnsla-listar}
 Þegar við geymum gögn viljum við að þau séu aðgengileg og að við getum skoðað þau, breytt þeim og unnið með á máta sem hentar okkur.
 Listar gera okkur kleift að nálgast gögn eftir sætisvísum, við eigum eftir að sjá gagnagrindur sem geyma stökin á annan máta.
-Við náum í gögn upp úr lista eftir sætisvísi alveg eins og við sóttum tiltekið tákn úr streng, með því að nota hornklofa og það vísa sem við vildum.
-Sætisvísar eru frá 0 upp í lengdina á listanum að einum frádregnum, svo ef það eru þrjú stök í listanum eins og í kóðabút \ref{lst:listar-arkir}, þá er listinn af lengd 3 og vísarnir í honum er 0,1 og 2.
+Við náum í gögn upp úr lista eftir sætisvísi, alveg eins og við sóttum tiltekið tákn úr streng, með því að nota hornklofa og þá vísa sem við vildum.
+Sætisvísar eru frá 0 upp í lengdina á listanum að einum frádregnum, svo ef það eru þrjú stök í listanum, eins og í kóðabút \ref{lst:listar-arkir}, er listinn af lengd 3 og vísarnir í honum eru 0, 1 og 2.
 Einnig megum við nota neikvæða vísa, eins og í strengjum, þar sem síðasta stakið er í vísi -1 og fremsta stakið er í vísi sem er jafn neikvæðri lengd listans.
 
 Hér þurfum við að athuga að við viljum ekki ruglast á því að skilgreina lista með hornklofum og að sækja gögn úr lista eða streng með hornklofum.
 Í fyrra tilfellinu standa hornklofarnir einir og sér, þar sem við erum að skilgreina nýjan lista.
 Í seinna tilfellinu standa hornklofarnir fyrir aftan þá breytu sem á að sækja gögn upp úr með ákveðnum sætisvísum.
-Sjáum, í kóðabút \ref{lst:listar-gagnanotkun} hvernig við getum fengið upplýsingar sem eru skráðar um tiltekið starfsman úr listanum úr kóðabút \ref{lst:listar-arkir}.
+Sjáum í kóðabút \ref{lst:listar-gagnanotkun} hvernig við getum fengið upplýsingar sem eru skráðar um tiltekið starfsman úr listanum úr kóðabút \ref{lst:listar-arkir}.
 
 \begin{center}
 	\includegraphics[scale=0.6, angle=-30]{doooodles_valborg-14.png}
@@ -95,9 +95,10 @@ Jóna Jónsdóttir
 \lstset{style=venjulegt}
 
 \subsection{Listar eru breytanlegir}
-Nú allt í einu munum við að Jóna er ekki Jónsdóttir heldur Alfreðsdóttir og við þurfum að laga það, við þurfum ekki að skilgreina listann allann upp á nýtt (sem við hefðum þurft að gera ef við værum með streng) heldur þurfum við bara að setja nýtt gildi inn fyrir það sem heldur utan um nafnið hennar Jónu.
+Nú allt í einu munum við að Jóna er ekki Jónsdóttir heldur Alfreðsdóttir og við þurfum að laga það.
+Við þurfum ekki að skilgreina listann allan upp á nýtt (sem við hefðum þurft að gera ef við værum með streng) heldur þurfum við bara að setja nýtt gildi inn fyrir það sem heldur utan um nafnið hennar Jónu.
 Við vitum að nafnið hennar er í listanum okkar sem heldur utan um starfsfólk, við vitum að hún er í núllta innri listanum og að nafnið hennar er núllta stakið í þeim lista, við sáum það í kóðabút \ref{lst:listar-gagnanotkun}.
-Þá það sem við gerum er að endurskilgreina þann stað í listanum í stað þess að endurskilgreina allan listann.
+Það sem við gerum þá er að endurskilgreina þann stað í listanum í stað þess að endurskilgreina allan listann.
 Hugsið þetta eins og 100.000.000 línur í gagnagrunni, væri ekki þægilegt að geta breytt bara einni línu í stað þess að þurfa að gera afrit af öllum grunninum til þess að breyta einu litlu nafni?
 
 \begin{lstlisting}[caption=Unnið með gögn úr lista, label=lst:listar-gagnabreyting]
@@ -112,36 +113,40 @@ print(starfsfolk)
 
 \section{Gagnlegar aðferðir á lista}\index{Aðferðir á lista}\label{uk:aðferðir-listar}
 
-Eins og tekið var fram í kaflanum um strengi þá er ekki ætlunin að fara yfir allar þær innbyggðu aðferðir sem til eru fyrir lista heldur draga fram nokkrar sem eru mjög gagnlegar til að auka skilning á notkun á aðferðum.
+Eins og tekið var fram í kaflanum um strengi þá er ekki ætlunin að fara yfir allar þær innbyggðu aðferðir sem til eru fyrir lista heldur draga fram nokkrar sem eru mjög gagnlegar til að auka skilning á notkun aðferða.
 
 Gefum okkur að við eigum listann \texttt{[0,2,1,3]} sem er geymdur í breytunni \texttt{listinn\_minn}, við gefum okkur einnig að aðferðir séu keyrðar á hann án þess að aðferðin á undan hafi breytt honum neitt.
-
+Þessum aðferðum má svo beita á hnitmiðaðri máta með því að nota viðföng.\footnote{\href{https://www.w3schools.com/python/python_lists.asp}{w3schools.com síðan um lista í Python}.}
+\vspace{0.4cm}
 \begin{itemize}[]
 	\item \textbf{pop} virkar eins og við séum með stafla af diskum og við poppum einum disknum af.
 	\item[] \texttt{listinn\_minn.pop()}
 	\begin{itemize}
 		\item það sem þetta gerir er að breyta listanum og skila staki.
-		\item gildið sem það skilar er aftasta stakið úr listinn\_minn.
-		\item 3 er gildið sem það skilar í okkar tilfelli svo listinn\_minn verður að [0,2,1].
-		\item hægt er að geyma það með því að gera x = listinn\_minn.pop() og þá inniheldur x töluna 3.
-		\item einnig er hægt að setja inn sætisnúmer sem viðfang og þá er stakið í því sæti fjarlægt og listinn dregst saman, sjá kóðabút \ref{lst:listar-pop}.
+		\item gildið sem það skilar er aftasta stakið úr \texttt{listinn\_minn}.
+		\item 3 er gildið sem það skilar í okkar tilfelli svo \texttt{listinn\_minn} verður að [0,2,1].
+		\item hægt er að geyma það með því að gera \texttt{x = listinn\_minn.pop()} og þá inniheldur \texttt{x} töluna 3.
+		\item einnig er hægt að setja inn sætisnúmer sem viðfang og þá er stakið í því sæti fjarlægt og listinn dregst saman.
+		\item sjá kóðabút \ref{lst:listar-pop}.
 	\end{itemize}
+	\vspace{0.6cm}
 	\item \textbf{append} þýðir að skeyta aftan við og það er nákvæmlega það sem aðferðin gerir.
 	\item[] \texttt{listinn\_minn.append(x)}
 	\begin{itemize}
-		\item það sem þetta gerir er að breyta listanum þannig að búið er að bæta breytunni x aftast í listann.
+		\item það sem þetta gerir er að breyta listanum þannig að búið er að bæta breytunni \texttt{x} aftast í listann.
 		\item þessi aðferð skilar engu til baka til okkar svo það er ekkert vit í því að skrifa \texttt{listi = listinn\_minn.append(4)}
-		\item segjum að x hafi verið stillt sem talan 4 þá lítur listinn núna svona út [0,2,1,3,4].
+		\item ef segjum að \texttt{x} hafi verið stillt sem talan 4 þá lítur listinn núna svona út \texttt{[0,2,1,3,4]}.
 		\item þessi aðferð verður að fá eitt viðfang og nákvæmlega eitt viðfang, sem er af hvaða gagnatýpu sem er, svo við gætum sett inn einn lista sem inniheldur 100.000 stök en það er nákvæmlega einn listi.
-		\item sjá notkun í kóðabút \ref{lst:listar-append}
+		\item sjá notkun í kóðabút \ref{lst:listar-append}.
 	\end{itemize}
+	\vspace{0.4cm}
 	\item \textbf{sort} þýðir að raða og þessi aðferð raðar listanum ef það er mögulegt.
 	\item[] \texttt{listinn\_minn.sort()}
 	\begin{itemize}
-		\item það sem þetta gerir er að raða listanum í röð með samanburðarvirkjum (þeir verða kynntir í kafla \nameref{k:segðir}), og stökin í listanum þurfa þá að vera samanburðarhæf.
-		\item aðferðin raðar listanum í röð frá lægsta gildi til hæsta gildis, það er okkur tamt þegar við skoðum talna lista en í því tilfelli að listinn innihaldi bara strengi þýðir það að listanum er raðað í stafrófsröð sem er skilgreind eftir því táknakerfi sem Python notar.
-		\item listinn\_minn.sort() myndi gera það að verkum að hann sé nú geymdur sem [0,1,2,3].
-		\item aðferðin skilar engu svo það er ekkert vit í því að gera \texttt{x = listinn\_minn.sort()}
+		\item það sem þetta gerir er að raða listanum í röð með samanburðarvirkjum (þeir verða kynntir í kafla \ref{k:segðir}), en stökin í listanum þurfa þá að vera samanburðarhæf.
+		\item aðferðin raðar listanum í röð frá lægsta gildi til hæsta gildis, það er okkur tamt þegar við skoðum talna lista  en ef listinn inniheldur bara strengi raðast hann í stafrófsröð sem er skilgreind eftir því táknakerfi sem Python notar.
+		\item \texttt{listinn\_minn.sort()} myndi gera það að verkum að hann geymist nú sem \texttt{[0,1,2,3]}.
+		\item aðferðin skilar engu svo það er ekkert vit í því að gera \texttt{x = listinn\_minn.sort()}.
 		\item sjá notkun í kóðabút \ref{lst:listar-sort}.
 	\end{itemize}
 	
@@ -178,19 +183,20 @@ print(test)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Sjáum að í línu 4 í kóðabút \ref{lst:listar-pop} þá er einhver tala sett inn í aðferðina, sem segir til um sætisnúmerið sem við viljum fjarlægja en í línunni á undan þá var það aftasta stakið.
+Við sjáum í línu 4 í kóðabút \ref{lst:listar-pop} að einhver tala er sett inn í aðferðina, hún segir til um sætisnúmerið sem við viljum fjarlægja.
+Í línunni á undan þá var það aftasta stakið.
 Athugum einnig úttakið að listinn \texttt{test} hefur snarminnkað.
 Getiði núna fjarlægt stak í stæði 1?
 Af hverju ekki?
 
-Athugum í kóðabút \ref{lst:listar-append} er verið að bæta aftan í lista, í línu 5 er heilum lista bætt við og í línu 6 er bætt við þann lista.
+Athugum að í kóðabút \ref{lst:listar-append} er verið að bæta aftan í lista, í línu 5 er heilum lista bætt við og í línu 6 er bætt við þann lista.
 Skoðið þetta og prófið ykkur áfram með það.
 Hvað gerist ef þið setjið tvo strengi inn sem viðfang með kommu á milli?
-Getiði sett inn streng sem er með strengjaaðferð hangandi á sér inn í svigana?
+Getið þið sett inn streng sem er með strengjaaðferð hangandi á sér inn í svigana?
 
-Þá síðast skoðum við að raða, raða má einsleitum eða sambærilegum stökum.
+Að lokum skoðum við röpun, en raða má einsleitum eða sambærilegum stökum.
 Ef listinn inniheldur innri lista er raðað eftir fremsta, núllta, staki hvers lista.
-Gerið nú tilraun á þessu með því að setja inn gögn af mismunandi týpum inn í lista og raða svo, eða breyta \texttt{starfsfolk} listanum þannig að fremsta stakið sé einhversstaðar tala en annarsstaðar strengur.
+Gerið nú tilraun á þessu með því að setja inn gögn af mismunandi týpum inn í lista og raða svo, eða breyta \texttt{starfsfolk} listanum þannig að fremsta stakið sé einhvers staðar tala en annars staðar strengur.
 Sjáið hvaða villu þið fáið.
 
 \begin{lstlisting}[caption=.sort() aðferðin, label=lst:listar-sort]
@@ -219,7 +225,7 @@ print(starfsfolk)
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{lst1}
-	Búðu til breytu sem inniheldur lista
+	Búðu til breytu sem inniheldur lista.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={lst1}]
@@ -236,7 +242,7 @@ listi_med_stokum = ["hér settum við eitthvað inn"]\end{lstlisting}
 \begin{enumerate}
 
 	\item Búðu til lista sem inniheldur 4 stök sem öll eru af mismunandi týpum.
-	\item Vitandi hvar strengurinn er í listanum, skaltu svo breyta stakinu í listanum sem inniheldur strenginn og setja einhvern annan streng í staðinn.
+	\item Vitandi hvar strengurinn er í listanum, skaltu breyta stakinu í listanum sem inniheldur strenginn og setja einhvern annan streng í staðinn.
 \end{enumerate}
 \end{exercise}
 \begin{Answer}[ref={lst2}]
@@ -257,12 +263,12 @@ listi[2] = "nýr strengur í stað þess sem var"\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{lst3}
-Gefin er eftirfarandi kóði.
-Það sem við viljum gera er að fletta upp heimavist og netfangi nemanda 1 og 2.
+Gefinn er eftirfarandi kóði.
+Það sem við viljum gera er að fletta upp heimavist og netfangi nemenda 1 og 2.
 Við viljum búa til strengjabreytu sem inniheldur þessi gögn fyrir hvorn nemanda fyrir sig.
-Án þess að vita hvernig nem1 og nem2 breyturnar líta út (eins og við höfum fengið þær gefnar að nafninu til og sjáum ekki hvað þær geyma) við fáum að vita að breyturnar séu listar sem séu eins uppbyggðir og header listinn.
+Án þess að vita hvernig \texttt{nem1} og \texttt{nem2} breyturnar líta út (eins og við höfum fengið þær gefnar að nafninu til og sjáum ekki hvað þær geyma) fáum við að vita að breyturnar eru listar sem eru eins uppbyggðir og \texttt{header} listinn.
 
-Við þurfum því að beita index aðferðinni til að finna gögnin.
+Við þurfum því að beita \texttt{index} aðferðinni til að finna gögnin.
 \begin{lstlisting}
 header = ["nemandi", "sími", "heimavist", "netfang", "lykilorð", "áfangar"]
 nem1 = ["Valborg", "9999999", "vestur", "valborg@netfang.is", "best_practice", "FORR2**"]
@@ -289,10 +295,10 @@ uppl_nem2 = nem2[header.index('heimavist')] + nem2[header.index('netfang')]\end{
 \end{Answer}
 
 \begin{exercise}\label{lst4}
-	Gefinn er eftirfarandi kóðabútur, náðu í strenginn "valli" þannig að hann sé geymdur í breytu og type fallið af breytunni skili niðurstöðunni str.
-	Náðu einnig í töluna 0 innan listans og geymdu í breytu þannig að type fallið af henni skilið int. 
+	Gefinn er eftirfarandi kóðabútur, náðu í strenginn \texttt{'valli'} þannig að hann sé geymdur í breytu og type fallið af breytunni skili niðurstöðunni str.
+	Náðu einnig í töluna 0 innan listans og geymdu í breytu þannig að \texttt{type} fallið af breytunni skili \texttt{int}. 
 \begin{lstlisting}
-nested_list = [[[[0],1],2],["hvar"],["er"],[["valli"],"?"]]\end{lstlisting}
+nested_list = [[[[0],1],2],["hvar"],["er"],[['valli'],"?"]]\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={lst4}]
 Hér þurfum við að athuga að listinn inniheldur marga lista og það má keðja notkun hornklofa til að sækja gögn.
@@ -341,10 +347,10 @@ tengilidir.pop(2))\end{lstlisting}
 Leystu eftirfarandi verkefni í röð:
 \begin{enumerate}
 	\item Búðu til lista sem inniheldur nokkra innri lista, innri listarnir eru upplýsingar um gæludýr (nafn, aldur og tegund).
-	\item Kemur í ljós að Askja, 13 ára gömul border collie tík gleymdist, bættu henni í listann.
+	\item Í ljós kemur að Askja, 13 ára gömul border collie tík gleymdist, bættu henni í listann.
 	\item Askja á sér það áhugamál að elta laufblöð, bættu því aftast í listann sem inniheldur gögnin um Öskju.
 	\item Nú skaltu raða ytri listanum.
-	\item Kemur í ljós að það hentar ekki að geyma gögn um áhugamálið hennar Öskju, fjarlægðu þau gögn úr listanum um Öskju.
+	\item Í ljós kemur að það hentar ekki að geyma gögn um áhugamálið hennar Öskju, fjarlægðu þau gögn úr listanum um Öskju.
 	\item Æ, nú er Askja dáin og það þarf að fjarlægja hana úr ytri listanum.
 \end{enumerate}
 \end{exercise}
