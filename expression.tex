@@ -2,9 +2,9 @@
 
 \chapter{Segðir, skilyrðissetningar og sanngildi}\label{k:segðir}
 Kóða má skipta í \emph{segðir} (e. expressions) og \emph{yrðingar} (e. statements).
-Segð er eitthvað sem krefst svars, ,,er rigning?“.
+Segð er eitthvað sem krefst svars, ,,er rigning?“
 Svarið er metið sem gildi og við fáum útkomu.
-Yrðing er eitthvað sem er sett fram sem staðreynd ,,það er rigning“.
+Yrðing er eitthvað sem er sett fram sem staðreynd, ,,það er rigning“.
 
 Núna ætlum við að velta fyrir okkur segðum, í þessum kafla ætlum við að einbeita okkur að því að meta útkomu og fá í hendurnar svör sem við getum svo gert eitthvað við.
 
@@ -21,18 +21,18 @@ Nú er það flestum kunnug staðreynd að tölvur vinna með 0 og 1 í grunninn
 \end{wrapfigure}
 
 Í þessum kafla verður farið yfir sanngildi,  \emph{samanburð} (e. comparison) og \emph{samanburðarvirkja} (e. comparison operators), \emph{rökvirkja} (e. logical operators) og svo \emph{skilyrðissetningar} (e. conditional statements).
-Það er mikilvægt að ná góðum tökum á þessum kafla ef halda á lengra inn í námsefnið, ef ekki er skilingur fyrir hendi á því hvernig segðir virka eða hvernig á að setja upp skilyrðissetningu er erfitt að ætla að halda mikið áfram.
+Mikilvægt er að ná góðum tökum á þessum kafla ef halda á lengra inn í námsefnið, ef ekki er skilingur fyrir hendi á því hvernig segðir virka eða hvernig á að setja upp skilyrðissetningu er erfitt að ætla að halda mikið áfram.
 Því er gott að gefa sér nægan tíma í þetta efni og gera ítarlegar tilraunir.
 
 \section{Sanngildi}\index{Sanngildi}
 
 Eins og kom fram í inngangi kaflans eru sanngildi einungis tvö, True og False.
 Hægt er að geyma þau í breytum eins og gögn af öðrum týpum sem við höfum séð.
-Sanngildi eru einnig metin sem 1 eða 0, fyrir True annars vegar og False hinsevegar.
+Sanngildi eru einnig metin sem 1 eða 0, fyrir True annars vegar og False hins vegar.
 
-Vitandi að gildin geta verið 0 eða 1 (aldrei bæði í einu) þá er þess virði að nefna hérna sanntöflur.
+Vitandi að gildin geta verið 0 eða 1 (aldrei bæði í einu) er þess virði að nefna hérna sanntöflur.
 Látum p vera yrðinguna ,,það er rigning“ og látum q vera yrðinguna ,,mér er kalt“.
-Þá gætum við, með því að skoða mismunandi aðstæður, fengið rökrétt svar við t.d. spurningunni ,,er rigning og er mér kalt?“ sem við getum skrifað sem spurning1 (eða s1) og svo annarri spurningu sem er ,,er rigning eða er mér kalt?“ sem við getum kallað spurning2 (eða s2).
+Þá gætum við, með því að skoða mismunandi aðstæður, fengið rökrétt svar við spurningunum „er rigning og er mér kalt?“, sem við getum skrifað sem spurning1 (eða s1), og svo „er rigning eða er mér kalt?“, sem við getum kallað spurning2 (eða s2).
 
 \begin{center}
 %\centering
@@ -62,13 +62,17 @@ Látum p vera yrðinguna ,,það er rigning“ og látum q vera yrðinguna ,,mé
 	\includegraphics[scale=0.65]{doooodles_valborg-14.png}
 \end{center}
 
-Ef við horfum á töflu \ref{tbl:sanntafla} þá sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand, og allar mögulegar samsetningar koma fram.\footnote{Fjöldi lína í sanntöflu byggir á fjölda yrðinga sem á að skoða. Ef það er bara ein yrðing þá er fjöldi lína 2, það er satt eða ósatt. Fjöldi lína er 2 í veldi fjölda staðhæfinga, eins og í töflu \ref{tbl:sanntafla} þá eru yrðingarnar tvær svo línurnar eru 2², og ef þær væru þrjár þá væri línufjöldinn 2³ og svo framvegis.}
-Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á hvað, og í fjórðu línu eru þær báðar sannar.
+Ef við horfum á töflu \ref{tbl:sanntafla} sjáum við að yrðingarnar okkar um rigningu og kulda eru uppsettar þannig að hver lína í töflunni er einstakt ástand og allar mögulegar samsetningar koma fram.\footnote{Fjöldi lína í sanntöflu byggir á fjölda yrðinga sem á að skoða.
+Ef það er bara ein yrðing þá er fjöldi lína 2, það er satt eða ósatt. Fjöldi lína er 2 í veldi fjölda staðhæfinga, í töflu \ref{tbl:sanntafla} eru yrðingarnar tvær og þá eru línurnar 2², og ef þær væru þrjár væri línufjöldinn 2³ og svo framvegis.}
+Báðar yrðingar eru ósannar í fyrstu línunni, svo eru þær sannar sitt á hvað og í fjórðu línu eru þær báðar sannar.
 Þá eru dálkarnir fyrir s1 og s2 svörin við spurningunum hér að ofan miðað við sanngildi yrðinganna í þeim tilteknu aðstæðum.
-Í þeim aðstæðum þar sem er hvorki rigning né mér er kalt þá er svarið við báðum spurningum einnig neitandi (0).
-Í þeim aðstæðum þar sem er bæði rigning og mér er kalt þá er svarið við báðum spurningum játandi (1).
-Þannig að til þess að svarið við spurningu 1 sé játandi þá þarf mér bæði að vera kalt og það þarf að vera rigning, svo þegar yrðingarnar eru ekki sannar á sama tíma þá skiptir ekki máli hvor sé sönn því að önnur er ósönn og því er svarið neitandi.
-En spurning 2 er þannig orðuð að það sé nóg að annað hvort sé mér kalt eða það sé rigning úti til þess að svarið sé játandi, svo þegar yrðingarnar eru sannar á víxl þá er svarið alltaf játandi.
+Í þeim aðstæðum þar sem er hvorki rigning né mér er kalt er svarið við báðum spurningum einnig neitandi (0).
+Í þeim aðstæðum þar sem er bæði rigning og mér er kalt er svarið við báðum spurningum játandi (1).
+Til þess að svarið við spurningu 1 sé játandi þarf mér því bæði að vera kalt og það þarf að vera rigning.
+Svo þegar yrðingarnar eru ekki sannar á sama tíma skiptir ekki máli hvor er sönn því að önnur er ósönn og því er svarið neitandi.
+Spurning 2 er hinsvegar orður þannig að það er nóg að annað hvort sé mér kalt eða það sé rigning úti til þess að svarið sé játandi.
+Þannig er svarið alltaf játandi þegar yrðingarnar eru sannar á víxl.
+
 \begin{lstlisting}[caption=Sanngildi geymd sem breytur, label=lst:bool-breytur]
 satt = True
 strengur = "True"
@@ -76,15 +80,15 @@ osatt = False
 \end{lstlisting}
 
 Akkúrat núna þurfum við bara að vita að týpan Boolean sé til og hvernig eigi að nota hana, með hástaf fremst.
-Sjáum svo í seinni köflum hvernig hún gagnast okkur.
+Við sjáum svo í seinni köflum hvernig hún gagnast okkur.
 
 
 \section{Segðir}\index{Segðir}
 
-Eins og kom fram í inngangi kaflans má líta svo á að segðir séu sá hluti af kóðans sem er metinn sem eitthvað gildi, eins og 4 + 5 er segð en x = 5 er yrðing.
+Eins og kom fram í inngangi kaflans má líta svo á að segðir séu sá hluti kóðans sem er metinn sem eitthvað gildi, eins og 4 + 5 er segð en x = 5 er yrðing.
 Nú ætlum við þó að einblína á búlskar segðir, horfa á spurningar sem hafa svar sem er annað hvort satt eða ósatt.
 Er rigning?
-Þá horfum við út og sjáum að miðað við aðstæður þá er svarið annað hvort satt eða ósatt og það breytist eftir því hvenær við horfum.
+Þá horfum við út og sjáum að miðað við aðstæður er svarið annað hvort satt eða ósatt og það breytist eftir því hvenær við horfum.
 
 \subsection{Samanburður}\index{Samanurður}
 Hvað er samanburður?
@@ -96,20 +100,21 @@ Athugið hér að aðalatriðið er að bera saman eitthvað tvennt, ekki er hæ
 
 Nú þurfum við nýtt hugtak, við erum búin að kynnast reiknivirkjum eins og + og - í kafla \ref{uk:tolur-reiknivirkjar}.
 Nýja hugtakið okkar eru \textbf{samanburðarvirkjar}.
-Samanburðarvirkjar eru notaðir til að spyrja hvort að ákveðin tengsl gilda á milli einhverja tveggja hluta.
-Eins og í daglegu tali þegar við segjum ,,er þetta epli stærra en þessi appelsína?“ og erum þannig að bera saman epli og appelsínur, samanburðarvirkjar eru til þess að gera slíka setningu formlega svo að tölva geti svarað spurningunni.
+Samanburðarvirkjar eru notaðir til að spyrja hvort ákveðin tengsl gildi á milli einhverra tveggja hluta.
+Þetta er eins og þegar við segjum í daglegu tali ,,er þetta epli stærra en þessi appelsína?“ þar með erum við að bera saman epli og appelsínur.
+Samanburðarvirkjar eru til þess að gera slíka setningu formlega svo að tölva geti svarað spurningunni.
 
-Samanburðarvirkjar eru nokkir í Python:
+Samanburðarvirkjar eru nokkrir í Python:
 \begin{itemize}
-	\item[] \textbf{==} þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu jafngildir
-	\item[] \textbf{!=} þá er spurt hvort að hlutirnir sitt hvoru megin við virkjann séu ólíkir
-	\item[] \textbf{<} þá er spurt hvort að það sem er vinstra megin sé strangt minna en það sem hægra megin (3 er ekki minna en 3 t.d.)
-	\item[] \textbf{>} þá er spurt hvort að það sem er vinstra megin sé strangt stærra en það sem er hægra megin
-	\item[] \textbf{<=} þá er spurt hvort að það sem er vinstra megin sé minna eða jafnt því sem er hægra megin
-	\item[] \textbf{>=} þá er spurt hvort að það sem er vinstra megin sé stærra eða jafnt því sem er hægra megin
+	\item[] \textbf{==} þá er spurt hvort hlutirnir sitthvoru megin við virkjann séu jafngildir.
+	\item[] \textbf{!=} þá er spurt hvort hlutirnir sitthvoru megin við virkjann séu ólíkir.
+	\item[] \textbf{<} þá er spurt hvort það sem er vinstra megin sé strangt minna en það sem hægra megin (3 er ekki minna en 3 t.d.).
+	\item[] \textbf{>} þá er spurt hvort það sem er vinstra megin sé strangt stærra en það sem er hægra megin.
+	\item[] \textbf{<=} þá er spurt hvort það sem er vinstra megin sé minna eða jafnt því sem er hægra megin.
+	\item[] \textbf{>=} þá er spurt hvort það sem er vinstra megin sé stærra eða jafnt því sem er hægra megin.
 \end{itemize}
 
-Skoðum kóðabút þar sem þessir samanburðarvirkjar eru nýttir til þess annars vegar að fá niðurstöður með tölur og hinsvegar strengi.
+Skoðum kóðabút þar sem þessir samanburðarvirkjar eru nýttir til þess annars vegar að fá niðurstöður með tölur og hins vegar strengi.
 \begin{lstlisting}[caption=Samanburðarvirkjar, label=lst:bool-samanburður]
 strengur1 = "abc"
 strengur2 = "bcd"
@@ -146,33 +151,33 @@ True
 Í kóðabút \ref{lst:bool-samanburður} er ekki verið að nota alla samanburðarvirkjana heldur einungis sýna hvernig er hægt að prófa sig áfram með þá.
 
 \subsection{Rökvirkjar}\index{Rökvirkjar}
-Rökvirkjar (e. logical operators) í Python eru þrír, þeir eru \textbf{og}, \textbf{eða}  og \textbf{ekki} táknað með \texttt{and}, \texttt{or} og \texttt{not}.
-Nöfnin þeirra eru lykilorð í Python eins og nöfnin á týpunum sem við höfum séð (\textbf{str}, \textbf{int}, \textbf{float}, \textbf{list}) en rökvirkjar eru ekki gögn af einhverri týpu heldur eru meira eins og reiknivirkjarnir (+, -, *, **, //, \%).
-Það sem þessir virkjar gera fyrir okkur er að taka tvær búlskar segðir og egja okkur eitthvað um samsetningu þeirra.
-Tökum dæmi; ,,Kaffið er heitt og það eru til sítrónur“.
-Hægt er að meta hvort að kaffið sé heitt eða ekki, og fá þannig út sanngildi fyrir þá segð, það er hægt að gera það sama fyrir segðina um sítrónurnar.
-En tökum eftir að á milli þessara tveggja segða er rökvirkinn \textit{og}, sem segir okkur að til þess að meta gildi allrar setningarinnar þurfa báðar segðirnar sitthvoru megin við rökvirkjann að vera sannar til þess að setningin í heild sinni skili sönnu annars er hún ósönn.
+\textit{Rökvirkjar} (e. logical operators) í Python eru þrír, þeir eru \textbf{og}, \textbf{eða}  og \textbf{ekki} táknað með \texttt{and}, \texttt{or} og \texttt{not}.
+Nöfn þeirra eru lykilorð í Python eins og nöfnin á týpunum sem við höfum séð (\textbf{str}, \textbf{int}, \textbf{float}, \textbf{list}) en rökvirkjar eru ekki gögn af einhverri týpu heldur eru meira eins og reiknivirkjarnir (+, -, *, **, //, \%).
+Það sem þessir virkjar gera fyrir okkur er að taka tvær búlskar segðir og segja okkur eitthvað um samsetningu þeirra.
+Tökum dæmi: ,,Kaffið er heitt og það eru til sítrónur“.
+Hægt er að meta hvort kaffið sé heitt eða ekki og fá þannig út sanngildi fyrir þá segð eins og hægt er að gera fyrir segðina um sítrónurnar.
+En tökum eftir að á milli þessara tveggja segða er rökvirkinn \textit{og}, sem segir okkur að til þess að meta gildi allrar setningarinnar þurfa báðar segðirnar sitthvorum megin við rökvirkjann að vera sannar til þess að setningin í heild sinni skili sönnu, annars er hún ósönn.
 \vspace{10pt}
 \begin{itemize}
 	\item[] \textbf{and} til þess að segð með þessum rökvirkja sé sönn þurfa báðar hliðar að vera sannar, annars er hún ósönn
 	\begin{itemize}
 		\item Það má líta á \textit{og} rökvirkjann eins og margföldun, hann hefur forgang umfram \underline{eða}.
-		\item Þar sem satt er 1 og ósatt 0 þá ef við margöldum með 0 fáum við alltaf 0 út.
+		\item Þar sem satt er 1 og ósatt 0 fáum við alltaf út 0 ef við margföldum með 0.
 		\item ,,það er heitt úti“ og ,,það er kalt úti“ myndi skila okkur ósönnu því ekki getur bæði verið satt.
 		\item ,,það er heitt úti“ og ,,klukkan er fimm“ myndi skila okkur sönnu eftir aðstæðum.
 	\end{itemize}
 	\item[] \textbf{or} til þess að segð með þessum rökvirkja sé sönn þarf önnur hvor hliðin að vera sönn, annars er hún ósönn.
 	\begin{itemize}
 		\item Það má líta á \textit{eða} rökvirkjann eins og samlagningu.
-		\item Þar sem satt er 1 og ósatt 0, þá þurfum við bara að sjá 1 einu sinni til þess að útkoman í heild sinni verði sönn.
+		\item Þar sem satt er 1 og ósatt 0 þurfum við bara að sjá 1 einu sinni til þess að útkoman í heild sinni verði sönn.
 		\item ,,það er heitt úti“ eða ,,það er kalt úti“ myndi skila okkur sönnu ef þetta væru þau einu tvö hitastig sem væru í boði.
 		\item ,,það er heitt úti“ eða ,,klukkan er fimm“ myndi skila sönnu eftir aðstæðum.
 	\end{itemize}
-	\item[] \textbf{not} snýr við sanngildi segðar, not er ekki sett á milli segða heldur fyrir framan eins segð.
+	\item[] \textbf{not} snýr við sanngildi segðar, not er ekki sett á milli segða heldur fyrir framan eina segð.
 	\begin{itemize}
-		\item Það má líta á rökvirkjan \textit{ekki} eins og mínus, hann snýr við sanngildi eins og formerki
+		\item Það má líta á rökvirkjann \textit{ekki} eins og mínus, hann snýr við sanngildi eins og formerki.
 		\item Ekki satt yrði ósatt, ekki ósatt yrði satt.
-		\item \textbf{ekki} ,,það er heitt úti“ yrði að yrðingunni ,,það er ekki heitt úti“.
+		\item neitum með \texttt{ekki} á yrðinguna ,,það er heitt úti“ skilaði yrðingunni ,,það er ekki heitt úti“.
 	\end{itemize}
 \end{itemize}
 
@@ -182,9 +187,9 @@ En tökum eftir að á milli þessara tveggja segða er rökvirkinn \textit{og},
 Til að halda áfram með þessa samlíkingu með margföldun, samlagningu og mínus skulum við skoða eftirfarandi reikningsdæmi:
 1$\cdot$1$\cdot$1$\cdot$0 + 1$\cdot$0 + (-1).
 Hér gerum við ráð fyrir að hver hluti af þessu reikningsdæmi sé yrðing sem búið er að meta sem sanna eða ósanna eftir þeim aðstæðum sem við erum í (kaffið er heitt, það er kalt úti og þess háttar).
-Þegar við reiknum þetta dæmi sjáum við að margfaldað er með 0 í báðum þáttunum þar sem margföldun kemur fyrir svo útkoman í hvorum fyrir sig ætti að vera núll.
+Þegar við reiknum þetta dæmi sjáum við að margfaldað er með 0 í báðum þáttunum þar sem margföldun kemur fyrir svo útkoman í báðum verður núll.
 Þessi síðasti liður er okkur ekki eins eðlislægur en við munum að það eru bara til 0 eða 1 og mínus skiptir gildinu okkar svo við hljótum að enda með 0.
-Þannig að við endum í 0 + 0 + 0 sem gefur okkur 0 og því er öll segðin metin sem ósönn.
+Við endum því í 0 + 0 + 0 sem gefur okkur 0 og því er öll segðin metin sem ósönn.
 \end{itarefni}
 
 
@@ -198,14 +203,14 @@ Segjum að við séum með vekjaraklukku sem við forritum til að hringja þega
 Ef klukkan er ekki orðin 8 viljum við ekki gera neitt, en ef hún er orðin átta þá viljum við að hún spili einhvern hljóm eða titri.
 Við gætum líka verið að forrita einfaldan tölvuleik eins og hengimann, ef spilarinn er ekki búinn að giska á alla stafina í orðinu okkar viljum við geta beðið viðkomandi að spyrja aftur.
 \textbf{Annars} viljum við að notandinn fái verðlaun fyrir að hafa giskað á rétt orð.\footnote{Hérna er gert ráð fyrir að mega giska óendanlega oft rangt.}
-Einnig gætum við viljað gera eitthvað tiltekið þá og því aðeins að eitthvað annað var ósatt.
-Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarandi setningu: Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.
+Einnig gætum við viljað gera eitthvað ákveðið þá og því aðeins að eitthvað annað var ósatt.
+Ef við notum okkar eigin máltilfinningu til að leggja skilning í eftirfarandi setningu: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina.“
 Hér er aðaláherslan lögð á mjólkurstöðuna okkar, ef við eigum ekki mjólk viljum við laga það, en ef við eigum mjólk þá getum við gert eitthvað annað.
 
-Þarna eru komnar aðstæður þar sem við athugum mólkurstöðuna og fyllum á ef þarf, en ef við eigum nóg af mjólk þá viljum við samt athuga hvort að við eigum nóg af safa því að við gætum þurft að fylla á þar.
-Hér er kannski ekki augljóst en ef það vantar mjólk þá skiptir ekki máli hvort það vanti kex eða ekki, við förum í búðina og kaupum mjólk, við kaupum ekki kex.
+Þarna eru komnar aðstæður þar sem við athugum mjólkurstöðuna og fyllum á ef þarf, en ef við eigum nóg af mjólk viljum við samt athuga hvort við eigum nóg af kexi því að við gætum þurft að fylla á þar.
+Þetta er kannski ekki augljóst en ef það vantar mjólk skiptir ekki máli hvort það vanti kex eða ekki, við förum í búðina og kaupum mjólk, við kaupum ekki kex.
 Þetta skilst kannski frekar á flæðiriti sem sést á mynd \ref{fig:flæðirit}.
-Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það sem er inni í gænum þríhyrningum eru spurningar sem þarf að svara, bláu ferhyrningarnir eru svo niðurstöður sem fást í málið.
+Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það sem er inni í grænum þríhyrningum eru spurningar sem þarf að svara, bláu ferhyrningarnir eru svo niðurstöður sem fást í málið.
 
 \tikzstyle{startstop} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
 \tikzstyle{io} = [trapezium, trapezium left angle=70, trapezium right angle=110, minimum width=2cm, minimum height=1cm, text centered, draw=black, fill=blue!30]
@@ -230,17 +235,19 @@ Flæðiritið líkir eftir uppsetningu á skilyrðissetningum þannig að það 
 \draw [arrow] (kex) -- node[anchor=south] {satt} (bud2);
 \draw [arrow] (kex) -- node[anchor=west] {ósatt} (bud3);
 \end{tikzpicture}
-\caption{Hér sést hvernig setningin: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort að við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina“ má setja fram sem fæðirit. Ef það er engin mjólk þá förum við og kaupum mjólk, en ef það er til mjólk þá athugum við hvort að það sé til kex og kaupum það ef það vantar, hins vegar ef við eigum bæði kex og mjólk er engin ástæða til að fara í búðina.}
+\caption{Hér sést eftirfarandi setningin í flæðiriti: ,,Ef við eigum ekki mjólk vil ég kaupa mjólk, ef svo er ekki vil ég athuga hvort við eigum kex og ef við eigum ekki kex vil ég kaupa það, annars fer ég ekkert í búðina“. Ef það er engin mjólk förum við og kaupum mjólk, en ef það er til mjólk þá athugum við hvort að það sé til kex og kaupum það ef það vantar.
+Ef við hins vegar eigum bæði kex og mjólk er engin ástæða til að fara í búðina.}
 \label{fig:flæðirit}
 \end{figure}
-
+\todo{formatting}
 \vspace{5pt}
 
-Vegna þess að áherslan er lögð á ,,við eigum ekki mjólk“ þá er vitlegast að setja inn segð sem er með neitun.
-Ef yrðingin m stendur fyrir setninguna ,, við eigum mjólk“ þá er yrðingin ekki m (not m) ,,við eigum ekki mjólk“.
+Vegna þess að áherslan er lögð á ,,við eigum ekki mjólk“ er vitlegast að setja inn segð sem er með neitun.
+Ef yrðingin m stendur fyrir setninguna ,,við eigum mjólk“ er yrðingin ekki m (not m) ,,við eigum ekki mjólk“.
 Skoðum þetta í töflu \ref{tbl:sanntafla-kaffi}, sambærilegri þeirri sem við sáum áður (tafla \ref{tbl:sanntafla}), nema í staðinn fyrir p og q notum við yrðinguna ,,það er til mjólk“.
 
-Ef þessu væri skellt í eina spurningu með rökvirkjanum \emph{og} þá yrði spurningin ,,er engin mjólk og ekkert kex til?“ ef henni yrði svo svarað neitandi vitum við ekki hvort að það var útaf mjólkinni eða kexinu.
+Ef þessu væri skellt í eina spurningu með rökvirkjanum \emph{og} yrði spurningin ,,er engin mjólk og ekkert kex til?“
+Ef henni yrði svo svarað neitandi vitum við ekki hvort það var út af mjólkinni eða kexinu.
 Það gæti þó verið að það skipti ekki máli og því nauðsynlegt að geta beitt rökvirkjunum á hagnýtan máta.
 
 \begin{center}
@@ -268,16 +275,17 @@ Ef þessu væri skellt í eina spurningu með rökvirkjanum \emph{og} þá yrði
 	\end{table}
 \end{center}
 Við viljum að aðalatriðið komi fram í inngangspunktinum í skilyrðissetningunni okkar til að hún sé skýrt upp sett og skiljanleg, til þess gætum við þurft að nota neitun.
-Við sjáum betur í næstu þremur undirköflum hvað ætti að fara á hvaða stað, en eins og með góðar nafnavenjur þegar við nefnum breyturnar okkar skulum við venja okkur á strax í upphafi að skilyrðissetningarnar okkar eru skýrar.
+Við sjáum betur í næstu þremur undirköflum hvað ætti að fara á hvaða stað, en eins og með góðar nafnavenjur þegar við nefnum breyturnar okkar skulum við venja okkur á það strax í upphafi að hafa skilyrðissetningarnar okkar skýrar.
 
 Nú höfum við séð í inngangi þessa undirkafla orðunum ef og annars slengt fram.
 Við þekkjum þessi orð og skiljum hvernig á að nota þau í setningu til að kalla fram útkomu.
 En það sem við þurfum að gera núna er að átta okkur á því að þessi orð eru mun formlegri í forritun heldur en í daglegu tali.
-Eins og til dæmis: ,,Ertu ekki að hugsa um Jamie Lee Curtis?“
-Í íslensku er hægt að svara þessari spurningu með ,,já ég er ekki að hugsa um hana“ eða ,,nei ég er ekki að hugsa um hana“ og bæði skilst, einnig er hægt að segja ,,jú ég er að hugsa um hana“.
+Sem dæmi má taka setninguna: ,,Ertu ekki að hugsa um Jamie Lee Curtis?“
+Í íslensku er hægt að svara þessari spurningu með ,,já ég er ekki að hugsa um hana“ eða ,,nei ég er ekki að hugsa um hana“ og bæði skilst.
+Einnig er hægt að segja ,,jú ég er að hugsa um hana“.
 Forritunarmál eru ekki tungumál, þau eru formleg og því er engin tvíræðni í boði.
 
-Skoðum því nú hvað það þýðir að nota skilyrðissetningar (e. conditional statements) í Python með lykilorðunum \textbf{if - elif - else}, sem verða þó kynnt annarri röð.
+Skoðum því nú hvað það þýðir að nota \textit{skilyrðissetningar} (e. conditional statements) í Python með lykilorðunum \textbf{if - elif - else}, sem verða þó tekin fyrir annarri röð, vegna þess best er að útskýra elif síðast þar sem það er búið til úr else og if.
 
 \subsection{if}\index{if}
 Fyrsta lykilorðið sem við tökum fyrir er \textbf{if}, þar sem ekki er hægt að búa til skilyrðissetningu án þess.
@@ -290,11 +298,11 @@ Við sjáum svo í kafla \ref{uk:hreiðrun} um hreiðrun hvers vegna það er mi
 		\includegraphics{doooodles_valborg-15.png}
 	\end{center}
 \end{wrapfigure}
-Góð venja er að búa til skilyrðissetningar þar sem aðalvirknin á sér stað inni í if yrðingunni, þannig að segðin sem fer þar inn passi við hvað eigi að framkvæma.
-Ef við tökum aftur dæmið um mjólkina og búðarferðina í mynd \ref{fig:flæðirit} og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin.
-Það er að við skoðum hvernig uppsetningin á flæðiritinu verður bjöguð ef við orðum spurninguna með játun en ekki neitun: Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.
-Þetta er kannski ekki nógu flókin setning til þess að valda þeim hugrhrifum sem ætlast er til, en við sjáum að til þess að komast að þeim endapunkti sem aðaláherslan er á ,,vera heima“ þar sem hún er fyrsti endapunkturinn okkar þá þurfum við að fara í gegnum tvær spurningar.
-Svo með því að orða spurninguna öðruvísi erum við búin að setja upp skilyrðissetninguna upp þannig að mólkurstaðan er núna ekki lengur í forgrunni, við virðumst frekar vera að reyna að halda okkur heima.
+Góð venja er að búa til skilyrðissetningar þar sem aðalvirknin á sér stað inni í if yrðingunni, þannig að segðin sem fer þar inn passi við það sem eigi að framkvæma.
+Tökum aftur dæmið um mjólkina og búðarferðina í mynd \ref{fig:flæðirit} og skoðum hvernig flæðiritið breytist eftir því hvernig við orðum skilyrðin.
+Skoðum þar hvernig uppsetningin á flæðiritinu verður bjöguð ef við orðum spurninguna með játun en ekki neitun: ,,Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex, ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.“
+Þetta er kannski ekki nógu flókin setning til þess að valda þeim hughrifum sem ætlast er til, en við sjáum að til þess að komast að þeim endapunkti sem aðaláherslan er á, ,,vera heima“ þar sem hún er fyrsti endapunkturinn okkar, þurfum við að fara í gegnum tvær spurningar.
+Með því að orða spurninguna öðruvísi erum við búin að setja upp skilyrðissetninguna þannig að mjólkurstaðan er núna ekki lengur í forgrunni, við virðumst frekar vera að reyna að halda okkur heima.
 
 \begin{figure}[H]
 	\centering
@@ -311,18 +319,18 @@ Svo með því að orða spurninguna öðruvísi erum við búin að setja upp s
 	\draw [arrow] (kex) -- node[anchor=west] {ósatt} (bud2);
 	\draw [arrow] (kex) -- node[anchor=south] {satt} (bud3);
 	\end{tikzpicture}
-	\caption{Hér sést hvernig setningin: ,,Ef það er til mjólk vil ég athuga hvort það sé til kex ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk“ má setja fram sem fæðirit.
+	\caption{Hér sést eftirfarandi setning í flæðiriti: ,,Ef það er til mjólk vil ég athuga hvort það sé til kex, ef svo er vil ég vera heima, annars kaupi ég kex ef það er til mjólk en ekki kex og annars kaupi ég mjólk ef það er ekki til mjólk.“
 	Þetta veldur því að aðaláherslan virðist nú vera að komast að því hvort eigi að kaupa kex eða vera heima og mjólkurstaðan er athuguð fyrst af einhverri ástæðu.
 	Setningin í heild er frekar ruglingsleg og hún kom mun betur út í flæðiritinu á mynd \ref{fig:flæðirit}.
 	Þó áherslan sé önnur er niðurstaðan sú sama, það er á ábyrgð forritara að skrifa kóða sem er læsilegur og skiljanlegur.}
 	\label{fig:flæðirit-neitun}
 \end{figure}
 
-Skoðum nú kóðabút \ref{lst:if} og hvað er átt við með réttum inndrætti, hér er einungis sýnt if setning ein og stök.
-Í kóðabútnum tökum við fyrir segðina ,,er til mjólk?“ og veitum henni gildið \texttt{True} svo við erum stödd í þeim aðstæðum að við eigum vissulega til mjólk, skoðið töflu \ref{tbl:sanntafla-kaffi} til að sannfærast um það sem er að gerast.
+Skoðum nú kóðabút \ref{lst:if} og hvað er átt við með réttum inndrætti, hér er if setning sýnd ein og stök.
+Í kóðabútnum tökum við fyrir segðina ,,er til mjólk?“ og veitum henni gildið \texttt{True} þannig að við erum stödd í þeim aðstæðum að við eigum vissulega til mjólk, skoðið töflu \ref{tbl:sanntafla-kaffi} til að sannfærast um það sem er að gerast.
 Við sjáum í næsta undirkafla hvað við getum gert ef við förum framhjá if setningunni okkar og viljum gera eitthvað í því tilfelli.
-Þannig að akkúrat núna getum við spurt ,,er rigning“ og ef svo er gert eitthvað í því eins og að prenta út einhvern streng.
-Þannig að við keyrum kóðann í línu 4 einungis ef við komumst þangað inn, að komast framhjá , eins og var orðað hér að ofan, væri ef segðin skilaði ekki sanngildi í línu 3.
+Akkúrat núna getum við spurt ,,er rigning?“ og ef svo er gert eitthvað í því, eins og að prenta út einhvern streng.
+Þannig keyrum við kóðann í línu 4 einungis ef við komumst þangað inn, en við kæmumst fram hjá (eins og það var orðað hér framar) ef segðin skilaði ekki sanngildi í línu 3.
 
 \begin{lstlisting}[caption=if notað, label=lst:if]
 mjolk = True 
@@ -338,12 +346,12 @@ if(mjolk):
 
 \subsection{else}\index{else}
 Lykilorðið \textbf{else} má fylgja \textbf{if}, en það er ekki nauðsynlegt.
-Hinsvegar verður að vera eitthvað \emph{ef} til þess að það geti verið eitthvað \emph{annars}.
+Hins vegar verður að vera eitthvað \emph{ef} til þess að það geti verið eitthvað \emph{annars}.
 Setningin ,,annars kaupi ég mjólk“ er ekki sérlega vitræn því að okkur vantar alveg fyrri hlutann.
-Einnig er ekki sérlega vitrænt að segja ,,ég kaupi mjólk ef vantar annars kaupi ég kex annars kaupi ég te annars...“.
+Einnig er ekki mjög gáfulegt að segja ,,ég kaupi mjólk ef vantar annars kaupi ég kex annars kaupi ég te annars...“.
 Því er einungis hægt að setja eitt annars við hvert ef, sjáum kóðabút \ref{lst:else}.
 Sú klausa keyrist einungis þegar ef setningin sem hún hangir fyrir neðan keyrist ekki, það er eina skilyrðið.
-Það þarf ekki að spyrja neinnar spurningar sem er metið sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni var ósönn.
+Það þarf ekki að spyrja neinnar spurningar sem er metin sem boolean gildi til að keyra else, það mun alltaf keyrast þegar segðin í ef yrðingunni er ósönn.
 
 \newpage
 
@@ -367,25 +375,25 @@ vera heima
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Að geta sett svona annars-klausu er mikilvægt því að við viljum geta brugðist við ef upphaflega skilyrðið okkar er ósatt.
-Við viljum geta tekið á öðrum tilfellum heldur en bara upphafsskilyrðinu okkar.
+Mikilvægt er að geta sett svona annars-klausu því við viljum geta brugðist við ef upphaflega skilyrðið okkar er ósatt.
+Við viljum geta tekið á fleiri tilfellum en bara upphafsskilyrðinu okkar.
 %\begin{wrapfigure}{o}{0.2\textwidth} %i o r l 
 	\begin{center}
 		\includegraphics{doooodles_valborg-02.png}
 	\end{center}
 %\end{wrapfigure}
+\todo{formatting}
 
 \subsection{elif}\index{elif}
 En hvað ef við viljum geta tekið á einhverju sérstöku tilfelli, sem kemur einungis upp í ákveðnum aðstæðum?
-Við viljum ekki bara grípa það að inngangspunkturinn okkar var ósannur heldur viljum við einnig skoða eitthvað fleira?
+Við viljum ekki bara grípa það að inngangspunkturinn okkar hafi verið ósannur heldur viljum við einnig skoða eitthvað fleira.
 Þarna kemur setningin um mjólkina, kexið og búðarferðirnar aftur inn.
-Þá getum við sagt ,,ef það er ekki til mjólk, fer ég í búð, \textbf{annars ef} það er ekki til kex fer ég í búð og kaupi kex, nú annars er engin ástæða til að fara í búðina og ég verð bara heima“.
-Við viljum bara nota þetta seinna ef í ákveðnu tilfelli, við höfum ekkert að gera við kexið ef það er engin mjólk svo það er aðeins keyrt ef við vissulega eigum hana.
-Sjáum þetta forritað í kóðabút \ref{lst:elif}.
+Þá getum við sagt ,,ef það er ekki til mjólk fer ég í búð, \textbf{annars ef} það er ekki til kex fer ég í búð og kaupi kex, nú annars er engin ástæða til að fara í búðina og ég verð bara heima“.
+Við viljum bara nota þetta seinna ef í ákveðnu tilfelli, við höfum ekkert að gera við kexið ef það er engin mjólk svo það er aðeins keyrt ef við eigum hana.
+Við sjáum þetta forritað í kóðabút \ref{lst:elif}.
 
-Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \textbf{if} svo mega koma núll eða fleiri \textbf{elif} og að lokum má setja 0 eða 1 \textbf{else}.
-Þetta er eins og málfræðilegur skilningur okkar er á tungumálinu, við megum hengja endalaust af annars ef klausum inn í setningarnar okkar, þær verða þá bara erfiðari að skilja (kóðinn sömuleiðis).
-
+Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \textbf{if}, svo mega koma núll eða fleiri \textbf{elif} og að lokum má setja 0 eða 1 \textbf{else}.
+Þetta er eins og málfræðilegur skilningur okkar er á tungumálinu, við megum hengja endalaust af annars ef klausum inn í setningarnar okkar, það verður þá bara erfiðara að skilja þær (kóðann sömuleiðis).
 \begin{figure}[H]
 	\centering
 	\begin{tikzpicture}[node distance=1cm]
@@ -421,7 +429,8 @@ Skilyrðissetningar eru settar upp þannig að það verður að vera eitt \text
 		
 		\draw [arrow] (annars) -- node[anchor=west] {} (annarss);
 	\end{tikzpicture}
-	\caption{Hér sjáum við flæðirit yfir virkni skilyrðissetninga, að það verður að vera ein \textbf{if} setning fremst, svo mega koma eins margar \textbf{elif} setningar þar fyrir neðan eins og við viljum og að lokum má koma nákvæmlega ein \textbf{else} klausa.}
+	\caption{Hér sjáum við flæðirit yfir virkni skilyrðissetninga.
+		Það verður að vera ein \textbf{if} setning fremst, svo mega koma eins margar \textbf{elif} setningar þar fyrir neðan eins og við viljum og að lokum má koma nákvæmlega ein \textbf{else} klausa.}
 	\label{fig:flæðirit-skilyrði}
 \end{figure}
 
@@ -456,10 +465,10 @@ við fórum í búðina og keyptum kex
 
 
 \subsection{Hreiðrun}\index{Hreiðrun}\label{uk:hreiðrun}
-\emph{Hreiðrun} (e. nesting) þýðir að setja eitthvað endurtekið undir eitthvað annað, eins og babúska dúkkur eða að pakka gjöf inn í mörg lög af gjafapappír.
+\emph{Hreiðrun} (e. nesting) þýðir að setja eitthvað endurtekið undir eitthvað annað, eins og babúska dúkkur eða þegar gjöf er pakkað inn í mörg lög af gjafapappír.
 Í forritun þýðir hreiðrun að yrðing af einhverri tegund tilheyri og sé keyrð innan í yrðingu af sömu tegund.
-Við getum hugsað þetta í samhengi við skilyrðissetningar að við séum með innri skilyrðissetningar sem þarf einnig að meta til þess að komast að niðurstöðu.
-Skoðum þetta aftur í samhengi við mjólkurkaupin nema nú bætum við því við að við eigum bara ákveðið mikinn pening sjá kóðabút \ref{lst:nesting}.
+Við getum hugsað þetta í samhengi við skilyrðissetningar, að við séum með innri skilyrðissetningar sem þarf einnig að meta til þess að komast að niðurstöðu.
+Skoðum þetta aftur í samhengi við mjólkurkaupin nema nú bætum við því við að við eigum bara ákveðið mikinn pening, sjá kóðabút \ref{lst:nesting}.
 
 \begin{lstlisting}[caption=Hreiðrun, label=lst:nesting]
 mjolk = True 
@@ -485,8 +494,8 @@ við fórum í búðina og keyptum kex því við vorum með nægan pening
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Hreiðrun er gagnleg því að við viljum skoða eitthvað innra skilyrði aðeins ef ytra skilyrðinu er mætt.
-Skoðið aftur núna myndir \ref{fig:flæðirit} og \ref{fig:flæðirit-neitun} og sjáið hvernig mætti beita hreiðrun eða annars-ef setningu til þess að forrita hugmyndina á bakvið vandamálið.
+Hreiðrun er gagnleg þegar við viljum skoða ákveðið innra skilyrði aðeins ef ytra skilyrðinu er mætt.
+Skoðið núna aftur myndir \ref{fig:flæðirit} og \ref{fig:flæðirit-neitun} og sjáið hvernig mætti beita hreiðrun eða annars-ef setningu til þess að forrita hugmyndina á bakvið vandamálið.
 
 \section{Inntak}\index{Inntak}
 \begin{wrapfigure}{i}{0.4\textwidth} %i o r l 
@@ -498,12 +507,13 @@ Nú höfum við verið að skoða spurningar og svör við þeim sem við skrá�
 Það sem við viljum geta gert er að spyrja notandann að einhverju og geta gert eitthvað byggt á því svari.
 Við þurfum að fá \emph{inntak} (e. input) frá notandanum.
 Þá lærum við um nýtt innbyggt fall í Python sem heitir \texttt{input()}.
-Það sem input() gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þartilgert svæði, og við getum notað það í forritinu okkar.\footnote{Að nota input() í skipanalínu gefur okkur nýja línu til að svara, að nota input() í Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem input() skipunin er keyrð.}
+Það sem fallið gerir er að taka við streng frá notanda, notandi skrifar eitthvað inn í þar til gert svæði og við getum notað það í forritinu okkar.\footnote{Notkun \texttt{input()} í skipanalínu gefur okkur nýja línu til að svara.
+	Jupyter Notebooks gefur okkur lítinn glugga til að skrifa svarið okkar í fyrir neðan selluna þar sem \texttt{input()} skipunin er keyrð.}
 
 Skoðum kóðadæmi í kóðabút \ref{lst:input}, þar sem við geymum svarið frá notanda í breytunni \texttt{svar} og viðfangið sem við settum inn í input fallið er strengur sem inniheldur spurninguna sem notandinn sér.
-Þar sést þó ekki þegar inntak glugginn var notaður.
+Þar sést þó ekki þegar inntaksglugginn var notaður.
 
-Fallið input() skilar okkur alltaf streng.
+Fallið \texttt{input()} skilar okkur alltaf streng.
 Ef við viljum geta spurt notandann um tölustafi þurfum við að kunna að kasta á milli gagnataga sjálf og við sjáum hvernig það er gert í kóðabút \ref{lst:kast}
 
 
@@ -518,10 +528,10 @@ halló Valborg
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Þetta er mikilvægt fall fyrir okkur að skilja og nota á þessu stigi málsins, því að við verðum að átta okkur á því að þegar við forritum þá erum við miklu meira að vinna með breytunöfn heldur en gögn sem við getum horft á.
-Í kóðabút \ref{lst:input} þá kemur hvergi fram í kóðanum að nafnið sé Valborg, og það getur verið hvað sem er, við prentum bara út það sem notandinn gaf okkur án þess að vera eitthvað að skoða hvað það er.
-Oft vilja byrjendur horfa á gögnin sín og setja inn niðurstöður fyrir tölvuna, til dæmis verkefnið ,,búðu til breytu sem inniheldur nafn og prentaðu út breytuna ásamt strengnum "halló:"“ endar í kóða eins og sést í kóðabút \ref{lst:byrjendur}.
-Eða að finna miðju í streng sem hægt væri að gera með \texttt{len(strengur)//2}, en byrjendum finnst eðlislægara að finna lengdina, og finna svo helminginn af því og nota svo loks þá tölu
+Mikilvægt er að skilja og nota \texttt{input()} á þessu stigi málsins, því að við verðum að átta okkur á því að þegar við forritum erum við miklu meira að vinna með breytunöfn heldur en gögn sem við getum horft á.
+Í kóðabút \ref{lst:input} kemur hvergi fram í kóðanum að nafnið sé Valborg og það getur verið hvað sem er, við prentum bara út það sem notandinn gaf okkur án þess að vera eitthvað að skoða hvað það er.
+Oft vilja byrjendur horfa á gögnin sín og setja inn niðurstöður fyrir tölvuna, til dæmis endar verkefnið ,,búðu til breytu sem inniheldur nafn og prentaðu út breytuna ásamt strengnum 'halló:'“ endar í kóða eins og sést í kóðabút \ref{lst:byrjendur}.
+Annað verkefni væri að finna miðju í streng sem hægt er að gera með \texttt{len(strengur)//2}, en byrjendum finnst eðlislægara að finna lengdina, finna svo helminginn af því og nota svo loks þá tölu
 
 \begin{lstlisting}[caption=Oft forðast byrjendur að nota breytur og treysta meira á að sjá hvað ætti að koma út, label=lst:byrjendur]
 nafn = 'Valborg'
@@ -545,21 +555,23 @@ h
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Eins og sést í kóðabút \ref{lst:byrjendur} að til að komast að því að setja vísi 15 inn og fá táknið þarf að keyra fyrst línuna \texttt{len(strengur)} til þess að sjá þá tölu og svo þarf að deila þeirra tölu með tveimur til að finna miðjuna og svo þarf handvirkt að setja þá tölu inn eftir að hafa breytt henni í næstu heilu tölu.
-Það sem er að gerast er ekkert rangt, það er hinsvegar mikil vannýting á því sem tölvan getur gert fyrir okkur og eykur vinnuna fyrir okkur sjálf umtalsvert því að það þarf að keyra hvert skref í kóðabútnum fyrir sig til að komast að því hvað eigi að gera í næsta skrefi, í stað þess að gera það í einni línu eins og í línu 10.
+Í kóðabút \ref{lst:byrjendur} sést að fyrst þarf að keyra línuna \texttt{len(strengur)} til þess að komast að því að setja vísi 15 inn.
+Svo þarf að deila þeirri tölu með tveimur til að finna miðjuna og síðan þarf handvirkt að setja þá tölu inn eftir að hafa breytt henni í næstu heilu tölu.
+Það sem er að gerast er ekkert rangt, það er hins vegar mikil vannýting á því sem tölvan getur gert fyrir okkur.
+Þetta eykur vinnuna fyrir okkur sjálf umtalsvert því að það þarf að keyra hvert skref í kóðabútnum fyrir sig til að komast að því hvað eigi að gera í næsta skrefi, í stað þess að gera það í einni línu eins og í línu 10.
 
 \subsection{Kastað á milli gagnataga}
 Til þess að geta unnið með gögn eins og þá týpu sem við viljum þurfum við að læra að \emph{kasta} á milli taga/týpna (e. typecasting).
-Þetta þýðir að við látum vélina umrita gögnin okkar yfir í annað gagnatag, sem er einungis hægt ef að gögnin eru sambærileg týpunni sem á að kasta í.
+Þetta þýðir að við látum vélina umrita gögnin okkar yfir í annað gagnatag, sem er einungis hægt ef gögnin eru sambærileg týpunni sem á að kasta í.
 
 Þá koma lykilorðin sem við höfum lært fyrir týpurnar okkar að gagni.
 Við þekkjum núna strengi með lykilorðið \textbf{str}, heiltölur með lykilorðið \textbf{int}, fleytitölur með lykilorðið \textbf{float} og lista með lykilorðið \textbf{list}.
 Þá notum við lykilorðið eins og fall og setjum inn í fallið sem viðfang það sem á að verða að því gagnatagi sem lykilorðið segir til um.
-Sjáum í kóðabút \ref{lst:kast} hvernig á að fara að þessu.
+Við sjáum í kóðabút \ref{lst:kast} hvernig á að fara að þessu.
 
-Nú höfum við séð að input() fallið skilar alltaf til okkur gögnum af taginu/týpunni strengur.
-En við viljum geta kannski unnið með inntakið frá notandanum sem tölu.
-Ef að strengurinn inniheldur einungis tölur á bilinu 0-9 er hægt að geyma hann sem heiltölu eða fleytitölu, ef hann inniheldur einungis tölur á bilinu 0-9 og nákvæmlega einn punkt er hægt að geyma hann sem fleytitölu.
+Nú höfum við séð að \texttt{input()} fallið skilar alltaf til okkur gögnum af taginu/týpunni strengur.
+Við viljum kannski geta unnið með inntakið frá notandanum sem tölu.
+Ef strengurinn inniheldur einungis tölur á bilinu 0-9 er hægt að geyma hann sem heiltölu eða fleytitölu, en ef hann inniheldur einungis tölur á bilinu 0-9 og nákvæmlega einn punkt er hægt að geyma hann sem fleytitölu.
 
 
 \begin{lstlisting}[caption=Hvernig á að kasta á milli gagnataga, label=lst:kast]
@@ -571,21 +583,24 @@ fleytitolustrengur = "3.1415"
 talan_pi = float(fleytitolustrengur)
 \end{lstlisting}
 
-Nú þar sem við vitum að við getum fengið streng í hendurnar frá notanda, vitandi það að við báðum um tölu, getum við leyft okkur að kasta strengnum í það talnatag sem okkur hentar.
+Nú þegar við vitum að við getum fengið streng í hendurnar frá notanda, vitandi það að við báðum um tölu, getum við leyft okkur að kasta strengnum í það talnatag sem okkur hentar.
 \begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 	\begin{center}
 		\includegraphics{doooodles_valborg-13.png}
 	\end{center}
 \end{wrapfigure}
-Við sjáum svo í seinni hluta bókarinnar hvernig á að taka á mismunandi tilfellum og reyna á eitthvað sem gæti valdið villu án þess að það skemmi fyrir okkur, en núna ætlum við að láta sem að við getum treyst notendum til að gefa okkur inntak sem samræmist því sem við báðum um.
+Við sjáum svo í seinni hluta bókarinnar hvernig á að taka á mismunandi tilfellum og reyna á eitthvað sem gæti valdið villu án þess að það skemmi fyrir okkur.
+Núna ætlum við að láta sem við getum treyst notendum til að gefa okkur inntak sem samræmist því sem við báðum um.
 Prófið ykkur nú áfram með að kasta á milli taga, þið munið fá einhverjar villur og það er frábært.
-Gerið tilraunir og prófanir, kastið á milli allra þeirra taga sem þið þekkið í öll þau tög sem þið þekkið, hvað má hvað má ekki?
+Gerið tilraunir og prófanir, kastið á milli allra þeirra taga sem þið þekkið í öll þau tög sem þið þekkið, hvað má og hvað má ekki?
 
-Ástæðan fyrir því að vilja kasta á milli taga er til að geta beitt þeim aðgerðum og aðferðum sem eru í boði fyrir það gagnatag sem við sækjumst eftir að nota, til dæmis er ekki hægt að sækja þriðja tölustafinn í heiltölu en ef við köstum henni í streng getum við sótt táknið í sætisnúmeri 2 og fengið þannig þriðja tölustafinn.
+Við viljum kasta á milli taga til þess að geta beitt þeim aðgerðum og aðferðum sem eru í boði fyrir það gagnatag sem við sækjumst eftir að nota.
+Til dæmis er ekki hægt að sækja þriðja tölustafinn í heiltölu en ef við köstum henni í streng getum við sótt táknið í sætisnúmeri 2 og fengið þannig þriðja tölustafinn.
 
 \begin{itarefni}
 \textbf{Dæmi um notkun á kasti milli taga}\\
-Seinna munum við sjá gagnatýpuna mengi, ein gagnleg notkun á kasti milli taga væri að kasta lista í mengi til að losna við tvítekningar og kasta menginu svo í lista aftur.\\
+Seinna munum við sjá gagnatýpuna mengi.
+Ein gagnleg notkun á kasti milli taga væri að kasta lista í mengi til að losna við tvítekningar og kasta menginu svo í lista aftur.\\
 \texttt{a = [1, 2, 2]}\\
 \texttt{b = set(a)}\\
 \texttt{a = list(b)}\\
@@ -599,13 +614,13 @@ Nú er listinn \texttt{a} orðinn að \texttt{[1,2]}, sjá meira um það í kaf
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{exp1}
-Búið til tvær talnabreytur, látið svo skilyrðissetningu prenta út þá sem er stærri
+Búið til tvær talnabreytur, látið svo skilyrðissetningu prenta út þá sem er stærri.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={exp1}]
 Byrjum á svari og förum svo í réttara svar og svo loks ekki rétt svar.
 
-Við erum beðin um skilyrðissetningu svo við þurfum \texttt{if}	
+Við erum beðin um skilyrðissetningu svo við þurfum \texttt{if}.
 \begin{lstlisting}
 a = 3
 b = 4
@@ -627,12 +642,13 @@ else:
 	print('breyturnar eru jafnstórar')\end{lstlisting}
 
 	
-Hér ætlum við að svo að skoða eina nálgun sem skilar okkur ekki réttri lausn, því að við erum beðin um að prenta út þá breytu sem er stærri en ekki hvort að fyrri sé stærri en hin
+Hér ætlum við að svo að skoða eina nálgun sem skilar okkur ekki réttri lausn, því að við erum beðin um að prenta út þá breytu sem er stærri en ekki hvort að fyrri sé stærri en hin.
 \begin{lstlisting}
 a = 3
 b = 4
 print(a > b)\end{lstlisting}
-Þetta skilar okkur svarinu False því að \texttt{a} er vissulega ekki stærra en \texttt{b} en þarna er skilyrði ekki satt? Nei, heldur ekki, skilyrðissetning er með \texttt{if}, þarna erum við með segð.
+Þetta skilar okkur svarinu False því að \texttt{a} er vissulega ekki stærra en \texttt{b} en þarna er skilyrði ekki satt?
+Nei, heldur ekki, skilyrðissetning er með \texttt{if}, þarna erum við með segð.
 \end{Answer}
 \setboolean{firstanswerofthechapter}{false}
 
@@ -641,7 +657,7 @@ Búið til tvær breytur sem innihalda báðar sanngildi (True eða False), að 
 Skrifið svo segð þar sem spurt er: fyrri breytan eða ekki seinni breytan?
 \end{exercise}
 \begin{Answer}[ref={exp2}]
-Hér erum við að æfa okkur að nota rökvirkja, við eigum að nota \texttt{or} og \texttt{not}
+Hér erum við að æfa okkur að nota rökvirkja, við eigum að nota \texttt{or} og \texttt{not}.
 	\begin{lstlisting}
 fyrri = False
 seinni = True
@@ -662,7 +678,7 @@ print(eitt == tvo and tvo < thrju or eitt > thrju)\end{lstlisting}
 
 \begin{exercise}\label{exp4}
 Nú skulum við búa til þrjár breytur sem eru hliðar í þríhyrningi.
-Þríhyrningar geta verið margskonar en við ætlum að einbeita okkur að tveimur tegundum, jafnhliða (allar hliðar jafnlangar) og jafnarma (tvær hliðar jafnlangar).
+Þríhyrningar geta verið margs konar en við ætlum að einbeita okkur að tveimur tegundum, jafnhliða (allar hliðar jafnlangar) og jafnarma (tvær hliðar jafnlangar).
 
 Nú ætlið þið að skrifa forritsbút þar sem eru þrjár talnabreytur fyrir hliðarnar þjár á einhverjum þríhyrningi og forritið ykkar prentar út, með skilyrðissetningu, hvort að þríhyrningurinn sé jafnhliða, jafnarma eða hvorugt.
 
@@ -691,9 +707,9 @@ Farið er óþarflega nákvæmlega í þetta skref, hægt er að sleppa \texttt{
 \end{Answer}
 
 \begin{exercise}\label{exp5}
-Spyrjið notandann hvort að viðkomandi hafi fengið sér morgunverð í dag, og ef svarið er á einhvern hátt játandi skulið þið svara "vonandi var hann góður" en ef ekki skulið þið svara "þú hefur enn tíma".
+Spyrjið notandann hvort viðkomandi hafi fengið sér morgunverð í dag og ef svarið er á einhvern hátt játandi skulið þið svara 'vonandi var hann góður' en ef ekki skulið þið svara "þú hefur enn tíma".
 
-Reynið að vinna með svarið svo að það sé hægt að meta hvort það hafi verið já eða einhver útgáfa af já, eins og kannski játz.
+Reynið að vinna með svarið svo að hægt sé að meta hvort það hafi verið já eða einhver útgáfa af já, eins og kannski játz.
 \end{exercise}
 \begin{Answer}[ref={exp5}]
 Hér ætlum við að nota skilyrðissetningu og inntaksskipun.
