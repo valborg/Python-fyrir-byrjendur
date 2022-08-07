@@ -7,29 +7,29 @@ Til þess að geta sýnt og notað texta þarf gagnatýpu til að halda utan um 
 Lykilorð fyrir þessa týpu er \textbf{str}.
 
 \section{Strengir skilgreindir}\index{Strengir skilgreindir}
-Til þess að afmarka texta og segja vélinni að fara með hann sem af týpunni strengur þarf að nota tákn.
+Til þess að afmarka texta og segja vélinni að fara með hann eins og týpuna strengur þarf að nota tákn.
 Við þurftum ekki að gera það þegar við skrifuðum tölurnar en nú, og seinna, notum við ákveðin tákn fyrir ákveðnar týpur.
 
 Táknin sem skilgreina strengi eru gæsalappir.
-Einfaldar gæsalappir eru úrfellingakomman sem venjulega er lengst til hægri á lyklaborði, tvöfaldar gæsalappir eru sér tákn sem er venjulega á sama takka og 2.
+Einfaldar gæsalappir eru úrfellingakomman sem venjulega er lengst til hægri á lyklaborði, tvöfaldar gæsalappir eru sértákn sem er venjulega á sama takka og 2.
 Einnig er hægt að gera streng með þremur einföldum gæsalöppum.
 Dæmi um streng væri \texttt{"halló heimur"} eða \texttt{'halló heimur'}, takið eftir að gæsalappirnar þurfa að passa.
-Og fyrir lengri texta notum við þrjár einfaldar gæsalappir.
+Fyrir lengri texta notum við þrjár einfaldar gæsalappir.
 
 \begin{lstlisting}[caption=Strengir skilgreindir, label=lst:str-kynntir]
 textinn_minn = "halló ég má skrifa mörg orð inn í þessar gæsalappir"
 
 einfaldar_gaesalappir = 'ég má líka skrifa innan einfaldra gæsalappa'
 
-thetta_virkar_ekki = 'gæsalappirnar þurfa að passa saman" 
+#thetta_virkar_ekki = 'gæsalappirnar þurfa að passa saman" #veldur villu
 \end{lstlisting}
 
 Í sumum forritunarmálum er munur á því að nota einfaldar og tvöfaldar gæsalappir, þar sem einfaldar eru notaðar fyrir staka stafi (sér gagnatýpa) og tvöfaldar fyrir strengi.
-En það er enginn raun munur á því hvernig Python meðhöndlar þær.
+Það er þó enginn munur í raun á því hvernig Python meðhöndlar þær.
 
 \section{Strengir og reikniaðgerðir}\index{Strengir og reikniaðgerðir}
-Við erum búin að sjá að það megi leggja tölur saman og margfalda þær.
-Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma með strengi og hvaða áhrif það hefur.
+Við erum búin að sjá að það má leggja tölur saman og margfalda þær.
+Nú ætlum við að skoða hvaða reikniaðgerðir er hægt að framkvæma á strengi og hvaða áhrif það hefur.
 Rifjið upp reiknivirkjana úr kafla \ref{uk:tolur-reiknivirkjar} og prófið ykkur svo áfram með breyturnar úr kóðabút \ref{lst:str-kynntir}, notið reiknivirkjana á breyturnar eða á einhverja breytu og einhverja tölu.
 Skoðið hvað má og hvað má ekki.
 
@@ -47,7 +47,8 @@ TypeError: unsupported operand type(s) for //: 'str' and 'int'
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Þetta eru fyrstu villuskilaboðin okkar í bókinni, við fengum týpuvillu það sést í línu 2 í úttakinu í kóðabút \ref{lst:str-reikniadg}, okkur er bent á (lína 4) að villan gerist í línu 1 í kóðanum sem var keyrður og að hún sé vegna þess (lína 6) að aðgerðin \texttt{//} sé ekki heimil fyrir týpurnar streng og heiltölu.
+Þetta eru fyrstu villuskilaboðin okkar í bókinni, við fengum týpuvillu.
+Það sést í línu 2 í úttakinu í kóðabút \ref{lst:str-reikniadg}, þar er okkur bent á (lína 4) að villan gerist í línu 1 í kóðanum sem var keyrður og að hún sé vegna þess (lína 6) að aðgerðin \texttt{//} sé ekki heimil fyrir týpurnar streng og heiltölu.
 
 Hér er aðalatriðið að fá annað hvort eitthvað út á úttakið eða að fá týpuvillu, ef þið fenguð málskipanarvillu (SyntaxError) þá skrifuðuð þið bara eitthvað vitlaust og þurfið að laga það.
 
@@ -59,8 +60,8 @@ Samskeyting þýðir að einum streng er bætt við fyrir aftan annan streng.
 Það skiptir máli hvor er fyrir framan: \texttt{"halló" + "bless"} verður að \texttt{"hallóbless"} en \texttt{"bless" + "halló"} verður að \texttt{"blesshalló"}.
 
 Þegar við notum * til að margfalda streng með heilli tölu erum við að beita \emph{lengingu} (e. multiply) og strengurinn er endurtekinn ákveðið oft.
-Þannig að \texttt{"halló" * 3} verður \texttt{"hallóhallóhalló"} en takið eftir að \texttt{"halló " * 3} verður \texttt{"halló halló halló "}, sjáiði muninn?
-Í línu 2 í kóðabút \ref{lst:str-conmul} er þessu einnig beitt, að setja bil þar sem búist er við að strengjum sem skeytt saman.
+Þannig verður \texttt{"halló" * 3} að \texttt{"hallóhallóhalló"} en takið eftir að \texttt{"halló " * 3} verður \texttt{"halló halló halló "}, sjáiði muninn?
+Í línu 2 í kóðabút \ref{lst:str-conmul} er þessu einnig beitt, að setja bil þar sem búist er við að strengjum sé skeytt saman.
 Þetta er eingöngu gert til að einfalda okkur lífið að svo stöddu, við skulum ekki venja okkur á að setja óþarfa bil fyrir aftan strengina okkar.
 Sjá má hvernig hægt að er að komast hjá þessari bilnotkun í línu 9 í sama kóðabút.
 Takið einnig eftir hvernig \texttt{print()} skipunin er látin prenta út nokkrar breytur með því að setja kommur á milli.
@@ -90,7 +91,7 @@ a og b!  og b!a Valborg Sturludóttir
 \lstset{style=venjulegt}
 
 \section{Vísar í streng}\index{Vísar í streng}
-Strengir eru ákveðin röð tákna.\footnote{Vegna þess að strengir eru í ákveðinni röð og af ákveðinni lengd eru þeir \emph{ítranlegir} (e. iterable) sjá nánar í kafla \ref{k:lykkjur}.}
+Strengir eru ákveðin röð tákna.\footnote{Vegna þess að strengir eru í ákveðinni röð og af ákveðinni lengd eru þeir \emph{ítranlegir} (e. iterable), sjá nánar í kafla \ref{k:lykkjur}.}
 Táknin, eða stafirnir, sitja á sínum stað og eru ákveðið mörg.
 Því er hægt að tala um stafabil og lengd í strengjum.
 Við getum séð hversu mörg stafabil eru í streng með því að telja þau sjálf eða láta tölvuna segja okkur það með innbyggða fallinu \texttt{len()} (stytting á enska orðinu length).
@@ -110,7 +111,7 @@ print(len(strengur2))
 \lstset{style=venjulegt}
 
 Nú þegar við vitum hversu mörg stafabil eru í strengnum getum við notað þau.
-Við getum sagt við vélina mig langar til að fá \emph{vísi}(e. index) (einnig kallað sætisnúmer, sæti og stæði) númer 1 og séð hvaða tákn er í þeim vísi.
+Við getum sagt við vélina að okkur langi til að fá \emph{vísi}(e. index) (einnig kallað sætisnúmer, sæti og stæði) númer 1 og sjá hvaða tákn er í þeim vísi.
 Til að ná í eitthvað upp úr streng þurfum við að nota hornklofa (e. square brackets), tákn sem eru eins og kassalaga svigar, [ og ].
 Við notum þessi tákn í Python til að ná í gögn upp úr einhverri gagnagrind, sjáum nánari útskýringu á því fyrirbæri í kafla \ref{k:listar}.
 Nú lítum við svo á að strengir séu til þess að geyma fyrir okkur tákn í ákveðinni röð og við getum nálgast þessi tákn með því að nota hornklofa.
@@ -128,12 +129,12 @@ e
 \lstset{style=venjulegt}
 
 Eins og sést í kóðabút \ref{lst:str-visir1} þá vísar vísir númer 1 ekki á fremsta stafinn sem er í þessu tilfelli k heldur vísar hann á stafinn e.
-Það er vegna þess að í Python og flestum öðrum forritunarmálum (ekki öllum) er byrjað að telja í núll.
-Þannig að fremsti vísirinn í streng (og öðrum gagnagrindum) er núllti vísirinn.
+Það er vegna þess að í Python og flestum öðrum forritunarmálum (ekki öllum) er byrjað að telja frá núlli.
+Þannig er fremsti vísirinn í streng (og öðrum gagnagrindum) núllti vísirinn.
 Hver er þá síðasti vísirinn?
-Nú höfum við komist að þeirri niðurstöðu (í kóðabút \ref{lst:str-stafabil}) að strengurinn "kex" hefur þrjú stafabil, að það séu þrír sætisvísar í strengnum, að k sé í vísi 0, e sé í vísi 1 og þá hlýtur x að vera í vísi 2.
+Nú höfum við komist að þeirri niðurstöðu (í kóðabút \ref{lst:str-stafabil}) að strengurinn \texttt{"kex"} hefur þrjú stafabil, að það séu þrír sætisvísar í strengnum, að k sé í vísi 0, e sé í vísi 1 og þá hlýtur x að vera í vísi 2.
 Síðasti vísirinn í streng er því einum lægri heldur en lengdin á strengnum.
-Þannig að strengur af lengdinni fimm, eins og strengurinn "texti", hefur fimm stafabil sem eru í vísum númer 0,1,2,3 og 4.
+Þannig hefur strengur af lengdinni fimm, eins og strengurinn "texti", hefur fimm stafabil sem eru í vísum númer 0, 1, 2, 3 og 4.
 %\begin{wrapfigure}{H}
 \vspace{1cm}
 \begin{center}
@@ -143,37 +144,38 @@ Síðasti vísirinn í streng er því einum lægri heldur en lengdin á strengn
 \newpage
 \begin{itarefni}
 \textbf{Vísar í streng}\\
-Strengur af lengd n hefur n tákn augljóslega, en númerin á vísunum fyrir táknin ná frá 0 upp í n-1.
-Þetta er gömul hefð og er hún hluti af flestum æðri forritunarmálum.
-Það er þó ekki þannig að tölvan byrji að telja í 0, heldur byrjar hún að geyma röð hluta í minnishólfi og fremsta minnishólfið í röðuðum hlut fær sætisnúmerið 0.
+Strengur af lengd n hefur augljóslega n mörg tákn, en númerin á vísunum fyrir táknin ná frá 0 upp í n-1.
+Þetta er gömul og góð hefð, hún hluti af flestum æðri forritunarmálum.
+Tölvan byrjar að geyma röð hluta í minnishólfi og fremsta minnishólfið í röðuðum hlut fær sætisnúmerið 0.
 Ástæðan er einfaldari útreikningar við að sækja röðuð gögn.
 Fremsta stakið í röðuðum hlut er þá kallað núllta stakið.
-Þá eftir fyrst hreyfinguna þína, fyrstu aðgerðina eða fyrstu tilfærsluna ertu með stak númer 1.
-Þannig helst í hendur hversu mörg skref þú hefur tekið í gegnum hlutinn þinn og hvaða vísi þú ert í.
+Þá erum við með stak númer 1 eftir fyrstu hreyfinguna, fyrstu aðgerðina eða fyrstu tilfærsluna.
+Þannig helst það í hendur hversu mörg skref við höfum tekið í gegnum hlutinn og hvaða vísi við erum í.
 \end{itarefni}
 
-\subsection{Óbreytanleiki}
-Nú höfum við séð að það er hægt að sækja stafabil í streng, eins og tildæmi núllt táknið í strengnum.
+\subsection{Óbreytanleiki}\label{uk:strengir-obreytanleiki}
+Nú höfum við séð að það er hægt að sækja stafabil í streng, eins og til dæmis núllta táknið í strengnum.
 Þá er mikilvægt að hafa í huga að í Python er ekki leyfilegt að endurskilgreina hluta úr streng.
 Byrjum á því að skoða hvað endurskilgreining þýðir.
-Ef við búum til breytu eins og í kóðabút \ref{lst:reiknivirkjagildisveiting} og notum nafnið á henni aftur til að segja vélinni að endurnýta minnissvæði með ákveðnu nafni.
-Þá erum við búin að endurskilgreina breytuna okkar, hún var eitthvað áður en nú er hún eitthvað annað.
+Ef við búum til breytu eins og í kóðabút \ref{lst:reiknivirkjagildisveiting} og notum nafnið á henni aftur til að segja vélinni að endurnýta minnissvæði með ákveðnu nafni erum við búin að endurskilgreina breytuna okkar.
+Hún var eitthvað áður en nú er hún eitthvað annað.
 
-Þar sem strengir eru með ákveðin númeraða vísa sem benda á ákveðin tákn gætum við þá ekki bara sagt við vélina ,,mig langar að breyta bara tákni númer 0“?
+Þar sem strengir eru með ákveðna númeraða vísa sem benda á ákveðin tákn, gætum við þá ekki bara sagt við vélina ,,breyttu bara tákni númer 0“?
 Það er ekki í boði því að í Python eru strengir \emph{óbreytanlegir} (e. immutable) og því er bara hægt að vinna með þá eins og þeir eru eða endurskilgreina þá alveg.
 
 \subsection{Neikvæðir vísar}
-Nú höfum við talið frá 0 og upp í n-1, frá vinstri til hægri en það má einnig telja frá hægri til vinstri.
+Nú höfum við talið frá 0 og upp í n-1 frá vinstri til hægri, en það má einnig telja frá hægri til vinstri.
 Ef okkur langar að vinna með öftustu stökin í streng þurfum við ekki að vita hvað strengurinn er langur, við getum talið frá hægri endanum og unnið með neikvæða vísa.
 Í því tilfelli byrjum við ekki að telja í 0, því það væri \emph{tvírætt} (e. ambiguous).
 Tölvan myndi ekki vita hvorn 0 vísinn við værum að biðja um þegar við segðum \texttt{strengur[0]}, hvort við værum að tala um núll frá vinstri eða hægri.
-Þess vegna byrjum við að telja frá hægri í -1, og höldum þannig áfram þar til við erum komin niður í -n þar sem n er lengdin á strengnum.
-Svo strengurinn "kex" er með vísana 0,1 og 2 en einnig vísana -3, -2 og -1 bæði í þessari röð, svo vísir -1 er alltaf síðasta táknið í streng.
+Þess vegna byrjum við að telja frá hægri í -1 og höldum þannig áfram þar til við erum komin niður í -n þar sem n er lengdin á strengnum.
+Þannig er strengurinn \texttt{"kex"} með vísana 0,1 og 2 en einnig vísana -3, -2 og -1, bæði í þessari röð, svo vísir -1 er alltaf síðasta táknið í streng.
 
 \subsection{Hlutstrengir}
 Nú vitum við hvernig á að sækja eitt stakt tákn upp úr streng.
 En hvernig náum við í einhvern hluta úr honum?
-Það er einnig gert með hornklofunum og við notum þá með ákveðnum hætti, við fáum að setja inn fleiri upplýsingar heldur en bara hvaða staka vísi við viljum.
+Það er einnig gert með hornklofunum og við notum þá með ákveðnum hætti.
+Við fáum að setja inn fleiri upplýsingar heldur en bara hvaða staka vísi við viljum.
 Þá megum við nýta okkur allt að þrjá \emph{stika} (e. parameters).
 
 \begin{wrapfigure}{r}{0.25\textwidth}
@@ -182,24 +184,29 @@ En hvernig náum við í einhvern hluta úr honum?
 	\end{center}
 \end{wrapfigure}
 
-Stikarnir okkar eru hvar við viljum byrja að lesa hlutstrenginn okkar, hvar við viljum hætta og hvað við viljum taka stór skref.
+Stikarnir okkar eru þar við viljum byrja að lesa hlutstrenginn okkar, þar sem við viljum hætta og hvað við viljum taka stór skref.
 Þetta er gert með heilum tölum með tvípunktum á milli, sem má sjá í kóðabút \ref{lst:hlutstrengir}.
 
-Í línu 3 eru tveir tvípunktar innan hornklofanna og tölurnar sem koma á milli þeirra er afmörkunin á því hvað við viljum lesa upp úr \texttt{strengur}.
+Í línu 3 eru tveir tvípunktar innan hornklofanna og tölurnar sem koma á milli þeirra eru afmörkunin á því sem við viljum lesa upp úr \texttt{strengur}.
 Nú er vert að nefna að þegar við notum þessa málskipan eru ákveðin gildi sjálfgefin, skoðum hvað það þýðir.
 
-Tökum dæmi um \texttt{strengurinn\_minn[a:b:c]} þar sem a, b og c eru stikar til að sækja hlutstreng, hvað getur staðið fyrir a, b, og c? Hvað ef við sleppum þeim? Hver eru sjálfgefin gildi þessara stika?
+Tökum dæmi um \texttt{strengurinn\_minn[a:b:c]} þar sem a, b og c eru stikar til að sækja hlutstreng, hvað getur staðið fyrir a, b og c?
+Hvað ef við sleppum þeim?
+Hver eru sjálfgefin gildi þessara stika?
+Hvað er sjálfgefið gildi?
 
 \newpage
 Stikarnir a, b, og c úr \texttt{strengurinn\_minn[a:b:c]} verða að vera:
 \begin{enumerate}
 	\item a er vísirinn sem við byrjum fyrir framan, ef þetta væri 0 væri \textit{leshaus} vélarinnar staddur fyrir framan núllta táknið og það yrði lesið næst.
 	Þessi vísir verður að vera lægri en b (annars fæst tómur strengur).
-	Sjálfgefið er að a sé fremsti stafurinn í strengnum.
+	Sjálfgefið er að a sé fremsti stafurinn í strengnum og ef við sleppum því að setja inn stika þá fáum við fremsta táknið.
 	\item b er vísirinn sem við hættum fyrir framan, þar stoppum við leshausinn og vélin les ekki það tákn.
-	Sjálfgefið er fyrir aftan aftasta stafinn svo síðasta táknið er lesið, sem gerir það að verkum að við þurfum ekki að vita hvað strengur er langur til að geta sótt hann allan.
-	\item c er skrefastærðin sem er sjálfgefin 1, það er að við skoðum hvert einasta tákn og hoppum ekki yfir neitt stak.
-	Ef c er valið stærra er það fjöldinn tákna sem á að hoppa yfir frá lesstað að næsta tákni.
+	Sjálfgefið er að stoppa leshausinn fyrir aftan aftasta stafinn svo síðasta táknið er lesið.
+	Ef við sleppum að setja stika hér fáum við síðasta táknið í strengnum.
+	Þetta gerir það að verkum að við þurfum ekki að vita hvað strengur er langur til að geta sótt hann allan.
+	\item c er skrefastærðin sem er sjálfgefið 1, það er við skoðum hvert einasta tákn og hoppum ekki yfir neitt stak.
+	Ef c er valið stærra er það fjöldi tákna sem á að hoppa yfir frá lesstað að næsta tákni.
 \end{enumerate}
 
 \begin{lstlisting}[caption=Hlutstrengir, label=lst:hlutstrengir]
@@ -230,7 +237,7 @@ kex með smjöri, osti og sultu  með smjöri, osti og sultu kex sultu kex með 
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Takið eftir að hvar sem engin tala kemur fyrir þegar tvípunktur er notaður þá er setur vélin sjálfgefið gildi í staðinn.
+Takið eftir að vélin setur sjálfgefið gildi í staðinn alls staðar þar sem er engin tala þegar tvípunktur er notaður.
 
 \section{Strengjaaðferðir}\index{Strengjaaðferðir}\label{uk:strengjaaðferðir}
 Áður en aðferðir á strengi eru kynntar þarf að útskýra stuttlega hvað aðferðir eru.
@@ -240,42 +247,44 @@ Innbyggð föll í Python eru nokkur og koma þau fyrir hér og þar í bókinni
 
 Í fljótu bragði virkar fall eins og við þekkjum föll úr stærðfræði, það heitir einhverju nafni, eins og \texttt{cos}, og tekur við einhverju viðfangi innan sviga, eins og \texttt{cos(x)}, og getur skilað einhverri niðurstöðu, sjá má meira um föll í kafla \ref{k:föll}.
 Aðferðir eru sérhæfð föll sem virka á ákveðnar gagnatýpur.
-Þannig að allar aðferðir eru föll, ekki öll föll eru aðferðir.
+Þannig eru allar aðferðir eru föll, ekki öll föll eru aðferðir.
 Á ensku eru aðferðir kallaðar \textit{methods} og föll \textit{functions}.
 Aðferðir eru í raun ,,hengdar aftan á“ þá týpu sem þær eiga að verka á.
 Það er gert með því að skrifa nafnið á breytunni sem inniheldur gögnin sem við viljum framkvæma aðferðina á, gera svo punkt, skrifa nafnið á aðferðinni og setja sviga, inn í svigana fara öll þau viðföng sem aðferðin tekur við.
 
-Þetta er í raun fyrstu kynni okkar af hlutbundinni forritun.
+Þetta eru í raun fyrstu kynni okkar af hlutbundinni forritun.
 Strengurinn er hlutur og aðferðin verkar á hlutinn.
 
-Annað sem þarf að hafa í huga áður en við vinnum með aðferðir á strengi er að strengir eru óbreytanlegir (e. immutable) sem þýðir að aðferðir sem eru notaðar á þá \emph{skila} öðrum strengjum í stað þess að breyta strengnum sem við keyrðum aðferðina á.
+Annað sem þarf að hafa í huga áður en við vinnum með aðferðir á strengi, sem var nefnt í undirkafla \ref{uk:strengir-obreytanleiki}, er að strengir eru óbreytanlegir.
+Það þýðir að aðferðir sem eru notaðar á þá \emph{skila} öðrum strengjum í stað þess að breyta strengnum sem við keyrðum aðferðina á (því aðferðirnar geta ekki breytt strengnum).
 Með það í huga skulum við skoða eftirfarandi lista af aðferðum sem áhugavert er að taka fyrir.
 \vspace{10px}
 
-Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær séu að verka á breytuna strengur sem inniheldur táknin "valborg Sturludóttir".
+Hér koma fyrir nokkrar aðferðir, gerum ráð fyrir að þær verka á breytuna \texttt{strengur} sem inniheldur táknin 'valborg Sturludóttir'.
 \vspace{5px}
 \begin{itemize}
-	\item \texttt{strengur.capitalize()} skilar strengnum "Valborg sturludóttir" þar sem fremsti táknið er nú hástafur.
-	\item \texttt{strengur.upper()} skilar strengnum "VALBORG STURLUDÓTTIR" þar sem allir stafir eru nú háfstafir.
-	\item \texttt{strengur.lower()} skilar strengnum "valborg sturludóttir" þar sem allir stafir eru nú lágstafir.
-	\item \texttt{strengur.switchcase()} skilar strengnum "VALBORG sTURLUDÓTTIR" þar sem búið er að skipta út lágstöfum fyrir hástafi og öfugt.
-	\item \texttt{strengur.index('v')} skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
-	\item \texttt{strengur.index('x')} skilar villu þar sem táknið 'x' kemur ekki fyrir í strengnum
-	\item \texttt{strengur.find('v')} skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0
+	\item \texttt{strengur.capitalize()} skilar strengnum 'Valborg sturludóttir' þar sem fremsta táknið er nú hástafur.
+	\item \texttt{strengur.upper()} skilar strengnum 'VALBORG STURLUDÓTTIR' þar sem allir stafir eru nú háfstafir.
+	\item \texttt{strengur.lower()} skilar strengnum 'valborg sturludóttir' þar sem allir stafir eru nú lágstafir.
+	\item \texttt{strengur.switchcase()} skilar strengnum 'VALBORG sTURLUDÓTTIR' þar sem búið er að skipta út lágstöfum fyrir hástafi og öfugt.
+	\item \texttt{strengur.index('v')} skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0.
+	\item \texttt{strengur.index('x')} skilar villu þar sem táknið 'x' kemur ekki fyrir í strengnum.
+	\item \texttt{strengur.find('v')} skilar tölunni 0 þar sem fyrsta 'v' táknið kemur fyrir í vísi 0.
 	\item \texttt{strengur.find('x')} skilar tölunni -1 þar sem 'x' finnst ekki í stregnum. 
 \end{itemize}
 \vspace{10px}
 
 Takið eftir því að þarna er orðið lykilorðið ,,skilar", sem þýðir að við fáum í hendurnar eitthvað til að vinna með sem við getum t.d. vistað í breytu, við skoðum þetta nánar þegar við gerum okkar eigin föll í kafla \ref{k:föll}.
 Það er þörf á því að vinna með aðferðir á strengi með þessum hætti því að við munum að strengir eru óbreytanlegir.
-Þannig að ef við viljum vinna með einhverja útkomu byggða á streng þá þurfum við að fá útkomuna í hendurnar, því strengurinn sem aðferðinni var beitt á breytist ekki neitt við að kalla í aðferðina.
-Í upptalningunni hér að ofan getum við keyrt allar þessar línur í röð eins og kóða og búist við að fá þessi svör því að breytan strengur verður aldrei fyrir neinum breytingum, hún helst sem "valborg Sturludóttir" þrátt fyrir að við köllum í alla þessa fylkingu af aðferðum.
+Þannig þurfum við að fá útkomuna í hendurnar ef við viljum vinna með einhverja útkomu byggða á streng, því strengurinn sem aðferðinni var beitt á breytist ekki neitt við að kalla í aðferðina.
+Í upptalningunni hér að ofan getum við keyrt allar þessar línur í röð eins og kóða og búist við að fá þessi svör því að breytan strengur verður aldrei fyrir neinum breytingum, hún helst sem 'valborg Sturludóttir' þrátt fyrir að við köllum í alla þessa fylkingu af aðferðum.
 
-Þar sem það sem strengjaaðferðirnar skila flestar eru strengir má setja hverja aðferðina á eftir annarri, eins og \texttt{"Valborg".upper().lower().swapcase().capitalize()}.
-Þessi aðgerðar-súpa er tiltölulega vitlaus en leyfileg, það sem er að gerast er að fyrst er \texttt{upper} keyrt og svo er \texttt{lower} keyrt á það sem upper skilaði, og svo koll af kolli.
+Þar sem strengjaaðferðirnar skila flestar strengjum má setja hverja aðferðina á eftir annarri, eins og \texttt{"Valborg".upper().lower().swapcase().capitalize()}.
+Þessi aðgerðar-súpa er tiltölulega vitlaus en leyfileg, það sem gerist er að fyrst keyrist \texttt{upper}, svo keyrist \texttt{lower} á það sem \texttt{upper} skilaði og svo koll af kolli.
+Þetta heitir að keðja (e. to chain) og við munum sjá þetta oftar.
 Einnig má þarna á milli ná í hlutstreng og gera t.d. \texttt{"Valborg"[0:3].lower()}.
-Svona vinnur vélin sig frá vinstri til hægri svo lengi sem að það sem skilast vinstra megin sé eitthvað sem er löglegt að beita hægri hliðinni á.
-Dæmi um ólöglegt væri \texttt{"Valborg".index('b').upper()} þar sem .index() skilar heiltölu og á þær er ekki hægt að beita aðferinni .upper().
+Svona vinnur vélin sig frá vinstri til hægri svo lengi sem að það sem skilast vinstra megin er eitthvað sem er löglegt að beita hægri hliðinni á.
+Dæmi um ólöglegt væri \texttt{"Valborg".index('b').upper()} þar sem \texttt{.index()} skilar heiltölu og á þær er ekki hægt að beita aðferinni \texttt{.upper()}.
 
 \begin{wrapfigure}{r}{0.4\textwidth}
 	\begin{center}
@@ -284,13 +293,13 @@ Dæmi um ólöglegt væri \texttt{"Valborg".index('b').upper()} þar sem .index(
 \end{wrapfigure}
 
 Í þessari bók verða ekki gerð skil á öllum þeim aðferðum sem eru í boði fyrir þær týpur sem við skoðum.
-Þær eru mýmargar og til ýmiss gagnlegar en það er út fyrir svið þessarar bókar að taka hverja fyrir sig fyrir og því munum við bara nefna þær sem gagnast okkur að skoða.
+Þær eru mýmargar og til ýmiss gagnlegar, en það er út fyrir svið bókarinnar að taka þær allar fyrir og því munum við einungis nefna þær sem gagnast okkur.
 
 Gerið ítarlegar tilraunir.
 Ekki lesa þennan undirkafla bara, gerið ykkar eigin prófanir og áttið ykkur á því hvernig þetta hangir saman.
 
 
-Prófið allavega þangað til að þið sjáið eftirfarandi skilaboð:
+Prófið að minnsta kosti þangað til að þið sjáið eftirfarandi skilaboð:
 \begin{enumerate}
 	\item <function str.upper()> 
 	\item TypeError: index() takes at least 1 argument (0 given)
@@ -302,7 +311,7 @@ Fyrstu skilaboðin þarna eru ekki villuskilaboð því að það er lögleg ski
 Hvernig náðuð þið að gera það? 
 
 
-Að því sögðu ætlum við að skoða eina strengjaaðferð sérstaklega \texttt{.format()} sem tekur við eins mörgum viðföngum og við viljum setja inn í einhvern annan streng sem inniheldur jafn marga slaugusviga, \{\}, og við viljum setja inn í staðinn fyrir.
+Að því sögðu ætlum við að skoða eina strengjaaðferð sérstaklega, \texttt{.format()}, sem tekur við eins mörgum viðföngum og við viljum setja inn í einhvern annan streng sem inniheldur jafn marga slaufusviga, \{\}, og við viljum setja inn í staðinn fyrir.
 
 \begin{lstlisting}[caption=Aðferðin .format() kynnt, label=lst:str-format]
 strengur = "kex með {}, {} og {}"
@@ -317,7 +326,7 @@ kex með avókadó, majónesi og eggi
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{str1}
-	Búðu til breytu sem inniheldur streng
+	Búðu til breytu sem inniheldur streng.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={str1}]
@@ -350,7 +359,7 @@ len(strengur)\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str4}
-	Notaðu innbyggt fall til þess prenta út þann staf sem er í þriðja stæði í strengnum 'kex!'.
+	Notaðu innbyggt fall til þess að prenta út þann staf sem er í þriðja stæði í strengnum 'kex!'.
 \end{exercise}
 \begin{Answer}[ref={str4}]
 \begin{lstlisting}
@@ -359,7 +368,7 @@ print(strengur[3])\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str4-5}
-	Notaðu innbyggt fall til þess finna lengdina á strengnum 'kex!'.
+	Notaðu innbyggt fall til þess að finna lengdina á strengnum 'kex!'.
 \end{exercise}
 \begin{Answer}[ref={str4-5}]
 \begin{lstlisting}
@@ -395,7 +404,7 @@ s3 = s3*4\end{lstlisting}
 
 \begin{exercise}\label{str7}
 Gefum okkur að til séu tveir strengir, n1 og n2, þeir innihalda fyrsta nafnið þitt og eftirnafn þitt.
-Gefum okkur einnig að þeir séu ekki rétt ritaðir skv. íslenskum ritunarreglum.
+Gefum okkur einnig að þeir séu ekki rétt ritaðir skv. íslenskum ritreglum.
 Hvernig setjum við þá saman í einn streng eftir að hafa beitt á þá aðferðum til að þeir séu örugglega með fyrsta staf stóran og alla aðra litla?
 \end{exercise}
 \begin{Answer}[ref={str7}]
@@ -407,15 +416,15 @@ rett_nafn = n1.capitalize() + n2.capitalize()\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str8}
-Nú gerum við ráð fyrir að vera með streng í höndunum sem er geymdur í breytunni lykill.
+Nú gerum við ráð fyrir að vera með streng í höndunum sem er geymdur í breytunni \texttt{lykill}.
 Strengurinn á að verða sterkt lykilorð og við viljum rugla hann töluvert til þess að hann verði ekki einfalt orð sem auðvelt er að giska á.
 Til þess ætlum við að gera eftirfarandi:
 \begin{enumerate}
-	\item Búa til annan streng sem inniheldur einhver tákn (tölur, bókstafi og önnur tákn)
-	\item Búa til breytu sem inniheldur lengdina á tákna strengnum og aðra sem inniheldur lengdina á lykilstrengnum
-	\item Búta upp lykil strenginn (sama sætisnúmer má nota oftar en einu sinni en öll þurfa að vera til staðar), skeyta við hvern bút einhverjum bút úr táknastrengnum.
-		Í þessu skrefi má lengja bútana og/eða beyta strengjaaðferðum á þá og endurskilgreina lykil strenginn sem þessa breytingu.
-	\item Að lokum á að snúa strengnum við, þannig að hann sé afturábak.
+	\item Búa til annan streng sem inniheldur einhver tákn (tölur, bókstafi og önnur tákn).
+	\item Búa til breytu sem inniheldur lengdina á táknastrengnum og aðra sem inniheldur lengdina á lykilstrengnum.
+	\item Búta upp lykilstrenginn (sama sætisnúmer má nota oftar en einu sinni en öll þurfa að vera til staðar), skeyta við hvern bút einhverjum bút úr táknastrengnum.
+		Í þessu skrefi má lengja bútana og/eða beita strengjaaðferðum á þá og endurskilgreina lykilstrenginn sem þessa breytingu.
+	\item Að lokum á að snúa strengnum við þannig að hann sé aftur á bak.
 \end{enumerate}
 \end{exercise}
 \begin{Answer}[ref={str8}]
