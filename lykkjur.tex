@@ -1,37 +1,37 @@
 \chapterimage{chapters5.png} % Chapter heading image
 
 \chapter{Lykkjur}\index{Lykkjur}\label{k:lykkjur}
-Til þess að keyra kóða endurtekið án þess að afrita og líma eða handvirkt keyra hann oft, þá notum við lykkjur.
-Lykkjur eru kóðabútar sem keyrist endurtekið, eða ítrar, eftir ákveðnum reglum.
+Til þess að keyra kóða endurtekið án þess að afrita og líma eða keyra hann oft handvirkt, þá notum við lykkjur.
+Lykkjur eru kóðabútar sem keyrast endurtekið, eða ítrar, eftir ákveðnum reglum.
 Þær lykkjur sem eru til í Python eru \textbf{for} lykkjur og \textbf{while} lykkjur.
-For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
+For lykkjur keyra fyrir hvert stak í ítranlegum hlut eða fyrir hverja tölu á bili (keyra ákveðið oft, í mesta lagi).
 While lykkjur keyra á meðan skilyrðið fyrir keyrslu þeirra er satt (geta keyrt að ,,eilífu“).
-Nöfnin á for og while verða ekki þýdd sérstaklega í þessari bók, en við segjum t.a.m. ,,að gera eitthvað á meðan“ eða ,,gera eitthvað fyrir hvert stak“.
+Nöfnin á for og while verða ekki þýdd sérstaklega í þessari bók, en við segjum t.a.m. ,,að gera eitthvað á meðan“ eða ,,að gera eitthvað fyrir hvert stak“.
 \begin{wrapfigure}{I}{0.15\textwidth} %i o r l 
 	\begin{center}
 		\includegraphics[scale=0.5]{doooodles_valborg-10.png}
 	\end{center}
 \end{wrapfigure}
-Við ætlum að kynnast því til hvers þær eru ætlaðar og hvers þær eru megnugar, í hvaða tilfellum á að nota hvora fyrir sig og lykilorð sem gera notkun þeirra öflugri.
+Við ætlum að kynnast því til hvers þær eru ætlaðar og hvers þær eru megnugar, í hvaða tilfellum á að nota hvora þeirra og lykilorð sem gera notkun þeirra öflugri.
 Byrjum á því að skoða til hvers ,,að lykkja“ og hvað það eiginlega þýðir.
 Það að nota lykkju þýðir að skrifa forritsbút sem keyrir endurtekið.
 
-Tökum dæmi úr daglegu lífi; ef við viljum framkvæma einhverja aðgerð eins og að vaska upp búum við til reglu eins og að setja fyrst upp uppþvottahanska, láta vatnið renna og stafla öllu sem er óhreint við hliðina á vaskinum. 
-Svo viljum við endurtaka aðgerðina að þrífa hvern hlut sem er öðru megin við vaskinn, þar til þeir eru allir komnir hreinir hinu megin.
+Tökum dæmi úr daglegu lífi: ef við viljum framkvæma einhverja aðgerð eins og að vaska upp búum við til reglu eins og að setja fyrst upp uppþvottahanska, láta vatnið renna og stafla öllu sem er óhreint við hliðina á vaskinum. 
+Svo viljum við endurtaka aðgerðina að þrífa hvern hlut sem er öðru megin við vaskinn, þar til þeir eru allir komnir hreinir hinum megin.
 Endurtekningin þarna er að taka upp hvern óhreinan hlut og þrífa hann.
 Þá gætum við sagt að fyrir hvern hlut sem er hægra megin, viljum við þrífa hann og setja svo vinstra megin (fer eftir því hvernig vaskurinn snýr) og hætta þegar engir hlutir eru eftir hægra megin.
 Þetta ferli að framkvæma sömu aðgerð á stök í mengi er einmitt það sem for lykkja getur gert.
 
-Tökum annað dæmi úr daglegu lífi; ef við ætlum að bíða eftir einhverjum og framkvæma svo einhverja aðgerð þegar viðkomandi kemur þá myndum við væntanlega bíða þangað til að viðkomandi kemur.
-Svo á meðan viðkomandi er ekki enn kominn þá höldum við áfram að bíða.
-En þar sem við erum ekki tölvur þá myndum við ekki bíða endalaust, við myndum gefast upp.
+Tökum annað dæmi úr daglegu lífi: ef við ætlum að bíða eftir einhverjum og framkvæma svo einhverja aðgerð þegar viðkomandi kemur myndum við væntanlega bíða þangað til viðkomandi kemur.
+Á meðan viðkomandi er ekki enn kominn höldum við því áfram að bíða.
+En þar sem við erum ekki tölvur myndum við ekki bíða endalaust, við myndum gefast upp.
 Þetta ferli að halda áfram að framkvæma einhverja aðgerð þangað til að eitthvað skilyrði á ekki við er það sem while lykkja getur gert.
 
 \section{For}\index{For lykkjur}
-For lykkkjur nota lykilorðið \textbf{for} ásamt lykilorðinu \textbf{in}.
-Það sem in gerir þegar það er notað eitt og sér er að spyrja hvort að \textit{eitthvað} sé ,,í“ \textit{einhverju öðru} (sjá kóðabút \ref{lst:lykkjur-in}) en sem hluti af for lykkju þá er það in sem úthlutar lykkjunni næsta staki úr menginu til að skoða.
-Þannig að þetta býr til segð sem skilar sanngildi eða einu tilteknu tákni eða staki úr hlut.
-Nú skulum við líta á kóðabút \ref{lst:lykkjur-for} til að átta okkur á því hvernig lykkjan er notuð, hvernig við beitum inndrætti til að skilgreina stef lykkjunnar (það sem tilheyrir henni) og hvernig skilyrðissetningar bætast við þetta.
+For-lykkjur nota lykilorðið \textbf{for} ásamt lykilorðinu \textbf{in}.
+Það sem in gerir þegar það er notað eitt og sér er að spyrja hvort \textit{eitthvað} sé ,,í“ \textit{einhverju öðru} (sjá kóðabút \ref{lst:lykkjur-in}) en sem hluti af for lykkju er það in sem úthlutar lykkjunni næsta staki úr menginu til að skoða.
+Þetta býr því til segð sem skilar sanngildi eða einu tilteknu tákni eða staki úr hlut.
+Nú skulum við líta á kóðabút \ref{lst:lykkjur-for-kynning} til að átta okkur á því hvernig lykkjan er notuð, hvernig við beitum inndrætti til að skilgreina stef lykkjunnar (það sem tilheyrir henni) og hvernig skilyrðissetningar bætast við þetta.
 
 \begin{lstlisting}[caption=Lykilorðið in, label=lst:lykkjur-in]
 print('er táknið a í strengum Valborg?')
@@ -49,16 +49,16 @@ False
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Eins og sést í kóðabút \ref{lst:lykkjur-in} þá virkar in nokkuð svipað því sem orðið í gerir í setningu.
+Eins og sést í kóðabút \ref{lst:lykkjur-in} virkar \texttt{in} nokkuð svipað því sem orðið í gerir í setningu.
 Ekki gleyma þessu lykilorði við lykkjugerðina.
 Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á lykkjum.
-Í næstu kóðabútum verður sýnd grunnvirkni for-lykkjunnar.
+Í næstu kóðabútum verður grunnvirkni for-lykkjunnar sýnd.
 \vspace{1cm}
 \begin{itarefni}
 	\textbf{Nánar um \texttt{in} og vísa}\\
-	Þegar þetta orð er notað í for lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
+	Þegar orðið er notað í for-lykkjum er þó ekki verið að setja fram segð heldur er verið að úthluta einhverri hlaupandi breytu tilteknu gildi úr ítranlegum hlut.
 	Það að hlutur sé ítranlegur þýðir að við getum horft á hann stak fyrir stak, skoðað eitt gildi úr honum í einu.
-	Eins og strengur hefur vísa þá getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða einhverri annarri röð).
+	Eins og strengur hefur vísa getum við horft á hvert tákn fyrir sig með því að rúlla í gegnum vísana frá 0 og út í enda (eða í einhverri annarri röð).
 	Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
 	Heiltölur, fleytitölur og sanngildi eru ekki ítranleg.
 \end{itarefni}
@@ -97,7 +97,7 @@ g
 lykkjan er búin
 \end{lstlisting}
 
-Í kóðabút \ref{lst:lykkjur-for-kynning} hvernig rúllað er í gegnum strenginn \texttt{Valborg} með breytunni \texttt{stafur}.
+Í kóðabút \ref{lst:lykkjur-for-kynning} sést hvernig rúllað er í gegnum strenginn \texttt{Valborg} með breytunni \texttt{stafur}.
 Sú breyta er búin til í línu 5 þegar lykkjan er búin til, það þurfti ekki að skilgreina hana áður.
 Það er vegna þess að breytan er skilgreind inni í lykkjunni fyrir okkur, hún er áfram aðgengileg en er ósköp gagnslaus eftir keyrsluna svo okkur er alveg sama um hana, hún er svokölluð \emph{tímabundin} (e. temporary) breyta sem hættir að skipta máli eftir notkun innan lykkjunnar.
 
@@ -105,7 +105,7 @@ Allt það sem tilheyrir svo lykkjunni eða á að gerast í hverri keyrslu henn
 Línur 9 og 10 eru ekki hluti af stefi lykkjunnar og keyrast því ekki nema einu sinni, eins og lína 3 prentast bara einu sinni.
 
 Það sem prentast á úttakið úr línu 6, breytan \texttt{stafur}, er hvert tákn fyrir sig í þeirri röð sem það kemur fyrir í strengnum sem verið er að ítra í gegnum.
-Lesið yfir þennan kóðabút og gerið tilraunir á eigin spýtur til að átta ykkur á því hvað það er sem er að gerast.
+Lesið yfir þennan kóðabút og gerið tilraunir á eigin spýtur til að átta ykkur á því sem er að gerast.
 
 Hvað gerist ef inndrátturinn breytist?
 Hvað prentast þá út?
@@ -113,7 +113,7 @@ Hvað gerist ef eitthvað annað orð er sett í staðinn fyrir \texttt{stafur}?
 En \texttt{strengur}?
 Haldið áfram að gera tilraunir með þetta þangað til að þið áttið ykkur betur á því hvernig þetta hangir saman.
 
-Sjáum nú hvernig megi flétta skilyrðissetningar inn í þetta.
+Sjáum nú hvernig má flétta skilyrðissetningar inn í þetta.
 
 \lstset{style=venjulegt}
 \begin{lstlisting}[caption=For lykkja og skilyrðissetningar, label=lst:lykkjur-for-skil]
@@ -127,14 +127,17 @@ for stafur in strengur:
 a
 \end{lstlisting}
 
-Í kóðabútum \ref{lst:lykkjur-for-kynning} og \ref{lst:lykkjur-for-skil} vorum við að vinna með sama strenginn, en í fyrra skiptið prentaðist hann allur út en í seinna skiptið fengum við bara eitt stakt tákn út.
-Munurinn er sá að í kóðabút \ref{lst:lykkjur-for-skil} þá þegar við vorum komin með táknið í hendurnar vildum við gera eitthvað við það svo við spurðum er þetta tákn jafngilt \texttt{a}, einungis í því tilfelli vildum við prenta eitthvað út.
-Við ákváðum að prenta út táknið sem við vorum að skoða sem er geymt í breytunni \texttt{stafur} en hefðu hæglega getað gert eitthvað annað.
+Í kóðabútum \ref{lst:lykkjur-for-kynning} og \ref{lst:lykkjur-for-skil} vorum við að vinna með sama strenginn, í fyrra skiptið prentaðist hann allur út en í seinna skiptið fengum við bara eitt stakt tákn út.
 
-Við sjáum einnig að þegar við settum inn skilyrðissetningu þá bættist við annar inndráttur, það er vegna þess að inndráttarnotkunin breytist ekki sama hvar við erum að nota kóða sem krefst inndráttar heldur dregst kóðinn bara lengst til hægri eftir því sem við förum innar. 
+Munurinn er sá að í kóðabút \ref{lst:lykkjur-for-skil}, þegar við vorum komin með táknið í hendurnar, vildum við gera eitthvað við það svo við spurðum hvort þetta tákn væri jafngilt \texttt{a}.
+Einungis í því tilfelli vildum við prenta eitthvað út.
+Við ákváðum að prenta út táknið sem við vorum að skoða, sem er geymt í breytunni \texttt{stafur}, en hefðum hæglega getað gert eitthvað annað.
+
+Við sjáum einnig að þegar við settum inn skilyrðissetningu bættist við annar inndráttur.
+Það er vegna þess að inndráttarnotkunin breytist ekki sama hvar við erum að nota kóða sem krefst inndráttar, heldur dregst kóðinn bara lengst til hægri eftir því sem við förum innar. 
 Því getur verið ágætt að takmarka hreiðrun til þess að kóðinn sé sem læsilegastur.
 
-Gerið nú tilraunir til að átta ykkur betur á því hvernig megi skoða ítranlegan hlut en framkvæma einungis aðgerð ef eitthvað skilyrði á við.
+Gerið nú tilraunir til að átta ykkur betur á því hvernig má skoða ítranlegan hlut en framkvæma einungis aðgerð ef eitthvað skilyrði á við.
 Hvað gerist ef við breytum skilyrðissetningunni?
 En ef við breytum því sem er undir henni?
 Hvað gerist ef við bætum við \textit{annars} klausu?
@@ -163,25 +166,25 @@ strengur
 
 \lstset{style=venjulegt}
 
-Tökum eftir í kóðabút \ref{lst:lykkjur-for-listi} þá fær \texttt{x} það gildi sem er næst í röðinni í listanum, og það skiptir ekki máli af hvaða týpu gögnin eru.
-Nafnið á breytunni er ekki lýsandi, ekki eins og \texttt{stafur} eða \texttt{strengur} í kóðabút \ref{lst:lykkjur-for-skil}, ástæðan fyrir því að nafnið x varð fyrir valinu er til að sýna lesendum að þetta er breytuheiti eins og hvert annað og lútir sömu venjum og við sáum í kafla \ref{k:tolur}.
+Tökum eftir að í kóðabút \ref{lst:lykkjur-for-listi} fær \texttt{x} það gildi sem er næst í röðinni í listanum og það skiptir ekki máli af hvaða týpu gögnin eru.
+Nafnið á breytunni er ekki lýsandi, ekki eins og \texttt{stafur} eða \texttt{strengur} í kóðabút \ref{lst:lykkjur-for-skil}, en nafnið x varð fyrir valinu til að sýna lesendum að þetta er breytuheiti eins og hvert annað sem lútir sömu venjum og við sáum í kafla \ref{k:tolur}.
 Listinn í línu 1 inniheldur gögn af þremur týpum, breytan \texttt{x} kippir sér ekkert upp við það og birtir gögnin í þeirri röð sem þau bárust.
 
 Prófið ykkur nú aðeins áfram og reynið í staðinn fyrir \texttt{listinn\_minn} að setja einhvern annan lista, sem er ekki geymdur í breytu.
 Prófið nú að setja inn skilyrðissetningu þarna og nota \texttt{type()} með skilyrðissetningu til að prenta einungis þau x sem eru strengir.
 
-For lykkjur eru því helst gagnlegar þegar við vitum hversu mörg stök lykkjan á mörgulega að skoða, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
-Fallið \texttt{range()} tekur við sömu viðföngum eins og hornklofarnir\footnote{Það eru í raun ekki viðföng, í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðvöng beinlínis heldur vísar.} þegar við sóttum nokkur tákn upp úr streng eða lista, þau eru þó aðgreind með kommum.\footnote{Við höfum áður séð viðföng notuð í falli eins og \texttt{print()} fallið, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli.}
+For-lykkjur eru því helst gagnlegar þegar við vitum hversu mörg stök lykkjan á mögulega að skoða, því til stuðnings ætlum við að skoða innbyggða fallið \textbf{\texttt{range()}} sem gefur okkur hlut af tölum á ákveðnu bili.
+Fallið \texttt{range()} tekur við sambærilegum viðföngum og hornklofarnir þegar við sóttum nokkur tákn upp úr streng eða lista\footnote{Í "strengur"[1:5:2] eru 1, 5, og 2 ekki viðföng heldur vísar.}, þau eru þó aðgreind með kommum.\footnote{Við höfum áður séð viðföng notuð í falli eins og \texttt{print()} fallinu, þar sem við getum prentað margt út svo lengi sem við setjum kommur á milli.}
 
-Viðföngin í \texttt{range(a,b,c)} fallið eru heilartölur og þeim er raðað svona:
+Viðföngin í \texttt{range(a,b,c)} fallinu eru heiltölur og þeim er raðað svona:
 
 \begin{enumerate}
 	\item \textbf{a}: talan sem á að byrja að nota (hér má sleppa því að setja þetta inn því að sjálfgefið gildi er 0)
-	\item \textbf{b}: talan sem á að hætta fyrir framan (þetta verður að setja inn, því að þetta er aðalatriðið)
+	\item \textbf{b}: talan sem á að hætta fyrir framan (þetta verður að setja inn því að þetta er aðalatriðið)
 	\item \textbf{c}: tala sem segir til um skrefastærðina (sjálfgefið gildi er 1 og þessu má sleppa), ef skrefastærð er tekin með þarf að velja upphafsstað (annars myndast tvíræðni)
 \end{enumerate}
 
-Ef við viljum leysa verkefni sem felst í því að finna odda tölur frá 0 og upp að 1000 hvernig myndum við fara að því?
+Hvernig förum við að því að leysa verkefni sem felst í því að finna oddatölur frá 0 og upp í 1000?
 En ef við viljum vera viss um að eitthvað gerist ákveðið oft?
 Skoðum kóðabút \ref{lst:lykkjur-range-kynnt} þar sem fyrra verkefnið er leyst á tvo mismunandi vegu.
 
