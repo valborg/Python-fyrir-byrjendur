@@ -1,12 +1,14 @@
 \chapterimage{chapters6.png} % Chapter heading image
 
 \chapter{Orðabækur}\index{Orðabækur}\label{k:orðabækur}
-Ný týpa sem vil ætlum að nú að fást við heitir \textbf{orðabók} (e. dictionary)  og lykilorðið hennar er \textbf{dict}.
+Ný týpa sem við ætlum nú að fást við heitir \textbf{orðabók} (e. dictionary)  og lykilorðið hennar er \textbf{dict}.
 Orðabók er orð sem hentar fyrir þýðingu á týpunni í Python en hún er einnig þekkt sem hakkatafla (e. hash table / hash map) í öðrum forritunarmálum.
 Til þess að búa til orðabók eru notaðir slaufusvigar \{\}.
 
 Orðabækur eru gagnagrindur eins og listar og ndir, það er þær geyma fyrir okkur gögn af einhverjum týpum.
-Orðabækur eru þó frábrugnar listum að því leitinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa sem hægt er að nota.\footnote{Í Python >3.6 eru þær ekki alveg óraðar, stök eru sett inn í ákveðinni röð og helst sú ,,röðun“ þegar orðabókin er notuð fyrir það voru stökin aðgenileg með handahófskenndri röð fyrir minnisbestun.}
+Orðabækur eru þó frábrugnar listum að því leytinu til að þær eru \textit{óraðaðar}, sem þýðir að þær hafa enga sætisvísa sem hægt er að nota.\footnote{Í Python >3.6 eru þær raðaðar.
+Stök eru sett inn í ákveðinni röð og helst sú ,,röðun“ þegar orðabókin er notuð.
+Fyrir það voru stökin aðgengileg með handahófskenndri röð fyrir minnisbestun.}
 Við getum því ekki sótt gögn í orðabækur með því að vita \textit{hvar} þau eru við þurfum að vita \textit{hver} þau eru.
 
 Þetta er vegna þess að orðabækur eru skipulagðar sem lykla og gildis pör, við finnum þau gildi sem við viljum með því að vita hvaða lykill gengur að þeim.
@@ -14,10 +16,10 @@ Við getum því ekki sótt gögn í orðabækur með því að vita \textit{hva
 Lyklarnir eru allir ólíkir.
 Við getum alltaf reitt okkur á það að sama hvar einhver ákveðinn lykill er þá gengur hann alltaf að sama lásnum, svo ef við þekkjum lyklana okkar getum við auðveldlega náð í þann sem við viljum til þess að opna þann lás sem við viljum hverju sinni.
 
-Lyklarnir verða því að vera ólíkir hverjum öðrum, annars gætum við ekki þekkt þá í sundur og tveir eins lyklar gætu ekki gengið að tveimur mismunandi lásum.
-Svo lyklar verða að vera aðgreinanlegir.
+Lyklarnir verða því að vera ólíkir hver öðrum, annars gætum við ekki þekkt þá í sundur og tveir eins lyklar gætu ekki gengið að tveimur mismunandi lásum.
+Lyklar verða því að vera aðgreinanlegir.
 
-Orðabókin er mjög öflugt fyrirbæri, og því þess virði að kynna sér vel hvernig þessi týpa virkar.
+Orðabókin er mjög öflugt fyrirbæri og því þess virði að kynna sér vel hvernig þessi týpa virkar.
 Einnig skoðum við í þessum kafla hvernig má ítra í gegnum orðabækur og hvers vegna það var ágætt að vera búin að skoða ndir áður en við komum að þessari mikilvægu týpu.
 
 %\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
@@ -33,7 +35,7 @@ Eins og kom fram í inngangi er gögnum í orðabókum skipt niður á lyklana s
 Sjáum fyrir okkur lyklakippuna okkar þar sem við erum með stóran ASSA lykil að útidyrahurðinni, lítinn lykil með svörtu plasti að hjólalásnum, kassalaga lykil að útidyrahurðinni hennar ömmu og einn pínulítinn lykil að geymslunni.
 Við eigum auðvelt með að halda utan um þetta litla lyklasafn og við vitum að hverju allir lyklarnir ganga.
 En ef við værum nú með 10.000 lykla?
-Skoðum kóðabút \ref{lst:dict-kynnt} til að sjá hvernig megi búa til orðabók sem heldur utan um lyklakippuna sem var lýst hér að ofan.
+Skoðum kóðabút \ref{lst:dict-kynnt} til að sjá hvernig má búa til orðabók sem heldur utan um lyklakippuna sem var lýst hér að ofan.
 Takið eftir að einungis er unnið með strengi innan orðabókarinnar.
 
 \begin{lstlisting}[caption=Orðabók kynnt með lyklakippusamlíkingu, label=lst:dict-kynnt]
@@ -54,12 +56,12 @@ hjólið
 \end{wrapfigure}
 \phantom{}
 
-Takið eftir hvernig stökin eru aðgreind, með kommum alveg eins og áður.
-Nema núna eru stökin tvenndir sem hanga saman með tvípunkti.
-Við sjáum einnig að til þess að nálgast gögn þá notum við hornklofa eins og áður en við gerum það ekki með sætisvísi heldur gerum við það með lyklinum sem við viljum finna gögnin að.
+Takið eftir hvernig stökin eru aðgreind, með kommum alveg eins og áður, nema núna eru stökin tvenndir sem hanga saman með tvípunkti.
+Við sjáum einnig að til þess að nálgast gögn notum við hornklofa eins og áður en við gerum það ekki með sætisvísi heldur gerum við það með lyklinum sem við viljum finna gögnin að.
 
-En ef lykill er heiltala þá náum við vissulega í gögnin á þeim lykli með því að nota heiltölu innan hornklofanna (sjá línu 3 í kóðabút \ref{lst:dict-kynnt2})
-Í kóðabút \ref{lst:dict-kynnt} þá sjáum við hvernig á að búa til tóma bók í fyrstu línu, við gerum ekkert frekar með þessa orðabók í þessum kóðabút en í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig má setja stök (lykla og gildis pör) inn í orðabók eftir að hún er skilgreind og við sjáum í kóðabút \ref{lst:dict-kynnt3} hvaða aðferðir eru til á þessa týpu.
+Ef lykill er heiltala náum við vissulega í gögnin á þeim lykli með því að nota heiltölu innan hornklofanna (sjá línu 3 í kóðabút \ref{lst:dict-kynnt2}).
+Í kóðabút \ref{lst:dict-kynnt} sjáum við hvernig á að búa til tóma bók í fyrstu línu, við gerum ekkert frekar með þessa orðabók í þessum kóðabút en í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig má setja stök (pör af lyklum og gildum) inn í orðabók eftir að hún er skilgreind.
+Í kóðabút \ref{lst:dict-kynnt3} sjáum við hvaða aðferðir eru til á þessa týpu.
 
 \begin{lstlisting}[caption=Gögnum bætt við og þau tekin út, label=lst:dict-kynnt2]
 ordabok2 = {1: 'gildi á lykli 1 sem er heiltala', 8: 'gildi sem er á lykli 8', 5: 'takið eftir að pörin eru aðgreind með kommu'}
@@ -77,28 +79,29 @@ takið eftir að pörin eru aðgreind með kommu
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig heilartölur geta verið lyklarnir í orðabókinni en við höfum þó aðeins verið að vinna með strengi sem gildi.
-Í raun eru skorður á því hvað geta verið lyklar en ekki hvað geta verið gildi, við getum geymt hvað sem er sem gildi og við sjáum í kóðabút \ref{lst:dict-itrad} þegar við notum lista sem gildi.
+Í kóðabút \ref{lst:dict-kynnt2} sjáum við hvernig heiltölur geta verið lyklarnir í orðabókinni en við höfum þó aðeins verið að vinna með strengi sem gildi.
+Í raun eru skorður á því hvað geta verið lyklar en ekki hvað geta verið gildi, við getum geymt hvað sem er sem gildi.
+Við sjáum í kóðabút \ref{lst:dict-kynnt3} þegar listar eru notaðir sem gildi.
 
 \begin{itarefni}
 \textbf{Aðgreinanleiki}\\
 Í Python er til \texttt{hash()} fall sem skilar ,,hakki“ af því sem því er gefið sem viðfang.
-Við sáum í kafla \ref{k:tolur} að 1 og 1.0 var hægt að reikna með þó þær væru af mismunandi tagi og í kafla \ref{k:segðir} sáum við að 1 og 1.0 var jafngilt.
-Það sem \texttt{hash()} gerir er að skila heiltölugildi fyrir viðfangið og þegar við viljum athuga hvort að eitthvað sé jafngilt með rökvirkjanum == erum við að spyrja hvort að fallið skili mismunandi heilum tölum fyrir það sem er sitthvoru megin við rökvirkjann.
-Í tilfellinu 1, 1.0 og True þá eru þau ekki aðgreinanleg og því ekki hægt að nota þau sem þrjá mismunandi lykla í sömu orðabókinni.
+Við sáum í kafla \ref{k:tolur} að 1 og 1.0 er hægt að reikna með þó þær séu af mismunandi tagi og í kafla \ref{k:segðir} sáum við að 1 og 1.0 er jafngilt.
+Það sem \texttt{hash()} gerir er að skila heiltölugildi fyrir viðfangið og þegar við viljum athuga hvort að eitthvað sé jafngilt með rökvirkjanum == erum við að spyrja hvort fallið skili mismunandi heilum tölum fyrir það sem er sitthvorum megin við rökvirkjann.
+Í tilfellinu 1, 1.0 og True eru þau ekki aðgreinanleg og því ekki hægt að nota þau sem þrjá mismunandi lykla í sömu orðabókinni.
 Þetta er ástæðan fyrir því að orðabók er oft kölluð hakkatafla.
 
-Prófið ykkur áfram með \texttt{hash()} fallið og sjáið hvaða tögum gögnin eru sem þið megið hakka. 
+Prófið ykkur áfram með \texttt{hash()} fallið og sjáið hvaða gögn má hakka, af hvaða týpu eru gögnin?
 \end{itarefni}
 
-Nú höfum við séð grunnvirknina við það að búa til orðabók og ná í gögn á lykil en hvaða aðferðir eru til á þær?
+Nú höfum við séð grunnvirknina við það að búa til orðabók og ná í gögn á lykil, en hvaða aðferðir eru til á þær?
 Þær eru ekki margar og þess virði að taka nokkrar fyrir sérstaklega vegna þess hve gagnlegar þær eru strax fyrir byrjendur.
 
 \begin{itemize}
-\item[] \texttt{.get()} leyfir okkur að athuga hvort að lykill sé til í orðabók án þess að valda villu, og ef við viljum skila stöðlu gildi ef lykillinn fannst ekki.
+\item[] \texttt{.get()} leyfir okkur að athuga hvort lykill sé til í orðabók án þess að valda villu, og ef við viljum skila stöðluðu gildi ef lykillinn fannst ekki.
 \item[] \texttt{.popitem()} fjarlægir það stak sem síðast var sett inn (fjarlægir eitthvað stak í Python <3.6).
-\item[] \texttt{.pop()} fjarlægir nákvæmlega það stak sem við viljum með því að við gefum upp lykil.
-\item[] \texttt{.items(), .keys()} og \texttt{.values()} skilar okkur ítranlegum hlut af því sem við viljum geta unnið með, items eru lykla og gildis pör sem ndir, keys eru bara lyklarnir og values eru gildin.
+\item[] \texttt{.pop()} fjarlægir nákvæmlega það stak sem við viljum með því að gefa upp lykil.
+\item[] \texttt{.items(), .keys()} og \texttt{.values()} skila okkur ítranlegum hlut af því sem við viljum geta unnið með, \texttt{items} eru lykla- og gildispör sem ndir, \texttt{keys} skilar bara lyklunum og \texttt{values} einungis gildunum.
 \end{itemize}
 
 Skoðum aðeins nánar hvernig \texttt{items(), keys()} og \texttt{values()} virka því að við viljum geta ítrað í gegnum orðabækur.
@@ -120,7 +123,7 @@ ndir af pörum dict_items([(1, [1, 2, 3, 4, 5]), (2, ['strengir', 'í', 'lista']
 Höfum ekki óþarfa áhyggjur af úttakinu þar sem stendur dict\_ eitthvað.
 Það sem við þurfum að átta okkur á er að við fáum nokkurs konar lista (e. view) í hvert sinn og að stökin í listunum fást upp úr orðabókinni okkar með útreiknanlegum hætti.
 
-Skoðum nú í næsta undirkafla hvernig megi vinna með þetta.
+Skoðum nú í næsta undirkafla hvernig má vinna með þetta.
 
 \section{Ítrað í gegnum orðabækur}\index{Ítrað í gegnum orðabækur}
  \begin{wrapfigure}{r}{0.21\textwidth} %i o r l 
@@ -129,26 +132,26 @@ Skoðum nú í næsta undirkafla hvernig megi vinna með þetta.
 	\end{center}
 \end{wrapfigure}
 
-Nú höfum við séð for lykkjur í kafla \ref{k:lykkjur} og hvernig mátti lykkja í gegnum lista í kóðabút \ref{lst:lykkjur-for}.
-Nú hins vegar þurfum við að fara yfir hvernig í ósköpunum á eiginlega að skoða stak í orðabók á kerfisbundinn máta þegar eitt stak er bæði lykill og gildi.
+Nú höfum við séð for-lykkjur í kafla \ref{k:lykkjur} og hvernig má lykkja í gegnum lista í kóðabút \ref{lst:lykkjur-for-listi}.
+Nú þurfum við hins vegar að fara yfir hvernig í ósköpunum á eiginlega að skoða stak í orðabók á kerfisbundinn máta þegar eitt stak er bæði lykill og gildi.
 
-Þetta útfærsluatriði var gert þannig í Python að þegar óskað er eftir að ítra í gegnum orðabók eru lyklarnir hennar eingöngu teknir fyrir.
-Hins vegar er hægt að ítra yfir lykla og gildi eða einungis gildin með því að kalla í aðferðirnar sem teknar voru fyrir í lok síðasta undirkafla.
+Útfærsla for-lykkja fyrir orðabókur í Python er þannig að ef kallað er í orðabók með for-lykkju er hlaupandi breytan að fara í gegnum lykla orðabókarinnar.
+Hins vegar er auðveldlega hægt að ítra yfir lykla og gildi eða einungis gildin með því að kalla í aðferðirnar sem teknar voru fyrir í lok síðasta undirkafla.
 
 Nú eru nöfnin á þessum aðferðum ágætlega lýsandi:
 
 \begin{itemize}
 	\item \texttt{.keys()}: við fáum í hendurnar ítranlegan hlut sem inniheldur alla lyklana.
-	\item \texttt{.values()} við fáum í hendurnar ítranlegan hlut sem inniheldur öll gildin.
-	\item \texttt{.items()} og  við fáum í hendurnar ítranlegan hlut sem inniheldur lista af tvenndum (nd með tveimur stökum) þar sem fyrra stakið er alltaf lykilinn og seinna stakið er alltaf gildi hans.
+	\item \texttt{.values()}: við fáum í hendurnar ítranlegan hlut sem inniheldur öll gildin.
+	\item \texttt{.items()}: við fáum í hendurnar ítranlegan hlut sem inniheldur lista af tvenndum (nd með tveimur stökum) þar sem fyrra stakið er alltaf lykillinn og seinna stakið er alltaf gildi hans.
 \end{itemize}
 
-Þannig að til þess að sækja það sem við viljum skoða þurfum við að nota þá aðferð á orðabókina okkar sem okkur hentar hverju sinni.
+Til þess að sækja það sem við viljum skoða þurfum við því að nota þá aðferð á orðabókina okkar sem okkur hentar hverju sinni.
 Ef við vildum til dæmis halda utan um bókasafnið okkar með orðabók og vinna með þær upplýsingar úr bókasafninu sem henta hverju sinni gætum við gert það eins og kemur fram í kóðabút \ref{lst:dict-bokasafn}.
 Við viljum að höfundur sé lykillinn og að gildið sé listi af bókum sem við eigum eftir þann höfund.
-Svo viljum við geta prentað út nöfn þeirra höfunda ásamt upplýsingum um hversu oft þeir koma fyrir á bókasafninu.
+Svo viljum við geta prentað út nöfn þeirra höfunda ásamt upplýsingum um hversu oft þeir koma fyrir í safninu.
 
-\begin{lstlisting}[caption=Skoðum hvernig megi ítra í gegnum orðabækur, label=lst:dict-bokasafn]
+\begin{lstlisting}[caption=Ítrað í gegnum orðabók, label=lst:dict-bokasafn]
 bokasafn = {'Beazley': ['Python Essential Reference'],'Halldór Laxness': ['Íslandsklulkka', 'Salka Valka], 'Auður Haralds': ['Hlustið þér á Mozart', 'Læknamafían', 'Hvunndagshetjan'] }
 
 for hofundur in bokasafn:
@@ -177,10 +180,10 @@ Við sjáum á úttakinu að fyrsta stakið sem \texttt{hofundur} fær úthluta�
 Þá rúllum við í næsta hluta skilyrðissetningarinnar því að 1 er vissulega ekki stærra en 5, við fáum sanngildi þegar spurt er hvort að 1 sé stærra en 0 og því fáum við úttakið: Á bókasafninu er til ein bók eftir höfundinn Beazley.
 Svo gerist það sama aftur fyrir næsta höfund í röð lykla.
 
-Í næsta kóðabút skoðum við svo hvernig eigi að fara að því að skoða bara bókalistana burt séð frá því hverjir höfundarnir eru, þetta gerum við með sömu \texttt{bokasafn} breytunni.
-Svo við gerum ráð fyrir að hún sé enn aðgengileg í kóðabút \ref{lst:dict-bokasafn2}.
-Markmiðið þar er ekki að skoða bækur eftir höfundum heldur prenta út nöfnin á öllum bókum sem eru af nægilega löng.
-Vegna þess að gildin eru listar af bókum þá getum við ítrað í gegnum hvern fyrir sig og þá hreiðrað aðra for lykkju inn í þá lykkju sem sér um að ítra í gegnum bókasafnið okkar.
+Í næsta kóðabút skoðum við svo hvernig á að fara að því að skoða bara bókalistana burtséð frá því hverjir höfundarnir eru, þetta gerum við með sömu \texttt{bokasafn} breytunni.
+Við gerum ráð fyrir að hún sé enn aðgengileg í kóðabút \ref{lst:dict-bokasafn2}.
+Markmiðið þar er ekki að skoða bækur eftir höfundum heldur prenta út nöfnin á öllum bókum sem eru nægilega löng.
+Þar sem gildin eru listar af bókum þá getum við ítrað í gegnum hvern fyrir sig og þá hreiðrað aðra for lykkju inn í þá lykkju sem sér um að ítra í gegnum bókasafnið okkar.
 
 %\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
 	\begin{center}
@@ -210,7 +213,7 @@ Prófið einnig að breyta til, og sjá hvort þið áttið ykkur á því hvað
 Í næsta kóðabút sjáum við svo hvað við gerum til að geta unnið með bæði lykil og gildi.
 Notkun á \texttt{.items()} hefði mögulega sparað okkur smá hausverk í kóðabút \ref{lst:dict-bokasafn} og gert þann kóða læsilegri.
 Tökum eftir að þar sem \texttt{.items()} skilar nd þá getum við annað hvort notað eitt breytuheiti til að taka við allri ndinni eða við getum úthlutað hverju staki úr ndinni í sína eigin breytu.
-Sem er það sem er gert í línu 1 í kóðabút \ref{lst:dict-bokasafn3}, við munum að aðferðin skilar nd þar sem lykillinn kemur fyrst og svo kemur gildið.
+Það er gert í línu 1 í kóðabút \ref{lst:dict-bokasafn3}, við munum að aðferðin skilar nd þar sem lykillinn kemur fyrst og svo kemur gildið.
 Því er breytan \texttt{hofundur} á undan í röðinni, breyturnar eru svo aðgreindar með kommu og þá kemur \texttt{bokalisti}.
 Aftur gerum við ráð fyrir að sama bókasafnið sé okkur aðgengilegt.
 
@@ -226,7 +229,7 @@ for hofundur, bokalisti in bokasafn.items():
 	elif(len(bokalisti) == 1):
 		print(hofundur, "er vissulega til staðar")
 	else:
-		print(hofundur, "á ekki tiltall til einnar bókar í þessu bókasafni")
+		print(hofundur, "á ekki tilkall til einnar bókar í þessu bókasafni")
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
@@ -301,7 +304,7 @@ bok['nýr lykill'] = 'Halló Heimur!'
 
 \begin{exercise}\label{dic2}
 Búið til tóma orðabók.
-Skrifið svo for lykkju þannig að þið bætið tölum frá 0 og upp að n (að eigin vali) sem lykla og sömu tölur í öðru veldi sem gildi, t.d ef n er 5 þá liti orðabókin svona út:
+Skrifið svo for-lykkju þannig að þið bætið tölum frá 0 og upp að n (að eigin vali) sem lyklum og sömu tölum í öðru veldi sem gildi, t.d ef n er 5 þá liti orðabókin svona út:
 {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 \end{exercise}
 \begin{Answer}[ref={dic2}]
@@ -325,7 +328,7 @@ bok.popitem()\end{lstlisting}
 
 \begin{exercise}\label{dic4}
 	Búið til orðabók með þremur stökum þar sem gildin eru listar af tölum, ítrið í gegnum orðabókina og prentið út það stak sem er minnst af öllum (einungis eina tölu) ef það er þó minna en talan 0, annars skal prenta út töluna 0.
-	Athugið að nota min() fallið.
+	Athugið að nota \texttt{min()} fallið.
 \end{exercise}
 \begin{Answer}[ref={dic4}]
 Hér þurfum við að athuga að áður en við förum að skoða hvað sé minnsta gildið þá þurfum að skilgreina breytu sem við viljum vera að bera saman við, og þarf sem við ætlum að prenta út 0 ef við finnum enga tölu lægri en það þá skilgreinum við breytuna sem við notum til samanburðar sem 0.
@@ -369,11 +372,12 @@ for lykill, gildi in bok.items():
 	Semjið að minnsta kosti 5 spurningar, svörin þurfa að vera rétt eða rangt (til að einfalda hlutina töluvert).
 	Búið til breytu sem heldur utan um stig notandans sem byrja í 0, hækkið þessa tölu þegar notandinn svarar rétt en breytið henni ekki annars. 
 	Búið til lykkju sem fer í gegnum allar spurningarnar og spyr notandann að þeim.
-	Þegar notandinn hefur svarað þá athugið þið hvort svarið sé rétt.
-	Ef það er rétt hækkiði einkunnina og látið notandann vita að svarið var rétt ef það er rangt látiði notandann vita að svarið var rangt.
+	Þegar notandinn hefur svarað athugið þið hvort svarið sé rétt.
+	Ef það er rétt hækkið þið einkunnina og látið notandann vita að svarið hafi verið rétt.
+	Ef það er rangt látiði notandann vita að svarið var rangt.
 	
-	Athugið að það er gott að staðla svar notandans t.d. með .lower() eða annarri sambærilegri aðferð. 
-	Þegar spurningarnar eru búnar þá prentiði út einkunn notandans og ef öll svörin voru rétt þá prentiði "og þú fékkst hæstu einkunn".
+	Athugið að gott er að staðla svar notandans t.d. með \texttt{.lower()} eða annarri sambærilegri aðferð. 
+	Þegar spurningarnar eru búnar þá prentið þið út einkunn notandans og ef öll svörin voru rétt þá prentið þið 'og þú fékkst hæstu einkunn'.
 \end{exercise}
 \begin{Answer}[ref={dic6}]
 	Þar sem þessi æfing er krefjandi eru hér eingöngu vísbendingar til að leysa hana.
