@@ -1,15 +1,17 @@
 \chapterimage{chapters8.png} % Chapter heading image
 
 \chapter{Mengi}\index{Orðabækur}\label{k:sett}
-Mengi (stundum kölluð sett) (e. set) eru týpa sem geymir óraðað safn af gögnum án tvítekninga, þau eru ein af fjórum innbyggðum gagnagrindum í Python (listar, ndir, orðabækur eru hinar) og geta þau geymt gögn af hvaða týpu sem er.
+\textbf{Mengi} (stundum kölluð sett) (e. set) eru týpa sem geymir óraðað safn af gögnum án tvítekninga, þau eru ein af fjórum innbyggðum gagnagrindum í Python (listar, ndir, orðabækur eru hinar) og geta geymt gögn af hvaða týpu sem er.
 Lykilorðið þeirra er \textbf{set}.
-Mengi eru skilgreind með slaufusvigum og eru stök þeirra aðgreind með kommum, ólíkt orðabókum þá eru engin lykla og gildispör sem hanga saman með tvípunkti og því ruglast vélin ekki á þessum tveimur týpum.
-Eins og orðabækur eru óraðaðar, þá er ekki hægt að nota vísa til þess að segja hvar eitthvað stak er í mengi.
+Mengi eru skilgreind með slaufusvigum og eru stök þeirra aðgreind með kommum.
+Ólíkt orðabókum þá eru engin lykla- og gildispör sem hanga saman með tvípunkti og því ruglast vélin ekki á þessum tveimur týpum.
+Það er ekki hægt að nota vísa til þess að segja hvar eitthvað stak er í mengi.\footnote{Mengi eru geymd sem hakkatöflur á bakvið tjöldin.}
 
 Mengi þessi eru eins og mengi sem við könnumst við í stærðfræði, þar sem hvert stak kemur þó aðeins fyrir einu sinni.
-Við getum framkvæmt ýmsar stærðfræðilegar aðgerðir á þau ásamt hefðbundnum aðgerðum til að bæta við eða fjarlægja stök, hins vegar er ekki hægt að breyta staki sem er nú þegar komið í mengið.
+Við getum framkvæmt ýmsar stærðfræðilegar aðgerðir á þau ásamt hefðbundnum aðgerðum til að bæta við eða fjarlægja stök.
+Hins vegar er ekki hægt að breyta staki sem er nú þegar komið í mengið.
 
-Skoðum kóðabút \ref{lst:set-kynnt} til þess að sjá hvernig mengi eru skilgreind og hvernig megi nota lykilorðið til að búa til mengi fyrir okkur úr gögnum.
+Skoðum kóðabút \ref{lst:set-kynnt} til þess að sjá hvernig má eru skilgreind og hvernig megi nota lykilorðið til að búa til mengi fyrir okkur úr gögnum.
 
 \begin{lstlisting}[caption=Mengi skilgreind, label=lst:set-kynnt]
 # Fyrsta mengið okkar inniheldur nokkrar tölur
@@ -35,9 +37,9 @@ Tvítekning í mengjum er ekki leyfileg og því ágætt að nota mengi til þes
 Ef við tökum fyrir orðið 'halló' og gerum mengi úr því með \texttt{set('halló')} þá fengjum við mengi sem innihéldi \texttt{'h', 'a', 'l', 'ó'}.
 Stafurinn 'l' kemur tvisvar fyrir í strengnum en hann kemur einu sinni fyrir í menginu af strengnum.
 Sjáum kóðabút \ref{lst:set-duplicate} hvernig við fáum ekki út tvítekningar sama hvernig við reynum.
-Takið eftir úttalinu þar sem stafirnir koma í einhverri röð, sú röð er ekki heilög þar sem þetta er óraðað gagnatag og þessi röðun verður ekki endilega eins við aðra keyrslu.
-En hvernig sem þessi röðun er þá kemur sama táknið ekki fyrir tvisvar.
-Það er eitt bil, eitt litla v og eitt stóra V, og svo framvegis.
+Takið eftir úttakinu þar sem stafirnir koma í einhverri röð, sú röð er ekki heilög þar sem þetta er óraðað gagnatag og þessi röðun verður ekki endilega eins við aðra keyrslu.
+Hvernig sem þessi röðun er kemur sama táknið ekki fyrir tvisvar.
+Það er eitt bil, eitt lítið v og eitt stórt V og svo framvegis.
 
 \begin{lstlisting}[caption=Mengi skilgreind, label=lst:set-duplicate]
 mengid_mitt = {1,2,3,4, 1, 2, 3, 4}
@@ -53,12 +55,12 @@ print(set(strengur))
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-\section{Aðgerðir}\index{Aðferðir}
-Aðferðir sem hægt er að beita á mengi er að bæta við staki, \textbf{add()}, fjarlægja stak, \textbf{remove()} og uppfæra mengið með lista eða mengi til þess að geta sett inn mörg stök í einu, \textbf{update()}.
-Engin þessara aðferða gerir okkur kleyft að eiga tvö eins stök í menginu.
-Tvítekning er ekki liðin, sama hvernig við reynum að komast framhjá henni.
+\section{Aðferðir}\index{Aðferðir}
+Aðferðir sem hægt er að nota á mengi er að bæta við staki, \texttt{add()}, fjarlægja stak, \texttt{remove()}, og uppfæra mengið með lista eða mengi til þess að geta sett inn mörg stök í einu, \texttt{update()}.
+Engin þessara aðferða gerir okkur kleift að eiga tvö eins stök í menginu.
+Tvítekning er ekki liðin, sama hvernig við reynum að komast fram hjá henni.
 
-\begin{lstlisting}[caption=Mengja aðferðir, label=lst:set-method]
+\begin{lstlisting}[caption=Mengjaaðferðir, label=lst:set-method]
 mengid_mitt = {1,2,3,4, 1, 2, 3, 4}
 mengid_mitt.add(3)
 print(mengid_mitt)
@@ -85,17 +87,19 @@ KeyError: 5
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Hér sjáum við lyklavillu þar sem við reyndum að fjarlægja stakið 5 úr mengi sem innihélt það ekki, við sjáum að villan á sér stað í línu 8 og að lyklavillan verður útaf 5, svo við getum auðveldlega lagað þessa villu.
+Hér sjáum við lyklavillu þar sem við reyndum að fjarlægja stakið 5 úr mengi sem innihélt það ekki, við sjáum að villan á sér stað í línu 8 og að lyklavillan verður út af 5.
+Svo við getum auðveldlega lagað þessa villu.
 Reynið nú að laga villuna og gerið tilraunir með þessar þrjár aðferðir.
 
 \begin{itarefni}
 \textbf{Mengjafræði og tákn}\\
-Stærðfræðilegar aðgerðir sem hægt er að gera er t.d. að finna sniðmengi eða sammengi\footnote{\href{https://en.wikipedia.org/wiki/Set_(mathematics)}{Mengifræði á ensku wikipediu}.}, eða einhverja aðra sniðuga blöndu. Þetta er hægt að gera með innbyggðum aðferðum sem taka við tveimur mengjum og skila einu mengi til baka, en það er einnig hægt að gera með því að beita reiknivirkjum á milli tveggja mengja sem má sjá í \href{https://docs.python.org/3/library/stdtypes.html#set}{opinberri skjölun Python}.
-Þar sést nöfnin á innbyggðu aðferðunum fyrir mengjaaðferðirnar ásamt þeim reiknivirkjum sem má nota í staðinn.
+Stærðfræðilegar aðgerðir sem hægt má framkvæma t.d. að finna sniðmengi eða sammengi\footnote{\href{https://en.wikipedia.org/wiki/Set_(mathematics)}{Mengifræði á ensku Wikipediu}.}, eða einhverja aðra sniðuga blöndu.
+Þetta er hægt að gera með innbyggðum aðferðum sem taka við tveimur mengjum og skila einu mengi til baka, en það er einnig hægt að gera með því að beita reiknivirkjum á milli tveggja mengja sem má sjá í \href{https://docs.python.org/3/library/stdtypes.html#set}{opinberri skjölun Python}.
+Þar sjást nöfnin á innbyggðu aðferðunum fyrir mengjaaðferðirnar ásamt þeim reiknivirkjum sem má nota í staðinn.
 \end{itarefni}
 
 Mengi reynast vel við að vinna með gögn eins og símaskrár eða tölvupóstföng því við viljum ekki tvítekningar og þegar á að sameina símaskrár eða tölvupóstföng með ákveðnum reglum er gott að vita að hægt sé að beita þessari týpu.
-Hún er einföld og þægileg, en ræður við grífurlega leiðigjarna útreikninga og því skynsamlegt að kynna sér hana til að geta auðveldlega leyst verkefni sem annars væru mikil handavinna.
+Hún er einföld og þægileg, en ræður við gífurlega leiðigjarna útreikninga og því skynsamlegt að kynna sér hana til að geta auðveldlega leyst verkefni sem annars væru mikil handavinna.
 
 %\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
 	\begin{center}
@@ -122,7 +126,7 @@ mengi = set()
 
 
 \begin{exercise}\label{set2}
-Búið til lista af strengjum, búið svo til mengi út frá þeim lista.
+Búið til lista af strengjum og búið svo til mengi út frá þeim lista.
 \end{exercise}
 \begin{Answer}[ref={set2}]
 	
@@ -134,9 +138,9 @@ mengi = set(listi)\end{lstlisting}
 
 \begin{exercise}\label{set3}
 Búið til lista af tölunum 1, 2, 3, 4, 5 og einn tóman lista.
-Ítrið þá í genum talnalistann með for lykkju þannig að þið rúllið frá 0 upp í töluna 3 með range fallinu svo að þið getið skoðað eitt stak hægra megin við þá tölu sem við eruð að skoða.
+Ítrið þá í gegnum talnalistann með for lykkju þannig að þið rúllið frá 0 upp í töluna 3 með \texttt{range} fallinu svo að þið getið skoðað eitt stak hægra megin við þá tölu sem þið eruð að skoða.
 
-Það sem þið gerið í lykkjunni ykkar er að skoða töluna í staki \textit{i} (hlaupandi stakið) og töluna í staki \textit{i+1} og leggið þær saman og setjið inn í tóma listann sem var skilgreindur fyrir ofan lykkjuna.
+Það sem þið gerið í lykkjunni ykkar er að skoða töluna í staki \textit{i} (hlaupandi stakið) og töluna í staki \textit{i+1}, leggið þær saman og setjið inn í tóma listann sem var skilgreindur fyrir ofan lykkjuna.
 
 Þegar lykkjan er búin að keyra eruð þið komin með tvo talnalista.
 Fyrri listann gerið þið að mengi sem þið uppfærið svo og setjið uppfærða listann inn sem viðfang.
@@ -160,7 +164,7 @@ print(len(talnamengi) == 10)\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{set4}
-Búið til tvö mengi sem innihalda einhverjar tölur og finnið sniðmengið þeirra með því að nota reiknivirkjann \texttt{\&}
+Búið til tvö mengi sem innihalda einhverjar tölur og finnið sniðmengið þeirra með því að nota reiknivirkjann \texttt{\&}.
 \end{exercise}
 \begin{Answer}[ref={set4}]
 \begin{lstlisting}
