@@ -1,17 +1,18 @@
 \chapterimage{chapters10.png} % Chapter heading image
 
 \chapter{Föll}\index{Föll}\label{k:föll}
-Föll (e. functions), eins og lykkjur, eru kóðabútar sem má keyra oft.
-Þau líkjast hins vegar frekar skilgreiningum eða uppskriftum frekar en lykkjum þar sem það þarf að \emph{nota} þau til þess að þau geri eitthvað ekki bara búa þau til.
+\textbf{Föll} (e. functions), eins og lykkjur, eru kóðabútar sem má keyra oft.
+Þau líkjast hins vegar skilgreiningum eða uppskriftum frekar en lykkjum þar sem það þarf að \emph{nota} þau til þess að þau geri eitthvað ekki, bara búa þau til.
 
-Ágætar samlíkingar fyrir föll eru til dæmis stærðfræðilegar skilreiningar, uppskriftir eða réttir á matseðli.
+Ágætar samlíkingar fyrir föll eru til dæmis stærðfræðilegar skilgreiningar, uppskriftir eða réttir á matseðli.
 
 \begin{itemize}
-	\item Stærðfræðilega skilgreining á hring er eftirfarandi: ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju“ sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
+	\item Stærðfræðilega skilgreiningin á hring er eftirfarandi: ,,Hringur er safn punkta í gefinni fjarlægð frá ákveðinni miðju“ sem þýðir að til þess að búa til hring þarf einhverja miðju og teikna svo punkta í einhverjum tilteknum radíus frá þeirri miðju.
 	Skilgreining þessi réttir okkur ekki hring með miðju í punkti (0,0) og radíus 3 þegar við setjum hana fram.
-	En vegna þess að við eigum hana getum við notað hana til þess að búa til alla þá hringi sem okkur henta.
-	\item Uppskrift í matreiðslubók er ákveðin runa af aðgerðum sem þarf að framkvæma, eins og kom fram í kafla \ref{uk:keyra-koda} um hnetusmjörssamlokuna, það að skrifa niður röð aðgerðanna og það sem þarf til er ekki jafngilt því að framkvæma aðgerðirnar og enda með matinn í höndunum
-	\item Réttur á matseðli er skilreindur á ákveðinn hátt, með ákveðnu meðlæti og þess háttar.
+	En vegna þess að við eigum hana getum við notað hana til þess að búa til alla þá hringi sem okkur hentar.
+	\item Uppskrift í matreiðslubók er ákveðin runa af aðgerðum sem þarf að framkvæma, eins og kom fram í kafla \ref{uk:keyra-koda} um hnetusmjörssamlokuna.
+	Það að skrifa niður röð aðgerðanna og það sem þarf til er ekki jafngilt því að framkvæma aðgerðirnar og enda með matinn í höndunum.
+	\item Réttur á matseðli er skilg¸reindur á ákveðinn hátt, með ákveðnu meðlæti og þess háttar.
 	Við gætum þó viljað gera breytingu á þessari skilgreiningu til þess að fá mat sem er okkur meira að skapi en það sem kokknum datt í hug.
 	Það gerum við með því að biðja um skilgreininguna á réttinum nema með breytingum.
 \end{itemize}
@@ -21,21 +22,22 @@ Höfum þessar samlíkingar í huga þegar kemur að því að skrifa og beita f
 Við höfum séð föll áður, eins og: 
 
 \begin{itemize}
-	\item print("fyrsta viðfangið", "næsta viðfang sem fallið tekur", "print er sér á báti, því það tekur við svo mörgum viðföngum")
-	\item len("breyta sem ég vil vita lengdina á")
-	\item range(0,50)
-	\item type("breyta sem viðfang sem ég vil vita týpuna á")
+	\item \texttt{print("fyrsta viðfangið", "næsta viðfang sem fallið tekur", "print er sér á báti, því það tekur við svo mörgum viðföngum")}
+	\item \texttt{len("breyta sem ég vil vita lengdina á")}
+	\item \texttt{range(0,50)}
+	\item \texttt{type("breyta sem viðfang sem ég vil vita týpuna á")}
 \end{itemize}
 
 Þetta eru innbyggð föll.\footnote{\href{https://docs.python.org/3/library/functions.html}{Python skjölunin} inniheldur lista og upplýsingar um öll innbyggð föll (og aðsjálfsögðu margt fleira).}
 Að þau séu innbyggð þýðir að við getum notað þau án þess að ná í einhvern annan kóða (sjá kafla \ref{k:import}) og eru þau flest svo gagnleg að ákveðið var að gefa notendum auðveldara aðgengi að þeim.
 
-Við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut en fall keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
-Allar aðferðir eru föll, ekki öll föll eru aðferðir.
+Við höfum þó séð fleiri föll sem eru aðferðir (e. methods), munurinn liggur í því að aðferð er hengd aftan á hlut með punkti og er fall sem keyrir á þann hlut.
+Fall hins vegar keyrir þegar kallað er í það og óþarfi er að hengja það við eitthvað annað.
+Allar aðferðir eru föll, en ekki öll föll eru aðferðir.
 
 Til dæmis sáum við aðferðirnar .capitalize() á strengi og .sort() á lista.
 
-Föll (e.function) og aðferðir (e. methods) eru aðgreinanlegar að þessu leiti, annað er skilgreint og virkar eins og það á að gera fyrir þau gögn sem þau eiga að virka á en aðferðir er eitthvað sem er fast við hlut og eiga að verka á þann hlut.
+Föll (e. function) og aðferðir (e. methods) eru aðgreinanlegar að þessu leiti, föll eru skilgreind og virka eins og þau eiga að gera fyrir þau gögn sem þau eiga að virka á en aðferðir eru fastar við hlut og eiga að verka á þann hlut.
 
 Við sjáum svo í öðrum hluta bókarinnar hvernig við skilgreinum aðferðir.
 
@@ -49,21 +51,21 @@ Eins og með allt annað sem við lærum er gott að vita hvers vegna við erum 
 Ástæðan fyrir því að við viljum læra um föll er að þau eru eitthvað það öflugasta sem við beitum í forritun, skoðum eftirfarandi lista til að skilja hvers megnug þau eru:
 
 \begin{itemize}
-	\item Við getum endurnýtt föll í stað þess að skrifa upp sama kóðann á bakvið þau á mörgum stöðum.
+	\item Við getum endurnýtt föll í stað þess að skrifa upp sama kóðann á bak við þau á mörgum stöðum.
 	\item Við getum gert föll aðgengileg út fyrir skjalið þar sem við skilgreindum þau.
 	\item Við getum unnið með inntak frá notanda á skilvirkan máta.
 	\item Föll halda utan um einhverja tiltekna virkni sem við viljum hafa aðgang að og eru skilvirk leið til að afmarka virkni.
 \end{itemize}
 
-Við höfum hingað til ekki fengist við meira en að átta okkur á grunnvirkni í forritun með hjálp Python en nú erum við komin á þann stað að við getum farið að leysa flókin vandamál.
+Við höfum hingað til ekki fengist við meira en að átta okkur á grunnvirkni í forritun með hjálp Python, en nú erum við komin á þann stað að við getum farið að leysa flókin vandamál.
 
 
 \section{Að skilgreina föll}
 Til þess að skrifa föll þurfum við að læra nýtt lykilorð, \textbf{def}.
 Það stendur fyrir \emph{define} eða að skilgreina, þar sem við erum með því að búa til ákveðna skilgreiningu sem vélin getur svo notað til þess að framkvæma aðgerðir.
 
-Það næsta sem þarf er að búa til nafn á fallið, nafnið er það sem vð notum til þess að beita fallinu okkar eftir að hafa skilgreint það.
-Alveg eins og með aðrar breytur þá megum við ekki nota föll fyrr en búið er að skilgreina þau.
+Það næsta sem þarf er að búa til nafn á fallið, nafnið er það sem við notum til þess að beita fallinu okkar eftir að hafa skilgreint það.
+Alveg eins og með aðrar breytur megum við ekki nota föll fyrr en búið er að skilgreina þau.
 
 
  \begin{wrapfigure}{r}{0.28\textwidth} %i o r l 
@@ -74,7 +76,8 @@ Alveg eins og með aðrar breytur þá megum við ekki nota föll fyrr en búið
 
 Þegar það er komið getum við byrjað að forrita virkni fallsins okkar, allt sem er a.m.k. einum inndrætti innar en \texttt{def} lykilorðið, tilheyrir fallinu okkar.
 
-Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til, við ætlum að skoða minni úr forritun\footnote{Venjulega er það fyrsta sem er gert í nýju forritunarmáli er að prenta út á staðalúttak \texttt{Halló Heimur!} þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á. Hér er \textit{minni} orð úr bókmenntafræðum.} og prenta út einfalda setningu.
+Í kóðabút \ref{lst:foll-skilgreining} sjáum við hvernig á að búa til skilgreininguna og svo hvernig á að beita fallinu sem við bjuggum til.
+Við ætlum að skoða minni úr forritun\footnote{Venjulega er það fyrsta sem er gert í nýju forritunarmáli er að prenta út á staðalúttak \texttt{Halló Heimur!} þetta er skemmtileg hefð sem óþarfi er að gera miklar breytingar á. Hér er \textit{minni} orð úr bókmenntafræðum.} og prenta út einfalda setningu.
 
 Takið eftir að fallið er skilgreint og svo er það sem er inndregið undir því það sem fallið gerir, fyrir neðan skilgreininguna (ekki lengur inndregið undir henni) er svo kallað í fallið með því að skrifa nafnið á því og tóma sviga fyrir aftan nafnið.
 Svigarnir eru nauðsynlegir því að þannig segjum við vélinni að við séum að kalla í fall.
@@ -98,8 +101,9 @@ Prófið að setja eitthvað á annan staðinn en ekki hinn og keyra svo kóðan
 Nú höfum við séð að hægt er að búa til skilgreiningar á föllum, en tökum eftir að í kóðabút \ref{lst:foll-skilgreining} þá eru tómir svigar fyrir aftan nafnið á fallinu.
 Þessir svigar eru ekki þarna að ástæðulausu og þeir eru ekki tómir í þessum kóðabút að ástæðulausu heldur.
 
-Það sem fer inn í svigana eru svo kölluð \emph{viðföng} (e. arguments), viðföngin skiptast í tvær tegundir \textbf{stöðubundin} (e. postitional) og \textbf{sjálfgefin} (e. named).
-Hægt er að nota bæði í bland og eina viðmiðið er að gefa kost á þeim viðföngum sem notandinn ætti að fá eitthvað um að segja.
+Það sem fer inn í svigana eru svo kölluð \emph{viðföng} (e. arguments).
+Viðföngin skiptast í tvær tegundir, \textbf{stöðubundin} (e. postitional) og \textbf{sjálfgefin} (e. named).
+Hægt er að nota bæði í bland og eina viðmiðið er að gefa kost á þeim viðföngum sem notandinn ætti að hafa eitthvað um að segja.
 
 \begin{lstlisting}[caption=Föll með viðföngum, label=lst:foll-vidfong]
 def prentunarfall(vidfang):
