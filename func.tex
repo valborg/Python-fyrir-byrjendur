@@ -118,22 +118,23 @@ Halló Valborg!
 \lstset{style=venjulegt}
 
 Annað sem mikilvægt er að átta sig á er að viðföng fá breytuheiti sem eru aðeins aðgengileg innan fallsins en ekki utan þess.
-Eins og breytan \texttt{vidfang} er aldrei formlega skilgreind svo við sjáum, allt í einu er hún bara komin þarna inn í svigann í línu 1 og strax notuð í línu 2.
-Það er í rauninni ekki keyrsluröðin, það sem gerist er að vélin fær skilgreininguna á \texttt{prentunarfall} og að þeirri skilgreiningu fylgir einhver staðhaldari sem mun seinna fá eitthvað gildi.
-Sem er það sem gerist í línu 4, við gefum breytunni gildið \texttt{"Valborg"}.
+Breytan \texttt{vidfang} er til að mynda aldrei formlega skilgreind eins og við erum vön, allt í einu er hún bara komin þarna inn í svigann í línu 1 og strax notuð í línu 2.
+Það er í rauninni ekki keyrsluröðin, það sem gerist er að vélin fær skilgreininguna á \texttt{prentunarfall} og að þeirri skilgreiningu fylgi einhver staðhaldari sem mun seinna fá eitthvað gildi.
+Það er það sem gerist í línu 4, við gefum breytunni gildið \texttt{"Valborg"}.
 
-Við ætlum þá að skoða nýtt hugtak áður en við skoðum stöðubundin og sjálfgefin viðföng til þess að átta okkur á hvar þessi staðhaldari er í raun til.
+Við ætlum þá að skoða nýtt hugtak áður en við skoðum stöðubundin og sjálfgefin viðföng til þess að átta okkur á því hvar þessi staðhaldari er í raun til.
 
 \subsection{Gildissvið}\label{uk:gildissvið}
-Gildissvið (e. scope) skiptis í staðvært (e. local) og víðvært (e. global). 
-Það sem gildissvið þýðir er hvar eitthvað sé aðgengilegt.
-Ef við búum til Jupyter vinnubók eða .py skjal þar sem við skilgreinum breytuna x er sú breyta ekki aðgengileg í öðru skjali.
-Hins vegar ef við búum til breytu í vinnubók í einhverri sellu, með engum inndrætti, er sú breyta hluti af viðværu gildissviði og aðgengileg öllum sellum og allri virkni sem við viljum beita þessari breytu í.
-En þegar við skilgreinum föll þá förum við inn á staðvært gildissvið sem þýðir að þegar kallað er í breytu byrjar vélin á að skoða hvort að breytan sé skilgreind innan þess sviðs, ef ekki þá notar hún víðværa gildissviðið.
-En ef okkur langar að nota breytu sem var skilgreind innan einhvers falls (einhvers staðværs gildissviðs) þá höfum við ekki aðgang að henni í hinu víðværa gildisssviði.
+\textbf{Gildissvið} (e. scope) skiptist í \textit{staðvært} (e. local) og \textit{víðvært} (e. global). 
+Gildissvið merkir hvar eitthvað er aðgengilegt.
+Ef við búum til Jupyter vinnubók eða .py skjal þar sem við skilgreinum breytuna \texttt{x} er sú breyta ekki aðgengileg í öðru skjali.
+Ef við búum hins vegar til breytu í vinnubók í einhverri sellu, með engum inndrætti, er sú breyta hluti af viðværu gildissviði og er aðgengileg öllum sellum og allri virkni sem við viljum beita þessari breytu í.
+Þegar við skilgreinum föll förum við inn á staðvært gildissvið sem þýðir að þegar kallað er í breytu byrjar vélin á að skoða hvort breytan sé skilgreind innan þess sviðs, ef ekki þá notar hún víðværa gildissviðið.
+En ef okkur langar að nota breytu sem var skilgreind innan einhvers falls (einhvers staðværs gildissviðs) höfum við ekki aðgang að henni í hinu víðværa gildissviði.
 
-Þetta virðist ótrúlega flókið í svona tæknilegu og löngu máli en skoðið kóðabút \ref{lst:foll-gildissvid} og skoðið hvaða x er verið að vísa í hverju sinni.
-Það x sem er skilgreint í línu eitt er hluti af víðværu gildissviði og það sem er skilgreint innan fallsins í línu 3 er hluti af staðværu gildissviði og þetta eru því tvö mismunandi x sem hafa ekki áhrif hvort á annað.
+Þetta virðist ótrúlega flókið í svona tæknilegu og löngu máli en skoðið kóðabút \ref{lst:foll-gildissvid} og sjáið hvaða \texttt{x} er verið að vísa í hverju sinni.
+Það \texttt{x} sem er skilgreint í línu 1 er hluti af víðværu gildissviði og það sem er skilgreint innan fallsins í línu 3 er hluti af staðværu gildissviði.
+Þetta eru því tvö mismunandi \texttt{x} sem hafa ekki áhrif hvort á annað.
 
 \begin{lstlisting}[caption=Gildissvið, label=lst:foll-gildissvid]
 x = 20
@@ -155,19 +156,20 @@ prufa_tvo()
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Það má líta á þetta eins og að horfa á gosbrunn, þar sem víðværa gildissviðið er þar sem vatnið kemur upp efst í brunninum og svo fellur það niður í staðværa gildissviðið sem er neðri hluti brunnsins.
-Allt sem er til í efri hlutanum getur neðri hlutinn fengið en það sem er í neðri hlutanum fer ekki upp (í þessari samlíkingu ætlum við að horfa framhjá innri virkni gosbrunnsins og sjá bara fyrir okkur hvernig er að horfa á fallegan gosbrunn sem er á tveimur eða fleiri hæðum).
+Það má líta á þetta eins og að horfa á gosbrunn, víðværa gildissviðið er þar sem vatnið kemur upp efst í brunninum og svo fellur það niður í staðværa gildissviðið sem er neðri hluti brunnsins.
+Allt sem er til í efri hlutanum getur neðri hlutinn fengið en það sem er í neðri hlutanum fer ekki upp (í þessari samlíkingu ætlum við að horfa fram hjá innri virkni gosbrunnsins og sjá bara fyrir okkur hvernig er að horfa á fallegan gosbrunn sem er á tveimur eða fleiri hæðum).
 
-Ástæða þess að það er mikilvægt að nefna gilssvið að svo stöddu er vegna þess að byrjendur vilja oft ruglast á breytunotkun með þessum hætti og halda að viðföng séu skilreindar breytur sem hægt sé að láta fallið hafa aftur, þegar það er líkara hugmyndinni um breytuna en ekki breytan sjálf.
+Ástæða þess að mikilvægt er að nefna gilssvið að svo stöddu er að byrjendur vilja oft ruglast á breytunotkun með þessum hætti og halda að viðföng séu skilgreindar breytur sem hægt er að láta fallið hafa aftur, þegar það er líkara hugmyndinni um breytuna en ekki breytan sjálf.
 
 Þetta skýrist þegar við skoðum stöðubundin viðföng.
 
 \subsection{Stöðubundin viðföng}
-Stöðubundin viðföng (e. postitional arguements) fá nafn og röðun þegar þau eru sett í skilgreiningu á falli.
+\textbf{Stöðubundin viðföng} (e. postitional arguements) fá nafn og röðun þegar þau eru sett í skilgreiningu á falli.
 Nöfnin á þeim lúta sömu lögmálum og nafnavenjur sem við höfum séð á breytum og er best að hafa nöfnin lýsandi fyrir virkni þeirra.
 
-Þegar við köllum í fall sem skilgreint er með einu viðfangi og við gefum því engin viðföng þá fáum við villu, villumeldingin sem við fáum upp segir vantar eitt stöðubundið viðfang.
-Í kóðabút \ref{lst:foll-villa-vidfang} sjáum við þessa villu og í kóðabút \ref{lst:foll-stodubundin-kynning} sjáum við hvernig má komast hjá þessari villu og þá hvernig viðföngin eru í raun stöðubundin, svo loks í kóðabút \ref{lst:foll-stodubundin-betra} sjáum við hvernig breytuheitin geta hjalpað okkur við notkun viðfanganna.
+Þegar við köllum í fall sem skilgreint er með einu viðfangi og við gefum því engin viðföng þá fáum við villu, villumeldingin sem við fáum upp segir að það vanti eitt stöðubundið viðfang.
+Í kóðabút \ref{lst:foll-villa-vidfang} sjáum við þessa villu og í kóðabút \ref{lst:foll-stodubundin-kynning} sjáum við hvernig má komast hjá henni og þá hvernig viðföngin eru í raun stöðubundin.
+Í kóðabút \ref{lst:foll-stodubundin-betra} sjáum við loks hvernig breytuheitin geta hjalpað okkur við notkun viðfanganna.
 
 \begin{lstlisting}[caption=Villumelding fyrir ranga notkun á viðföngum, label=lst:foll-villa-vidfang]
 def fall_sem_tekur_vid_streng(strengur):
@@ -187,8 +189,8 @@ TypeError: fall_sem_tekur_vid_streng() missing 1 required positional argument: '
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Hér sjáum við að breytuheitið okkar hjálpar okkur við að sjá hvað það er sem við eigum að setja inn, það er einhvers konar stengur.
-Það er ekki breytan strengur því að þá fengjum við nafnavillu (við eigum enga breytu sem heitir strengur).
+Hér sjáum við að breytuheitið okkar hjálpar okkur við að sjá hvað það er sem við eigum að setja inn, það er einhvers konar strengur.
+Það er ekki breytan \texttt{strengur} því að þá fengjum við nafnavillu (við eigum enga breytu sem heitir \texttt{strengur}).
 
 Við þurfum þá að kalla í fallið og setja eitthvað inn í svigann þegar við köllum í það, eins og 'Halló Heimur!' sem myndi þá prenta út "Halló heimur!".
 
@@ -211,10 +213,10 @@ fall(3,1,2)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Athugum að í kóðabút \ref{lst:foll-stodubundin-kynning} þá er hvorki nafnið á fallinu né viðfanga þess sérlega lýsandi.
+Athugum að í kóðabút \ref{lst:foll-stodubundin-kynning} er hvorki nafnið á fallinu né á viðföngum þess sérlega lýsandi.
 Nafnið á fallinu gefur ekki til kynna hvað það gerir og nöfnin á viðföngunum segja ekkert til um hvernig þau verða notuð eða af hvaða týpu þau eiga að vera.
-Þetta fall væri mögulega nothæft fyrir okkur sjálf, en um leið og annað fólk á að fara að nota kóðann okkar þá er eins gott að venja sig af því að nota svona ógegnsæjar nafnavenjur.
-Betra væri, fyrir þessa tilteknu formúlu að finna eitthvað nafn á hana eða nefna fallið eftir nákvæmri virkni formúlunnar og nefna svo viðföngin eftir því hvar þau eru sett inn í formúluna.
+Þetta fall væri mögulega nothæft fyrir okkur sjálf, en um leið og annað fólk á að fara að nota kóðann okkar þá er eins gott að venja sig af því að nota svona ógagnsæjar nafnavenjur.
+Fyrir þessa tilteknu formúlu væri betra að finna eitthvað nafn á hana eða nefna fallið eftir nákvæmri virkni formúlunnar og nefna svo viðföngin eftir því hvar þau eru sett inn í formúluna.
 
 %\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
 	\begin{center}
@@ -226,7 +228,7 @@ Hingað til hafa öll föllin okkar verið að prenta út, við viljum geta gert
 Við sjáum í kafla \ref{uk:skilagildi} hvað hægt er að gera annað en að prenta bara út.
 
 Lítum á kóðabút \ref{lst:foll-stodubundin-betra} til að sjá hvernig betur mætti fara með skilgreininguna úr kóðabút \ref{lst:foll-stodubundin-kynning}.
-Takið eftir að úttakið er að sjálfsögðu það sama því að kallað er í fallið með sömu tölum, það eina sem breyttist er að nú vitum við hvað er að fara inn fyrir hvað í útreikningunum.
+Takið eftir að úttakið er að sjálfsögðu það sama því að kallað er í fallið með sömu tölum, það eina sem breytist er að nú vitum við hvað er að fara inn fyrir hvað í útreikningunum.
 
 \begin{lstlisting}[caption=Stöðubundin viðföng með skýrari breytuheitum, label=lst:foll-stodubundin-betra]
 def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling):	
@@ -244,14 +246,15 @@ hefja_i_veldi_og_deila(3,1,2)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Ef við rifjum upp hugtakið gildissvið úr fyrri undirkafla og skoðum hvernig það á við um kóðabút \ref{lst:foll-stodubundin-betra} þá sjáum við að fallið heitir \texttt{hefja\_i\_veldi\_og\_deila} og það tekur við þremur viðföngum sem verða að vera sett inn í þeirri röð sem fallið kallar eftir þeim, fyrst grunntöluna svo töluna sem á að nota sem veldisvísi og svo loks töluna sem á að deila með.
+Ef við rifjum upp hugtakið gildissvið úr fyrri undirkafla og skoðum hvernig það á við um kóðabút \ref{lst:foll-stodubundin-betra} sjáum við að fallið heitir \texttt{hefja\_i\_veldi\_og\_deila}.
+Það tekur við þremur viðföngum sem verður að setja inn í þeirri röð sem fallið kallar eftir þeim, fyrst grunntöluna svo töluna sem á að nota sem veldisvísi og svo loks töluna sem á að deila með.
 
-Nú er við hæfi að taka fram hvers konar byrjenda mistök eru algeng hérna og ef meiri skilningur værir fyrir hendi á hvernig gildissvið virka myndu þessi mistök eiga sér sjaldnar stað.
-Það er að breyturnar grunntala, veldisvisir og deiling eru hluti af staðværu gildissviði þessa falls, neðri hluta brunnsins sem efri hlutinn getur ekki sótt vatn úr.
-Þess vegna getum við ekki kallað í fallið svona: \texttt{hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling)} (það er skrifað inn nöfnin á viðföngunum eins og við eigum þau til sem breytur) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
+Nú er við hæfi að taka fram hvers konar byrjendamistök eru algeng hérna, en ef meiri skilningur værir fyrir hendi á því hvernig gildissvið virka ættu þessi mistök sér sjaldnar stað.
+Það er að breyturnar \texttt{grunntala}, \texttt{veldisvisir} og \texttt{deiling} eru hluti af staðværu gildissviði þessa falls, neðri hluta brunnsins sem efri hlutinn getur ekki sótt vatn úr.
+Þess vegna getum við ekki kallað í fallið svona: \texttt{hefja\_i\_veldi\_og\_deila(grunntala,veldisvisir,deiling)} (það er skrifað inn í nöfnin á viðföngunum eins og við eigum þau til sem breytur) því að þá erum við að biðja víðværa gildissviðið (efri hluta brunnsins) um að finna hjá sér einhverjar breytur sem heita þetta til þess að setja inn í staðinn fyrir þessar skilgreiningar.
 
-Ef við horfum aftur til skilgreiningar hrings og myndum búa til fall sem lýsir því hvernig eigi að teikna hring með ákveðna miðju og tiltekinn radíus.
-Nú ef okkur langar til að fá einhvern hring í hendurnar getum við ekki sagt við vélina láttu okkur hafa hring með radíus \texttt{radius} nema að sú breyta hafi þegar fengið gildið sem við ætluðum að nota.
+Hér getum við aftur horft til skilgreiningar hrings og búið til fall sem lýsir því hvernig á að teikna hring með ákveðna miðju og tiltekinn radíus.
+Efiii  okkur langar til að fá einhvern hring í hendurnar getum við ekki sagt við vélina láttu okkur hafa hring með radíus \texttt{radius} nema að breytan \texttt{radius} hafi þegar fengið gildið sem við ætluðum að nota.
 
 \begin{wrapfigure}{i}{0.3\textwidth} %i o r l 
 	\begin{center}
@@ -261,20 +264,21 @@ Nú ef okkur langar til að fá einhvern hring í hendurnar getum við ekki sagt
 Vélin, ef við manngerum hana örlítið, myndi þá segja ,,það er það sem þú átt að segja mér, hvað radíus er, ég veit ekkert hvað það er!“
 Til þess að nota fallið þurfum við að gefa annað hvort upp gögn af týpunni sem um var beðið eða breytu sem er aðgengileg utan fallsins (annað hvort úr víðværu gildissviði eða víðara staðværu gildissviði) sem inniheldur gögn af týpunni sem um var beðið.
 
-Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki inntakið þegar við setjum það í augljóslega ranga röð.
+Tölvan reynir ekki að hafa vit fyrir okkur, hún lagar ekki inntakið þegar við setjum það augljóslega í ranga röð.
 Hún annað hvort vinnur með vitlausa inntakið okkar og við fáum í hausinn eitthvað úttak sem við skiljum ekki eða við fáum villu.
-Kíkið á kafla \ref{k:villur} til þess skoða hvernig megi taka á því þegar upp koma villur en við viljum að kóðinn okkar haldi samt áfram að keyra.
+Kíkið á kafla \ref{k:villur} til þess að skoða hvernig má taka á því þegar upp koma villur en við viljum að kóðinn okkar haldi samt áfram að keyra.
 
 
 
-\subsection{Sjálfgefin viðfögn}\label{uk:föll-sjálfgefin}
-Ef við viljum vera viss um að við getum unnið með eitthvað viðfang án þess að neyða notandann til þess að gefa okkur það getum við notað sjálfgefin viðföng (e. named arguments, default arguments), einnig kölluð nefnd viðföng.
+\subsection{Sjálfgefin viðföng}\label{uk:föll-sjálfgefin}
+Ef við viljum vera viss um að við getum unnið með eitthvað viðfang án þess að neyða notandann til þess að gefa okkur það getum við notað \textbf{sjálfgefin viðföng} (e. named arguments, default arguments), einnig kölluð \textit{nefnd viðföng}.
 Þá skilgreinum við fall og búum til skilgreiningu á viðföngunum þar sem við tökum þau fram.
-Skoðum þetta í kóðabút \ref{lst:foll-sjalfgefin} þar sjáum við hvernig megi nota bæði stöðubundin og sjálfgefin saman og hvernig megi kalla í föll sem eru með bæði.
+Skoðum þetta í kóðabút \ref{lst:foll-sjalfgefin} en þar sjáum við hvernig má nota bæði stöðubundin og sjálfgefin viðföng saman og hvernig má kalla í föll sem eru með bæði.
 
-Þegar bæði er notað saman í bland þá þarf að setja stöðubundnu viðfögnin fremst og svo á eftir þeim koma sjálfgefnu viðföngin.
+Þegar bæði er notað saman í bland þarf að setja stöðubundnu viðföngin fremst og sjálfgefnu viðföngin koma svo á eftir þeim.
 
-Athugum að bæði er í lagi að nota sjálfgefin viðföng sem stöðubundin, en þá verðum við líka að setja þau inn í réttri röð, og hins vegar að skrifa inn nafnið á viðfanginu og skilgreina það sem eitthvað (hvort sem það séu einhver gögn sem við setjum beint inn eða notum breytu), einnig er í lagi að sleppa því að taka þau fram.+
+Athugum að bæði er í lagi að nota sjálfgefin viðföng sem stöðubundin, en þá verðum við líka að setja þau inn í réttri röð, og hins vegar að skrifa inn nafnið á viðfanginu og skilgreina það sem eitthvað (hvort sem það eru einhver gögn sem við setjum beint inn eða notum breytu).
+Einnig er í lagi að sleppa því að taka þau fram.
 
 %\begin{wrapfigure}{i}{0.21\textwidth} %i o r l 
 	\begin{center}
@@ -321,32 +325,35 @@ hefja_i_veldi_og_deila_2(tala, veldi, deiling = deila)
 \lstset{style=venjulegt}
 
 Skoðið hér hvernig er kallað í fallið \texttt{hefja\_i\_veldi\_og\_deila} í línum 4-7 í kóðabút \ref{lst:foll-sjalfgefin} og berið það saman við hvernig var kallað í föllin í kóðabútum \ref{lst:foll-villa-vidfang} og \ref{lst:foll-stodubundin-betra}.
-Þar þurfti alltaf að setja inn öll viðföng annars fékkst villa, en vegna þess að í  skilgreiningunni kom fram að sjálfgefin gildi eru ákveðnar tölur sem hægt er að nota í útreikningum þá lendir vélin ekki í vandræðum þegar einhver viðföng vantar.
+Þar þurfti alltaf að setja inn öll viðföng, annars fékkst villa. 
+Vegna þess að í  skilgreiningunni kom fram að sjálfgefin gildi eru ákveðnar tölur sem hægt er að nota í útreikningum lendir vélin ekki í vandræðum þegar einhver viðföng vantar.
 
-Að sjálfsögðu megum við ekki setja inn of mörg viðföng, þá lendum við í vandræðum, prófið ykkur áfram með það.
+Að sjálfsögðu megum við ekki setja inn of mörg viðföng, þá lendum við í vandræðum.
+Prófið ykkur áfram með það.
 
-Takið líka eftir í línu 7 er kallað í viðföngin í ,,rangri“ röð með því að nota nöfnin á þeim.
+Takið líka eftir að í línu 7 er kallað í viðföngin í ,,rangri“ röð með því að nota nöfnin á þeim.
 Prófið að gera það með línu 21, að setja breyturnar inn fyrir viðföngin í annarri röð.
 Takið eftir því að stöðubundnu viðföngin verða að koma á undan.
 
 Í línu 5 og 14 er kallað eins í föllin, þá er komið fram við sjálfgefnu viðföngin eins og stöðubundin.
-Þannig að sett er inn fyrir viðföngin í þeirri röð sem þau eru skilgreind í línum 1 og 9.
+Viðföngin eru sett inn í sömu röð og skilgreining fallanna í línum 1 og 9.
 
 Eins og hefur komið fram er nauðsynlegt að gera tilraunir og prófanir til að ná árangri og skilningi á efninu.
 
 
 \section{Skilagildi}\label{uk:skilagildi}
-Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með viðföng, það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila útkomu sem megi nota áfram.
-Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum streng sem byggir á strengnum sem við notuðum aðferðina á (sjá kóðabút \ref{lst:str-adferdir}), til þess að geta notað úttkomuna þá getum við búið til breytu sem grípur það sem aðferðin \textit{skilar}.
+Nú höfum við séð hvernig á að búa til föll, við höfum séð hvernig á að láta föllin vinna með viðföng.
+Það næsta sem við viljum skoða er hvernig á að láta föllin okkar skila útkomu sem má nota áfram.
+Við höfum séð hvernig aðferðir á strengi skila oft til okkar öðrum streng sem byggir á strengnum sem við notuðum aðferðina á (sjá kafla \ref{uk:strengjaaðferðir}), til þess að geta notað útkomuna getum við búið til breytu sem grípur það sem aðferðin \textit{skilar}.
 
-Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} þá er fallið \texttt{hefja\_i\_veldi} skilgreint, en aldrei er hægt að vinna eitthvað með úttkomuna úr útreikningnum,útkoman er bara prentuð.
-Það dugar okkur ekki, ef við þurfum að nota útreikninginn, að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
+Í kóðabútum \ref{lst:foll-stodubundin-betra} og \ref{lst:foll-sjalfgefin} er fallið \texttt{hefja\_i\_veldi} skilgreint, en aldrei er hægt að vinna eitthvað með útkomuna úr útreikningnum, útkoman er bara prentuð.
+Ef við þurfum að nota útreikninginn þá dugar okkur ekki að þurfa að horfa á það sem vélin skrifar út og skrifa það handvirkt inn sjálf.
 Það sem við viljum geta sagt er ,,hey reiknaðu þetta út og notaðu það svo hér, mér er alveg sama hvað það er því að ég treysti því að þú hafir gert það rétt“.
-Því að við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
+Við manngerum tölvuna að sjálfsögðu, hvað gæti farið úrskeiðis?
 
-Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð sem er \textbf{return} sem þýðir skila, mjög gagnsætt og gott lykilorð.\footnote{Eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar.}
-Það sem lykilorðið gerir er svipað \emph{break} lykilorðinu, þegar vélin kemur að línu þar sem return kemur fram þá gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
-Sjáum í kóðabút \ref{lst:foll-skilagildi}
+Til þess að geta nýtt þessa virkni þurfum við að læra nýtt lykilorð, \textbf{return} en það þýðir skila, mjög gagnsætt og gott lykilorð.\footnote{Eins og flest lykilorðin sem við höfum séð hingað til, að mati höfundar.}
+Það sem lykilorðið gerir er svipað \emph{break} lykilorðinu, þegar vélin kemur að línu þar sem \texttt{return} kemur fram gerir fallið ekkert meira en að skila því sem beðið er um og vélin heldur áfram í næstu línu frá því kallað var í fallið.
+Sjáum kóðabút \ref{lst:foll-skilagildi}.
 
 \begin{lstlisting}[caption=Hvernig á að láta fall skila gildi með return skipuninni, label=lst:foll-skilagildi]
 def hefja_i_veldi_og_deila(grunntala,veldisvisir,deiling = 1):
@@ -378,8 +385,8 @@ Hægt er að skila gögnum af hvaða týpu sem er, og jafnvel fleiru en einu gil
 Sjáum í kóðabút \ref{lst:foll-ndir-skilagildi} hvernig hægt er að skila mörgum gildum og setja þau í breytu eða breytur.
 Það sem fallið tekur við er strengur, tala og listi.
 Fallið skilar tveimur tölum og listanum aftur óbreyttum
-Fyrri talan er hversu oft strengurinn í viðfanginu kom fyrir í listanum
-Seinni talan er hversu margar tölur í listanum eru stærri en talan í viðfanginu
+Fyrri talan er hversu oft strengurinn í viðfanginu kom fyrir í listanum.
+Seinni talan er hversu margar tölur í listanum eru stærri en talan í viðfanginu.
 
 
 \begin{lstlisting}[caption=Hvernig á að skila mörgum gildum, label=lst:foll-ndir-skilagildi]
@@ -388,7 +395,7 @@ def skilum_morgum_gildum(strengur, tala, listi):
 	skilatala = 0
 	strengja_talning = 0
 	for stak in listi:
-		# x stendur það stak sem verið er skoða úr listanum listi
+		# x stendur fyrir það stak sem verið er skoða úr listanum listi
 		if stak == strengur:
 			strengja_talning +=1
 		if(type(stak) == int or type(stak) == float ):
@@ -425,8 +432,8 @@ print(type(utkoma))
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Þannig að þegar mörgum skilagildum er komið fyrir í einni breytu er þeim komið fyrir sem nd.
-En við munum að það er hægt að úthluta stökum ndar í nokkrar breytur í einu skrefi.
+Þegar mörgum skilagildum er komið fyrir í einni breytu er þeim komið því fyrir sem nd.
+Við munum að hægt er að úthluta stökum ndar í nokkrar breytur í einu skrefi.
 
 \begin{lstlisting}[caption=Fallið úr kóðabút \ref{lst:foll-ndir-skilagildi} notað og skilagildunum úthlutað í breytur rétt, label=lst:foll-skil3]
 talning_strengs, staerri_tolur, listinn = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
@@ -443,7 +450,7 @@ listinn óbreyttur: ['halló', 'bless', 11, 6]
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-En við munum einnig að við þurfum að úthluta öllum stökum í eina ákveðna breytu og því virkar eftirfarandi kóðabútur ekki.
+Við munum einnig að við þurfum að úthluta öllum stökum í eina ákveðna breytu og því virkar eftirfarandi kóðabútur ekki.
 
 \begin{lstlisting}[caption=Fallið úr kóðabút \ref{lst:foll-ndir-skilagildi} notað og skilagildunum úthlutað í breytur rangt, label=lst:foll-skil3]
 a, b = skilum_morgum_gildum("halló", 2, ["halló", "bless", 11, 6])
@@ -461,8 +468,10 @@ ValueError: too many values to unpack (expected 2)
 
 \section{Innri föll}\index{Innri föll}
 
-Föll mega innihalda önnur föll, athugum það sem við fórum yfir í kafla \ref{uk:gildissvið}, þessi föll geta verið gagnleg til að útfæra útreikning sem er svo notaður oft innan fallsins.
-Sjáum dæmi í kóðabút \ref{lst:foll-innri-foll}, athugið sérstaklega gildissviðið því að í innra fallinu er vísað í viðfang sem heitir strengur og það er líka vísað í viðfang í ytra fallinu sem heitir strengur, en vegna þess að gildissviðið krefst þess að fyrst er athugað staðvært hvernig breytan er skilgreind þá skiptir ekki máli að breyturnar heita það sama.
+Föll mega innihalda önnur föll, athugum það sem við fórum yfir í kafla \ref{uk:gildissvið}.
+Þessi föll geta verið gagnleg til að útfæra útreikning sem er svo notaður oft innan fallsins.
+Sjáum dæmi í kóðabút \ref{lst:foll-innri-foll}, athugið sérstaklega gildissviðið því að í innra fallinu er vísað í viðfang sem heitir strengur og það er líka vísað í viðfang í ytra fallinu sem heitir strengur.
+Vegna þess að gildissviðið krefst þess að fyrst sé athugað staðvært hvernig breytan er skilgreind skiptir ekki máli að breyturnar heiti það sama.
 
 
 \begin{lstlisting}[caption=Innri föll kynnt, label=lst:foll-innri-foll]
@@ -515,11 +524,11 @@ NameError: name 'fremsti_stafur_er_nuna_aftastur' is not defined
 \lstset{style=venjulegt}
 
 
-Nú höfum við séð hvernig megi skilgreina innri föll og það sem við ætlum að skoða næst er að það má skila föllum.
-Skipunin return er þá notuð alveg eins og ef við værum að skila einu gildi, eða fleirum.
-Sjáum í kóðabút \ref{lst:foll-lokun} hvernig við skilum falli og hvernig á að nota skilagildið sem inniheldur fallið.
-Við sjáum í seinni hluta þessarar bókar, í umfjöllun um klasa, hvernig megi framkvæma sömu virkni en með því að sleppa klösum þá er vinnslutíminn umtalsvert minni.
-Svo ef það skiptir máli að gera eitthvað hratt sem má leysa með \emph{lokun} (e. closure) þá ætti frekar að beita henni heldur en klösum.
+Nú höfum við séð hvernig má skilgreina innri föll og það sem við ætlum að skoða næst er að það má skila föllum.
+Skipunin \texttt{return} er þá notuð alveg eins og ef við værum að skila einu gildi, eða fleirum.
+Við sjáum í kóðabút \ref{lst:foll-lokun} hvernig við skilum falli og hvernig á að nota skilagildið sem inniheldur fallið.
+Í seinni hluta þessarar bókar, í umfjöllun um klasa, sjáum við hvernig má framkvæma sömu virkni.
+Ef það skiptir máli að eitthvað sé gert hratt sem má leysa með \emph{lokun} (e. closure) þá ætti frekar að beita henni heldur en klösum.
 
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
@@ -552,7 +561,7 @@ nýr strengur hér er viðbót af akademískri ástæðu
 Úttakið hér minnir okkur á strengjaaðferðir (kafli \ref{uk:strengjaaðferðir}) þar sem við þurftum að muna að nota sviga til að kalla í aðferðirnar okkar.
 Það er vegna þess að \texttt{a} er fall, það sem \texttt{prentunarfall} skilar er fall sem þarf að kalla í með svigum til að nota.
 
-Það er ekki sérlega merkilegt fall, það hermir virkni sem við þekkjum vel úr \texttt{print()} fallinu, nema með þessari strengjaviðbót.
+Þetta er ekki sérlega merkilegt fall, það hermir eftir virkni sem við þekkjum vel úr \texttt{print()} fallinu, nema með þessari strengjaviðbót.
 
 Skoðum nú að lokum fall sem er aðeins merkilegra.
 Við viljum geta búið til niðurteljara sem telur niður úr einhverri tölu en á einhverjum tilteknum tíma.
@@ -585,13 +594,13 @@ teljum_fra_fimm()
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Tökum eftir að í skilgreiningum á \texttt{a} og \texttt{b} í kóðabút \ref{lst:foll-lokun} þá erum við að nota ákveðinn streng sem þau eiga að prenta út.
-Þetta er á þessu stigi málsins eilítið óhlutstætt og ekki augljóst hvernig það nýtist okkur því dæmið í kóðabútnum er ekki sérlega nothæft fall.
-Niðurtalningarfallið hinsvegar er að framkvæma einhverja virkni sem við viljum hafa aðgang að þegar okkur hentar.
+Tökum eftir að í skilgreiningum á \texttt{a} og \texttt{b} í kóðabút \ref{lst:foll-lokun} erum við að nota ákveðinn streng sem föllin eiga að prenta út.
+Þetta er eilítið óhlutstætt á þessu stigi málsins og ekki augljóst hvernig það nýtist okkur því dæmið í kóðabútnum er ekki sérlega nothæft fall.
+Niðurtalningarfallið er hins vegar að framkvæma einhverja virkni sem við viljum hafa aðgang að þegar okkur hentar.
 Við notum strax \texttt{teljum\_fra\_fimm} en við notum ekkert \texttt{teljum\_fra\_tiu}, það kemur ekki að sök, þið getið beitt því til athugunar.
 Því var sleppt til að spara pappír.
 
-Athugum þó sérstaklega að gildissviðið sem innrafallið \texttt{teljari()} tilheyrir hefur ekki aðgang að neinu staðværu n-i svo það skilar villu nema að við segjum því falli sérstaklega að nota ekki staðvært n heldur leita út fyrir gildissviðið með lykilorðinu \textbf{nonlocal}.
+Athugum þó sérstaklega að gildissviðið sem innra fallið \texttt{teljari()} tilheyrir hefur ekki aðgang að neinu staðværu n-i svo það skilar villu, nema að við segjum því falli sérstaklega að nota ekki staðvært n heldur leita út fyrir gildissviðið með lykilorðinu \textbf{nonlocal}.
 Við munum ekki nota það orð af neinu viti í seinni hluta bókarinnar en það er þess virði að taka það fram að svo stöddu að þetta orð sé til og hvað það gerir.
 
 %-------------------------------
@@ -602,7 +611,7 @@ Kallið í föllin í öllum æfingum.
 
 \begin{exercise}\label{fun1}
 Búið til fall sem tekur við tveimur stöðubundnum breytum og prentar þær út nema fyrri breytan er prentuð á eftir hinni breytunni.
-Prófið að kalla í fallið með streng og tölu, með tveimur strengjum, og með tveimur tölum.
+Prófið að kalla í fallið með streng og tölu, með tveimur strengjum og með tveimur tölum.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={fun1}]
@@ -618,7 +627,8 @@ fall1(2, 4)\end{lstlisting}
 
 
 \begin{exercise}\label{fun2}
-Búið til fall sem tekur við þremur nefndum viðföngum, sem eiga að vera strengir, ef ekkert er gefið upp ákveðið þið sjálf hvert gildi viðfanganna eigi að vera.
+Búið til fall sem tekur við þremur nefndum viðföngum, sem eiga að vera strengir.
+Ef ekkert er gefið upp ákveðið þið sjálf hvert gildi viðfanganna á að vera.
 Innan fallsins athugið þið svo hver strengjanna er aftastur í stafrófinu og prentið hann út.
 \end{exercise}
 \begin{Answer}[ref={fun2}]
@@ -661,7 +671,7 @@ fall3([1,2,3,4,55,66])\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{fun4}
-Búið til fall sem að tekur við gildi og lista sem viðföng og skilar hversu oft gildið kemur fyrir í listanum.
+Búið til fall sem tekur við gildi og lista sem viðföngum og skilar hversu oft gildið kemur fyrir í listanum.
 \end{exercise}
 \begin{Answer}[ref={fun4}]
 Nú þurfum við lykkju fyrir listann, samanburð við gildið og breytu sem heldur utan um talninguna.
@@ -678,7 +688,7 @@ fall4("halló", ["halló", 123, {}, {"halló": "halló"}, ["telst ekki með hér
 \end{Answer}
 
 \begin{exercise}\label{fun5}
-Búið til fall sem tekur við tveimur strengjum, ef strengirnir byrja báðir á sérhljóða eða á sama samhljóðanum þá skiliði True gildi annars False.
+Búið til fall sem tekur við tveimur strengjum, ef strengirnir byrja báðir á sérhljóða eða á sama samhljóðanum skilið þið True gildi, annars False.
 \end{exercise}
 \begin{Answer}[ref={fun5}]
 Hér erum við í fyrsta sinn að vinna með skilagildi af týpunni Boolean, spennandi.
@@ -704,8 +714,9 @@ Takið svo eftir .lower() til að staðla inntakið svo að við fáum öruggleg
 \end{Answer}
 
 \begin{exercise}\label{fun6}
-Búið til fall sem tekur við tveimur tölum, ef tölurnar eru báðar sléttar skiliði þeirri tölu sem er lægri.
-Ef önnur eða hvorug er slétt skilarðu þeirri tölu sem er hærri.
+Búið til fall sem tekur við tveimur tölum.
+Ef tölurnar eru báðar sléttar skilið þið þeirri tölu sem er lægri.
+Ef önnur eða hvorug er slétt skilið þið þeirri tölu sem er hærri.
 Nú er gott að benda á að \texttt{min()} skilar minnsta gildi alveg eins og \texttt{max()} skilar hæsta gildi.
 \end{exercise}
 \begin{Answer}[ref={fun6}]
@@ -725,10 +736,11 @@ fall6(9, 3)\end{lstlisting}
 
 
 \begin{exercise}\label{fun7}
-Hér fall sem tekur við lista og athugar hvort að stökin 0, 0, 7 komi fyrir í listanum í þessari röð (önnur stök mega vera á milli).
-Dæmi Listinn [1,2,3,0,1,20,0,7] myndi skila True en listinn [7,0,0,0,0,0,6] myndi skila False.
-Athugið  eitthvað vantar í fallið og þið þurfið að fylla í eyðurnar.
-Breytan talning telur hversu mörg tákn við erum komin með af þeim þremur sem við þurfum, við erum fyrst með núll og svo hækkum við talninguna eftir því sem við sjáum táknin í þeirri röð sem við viljum sjá þau.
+Hér fall sem tekur við lista og athugar hvort stökin 0, 0, 7 komi fyrir í listanum í þessari röð (önnur stök mega vera á milli).
+Sem dæmi myndi listinn [1,2,3,0,1,20,0,7] skila True en listinn [7,0,0,0,0,0,6] myndi skila False.
+Athugið að eitthvað vantar í fallið og þið þurfið að fylla í eyðurnar.
+Breytan talning telur hversu mörg tákn við erum komin með af þeim þremur sem við þurfum.
+Við erum fyrst með núll og svo hækkum við talninguna eftir því sem við sjáum táknin í þeirri röð sem við viljum sjá þau.
 \begin{lstlisting}
 def fall6(listi):
 	talning = 0
@@ -764,12 +776,14 @@ def fall6(listi):
 \end{Answer}
 
 \begin{exercise}\label{fun8}
-Búið til fall sem tekur við einu viðfangi sem er tala, það sem fallið gerir er lausnin á verkefni \ref{nd4} en í stað þess að prenta út ndina á fallið að skila ndinni til baka.
-Áður en for lykkjan er keyrð skulið þið keyra skilyrðissetningu sem athugar hvort að viðfangið sé af týpunni heiltala (int), ef svo er ekki skulið þið skila tómri nd.
-Það er hægt að athuga með type() fallinu og int lykilorðinu, með != samanburðinum.
+Búið til fall sem tekur við einu viðfangi sem er tala.
+Það sem fallið gerir er lausnin á verkefni \ref{nd4} en í stað þess að prenta út ndina á fallið að skila ndinni til baka.
+Áður en for lykkjan er keyrð skulið þið keyra skilyrðissetningu sem athugar hvort viðfangið sé af týpunni heiltala (int), ef svo er ekki skulið þið skila tómri nd.
+Þetta er hægt að athuga með \texttt{type()} fallinu og \texttt{int} lykilorðinu.
+Munið eftir \texttt{!=} samanburðinum.
 
 Ef viðfangið er heiltala skal halda áfram og sú tala fer inn í range fallið í for lykkjunni.
-Þannig erum við komin með fall sem getur búið til ndir sem spyrja x oft hver er uppáhalds litur notandans.
+Þannig erum við komin með fall sem getur búið til ndir sem spyrja x oft hver uppáhalds litur notandans er.
 \end{exercise}
 \begin{Answer}[ref={fun8}]
 Rifjum upp svarið við \ref{nd4}
