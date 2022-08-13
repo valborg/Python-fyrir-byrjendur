@@ -1,54 +1,55 @@
 \chapterimage{chapters14.png} % Chapter heading image
 
 \chapter{Villur og villumeðhöndlun}\index{Villur og villumeðhöndlun}\label{k:villur}
-Hingað til þegar við fáum villur í kóðann okkar hefur hann hreinlega hætt keyrslu og við þurft að laga eitthvað.
+Hingað til hefur kóðinn okkar hreinlega hætt keyrslu þegar við fáum villur og við þurft að laga eitthvað.
 Í kafla \ref{uk:tolur-villur} sáum við upptalningu á þeim helstu villum sem við getum lent í.
-Það sem við viljum hinsvegar geta gert er að bregðast við villum til þess að forritin okkar haldi áfram keyrslu þrátt fyrir að eitthvað hafi farið úrskeiðis.
-Við viljum geta sagt vélinni að reyna að gera eitthvað og ef henni tekst það ekki því að það myndi valda villu þá viljum við geta gert eitthvað annað og haldið áfram eða hætt.
+Það sem við viljum hins vegar geta gert er að bregðast við villum til þess að forritin okkar haldi áfram keyrslu þrátt fyrir að eitthvað hafi farið úrskeiðis.
+Við viljum geta sagt vélinni að reyna að gera eitthvað og ef henni tekst það ekki vegna þess að það myndi valda villu viljum við geta gert eitthvað annað og haldið áfram eða hætt.
 
 \section{Algengar villur}\index{Algengar villur}\label{uk:villur-algengar}
 Byrjum á að rifja upp algengar villur og bætum nokkrum við:
 
 \begin{itemize}
-	\item \textbf{Nafnavilla} - \emph{NameError}, nafn á breytu var notað sem er ekki skilgreint
-	\item \textbf{Inndráttar villa }- \emph{IndentationError}, röngum inndrætti beitt
-	\item \textbf{Málskipanarvilla} - \emph{SyntaxError}, rangt tákn notað eða tákn notað vitlaust
-	\item \textbf{Týpuvilla} - \emph{TypeError}, týpan styður ekki aðgerðina sem er verið að framkvæma
-	\item \textbf{Vísis villa} - \emph{IndexError}, verið er að nota sætisvísi sem er ekki til í hlutnum
-	\item \textbf{Gildisvilla} - \emph{ValueError}, verið er að nota gildi sem er ekki til
-	\item \textbf{Eigindavilla} - \emph{AttributeError}, verið er að nota eigindi sem hluturinn á ekki til
-	\item \textbf{Lyklavilla} - \emph{KeyError}, verið er að ná í lykil sem er ekki til
-	\item \textbf{Endurkvæmnisvilla} - \emph{RecursionError}, þegar búið er að ná hámarks leyfilegri endurkvæmni án niðurstöðu
-	\item \textbf{Staðvær-nafnavilla} - \emph{UnboundLocalError}, þegar verið er að vísa í staðvært breytuheiti en það hefur ekki verið skilgreint á þeim stað í gildissviðinu
-	\item \textbf{Inntaks/úttaks-villa} - \emph{IOError}, þegar villa kom upp við meðhöndlun inntaks eða úttaks.
+	\item \textbf{Nafnavilla} - \emph{NameError}, breytunafn er notað sem hefur ekki verið skilgreint.
+	\item \textbf{Inndráttarvilla }- \emph{IndentationError}, röngum inndrætti beitt.
+	\item \textbf{Málskipanarvilla} - \emph{SyntaxError}, rangt tákn notað eða tákn notað vitlaust.
+	\item \textbf{Týpuvilla} - \emph{TypeError}, týpan styður ekki aðgerðina sem er verið að framkvæma.
+	\item \textbf{Vísisvilla} - \emph{IndexError}, verið er að nota sætisvísi sem er ekki til í hlutnum.
+	\item \textbf{Gildisvilla} - \emph{ValueError}, verið er að nota gildi sem er ekki til.
+	\item \textbf{Eigindavilla} - \emph{AttributeError}, verið er að nota eigindi sem hluturinn á ekki til.
+	\item \textbf{Lyklavilla} - \emph{KeyError}, verið er að ná í lykil sem er ekki til.
+	\item \textbf{Endurkvæmnisvilla} - \emph{RecursionError}, þegar búið er að ná hámarks leyfilegri endurkvæmni án niðurstöðu.
+	\item \textbf{Staðvær nafnavilla} - \emph{UnboundLocalError}, þegar verið er að vísa í staðvært breytuheiti en það hefur ekki verið skilgreint á þeim stað í gildissviðinu.
+	\item \textbf{Inntaks/úttaksvilla} - \emph{IOError}, þegar villa kemur upp við meðhöndlun inntaks eða úttaks.
 \end{itemize}
 \vspace{0.5cm}
-Ástæðan fyrir því að nefna nákvæmlega þessar villur en ekki allar sem eru skráðar í skjölun\footnote{\href{https://docs.python.org/}{Opinbera skjölun Python}.} (e. documention) Python forritunarmálsins er vegna þess að þessar villur eru líklegri en aðrar til að koma upp hjá byrjendum og við viljum geta tekið á þeim.
-Inndráttarvillur og málskipanarvillur er þó ekki hægt að grípa á keyrslutíma því að þær eru gripnar áður en keyrsla á sér stað og kóðinn hreinlega keyrir ekki neitt.
-Það er ágætt að hafa í huga að kóðinn okkar þarf að vera réttur og rétt upp settur til þess að geta keyrt yfirhöfuð.
+Ástæðan fyrir því að nefna nákvæmlega þessar villur en ekki allar sem eru skráðar í skjölun Python forritunarmálsins er sú að þessar villur eru líklegri en aðrar til að koma upp hjá byrjendum og við viljum geta tekið á þeim.
+Inndráttarvillur og málskipanarvillur er þó ekki hægt að grípa á keyrslutíma því þær eru gripnar áður en keyrsla á sér stað og kóðinn hreinlega keyrir ekki neitt.
+Ágætt er að hafa í huga að kóðinn okkar þarf að vera réttur og rétt uppsettur til þess að geta keyrt yfirhöfuð.
 
-Hinar villurnar viljum við kannski geta gripið og meðhöndlað svo að við getum haldið áfram með það sem við vorum að gera, við viljum ekki að notandinn sé allt í einu læstur úti eða forritið hætti alfarið keyrslu ef eitthvað minniháttar kemur upp eins og að inntakið frá notanda var ekki af réttri týpu eða ekki var hægt að kasta því í rétta týpu.
+Hinar villurnar viljum við kannski geta gripið og meðhöndlað svo að við getum haldið áfram með það sem við vorum að gera.
+Við viljum ekki að notandinn sé allt í einu læstur úti eða að forritið hætti alfarið keyrslu ef eitthvað minni háttar kemur upp, eins og ef inntakið frá notanda er ekki af réttri týpu eða ekki hægt að kasta því í rétta týpu.
 
 \section{Að grípa villur}\index{Að grípa villur}\label{uk:villur-grípa}
 Til þess að grípa villur og meðhöndla þær þurfum við nokkur ný lykilorð.
 Þau eru \textbf{try}, \textbf{except}, \textbf{else}, \textbf{finally} eða \textit{reyna}, \textit{nema}, \textit{annars}, \textit{að lokum}.
 Við höfum séð else áður og það virkar nokkuð svipað í þessari stöðu.
 Það sem try gerir er það sem við viljum reyna á, það sem við höldum að muni valda villu.
-Við viljum geta reynt að keyra kóðann, til dæmis kalla á einhverja vefþjónustu eða kasta inntaki frá notanda, án þess að forritið hætti.
-Hins vegar ef að kóðinn sem við reyndum að keyra veldur villu þá getum við gripið hana með except klausu, þannig að við ætlum að reyna að keyra kóða nema ef það virkar ekki þá viljum gera eitthvað annað.
-Annars (else) ef það virkaði að keyra kóðann þá getum við gert eitthvað vitandi að það mun ekki valda villu.
-Svo að lokum getum við gert eitthvað burt séð frá því hvort það olli villu eða ekki, finally klausan mun alltaf keyrast.
+Við viljum geta reynt, \texttt{try}, að keyra kóðann, til dæmis kalla á einhverja vefþjónustu eða kasta inntaki frá notanda, án þess að forritið hætti.
+Ef kóðinn sem við reyndum að keyra veldur villu getum við gripið hana með \texttt{except} klausu, þannig að við ætlum að reyna að keyra kóða nema ef það virkar ekki viljum við gera eitthvað annað.
+Annars, \texttt{else}, ef það virkaði að keyra kóðann getum við gert eitthvað vitandi að það muni ekki valda villu.
+Að lokum getum við svo gert eitthvað burtséð frá því hvort það olli villu eða ekki, \texttt{finally} klausan mun alltaf keyrast.
 
-Flæðiritið fyrir þessa hugmynd er nokkuð svipað skilyrðissetningum með if elif og else.
-Það kemur ein try setning, á eftir henni koma eins margar except setningar og við viljum (þar sem hver og ein er þá að taka á einhverri tiltekinni villu), þá má koma ein else setning og að lokum má koma ein finally setning.
+Flæðiritið fyrir þessa hugmynd er nokkuð svipað skilyrðissetningum með \texttt{if}, \texttt{elif} og \texttt{else}.
+Það kemur ein \texttt{try} setning, á eftir henni koma eins margar \texttt{except} setningar og við viljum (þar sem hver og ein er þá að taka á einhverri tiltekinni villu), þá má koma ein \texttt{else} setning og að lokum má koma ein \texttt{finally} setning.
 Hún keyrist sama hvað og er notuð til þess að framkvæma þá virkni sem verður að eiga sér stað, eins og til dæmis að loka skjali sem verið er að vinna í.
 
-Ástæða þess að það er gagnlegt að vita hvað villurnar heita er að except klausurnar okkar geta gripið ákveðnar villur og ef sú tiltekna villa kom upp getum við tekið á nákvæmlega því tilfelli.
-Sjáum í kóðabút \ref{lst:villur-grip-kynnt} hvernig á að beita þessum nýju lykilorðum og hvernig uppsetningin á þeim þarf að vera.
+Ástæða þess að það er gagnlegt að vita hvað villurnar heita er að except klausurnar okkar geta gripið ákveðnar villur og ef sú tiltekna villa kemur upp getum við tekið á nákvæmlega því tilfelli.
+Í kóðabút \ref{lst:villur-grip-kynnt} sjáum við hvernig á að beita þessum nýju lykilorðum og hvernig uppsetningin á þeim þarf að vera.
 Gerum ráð fyrir að breytan \texttt{tala} sé sett sem eitthvað eins og \# í stað skiljanlegrar tölu.
 Prófið ykkur áfram með það.
 
-\begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt]
+\begin{lstlisting}[caption=Hvernig á að beita try\, except og else, label=lst:villur-grip-kynnt]
 tala = input('veldu tölu ')
 try:
 	tala = int(tala)
@@ -62,13 +63,13 @@ tala = input('veldu tölu: ')
 try:
 	int(tala)
 except TypeError:
-	print('ekki gekk að kasta í tölu útaf týpuvillu')
+	print('ekki gekk að kasta í tölu út af týpuvillu')
 except ValueError:
-	print('ekki gekk að kasta í tölu útaf gildisvillu')
+	print('ekki gekk að kasta í tölu út af gildisvillu')
 except AttributeError:
-	print('ekki gekk að kasta í tölu útaf eigindavillu')
+	print('ekki gekk að kasta í tölu út af eigindavillu')
 except:
-	print('ekki gekk að kasta útaf einhverri annarri villu sem ekki er reynt að grípa sérstaklega')
+	print('ekki gekk að kasta út af einhverri annarri villu sem ekki er reynt að grípa sérstaklega')
 else:
 	print('það gekk bara víst að kasta í tölu')
 \end{lstlisting}
@@ -77,15 +78,19 @@ else:
 þú gafst ekki upp neitt sem mátti túlka sem tölu
 talan sem þú ert með er 0
 veldu tölu: #
-ekki gekk að kasta í tölu útaf gildisvillu
+ekki gekk að kasta í tölu út af gildisvillu
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Hér er fyrst einungis gripið ef einhver villa á sér stað en í seinni hlutanum er tekið á þremur mismunandi tilfellum áður en gefist er upp.
+Í fyrri hlutanum er gripið ef einhver villa á sér stað en í seinni hlutanum er tekið á þremur mismunandi tilfellum áður en gefist er upp.
 Þetta gæti verið gott þegar þrjár tilteknar villur eru líklegar og þörf er á að taka á þeim.
 
-Líklega er best að hafa try klausurnar hnitmiðaðar en ekki öll framkvæmdin í forritunu okkar, svona ef ské kynni að eitthvað gæti farið úrskeiðis einhvers staðar.
+Líklega er best að hafa \texttt{try} klausurnar hnitmiðaðar, nota þær til að taka á líklegum villum sem gætu komið upp á viðkvæmum stöðum.
+Ekki er ráðlagt að setja svona klausur í öll föll og allar aðferðir til þess að tryggja að ekkert fari nokkurn tímann úrskeiðis.
+Það myndi taka óþarflega langan tíma í útfærslur, við að greina hvaða villur þarf að grípa hverju sinni og hvernig, og það myndi ekki tryggja að forritið okkar væri öruggara.
 
+Viðkvæmir staðir eru til dæmis þeir þar sem tekið er við gögnum frá notendum eða gögn eru birt notendum.
+Við viljum tryggja það að notendur geta ekki gefið okkur skaðleg gögn.\footnote{\href{https://en.wikipedia.org/wiki/SQL_injection}{Hlekkur á SQL injection árasir á ensku Wikipediu.}}
 
 \begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt-2]
 try:
@@ -97,23 +102,24 @@ except:
 else:
 	print('það er ljóst að við förum ekki hingað inn því kóðinn veldur villu')
 finally:
-	print('við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við gleymdum að grípa villuna og forritið hætti keyrslu')
+	print('við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við höfum gleymt að grípa villuna og forritið hætti keyrslu')
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
 hér er tekið á öllum öðrum villum, ef þessari klausu er sleppt munum við ekki grípa neina villu því þetta er vissulega ekki týpuvilla
-við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við gleymdum að grípa villuna og forritið hætti keyrslu
+við förum alltaf hér inn sama hvað, hvort sem try virkaði eða ekki, jú nema við höfum gleymt að grípa villuna og forritið hætti keyrslu
 \end{lstlisting}
 \lstset{style=venjulegt}
 
 
 
-Þegar við erum að reyna að grípa svona margar villur eins og í kóðabút \ref{lst:villur-grip-kynnt} er það vegna þess að við erum ekki viss hvað það er sem mun fara úrskeiðis, try klausan okkar er tiltölulega einföld og því fátt sem kemur til greina til að fara úrskeiðis, en við gætum verið að reyna á margt í einu og því gagnlegt að vita af því að við getum verið að grípa margar villur á einu bretti.
+Þegar við erum að reyna að grípa svona margar villur eins og í kóðabút \ref{lst:villur-grip-kynnt} er það vegna þess að við erum ekki viss hvað það er sem mun fara úrskeiðis.
+En \texttt{try} klausan okkar er tiltölulega einföld og því fátt sem kemur til greina sem gæti farið úrskeiðis, en við gætum verið að reyna á margt í einu og því gagnlegt að vita af því að við getum gripið margar villur á einu bretti.
 
 
-Annar möguleiki sem við viljum geta reynt á er að hreiðra klausurnar okkar þannig að ef við reyndum eitthvað sem gekk ekki viljum við grípa það en reyna eitthvað annað.
-Þar kemur einnig sterkt inn að vita hvað villurnar okkar heita svo að við getum reynt eitthvað ákveðið byggt á því hvaða villu við fengum.
-Í kóðabút \ref{lst:villur-grip-hreiðrað} sjáum við hvernig hægt er að halda áfram við að reyna að kasta inntaki þegar það gekk ekki við fyrstu tilraun.
+Annar möguleiki sem við viljum geta reynt á er að hreiðra klausurnar okkar þannig að ef við reynum eitthvað sem gengur ekki viljum við grípa það en reyna svo eitthvað annað.
+Þar kemur einnig sterkt inn að vita hvað villurnar okkar heita svo við getum reynt eitthvað ákveðið byggt á því hvaða villu við fengum.
+Í kóðabút \ref{lst:villur-grip-hreiðrað} sjáum við hvernig hægt er að halda áfram að reyna að kasta inntaki þegar það gengur ekki við fyrstu tilraun.
 
 \todo{formatting}
 
@@ -124,7 +130,7 @@ Annar möguleiki sem við viljum geta reynt á er að hreiðra klausurnar okkar 
 \end{center}
 %\end{wrapfigure}
 
-\begin{lstlisting}[caption=Hvernig á má hreiðra try - except - else, label=lst:villur-grip-hreiðrað]
+\begin{lstlisting}[caption=Hvernig má hreiðra try\, except og else, label=lst:villur-grip-hreiðrað]
 try:
 	tala = input('skrifaðu tölustaf ')
 	tala = int(tala)
@@ -146,9 +152,10 @@ talan var 0
 \lstset{style=venjulegt}
 \phantom{easter egg}
 
-Við viljum temja okkur að taka á villum, við viljum heldur sjá snyrtileg villuskilaboð sem væru lýsandi fyrir vandamálið en ekki stafasúpu af torskildum tækniupplýsingum.
+Við viljum temja okkur að taka á villum.
+Við viljum heldur sjá snyrtileg villuskilaboð sem eru lýsandi fyrir vandamálið en ekki stafasúpu af torskildum tækniupplýsingum.
 
-Þetta nýtist t.d. ef við erum með forrit sem brothætt og við viljum að notendur skilji hvað fór úrskeiðis eða við erum með vél sem keyrir endalaust (eins og hitamælir á pallinum) sem sendir okkur svo tölvupóst ef hún lendir í villu.
+Þetta nýtist t.d. ef við erum með forrit sem er brothætt og við viljum að notendur skilji hvað fór úrskeiðis eða ef við erum með vél sem keyrir endalaust (eins og hitamælir á pallinum) sem sendir okkur svo tölvupóst ef hún lendir í villu.
 
 
 
@@ -165,8 +172,11 @@ ræða við mér vitrara fólk
 \section{Æfingar}
 \begin{exercise}\label{vil1}
 Búið til fall sem tekur við einu viðfangi og prentar út hvort það sé stærra eða minna en 0 (True eða False dugar, True fyrir stærra og False fyrir minna).
-Athugið að ekki er hægt að bera saman ólík tög og þið þurfið því að villumeðhöndla inntakið, ef það er ekki sambærilegt við 0 skulið þið í staðinn prenta "ekki sambærilegt".
-Athugið sérstaklega fleytitölur, að ef fleytitölunni 0.1 er kastað í heiltölu verður hún að 0, að ef strengnum "0.1" er kastað í heiltölu fæst villa, og því þurfið þið að vera á varðbergi fyrir mögulegum fleytitölum.
+Athugið að ekki er hægt að bera saman ólík tög og þið þurfið því að villumeðhöndla inntakið.
+Ef það er ekki sambærilegt við 0 skulið þið í staðinn prenta 'ekki sambærilegt'.
+Athugið sérstaklega fleytitölur.
+Ef fleytitölunni 0.1 er kastað í heiltölu verður hún að 0, ef strengnum '0.1' er kastað í heiltölu fæst villa.
+Því þurfið þið að vera á varðbergi fyrir mögulegum fleytitölum.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={vil1}]
@@ -200,11 +210,11 @@ samanburdur_vid_null(-23)
 \setboolean{firstanswerofthechapter}{false}
 
 \begin{exercise}\label{vil2}
-Skrifaðu kóða sem grípur eftirfarandi villur:
+Skrifið kóða sem grípur eftirfarandi villur:
 	\begin{tasks}(2)
 		\task\label{vil2-a} Nafnavilla.  
 		\task\label{vil2-b} Eigindavilla.
-		\task\label{vil2-c} Lykilavilla.
+		\task\label{vil2-c} Lyklavilla.
 		\task\label{vil2-d} Gildisvilla.
 	\end{tasks}
 \end{exercise}

@@ -490,8 +490,8 @@ class InntaksPrentari(Prentari):
 			print(strengur)
 \end{lstlisting}
 
-Í kóðabút \ref{lst:klasar-erfðir} er einungis verið að yfirskrifa aðferðina prentun því að það er aðferðin sem við vildum að væri með einhverjum sértækum hætti.
-Við vildum ekki bara prenta út einu sinni heldur fá notandann til að segja okkur hversu oft og hvað á að prenta, eða geta gert það handahófskennt oft.
+Í kóðabút \ref{lst:klasar-erfðir} er einungis verið að yfirskrifa aðferðina \texttt{prentun} því að það er aðferðin sem við vildum að væri með einhverjum sértækum hætti.
+Við vildum ekki bara prenta út einu sinni heldur fá notandann til að segja okkur hversu oft og hvað ætti að prenta, eða geta gert það handahófskennt oft.
 
 \begin{lstlisting}[caption=Prentaraklasarnir notaðir, label=lst:klasar-erfðir-2]
 p1 = Prentari()
@@ -527,27 +527,26 @@ Inntak
 
 
 \subsubsection{Fjölmótun}
-Tengt erfðum er þess virði að nefna \emph{fjölmótun} (e. polymorphism) í Python.
-Því það er fráburgðið t.d. C++ og Java.
-Fjölmótun er sá eiginleiki að tagið sem inntakið okkar bindur okkur ekki lengur, notandinn á að geta sett inn ólíkar týpur án þess að skemma nokkuð.
+Þar sem við höfum rætt erfðir er þess virði að nefna \emph{fjölmótun} (e. polymorphism) í Python, því hún er fráburgðið t.d. C++ og Java forritunarmálunum.
+Fjölmótun er sá eiginleiki að tagið sem inntakið okkar er af bindur okkur ekki lengur, notandinn á að geta sett inn ólíkar týpur án þess að skemma nokkuð.
 
 Fjölmótun í Python virkar þannig að klasar þurfa ekki að erfa frá öðrum klösum til að haga sér eins og þeir.
 Þetta er vegna þess að þegar vélin athugar hvort að einhver hlutur eigi einhver tiltekin eigindi skoðar hún klasann og þá klasa sem hann erfir frá (í röð) og skilar þeirri útgáfu af eigindinu sem finnst.
 
-Til dæmis HandahofsPrentari og eigindið stada\_bleks(), þá er fyrst athugað innan klasans HandahofsPrentari og svo Prentari hvernig eigi að nota stada\_bleks.
-Hins vegar ef við værum að vinna með eitthvað sem við vildum að hegðaði sér eins og prentari án þess að spá í öllu sem prentaraklasinn er hugsaður fyrir gætum við búið til hlut sem útfærir bara aðferðina stada\_bleks og erfir ekki frá neinum.
-Hlutinn myndum við kannski kalla Blekathugun, og það sem aðferðin stada\_bleks gerir í þeim klasa er að skrifa stöðu bleksins, á einhverju tæki sem vill notfæra sér þessa aðferð, í tölvupóst.
+Sem dæmi getum við tekið \texttt{HandahofsPrentari} og eigindið \texttt{stada\_bleks()}, en er fyrst athugað innan klasans \texttt{HandahofsPrentari} og svo \texttt{Prentari} hvernig eigi að nota \texttt{stada\_bleks}.
+Hins vegar ef við værum að vinna með eitthvað sem við vildum að hegðaði sér eins og prentari án þess að spá í öllu sem prentaraklasinn er hugsaður fyrir gætum við búið til hlut sem útfærir bara aðferðina \texttt{stada\_bleks} og erfir ekki frá neinum.
+Hlutinn myndum við kannski kalla \texttt{Blekathugun}, og það sem aðferðin \texttt{stada\_bleks} gerir í þeim klasa er að skrifa stöðu bleksins, á einhverju tæki sem vill notfæra sér þessa aðferð, í tölvupóst.
 
-Ef við tökum praktískara dæmi þá er hægt að sjá fyrir sér klasa sem sér um að vinna með gögn og til þess að geta sent gögnin frá þessum klasa á ákveðinn máta má láta hann fá hlut í hendurnar sem útfærir \textit{write} aðferð.
-Klasinn sem útfærir write aðferðina þarf ekkert að gera annað en að útfæra þessa einu aðferð á einhvern ákveðinn máta og þá er hægt að fullvissa sig um að gögnin hafi verið skrifuð á þann máta.
+Ef við tökum praktískara dæmi er hægt að sjá fyrir sér klasa sem sér um að vinna með gögn og til þess að geta sent gögnin frá þessum klasa á ákveðinn máta má láta hann fá hlut í hendurnar sem útfærir \textit{write} aðferð.
+Klasinn sem útfærir \texttt{write} aðferðina þarf ekkert að gera annað en að útfæra þessa einu aðferð á einhvern ákveðinn máta og þá er hægt að fullvissa sig um að gögnin hafi verið skrifuð á þann máta.
 
-Svo ef við viljum eiga nokkra mismunandi klasa sem allir kunna mismunandi write aðferðir þá þurfum við bara að ganga úr skugga um að gangavinnsluklasinn okkar fékk write aðferðin sem við vildum nota úr viðeigandi klasa.
+Ef við viljum svo eiga nokkra mismunandi klasa sem allir kunna mismunandi \texttt{write} aðferðir þá þurfum við bara að ganga úr skugga um að gagnavinnsluklasinn okkar fékk \texttt{write} aðferðina sem við vildum nota úr viðeigandi klasa.
 
-Þetta er kallað \textbf{duck typing} og bjóða ekki öll forritunarmál upp á það.
+Þetta er kallað \textbf{duck typing} og ekki öll forritunarmál bjóða upp á það.
 Hugtakið kemur úr frasanum ,,if it looks like a a duck, quacks like a duck and walks like a duck, it's a duck“.
-Hugmyndin er að klasinn sem útfærir einungis aðferðina write fyrir okkur er alveg jafn mikil önd eins og kóðasafnið \textit{os} sem sér um að vinna með skrársafnið og skrifa í skjöl.
+Hugmyndin er að klasinn sem útfærir einungis aðferðina write fyrir okkur er alveg jafn mikil önd eins og kóðasafnið \textit{os} sem sér um að vinna með skráarsafnið og skrifa í skjöl.
 
-Ef við höldum áfram með dæmið um klasana sem útfæra write, þá gæti einn þeirra skrifað í skjal á tölvu úti í þýskalandi, einn sendir skjalið í tölvupósti og einn lætur talgervil lesa það upp í strætó leið 14.
+Ef við höldum áfram með dæmið um klasana sem útfæra \texttt{write} gæti einn þeirra skrifað í skjal á tölvu úti í Þýskalandi, einn sent skjalið í tölvupósti og einn látið talgervil lesa það upp í strætó leið 14.
 Upphaflegi gagnaklasinn veit ekkert um það heldur treystir bara á að fá einhvern hlut í hendurnar sem kann þessa aðferð sama hvernig hún er útfærð.
 
 %-------------------------------
@@ -559,7 +558,7 @@ Aðferðin tekur við hlut af taginu \texttt{Stod} og notar hann til að uppfær
 
 Afritið kóðann úr kóðabútnum, og bætið þessari nýju aðferð inn í klasann og prófið hana.
 Til þess að prófa hana þurfið þið nýja stöð, athugið kóðabút \ref{lst:klasar-aðferðir-lestar-2} til að sjá hvernig það var gert.
-Til dæmis væri hægt að setja Höfn í Hornafirði sem er í 820km fjarlægð frá Reykjavík ef farið er norður.
+Til dæmis væri hægt að setja Höfn í Hornafirði sem er í 820 km fjarlægð frá Reykjavík ef farið er norður.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={kla1}]
@@ -578,11 +577,11 @@ def ny_nuverandi_stod(self, stod):
 \setboolean{firstanswerofthechapter}{false}
 
 \begin{exercise}\label{kla2}
-Notið klasann \texttt{Leikur} úr kóðabút \ref{lst:klasar-str} til þess að útfærið töfraaðferðirnar \texttt{\_\_eq\_\_} og \texttt{\_\_lt\_\_}, sem eru til þess að geta notað samanburðarvirkjana == og <.
+Notið klasann \texttt{Leikur} úr kóðabút \ref{lst:klasar-str} til þess að útfæra töfraaðferðirnar \texttt{\_\_eq\_\_} og \texttt{\_\_lt\_\_}, sem eru til þess að geta notað samanburðarvirkjana == og <.
+Skilagildið úr þessum aðferðum sem við erum að vinna í að útfæra hér er fengið með þessum samanburðarvirkjum.
 Búið svo til tvö eintök af klasanum og berið þau saman með þessum samanburðarvirkjum.
 
 Skoðið vel kóðabútinn og sjáið hvernig \texttt{\_\_str\_\_} er útfærð, þar er einungis verið að skila streng.
-Svo skilagildið úr þessum aðferðum sem við erum að vinna í að útfæra hér eru fengið með þeim samanburðarvirkjum sem þau snúast um.
 \end{exercise}
 \begin{Answer}[ref={kla2}]
 	Hér eru margar leiðir til þess að leysa verkefnið, hvað er það sem gerir tvo leiki jafna?
