@@ -229,14 +229,14 @@ Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, e
 %\end{wrapfigure}
 
 \section{Aðferðir}\index{Aðferðir}\label{uk:klasar-aðferðir}
-Við þekkjum aðferðir, við höfum séð þær notaðar á týpurnar sem við þekkjum, eins og .capitalize() á strengi, .sort() á lista og .get("x", "y") á orðabækur.
+Við þekkjum aðferðir, við höfum séð þær notaðar á týpurnar sem við þekkjum, eins og \texttt{.capitalize()} á strengi, \texttt{.sort()} á lista og \texttt{.get("x", "y")} á orðabækur.
 Aðferðir eru í raun föll sem eru skilgreind inni í klösum og verka á hlutinn sem klasinn skilgreinir (til upprifjunar sjá kafla \ref{uk:strengjaaðferðir}).
 
 Nú ætlum við að skilgreina okkar eigin aðferðir á hlutina okkar.
 Við ætlum að skoða aðferðir með tilliti til rafbíla.
-Það sem við viljum geta gert þegar við búum til tilvik af rafbíl er að segja hvaða tegund hann hefur, hvaða árgerð hann er af, hversu mikla drægni hann hefur á 100km, hversu margar kílówatt stundir rafhlaðan er og hversu marga kílómetra er búið að aka bílnum.
+Það sem við viljum geta gert þegar við búum til tilvik af rafbíl er að segja af hvaða tegund hann er, hvaða árgerð hann er af, hversu mikla drægni hann hefur á 100km, hversu margar kílówattstundir rafhlaðan er og hversu marga kílómetra er búið að aka bílnum.
 
-\begin{lstlisting}[caption=Klasa aðferðir á rafbílaklasa, label=lst:klasar-aðferðir1]
+\begin{lstlisting}[caption=Klasaaðferðir á rafbílaklasa, label=lst:klasar-aðferðir1]
 class Rafbill():
 	def __init__(self, tegund, model, draegni = 16.7, kws = 40, akstur = 0):
 		self.tegund = tegund     
@@ -257,16 +257,17 @@ Við viljum að það að aka bílnum ákveðna kílómetra hafi áhrif á stö�
 Við viljum líka geta hlaðið bílinn.
 En eins og sést í kóðabút \ref{lst:klasar-aðferðir1} þá er hægt að hlaða bílinn endalaust og það er hægt að keyra hann endalaust líka.
 Við settum engin takmörk á það hvað má keyra marga kílómetra, við höldum bara áfram að lækka hleðsluna og við leyfðum okkur svo að hlaða bílinn langt umfram það hversu margar kílówattstundir komast fyrir í rafhlöðunni.
-Einnig er galli á þessum klasa að engin leið er til að halda utan um hvert er hámark hleðslu rafhlöðunnar.
+Einnig er galli á þessum klasa að engin leið er til að halda utan um hvert hámark hleðslu rafhlöðunnar er.
 
-En þetta dugar til að sýna fram á hvernig aðferðir eru skilgreindar, hvernig á að kalla í þær, hvernig þær hafa áhrif á tilveiksbreyturnar okkar og svo hvernig má kalla í tilviksbreyturnar til að sjá áhrifin.
-Takið sérstaklega eftir því í línu 14 að \texttt{kw} og \texttt{self.kw} er ekki það sama, eins og kom fram áður þá er self að vísa í tilvik af klasanum og klasi af þessu tagi hefur \texttt{kws} sem tilviksbreytu.
-Hér er þá verið að vísa í þær kw-stundir sem tilvikið bjó yfir þegar kallað var í aðferðina en seinna viðfangið, staka \texttt{kws} er fengið frá notandanum sem kallaði í aðferðina og í núna er það bara hugmynd að einhver muni á endanum gera það, svo sjáum við í kóðabút \ref{lst:klasar-aðferðir1-2} hvernig það er gert.
+En þetta dugar til að sýna fram á hvernig aðferðir eru skilgreindar, hvernig á að kalla í þær, hvernig þær hafa áhrif á tilviksbreyturnar okkar og svo hvernig má kalla í tilviksbreyturnar til að sjá áhrifin.
+Takið sérstaklega eftir því í línu 14 að \texttt{kw} og \texttt{self.kw} er ekki það sama, eins og kom fram áður er \texttt{self} að vísa í tilvik af klasanum og klasi af þessu tagi hefur \texttt{kws} sem tilviksbreytu.
+Hér er þá verið að vísa í þær kw-stundir sem tilvikið bjó yfir þegar kallað var í aðferðina en seinna viðfangið, staka \texttt{kws}, er fengið frá notandanum sem kallaði í aðferðina.
+Núna er það bara hugmynd að einhver muni á endanum gera það, svo sjáum við í kóðabút \ref{lst:klasar-aðferðir1-2} hvernig það er gert.
 
 Aðferðir þurfa þó ekki endilega að hafa áhrif á tilvikið okkar heldur geta skilað okkur til baka einhverri niðurstöðu, eins og flestar aðferðir á strengi (því við munum að strengir eru óbreytanlegir).
 
 Engin aðferðanna í þessum klasa skilaði nokkurri niðurstöðu.
-En skoðum þó hvernig megi nota aðferðirnar á eitthvað tiltekið tilvik.
+En skoðum þó hvernig nota má aðferðirnar á eitthvað tiltekið tilvik.
 
 \begin{lstlisting}[caption=Tilvik af rafbílaklasanum búið til og notað, label=lst:klasar-aðferðir1-2]
 rafbill = Rafbill('Rafio', 2021) 
@@ -292,8 +293,9 @@ Hérna er kallað í báðar aðferðirnar sem við skilgreindum í kóðabút \
 Takið einnig eftir að \texttt{rafbill} og \texttt{Rafbill} er ekki það sama, í Python skiptir máli hvort eru notaðir hástafir eða lágstafir. 
 
 Tökum nú nýtt dæmi þar sem við skoðum ímyndað lestarkerfi á Íslandi.
-Í þessu dæmi höldum við utan um tvennt með klösum, annars vegar lestarstöðvar sem hafa nöfn og eru í ákveðinni fjarlægð frá upphafsstöðinni á leiðinni sinni og hins vegar lestar sem eru á ákveðinni leið og eru staddar á ákveðinni stöð.
-Í kóðabút \ref{lst:klasar-aðferðir-lestar} sjáum við hvernig aðferðir geta skilað einhverju án þess að hafa áhrif á tilviksbreytur og við sjáum einnig að smiðurinn init tekur bara við tveimur breytum frá notanda en skilgreinir þrjár tilviksbreytur, þetta er vegna þess að klasinn býður notandanum ekki að hafa áhrif á þessa breytu við smíð klasans.
+Í þessu dæmi höldum við utan um tvennt með klösum, annars vegar lestarstöðvar sem hafa nöfn og eru í ákveðinni fjarlægð frá upphafsstöðinni á leið sinni og hins vegar lestar sem eru á ákveðinni leið og eru staddar á ákveðinni stöð.
+Í kóðabút \ref{lst:klasar-aðferðir-lestar} sjáum við hvernig aðferðir geta skilað einhverju án þess að hafa áhrif á tilviksbreytur og við sjáum einnig að smiðurinn \texttt{\_\_init\_\_} tekur bara við tveimur breytum frá notanda en skilgreinir þrjár tilviksbreytur.
+Þetta er vegna þess að klasinn býður notandanum ekki að hafa áhrif á þessa breytu við smíð klasans.
 Notandinn verður því að fá í hendurnar við grunnstillingu lest sem hefur ekki ferðast neitt.
 
 \begin{lstlisting}[caption=Aðferðir kynntar með lestarkerfi, label=lst:klasar-aðferðir-lestar]
@@ -321,8 +323,8 @@ class Lest():
 \end{lstlisting}
 
 Skoðið hér að þrjár aðferðir eru til þess að segja til um fjarlægð lestar frá stöð og það er til þess fallið að sýna að oft eru margar leiðir til þess að leysa verkefni, sérstaklega þegar þau verða flóknari.
-Fara til aðferðirnar taka við mismunandi inntaki en þær skila allar sömu niðurstöðu, það er hvað er langt á milli lestar og stöðvar.
-Síðasta aðferðin er frábrugðin að því leitinu til að hún færir lestina, framkvæmir breytingu á ástandi lestarinnar.
+Aðferðirnar taka við mismunandi inntaki en þær skila allar sömu niðurstöðu, hversu langt er milli lestar og stöðvar.
+Síðasta aðferðin er frábrugðin að því leyti að hún færir lestina, framkvæmir breytingu á ástandi lestarinnar.
 
 \begin{lstlisting}[caption=Tilvik af lestum og stöðvum búin til og notuð, label=lst:klasar-aðferðir-lestar-2]
 reykjavik = Stod("Reykjavík", 0)
@@ -349,17 +351,16 @@ print(lest1)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Það er gott að sjá að allar aðferðirnar skiluðu sömu niðurstöðinni þegar spurt var hve langt er frá Reykjavík til Egilsstaða en af hverju fengum við svona ljóta útprentun þegar við prentuðum út lestina okkar?
+Gott er að sjá að allar aðferðirnar skiluðu sömu niðurstöðunni þegar spurt var hve langt væri frá Reykjavík til Egilsstaða, en af hverju fengum við svona ljóta útprentun þegar við prentuðum út lestina okkar?
 Sjáum hvernig við leysum það í næsta kafla.
 
-\section{Töfra aðferðir}\index{Töfra aðferðir}\label{uk:klasar-töfra-aðferðir}
+\section{Töfraaðferðir}\index{Töfra aðferðir}\label{uk:klasar-töfra-aðferðir}
 \begin{wrapfigure}{i}{0.15\textwidth} %i o r l 
 \begin{center}
 	\includegraphics[scale=0.3]{doodles31-01.png}
 \end{center}
 \end{wrapfigure}
-Nú höfum við séð hvernig á að skilgreina okkar eigin aðferðir á klasa.
-Og við höfum verið að nota eina töfraaðferð til þess að smíða klasana okkar, init.
+Nú höfum við séð hvernig á að skilgreina okkar eigin aðferðir á klasa og við höfum verið að nota eina töfraaðferð til þess að smíða klasana okkar, \texttt{init}.
 En það er til mýgrútur af töfraaðferðum sem við getum nýtt okkur til þess að gera klasana okkar nothæfari.
 Í þessum kafla verða nokkrar slíkar teknar fyrir (en alls ekki allar).
 Við munum að töfraaðferðir eru aðferðir sem eru með tveimur undirstrikum fyrir framan sig og aftan og gegna því hlutverki að útfæra innbyggða virkni.
@@ -373,12 +374,12 @@ Við munum að töfraaðferðir eru aðferðir sem eru með tveimur undirstrikum
 \vspace{10pt}
 
 Helst ber að nefna \texttt{\_\_str\_\_} aðferðina, sem nemendur vilja oftast geta beitt strax og skilja ekki hvers vegna print skilar einhverju furðulegu.
-Hingað til höfum við ekki verið að beita innbyggða fallinu print á klasana okkar í kóðabútum því að hún gerir ekkert skilmerkilegt ennþá (eins og í úttaki kóðabúts \ref{lst:klasar-aðferðir-lestar-2}).
+Hingað til höfum við ekki verið að beita innbyggða fallinu print á klasana okkar í kóðabútum því að hún gerir ekkert skilmerkilegt enn þá (eins og í úttaki kóðabúts \ref{lst:klasar-aðferðir-lestar-2}).
 Til þess að hún geri það þurfum við að útfæra töfraaðferðina \texttt{\_\_str\_\_}.
 Það sem sú aðferð þarf að gera er að skila streng.
 Nú er það upp á okkur komið hvað okkur finnst vera nógu merkilegar upplýsingar til þess að setja í strenginn sem á að prenta.
-Hingað til þegar við beitum print fallinu höfum við verið að skoða úttak sem er af einhverri týpu sem við þekkjum, heiltölur eða strengir til dæmis.
-En nú þegar við erum með okkar eigin klasa/hluti viljum við kannski fá einvherjar tilteknar upplýsingar í ákveðinni röð.
+Þegar við beitum \texttt{print} fallinu höfum við hingað til verið að skoða úttak sem er af einhverri týpu sem við þekkjum, heiltölur eða strengir til dæmis.
+En nú þegar við erum með okkar eigin klasa/hluti viljum við kannski fá einhverjar tilteknar upplýsingar í ákveðinni röð.
 
 
 \begin{wrapfigure}{i}{0.15\textwidth} %i o r l 
@@ -387,8 +388,8 @@ En nú þegar við erum með okkar eigin klasa/hluti viljum við kannski fá ein
 	\end{center}
 \end{wrapfigure}
 
-Skoðum kóðabút \ref{lst:klasar-str} þar sem við skilgreinum klasa sem heldur utan um tölvuleikjapersónuna okkar aftur, hins vegar ætlum við að sleppa aðferðunum að sinni og bæta við nokkrum klasabreytum.
-
+Skoðum kóðabút \ref{lst:klasar-str} þar sem við skilgreinum klasa sem heldur utan um tölvuleikjapersónuna okkar aftur, en við ætlum þó að sleppa aðferðunum að sinni og bæta við nokkrum klasabreytum.
+\todo{formatting}
 \paragraph{}
 
 Klasabreytur eru skilgreindar efst í klasa og er nafnavenjan með þá að nota eingöngu hástafi.
@@ -428,12 +429,12 @@ Persónan heitir Groblav og á 0 gullpeninga og hefur 100 í líf
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Ef þessarar str töfraaðferðar nyti ekki við þá væri úttakið á þessa leið \textit{<\_\_main\_\_.Leikur object at *minnissvæði*}.
-Einnig er nýtt í þessum kóðabút að við vinnum eitthvað með inntakið frá notandanum áður en við stillum tilviksbreyturnar.
+Ef þessarar \texttt{str} töfraaðferðar nyti ekki við væri úttakið á þessa leið \textit{<\_\_main\_\_.Leikur object at *minnissvæði*}.
+Einnig er nýtt í þessum kóðabút að við vinnum með inntakið frá notandanum áður en við stillum tilviksbreyturnar.
 Þetta er ekki gert á nógu tryggan máta og við munum sjá í kafla \ref{k:villur} hvernig má meðhöndla inntak frá notanda þannig að vafalaust sé um rétt inntak að ræða.
-En við ætlum enn sem komið er að skoða hlutina á einfaldan og brothættan máta því við erum að kynnast svo mörgu nýju og óþarfi að gera allt kórrétt frá upphafi, mikilvægara er að byggja upp skilning.
+Við ætlum þó enn sem komið er að skoða hlutina á einfaldan og brothættan máta því við erum að kynnast svo mörgu nýju og óþarfi að gera allt kórrétt frá upphafi, mikilvægara er að byggja upp skilning.
 
-Það sem töfraaðferðirnar gera er að gera okkur kleyft að beita innbyggðum föllum eins og print og len á tilvik af klösunum okkar, og að beita hinum ýmsu virkjum (reikni-, samanburðar- og rökvikjum) milli tilvika eða annara gilda.
+Töfraaðferðirnar gera okkur kleyft að beita innbyggðum föllum eins og \texttt{print} og \texttt{len} á tilvik af klösunum okkar, og að beita hinum ýmsu virkjum (reikni-, samanburðar- og rökvirkjum) milli tilvika eða annara gilda.
 
 
 \section{Erfðir}\index{erfðir}\label{uk:klasar-erfðir}
@@ -442,22 +443,24 @@ En við ætlum enn sem komið er að skoða hlutina á einfaldan og brothættan 
 		\includegraphics{doodles31-05.png}
 	\end{center}
 \end{wrapfigure}
-Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segir vélinni að þeir erfi ekki frá neinum klasa nema \textit{object} sem gerði það að verkum að við gátum útfært töfraaðferðir.
-Það gerist sjálfkrafa bakvið tjöldin.
+Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segir vélinni að þeir erfi ekki frá neinum klasa nema \textit{object}, sem gerði það að verkum að við gátum útfært töfraaðferðir.
+Það gerist sjálfkrafa bak við tjöldin.
 
-Nú ætlum við að skoða í kóðabút \ref{lst:klasar-erfðir} hvernig á að búa til \textbf{yfirklasa} (e. superclass) og \textbf{undirklasa} (e. subclass).
-Við skoðum dæmi þar sem prentari er tekinn fyrir, það sem hann þarf að kunna að gera er að prenta út streng, segja til um blekhlutfallið sitt og minnka blekið um eitt prósentustig.
-Þetta er alfarið æfing og því ekki endilega mjög raunhæft dæmi, en þar sem við erum að reyna að átta okkur á því hvað erfðir eru þá ætlum við að gera ráð fyrir því að við viljum að allir prentararnir okkar byrji með 100\% af bleki og hafi möguleikann á að lækka það.
-Hins vegar er það ekki útfært hvernig eigi að fara að því að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndlar prentunina sjálfa á annan máta.
+Í kóðabút \ref{lst:klasar-erfðir} ætlum við að skoða hvernig á að búa til \textbf{yfirklasa} (e. superclass) og \textbf{undirklasa} (e. subclass).
+Við skoðum dæmi þar sem prentari er tekinn fyrir, hann þarf að kunna að prenta út streng, segja til um blekhlutfallið sitt og minnka blekið um eitt prósentustig.
+Þetta er alfarið æfing og því ekki endilega mjög raunhæft dæmi, en þar sem við erum að reyna að átta okkur á því hvað erfðir eru ætlum við að gera ráð fyrir því að við viljum að allir prentararnir okkar byrji með 100\% af bleki og hafi möguleikann á að lækka það.
+Hins vegar er ekki útfært hvernig á að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndla prentunina sjálfa á annan máta.
 \begin{wrapfigure}{o}{0.4\textwidth} %i o r l 
 	\begin{center}
 		\includegraphics[scale=0.75]{doodles31-19.png}
 	\end{center}
 \end{wrapfigure}
 
-Undirliggjandi ástæður fyrir því að við myndum vilja gera þetta er sú að við viljum að einhver grunn virkni sé til staðar og sé aðgengileg, en það er einhver tiltekin virkni sem við viljum að sé öðruvísi.
-Tökum dæmi um spilastokk með 52 spilum og við viljum útfæra reglur fyrir nýtt spil sem minnir á ólsen ólsen nema hvað við breytum reglunni að áttan breytir ekki um lit heldur lætur einhvern annan spilara draga tvö spil.
-Þá í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen þá skrifum við bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi á eftirfarandi máta“.
+Ástæða þess að við myndum vilja gera þetta er sú að við viljum að einhver grunnvirkni sé til staðar og sé aðgengileg, en það er einhver tiltekin virkni sem við viljum að sé öðruvísi.
+
+Tökum dæmi um spilastokk með 52 spilum þar sem við viljum útfæra reglur fyrir nýtt spil sem minnir á ólsen ólsen.
+Við viljum þó breyta reglunni um áttuna þannig að hún breyti ekki um lit heldur láti einhvern annan spilara draga tvö spil.
+Í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen skrifum við þá bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi á eftirfarandi máta“.
 
 \begin{lstlisting}[caption=Erfðir kynntar með klasanum Prentari, label=lst:klasar-erfðir]
 class Prentari():
