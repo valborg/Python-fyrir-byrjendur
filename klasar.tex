@@ -1,18 +1,20 @@
 \chapterimage{chapters13.png} % Chapter heading image
 
 \chapter{Klasar og hlutir}\index{Klasar og hlutir}\label{k:klasar}
-Forritun snýst um að meðhöndla gögn, hingað til höfum við kynnst nokkrum gagnatögum (t.d. strengir og listar), þær gegna mismunandi hlutverkum og bjóða upp á mismunandi aðgerðir til að vinna með gögnin.
+Forritun snýst um að meðhöndla gögn og hingað til höfum við kynnst nokkrum gagnatögum (t.d. strengjum og listum).
+Þær gegna mismunandi hlutverkum og bjóða upp á mismunandi aðgerðir til að vinna með gögnin.
 Þessar innbyggðu týpur duga þó ekki alltaf og því er mikilvægt að vita að þegar við forritum getum við smíðað okkar eigin.
 Þannig getum við aðlagað týpurnar okkar að þeim gögnum sem forritið okkar meðhöndlar og útfært okkar eigin aðferðir á þær.
-Klasar gera forriturum kleift að skilgreina sína eigin hluti í flestum hlutbundnum málum, Python er hlutbundið forritunarmál.
-Til þess að læra á hvernig eigi að búa til klasa þarf að átta sig á til hvers þeir eru nytsamlegir.
+Klasar gera forriturum kleift að skilgreina sína eigin hluti í flestum hlutbundnum málum og Python er hlutbundið forritunarmál.
+Til þess að læra að búa til klasa þarf að átta sig á til hvers þeir eru nytsamlegir.
 
 Gagnlegt er að hugsa sér klasa sem skilgreiningu eða uppskrift alveg eins og föll.
 Skilgreiningin ein og sér gerir ekki neitt, það er ekki fyrr en við búum okkur til ákveðna útgáfu sem við getum farið að vinna með hana.
-Gott dæmi um það er skilgreiningin á rétti á matseðli á veitingastað, textinn á matseðlinum er eingöngu hvað er í boði en er ekki útgáfa af matnum sjálfum.
+Gott dæmi um það er skilgreiningin á rétti á matseðli á veitingastað, textinn á matseðlinum er eingöngu til að útskýra hvað er í boði en er ekki útgáfa af matnum sjálfum.
 
 Klasar eru hlutir sem hugsaðir eru til þess að búa til eintök af og geyma þannig eitthvert ástand og mögulega hafa áhrif á það.
-Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert, þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum.\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annarsvegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.}
+Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má framkvæma aðgerðir á og eitthvað ástand hlutarins breytist eftir því hvað var gert.
+Þannig er hægt að búa til mörg eintök af sama klasanum og láta hvert tilvik verða fyrir mismunandi áhrifum.\footnote{Athuga þarf sérstaklega gildissvið þegar klasar eru annars vegar, gildissvið í Python geta verið ögn ruglingsleg en við munum ekki beita klösum á það sérhæfðan máta að við lendum í miklum vandræðum.}
 
 
 \phantom{easter egg}
@@ -25,7 +27,7 @@ Hugmyndin er að eiga hlut eða \emph{tilvik}, eina tiltekna útgáfu, sem má f
 
 Klasar nota lykilorðið \textbf{class} og eru skilgreindir með því orði, allt sem tilheyrir klasanum er inndregið undir honum.
 Nöfn klasa eru með stórum staf í Python eins og flestum hlutbundnum forritunarmálum.
-Þetta gerir kóðalestur auðveldara fyrir fólk, forritarar ættu því að temja sér þessa hefð, sem og aðrar nafnavenjur.
+Þetta gerir kóðalestur auðveldari fyrir fólk, forritarar ættu því að temja sér þessa hefð sem og aðrar nafnavenjur.
 Ekki bara tölvur lesa kóða.
 
 \begin{lstlisting}[caption=Klasinn Bíll skilgreindur, label=lst:klasar-skilgreindir-tegund]
@@ -42,7 +44,8 @@ Citroen
 \lstset{style=venjulegt}
 
 Hugsum okkur að við búum til skilgreiningu á bíl, hann þarf að vera af einhverri tegund, skoðum línur 1-2 í kóðabút \ref{lst:klasar-skilgreindir-tegund}.
-Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 4), þá búum við til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
+Svo viljum við fá tilvik af skilgreiningunni í hendurnar (lína 4).
+Þá búum við til breytu sem fær gildi eins og við höfum gert hundrað sinnum áður, nema núna er gildið sem breytan fær nafnið á klasanum okkar ásamt svigum eins og við séum að kalla í hann.
 Prófið núna að búa til annað tilvik af klasanum \texttt{Bíll} án þess að nota svigana og prófið þá að prenta út það sem \texttt{type} skilar fyrir breyturnar tvær.
 
 \begin{lstlisting}[caption=Klasinn Bíll skilgreindur og tvö tilvik búin til, label=lst:klasar-skilgreindir-subaru]
@@ -64,8 +67,8 @@ Subaru
 
 Breytan \texttt{fyrsti\_bilinn} kemur ekki í veg fyrir það að við getum átt fleiri bíla, en hún heldur utan um ástandið á nákvæmlega þessum bíl okkar.
 Segjum að við fáum okkur svo annan bíl, þá getum við búið til aðra breytu (lína 6) í kóðabút \ref{lst:klasar-skilgreindir-subaru} fyrir annað tilvik af klasanum.
-Bílarnir eru, fyrir okkur, óaðgreinanlegir í línu 6\footnote{Þar sem ekki hefur verið útfærð \texttt{\_\_eq\_\_} aðferðin þá er notast við \texttt{id()} fallið úr \texttt{type} klasanum sem klasinn okkar erfir frá bakvið tjöldin.
-Við skoðum erfðir betur seinna í kaflanum.} en það breytist svo snarlega þegar við endurskilgreinum \emph{klasabreytuna}\footnote{Í öðrum hlutbundnum málum er venjulega talað um klasafasta en í Python er auðvelt að breyta þeim svo við hæfi að nota annað orð en klasa\textbf{fasti}.} í línu 7, \texttt{tegund}.
+Bílarnir eru, fyrir okkur, óaðgreinanlegir í línu 6\footnote{Þar sem \texttt{\_\_eq\_\_} aðferðin hefur ekki verið útfærð þá er notast við \texttt{id()} fallið úr \texttt{type} klasanum sem klasinn okkar erfir bak við tjöldin.
+Við skoðum erfðir betur seinna í kaflanum.} en það breytist svo snarlega þegar við endurskilgreinum \emph{klasabreytuna}\footnote{Í öðrum hlutbundnum málum er venjulega talað um klasafasta en í Python er auðvelt að breyta þeim svo það er við hæfi að nota annað orð en klasa\textbf{fasti}.} í línu 7, \texttt{tegund}.
 
 Prófið nú að skipta um gildi á klasabreytunni \texttt{tegund} fyrir ykkar eigið tilvik af \texttt{Bíll}.
 
@@ -89,11 +92,11 @@ Volvo
 \lstset{style=venjulegt}
 
 Hér sjáum við hvernig tilvikið okkar, \texttt{fyrsti\_billinn}, af bílaklasanum breytist.
-Í línu 5 er \texttt{tegund} "Citroen" en í línu 7 er það orðið að "Volvo".
-Þetta gerist því að tilvikið okkar er af þessum klasa og klasinn breyttist í línu 6.
+Í línu 5 er \texttt{tegund} 'Citroen' en í línu 7 er það orðið að 'Volvo'.
+Þetta gerist því að tilvikið okkar er af þessum klasa og klasinn breytist í línu 6.
 Við endurskilgreindum klasann og því breytast öll tilvik af honum í samræmi.
 
-Nú eigum við tvær breytur sem við getum unnið með, kannski setja bensín á bílinn eða fylla á rúðuvökva og þá gerum við það við þá tilteknu breytu sem við ætlum að framkvæma þá aðgerð á.
+Athugum að ef við gerum tvær breytur sem við getum unnið með sem eru af bílaklasanum og ef við ættum aðferð á borð við fylla á rúðuvökva, sem hefur áhrif á tilvik af klasanum, þá getum við kallað í aðferðina á þann bíl sem okkur hentar, án þess að það hafi áhrif á hinn.
 En þessi skilgreining innihélt engar aðferðir, við sjáum það í hluta  \ref{uk:klasar-aðferðir}.
 
 \comment{
@@ -153,7 +156,7 @@ Fyrra x-ið er úr línu 2 og seinna x-ið er úr viðfanginu.
 
 
 \section{Tilviksbreytur}\index{Tilveiksbreytur}\label{uk:klasar-tilviksbreytur}
-Nú höfum við seð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir-tegund2} er sérstaklega ber og gagnlítill.
+Nú höfum við séð hvernig hægt er að búa til tilvik af klasa, en klasinn úr kóðabút \ref{lst:klasar-skilgreindir-tegund2} er sérstaklega ber og gagnlítill.
 En hvers eru klasar megnugir?
 
 \phantom{easter egg}
@@ -164,10 +167,11 @@ En hvers eru klasar megnugir?
 %\end{wrapfigure}
 
 Athugum eftirfarandi samlíkingu áður en lengra er haldið.
-Þegar við förum á veitingastað þá er okkur boðinn ákveðinn matseðill, við fáum að vita að það séu þrír réttir á matseðlinum (þrír klasar) og í þeim réttum eru ákveðin hráefni (tilviksbreytur) og þegar við pöntum okkur mat fáum við í hendurnar eitt tiltekið tilvik af skilgreiningunni á matseðlinum (tilvik af klasa).
-Nú eru hráefnin kannski ekki okkur að skapi og við viljum fá að hafa áhrif á hvaða hráefni fara í réttinn okkar (okkar tiltekna tilvik) svo við gefum upp hvað við viljum fá (inntak) sem skilar sér í okkar tiltekna rétti (úttak).
+Þegar við förum á veitingastað þá er okkur boðinn ákveðinn matseðill, við fáum að vita að það séu þrír réttir á matseðlinum (þrír klasar) og í þeim réttum eru ákveðin hráefni (tilviksbreytur).
+Þegar við pöntum okkur mat fáum við í hendurnar eitt tiltekið tilvik af skilgreiningunni á matseðlinum (tilvik af klasa).
+Nú eru hráefnin kannski ekki okkur að skapi og við viljum fá að hafa áhrif á þau hráefni fara í réttinn okkar (okkar tiltekna tilvik) svo við gefum upp hvað við viljum fá (inntak) sem skilar sér í okkar tiltekna rétti (úttak).
 
-Í þessari samlíkingu er matreiðslufólkið smiðurinn á bakvið klasann, í kóðabút \ref{lst:klasar-notkun} er aðferðin \texttt{\_\_init\_\_} sá smiður.
+Í þessari samlíkingu er matreiðslufólkið smiðurinn á bak við klasann, í kóðabút \ref{lst:klasar-notkun} er aðferðin \texttt{\_\_init\_\_} sá smiður.
 Aðferðin smíðar fyrir okkur tilvik af klasanum með því inntaki sem hún fær.
 
 \begin{lstlisting}[caption=Klasar skilgreindir með töfraaðferðinni \_\_init\_\_, label=lst:klasar-notkun]
@@ -186,33 +190,36 @@ class Samloka_med_skinku():
 skinku_samloka = Samloka_med_skinku('bbq')
 \end{lstlisting}
 
-Í fyrri klasanum, \texttt{Samloka}, verðum við að gefa upp inntak fyrir \texttt{sosa} og \texttt{alegg} þegar við búum okkur til hlut því annars fáum við villu en í seinni klasanum, \texttt{Samloka\_med\_skinku} þá eru tilviksbreyturnar með sjálfgefin gildi.
+Í fyrri klasanum, \texttt{Samloka}, verðum við að gefa upp inntak fyrir \texttt{sosa} og \texttt{alegg} þegar við búum okkur til hlut því annars fáum við villu.
+En í seinni klasanum, \texttt{Samloka\_med\_skinku}, en þá eru tilviksbreyturnar með sjálfgefin gildi.
 Þetta rímar ágætlega við raunheiminn, þar sem við verðum að tilgreina hvað við meinum með ,,samloka“ en ,,skinkusamloka“ er mun afmarkaðra.
 
 Samlíkingin okkar með samlokur á veitingastað er ágæt en nú skulum við skoða hvað er eiginlega í gangi í kóðabút \ref{lst:klasar-notkun}.
-Fyrir það fyrsta er klasinn núna skilgreindur sem \texttt{Samloka()} með svigum, það var ekki þannig í kóðabútum \ref{lst:klasar-skilgreindir-tegund} - \ref{lst:klasar-skilgreindir-tegund2}.
+Fyrir það fyrsta er klasinn núna skilgreindur sem \texttt{Samloka()} með svigum, það var ekki þannig í kóðabútum \ref{lst:klasar-skilgreindir-tegund}-\ref{lst:klasar-skilgreindir-tegund2}.
 
 \begin{itarefni}
 \textbf{Svigar eða ekki svigar?}\\
-Ástæðan fyrir því að svigar eru valkvæmir er svipuð og í kafla \ref{k:segðir} þar sem mátti sleppa svigum utan um segðir fyrir skilyrðissetningar nema það væri þörf á þeim til útreiknings.
+Ástæðan fyrir því að svigar eru valkvæmir er svipuð og í kafla \ref{k:segðir} þar sem mátti sleppa svigum utan um segðir fyrir skilyrðissetningar, nema það væri þörf á þeim til útreiknings.
 Klasar eiga möguleika á að \textbf{erfa} (e. inherit) frá öðrum klösum, við munum tala um það í undirkafla \ref{uk:klasar-erfðir}, og þeir erfa í grunninn allir frá klasanum \textit{Object}.
-Það sem tómur svigi þýðir (eða að sleppa sviganum alfarið) er að klasi erfi ekki frá öðrum klasa.
-Því er það upp á einstaklinginn komið að venja sig á að gera alltaf annað hvort, höfundur hefur vanið sig á tóma sviga en er það enginn heilagur sannleikur.
+Það sem tómur svigi þýðir (eða að sleppa sviganum alfarið) er að klasi erfir ekki frá öðrum klasa.
+Það er því upp á einstaklinginn komið að venja sig á að gera alltaf annað hvort, höfundur hefur vanið sig á tóma sviga en er það enginn heilagur sannleikur.
 \end{itarefni}
 
-Næsta sem við þurfum að athuga er \emph{töfraaðferðin}\footnote{töfraaðferðir (e. magic methods, double underscore methods, dunder methods (þarna er orðunum double og under skeytt saman í dunder)) er hópur aðferða sem Python býður upp sem staðlað viðmót sem gerir forriturum kleift að nýta grunnvirkni eins og samanburð með samanburðarvirkja.} \texttt{\_\_init\_\_} og orðið \emph{self}.
-Orðið self eitt og sér er ekki lykilorð, það má skipta því út fyrir eitthvað annnað, hins vegar hefur komist ákveðin venja á að nota það orð og gerir það kóða læsilegri að halda sig við það.
+Næsta sem við þurfum að athuga er \emph{töfraaðferðin}\footnote{Töfraaðferðir (e. magic methods, double underscore methods, dunder methods (þarna er orðunum double og under skeytt saman í dunder)) eru hópur aðferða sem Python býður upp sem staðlað viðmót sem gera forriturum kleift að nýta grunnvirkni, eins og samanburður með samanburðarvirkja.} \texttt{\_\_init\_\_} og orðið \emph{self}.
+Orðið self eitt og sér er ekki lykilorð, það má skipta því út fyrir eitthvað annnað.
+Hins vegar hefur komist ákveðin venja á að nota það orð og gerir það kóða læsilegri að halda sig við það.
 En hvað gerir orðið self?
-Þetta orð er breyta sem inniheldur tilviki af klasanum sjálfum, í okkar tilfelli er það \texttt{samlokan\_min} í línu 6, þetta skýrist kannski þegar við skoðum endurkvæmni í kafla \ref{k:reiknirit}.
+Þetta orð er breyta sem inniheldur tilvik af klasanum sjálfum, í okkar tilfelli er það \texttt{samlokan\_min} í línu 6.
+Þetta skýrist kannski þegar við skoðum endurkvæmni í kafla \ref{k:reiknirit}.
 
-Í klasanum \texttt{Samloka} eru viðföngin \texttt{sosa} (sem við búumst við að sé strengur án þess að athuga það neitt sérstaklega, sjá kafla \ref{k:villur} um hvernig megi taka á því) og \texttt{alegg} (sem við búumst við að sé listi af strengjum).
-Ef notandinn gefur okkur ekkert inntak við gerð samlokunnar þá er ekki hægt að búa til tilvik af samlokunni, því \texttt{\_\_init\_\_} aðferðin, \emph{smiðurinn}, býst við tveimur stöðubundnum viðföngum og getur ekkert gert án þeirra nema skila villu að svo stöddu.
-Þegar við skilgreindum \texttt{samlokan\_min} þá sögðum við við smiðinn að við ætluðum að eiga eitt stykki samloku með bbq sósu, skinku, osti og papriku.
-Þannig að \texttt{sosa} inniheldur núna strenginn \texttt{bbq} fyrir þetta tiltekna tilvik af klasanum og \texttt{alegg} þennan tiltekna lista af áleggstegundum.
+Í klasanum \texttt{Samloka} eru viðföngin \texttt{sosa} (sem við búumst við að sé strengur án þess að athuga það neitt sérstaklega, sjá kafla \ref{k:villur} um hvernig má taka á því) og \texttt{alegg} (sem við búumst við að sé listi af strengjum).
+Ef notandinn gefur okkur ekkert inntak við gerð samlokunnar er ekki hægt að búa til tilvik af samlokunni, því \texttt{\_\_init\_\_} aðferðin, \emph{smiðurinn}, býst við tveimur stöðubundnum viðföngum og getur ekkert gert án þeirra nema skila villu að svo stöddu.
+Þegar við skilgreindum \texttt{samlokan\_min} sögðum við smiðnum að við ætluðum að eiga eitt stykki samloku með bbq sósu, skinku, osti og papriku.
+Þannig inniheldur \texttt{sosa} núna strenginn \texttt{bbq} fyrir þetta tiltekna tilvik af klasanum og \texttt{alegg} þennan tiltekna lista af áleggstegundum.
 
-Það þriðja og kannski það erfiðasta að skilja er að \texttt{init} aðferðin í klasanum Samloka\_med\_skinku tekur við nefndum viðföngum, eins og við sáum í kafla \ref{uk:föll-sjálfgefin}, sem hafa einhver tiltekin gildi nú þegar skilgreind.
-Sem þýðir að við getum búið til einhverja óbreytta, staðlaða, sjálfgefna skinku samloku.
-Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, hins vegar ef okkur langar til þess að fá samloku með einhverri sósu og einhverju öðru áleggi þurfum við að gefa það upp og við getum gert það alveg eins og þegar við notum föll með sjálfgefnum/nefndum viðföngum.
+Það þriðja og kannski það flóknasta er að \texttt{init} aðferðin í klasanum \textit{Samloka\_med\_skinku} tekur við nefndum viðföngum, eins og við sáum í kafla \ref{uk:föll-sjálfgefin}, sem hafa einhver tiltekin gildi nú þegar skilgreind.
+Það þýðir að við getum búið til einhverja óbreytta, staðlaða, sjálfgefna skinkusamloku.
+Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, en ef okkur langar hins vegar til þess að fá samloku með einhverri sósu og einhverju öðru áleggi þurfum við að gefa það upp og við getum gert það alveg eins og þegar við notum föll með sjálfgefnum/nefndum viðföngum.
 
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
