@@ -1,43 +1,43 @@
 \chapterimage{chapters11.png} % Chapter heading image
 
 \chapter{Kóðasöfn}\index{Kóðasöfn}\label{k:import}
-Kóðasafn (e. library)\footnote{Hugtökin package og module ná einnig yfir kóðasöfn í Python vegna þess hve lauslega kóðasöfn eru skilgreind.} er endurnýtanlegur kóði, sem sem útfærir ákveðna virkni og hefur ákveðið samhengi.
-Tilgangur þeirra er að spara forriturum vinnu við að útfæra ýmsa algenga virkni og reiða sig í staðinn á kóða sem er nú þegar til.
-Hjálpar okkur við að vera ekki að finna upp hjólið í sífellu.
+\textbf{Kóðasafn} (e. library)\footnote{Hugtökin \textit{package} og \textit{module} ná einnig yfir kóðasöfn í Python vegna þess hve lauslega kóðasöfn eru skilgreind.} er endurnýtanlegur kóði sem útfærir ákveðna virkni og hefur ákveðið samhengi.
+Tilgangur þess er að spara forriturum vinnu við að útfæra ýmsa algenga virkni og reiða sig í staðinn á kóða sem er nú þegar til.
+Þetta hjálpar okkur við að vera ekki að finna upp hjólið í sífellu.
 Ómögulegt er að ætla að forrita að einhverju viti án þess að nota kóðasöfn.
 
 Við notum kóðasöfn með \textbf{import} skipuninni. 
-Þegar import hefur verið sett inn einhvers staðar í skjal þá er óþarfi að setja það inn aftur, venjan er að öll import eru gerð efst í skjali burt séð frá því hvar í skjalinu þau eru notuð.
-Það gerir kóðann læsilegri og undirbýr okkur við lestur á kóða hvað er að fara að gerast.
-Sem dæmi ef efst í skjali stendur að kóðasöfnin math og random séu notuð þá vitum við strax að í þessum kóða sé líklega verið að vinna með einhverja handahófskennd og stærðfræði, en ef efst stæði að kóðasöfnin datetime og time væru notuð þá erum við líklega að skoða kóða sem er að vinna með tíma og dagsetningar, það ætti þá ekki að koma okkur á óvart að sjá dagsetningarvinnslu.
+Þegar import hefur verið sett inn einhvers staðar í skjal er óþarfi að setja það inn aftur, venjan er að öll import séu gerð efst í skjali burtséð frá því hvar í skjalinu þau eru notuð.
+Það gerir kóðann læsilegri og undirbýr okkur við fyrir því sem er að fara að gerast.
+Ef það stendur til dæmis efst í skjali að kóðasöfnin \textit{math} og \textit{random} séu notuð vitum við strax að í þessum kóða er líklega verið að vinna með handahófskennd og stærðfræði, en ef efst stæði að kóðasöfnin \textit{datetime} og \textit{time} væru notuð erum við líklega að skoða kóða sem er að vinna með tíma og dagsetningar, það ætti þá ekki að koma okkur á óvart að sjá dagsetningarvinnslu.
 
-Venjan að setja öll ,,import“ efst er því gagnleg fyrir þær sakir að kóðinn verður læsilegur og auðveldara verður að halda utan um kóðasöfnin sem við erum að nota.
+Venjan að setja öll import efst er því gagnleg fyrir þær sakir að kóðinn verður læsilegur og auðveldara verður að halda utan um kóðasöfnin sem við erum að nota.
 
 \section{Notkun kóðasafna}\index{Tilgangur kóðasafna}\label{uk:kóðasöfn-kynnt}
 Eins og kom fram í kynningu þá viljum við geta einbeitt okkur að því að leysa okkar vandamál í stað þess að finna upp hjólið og því viljum við kynna okkur þau kóðasöfn sem eru í boði sem útfæra virkni sem við viljum beita.
 
 Tilgangur þeirra er að létta okkur lífið og gera virkni aðgengilega.
 Í næsta undirkafla verða tekin fyrir nokkur gagnleg kóðasöfn en við getum varla talað um tilgang og gagnsemi kóðasafna án þess að taka eitthvert þeirra fyrir.
-Í inngangi voru kóðasöfnin time og random nefnd.
-Skoðum þau aðeins núna, sjá kóðabúta \ref{lst:kóðasöfn-kynnt-time} og \ref{lst:kóðasöfn-kynnt-rand} þar sem kóðasöfnin \texttt{time} og \texttt{random} eru tekin fyrir.
-Þau bjóða bæði upp á aragrúa aðferða og eiginda sem er út fyrir efni þessarar bókar að ræða í þaula en þó þess virði að taka fyrir ákveðna virkni sem búist er við að nota í æfingum í lok kaflans.
+Í inngangi voru kóðasöfnin \texttt{time} og \texttt{random} nefnd.
+Skoðum þau aðeins núna, sjá kóðabúta \ref{lst:kóðasöfn-kynnt-time} og \ref{lst:kóðasöfn-kynnt-rand} þar sem kóðasöfnin eru tekin fyrir.
+Þau bjóða bæði upp á aragrúa aðferða og eiginda sem er út fyrir efni þessarar bókar en þó þess virði að taka fyrir ákveðna virkni sem búist er við að nota í æfingum í lok kaflans.
 \paragraph{}
 Um kóðasafnið time:
 
 \begin{itemize}
-	\item \texttt{time.time()} skilar okkur hversu margar sekúndur eru síðan tímatal í tölvum hófst 1.jan 1970.
-	\item \texttt{time.sleep()} tekur við tölu og lætur vélina bíða það margar sekúndur áður en hún framkvæmdir aðgerðina í næstu línu fyrir neðan.
-	\item \texttt{time.localtime()} skilar okkur nd sem inniheldur í minnkandi röð hver tíminn er, frá ári niður í sekúndur, ásamt deginum í vikunni og árinu og síðasta er gildi sem tekur mið af \texttt{isdaylightsavingstime} (\textbf{isdst}).
+	\item \texttt{time.time()} skilar okkur því hversu margar sekúndur eru síðan tímatal í tölvum hófst 1. jan 1970.
+	\item \texttt{time.sleep()} tekur við tölu og lætur vélina bíða í svo margar sekúndur áður en hún framkvæmir aðgerðina í næstu línu fyrir neðan.
+	\item \texttt{time.localtime()} skilar okkur nd sem inniheldur í minnkandi röð hver tíminn er, frá ári niður í sekúndur, ásamt deginum í vikunni og árinu, síðasta er gildi sem tekur mið af \texttt{isdaylightsavingstime} (\textbf{isdst}).
 \end{itemize}
 
 \paragraph{}
-Um kóðasafnið random:Þetta kóðasafn gerir forriturum auðveldara fyrir með því að gera handahófskennd (e. randomness) aðgengilega, það að geta gert hluti af handahófi er mjög mikilvægt í tölvunarfræði og forritun.
+Um kóðasafnið random: Þetta kóðasafn gerir forriturum auðveldara fyrir með því að gera \textit{handahófskennd} (e. randomness) aðgengilega, en það að geta gert hluti af handahófi er mjög mikilvægt í tölvunarfræði og forritun.
 
 \begin{itemize}
-	\item random.randint() nær í heiltölu á lokuðu bili, þar sem báðir endapunktar eru teknir með.
-	\item random.random() nær í fleytitölu á bilinu 0 - 1
-	\item random.choice() nær í stak af handahófi upp úr ítranlegum hlut
-	\item random.shuffle() stokkar upp í raðanlegum hlut.
+	\item \texttt{random.randint()} nær í heiltölu á lokuðu bili, þar sem báðir endapunktar eru teknir með.
+	\item \texttt{random.random()} nær í fleytitölu á bilinu 0-1.
+	\item \texttt{random.choice()} nær í stak af handahófi upp úr ítranlegum hlut.
+	\item \texttt{random.shuffle()} stokkar upp í raðanlegum hlut.
 \end{itemize}
 \vspace{1cm}
 \begin{lstlisting}[caption=Notkun kóðasafna með time, label=lst:kóðasöfn-kynnt-time]
@@ -56,7 +56,7 @@ print(thrir)
 \end{lstlisting}
 \lstset{style=venjulegt}
 \vspace{1cm}
-Þið fáið ekki nákvæmlega sömu tölu, og ekki einu sinni ef þið reynið að keyra þetta oft, það er líka ómögulegt að ná keyrslu upp á millisekúndu-nákvæmni með þessu móti.
+Þið fáið ekki nákvæmlega sömu tölu, ekki einu sinni ef þið reynið að keyra þetta oft. Það er líka ómögulegt að ná keyrslu upp á millisekúndunákvæmni með þessu móti.
 
 Skoðum næst handahófskennd.
 
@@ -100,20 +100,19 @@ print(hlutfall_folks_med_raudan_trefil)
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Sama upp á teningnum hér, úttakið verður ekki það sama þegar þið keyrið þennan kóða en ekki af sömu ástæðu.
+Sama er upp á teningnum hér, úttakið verður ekki það sama þegar þið keyrið þennan kóða en ekki af sömu ástæðu.
 Hér er það beinlínis ætlunarverkið að úttakið verði óútreiknanlegt.
 
 
 
 Eins og sést í kóðabút \ref{lst:kóðasöfn-kynnt-time} þarf að nota nafnið á kóðasafninu til að ná í aðferðir og virkni.
-Sum kóðasöfn heita löngum nöfnum og ef fólk vill stytta nöfnin á þeim þá má nota lykilorðið \textbf{as} til þess að varpa nafninu á kóðasafninu í annað breytuheiti, sjá notkun í kóðabút \ref{lst:kóðasöfn-as}.
+Sum kóðasöfn heita löngum nöfnum og ef fólk vill stytta nöfnin á þeim má nota lykilorðið \textbf{as} til þess að varpa nafninu á kóðasafninu í annað breytuheiti, sjá notkun í kóðabút \ref{lst:kóðasöfn-as}.
 Vísunin kemur strax þegar kóðasafnið er flutt inn og þar eftir er kóðasafnið aðgengilegt með þessari vísun.
-Mikilvægt er þá að hafa í huga að nefna kóðasöfnin eittvað sem verður ekki óvart yfirskrifað í kóðanum, og gæti valdið ruglingi.
-Eins og að skipta út \texttt{import random} fyrir \texttt{import random as listinn\_minn}.
-Það væri hrikalegt, illlæsilegt og myndi fyrirsjánlega valda vandamálum.
-En nú vitum við hvernig á að nota kóðasöfn.
+Þá er mikilvægt að hafa í huga að nefna kóðasöfnin eittvað sem verður ekki óvart yfirskrifað í kóðanum og gæti valdið ruglingi, eins og að skipta út \texttt{import random} fyrir \texttt{import random as listinn\_minn}.
+Það væri hrikalegt, illlæsilegt og myndi fyrirsjáanlega valda vandamálum.
+Nú vitum við hvernig á að nota kóðasöfn.
 
-\begin{lstlisting}[caption=Lykilorði as, label=lst:kóðasöfn-as]
+\begin{lstlisting}[caption=Lykilorðið as, label=lst:kóðasöfn-as]
 import random as rnd
 import time as t
 
@@ -134,23 +133,21 @@ Tilgangur þessarar bókar er ekki að tiltaka hvert einasta kóðasafn sem er t
 Að því sögðu er hér stutt kynning á nokkrum vinsælum kóðasöfnum.
 
 \begin{itemize}
-	\item \textbf{math}, þetta kóðasafn gerir aðgengilegar allskonar stærðfræðilegar aðgerðir.
-	Eins og hornaföll, logra, veldisföll og tölulega vinnslu.
-	Ásamt því að gefa okkur aðgengi að mikilli nákvæmni á hinum ýmsu rauntölustærðum eins og pí.
-	\item \textbf{numpy}, er kóðasafn sem gerir stærðfræðilega vinnslu aðgengilega, t.d. á fylkjum.
+	\item \textbf{math}, gerir aðgengilegar alls konar stærðfræðilegar aðgerðir, eins og hornaföll, logra, veldisföll og tölulega vinnslu.
+	Ásamt því gefur það okkur aðgengi að mikilli nákvæmni á hinum ýmsu rauntölustærðum eins og pí.
+	\item \textbf{numpy}, gerir stærðfræðilega vinnslu aðgengilega, t.d. á fylkjum.
 	Numpy er sérhæft fyrir flóknari vinnslu en math.
-	\item \textbf{scipy}, er það sem hægt er að nota til þess að vinna með vélanám (e. machine learning).
-	Scipy hefur oft verið kallað óþarflega flókið í notkun, en hugmyndirnar sem þar er verið að vinna með eru í grunninn mun flóknari en í numpy og math pökkunum svo það ætti ekki að koma á óvart.
+	\item \textbf{scipy}, er það sem hægt er að nota til þess að vinna með \textit{vélanám} (e. machine learning).
+	Scipy hefur oft verið sagt óþarflega flókið í notkun, en hugmyndirnar sem þar er verið að vinna með eru í grunninn mun flóknari en í numpy og math pökkunum svo það ætti ekki að koma á óvart.
 	\item \textbf{pygame}, er kóðasafn sem vinnur með grafískt viðmót og inntak frá notanda oft með mjög skapandi útkomu.
 	Margir litlir leikir hafa orðið til með þessu kóðasafni og er til mýgrútur af dæmum og leikjum á netinu til að vinna út frá.
-	\item \textbf{datetime}, sem vinnur með dagsetingar því ef við ætlum einhvern tímann að skrifa hugbúnað sem vinnur með dagsetningar þá viljum við alls ekki finna upp hjólið.
-	Þar er tekið á daylightsavings, hlaupárum og öðru slíku sem við viljum ekki þurfa að hafa áhyggjur af
-	\item \textbf{matplotlib}, er safn sem var búið til í kringum tvívíða sýn á gögn.
-	Til að sýna gröf og á fjölbreytilegan máta gera gögn sýnileg.
+	\item \textbf{datetime}, vinnur með dagsetingar því ef við ætlum einhvern tímann að skrifa hugbúnað sem vinnur með dagsetningar viljum við alls ekki finna upp hjólið.
+	Þar er tekið á sumar- og vetrartíma, hlaupárum og öðru slíku sem við viljum ekki þurfa að hafa áhyggjur af.
+	\item \textbf{matplotlib}, er safn sem var búið til í kringum tvívíða sýn á gögn  til að sýna gröf og til að gera gögn sýnileg á fjölbreytilegan máta.
 	Þetta er annað safn sem hefur slæmt orð á sér fyrir að vera óþarflega óaðgengilegt.
 \end{itemize}
 
-Að búa til kóðasöfn er út fyrir efni bókarinnar en það er lítið mál að kynna sér það á vefnum.
+Það er út fyrir efni bókarinnar að sýna hvernig eigi að búa til kóðasöfn sem eru nothæf öðrum, en það er lítið mál að kynna sér það á vefnum.
 
 %-------------------------------
 \newpage
