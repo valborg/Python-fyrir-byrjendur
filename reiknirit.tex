@@ -1,18 +1,18 @@
 \chapterimage{chapters15.png} % Chapter heading image
 
 \chapter{Reiknirit}\index{Reiknitir}\label{k:reiknirit}
-Reiknirit (e. algorithm) er forritsbútur sem sinnir sérhæfðum útreikningi.
+\textbf{Reiknirit} (e. algorithm) er forritsbútur sem sinnir sérhæfðum útreikningi.
 Dularfyllra er það ekki.
 Reiknirit sinna því ákveðnum tilgangi og eru þau oft í grunninn stærðfræðlegs eðlis.
 
-Dæmi um reiknirit sem við höfum séð áður í þessari bók væri útfærsla á fjarlægð milli lesta og að setja nýja lestarstöð inn á leið lestar í kóðabút \ref{lst:klasar-aðferðir-lestar}.
+Dæmi um reiknirit sem við höfum séð áður í þessari bók er útfærsla á fjarlægð milli lesta og að setja nýja lestarstöð inn á leið lestar í kóðabút \ref{lst:klasar-aðferðir-lestar}.
 
-Ástæðan fyrir því að nauðsyn þykir að kynna reiknirit í bók sem þessari er að ef nemendur hafa áhuga á að kynna sér tölvunarfræði í framhaldssnámi er gott að hafa fengið nasasjón af því hvað felst í að beita reikniritum og útfæra þau.
+Ef nemendur hafa áhuga á að kynna sér tölvunarfræði í framhaldssnámi er gott að hafa fengið nasasjón af því hvað felst í því að beita reikniritum og útfæra þau.
 Margir nemendur hefja nám í tölvunarfræði með ýmsar forhugmyndir sem eiga sér sumar ekki stoð í raunveruleikanum.
 Þessi kafli og sá næsti fjalla um þau atriði sem leikmenn átta sig ekki endilega á að séu stór hluti af tölvunarfræði og hugbúnaðarþróun; stærðfræði og samvinna.
 Þessi kafli er um stærðfræðilegu hliðina og næsti um samvinnuna.
 
-Það sem við ætlum að skoða í þessum kafla eru nokkur grundvallar reiknirit, og hugmyndin um endurkvæmni.
+Í þessum kafla ætlum við að skoða nokkur grundvallarreiknirit og hugmyndina um endurkvæmni.
 
 \comment{
 \section{Reiknirit sem við höfum séð}\index{Reiknirit sem við höfum séð}\label{uk:reiknirit-okkar}
@@ -28,20 +28,20 @@ omg omg omg
 
 \section{Röðun}\index{Röðun}\label{uk:reiknirit-röðun}
 Áður en við getum farið að leita ætlum við að raða.
-Ef við ímyndum okkur að nokkur spil úr spilastokk séu fyrir framan okkur, þau snúa upp svo við sjáum hvaða spil þetta eru en við sjáum einnig að þau eru ekki í réttri röð.
-Sú röð gæti verið hver sem er, en gerum ráð fyrir, til einföldunar, að þau séu ekki í vaxandi röð með lægsta spilið vinstra megin og hæsta spilið hægra megin.
+Ímyndum okkur að nokkur spil úr spilastokk séu fyrir framan okkur, þau snúa upp svo við sjáum hvaða spil þetta eru en við sjáum einnig að þau eru ekki í réttri röð.
+Sú röð gæti verið hver sem er en gerum ráð fyrir því til einföldunarað þau séu ekki í vaxandi röð með lægsta spilið vinstra megin og hæsta spilið hægra megin.
 Hvað er það fyrsta sem við gerum?
 Það er ekki eitt svar við því.
-Hugsum okkur hér hvað sé fyrsta skrefið og svo næsta og koll af kolli.
+Hugsum okkur nú hvert fyrsta skrefið er, svo næsta og koll af kolli.
 Reynum svo að lýsa því, eins og með hnetusmjörssamlokuna í kafla \ref{uk:keyra-koda}, þannig að við gætum snúið baki við spilunum (eða bara hvaða spilum sem er sem við höfum ekki séð) og lýst fyrir einhverri annarri manneskju hvernig hún gæti farið að því að raða spilunum með aðferðinni okkar.
 
 Hér er sterklega mælt með því að þið reynið á þessa æfingu áður en lengra er haldið.
-
+\todo{formatting}
 \paragraph{}
 Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og skipta þeim ef það hærra er vinstra megin og gera það fyrir öll spilin út röðina, skoðum töflu \ref{tbl:insert} til að sjá hvernig það myndi ganga fyrir sig.
 Þar erum við með einhverja ákveðna upphafsstöðu á spilunum og byrjum á að skoða fremstu tvö spilin, þá ,,svissum“ við þeim til að hærra spilið sé hægra megin.
-Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum“ því þangað til að það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
-Þá vegna þess að við erum bara með fjögur spil skoðum við síðasta spilið og látum það berast niður spilaröðina þar til það passar.
+Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum“ því þangað til það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
+Vegna þess að við erum bara með fjögur spil skoðum við þá síðasta spilið og látum það berast niður spilaröðina þar til það passar.
 
 
 \begin{table}
@@ -62,7 +62,7 @@ Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og
 	\noalign{\hrule height 2pt}
 \end{tabular}
 \end{center}
-\caption{Hér sést hvernig fjórum spilum er raðað í vaxandi röð. Í hverri stöðu er einungis verið að skoða takmarkaðan fjölda spila til að raða, þau spil eru sýnd með grænum lit í töflunni. Þau spil sem búið er að raða eru sýndi með fjólubláum lit.} 
+\caption{Hér sést hvernig fjórum spilum er raðað í vaxandi röð. Í hverri stöðu er einungis verið að skoða takmarkaðan fjölda spila til að raða, þau spil eru sýnd með grænum lit í töflunni. Þau spil sem búið er að raða eru sýnd með fjólubláum lit.} 
 \label{tbl:insert}
 \end{table}
 
@@ -92,9 +92,12 @@ Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} e�
 			\end{tabular}
 		\end{center}
 	%\end{table}
-\caption{Hér sést í efri línunni hvernig staðan er þegar á að finna stað fyrir eitthvað x, sem gæti verið tala eða spil eða einhver annar hlutur. Athugið að annað hvort eða bæði hólfin, minna eða stærra en x, gætu verið tóm og einnig gæti verið ekkert sem eftir á að raða.Í neðri línunni sést svo að búið er að finna stað fyrir x á milli staka sem eru lægri en það og staka sem eru hærri en það. Þá myndi þriðja línan vera næsta stak sem er fremst í ??? hlutanum.}
+\caption{Hér sést í efri línunni hvernig staðan er þegar á að finna stað fyrir eitthvað x, sem gæti verið tala eða spil eða einhver annar hlutur. Athugið að annað hvort eða bæði hólfin, minna eða stærra en x, gætu verið tóm og einnig gæti verið ekkert sem á eftir að raða.
+Í neðri línunni sést svo að búið er að finna stað fyrir x á milli staka sem eru lægri en það og staka sem eru hærri en það. Þá myndi þriðja línan vera næsta stak sem er fremst í ??? hlutanum.}
 \label{tbl:insert-abstract}
 \end{table}
+
+
 
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
@@ -103,7 +106,7 @@ Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} e�
 \end{center}
 %\end{wrapfigure}
 
-Skoðum nú kóðann á bakvið þetta reiknirit.
+Skoðum nú kóðann á bak við þetta reiknirit.
 
 \begin{lstlisting}[caption=Insertion sort reikniritið, label=lst:reiknirit-insertion]
 def insertion_sort(A):
@@ -123,7 +126,7 @@ def insertion_sort(A):
 
 \vspace{1cm}
 
-Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum er að:
+Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum eru að:
 \begin{itemize}
 	\item Reyna að nota reikniritið fyrir einhvern lista af tölum.
 	\item Reyna að finna leið til þess að gera línur 8-11 í einni línu, Python býður upp á það.
@@ -131,20 +134,20 @@ Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum er að:
 \end{itemize}
 
 Allar þessar æfingar krefjast þess að við skiljum náið hvað það er sem er að gerast í hverju skrefi og hvers vegna röð skrefanna er eins og hún er.
-Markmiðið okkar er að skilja að sem við höfum í höndunum og geta unnið með það á okkar eigin forsendu.
+Markmiðið okkar er að skilja það sem við höfum í höndunum og geta unnið með það á okkar eigin forsendum.
 
-\vspace{1cm}
+\vspace{1cm} \todo{formatting}
 
-Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á bubble sort.
+Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á \textit{bubble sort}.
 Útfærslan felst í tveimur hreiðruðum for-lykkjum.\footnote{Það er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.}
 
-Reikniritið virkar í grunninn þannig að það tekur við lista sem á að raða, það rúllar í gegnum listann frá upphafi og út í enda og ýtir stærsta stakinu út í enda.
-Eins og loftbólur sem þrýstast upp á yfirborðið.
-Þegar það er búið að rúlla einu sinni í gegnum listann er stærsta stakið komið út í enda og það stak er ekki skoðað aftur heldur álitið á sínum stað.
+Reikniritið virkar í grunninn þannig að það tekur við lista sem á að raða.
+Það rúllar í gegnum listann frá upphafi og út í enda og ýtir stærsta stakinu út í enda, eins og loftbólur sem þrýstast upp á yfirborðið.
+Þegar búið er að rúlla einu sinni í gegnum listann er stærsta stakið komið út í enda og það stak er ekki skoðað aftur heldur álitið á sínum stað.
 Þá er aftur rúllað í gegnum listann og stakið sem er þá stærst fer út í enda vinstra megin við stakið sem var stærst.
 
 Þannig að ytri for lykkjan keyrir fyrir hvert stak í listanum, eða segir til um hversu oft þurfi að finna stærsta stakið, og innri lykkjan sér um samanburðinn og skiptingarnar.
-Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin þegar við erum að bera saman og það er vegna þess að við hættum fyrir framan aftasta stakið hverju sinni í innri lykkjunni.
+Tökum sérstaklega eftir þar að við getum horft á næsta stak hægra megin þegar við erum að bera saman og það er vegna þess að við hættum fyrir framan aftasta stakið hverju sinni í innri lykkjunni.
 %Ef við myndum bara beita breytunni \texttt{vinstri\_hlid} sem \texttt{n-i} þá myndum við fá vísisvillu því við værum að vísa út fyrir listann okkar en vegna þess að við lækkum okkur um 1 þar að auki þá er möguleiki að skoða \texttt{listi[j+1]} sem er næsta stak hægra megin við það stak sem við erum stödd í \texttt{listi[j]}.
 
 \phantom{easter egg}
@@ -184,17 +187,18 @@ Tökum sérstakleg eftir þar að við getum horft á næsta stak hægra megin �
 	return listi
 \end{lstlisting}
 
-Ástæðan fyrir því að taka fyrir bubblesort og insertion sort er að þetta eru aðferðir sem fólk beitir til að raða hlutum í höndunum, það byrjar á að færa öftustu hlutina aftast eða bera saman og skipta um staði, þó auðvitað ekki nákvæmlega eins því að fólk og tölvur eru ekki með sömu takmarkanir. 
-Tölvuna vatnar þessa gífurlegu yfirsýn sem við höfum og okkur skortir hraðann sem hún hefur.
-En þessi tvö reiknirit raða nokkurnveginn eins og innsæið okkar segði okkur að fara að því.
+Ástæðan fyrir því að taka fyrir bubblesort og insertion sort er að þetta eru aðferðir sem fólk beitir til að raða hlutum í höndunum.
+Það byrjar á að færa öftustu hlutina aftast eða bera saman og skipta um staði, þó auðvitað ekki nákvæmlega eins því að fólk og tölvur eru ekki með sömu takmarkanir. 
+Tölvuna vantar þessa gífurlegu yfirsýn sem við höfum og okkur skortir hraðann sem hún hefur.
+En þessi tvö reiknirit raða nokkurn veginn eins og innsæið okkar segði okkur að fara að því.
 
 
 \section{Helmingunarleit}\index{Helmingunarleit}\label{uk:reiknirit-helmingunarleit}
-Nú þegar við kunnum að raða þá getum við farið að leita.
+Nú þegar við kunnum að raða getum við farið að leita.
 Skoðum nú eitthvert þekktasta reiknirit sem til er. 
-Helmingunarleit að tölu á bili. 
+Það er helmingunarleit að tölu á bili. 
 Hugsum okkur að við séum með raðaðan lista af tölum og við viljum finna eina tiltekna tölu. 
-Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þá tæki það mjög langan tíma.
+Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana tæki það mjög langan tíma.
 
 \begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 \begin{center}
@@ -202,17 +206,18 @@ Ef við ættum að skoða hverja einustu tölu í listanum til að finna hana þ
 \end{center}
 \end{wrapfigure}
 Eða allavega fyrir okkur sem manneskjur, en allur tímasparnaður er góður.
-Því að aðgerðin ,,að skoða spil“ kostar einhvern tíma og því færri þannig aðgerðir sem við getum gert því hraðara er reikniritið okkar.\footnote{Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
+Aðgerðin ,,að skoða spil“ kostar einhvern tíma og því færri þannig aðgerðir sem við þurfum að gera því hraðara er reikniritið okkar.\footnote{Tölvunarfræðingar eru mjög uppteknir af því hvað aðgerðir og reikningar taka mikinn tíma.
 Þetta er kallað tímaflækja (e. time complexity) og er tölvunarfræðingum mjög hugleikin.
 Tímaflækja helmingunarleitar er sérstaklega lág eða $log_2{n}$ vegna þess að reikniritið helmingar alltaf vandamálið (e. problem space).}
 
-Hugmyndin er sú, að verið sé að skoða í fyrstu allan listann sem er raðaður (mjög mikilvægt, annars virkar þetta engan veginn) og miðju gildið er skoðað, ef gildið sem við leitum að er stærra en miðjugildið þá eigum við að vera að leita þeim megin við miðjugildið sem stærri gildi eru.
-Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við höfum annað hvort fundið gildið sem við leitum að eða bilið sem við erum að leita á inniheldur engin stök.
+Hugmyndin er sú að verið sé að skoða í fyrstu allan listann sem er raðaður (mjög mikilvægt, annars virkar þetta engan veginn) og miðjugildið er skoðað.
+Ef gildið sem við leitum að er stærra en miðjugildið eigum við að vera að leita þeim megin við miðjugildið sem stærri gildi eru.
+Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við höfum annað hvort fundið gildið sem við leitum að eða þegar bilið sem við erum að leita á inniheldur engin stök.
 
 
 \begin{lstlisting}[caption=Helmingunarleit að tölu í röðuðum lista með lykkju, label=lst:reiknirit-helm-for]
 	def helmingunarleit_med_lykkju(listi, x):
-	# Þetta fall tekur við lista sem er raðaður í vaxandi röð
+	# Þetta fall tekur við lista sem er raðað í vaxandi röð
 	# og gildi sem á að leita að í listanum
 	# Þetta er gert með lykkju og án endurkvæmni
 	
@@ -235,12 +240,12 @@ Svo gerum við þetta endurtekið, helmingum alltaf vandamálið þar til við h
 			minnsti = midjan + 1
 	
 	# lykkjan hætti keyrslu svo minnsti vísirinn er orðinn hærri en sá hæsti og þá vitum við að talan er ekki í listanum 
-	# við skilum því tölunni -1 til að segja að það var enginn vísir sem x var í
+	# við skilum því tölunni -1 til að segja að það hafi ekki verið vísir sem x var í
 	return -1
 \end{lstlisting}
 
 \section{Endurkvæmni}\index{Endurkvæmni}\label{uk:reiknirit-endurkvæmni}
-Endurkvæmni (e. recursion) er sú virkni forrits að vísa í sig sjálft.
+\textbf{Endurkvæmni} (e. recursion) er sú virkni forrits að vísa í sig sjálft.
 Þið þekkið eflaust listaverk sem virka eins og skynvillur, þar sem manneskja getur labbað í hring upp stiga en endað á sama stað því stiginn fer í raun í hring. 
 Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir aftan og þið sáuð ótal spegilmyndir raðast af ykkur.
 \begin{figure}[h]
@@ -252,7 +257,11 @@ Eða þið hafið séð ykkur sjálf í spegli þar sem var annar spegill fyrir 
 
 Reynum að átta okkur vel á þessu áður en við reynum að beita því.
 Tökum aðeins óhlutbundnara dæmi.
-Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremasta barninu og segir ,,hvað viljiði marga íspinna?“, barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?“ það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk“, þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir það sem þau vilja, og þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ,,59 íspinna takk fyrir okkur“.
+Ímyndum okkur að börn standi í röð og bíði eftir fríum ís, manneskjan sem sér um ísinn snýr sér að fremsta barninu og segir ,,hvað viljiði marga íspinna?“
+Barnið vill einn en veit það ekki hvað hin börnin vilja svo það snýr sér að barninu fyrir aftan sig og segir ,,hvað vilt þú marga?“ 
+Það barn gerir það sama þangað til þau eru komin út í enda, það barn hefur ekkert annað barn til að spyrja og segir bara ,,tíu íspinna takk“.
+Þá veit næst aftasta barnið að það séu allavega 10 íspinnar og svo 2 fyrir sig.
+Þannig leggjast tölurnar saman þar til fremsta barnið getur sagt ,,59 íspinna takk fyrir okkur“.
 
 
 \begin{wrapfigure}{o}{0.35\textwidth} %i o r l 
@@ -260,16 +269,17 @@ Tökum aðeins óhlutbundnara dæmi.
 		\includegraphics[scale=0.9]{doodles31-23.png}
 	\end{center}
 \end{wrapfigure}
-Gott dæmi um hvernig megi beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhver gildi í fibonacci röðinni.
-En áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
+Gott dæmi um hvernig má beita endurkvæmni til að fá skilmerkilega niðurstöðu er að útfæra fall sem reiknar fyrir okkur einhver gildi í Fibonacci röðinni.\footnote{\href{https://en.wikipedia.org/wiki/Fibonacci_number}{Skoðið ensku Wikipediu til að kynnast Fibonacci röðinni}}
+Áður en við gerum það skulum við skoða enn einfaldara dæmi þar sem við erum með fall sem kallar í sig sjálft og gerir ekkert annað en það.
 Í kóðabút \ref{lst:reiknirit-endurkvæmni1} sjáum við einfalda útgáfu af endurkvæmni, þar sem hugmyndin er í raun kynnt án þess að fallið sé neitt gagnlegt.
-Það eina sem fallið gerir er að athuga hvort að tala sé stærri en núll og ef hún er það þá kallar fallið í sig sjálft með gildi sem er einum lægra, annars ef talan er ekki stærri en núll prentast ,,við kunnum á endurkvæmni“.
+Það eina sem fallið gerir er að athuga hvort tala sé stærri en núll og ef hún er það kallar fallið í sig sjálft með gildi sem er einum lægra.
+Annars ef talan er ekki stærri en núll prentast ,,við kunnum á endurkvæmni“.
 Hveru oft ætli það prentist ef við setjum inn töluna 5?
 
 \begin{lstlisting}[caption=Endurkvæmni - einfalt, label=lst:reiknirit-endurkvæmni1]
 def endurkvæmt_fall(tala):
 	if(tala > 0):
-		# á meðan talan er hærri en 0 þá köllum við aftur í fallið
+		# á meðan talan er hærri en 0 köllum við aftur í fallið
 		# en við köllum í það af gildi einu lægra
 		return endurkvæmt_fall(tala-1)
 	else:
@@ -284,20 +294,21 @@ við kunnum endurkvæmni
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við kölluðum í fallið með tölunni 5 þá fengum við bara einu sinni út strenginn ,,við kunnum endurkvæmni“.
-Það er vegna þess að við kölluðum í fallið fyrir fimm og það sem fallið gerir fyrir okkur er að klára endurkvæmnina fyrir það kall, það verða ekki til fjögur önnur köll.
-Heldur verður fimm að fjórum sem skilar okkur svo niðurstöðunni fyrir þrjá og svo koll af kolli þar til við erum komin niður í núll og þá hættir reikniritið keyrslu.
+Við sjáum í kóðabút \ref{lst:reiknirit-endurkvæmni1} að þó að við höfum kallað í fallið með tölunni 5 fengum við bara einu sinni út strenginn ,,við kunnum endurkvæmni“.
+Það er vegna þess að við kölluðum í fallið fyrir 5 og það sem fallið gerir fyrir okkur er að klára endurkvæmnina fyrir það kall.
+Það verða ekki til fjögur önnur köll, heldur verður fimm að fjórum sem skilar okkur svo niðurstöðunni fyrir þrjá og svo koll af kolli þar til við erum komin niður í núll og þá hættir reikniritið keyrslu.
 Í þessu tilfelli skilar það engu til baka upp fallakallið en klárast engu að síður þarna í línu 8 þegar það kemst þangað.
 
 
-Það sem þetta reiknirit okkar gerir ekki er að skila einhverri niðurstöðu til baka, en nú skulum við skoða endurkvæmt reiknirit sem skilar summu í  \ref{lst:reiknirit-endurkvæmni-summa}.
-Það reiknar summu af einhverri tölu og öllum jákvæðum tölum lægri en henni, svo talan 5 gæfi útkomuna 5 + 4 + 3 + 2 + 1 sem er 15.
+Það sem þetta reiknirit okkar gerir ekki er að skila einhverri niðurstöðu til baka, en nú skulum við skoða endurkvæmt reiknirit sem skilar summu í kóðabút \ref{lst:reiknirit-endurkvæmni-summa}.
+Það reiknar summu af einhverri tölu og öllum jákvæðum tölum sem eru lægri en hún, svo talan 5 gæfi útkomuna 5 + 4 + 3 + 2 + 1 sem er 15.
 Endurkvæmnin er því fólgin í því að upphaflega fallakallið með summa(100) skilar okkur 100 + summa(99), sem skilar okkur 100 + 99 + summa(98) og svo koll af kolli þar til talan 1 fæst, og við fáum útreikninginn 100 + 99 + ... + 1 sem skilar okkur 5050.
 
-Einnig skulum við skoða fall sem reiknar n-tu töluna í fibonacci rununni.
+Einnig skulum við skoða fall sem reiknar n-tu töluna í Fibonacci rununni.
 Endurkvæmnin í fib(4) er fólgin í því að skoða alltaf tvær summur í einu en þær skila sér í sama fallakallið.
-Svo fib(4) skila því sem fib(2) + fib(3) skila.
-Kóðann má sjá í kóðabút \ref{lst:reiknirit-endurkvæmni-fib} og á mynd \ref{fig:reiknirit-fib}, nú erum við ekki lengur að skila einu gildi og hala af útreikningi heldur erum við að skila tveimur hölum.
+Þannig skilar fib(4) því sem fib(2) + fib(3) skila.
+Kóðann má sjá í kóðabút \ref{lst:reiknirit-endurkvæmni-fib} og á mynd \ref{fig:reiknirit-fib}.
+Nú erum við ekki lengur að skila einu gildi og hala af útreikningi heldur erum við að skila tveimur hölum.
 
 \begin{figure}
 	\begin{center}
@@ -321,7 +332,7 @@ Kóðann má sjá í kóðabút \ref{lst:reiknirit-endurkvæmni-fib} og á mynd 
 		\end{tikzpicture}  
 	\end{center}
 \label{fig:reiknirit-fib}
-	\caption{hér sést hvernig fibonacci fallið kallar alltaf í tvö gildi. Svo eru neðstu gildin, gildin sem vísa ekki í neitt annað, þau sem leggjast saman.}
+	\caption{Hér sést hvernig fibonacci fallið kallar alltaf í tvö gildi. Svo eru neðstu gildin, gildin sem vísa ekki í neitt annað, þau sem leggjast saman.}
 \end{figure}
 
 \phantom{easter egg}
@@ -368,7 +379,7 @@ fib(4)
 	\end{center}
 %\end{wrapfigure}
 
-Nú höfum við séð lykkju útfærslu á helmingunarleit sem keyrir á meðan við höfum bil til að leita á en nú skulum við skoða hvernig megi gera þetta endurkvæmt.
+Nú höfum við séð lykkjuútfærslu á helmingunarleit sem keyrir á meðan við höfum bil til að leita á en nú skulum við skoða hvernig má gera þetta endurkvæmt.
 
 \begin{lstlisting}[caption=Helmingunarleit að tölu í röðuðum lista með endurkvæmni, label=lst:reiknirit-helm-end]
 def helmingunarleit_med_endurkvaemni(listi, vinstri, haegri, x): 
@@ -415,7 +426,7 @@ def helmingunarleit_med_endurkvaemni(listi, vinstri, haegri, x):
 \section{Æfingar}
 \begin{exercise}\label{rei1}
 Búið til fall sem tekur við tveimur hnitum, x og y gildum.
-Það sem fallið á að gera er að skila tölu byggt á því hversu margar hreyfingar hrókur, taflmaðurinn, þyrfti að fara til að komast úr einu hniti í annað.
+Það sem fallið á að gera er að skila tölu sem byggir á því hversu margar hreyfingar hrókur, taflmaðurinn, þyrfti að fara til að komast úr einu hniti í annað.
 Í boði eru þrír möguleikar, tvær, ein eða engin hreyfing.
 
 Gerum ráð fyrir að öll möguleg rauntöluhnit séu lögleg fyrir þennan ofurhrók.
@@ -435,12 +446,12 @@ def hnit(hni11, hnit2):
 \setboolean{firstanswerofthechapter}{false}
 
 \begin{exercise}\label{rei2}
-Við viljum geta sagt til um hvaða leið er styst og hver er lengst, gefið er ákveðin lestarleið í formi lista af tölum.
-Tölurnar tákna hversu langt stoppin eru frá upphafstöðinni.
+Við viljum geta sagt til um hvaða leið er styst og hver er lengst, gefin er ákveðin lestarleið í formi lista af tölum.
+Tölurnar tákna hversu langt stoppin eru frá upphafsstöðinni.
 Þið eigið annars vegar að búa til fall sem tekur við lista og skilar stystu fjarlægð milli tveggja nærliggjandi stöðva og hins vegar eigið þið að búa til fall sem tekur við sambærilegum lista en skilar lengstu fjarlægð milli tveggja nærliggjandi stöðva.
 
 Athugið að fyrir listann \texttt{[1,3,7,19]} væri svarið 2 fyrir fyrra fallið en 12 fyrir seinna fallið.
-Athugið hér sérstaklega bubblesort og hvernig á að skoða tvö stök í einu.
+Athugið hér sérstaklega bubble sort og hvernig á að skoða tvö stök í einu.
 \end{exercise}
 \begin{Answer}[ref={rei2}]
 Hér er mikið atriði að prófa allskonar mismunandi lista til að vera viss um að þið séuð með kórréttan kóða.
@@ -462,11 +473,12 @@ def mest_fjarl(listi):
 \end{lstlisting}
 \end{Answer}
 
-\begin{exercise}\label{rei2}
-Búið til fall sem spyr notandann um fjölda barna sem eru að biðja um íspinna, innan þess falls skulið vera með fall sem endurkvæmt reiknar út summu íspinna sem börnin vilja.
-Notið random kóðasafnið til að búa til einhvern fjölda íspinna sem hvert barn vill.
+\begin{exercise}\label{rei3}
+Búið til fall sem spyr notandann um fjölda barna sem eru að biðja um íspinna.
+Innan þess falls skulið þið vera með fall sem endurkvæmt reiknar út summu íspinna sem börnin vilja.
+Notið \texttt{random} kóðasafnið til að búa til einhvern fjölda íspinna sem hvert barn vill.
 \end{exercise}
-\begin{Answer}[ref={rei2}]
+\begin{Answer}[ref={rei3}]
 Hér gætum við að notað input fallið og randint
 	\begin{lstlisting}
 import random as rnd
