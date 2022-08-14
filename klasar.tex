@@ -224,7 +224,7 @@ Við þurfum ekki að gefa neitt upp til þess að fá tilvikið í hendurnar, e
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 \begin{center}
-	\includegraphics[scale=0.68]{doodles31-08.png}
+	\includegraphics[scale=0.45]{doodles31-08.png}
 \end{center}
 %\end{wrapfigure}
 
@@ -389,8 +389,6 @@ En nú þegar við erum með okkar eigin klasa/hluti viljum við kannski fá ein
 \end{wrapfigure}
 
 Skoðum kóðabút \ref{lst:klasar-str} þar sem við skilgreinum klasa sem heldur utan um tölvuleikjapersónuna okkar aftur, en við ætlum þó að sleppa aðferðunum að sinni og bæta við nokkrum klasabreytum.
-\todo{formatting}
-\paragraph{}
 
 Klasabreytur eru skilgreindar efst í klasa og er nafnavenjan með þá að nota eingöngu hástafi.
 Það sem klasabreytur gera fyrir okkur er að halda utan um breytur sem við viljum að séu aðgengilegar allsstaðar í klasanum, við viljum ekki endilega að þær séu hluti af inntaki frá notanda við smíð klasans og hástafirnir gera yfirferð og prófun klasans auðveldari.
@@ -438,9 +436,9 @@ Töfraaðferðirnar gera okkur kleyft að beita innbyggðum föllum eins og \tex
 
 
 \section{Erfðir}\index{erfðir}\label{uk:klasar-erfðir}
-\begin{wrapfigure}{i}{0.4\textwidth} %i o r l 
+\begin{wrapfigure}{i}{0.5\textwidth} %i o r l 
 	\begin{center}
-		\includegraphics{doodles31-05.png}
+		\includegraphics[scale=1.3]{doodles31-05.png}
 	\end{center}
 \end{wrapfigure}
 Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segir vélinni að þeir erfi ekki frá neinum klasa nema \textit{object}, sem gerði það að verkum að við gátum útfært töfraaðferðir.
@@ -448,11 +446,12 @@ Klasarnir okkar hafa hingað til verið skilgreindir með tómum svigum sem segi
 
 Í kóðabút \ref{lst:klasar-erfðir} ætlum við að skoða hvernig á að búa til \textbf{yfirklasa} (e. superclass) og \textbf{undirklasa} (e. subclass).
 Við skoðum dæmi þar sem prentari er tekinn fyrir, hann þarf að kunna að prenta út streng, segja til um blekhlutfallið sitt og minnka blekið um eitt prósentustig.
+
 Þetta er alfarið æfing og því ekki endilega mjög raunhæft dæmi, en þar sem við erum að reyna að átta okkur á því hvað erfðir eru ætlum við að gera ráð fyrir því að við viljum að allir prentararnir okkar byrji með 100\% af bleki og hafi möguleikann á að lækka það.
 Hins vegar er ekki útfært hvernig á að prenta út og því ætlum við að útfæra sérstaka prentara sem eru eins og grunnprentarinn okkar (með tilliti til bleks) en meðhöndla prentunina sjálfa á annan máta.
-\begin{wrapfigure}{o}{0.4\textwidth} %i o r l 
+\begin{wrapfigure}{o}{0.5\textwidth} %i o r l 
 	\begin{center}
-		\includegraphics[scale=0.75]{doodles31-19.png}
+		\includegraphics[scale=0.95]{doodles31-19.png}
 	\end{center}
 \end{wrapfigure}
 
@@ -461,7 +460,7 @@ Hins vegar er ekki útfært hvernig á að prenta út og því ætlum við að �
 Tökum dæmi um spilastokk með 52 spilum þar sem við viljum útfæra reglur fyrir nýtt spil sem minnir á ólsen ólsen.
 Við viljum þó breyta reglunni um áttuna þannig að hún breyti ekki um lit heldur láti einhvern annan spilara draga tvö spil.
 Í staðinn fyrir að skrifa upp allar reglurnar í ólsen ólsen skrifum við þá bara ,,alveg eins og ólsen ólsen nema áttan er öðruvísi á eftirfarandi máta“.
-
+\newpage
 \begin{lstlisting}[caption=Erfðir kynntar með klasanum Prentari, label=lst:klasar-erfðir]
 class Prentari():
 	BLEK = 100
@@ -584,7 +583,7 @@ Skilagildið úr þessum aðferðum sem við erum að vinna í að útfæra hér
 Búið svo til tvö eintök af klasanum og berið þau saman með þessum samanburðarvirkjum.
 
 Skoðið vel kóðabútinn og sjáið hvernig \texttt{\_\_str\_\_} er útfærð, þar er einungis verið að skila streng.
-\end{exercise}\todo{formatting}
+\end{exercise}
 \begin{Answer}[ref={kla2}]
 	Hér eru margar leiðir til þess að leysa verkefnið, hvað er það sem gerir tvo leiki jafna?
 	Hér er það útfært þannig að tveir leikir eru jafnir ef nöfnin eru þau sömu, sömuleiðis er útfærslan á < er þannig að einn leikur er strangt minni en annar ef þar er minni peningur.

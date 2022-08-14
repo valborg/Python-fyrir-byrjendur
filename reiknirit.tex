@@ -36,8 +36,8 @@ Hugsum okkur nú hvert fyrsta skrefið er, svo næsta og koll af kolli.
 Reynum svo að lýsa því, eins og með hnetusmjörssamlokuna í kafla \ref{uk:keyra-koda}, þannig að við gætum snúið baki við spilunum (eða bara hvaða spilum sem er sem við höfum ekki séð) og lýst fyrir einhverri annarri manneskju hvernig hún gæti farið að því að raða spilunum með aðferðinni okkar.
 
 Hér er sterklega mælt með því að þið reynið á þessa æfingu áður en lengra er haldið.
-\todo{formatting}
-\paragraph{}
+Ekki aðeins er hún skemmtileg heldur gætuð þið einnig fundið upp á einhverri nýrri leið til þess að raða.
+
 Ein tiltekin leið til að raða spilunum væri að bera saman fremstu spilin og skipta þeim ef það hærra er vinstra megin og gera það fyrir öll spilin út röðina, skoðum töflu \ref{tbl:insert} til að sjá hvernig það myndi ganga fyrir sig.
 Þar erum við með einhverja ákveðna upphafsstöðu á spilunum og byrjum á að skoða fremstu tvö spilin, þá ,,svissum“ við þeim til að hærra spilið sé hægra megin.
 Í næstu atrennu ætlum við þá að skoða spilið sem er næst í röðinni og við ,,svissum“ því þangað til það er annað hvort úti í enda eða orðið hærra en það sem er vinstra megin.
@@ -102,7 +102,7 @@ Reikniritið sem lýsir þessari röð aðgerða heitir \emph{insertion sort} e�
 \phantom{easter egg}
 %\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 \begin{center}
-	\includegraphics[scale=0.6]{doodles31-07.png}
+	\includegraphics[scale=1.1]{doodles31-07.png}
 \end{center}
 %\end{wrapfigure}
 
@@ -124,7 +124,7 @@ def insertion_sort(A):
 		i = i + 1
 \end{lstlisting}
 
-\vspace{1cm}
+\vspace{0.3cm}
 
 Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum eru að:
 \begin{itemize}
@@ -136,26 +136,30 @@ Nokkrar hugmyndir til að ná upp leikni í notkun á reikniritum eru að:
 Allar þessar æfingar krefjast þess að við skiljum náið hvað það er sem er að gerast í hverju skrefi og hvers vegna röð skrefanna er eins og hún er.
 Markmiðið okkar er að skilja það sem við höfum í höndunum og geta unnið með það á okkar eigin forsendum.
 
-\vspace{1cm} \todo{formatting}
+\vspace{0.3cm} \todo{formatting}
 
 Í kóðabút \ref{lst:reiknirit-bubble} sjáum við útfærslu á \textit{bubble sort}.
 Útfærslan felst í tveimur hreiðruðum for-lykkjum.\footnote{Það er yfirleitt ekki góðs viti þegar kemur að tímaflækju, enda er hægt að gera ráð fyrir að tíminn sem það tekur að keyra bubble sort sé $n^2$, sem segir kannski ekkert fyrir óþjálfað auga en hægt er að treysta því að það er ekki ákjósanlegt.}
-
 Reikniritið virkar í grunninn þannig að það tekur við lista sem á að raða.
 Það rúllar í gegnum listann frá upphafi og út í enda og ýtir stærsta stakinu út í enda, eins og loftbólur sem þrýstast upp á yfirborðið.
-Þegar búið er að rúlla einu sinni í gegnum listann er stærsta stakið komið út í enda og það stak er ekki skoðað aftur heldur álitið á sínum stað.
-Þá er aftur rúllað í gegnum listann og stakið sem er þá stærst fer út í enda vinstra megin við stakið sem var stærst.
 
-Þannig að ytri for lykkjan keyrir fyrir hvert stak í listanum, eða segir til um hversu oft þurfi að finna stærsta stakið, og innri lykkjan sér um samanburðinn og skiptingarnar.
+
+Þegar búið er að rúlla einu sinni í gegnum listann er stærsta stakið komið út í enda og það stak er ekki skoðað aftur heldur álitið á sínum stað.
+
+\begin{wrapfigure}{r}{0.5\textwidth} %i o r l 
+	\begin{center}
+		\includegraphics[scale=1.4]{doodles31-25.png}
+	\end{center}
+\end{wrapfigure}
+Þá er aftur rúllað í gegnum listann og stakið sem er þá stærst fer út í enda vinstra megin við stakið sem var stærst.
+Þannig að ytri for-lykkjan keyrir fyrir hvert stak í listanum, eða segir til um hversu oft þurfi að finna stærsta stakið, og innri lykkjan sér um samanburðinn og skiptingarnar.
 Tökum sérstaklega eftir þar að við getum horft á næsta stak hægra megin þegar við erum að bera saman og það er vegna þess að við hættum fyrir framan aftasta stakið hverju sinni í innri lykkjunni.
 %Ef við myndum bara beita breytunni \texttt{vinstri\_hlid} sem \texttt{n-i} þá myndum við fá vísisvillu því við værum að vísa út fyrir listann okkar en vegna þess að við lækkum okkur um 1 þar að auki þá er möguleiki að skoða \texttt{listi[j+1]} sem er næsta stak hægra megin við það stak sem við erum stödd í \texttt{listi[j]}.
 
-\phantom{easter egg}
-%\begin{wrapfigure}{i}{0.2\textwidth} %i o r l 
 \begin{center}
-	\includegraphics[scale=1.0]{doodles31-25.png}
+	\includegraphics[scale=0.8]{doodles31-13.png}
 \end{center}
-%\end{wrapfigure}
+\newpage
 
 \begin{lstlisting}[caption=Bubble sort reikniritið, label=lst:reiknirit-bubble]
 	def bubblesort(listi):

@@ -62,17 +62,27 @@ Sjá ítarefni í lok kaflans um önnur lykilorð sem gagnast við forritun á l
 	Listar eru einnig ítranlegir þar sem stökin í listum hafa vísa og því má horfa á hvert stak fyrir sig í heild sinni, hvort sem það er annar listi eða ein stök tala.
 	Heiltölur, fleytitölur og sanngildi eru ekki ítranleg.
 \end{itarefni}
-\todo{formatting}
-\vspace{2cm}
-%\begin{wrapfigure}{}{0.4\textwidth} %i o r l 
-	\begin{center}
-		\includegraphics[scale=1.3]{doooodles_valborg-07.png}
-	\end{center}
-%\end{wrapfigure}
 
-\newpage \todo{formatting}
 
-\begin{lstlisting}[caption=For lykkjur kynntar, label=lst:lykkjur-for-kynning]
+\vspace{3cm}
+\begin{minipage}[b]{0.33\linewidth}
+	\centering
+	\includegraphics[width=.5\linewidth]{doooodles_valborg-06.png} 
+	\vspace{4ex}
+\end{minipage}%%
+\begin{minipage}[b]{0.33\linewidth}
+	\centering
+	\includegraphics[width=.5\linewidth]{doooodles_valborg-07.png} 
+	\vspace{4ex}
+\end{minipage} 
+\begin{minipage}[b]{0.33\linewidth}
+	\centering
+	\includegraphics[width=.5\linewidth]{doooodles_valborg-08.png} 
+	\vspace{4ex}
+\end{minipage}%% 
+\vspace{3cm}
+
+\begin{lstlisting}[caption=For-lykkjur kynntar, label=lst:lykkjur-for-kynning]
 # við byrjum á að skilgreina streng
 strengur = "Valborg"
 print(strengur, "til viðmiðunar")
@@ -116,7 +126,7 @@ Haldið áfram að gera tilraunir með þetta þangað til að þið áttið ykk
 Sjáum nú hvernig má flétta skilyrðissetningar inn í þetta.
 
 \lstset{style=venjulegt}
-\begin{lstlisting}[caption=For lykkja og skilyrðissetningar, label=lst:lykkjur-for-skil]
+\begin{lstlisting}[caption=For-lykkja og skilyrðissetningar, label=lst:lykkjur-for-skil]
 for stafur in strengur:
 	# við vitum að það er a í Valborg svo þetta mun einhvern tímann gerast
 	if(stafur == 'a'):
@@ -147,7 +157,7 @@ Næst skoðum við annan ítranlegan hlut með for lykkju, það er listi.
 
 \lstset{style=venjulegt}	
 	
-\begin{lstlisting}[caption=For lykkja með lista, label=lst:lykkjur-for-listi]
+\begin{lstlisting}[caption=For-lykkja með lista, label=lst:lykkjur-for-listi]
 listinn_minn = [0, "strengur", [0, 1, 2]]
 
 for x in listinn_minn:
@@ -189,8 +199,7 @@ En ef við viljum vera viss um að eitthvað gerist ákveðið oft?
 Skoðum kóðabút \ref{lst:lykkjur-range-kynnt} þar sem fyrra verkefnið er leyst á tvo mismunandi vegu.
 
 %\begin{wrapfigure}{}{0.4\textwidth} %i o r l 
-\begin{center}
-	\includegraphics[scale=0.4]{doooodles_valborg-02.png}
+\begin{center}\includegraphics[scale=0.9]{doooodles_valborg-02.png}
 \end{center}
 %\end{wrapfigure}
 
@@ -447,8 +456,8 @@ Skoðum nú einhverja gagnlega lykkju.
 Segjum að við skuldum 8.000 krónur og við ætlum að borga inn á skuldina okkar 1.000 krónur í einu.
 Við viljum að sjálfsögðu hætta að borga þegar við skuldum ekkert lengur og auðvitað viljum við að skuldin okkar lækki.
 
-\begin{lstlisting}[caption=while-lykkja sem eitthvað vit er í, label=lst:lykkjur-while-skuld]
-skuld = 8000
+\begin{lstlisting}[caption=While-lykkja sem eitthvað vit er í, label=lst:lykkjur-while-skuld]
+skuld = 7000
 innborgun = 1000
 while(skuld > 0):
 	skuld = skuld - innborgun
@@ -456,7 +465,6 @@ while(skuld > 0):
 \end{lstlisting}
 \lstset{style=uttak}
 \begin{lstlisting}
-nú er skuldin 7000
 nú er skuldin 6000
 nú er skuldin 5000
 nú er skuldin 4000
