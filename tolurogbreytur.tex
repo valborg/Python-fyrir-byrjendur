@@ -381,8 +381,9 @@ Að svo stöddu er gott að hafa í huga hinar ýmsu \emph{villur} (e. errors) s
 	\end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 	\begin{Answer}[ref={tol1}]
-		Nú þurfum við að athuga þrennt nafn á breytuna, hvernig á að veita henni eitthvað gildi og sjá til þess að það gildi sé heiltala.
-		Til þess að búa til breytu þarf að finna nafn á hana, skrifa það fremst í línuna (ss. vinstra megin við jafnaðarmerkið) og nota svo jafnaðarmerkið til þess að veita breytunni gildi og því næst velja einhverja heila tölu.
+		Nú þurfum við að athuga þrennt: nafn á breytuna, hvernig á að veita henni eitthvað gildi og sjá til þess að það gildi sé heiltala.
+		Til þess að búa til breytu þarf að finna nafn á hana, skrifa það fremst í línuna (sem sagt vinstra megin við jafnaðarmerkið) og nota svo jafnaðarmerkið til þess að veita breytunni gildi.
+		Því næst þarf velja einhverja heila tölu.
 		Það er tölu sem er annað hvort jákvæð eða neikvæð og er ekki með punkt og aukastafi.
 \begin{lstlisting}
 # til dæmis
@@ -395,7 +396,7 @@ neikvaed_tala = -1234567890\end{lstlisting}
 	Búðu til breytu sem inniheldur fleytitölu.
 \end{exercise}
 \begin{Answer}[ref={tol2}]
-	Hér þurfum við að hafa það sama í huga eins og í æfingu \ref{tol1} nema að talan sem við veljum okkur verður að vera með punkti og einum eða fleiri aukastöfum.
+	Hér þurfum við að hafa það sama í huga og í æfingu \ref{tol1} nema að talan sem við veljum okkur verður að vera með punkti og einum eða fleiri aukastöfum.
 \begin{lstlisting}
 # til dæmis
 eitthvad_loglegt_breytuheiti_fyrir_fleytitolu = 5.0
@@ -407,12 +408,12 @@ neikvaed_tala = -12.9999\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={tol2-5}]
 	Nú þurfum við að athuga að nota nákvæmlega sömu nöfn og við notuðum í fyrri verkefnum.
-	Vegna þess að hér erum við að vísa í breytur sem búið var að skilgreina, við fáum nafnavillu ef við skrifum nöfn hægra megin við jafnaðarmerkið sem tölvan hefur ekki aðgang að í minni.
+	Það er vegna þess að hér erum við að vísa í breytur sem búið var að skilgreina, við fáum nafnavillu ef við skrifum nöfn hægra megin við jafnaðarmerkið sem tölvan hefur ekki aðgang að í minni.
 \begin{lstlisting}
 # til dæmis
 thridja_breytan = eitthvad_loglegt_breytuheiti_fyrir_heiltolu + eitthvad_loglegt_breytuheiti_fyrir_fleytitolu
 print(thridja_breytan)\end{lstlisting}
-	Svo er einnig spurt af hvaða týpu er þessi þriðja breyta?
+	Svo er einnig spurt af hvaða týpu þessi þriðja breyta er.
 	Þar sem önnur breytan er fleytitala verður útkoman fleytitala, það má sjá með því að gera eftirfarandi:
 	
 \begin{lstlisting}
@@ -429,7 +430,7 @@ allt = 1000
 helmingur =\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={tol3}]
-	Við beitum deilingu á breytuna allt, og svo gerum við það aftur fyrir nýju breytuna.
+	Við beitum deilingu á breytuna \texttt{allt} og svo gerum við það aftur fyrir nýju breytuna.
 \begin{lstlisting}
 allt = 1000
 helmingur = allt/2
@@ -447,7 +448,7 @@ helmingur_af_helmingnum = allt/2/2  # eða allt/4 því helmginur af helmingnum 
 	Hvernig prentum við fyrst út helminginn af \texttt{allt} og svo helminginn af því?
 \end{exercise}
 \begin{Answer}[ref={tol4}]
-	Við beitum deilingu á breytuna allt, og svo gerum við það aftur fyrir nýju breytuna.
+	Við beitum deilingu á breytuna \texttt{allt} og svo gerum við það aftur fyrir nýju breytuna.
 \begin{lstlisting}
 allt = 1000
 print(allt)
@@ -471,7 +472,7 @@ c = c_i_odru_veldi**0.5
 print(c)\end{lstlisting}
 \end{exercise}
 \begin{Answer}[ref={tol5}]
-	Hér þurfum við að átta okkur á því að vélin býst við að nota breyturnar a og b en við eigum eftir að skilgreina þær sem eitthvað.
+	Hér þurfum við að átta okkur á því að vélin býst við að nota breyturnar \texttt{a} og \texttt{a} en við eigum eftir að skilgreina þær sem eitthvað.
 	Þekktur rétthyrndur þríhyrningur er til dæmis með hliðarnar 3, 4 og 5.
 \begin{lstlisting}
 a = 3
@@ -480,7 +481,7 @@ b = 4
 c_i_odru_veldi = a**2 + b**2
 c = c_i_odru_veldi**0.5
 print(c)\end{lstlisting}
-	Þá er c 5 í þessu tilfelli en hér má setja hvaða tölur inn sem er til að komast að því hvað c þyrfti að vera löng hlið til þess að þríhyrningurinn sé rétthyrndur.
+	Þá er \texttt{c} 5 í þessu tilfelli en hér má setja inn hvaða tölu sem er til að komast að því hvað \texttt{c} þyrfti að vera löng hlið til þess að þríhyrningurinn sé rétthyrndur.
 \end{Answer}
 
 \begin{exercise}\label{tol-villa}

@@ -115,9 +115,9 @@ Búið til mengi sem er tómt.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={set1}]
-Þetta eru klækir, þar sem það veldur tvíræðni að nota tóma slaufusviga til að skilgreina bæði tóma orðabók og tómt mengi var ákveðið að tómir slaufusvigar þýða alltaf orðabók.
-En tómamengið er gífurlega mikilvægt og því nauðsynlegt að geta búið það til og átt það svo það er að sjálfsögðu hægt.
-Með þessu móti er hægt að búa til tómt mengi sem hægt er svo að vinna með.
+Þetta eru klækir, þar sem það veldur tvíræðni að nota tóma slaufusviga til að skilgreina bæði tóma orðabók og tómt mengi var ákveðið að tómir slaufusvigar þýddu alltaf orðabók.
+En tómamengið er gífurlega mikilvægt, því nauðsynlegt að geta búið það til og átt það svo það er að sjálfsögðu hægt.
+Með þessu móti er hægt að búa til tómt mengi.
 	\begin{lstlisting}
 mengi = set()
 	\end{lstlisting}
@@ -129,7 +129,7 @@ mengi = set()
 Búið til lista af strengjum og búið svo til mengi út frá þeim lista.
 \end{exercise}
 \begin{Answer}[ref={set2}]
-	
+	Hér þarf einungis að nota lykilorðið til þess að kasta.
 	\begin{lstlisting}
 listi = ["hér er strengur1", "ólíkur öllum öðrum", "eins", "eins", "Eins", "ekki eins"]
 mengi = set(listi)\end{lstlisting}
@@ -137,36 +137,41 @@ mengi = set(listi)\end{lstlisting}
 
 
 \begin{exercise}\label{set3}
-Búið til lista af tölunum 1, 2, 3, 4, 5 og einn tóman lista.
-Ítrið þá í gegnum talnalistann með for lykkju þannig að þið rúllið frá 0 upp í töluna 3 með \texttt{range} fallinu svo að þið getið skoðað eitt stak hægra megin við þá tölu sem þið eruð að skoða.
+Búið til lista af tölunum 1, 2, 3, 4, 5 og tómt mengi.
+Ítrið þá í gegnum talnalistann með for lykkju þannig að þið rúllið frá 0 upp í töluna 4 (eða einum minna en lengdin á listanum) með \texttt{range} fallinu svo að þið getið skoðað eitt stak hægra megin við þá tölu sem þið eruð að skoða.
 
-Það sem þið gerið í lykkjunni ykkar er að skoða töluna í staki \textit{i} (hlaupandi stakið) og töluna í staki \textit{i+1}, leggið þær saman og setjið inn í tóma listann sem var skilgreindur fyrir ofan lykkjuna.
+Það sem þið gerið í lykkjunni ykkar er að skoða töluna í staki \textit{i} (hlaupandi stakið) og töluna í staki \textit{i+1}, leggið þær saman og setjið inn í tóma mengið með \texttt{add} aðferðinni, það á að vera skilgreint fyrir ofan lykkjuna.
 
-Þegar lykkjan er búin að keyra eruð þið komin með tvo talnalista.
-Fyrri listann gerið þið að mengi sem þið uppfærið svo og setjið uppfærða listann inn sem viðfang.
+Þegar lykkjan er búin að keyra eruð þið komin með talnamengi með nokkrum tölum og svo upphaflega listann.
 
-Athugið svo hvort að mengið sé tíu stök að lengd.
+Kastið listanum í mengi og dragið hann frá (með mínus reiknivirkjanum) frá menginu.
+
+Þið eigið að fá lausnina \{7, 9\}
 \end{exercise}
 \begin{Answer}[ref={set3}]
-Hér erum við að rifja upp ýmisslegt gagnlegt sem er ekki gott að gleyma.
-Það fyrsta er hvernig á að ítra með for og hitt er að nota range.
-Það sem er nýtt hinsvegar er að við notum range til að rúlla upp í 4 því að við viljum að 3 sé með, en ekki fjórir því að hæsti vísirinn í 5 staka lista er 4.
+Hér erum við að rifja upp ýmislegt gagnlegt sem gott er að muna.
+Það fyrsta er hvernig á að ítra með for-lykkju og hitt er að nota \texttt{range}.
+Það sem er hinsvegar nýtt er að við notum \texttt{range} til að rúlla upp í 4 því við viljum að 3 sé með en ekki 4.
+Ástæðan er sú að hæsti vísirinn í 5 staka lista er 4, til þess að geta horft hægra megin við hann má ekki skoða síðasta stakið því það er ekkert stak hægra megin við það.
+
+Að síðustu er þetta spurning um að skoða hvað mengið inniheldur sem listinn gerir ekki, 
 
 	\begin{lstlisting}
 talnalisti = [1,2,3,4,5]
-vinnslulisti = []
+samlagningarmengi = set()
 for i in range(4):
-tala = talnalisti[i] + talnalisti[i+1]
-vinnslulisti.append(tala)
-talnamengi = set(talnalisti)
-talnamengi.update(vinnslulisti)
-print(len(talnamengi) == 10)\end{lstlisting}
+
+	tala = talnalisti[i] + talnalisti[i+1]
+	samlagningarmengi.add(tala)
+
+print(samlagningarmengi - set(talnalisti))\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{set4}
 Búið til tvö mengi sem innihalda einhverjar tölur og finnið sniðmengið þeirra með því að nota reiknivirkjann \texttt{\&}.
 \end{exercise}
 \begin{Answer}[ref={set4}]
+	Sniðmengið er það sem er sameiginlegt með mengjunum svo mengi með stökin 1,2 á 2 sameiginlegt með mengi sem inniheldur stökin 2,5,6.
 \begin{lstlisting}
 mengi1 = {1,2,3,4,5,6,7,7,8}
 mengi2 = {2,4,7,9,7,6,4,3,4,44,4,44,4,4}

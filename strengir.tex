@@ -323,6 +323,9 @@ print(matur)
 kex með avókadó, majónesi og eggi
 \end{lstlisting}
 \lstset{style=venjulegt}
+
+%------------------------------ÆFINGAR---------------%
+
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{str1}
@@ -331,9 +334,9 @@ kex með avókadó, majónesi og eggi
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={str1}]
 	Hér þurfum við að átta okkur á því hvernig strengir eru skilgreindir, annað hvort með tvöföldum eða einföldum gæsalöppum.
-	Svo og að breytur eru skilgreindar með því að setja nafnið á breytunni vinstra megin við jafnaðarmerki og gildið, í þessu tilfelli streng, hægra megin við jafnaðarmerki.
+	Eins þurfum við að átta okkur á því að breytur eru skilgreindar með því að setja nafnið á breytunni vinstra megin við jafnaðarmerki og gildið, í þessu tilfelli streng, hægra megin við jafnaðarmerki.
 	\begin{lstlisting}
-strengur = "hér er textinn sem geymist í breytunni strengur" #tvöfaldar gæsalappir báðu megin
+strengur = "hér er textinn sem geymist í breytunni strengur" #tvöfaldar gæsalappir báðum megin
 strengur = 'hér er verið að nota einfaldar gæsalappir'
 strengur = '' # þetta er tómur strengur\end{lstlisting}
 \end{Answer}
@@ -392,9 +395,9 @@ print(s[len(s)//2])\end{lstlisting}
 	Lengdu þriðju breytuna, þannig að samskeytingin sé endurtekin að minnsta kosti tvisvar sinnum.
 \end{exercise}
 \begin{Answer}[ref={str6}]
-	Athugaðu að þegar er verið að lengja breytuna þá er hún endurskilgreind.
-	Þetta er gert því beðið er um að lengja þriðju breytuna og því gefið í skyn að breytan eigi að fá uppfært gidli.
-	Ef þú hinsvegar lagðir annan skilning í verkefnið og bjóst til fjórðu breytu þá er það líka í lagi að svo stöddu, við erum ekki að besta fyrir minnisnotkun.
+	Athugið að þegar er verið að lengja breytuna er hún endurskilgreind.
+	Þetta er gert því beðið er um að lengja þriðju breytuna og því gefið í skyn að breytan eigi að fá uppfært gildi.
+	Ef þú hins vegar lagðir annan skilning í verkefnið og bjóst til fjórðu breytu er það líka í lagi að svo stöddu, við erum ekki að besta fyrir minnisnotkun.
 \begin{lstlisting}
 s1 = "allra handa"
 s2 = " bil fremst"
@@ -408,7 +411,7 @@ Gefum okkur einnig að þeir séu ekki rétt ritaðir skv. íslenskum ritreglum.
 Hvernig setjum við þá saman í einn streng eftir að hafa beitt á þá aðferðum til að þeir séu örugglega með fyrsta staf stóran og alla aðra litla?
 \end{exercise}
 \begin{Answer}[ref={str7}]
-	Hér látum n1 og n2 vera á einhvern hátt stangast á við íslenskar ritunarreglur, svo skeytum við þeim saman eftir að hafa beitt á þá aðferðinni .capitalize() sem lagar þá til eins og fyrirmælin segja til um.
+	Hér látum við \texttt{n1} og \texttt{n2} vera á einhvern hátt stangast á við íslenskar ritunarreglur, svo skeytum við þeim saman eftir að við höfum beitt á þá aðferðinni \texttt{.capitalize()} sem lagar þá til eins og fyrirmælin segja til um.
 \begin{lstlisting}
 n1 = "valBorg"
 n2 = "sturluDóttir"
@@ -429,10 +432,10 @@ Til þess ætlum við að gera eftirfarandi:
 \end{exercise}
 \begin{Answer}[ref={str8}]
 Við höfum ansi frjálsar hendur í þessu verkefni, en athugið að við höfum enn ekki kynnst því hvernig á að gera eitthvað með skilyrðum, lykkjum eða handahófskennt.
-Svo við verðum að beita einungis þeim aðferðum sem við höfum séð hingað til.
+Við beitum einungis þeim aðferðum sem við höfum séð hingað til.
 Einnig verðum við að passa að ekki sé verið að vísa í sætisnúmer sem eru ekki til staðar í strengjunum.
 Takið eftir að þessi lausn er einungis hugmynd, í skrefi 1 má skipta um strengi, í skrefi 3 má klippa í sundur á mismunandi hátt, beita fleiri aðferðum og lengja sjaldnar eða oftar eða með öðrum tölum.
-Aðalatriðið í skrefi þrjú er að sama hvaða strengir eru settir inn í skrefi 1 þá er aldrei vísað út fyrir strenginn og allur lykilstrengurinn er notaður, hvert einasta stæði.
+Aðalatriðið í skrefi 3 er að sama hvaða strengir eru settir inn í skrefi 1 er aldrei vísað út fyrir strenginn og allur lykilstrengurinn er notaður, hvert einasta stæði.
 
 Prófaðu að setja inn mismunandi strengi og prenta út lykilinn í lokin.
 

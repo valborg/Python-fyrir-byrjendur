@@ -549,7 +549,9 @@ Hugmyndin er að klasinn sem útfærir einungis aðferðina write fyrir okkur er
 Ef við höldum áfram með dæmið um klasana sem útfæra \texttt{write} gæti einn þeirra skrifað í skjal á tölvu úti í Þýskalandi, einn sent skjalið í tölvupósti og einn látið talgervil lesa það upp í strætó leið 14.
 Upphaflegi gagnaklasinn veit ekkert um það heldur treystir bara á að fá einhvern hlut í hendurnar sem kann þessa aðferð sama hvernig hún er útfærð.
 
-%-------------------------------
+%-------------------------------ÆFINGAR------------------------%
+
+
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{kla1}
@@ -565,7 +567,7 @@ Til dæmis væri hægt að setja Höfn í Hornafirði sem er í 820 km fjarlæg�
 Það sem þarf að athuga hér er að \texttt{Lest} á tilviksbreytuna \texttt{nuverandi\_stod} sem við viljum uppfæra en það má ekki gerast fyrr en við erum búin að reikna hversu langt er þangað.
 Til þess að finna hvað er langt á milli getum við notað einhverja af þeim þremur aðferðum sem búið var að útfæra.
 Einnig má ekki gleymast að uppfæra kílómetrastöðuna.
-EFtirfarandi er kóðinn fyrir útfærsluna á aðferðinni en prófanir eru eftirlátnar lesanda.
+Eftirfarandi er kóðinn fyrir útfærsluna á aðferðinni en prófanir eru eftirlátnar lesanda.
 	\begin{lstlisting}
 def ny_nuverandi_stod(self, stod):
 	km = self.fara_til_stod(stod)
@@ -582,12 +584,12 @@ Skilagildið úr þessum aðferðum sem við erum að vinna í að útfæra hér
 Búið svo til tvö eintök af klasanum og berið þau saman með þessum samanburðarvirkjum.
 
 Skoðið vel kóðabútinn og sjáið hvernig \texttt{\_\_str\_\_} er útfærð, þar er einungis verið að skila streng.
-\end{exercise}
+\end{exercise}\todo{formatting}
 \begin{Answer}[ref={kla2}]
 	Hér eru margar leiðir til þess að leysa verkefnið, hvað er það sem gerir tvo leiki jafna?
 	Hér er það útfært þannig að tveir leikir eru jafnir ef nöfnin eru þau sömu, sömuleiðis er útfærslan á < er þannig að einn leikur er strangt minni en annar ef þar er minni peningur.
 	
-	Þetta gæti líka verið gert með rökvirkjum, til þess að tveir leikir séu jafnir þurfa allar tilviksbreytur að vera eins, eða einhvern veginn allt öðruvísi.
+	Þetta mætti líka gera með rökvirkjum, til þess að tveir leikir séu jafnir þurfa allar tilviksbreytur að vera eins, eða einhvern veginn allt öðruvísi.
 	
 	Prófanir eru eftirlátnar lesanda.
 	\begin{lstlisting}

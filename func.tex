@@ -603,7 +603,7 @@ Við notum strax \texttt{teljum\_fra\_fimm} en við notum ekkert \texttt{teljum\
 Athugum þó sérstaklega að gildissviðið sem innra fallið \texttt{teljari()} tilheyrir hefur ekki aðgang að neinu staðværu n-i svo það skilar villu, nema að við segjum því falli sérstaklega að nota ekki staðvært n heldur leita út fyrir gildissviðið með lykilorðinu \textbf{nonlocal}.
 Við munum ekki nota það orð af neinu viti í seinni hluta bókarinnar en það er þess virði að taka það fram að svo stöddu að þetta orð sé til og hvað það gerir.
 
-%-------------------------------
+%-------------------------------ÆFINGAR--------------------------------%
 \newpage
 \section{Æfingar}
 Athugið að til þess að átta ykkur á því hvort að föllin ykkar séu rétt gerð þurfið þið að gera ítarlegar prófanir á þeim, með mismunandi inntaki.
@@ -615,7 +615,7 @@ Prófið að kalla í fallið með streng og tölu, með tveimur strengjum og me
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={fun1}]
-Við þurfum ekkert að hugsa um return á þessu stigi málsins bara að muna eftir hvernig á að setja upp fall og nota það.
+Við þurfum ekkert að hugsa um \texttt{return} á þessu stigi málsins, bara að muna eftir hvernig á að setja upp fall og nota það.
 	\begin{lstlisting}
 def fall1(a, b):
 	print(b, a)
@@ -632,16 +632,17 @@ Ef ekkert er gefið upp ákveðið þið sjálf hvert gildi viðfanganna á að 
 Innan fallsins athugið þið svo hver strengjanna er aftastur í stafrófinu og prentið hann út.
 \end{exercise}
 \begin{Answer}[ref={fun2}]
-Hér erum við komin í smá vandræði, það er að við viljum að notandinn setji inn strengi í fallið okkar en við gerum ekkert til þess að fullvissa okkur um að svo sé (sjáum það í kafla \ref{k:villur}) svo við ætlum að sjá hvað gerist þegar við notum fallið eins og okkur sýnist þó svo að við vitum að fallið taki bara við strengjum.
+Hér erum við komin í smá vandræði, það er að við viljum að notandinn setji inn strengi í fallið okkar en við gerum ekkert til þess að fullvissa okkur um að svo sé (sjáum það í kafla \ref{k:villur}).
+Við ætlum að sjá hvað gerist þegar við notum fallið eins og okkur sýnist þó svo að við vitum að fallið taki bara við strengjum.
 
 Það sem þarf að gerast er einföld skilyrðissetning og útprentun.
-Einföld á þann hátt að hún er ekki hreiðruð og að við þurfum bara fáa samanburðarvirkja.
-En að vísu má sleppa samanburðarvirkjunum með því að nota innbyggt fall sem heitir \emph{max()}.
+Hún er einföld á þann hátt að hún er ekki hreiðruð og við þurfum bara fáa samanburðarvirkja.
+Að vísu má sleppa samanburðarvirkjunum með því að nota innbyggt fall sem heitir \texttt{max()}.
 Prófið ykkur áfram með að breyta þessari lausn og setja inn þrjá eins strengi.
 
-Lausnin með samanburðinum er ófullkomin því að aldrei er leyfilegt að tveir strengir sem eru aftar í stafrófinu séu jafnir (hvað þá allir þrír).
+Lausnin með samanburðinn er ófullkomin því að aldrei er leyfilegt að tveir strengir sem eru aftar í stafrófinu séu jafnir (hvað þá allir þrír).
 
-Reynið að leysa þetta án þess að nota max() í else.
+Reynið að leysa þetta án þess að nota \texttt{max()} inni í \texttt{else}.
 \begin{lstlisting}
 def fall2(a = "Anna", b = "Bára", c = "Carl"):
 	if(a > b and a > c):
@@ -658,7 +659,7 @@ def fall2(a = "Anna", b = "Bára", c = "Carl"):
 Búið til fall sem tekur við lista af tölum og skilar næsthæstu tölunni.
 \end{exercise}
 \begin{Answer}[ref={fun3}]
-Nú getum við aftur beitt max fallinu en þá til þess að henda þeirri tölu út svo að við getum beitt max aftur.
+Nú getum við aftur beitt \texttt{max()} fallinu en þá til þess að henda þeirri tölu út svo að við getum beitt því aftur.
 Athugum að muna eftir því að skila.
 	\begin{lstlisting}
 def fall3(listi):
@@ -706,10 +707,10 @@ fall5("breki", "Bolli")
 fall5("ester", "Ösp")
 fall5("kanína", "Portúgal")
 \end{lstlisting}
-Hér sjáum við að return False kemur fyrir í sama inndrætti og skilyrðissetningin, má það?
+Hér sjáum við að \texttt{return} False kemur fyrir í sama inndrætti og skilyrðissetningin, má það?
 Það er vegna þess að ef við fórum aldrei inn í skilyrðissetninguna, þá gátum við aldrei skilað True og því hljótum við að eiga skila False.
 Sama niðurstaða fengist með því að bæta við \texttt{else return False}.
-Takið svo eftir .lower() til að staðla inntakið svo að við fáum örugglega True fyrir Bolli og breki, og ester og Ösp.
+Takið svo eftir \texttt{.lower()} til að staðla inntakið svo við fáum örugglega True fyrir Bolli og breki, og ester og Ösp.
 
 \end{Answer}
 
@@ -720,7 +721,7 @@ Ef önnur eða hvorug er slétt skilið þið þeirri tölu sem er hærri.
 Nú er gott að benda á að \texttt{min()} skilar minnsta gildi alveg eins og \texttt{max()} skilar hæsta gildi.
 \end{exercise}
 \begin{Answer}[ref={fun6}]
-	
+	Takið sérstaklega vel eftir hér hvað fallið er prófað ítarlega.
 	\begin{lstlisting}
 def fall6(tala1, tala2):
 	if tala1%2 == 0 and tala2%2 == 0:
@@ -770,8 +771,8 @@ def fall6(listi):
 		elif stak == 7 and talning == 2:
 			return True
 	return False\end{lstlisting}
-	Hér sjáum við að return False kemur fyrir í sama inndrætti for, það er vegna þess að þegar for lykkjan er búin þá höfum við ekki náð að finna 7 á eftir tveimur núllum og því skilum við false.
-	Sú setning má ekki vera inni í for lykkjunni því að þá myndum við ekki klára að skoða öll stökin áður en við myndum úrskurða um hvort mynstrið væri til staðar eða ekki.
+	Hér sjáum við að \texttt{return} False kemur fyrir í sama inndrætti for-lykkjan, það er vegna þess að þegar for-lykkjan er búin höfum við ekki náð að finna 7 á eftir tveimur núllum og því skilum við false.
+	Sú setning má ekki vera inni í for-lykkjunni því að þá myndum við ekki klára að skoða öll stökin áður en við myndum úrskurða um hvort mynstrið sé til staðar eða ekki.
 	
 \end{Answer}
 
@@ -786,7 +787,7 @@ Ef viðfangið er heiltala skal halda áfram og sú tala fer inn í range falli�
 Þannig erum við komin með fall sem getur búið til ndir sem spyrja x oft hver uppáhalds litur notandans er.
 \end{exercise}
 \begin{Answer}[ref={fun8}]
-Rifjum upp svarið við \ref{nd4}
+Rifjum upp svarið við \ref{nd4}.
 \begin{lstlisting}
 nd = ()
 for i in range(4):
@@ -794,7 +795,7 @@ for i in range(4):
 	nd = nd + (svar,)
 print(nd)\end{lstlisting}
 
-Við vildum nota þetta innan falls og við vildum ekki bara prenta útkomuna heldur skila henni, en við vildum jafnframt vera aðeins að athuga inntakið með skilyrðissetningu.
+Við vildum nota þetta innan falls og við vildum ekki bara prenta útkomuna heldur skila henni, en við vildum jafnframt aðeins athuga inntakið með skilyrðissetningu.
 
 Prófið fallið með bæði tölu og streng eða öðru tagi.
 

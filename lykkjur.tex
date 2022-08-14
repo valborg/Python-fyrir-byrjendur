@@ -543,7 +543,10 @@ nú er talan orðin 1 því 1 er ekki stærri en 1 --> 1
 
 
 
-%-------------------------------
+%-------------------------------ÆFINGAR------------------------------%
+
+
+
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{lyk1}
@@ -582,7 +585,7 @@ print(summa)\end{lstlisting}
 Prentið svo út alla summuna í einu þegar keyrslu lykkjunnar lýkur.
 \end{exercise}
 \begin{Answer}[ref={lyk3}]
-Svo við gerum það sama og áður, við þurfum summu breytu áður en við förum inn í lykkjuna en við notum \texttt{range()} fallið.
+Við gerum það sama og áður, við þurfum summu breytu áður en við förum inn í lykkjuna, en við notum \texttt{range()} fallið.
 	
 \begin{lstlisting}
 summa = 0
@@ -612,17 +615,17 @@ for tala in range(100):
 \end{lstlisting}
 
 Áður en þið skoðið lausnina skulið þið gera heiðarlega tilraun til að fylla inn fyrir spurningarmerkin.
-Hér kemur langur texti um hvað þarf að gerast svo að þið sjáið ekki lausnina alveg strax.
+Hér kemur langur texti um hvað þarf að gerast svo þið sjáið ekki lausnina alveg strax.
 
 Það sem þarf að setja inn er að gera \texttt{tala} að streng svo hægt sé að rúlla í gegnum hana í innri lykkjunni.
 
-Áður en innri lykkjan er keyrð þarf að skilgreina breytu sem á að halda utan um summuna, ástæðan fyrir því að það gerist í ytri lykkjunni en ekki utan hennar eins og áður er vegna þess að við viljum fá nýja summu sem er skilgreind sem 0 fyrir hverja einustu tölu í ytri lykkjunni.
+Áður en innri lykkjan er keyrð þarf að skilgreina breytu sem á að halda utan um summuna, ástæðan fyrir því að það gerist í ytri lykkjunni en ekki utan hennar eins og áður er sú að við viljum fá nýja summu sem er skilgreind sem 0 fyrir hverja einustu tölu í ytri lykkjunni.
 
-Þá erum við komin með breytu sem heldur utan um summu og getum ferðast í gegnum vísa talna strengs, það sem við þurfum þá að gera er kasta hverju staki fyrir sig í tölu svo að við getum notað það í útreikningi.
+Þá erum við komin með breytu sem heldur utan um summu og getum ferðast í gegnum vísa talna strengs, það sem við þurfum þá að gera er að kasta hverju staki fyrir sig í tölu svo að við getum notað það í útreikningi.
 Þá viljum við leggja það saman við summuna og uppfæra summuna með þessari samlagningu.
 
 Þegar við erum búin með innri lykkjuna erum við komin með þversummu fyrir einhverja eina tölu úr talnalistanum sem ytri lykkjan er að skoða.
-Þá viljum við spyrja er þessi þversumma stærri en 6?
+Þá viljum við spyrja hvort að þessi þversumma sé hærri en 6.
 
 Ef svo er þá viljum við prenta út töluna sem hafði þessa þversummu.
 
@@ -643,7 +646,7 @@ Búið til lista með nokkrum strengjum, prentið út alla þá strengi sem inni
 \end{exercise}
 \begin{Answer}[ref={lyk5}]
 Athugið hér að nafnalistinn er ólíkur ykkar, þessi listi var gerður til að sýna að ANNA og Albert innihalda ekki táknið sem beðið var um og komast því ekki í gegn.
-Ef óskað væri eftir að hafa það tákn líka væri hægt að rifja upp \texttt{.lower()} úr kafla \ref{k:strengir} eða hvernig eigi að nota rökvirkja í segð.\footnote{Þá í stað \texttt{if "a" in stak} væri \texttt{if "a" in stak.lower()}, eða með rökvirkja \texttt{if "a" in stak or "A" in stak}.}
+Ef óskað væri eftir að hafa það tákn líka væri hægt að rifja upp \texttt{.lower()} úr kafla \ref{k:strengir} eða hvernig á að nota rökvirkja í segð.\footnote{Þá í stað \texttt{if "a" in stak} væri skilyrðissetningin svona:\texttt{if "a" in stak.lower()}, eða útfærð með rökvirkja \texttt{if "a" in stak or "A" in stak}.}
 	
 \begin{lstlisting}
 listi = ["Halldóra", "ANNA", "Sigurður", "Albert", "Jóna", "Valborg", "Unnur", "Pétur", "Unnar"]
@@ -656,7 +659,7 @@ for stak in listi:
 Búið til while-lykkju sem keyrir alltaf en er brotin í fyrstu keyrslu.
 \end{exercise}
 \begin{Answer}[ref={lyk6}]
-Hér er beðið um að láta skilyrði lykkjunnar vera \texttt{True} og nota lykilorðið \texttt{break}
+Hér er beðið um að láta skilyrði lykkjunnar vera \texttt{True} og nota lykilorðið \texttt{break}.
 	
 \begin{lstlisting}
 while(True):
@@ -684,7 +687,7 @@ Nú ætlið þið að búa til while-lykkju sem keyrir á meðan orðið \texttt
 Rifjið upp \texttt{.pop()} aðferðina úr kafla \ref{k:listar} ásamt \texttt{.index()} úr kafla \ref{k:strengir} eða flettið upp notkun á \texttt{.remove()} á netinu.
 \end{exercise}
 \begin{Answer}[ref={lyk8}]
-Hér eru báðar útgáfur sýndar af þeim tillögum sem voru nefndar, en eins og með svo margt annað í forritun þá tókst ykkur mögulega að gera þetta öðruvísi.
+Hér eru báðar útgáfur sýndar af þeim tillögum sem voru nefndar, en eins og með svo margt annað í forritun tókst ykkur mögulega að gera þetta öðruvísi.
 Aðalmarkmiðið var að geta notað lykilorðið \texttt{in} í skilyrði lykkjunnar.
 	\begin{lstlisting}
 listi = ["nammi", "popp", "ávextir", "popp", "grænmeti", "popp", "hunang", "popp", "brauð"]

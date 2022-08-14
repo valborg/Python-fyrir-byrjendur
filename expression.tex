@@ -608,7 +608,7 @@ Nú er listinn \texttt{a} orðinn að \texttt{[1,2]}, sjá meira um það í kaf
 \end{itarefni}
 
 
-
+%--------------------------------Æfingar------------------------%
 
 
 \newpage
@@ -618,7 +618,7 @@ Búið til tvær talnabreytur, látið svo skilyrðissetningu prenta út þá se
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={exp1}]
-Byrjum á svari og förum svo í réttara svar og svo loks ekki rétt svar.
+Byrjum á svari, förum svo í réttara svar og svo loks ekki rétt svar.
 
 Við erum beðin um skilyrðissetningu svo við þurfum \texttt{if}.
 \begin{lstlisting}
@@ -630,7 +630,7 @@ else:
 	print(b)\end{lstlisting}
 
 Hér tökum við ekki á því tilviki að \texttt{a} og \texttt{b} séu jafnstór, sem gæti verið mikilvægt að hunsa ekki.
-Svo við lögum til, miðað við aðstæður (þessi lausn gæti verið óhentug egar við förum að skoða skilagildi í kafla \ref{k:föll}).
+Við lögum þetta til, miðað við aðstæður (þessi lausn gæti verið óhentug þegar við förum að skoða skilagildi í kafla \ref{k:föll}).
 \begin{lstlisting}
 a = 3
 b = 4
@@ -642,13 +642,13 @@ else:
 	print('breyturnar eru jafnstórar')\end{lstlisting}
 
 	
-Hér ætlum við að svo að skoða eina nálgun sem skilar okkur ekki réttri lausn, því að við erum beðin um að prenta út þá breytu sem er stærri en ekki hvort að fyrri sé stærri en hin.
+Hér ætlum við að svo að skoða eina nálgun sem skilar okkur ekki réttri lausn, því við erum beðin um að prenta út þá breytu sem er stærri en ekki finna út hvort fyrri sé stærri en hin.
 \begin{lstlisting}
 a = 3
 b = 4
 print(a > b)\end{lstlisting}
-Þetta skilar okkur svarinu False því að \texttt{a} er vissulega ekki stærra en \texttt{b} en þarna er skilyrði ekki satt?
-Nei, heldur ekki, skilyrðissetning er með \texttt{if}, þarna erum við með segð.
+Þetta skilar okkur svarinu \texttt{False} því að \texttt{a} er vissulega ekki stærra en \texttt{b} en þarna er samanburður, er það ekki nóg?
+Nei, ekki alveg, skilyrðissetning er með \texttt{if}, þarna erum við með segð.
 \end{Answer}
 \setboolean{firstanswerofthechapter}{false}
 
@@ -685,7 +685,10 @@ Nú ætlið þið að skrifa forritsbút þar sem eru þrjár talnabreytur fyrir
 Prófið svo að keyra aftur fyrir aðrar tölur þannig að þið sannfærist um að kóðinn sé réttur.
 \end{exercise}
 \begin{Answer}[ref={exp4}]
-Setjum hliðarnar sem a, b, og c og fullvissum okkur um að 1, 2, og 3 skili hvorugt niðurstöðunni, 1, 2, og 2 skili jafnarma niðurstöðunni og 2, 2, og 2 skili jafnhliða niðurstöðunni.
+Setjum hliðarnar sem \texttt{a}, \texttt{b}, og \texttt{c}.
+Til þess að kóðinn sé réttur þurfa tölurnar 1, 3, 1 að skila 'jafnarma', tölurnar 2, 2, 2 þurfa að skila 'jafnhliða'.
+Allar tölur sem falla að munstrinu tvær eins hin frábrugðin eru jafnarma þríhyrningur.
+Að sama skapi eru tölur sem eru allar jafngildar jafnhliða þríhyrningur.
 
 Athugið að jafnarma er flóknast að athuga.
 	\begin{lstlisting}
@@ -699,11 +702,12 @@ elif(a == b != c or a == c != b or b == c != a ):
 else:
 	print('hvorki jafnarma né jafnhliða þríhyrningur')\end{lstlisting}
 
-Athugið að ef \texttt{a == b} og \texttt{b == c} (því það er og þarna á milli þegar tveir samanburðarvirkjar eru notaðir) þá hlýtur \texttt{a == c}.
+Athugið að ef \texttt{a == b} og \texttt{b == c} (því það er \texttt{og} þarna á milli þegar tveir samanburðarvirkjar eru notaðir) þá hlýtur \texttt{a == c}.
 
-Það sem er svo að gerast í athuguninni á jafnarma er að verið er að spyrja eru tvær hliðar jafnar OG er hin hliðin frábrugðin, þetta þarf að gera fyrir allar hliðar.
-Farið er óþarflega nákvæmlega í þetta skref, hægt er að sleppa \texttt{!=} en aðeins vegna þess að í skrefinu á undan er verið að spyrja sérstaklega um jafnhliða og því mun það aldrei gerast í þessu skrefi að allar hliðar séu jafnar.
-Þetta er hinsvegar haft með vegna þess að það er mikilvægt að skilja hvernig eigi að skoða þetta tilvik.
+Í athuguninni á jafnarma þríhyrningum er að verið að spyrja hvort tvær hliðar séu jafnar OG hvort hin hliðin sé frábrugðin.
+Þetta þarf að gera á þrjá vegu því það þarf að athuga hvert hliðarpar.
+Farið er óþarflega nákvæmlega í þetta skref, hægt er að sleppa \texttt{!=} samanburðinum en aðeins vegna þess að í skrefinu á undan er verið að spyrja sérstaklega um jafnhliða og því mun það aldrei gerast í þessu skrefi að allar hliðar séu jafnar.
+Þetta er hins vegar haft með vegna þess að það er mikilvægt að skilja hvernig á að skoða þetta tilvik.
 \end{Answer}
 
 \begin{exercise}\label{exp5}
@@ -726,11 +730,11 @@ Sjáum dæmi:
 svar1 = input("þú ert á leiðinni niður í göng, hvort viltu a. kveikja á vasaljósi eða b. kveikja á lukt?")
 if svar1[0] == 'a':
 	print("það kviknar ljós")
-	svar2 = input("þú sérð dyr á móti þér hvort viltu a. halda áfram að leita að einhverju eða b. taka í húninn?")
+	svar2 = input("þú sérð dyr á móti þér, hvort viltu a. halda áfram að leita að einhverju eða b. taka í húninn?")
 	if (svar2[0] == 'a'):
 		print("þú dettur ofan í holu og hverfur að eilífu")
 	elif(svar2[0] == 'b'):
-		print("þú kemur út hinu megin, strax, göngin voru ekki lengri...")
+		print("þú kemur út hinum megin, strax, göngin voru ekki lengri...")
 	else:
 		print('þú valdir eitthvað skrítið, verst að leikurinn er ekki lengri svo það er ekkert tekið á því')
 elif(svar1[0] == 'b'):

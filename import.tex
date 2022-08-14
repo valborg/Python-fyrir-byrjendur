@@ -149,16 +149,16 @@ Að því sögðu er hér stutt kynning á nokkrum vinsælum kóðasöfnum.
 
 Það er út fyrir efni bókarinnar að sýna hvernig eigi að búa til kóðasöfn sem eru nothæf öðrum, en það er lítið mál að kynna sér það á vefnum.
 
-%-------------------------------
+%-------------------------------ÆFINGAR------------------%
 \newpage
 \section{Æfingar}
 
 \begin{exercise}\label{imp1}
-Notið input skipun til þess að komast að því hvort að notandinn viti hversu lengi 10 sekúndur eru að líða. 
+Notið \texttt{input} skipun til þess að komast að því hvort að notandinn viti hversu lengi 10 sekúndur eru að líða. 
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={imp1}]
-input skipunin er í rauninni bara þarna í staðinn fyrir time.sleep(), núna er það notandinn sem ákveður hvenær næsta lína af kóða er keyrð.
+Skipunin er í rauninni bara þarna í staðinn fyrir \texttt{time.sleep()}, núna er það notandinn sem ákveður hvenær næsta lína af kóða er keyrð.
 Það sem við þurfum að fatta er að reikna rétt út og finna tímann.
 	\begin{lstlisting}
 adan = time.time()
@@ -186,8 +186,9 @@ Gefinn er eftirfarandi listi:
 Náið í orð af handahófi úr listanum og náið svo í tákn af handahófi úr því orði.
 \end{exercise}
 \begin{Answer}[ref={imp2}]
-Hér þurfum við aðallega að átta okkur á því hvaða föll við viljum nota úr random pakkanum, úr listanum viljum við nota choice en til að finna eitthvað tákn viljum nota randint.
-Athugum hér að þegar við notum randint þá gefum við upp bil af tölum eins og 1,10 þá eru bæði 1 og 10 með, svo þegar við notum það til að búa til sætisvísi af handahófi verðum við að passa að fara ekki út fyrir löglega sætisvísa.
+Hér þurfum við aðallega að átta okkur á því hvaða föll við viljum nota úr \texttt{random} pakkanum, úr listanum viljum við nota \texttt{choice} en til að finna eitthvað tákn viljum nota \texttt{randint} fallið.
+Athugum hér að þegar við notum \texttt{randint} gefum við upp bil af tölum eins og 1,10 og þá er bæði 1 og 10 með.
+Svo þegar við notum það til að búa til sætisvísi af handahófi verðum við að passa að fara ekki út fyrir löglega sætisvísa.
 	\begin{lstlisting}
 rugl_ord = random.choice(listi)
 rugl_takn = rugl_ord[random.randint(0,len(rugl_ord)-1)]

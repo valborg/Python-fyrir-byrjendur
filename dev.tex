@@ -6,79 +6,79 @@ Eins og fram kom í síðasta kafla þá snýst endirinn á þessari bók um fra
 
 Það kemur nefnilega mörgum á óvart hvað góð samskipti eru stór hluti af því að þróa hugbúnað, forhugmyndir um fólk sem situr eitt við tölvuna sína og gerir eitthvað alveg af sjálfdáðum eru sterkar.
 
-Hugmynd þarf einhvern veginn að verða að veruleika og það má vel vera að hugmynd að góðum og nothæfum hugbúnaði hafi sprottið upp hjá einum einstaklingi en flestur hugbúnaður sem við notum í dag, eins og forrit á símum, eru yfirleitt ekki hönnuð, forrituð, prófuð og markaðssett af einni manneskju.
+Hugmynd þarf einhvern veginn að verða að veruleika og það má vel vera að hugmynd að góðum og nothæfum hugbúnaði hafi sprottið upp hjá einum einstaklingi en flestur hugbúnaður sem við notum í dag, eins og forrit í símum, eru yfirleitt ekki hönnuð, forrituð, prófuð og markaðssett af einni manneskju.
 Þess vegna er þess virði að taka fyrir stuttan kafla um hvað felst í hugbúnaðarþróun.
 
 Áður en lengra er haldið er þó rétt að taka fram að það er engin ein ,,rétt“ leið til að þróa hugbúnað, fólk verður að prófa sig áfram til þess að finna hvað hentar.
 
 \section{Útgáfustjórnun}\index{Útgáfustjórnun}
-Fyrir það fyrsta er útgáfustjórnun (e. version control) nauðsynleg.
+Fyrir það fyrsta er \textbf{útgáfustjórnun} (e. version control) nauðsynleg.
 Ekki bara mikilvæg, nauðsynleg.
-Hellingur af lausnum er til, opinn hugbúnaður sem og lokaður, sem sinnir þessu mikilvæga hlutverki.
+Til er hellingur af lausnum, opinn hugbúnaður sem og lokaður, sem sinnir þessu mikilvæga hlutverki.
 
 Útgáfustjórnun kannast kannski sum við sem hafa notfært sér Word úr Office pakkanum, að geta rúllað til baka í einhverja útgáfu af tilteknu skjali þegar það skemmist eða gögn tapast skyndilega.
 Það er í raun allt og sumt.
-Að geyma kóðann á bakvið hugbúnaðinn þar sem allir eiga að hafa aðgang hafa viðeigandi aðgang.\footnote{Viðeigandi aðgangur gætu verið t.d. skrifréttindi og lesréttindi, að þau sem þurfa ekki að geta breytt neinu geta bara lesið og þau sem eiga að geta gert breytingar hafa réttindi til að skrifa.}
+Að geyma kóðann á bak við hugbúnaðinn þar sem hver sem á að hafa aðgang hefur viðeigandi aðgang.\footnote{Viðeigandi aðgangur gæti t.d. verið skrifréttindi og lesréttindi, að þau sem þurfa ekki að geta breytt neinu heldur geti bara lesið og þau sem eiga að geta gert breytingar hafi réttindi til að skrifa.}
 
-Burt séð frá aðgangsmálum þá er útgáfustjórnun falin í því að gera litlar breytingar því stór jafnt sem lítil kerfi geta verið brothætt og því mikilvægt að geyma þær breytingar sem við gerum í litlum skrefum svo það sé hægt að snúa við og hætta notkun einhverra breytinga sem komu í ljós að hafa valdið villum.
-Einnig gerir útgáfustjórnun kóðarýni (e. code review) auðveldari.
+Burtséð frá aðgangsmálum er útgáfustjórnun falin í því að gera litlar breytingar því stór jafnt sem lítil kerfi geta verið brothætt og því mikilvægt að geyma þær breytingar sem við gerum í litlum skrefum svo hægt sé að snúa við og hætta notkun einhverra breytinga sem kom í ljós að hafa valdið villum.
+Einnig gerir útgáfustjórnun \textit{kóðarýni} (e. code review) auðveldari.
 Kóðarýni er mikivægur hluti af hugbúnaðarþróun, þar sem einhver er fenginn til að fara yfir kóða frá öðrum og finna hvað mætti betur fara.
 
 Þessi bók var skrifuð með aðstoð git útgáfustjórnunartólsins og gitbub hýsingaraðilans.
 Fleiri góð tól eru til eins og Bitbucket, SVN, Mercurial og önnur sem eru innbökuð í hugbúnaðarþróunartól (e. IDE eða integrated development environment) eins og VisualStudio.
-Aðalatriðið í vali á tóli fyrir útgáfustjórnunina er að það henti öllum þeim sem eiga að koma að þróuninni, passi við þau stýrikerfi sem fólk notar, og best er ef fyrri reynsla er góð.
+Aðalatriðið í vali á tóli fyrir útgáfustjórnunina er að það henti öllum þeim sem eiga að koma að þróuninni, passi við þau stýrikerfi sem fólk notar og best er ef fyrri reynsla er góð.
 
 \section{Stefnur og straumar}\index{Stefnur og straumar}
 Alls konar hugmyndafræði hefur legið til grundvallar við gerð hugbúnaðar og stórra kerfa.
-Til eru nokkuð stórar stefnur innan hugbúnaðarþróunar og er ein vinsælasta hugmyndafræðin kvik þróun eða agile með sinn eiginn undirkafla.
+Til eru nokkuð stórar stefnur innan hugbúnaðarþróunar og er ein vinsælasta hugmyndafræðin kvik þróun eða agile, sem fær sinn eigin undirkafla.
+En það þýðir ekki að það séu ekki til fleiri aðferðafræðir og í flestum þeirra er teymisvinna forritara hornsteinninn.
 
-En það þýðir ekki að það séu ekki til fleiri aðferðafræðir og í öllum þeim er hornsteinninn teymisvinna forritara.
-
-Þegar hugbúnaður var fyrst þróaður á 20. öldinni þá voru verkfræðingar og stærðfræðingar í fararbroddi.
-Því þarf ekki að koma á óvart að verkfræðileg nálgun varð vinsæl stefna í þróun hugbúnaðar, sú sem mest var beitt heitir fossalíkanið (e. waterfall model).
+Þegar hugbúnaður var fyrst þróaður á 20. öldinni voru verkfræðingar og stærðfræðingar í fararbroddi.
+Því þarf ekki að koma á óvart að verkfræðileg nálgun varð vinsæl stefna í þróun hugbúnaðar, sú sem mest var beitt heitir \textit{fossalíkanið} (e. waterfall model).
 Fossalíkanið byggir á því að komast að því hverjar þarfir og skorður eru á verkefninu, hanna út frá því vöru og prófa hana svo, afurðin er fullbúin vara.
-Þessi hugmyndafræði virkar fyrir hin ýmsu verkefni þar sem hægt er að vita skorður og þarfir á mjög hnitmiðaðan, skýran og óyggjandi máta.
-Eftir því sem notendur fengu meira vægi þá þurfti að gera breytingar á því hvernig hugbúnaður var þróaður og fékk önnur hugmyndafræði að ryðja sér rúms, samfelld þróun (e. continuous development) þar sem stöðugt var verið að líta til baka og gera breytingar (þetta mun hljóma afskaplega svipað agile en það eru þó einhverjir megin drættir sem eru ólíkir). 
+Þessi hugmyndafræði virkar fyrir hin ýmsu verkefni þar sem hægt er að komast að skorðum og þörfum á mjög hnitmiðaðan, skýran og óyggjandi máta.
+Eftir því sem notendur fengu meira vægi þurfti að gera breytingar á því hvernig hugbúnaður var þróaður og fékk önnur hugmyndafræði að ryðja sér til rúms, \textit{samfelld þróun} (e. continuous development) þar sem stöðugt var verið að líta til baka og gera breytingar (þetta mun hljóma afskaplega svipað agile en það eru þó einhverjir megindrættir sem eru ólíkir). 
 
-Eftir því sem fleiri fóru að þróa hugbúnað sem leið á öldina því fleiri hugmyndafræðilegir ágreiningar komu í ljós.
-Önnur hugmyndafræði sem naut mikilla vinsælda var prófunarþróun (e. test driven development eða TDD) sem er ennþá við lýði í dag.
-Hún snýst um að skorður og þarfir má prófa stöðugt og prófanirnar sýna að hugbúnaðurinn standist þær kröfur sem hann eigi að standast.
+Eftir því sem fleiri fóru að þróa hugbúnað eftir að líða tók á öldina komu sífellt fleiri hugmyndafræðilegir ágreiningar í ljós.
+Önnur hugmyndafræði sem naut mikilla vinsælda var \textit{prófunarþróun} (e. test driven development eða TDD) sem er enn þá við lýði í dag.
+Hún snýst um að stöðugt má prófa skorður og þarfir og prófanirnar sýna að hugbúnaðurinn stenst þær kröfur sem hann á að standast.
 Gallinn við þá nálgun er að prófanirnar eru mögulega ekki nógu yfirgripsmiklar og eitthvað lendir á milli og gleymist.
 
 \section{Kvik þróun - agile}\index{Kvik þróun - agile}
-Kvik þróun fær sér kafla ekki til að setja þessa hugmyndafræði á einhvern stall heldur því hún er svo ótrúlega vinsæl.
-Kvik þróun hefur verið notuð bæði sem haldbær þróunaraðferð en einnig sem tískuorð (e. buzz word).
+Kvik þróun fær ekki sérkafla til að setja hugmyndafræðina á einhvern stall heldur því hún er svo ótrúlega vinsæl.
+Kvik þróun hefur verið notuð bæði sem haldbær þróunaraðferð en einnig sem \textit{tískuorð} (e. buzz word).
 
-Agile snýst um samfelldan þróunarferil þar sem litlar breytingar eru teknar inn á afmörkuðu tímabili, og þessi tímabil, kölluð sprettir (e. sprints), eru endurtekin þar til hugbúnaðinum er skilað (nema auðvitað honum sé viðhaldið).
-Afurðin er því enn í vinnslu þó henni sé sleppt í hendur notenda.
+Agile snýst um samfelldan þróunarferil þar sem litlar breytingar eru teknar inn á afmörkuðu tímabili.
+Þessi tímabil eru kölluð \textit{sprettir} (e. sprints) og eru endurtekin þar til hugbúnaðinum er skilað (nema auðvitað honum sé viðhaldið).
+Afurðin er því oftast enn í vinnslu þó henni sé sleppt í hendur notenda.
 
 Grunnurinn byggir á fjórum hornsteinum:
 \begin{itemize}
 	\item Einstaklingar ofar tólum.
 	\item Hugbúnaður sem virkar ofar yfirgripsmikilli skjölun.
 	\item Samskipti ofar samningum.
-	\item Viðbregðni ofar því að fylgja plani.
+	\item ,,Viðbregðni“ ofar því að fylgja plani.
 \end{itemize}
 
 Ásamt þessum hornsteinum eru tólf grunngildi sem snúa að því hvernig eigi að vinna sem teymi, líta til baka og gera endurbætur.
 
-Þessar grunnhugmyndir eru nokkuð opnar sem hefur leitt til þess að til eru nokkuð mörg afbrigði (e. flavor) af Agile hugmyndafræðinni.
+Þessar grunnhugmyndir eru nokkuð opnar sem hefur leitt til þess að til eru nokkuð mörg \textit{afbrigði} (e. flavor) af Agile hugmyndafræðinni.
 Öll afbrigðin eiga það sameiginlegt að taka hornsteinana frekar heilaga en leggja áherslur hver á sín grunngildi eða túlka þau mismunandi.
 
-Helst af afbrigðum ber að nefna SCRUM, XP og Kanban.
-SCRUM (sem er ekki stytting á neinu, en er þó alltaf skrifað í hástöfum) þar sem mikil áhersla er lögð á hin ýmsu hlutverk þróunarferlisins.
+Helstu afbrigði sem ber að nefna eru SCRUM, XP og Kanban.
+Í SCRUM (sem er ekki stytting á neinu, en er þó alltaf skrifað í hástöfum) er alltaf lögð mikil áhersla á hin ýmsu hlutverk þróunarferlisins.
 XP stendur fyrir ,,extreme programming“ og byggist á því að fólk vinni mjög náið saman, helst tvö eða fleiri á einni tölvu.
-Kanban er ákveðið vinnuflæðirit sem má nýta með SCRUM og XP en einnig sem bara frjálsleg útfærlsa við Agile hugmyndafræðina.
+Kanban er ákveðið vinnuflæðirit sem má nýta með SCRUM og XP en einnig sem frjálslega útfærslu við Agile hugmyndafræðina.
 
-Ástæða fyrir því að Agile er stundum notað sem tískuorð er vegna þess að þessi hugmyndafræði er það vinsæl að flest fyrirtæki vilja segjast hafa tileinkað sér hana.
-Þau eru það þó ekki öll, það er engin vottun til fyrir slíkt og eru dæmi um fyrirtæki sem segjast vera kvik en það tekur heilt ár fyrir starfsfólk að skrá sig úr mötuneytisáskrift.
+Ástæða fyrir því að Agile er stundum notað sem tískuorð er sú að þessi hugmyndafræði er það vinsæl að flest fyrirtæki vilja segjast hafa tileinkað sér hana.
+Þau hafa þó ekki öll gert það, það er engin vottun til fyrir slíkt og eru dæmi um fyrirtæki sem segjast vera kvik en það tekur heilt ár fyrir starfsfólk að skrá sig úr mötuneytisáskrift.
 
 \section{Að lokum}\label{Að lokum}
 
-Nú þar sem við höfum náð góðum tökum á grunninum í forritun í Pyhton og skoðað við hverju má búast ef farið er lengra er hægt að líta til annarra mála eða frekari notkun Python fyrir ákveðin verkefni.
-Þá er gott að skoða pip, PyPI, anaconda, og virtualenv.
+Nú þegar við höfum náð góðum tökum á grunninum í forritun í Pyhton og skoðað við hverju má búast ef farið er lengra er hægt að líta til annarra mála eða frekari notkunar Python fyrir ákveðin verkefni.
+Þá er gott að skoða pip, PyPI, anaconda og virtualenv.
 
-Mikið er um góð námskeið og kennsluefni á netinu, eins og á udemy, khan academy, codewars, codecombat og svo er ýmislegt að finna á youtube.
+Mikið er um góð námskeið og kennsluefni á netinu, eins og á Udemy, Khan Academy, Codewars, Codecombat og svo er ýmislegt að finna á Youtube.
 
 Ekki hika við að gera mistök, þannig verðið þið betri í því sem þið takið ykkur fyrir hendur. 
 

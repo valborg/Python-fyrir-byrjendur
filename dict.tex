@@ -286,7 +286,9 @@ Hvunndagshetjan
 
 Í þessum síðasta kóðabút er nóg um að vera sem ætti að vera gott veganesti í æfingar þessa kafla.
 
-%-------------------------------
+%-------------------------------ÆFINGAR----------------------------------%
+
+
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{dic1}
@@ -294,7 +296,7 @@ Búið til tóma orðabók, bætið svo við lykli og gildi.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={dic1}]
-Hér er aðalatriðið að geta bætt við eftir skilgreiningu en ekki bara að geta búið til orðabók sem er skilgreind frá upphafi með einhverju lykla og gildis pari.
+Hér er aðalatriðið að geta bætt við eftir skilgreiningu en ekki bara að geta búið til orðabók sem er skilgreind frá upphafi með einhverju lykla- og gildispari.
 \begin{lstlisting}
 bok = {}
 bok['nýr lykill'] = 'Halló Heimur!'
@@ -308,7 +310,7 @@ Skrifið svo for-lykkju þannig að þið bætið tölum frá 0 og upp að n (a�
 {0: 0, 1: 1, 2: 4, 3: 9, 4: 16}
 \end{exercise}
 \begin{Answer}[ref={dic2}]
-Hér þarf að muna eftir range fallinu til að auðvelda okkur vinnuna annars er þetta sama verkefni og æfing \ref{dic1}.
+Hér þarf að muna eftir \texttt{range} fallinu til að auðvelda okkur vinnuna, annars er þetta sama verkefni og æfing \ref{dic1}.
 \begin{lstlisting}
 bok = {}
 for i in range(5):
@@ -319,7 +321,7 @@ for i in range(5):
 Búið til orðabók með þremur stökum, fjarlægið einhver tvö þeirra.
 \end{exercise}
 \begin{Answer}[ref={dic3}]
-Það eru til allavega tvær leiðir til að fjarlægja stak úr orðabók og fyrst við erum beðin um að fjarlægja tvö skulum við nota báðar aðferðirnar.
+Það eru til að minnsta kosti tvær leiðir til að fjarlægja stak úr orðabók og fyrst við erum beðin um að fjarlægja tvö skulum við nota báðar aðferðirnar.
 	\begin{lstlisting}
 bok = {1: "þetta skal tekið", 2: "þetta skal vera", 3: "hiklaust fjarlægt"}
 bok.pop(1)
@@ -331,7 +333,8 @@ bok.popitem()\end{lstlisting}
 	Athugið að nota \texttt{min()} fallið.
 \end{exercise}
 \begin{Answer}[ref={dic4}]
-Hér þurfum við að athuga að áður en við förum að skoða hvað sé minnsta gildið þá þurfum að skilgreina breytu sem við viljum vera að bera saman við, og þarf sem við ætlum að prenta út 0 ef við finnum enga tölu lægri en það þá skilgreinum við breytuna sem við notum til samanburðar sem 0.
+Hér þurfum við að athuga að áður en við förum að skoða hvert minnsta gildið er þurfum við að skilgreina breytu sem við viljum bera saman við.
+Þar sem við ætlum að prenta út 0 ef við finnum enga tölu lægri en það skilgreinum við breytuna sem við notum til samanburðar sem 0.
 	\begin{lstlisting}
 bok = {'lykill1': [3,4,2,4,2], 2: [-90, 2,3,1], "þrír": [-3,1000]}
 minnsta_gildi = 0
@@ -347,8 +350,10 @@ Búið til orðabók þar sem gildin eru listar af strengjum.
 Athugið hér að nota \texttt{type()} fallið.
 \end{exercise}
 \begin{Answer}[ref={dic5}]
-Það sem við þurfum að gera hér er að athuga sérstaklega hvort að við séum í raun að vinna með streng, við munum að lykilorðið fyrir streng er \textbf{str} og við athugum hvort að týpan af því sem við erum með í höndunum (hvert stak fyrir sig) sé strengur því að við megum ekki bæta strengnum x aftan við hvað sem er.
-Einnig þurfum við að setja það inn aftur í staðinn, þessi leið er ekki fullkomin til þess en skoðið þennan kóða og áttið ykkur á hvað er um að vera áður en þið skoðið hina útfærsluna.
+Það sem við þurfum að gera hér er að athuga sérstaklega hvort við séum í raun að vinna með streng.
+Við munum að lykilorðið fyrir streng er \textbf{str} og við athugum hvort týpan af því sem við erum með í höndunum (hvert stak fyrir sig) sé strengur því við megum ekki bæta strengnum x aftan við hvað sem er.
+Einnig þurfum við að setja það inn aftur í staðinn.
+Þessi leið er ekki fullkomin til þess að leysa verkefnið en skoðið þennan kóða og áttið ykkur á því hvað er um að vera áður en þið skoðið hina útfærsluna.
 	\begin{lstlisting}
 bok = {0: ["hér", "eru nokkrar týpur", 1, 2, 3, True], 1: ["líka hér", "nokkur tög", {1: ['Þetta telst ekki með', 'því þetta er innan orðabókar']}]}
 for lykill, gildi in bok.items():
@@ -356,8 +361,9 @@ for lykill, gildi in bok.items():
 		if type(stak) is str:
 			stadur = gildi.index(stak)
 			gildi[stadur] = stak + 'x'\end{lstlisting}
-Athugið að eitt auka hérx, ef því er bætt við fyrir ofan sést hve illa kóðinn grípur sum tifelli.
-Hér er ekki verið að nota sætisnúmer með uppflettingu á stakinu heldur með númeri keyrslunnar.
+Athugið að \texttt{bok} er ekki alveg eins í kóðanum fyrir neðan, eitt auka 'hérx'.
+Ef því er bætt við fyrir ofan sést hve illa kóðinn grípur sum tifelli.
+Hér er ekki verið að nota sætisnúmer með uppflettingu á stakinu heldur með númeri keyrslunnar, það er notað sem hlaupandi tala sem samsvarar sætisnúmerum.
 \begin{lstlisting}
 bok = {0: ["hér", "hérx" ,"eru nokkrar týpur", 1, 2, 3, True], 1: ["líka hér", "nokkur tög", {1: ['Þetta telst ekki með', 'því þetta er innan orðabókar']}]}
 for lykill, gildi in bok.items():
@@ -382,11 +388,12 @@ for lykill, gildi in bok.items():
 \begin{Answer}[ref={dic6}]
 	Þar sem þessi æfing er krefjandi eru hér eingöngu vísbendingar til að leysa hana.
 	
-	Athugum hér að við þurfum orðabók þar sem lyklar eru td. "er sólin blá" og gildi lykilsins væri "rangt", þegar hún er tilbúin þá getum við rúllað í gegnum hana og prentað út lyklana.
-	Á eftir því að hafa prentað út lykil viljum við setja input skipun fyrir notandann, svarið ætlum við ekki að geyma neitt frekar en bara til að athuga hvort að það sé það sama og svarið (gildið á lyklinum sem við vorum að skoða).
-	Þá förum við í reiknikúnstirnar að hækka ef rétt.
+	Athugum hér að við þurfum orðabók þar sem lyklar eru t.d. 'er sólin blá?' og gildi lykilsins þá "rangt", þegar hún er tilbúin getum við rúllað í gegnum hana og prentað út lyklana.
+	Á eftir því að hafa prentað út lykil viljum við setja \texttt{input} skipun fyrir notandann, svarið ætlum við ekki að geyma neitt frekar en bara til að athuga hvort það sé það sama og svarið (gildið á lyklinum sem við vorum að skoða).
+	Þá förum við í reiknikúnstir með skilyrðum.
 	
-	Þegar allar spurningarnar eru þá búnar er loka einkunn komin, við getum borið einkunnina saman við fjölda lykla eða lengdina á bókinni ef það er það sama þá prentum við út auka textann um að þetta fór á besta veg með hæstu einkunn.
+	Þegar allar spurningarnar eru búnar er lokaeinkunn komin.
+	Við getum borið einkunnina saman við fjölda lykla eða lengdina á bókinni og ef hún er sú sama prentum við út aukatextann um að þetta hafi farið á besta veg með hæstu einkunn.
 \end{Answer}
 
 \begin{exercise}\label{dic7}
@@ -397,9 +404,9 @@ Spyrjið notandann um tvö mismunandi sveitarfélög á höfuðborgarsvæðinu, 
 \begin{Answer}[ref={dic7}]
 Þar sem þessi æfing er krefjandi eru hér eingöngu vísbendingar til að leysa hana.
 
-Fyrir það fyrsta er að orðabókin með sveitarfélögunum sé stöðluð, það er rvk fyrir Reykjavík og þá hfj fyrir Hafnarfjörð en ekki á víxl.
-Því næst er að athuga að spyrja notandann með input() fallinu og vegna þess að beðið er um mismunandi sveitarfélög þá verður bæði að athuga hvort að sveitarfélagið sem notandinn gaf upp sé til og það þarf einnig að athuga hvort að það sé það sama og viðkomandi gaf upp síðast.
-Til þess þarf þá að nota while lykkju.
+Fyrir það fyrsta þarf orðabókin með sveitarfélögunum að vera stöðluð, það er rvk fyrir Reykjavík og þá hfj fyrir Hafnarfjörð en ekki á víxl.
+Því næst þarf að spyrja notandann með \texttt{input()} fallinu og vegna þess að beðið er um mismunandi sveitarfélög verður bæði að athuga hvort að sveitarfélagið sem notandinn gaf upp sé til og hvort að það sé það sama og viðkomandi gaf upp síðast.
+Til þess þarf þá að nota while-lykkju.
 Þegar tvö mismunandi sveitarfélög eru komin er þá hægðarleikur að leggja saman gildin og prenta út nöfnin á þeim ásamt samanlögðum fjölda íbúa.
 \end{Answer}
 
