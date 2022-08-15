@@ -138,23 +138,25 @@ mengi = set(listi)\end{lstlisting}
 
 \begin{exercise}\label{set3}
 Búið til lista af tölunum 1, 2, 3, 4, 5 og tómt mengi.
-Ítrið þá í gegnum talnalistann með for lykkju þannig að þið rúllið frá 0 upp í töluna 4 (eða einum minna en lengdin á listanum) með \texttt{range} fallinu svo að þið getið skoðað eitt stak hægra megin við þá tölu sem þið eruð að skoða.
+Ítrið þá í gegnum talnalistann með for-lykkju þannig að þið rúllið frá 0 upp í töluna 4 (eða einum minna en lengdin á listanum) með \texttt{range} fallinu svo að þið getið skoðað eitt stak hægra megin við þá tölu sem þið eruð að skoða.
 
-Það sem þið gerið í lykkjunni ykkar er að skoða töluna í staki \textit{i} (hlaupandi stakið) og töluna í staki \textit{i+1}, leggið þær saman og setjið inn í tóma mengið með \texttt{add} aðferðinni, það á að vera skilgreint fyrir ofan lykkjuna.
+Það sem þið gerið í lykkjunni ykkar er að skoða töluna í staki \textit{i} (hlaupandi stakið) og töluna í staki \textit{i+1}.
+Leggið þær saman og setjið inn í tóma mengið með \texttt{add} aðferðinni, það á að vera skilgreint fyrir ofan lykkjuna.
 
 Þegar lykkjan er búin að keyra eruð þið komin með talnamengi með nokkrum tölum og svo upphaflega listann.
 
 Kastið listanum í mengi og dragið hann frá (með mínus reiknivirkjanum) frá menginu.
 
-Þið eigið að fá lausnina \{7, 9\}
+Þið eigið að fá lausnina \{7, 9\}.
 \end{exercise}
 \begin{Answer}[ref={set3}]
 Hér erum við að rifja upp ýmislegt gagnlegt sem gott er að muna.
 Það fyrsta er hvernig á að ítra með for-lykkju og hitt er að nota \texttt{range}.
-Það sem er hinsvegar nýtt er að við notum \texttt{range} til að rúlla upp í 4 því við viljum að 3 sé með en ekki 4.
-Ástæðan er sú að hæsti vísirinn í 5 staka lista er 4, til þess að geta horft hægra megin við hann má ekki skoða síðasta stakið því það er ekkert stak hægra megin við það.
+Það sem er hins vegar nýtt er að við notum \texttt{range} til að rúlla upp í 4 því við viljum að 3 sé með en ekki 4.
+Ástæðan er sú að hæsti vísirinn í 5 staka lista er 4.
+Til þess að geta horft hægra megin við hann má ekki skoða síðasta stakið því það er ekkert stak hægra megin við það.
 
-Að síðustu er þetta spurning um að skoða hvað mengið inniheldur sem listinn gerir ekki, 
+Að síðustu er þetta spurning um að skoða hvað mengið inniheldur sem listinn gerir ekki.
 
 	\begin{lstlisting}
 talnalisti = [1,2,3,4,5]
@@ -168,7 +170,7 @@ print(samlagningarmengi - set(talnalisti))\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{set4}
-Búið til tvö mengi sem innihalda einhverjar tölur og finnið sniðmengið þeirra með því að nota reiknivirkjann \texttt{\&}.
+Búið til tvö mengi sem innihalda einhverjar tölur og finnið sniðmengi þeirra með því að nota reiknivirkjann \texttt{\&}.
 \end{exercise}
 \begin{Answer}[ref={set4}]
 	Sniðmengið er það sem er sameiginlegt með mengjunum svo mengi með stökin 1,2 á 2 sameiginlegt með mengi sem inniheldur stökin 2,5,6.

@@ -82,15 +82,16 @@ ekki gekk að kasta í tölu út af gildisvillu
 \end{lstlisting}
 \lstset{style=venjulegt}
 
-Í fyrri hlutanum er gripið ef einhver villa á sér stað en í seinni hlutanum er tekið á þremur mismunandi tilfellum áður en gefist er upp.
+Í fyrri hlutanum er það gripið ef einhver villa á sér stað en í seinni hlutanum er tekið á þremur mismunandi tilfellum áður en gefist er upp.
 Þetta gæti verið gott þegar þrjár tilteknar villur eru líklegar og þörf er á að taka á þeim.
 
 Líklega er best að hafa \texttt{try} klausurnar hnitmiðaðar, nota þær til að taka á líklegum villum sem gætu komið upp á viðkvæmum stöðum.
 Ekki er ráðlagt að setja svona klausur í öll föll og allar aðferðir til þess að tryggja að ekkert fari nokkurn tímann úrskeiðis.
-Það myndi taka óþarflega langan tíma í útfærslur, við að greina hvaða villur þarf að grípa hverju sinni og hvernig, og það myndi ekki tryggja að forritið okkar væri öruggara.
+Það myndi taka óþarflega langan tíma í útfærslu að greina hvaða villur þarf að grípa hverju sinni og hvernig.
+Það myndi ekki tryggja að forritið okkar væri öruggara.
 
-Viðkvæmir staðir eru til dæmis þeir þar sem tekið er við gögnum frá notendum eða gögn eru birt notendum.
-Við viljum tryggja það að notendur geta ekki gefið okkur skaðleg gögn.\footnote{\href{https://en.wikipedia.org/wiki/SQL_injection}{Hlekkur á SQL injection árasir á ensku Wikipediu.}}
+Viðkvæmir staðir eru til dæmis þar sem tekið er við gögnum frá notendum eða þegar gögn eru birt notendum.
+Við viljum tryggja það að notendur geti ekki gefið okkur skaðleg gögn.\footnote{\href{https://en.wikipedia.org/wiki/SQL_injection}{Hlekkur á SQL injection árasir á ensku Wikipediu.}}
 
 \begin{lstlisting}[caption=Hvernig á að beita try - except - else, label=lst:villur-grip-kynnt-2]
 try:
