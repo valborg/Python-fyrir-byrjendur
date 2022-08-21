@@ -206,7 +206,6 @@ Lykkið svo í gegnum línurnar og prentið út þær sem byrja á sérhljóða.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={doc1}]
-
 	\begin{lstlisting}
 %%writefile doc1.txt
 Þessi byrjar ekki á sérhljóða
@@ -214,13 +213,12 @@ En þessi gerir það
 \end{lstlisting}
 \begin{lstlisting}
 with open('doc1.txt', mode = 'r') as doc1:
-linur = doc1.readlines()
-for lina in linur:
-if(lina[0].lower() in 'aáeéiíoóuúyýæö'):
-print(lina)\end{lstlisting}
+	linur = doc1.readlines()
+	for lina in linur:
+		if(lina[0].lower() in 'aáeéiíoóuúyýæö'):
+			print(lina)\end{lstlisting}
 \end{Answer}
 \setboolean{firstanswerofthechapter}{false}
-
 
 \begin{exercise}\label{doc2}
 Búið til textaskjal sem inniheldur söngtexta úr einhverju lagi (þá er gott að nota \%\%writefile), lesið svo skjalið og geymið línurnar í lista.
@@ -235,28 +233,24 @@ kaldri vetrarnóttu á,
 Fyrr en dagur fagur rann,
 freðið nefið dregur hann
 ::undan stórum steini.::
-
 Allt er frosið úti gor,
 ekkert fæst við ströndu mor
 ::svengd er metti mína.::
 Ef að húsum heim ég fer
 heimafrakkur bannar mér
 ::seppi' úr sorp að tína.::
-
 Öll er þakin ísi jörð,
 ekki séð á holtabörð
 ::fleygir fuglar geta.::
 En þó leiti út um mó,
 auða hvergi lítur tó;
 ::hvað á hrafn að éta.::
-
 Á sér krummi ýfði stél,
 einnig brýndi gogginn vel,
 ::flaug úr fjallagjótum::
 Lítur yfir byggð og bú
 á bænum fyrr en vakna hjú,
 ::veifar vængjum skjótum.::
-
 Sálaður á síðu lá
 sauður feitur garði hjá,
 ::fyrrum frár á velli.::

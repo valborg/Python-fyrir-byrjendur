@@ -228,7 +228,7 @@ print(starfsfolk)
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{lst1}
-	Búðu til breytu sem inniheldur lista.
+	Búið til breytu sem inniheldur lista.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={lst1}]
@@ -244,8 +244,8 @@ listi_med_stokum = ["hér settum við eitthvað inn"]\end{lstlisting}
 		Verkefnið er tvíþætt:
 \begin{enumerate}
 
-	\item Búðu til lista sem inniheldur 4 stök sem öll eru af mismunandi týpum.
-	\item Vitandi hvar strengurinn er í listanum, skaltu breyta stakinu í listanum sem inniheldur strenginn og setja einhvern annan streng í staðinn.
+	\item Búið til lista sem inniheldur 4 stök sem öll eru af mismunandi týpum.
+	\item Vitandi hvar strengurinn er í listanum, skulið þið breyta stakinu í listanum sem inniheldur strenginn og setja einhvern annan streng í staðinn.
 \end{enumerate}
 \end{exercise}
 \begin{Answer}[ref={lst2}]
@@ -269,7 +269,7 @@ listi[2] = "nýr strengur í stað þess sem var"\end{lstlisting}
 Gefinn er eftirfarandi kóði.
 Það sem við viljum gera er að fletta upp heimavist og netfangi nemenda 1 og 2.
 Við viljum búa til strengjabreytu sem inniheldur þessi gögn fyrir hvorn nemanda fyrir sig.
-Án þess að vita hvernig \texttt{nem1} og \texttt{nem2} breyturnar líta út (eins og við höfum fengið þær gefnar að nafninu til og sjáum ekki hvað þær geyma) fáum við að vita að breyturnar eru listar sem eru eins uppbyggðir og \texttt{header} listinn.
+Án þess að vita hvernig \texttt{nem1} og \texttt{nem2} breyturnar líta út (líkt og við höfum fengið þær gefnar að nafninu til og sjáum ekki hvað þær geyma) fáum við að vita að breyturnar eru listar sem eru eins uppbyggðir og \texttt{header} listinn.
 
 Við þurfum því að beita \texttt{index} aðferðinni til að finna gögnin.
 \begin{lstlisting}
@@ -295,11 +295,12 @@ nem2 = ["Sturludóttir", '00000000', 'austur', "valborg@example.com", "1234", "F
 
 uppl_nem1 = nem1[header.index('heimavist')] + nem1[header.index('netfang')]
 uppl_nem2 = nem2[header.index('heimavist')] + nem2[header.index('netfang')]\end{lstlisting}
+\newpage
 \end{Answer}
 
 \begin{exercise}\label{lst4}
-	Gefinn er eftirfarandi kóðabútur, náðu í strenginn \texttt{'valli'} þannig að hann sé geymdur í breytu og type fallið af breytunni skili niðurstöðunni str.
-	Náðu einnig í töluna 0 innan listans og geymdu í breytu þannig að \texttt{type} fallið af breytunni skili \texttt{int}. 
+	Gefinn er eftirfarandi kóðabútur, náið í strenginn \texttt{'valli'} þannig að hann sé geymdur í breytu og \texttt{type} fallið af breytunni skili niðurstöðunni \texttt{str}.
+	Náið einnig í töluna 0 innan listans og geymið í breytu þannig að \texttt{type} fallið af breytunni skili \texttt{int}. 
 \begin{lstlisting}
 nested_list = [[[[0],1],2],["hvar"],["er"],[['valli'],"?"]]\end{lstlisting}
 \end{exercise}
@@ -326,13 +327,13 @@ Leshausinn hættir á sama stað og hann byrjar, færist ekkert og ekkert tákn 
 \end{Answer}
 
 \begin{exercise}\label{lst6}
-Leystu eftirfarandi verkefni í röð:
+Leysið eftirfarandi verkefni í röð:
 \begin{enumerate}
-	\item Búðu til lista sem inniheldur nokkur nöfn, þetta á að vera tengiliðalisti.
-	\item Raðaðu listanum í stafrófsröð, eins og Python gefur kost á fyrir íslensku.
-	\item Það gleymdist að setja Agnesi í listann, hvernig bætirðu henni við aftast í listann?
-	\item Það kemur alveg hrikalega út að hafa Agnesi aftast eftir að hafa raðað listanum, raðaðu listanum aftur í stafrófsröð
-	\item Æ, nú er listinn orðinn of langur, nú skaltu fjarlægja eitthvað nafn úr listanum, þó ekki það aftasta.
+	\item Búið til lista sem inniheldur nokkur nöfn, þetta á að vera tengiliðalisti.
+	\item Raðið listanum í stafrófsröð, eins og Python gefur kost á fyrir íslensku.
+	\item Það gleymdist að setja Agnesi í listann, hvernig bætið þið henni við aftast í listann?
+	\item Það kemur alveg hrikalega út að hafa Agnesi aftast, raðið listanum aftur í stafrófsröð
+	\item Æ, nú er listinn orðinn of langur, nú skulið þið fjarlægja eitthvað nafn úr listanum, en ekki það aftasta.
 \end{enumerate}
 \end{exercise}
 \begin{Answer}[ref={lst6}]
@@ -346,13 +347,13 @@ tengilidir.pop(2))\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{lst7}
-Leystu eftirfarandi verkefni í röð:
+Leysið eftirfarandi verkefni í röð:
 \begin{enumerate}
-	\item Búðu til lista sem inniheldur nokkra innri lista, innri listarnir eru upplýsingar um gæludýr (nafn, aldur og tegund).
-	\item Í ljós kemur að Askja, 13 ára gömul border collie tík gleymdist, bættu henni í listann.
-	\item Askja á sér það áhugamál að elta laufblöð, bættu því aftast í listann sem inniheldur gögnin um Öskju.
-	\item Nú skaltu raða ytri listanum.
-	\item Í ljós kemur að það hentar ekki að geyma gögn um áhugamálið hennar Öskju, fjarlægðu þau gögn úr listanum um Öskju.
+	\item Búið til lista sem inniheldur nokkra innri lista, innri listarnir eru upplýsingar um gæludýr (nafn, aldur og tegund).
+	\item Í ljós kemur að Askja, 13 ára gömul border collie tík gleymdist, bætið henni í listann.
+	\item Askja á sér það áhugamál að elta laufblöð, bætið því aftast í listann sem inniheldur gögnin um Öskju.
+	\item Nú skulið þið raða ytri listanum.
+	\item Í ljós kemur að það hentar ekki að geyma gögn um áhugamálið hennar Öskju, fjarlægið þau gögn úr listanum um Öskju.
 	\item Æ, nú er Askja dáin og það þarf að fjarlægja hana úr ytri listanum.
 \end{enumerate}
 \end{exercise}

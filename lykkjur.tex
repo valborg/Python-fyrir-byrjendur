@@ -549,7 +549,28 @@ nú er talan orðin 1 því 1 er ekki stærri en 1 --> 1
 \end{lstlisting}
 \lstset{style=venjulegt}
 
+Eitt að lokum sem vert er að nefna.
+Í Python er til \textit{rostungsvirki} (e. walrus operator) sem skilar gildi úr segð í breytu inni í segð sem má nota til að fá niðurstöðu úr annarri segð.
+Virkinn er sérlega gagnlegur í while-lykkjum og \textit{listasegðum} (e. list comprehensions).\footnote{Listasegðir eru sniðug leið til að vinna gögn og fá í hendurnar lista sem unninn var með skilyrðum, lesið um það á \href{https://www.w3schools.com/python/python_lists_comprehension.asp}{w3schools síðunni}.}
+Þá þurfum við ekki að skilgreina breytur fyrir utan lykkjurnar okkar sem eru svo einungis notaðar í lykkjunni.
+Við sjáum dæmi í kóðabút \ref{lst:lykkjur-while-walrus} þar sem \texttt{input} skipunin er notuð til að fá svar frá notanda sem er metið á staðnum til að komast að því hvort lykkjan eigi að keyra.
+Athugið sérstaklega að hér er ekki verið að villuprófa inntakið á neinn hátt og því er þetta ekki gallalaus leið til að nota \texttt{input} með while-lykkju, en þetta sýnir þægindi þess að eiga þennan virkja til.
 
+\begin{lstlisting}[caption=Rostungur að störfum, label=lst:lykkjur-while-walrus]
+while( svar := input("Eru diskar á borðinu?").lower() == "já"):
+    print('vaska upp')
+\end{lstlisting}
+\lstset{style=uttak}
+\begin{lstlisting}
+Eru diskar á borðinu?já
+vaska upp
+Eru diskar á borðinu?já
+vaska upp
+Eru diskar á borðinu?já
+vaska upp
+Eru diskar á borðinu?nei
+\end{lstlisting}
+\lstset{style=venjulegt}
 
 %-------------------------------ÆFINGAR------------------------------%
 
@@ -697,6 +718,7 @@ Rifjið upp \texttt{.pop()} aðferðina úr kafla \ref{k:listar} ásamt \texttt{
 \begin{Answer}[ref={lyk8}]
 Hér eru báðar útgáfur sýndar af þeim tillögum sem voru nefndar, en eins og með svo margt annað í forritun tókst ykkur mögulega að gera þetta öðruvísi.
 Aðalmarkmiðið var að geta notað lykilorðið \texttt{in} í skilyrði lykkjunnar.
+\newpage
 	\begin{lstlisting}
 listi = ["nammi", "popp", "ávextir", "popp", "grænmeti", "popp", "hunang", "popp", "brauð"]
 while("popp" in listi):

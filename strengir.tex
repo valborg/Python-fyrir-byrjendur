@@ -328,7 +328,7 @@ kex með avókadó, majónesi og eggi
 \newpage
 \section{Æfingar}
 \begin{exercise}\label{str1}
-	Búðu til breytu sem inniheldur streng.
+	Búið til breytu sem inniheldur streng.
 \end{exercise}
 \setboolean{firstanswerofthechapter}{true}
 \begin{Answer}[ref={str1}]
@@ -342,7 +342,7 @@ strengur = '' # þetta er tómur strengur\end{lstlisting}
 \setboolean{firstanswerofthechapter}{false}
 
 \begin{exercise}\label{str2}
-	Búðu til breytu sem inniheldur streng, búðu til aðra breytu sem geymir fremsta stafinn úr þeirri breytu.
+	Búið til breytu sem inniheldur streng, búið til aðra breytu sem geymir fremsta stafinn úr þeirri breytu.
 \end{exercise}
 \begin{Answer}[ref={str2}]
 	Fremsti stafurinn er í núllta stæði.
@@ -352,7 +352,7 @@ stafur = strengur[0]\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str3}
-	Notaðu innbyggt fall til þess að finna lengdina á strengnum "halló góðan daginn í dag".
+	Notið innbyggt fall til þess að finna lengdina á strengnum "halló góðan daginn í dag".
 \end{exercise}
 \begin{Answer}[ref={str3}]
 	\begin{lstlisting}
@@ -361,7 +361,7 @@ len(strengur)\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str4}
-	Notaðu innbyggt fall til þess að prenta út þann staf sem er í þriðja stæði í strengnum 'kex!'.
+	Notið innbyggt fall til þess að prenta út táknið sem er í þriðja stæði í strengnum 'kex!'.
 \end{exercise}
 \begin{Answer}[ref={str4}]
 \begin{lstlisting}
@@ -370,7 +370,7 @@ print(strengur[3])\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str4-5}
-	Notaðu innbyggt fall til þess að finna lengdina á strengnum 'kex!'.
+	Notið innbyggt fall til þess að finna lengdina á strengnum 'kex!'.
 \end{exercise}
 \begin{Answer}[ref={str4-5}]
 \begin{lstlisting}
@@ -380,23 +380,24 @@ print(len("kex!"))\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str5}
-	Notaðu heiltöludeilingu til að prenta út þann staf sem er í miðju strengsins "allra handa", sem er strengur af lengd 11 og því skilgreiningaratriði hvort stakið í stæði 4 eða 5 sé í miðjunni.
+	Notið heiltöludeilingu til að prenta út þann staf sem er í miðju strengsins "allra handa", sem er strengur af lengd 11 og því skilgreiningaratriði hvort stakið í stæði 4 eða 5 sé í miðjunni.
 	Hvort kemur tómt bil eða stafurinn a?
 \end{exercise}
 \begin{Answer}[ref={str5}]
 \begin{lstlisting}
 s = "allra handa"
 print(s[len(s)//2])\end{lstlisting}
+\newpage
 \end{Answer}
 
 \begin{exercise}\label{str6}
-	Búðu til tvær breytur sem innihalda strengi, búðu svo til þriðju breytuna sem inniheldur samskeytingu af þessum tveimur breytum.
-	Lengdu þriðju breytuna, þannig að samskeytingin sé endurtekin að minnsta kosti tvisvar sinnum.
+	Búið til tvær breytur sem innihalda strengi, búið svo til þriðju breytuna sem inniheldur samskeytingu af þessum tveimur breytum.
+	Lengið þriðju breytuna, þannig að samskeytingin sé endurtekin að minnsta kosti tvisvar sinnum.
 \end{exercise}
 \begin{Answer}[ref={str6}]
 	Athugið að þegar er verið að lengja breytuna er hún endurskilgreind.
 	Þetta er gert því beðið er um að lengja þriðju breytuna og því gefið í skyn að breytan eigi að fá uppfært gildi.
-	Ef þú hins vegar lagðir annan skilning í verkefnið og bjóst til fjórðu breytu er það líka í lagi að svo stöddu, við erum ekki að besta fyrir minnisnotkun.
+	Ef þið hins vegar lögðuð annan skilning í verkefnið og bjugguð til fjórðu breytu er það líka í lagi að svo stöddu, við erum ekki að besta fyrir minnisnotkun.
 \begin{lstlisting}
 s1 = "allra handa"
 s2 = " bil fremst"
@@ -405,7 +406,7 @@ s3 = s3*4\end{lstlisting}
 \end{Answer}
 
 \begin{exercise}\label{str7}
-Gefum okkur að til séu tveir strengir, n1 og n2, þeir innihalda fyrsta nafnið þitt og eftirnafn þitt.
+Gefum okkur að til séu tveir strengir, n1 og n2, þeir innihalda fyrsta nafnið ykkar annars vegar og eftirnafn ykkar hins vegar.
 Gefum okkur einnig að þeir séu ekki rétt ritaðir skv. íslenskum ritreglum.
 Hvernig setjum við þá saman í einn streng eftir að hafa beitt á þá aðferðum til að þeir séu örugglega með fyrsta staf stóran og alla aðra litla?
 \end{exercise}
@@ -436,10 +437,10 @@ Einnig verðum við að passa að ekki sé verið að vísa í sætisnúmer sem 
 Takið eftir að þessi lausn er einungis hugmynd, í skrefi 1 má skipta um strengi, í skrefi 3 má klippa í sundur á mismunandi hátt, beita fleiri aðferðum og lengja sjaldnar eða oftar eða með öðrum tölum.
 Aðalatriðið í skrefi 3 er að sama hvaða strengir eru settir inn í skrefi 1 er aldrei vísað út fyrir strenginn og allur lykilstrengurinn er notaður, hvert einasta stæði.
 
-Prófaðu að setja inn mismunandi strengi og prenta út lykilinn í lokin.
+Prófið að setja inn mismunandi strengi og prenta út lykilinn í lokin.
 
-Ef þú leystir verkefnið með ákveðnum sætisvísum þar sem þú vissir hversu mörg stafabil voru í strengnum þínum er kóðinn einungis nothæfur á strengi af nákvæmlega sömu lengd.
-Gott er að skrifa kóða sem leysir verkefni almennt en ekki bara það tiltekna verkefni sem er fyrir framan þig.
+Ef þið leystuð verkefnið með ákveðnum sætisvísum þar sem þið vissuð hversu mörg stafabil voru í strengnum er kóðinn einungis nothæfur á strengi af nákvæmlega sömu lengd.
+Gott er að skrifa kóða sem leysir verkefni almennt en ekki bara það tiltekna verkefni sem er fyrir framan okkur.
 \begin{lstlisting}
 #skref 1
 lykill = "þetta á að verða gott lykilorð"
